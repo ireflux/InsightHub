@@ -9,7 +9,7 @@ logger = logging.getLogger(__name__)
 class LLMProviderConfig(BaseModel):
     name: str
     api_key: Optional[str] = None
-    model: str = "glm-4-flash"
+    model: str = "glm-4.7-flash"
 
 class SourceConfig(BaseModel):
     name: str
@@ -39,36 +39,40 @@ class AppSettings(BaseModel):
             except Exception as e:
                 logger.warning(f"Failed to load config file {config_path}: {e}")
         
-        # 2. Process Environment Variable Overrides
+        # 2. Process Environment Variable Fallbacks (Config File > Environment Variables)
         
-        # LLM API Keys
+        # LLM Provider setup
         if "llm_provider" not in config_data:
-            config_data["llm_provider"] = {"name": "zhipuai", "model": "glm-4-flash"} # default
+            config_data["llm_provider"] = {"name": "zhipuai", "model": "glm-4.7-flash"} # default
             
-        provider_name = config_data["llm_provider"].get("name")
-        env_api_key = None
-        if provider_name == "openrouter":
-            env_api_key = os.getenv("OPENROUTER_API_KEY")
-        elif provider_name == "zhipuai":
-            env_api_key = os.getenv("ZHIPUAI_API_KEY")
+        provider_config = config_data["llm_provider"]
+        provider_name = provider_config.get("name")
         
-        if env_api_key:
-            config_data["llm_provider"]["api_key"] = env_api_key
+        # LLM API Keys fallback
+        if not provider_config.get("api_key"):
+            env_api_key = None
+            if provider_name == "openrouter":
+                env_api_key = os.getenv("OPENROUTER_API_KEY")
+            elif provider_name == "zhipuai":
+                env_api_key = os.getenv("ZHIPUAI_API_KEY")
+            
+            if env_api_key:
+                provider_config["api_key"] = env_api_key
+        
+        # LLM Model fallback
+        if not provider_config.get("model"):
+            env_model = os.getenv("LLM_MODEL")
+            if env_model:
+                provider_config["model"] = env_model
 
-        # Feishu Credentials (scanning sinks)
-        feishu_app_id = os.getenv("FEISHU_APP_ID")
-        feishu_app_secret = os.getenv("FEISHU_APP_SECRET")
-        feishu_space_id = os.getenv("FEISHU_SPACE_ID") # Optional override for space_id
-
+        # Feishu Credentials fallback (scanning sinks)
         if "sinks" in config_data:
             for sink in config_data["sinks"]:
                 if sink.get("name") == "feishu_doc":
-                    if feishu_app_id:
-                        sink["app_id"] = feishu_app_id
-                    if feishu_app_secret:
-                        sink["app_secret"] = feishu_app_secret
-                    if feishu_space_id:
-                        sink["space_id"] = feishu_space_id
+                    # Priority: config_data > environment variable
+                    sink["app_id"] = sink.get("app_id") or os.getenv("FEISHU_APP_ID")
+                    sink["app_secret"] = sink.get("app_secret") or os.getenv("FEISHU_APP_SECRET")
+                    sink["space_id"] = sink.get("space_id") or os.getenv("FEISHU_SPACE_ID")
 
         # 3. Validate and Return
         return cls(**config_data)

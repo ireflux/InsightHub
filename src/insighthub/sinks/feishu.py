@@ -18,13 +18,15 @@ class FeishuDocSink(BaseSink):
     DOC_CREATE_URL = "https://open.feishu.cn/open-apis/docx/v1/documents"
     WIKI_NODE_CREATE_URL_TEMPLATE = "https://open.feishu.cn/open-apis/wiki/v2/spaces/{space_id}/nodes"
     BLOCK_CHILDREN_CREATE_URL_TEMPLATE = "https://open.feishu.cn/open-apis/docx/v1/documents/{document_id}/blocks/{block_id}/children"
+    BLOCK_CONVERT_URL = "https://open.feishu.cn/open-apis/docx/v1/documents/blocks/convert"
+    BLOCK_DESCENDANT_CREATE_URL_TEMPLATE = "https://open.feishu.cn/open-apis/docx/v1/documents/{document_id}/blocks/{block_id}/descendant"
 
     def __init__(self, app_id: str, app_secret: str, default_title: Optional[str] = None, space_id: Optional[str] = None):
         if not app_id or not app_secret:
             raise ValueError("Feishu app_id and app_secret are required for FeishuDocSink")
         self.app_id = app_id
         self.app_secret = app_secret
-        self.default_title = default_title or "InsightHub Summary"
+        self.default_title = default_title or "InsightHub"
         self.space_id = space_id
 
     async def _get_tenant_access_token(self) -> str:
@@ -37,76 +39,6 @@ class FeishuDocSink(BaseSink):
                 raise RuntimeError(f"Failed to obtain tenant_access_token: {data}")
             return token
 
-    def _make_text_block(self, content: str, elements: Optional[List[Dict]] = None) -> Dict:
-        """Helper to create a Text Block structure."""
-        if elements:
-            return {"block_type": 2, "text": {"elements": elements}}
-        
-        return {
-            "block_type": 2,
-            "text": {
-                "elements": [{"text_run": {"content": content}}]
-            }
-        }
-
-    def _make_heading_block(self, content: str, level: int) -> Dict:
-        """Helper to create a Heading Block (level 1-9)."""
-        block_type = 2 + level
-        key = f"heading{level}"
-        return {
-            "block_type": block_type,
-            key: {
-                "elements": [{"text_run": {"content": content}}]
-            }
-        }
-
-    def _parse_markdown_to_blocks(self, markdown: str) -> List[Dict]:
-        """
-        Simple parser to convert Markdown lines into Feishu blocks.
-        Supports:
-        - ## Headings (converted to Heading 2)
-        - [Title](URL): Summary (converted to Text block with link)
-        - Plain text
-        """
-        blocks = []
-        lines = markdown.split("\n")
-        
-        for line in lines:
-            line = line.strip()
-            if not line:
-                # Add empty block for spacing if needed, but usually skip
-                continue
-            
-            # Match ## Heading
-            if line.startswith("##"):
-                content = line.replace("##", "").strip()
-                blocks.append(self._make_heading_block(content, 2))
-                continue
-            
-            # Match [Title](URL): Summary
-            # Regex: \[([^\]]+)\]\(([^)]+)\):?\s*(.*)
-            link_match = re.match(r"\[([^\]]+)\]\(([^)]+)\):?\s*(.*)", line)
-            if link_match:
-                title, url, summary = link_match.groups()
-                elements = [
-                    {
-                        "text_run": {
-                            "content": title,
-                            "text_element_style": {"link": {"url": url}, "bold": True}
-                        }
-                    }
-                ]
-                if summary:
-                    elements.append({"text_run": {"content": f": {summary}"}})
-                
-                blocks.append(self._make_text_block("", elements=elements))
-                continue
-            
-            # Plain text
-            blocks.append(self._make_text_block(line))
-            
-        return blocks
-
     async def render(self, items: List[NewsItem], curated_content: Optional[str] = None):
         if not items and not curated_content:
             logger.info("FeishuDocSink: Nothing to render.")
@@ -115,51 +47,111 @@ class FeishuDocSink(BaseSink):
         token = await self._get_tenant_access_token()
         headers = {"Authorization": f"Bearer {token}", "Content-Type": "application/json; charset=utf-8"}
 
+        # Dynamic title: InsightHub yyyy-MM-dd
+        doc_title = f"{self.default_title} {datetime.now().strftime('%Y-%m-%d')}"
+
         async with httpx.AsyncClient() as client:
             try:
                 document_id = None
                 if self.space_id:
                     wiki_url = self.WIKI_NODE_CREATE_URL_TEMPLATE.format(space_id=self.space_id)
-                    create_body = {"obj_type": "docx", "node_type": "origin", "title": self.default_title}
+                    create_body = {"obj_type": "docx", "node_type": "origin", "title": doc_title}
                     create_resp = await client.post(wiki_url, json=create_body, headers=headers)
                     create_resp.raise_for_status()
-                    create_data = create_resp.json()
-                    document_id = create_data.get("data", {}).get("node", {}).get("obj_token")
+                    document_id = create_resp.json().get("data", {}).get("node", {}).get("obj_token")
                 else:
-                    create_body = {"title": self.default_title} 
+                    create_body = {"title": doc_title} 
                     create_resp = await client.post(self.DOC_CREATE_URL, json=create_body, headers=headers)
                     create_resp.raise_for_status()
-                    create_data = create_resp.json()
-                    document_id = create_data.get("data", {}).get("document", {}).get("document_id")
+                    document_id = create_resp.json().get("data", {}).get("document", {}).get("document_id")
 
                 if not document_id:
                     logger.error("Failed to determine document_id.")
                     return
 
-                logger.info(f"FeishuDocSink: Document {document_id} created. Inserting content...")
+                logger.info(f"FeishuDocSink: Document {document_id} created. Converting content...")
 
-                # Parse content
-                if curated_content:
-                    # Add top level title
-                    now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                    initial_blocks = [self._make_heading_block(f"InsightHub 周刊 {now}", 1)]
-                    content_blocks = self._parse_markdown_to_blocks(curated_content)
-                    all_blocks = initial_blocks + content_blocks
-                else:
-                    # Legacy fallback
-                    all_blocks = [self._make_text_block("No curated content provided.")]
-
-                # Send in batches
-                BATCH_SIZE = 50
-                create_children_url = self.BLOCK_CHILDREN_CREATE_URL_TEMPLATE.format(
-                    document_id=document_id, block_id=document_id
+                # 1. Convert Markdown to Blocks
+                content = curated_content or "No curated content provided."
+                # Prepend title as Heading 1
+                full_markdown = f"# {doc_title}\n\n{content}"
+                
+                convert_resp = await client.post(
+                    self.BLOCK_CONVERT_URL, 
+                    json={"content_type": "markdown", "content": full_markdown}, 
+                    headers=headers
                 )
+                convert_resp.raise_for_status()
+                convert_data = convert_resp.json().get("data", {})
+                
+                blocks = convert_data.get("blocks", [])
+                first_level_block_ids = convert_data.get("first_level_block_ids", [])
 
-                for i in range(0, len(all_blocks), BATCH_SIZE):
-                    batch = all_blocks[i : i + BATCH_SIZE]
-                    payload = {"children": batch, "index": -1}
-                    resp = await client.post(create_children_url, json=payload, headers=headers)
+                if not blocks or not first_level_block_ids:
+                    logger.warning("No blocks converted from Markdown.")
+                    return
+
+                # 2. Clean blocks (remove merge_info from tables as it's read-only)
+                for block in blocks:
+                    if block.get("block_type") == 31:  # Table
+                        table_data = block.get("table", {})
+                        if "property" in table_data and "merge_info" in table_data["property"]:
+                            del table_data["property"]["merge_info"]
+
+                # 3. Insert blocks into document
+                descendant_url = f"{self.BLOCK_DESCENDANT_CREATE_URL_TEMPLATE.format(document_id=document_id, block_id=document_id)}?document_revision_id=-1"
+                
+                # Batching: descendant API supports up to 1000 blocks in 'descendants' list.
+                if len(blocks) <= 1000:
+                    payload = {
+                        "children_id": first_level_block_ids,
+                        "descendants": blocks,
+                        "index": -1
+                    }
+                    resp = await client.post(descendant_url, json=payload, headers=headers)
                     resp.raise_for_status()
+                else:
+                    # Batching logic: group first-level blocks and their descendants
+                    block_map = {b["block_id"]: b for b in blocks}
+                    
+                    def get_subtree(block_id, subtree_list):
+                        block = block_map.get(block_id)
+                        if not block: return
+                        subtree_list.append(block)
+                        for child_id in block.get("children", []):
+                            get_subtree(child_id, subtree_list)
+
+                    current_batch_children = []
+                    current_batch_descendants = []
+                    
+                    for fl_id in first_level_block_ids:
+                        subtree = []
+                        get_subtree(fl_id, subtree)
+                        
+                        if len(current_batch_descendants) + len(subtree) > 1000:
+                            if current_batch_children:
+                                payload = {
+                                    "children_id": current_batch_children,
+                                    "descendants": current_batch_descendants,
+                                    "index": -1
+                                }
+                                resp = await client.post(descendant_url, json=payload, headers=headers)
+                                resp.raise_for_status()
+                            
+                            current_batch_children = [fl_id]
+                            current_batch_descendants = subtree
+                        else:
+                            current_batch_children.append(fl_id)
+                            current_batch_descendants.extend(subtree)
+                    
+                    if current_batch_children:
+                        payload = {
+                            "children_id": current_batch_children,
+                            "descendants": current_batch_descendants,
+                            "index": -1
+                        }
+                        resp = await client.post(descendant_url, json=payload, headers=headers)
+                        resp.raise_for_status()
 
                 logger.info(f"FeishuDocSink: Successfully rendered document {document_id}")
 

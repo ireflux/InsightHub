@@ -2,13 +2,15 @@ name: Daily InsightHub
 
 on:
   schedule:
-    # Runs daily at 01:00 UTC
+    # 每天北京时间上午 9:00 运行 (UTC 1:00)
     - cron: '0 1 * * *'
   workflow_dispatch: {}
 
 jobs:
   run-daily:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # 允许提交 history.json 回仓库
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -27,7 +29,14 @@ jobs:
         env:
           FEISHU_APP_ID: ${{ secrets.FEISHU_APP_ID }}
           FEISHU_APP_SECRET: ${{ secrets.FEISHU_APP_SECRET }}
-          FEISHU_DOC_ID: ${{ secrets.FEISHU_DOC_ID }}
-          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          FEISHU_SPACE_ID: ${{ secrets.FEISHU_SPACE_ID }}
+          ZHIPUAI_API_KEY: ${{ secrets.ZHIPUAI_API_KEY }}
+          LLM_MODEL: ${{ vars.LLM_MODEL || 'glm-4.7-flash' }}
         run: |
           python -u scripts/run_workflow.py
+
+      - name: Commit and push history.json
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update history.json [skip ci]"
+          file_pattern: 'history.json'
