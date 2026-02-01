@@ -1,0 +1,17 @@
+# Core
+httpx[http2]
+pydantic
+pyyaml
+tenacity
+
+# Web Scraping
+beautifulsoup4
+lxml
+
+# LLM Providers (to be enabled as needed)
+zhipuai
+openrouter
+
+# Dependencies required by some provider packages
+sniffio
+aiofiles
