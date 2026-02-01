@@ -131,3 +131,6 @@ venv.bak/
 # Config files
 config.yaml
 *.db
+
+logs/
+*.log
