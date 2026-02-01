@@ -129,7 +129,7 @@ venv.bak/
 .vscode/
 
 # Config files
-config.yaml
+# config.yaml
 *.db
 
 logs/
