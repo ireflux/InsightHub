@@ -55,7 +55,8 @@ class MarkdownFileSink(BaseSink):
             summary = item.summary or 'No summary available.'
             
             item_str = f"## {i+1}. **[{title}]({url})**\n\n"
-            house_blockquote = f"> {summary.replace('\n', '\n> ')}\n"
+            formatted_summary = summary.replace('\n', '\n> ')
+            house_blockquote = f"> {formatted_summary}\n"
             body.append(item_str + house_blockquote)
             
         return header + "\n---\n\n".join(body)
