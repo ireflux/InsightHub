@@ -1,5 +1,6 @@
 import httpx
 import logging
+import asyncio
 from bs4 import BeautifulSoup
 from typing import List
 from insighthub.sources.base import BaseSource
@@ -14,12 +15,13 @@ class HackerNewsSource(BaseSource):
     
     BASE_URL = "https://news.ycombinator.com/"
     
-    def __init__(self):
-        super().__init__(name="Hacker News")
+    def __init__(self, max_items: int = 8):
+        super().__init__(name="Hacker News", max_items=max_items)
         
     async def fetch(self) -> List[NewsItem]:
         """
         Fetches top stories from Hacker News and returns them as NewsItem objects.
+        Now fetches full content for each item to support Reading Mode.
         """
         headers = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
@@ -28,7 +30,18 @@ class HackerNewsSource(BaseSource):
             try:
                 response = await client.get(self.BASE_URL, follow_redirects=True)
                 response.raise_for_status()
-                return self._parse_html(response.text)
+                items = self._parse_html(response.text)
+                
+                # Fetch full content for each item in parallel to support Reading Mode
+                logger.info(f"Fetching full content for {len(items)} Hacker News items...")
+                content_tasks = [self._fetch_page_content(item.url) for item in items]
+                contents = await asyncio.gather(*content_tasks)
+                
+                for item, full_content in zip(items, contents):
+                    if full_content:
+                        item.content = full_content
+                
+                return items
             except Exception as e:
                 logger.error(f"An error occurred while fetching Hacker News: {e}", exc_info=True)
                 return []
@@ -41,7 +54,7 @@ class HackerNewsSource(BaseSource):
         items = []
         
         # Each story is in a <tr class="athing">
-        for tr in soup.select("tr.athing"):
+        for tr in soup.select("tr.athing")[:self.max_items]:
             try:
                 title_line = tr.select_one("span.titleline")
                 if not title_line or not title_line.a:

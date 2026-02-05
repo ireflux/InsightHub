@@ -19,26 +19,32 @@ def setup_logging():
     log_dir = "logs"
     if not os.path.exists(log_dir):
         os.makedirs(log_dir)
-    
-    log_file = os.path.join(log_dir, "insighthub.log")
-    
+
+    # 按天分割日志文件
+    today_str = datetime.datetime.now().strftime("%Y-%m-%d")
+    log_file = os.path.join(log_dir, f"insighthub_{today_str}.log")
+
     # Create logger
     logger = logging.getLogger()
     logger.setLevel(logging.INFO)
-    
+
+    # 避免重复添加 handler
+    if logger.hasHandlers():
+        logger.handlers.clear()
+
     # Formatter
     formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-    
+
     # Console Handler
     console_handler = logging.StreamHandler(sys.stdout)
     console_handler.setFormatter(formatter)
     logger.addHandler(console_handler)
-    
+
     # File Handler
     file_handler = logging.FileHandler(log_file, encoding='utf-8')
     file_handler.setFormatter(formatter)
     logger.addHandler(file_handler)
-    
+
     return logging.getLogger(__name__)
 
 async def main():
@@ -65,16 +71,17 @@ async def main():
 
     # 2. Initialize Sources
     sources = []
+    max_items = settings.max_items
     for src_config in settings.sources:
         source_name = src_config.name
         if source_name == "github_trending":
-            sources.append(GitHubTrendingSource())
+            sources.append(GitHubTrendingSource(max_items=max_items))
         elif source_name == "zhihu_hot":
             keyword_pattern = src_config.keyword_filter
             pattern = re.compile(keyword_pattern) if keyword_pattern else None
-            sources.append(ZhihuHotSource(keyword_filter=pattern))
+            sources.append(ZhihuHotSource(keyword_filter=pattern, max_items=max_items))
         elif source_name == "hacker_news":
-            sources.append(HackerNewsSource())
+            sources.append(HackerNewsSource(max_items=max_items))
         else:
             logger.warning(f"Unknown source '{source_name}' in config. Skipping.")
 

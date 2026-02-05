@@ -14,8 +14,8 @@ class GitHubTrendingSource(BaseSource):
     
     TRENDING_URL = "https://github.com/trending"
     
-    def __init__(self):
-        super().__init__(name="GitHub Trending")
+    def __init__(self, max_items: int = 8):
+        super().__init__(name="GitHub Trending", max_items=max_items)
         
     async def fetch(self) -> List[NewsItem]:
         """
@@ -46,7 +46,7 @@ class GitHubTrendingSource(BaseSource):
         """
         soup = BeautifulSoup(html, "lxml")
         items = []
-        for article in soup.select("article.Box-row"):
+        for article in soup.select("article.Box-row")[:self.max_items]:
             h2 = article.select_one("h2.h3")
             if not h2 or not h2.a:
                 continue

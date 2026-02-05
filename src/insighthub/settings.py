@@ -25,6 +25,7 @@ class SinkConfig(BaseModel):
 
 class AppSettings(BaseModel):
     llm_provider: LLMProviderConfig
+    max_items: int = 8
     sources: List[SourceConfig] = Field(default_factory=list)
     sinks: List[SinkConfig] = Field(default_factory=list)
 

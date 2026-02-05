@@ -18,6 +18,7 @@ llm_provider:
 
 # Sources Configuration
 # Enable or disable sources by adding or removing them from this list.
+max_items: 8
 sources:
   - name: "github_trending"
   - name: "hacker_news"
