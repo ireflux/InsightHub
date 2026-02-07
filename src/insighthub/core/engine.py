@@ -30,7 +30,7 @@ class InsightEngine:
         self.prompts_dir = prompts_dir
         self.history_file = history_file
         # Updated to use .md template
-        self.summarize_prompt_template = self._load_prompt("summarize_template.md")
+        self.summarize_prompt_template = self._load_prompt("summarize_prompt.md")
 
     def _load_history(self) -> Set[str]:
         """Loads processed item IDs from the history file."""

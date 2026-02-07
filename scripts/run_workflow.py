@@ -9,7 +9,7 @@ import sys
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'src')))
 
 from insighthub.settings import settings
-from insighthub.sources import GitHubTrendingSource, ZhihuHotSource, HackerNewsSource
+from insighthub.sources import GitHubTrendingSource, ZhihuHotSource, HackerNewsSource, V2EXHotSource
 from insighthub.llm_providers import LLMFactory
 from insighthub.core.engine import InsightEngine
 from insighthub.sinks import MarkdownFileSink, FeishuDocSink
@@ -82,6 +82,8 @@ async def main():
             sources.append(ZhihuHotSource(keyword_filter=pattern, max_items=max_items))
         elif source_name == "hacker_news":
             sources.append(HackerNewsSource(max_items=max_items))
+        elif source_name == "v2ex_hot":
+            sources.append(V2EXHotSource(max_items=max_items))
         else:
             logger.warning(f"Unknown source '{source_name}' in config. Skipping.")
 
