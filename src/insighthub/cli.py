@@ -99,6 +99,9 @@ async def run_cli():
         prompt_structure=settings.prompt.structure,
         prompt_style=settings.prompt.style,
         prompt_variables=settings.prompt.variables,
+        max_history_records=settings.state.max_history_records,
+        max_delivery_item_records=settings.state.max_delivery_item_records,
+        max_delivery_runs=settings.state.max_delivery_runs,
     )
 
     if args.command == "fetch":

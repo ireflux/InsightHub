@@ -152,6 +152,95 @@ class TestEngineDedup(unittest.IsolatedAsyncioTestCase):
             os.remove(hist_path)
             os.remove(delivery_path)
 
+    async def test_delivery_state_prunes_old_items(self):
+        item = NewsItem(
+            id="https://example.com/new",
+            title="new",
+            url="https://example.com/new",
+            source="dummy",
+            content="x",
+        )
+
+        with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False, encoding="utf-8") as tmp_hist, tempfile.NamedTemporaryFile(
+            "w", suffix=".json", delete=False, encoding="utf-8"
+        ) as tmp_delivery:
+            tmp_hist.write("[]")
+            hist_path = tmp_hist.name
+            tmp_delivery.write("{}")
+            delivery_path = tmp_delivery.name
+
+        engine = InsightEngine(
+            sources=[DummySource([item])],
+            llm_provider=DummyProvider(),
+            sinks=[DummySink()],
+            history_file=hist_path,
+            delivery_state_file=delivery_path,
+        )
+
+        old_limit = engine.max_delivery_item_records
+        engine.max_delivery_item_records = 2
+        try:
+            state = {
+                "updated_at": None,
+                "runs": [],
+                "items": {
+                    "a": {"sink": {"updated_at": "2026-02-20T00:00:00+00:00"}},
+                    "b": {"sink": {"updated_at": "2026-02-21T00:00:00+00:00"}},
+                    "c": {"sink": {"updated_at": "2026-02-22T00:00:00+00:00"}},
+                },
+            }
+            engine._save_delivery_state(state)
+            with open(delivery_path, "r", encoding="utf-8") as f:
+                saved = f.read()
+            self.assertIn('"b"', saved)
+            self.assertIn('"c"', saved)
+            self.assertNotIn('"a"', saved)
+        finally:
+            engine.max_delivery_item_records = old_limit
+            os.remove(hist_path)
+            os.remove(delivery_path)
+
+    async def test_history_prunes_old_records(self):
+        items = [
+            NewsItem(
+                id=f"https://example.com/{i}",
+                title=f"t{i}",
+                url=f"https://example.com/{i}",
+                source="dummy",
+                content="x",
+            )
+            for i in range(1, 5)
+        ]
+
+        with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False, encoding="utf-8") as tmp_hist, tempfile.NamedTemporaryFile(
+            "w", suffix=".json", delete=False, encoding="utf-8"
+        ) as tmp_delivery:
+            tmp_hist.write("[]")
+            hist_path = tmp_hist.name
+            tmp_delivery.write("{}")
+            delivery_path = tmp_delivery.name
+
+        engine = InsightEngine(
+            sources=[DummySource(items)],
+            llm_provider=DummyProvider(),
+            sinks=[DummySink()],
+            history_file=hist_path,
+            delivery_state_file=delivery_path,
+            max_history_records=2,
+        )
+
+        try:
+            await engine.distribute("summary", items, update_history=True)
+            with open(hist_path, "r", encoding="utf-8") as f:
+                data = f.read()
+            self.assertIn("https://example.com/4", data)
+            self.assertIn("https://example.com/3", data)
+            self.assertNotIn("https://example.com/1", data)
+            self.assertNotIn("https://example.com/2", data)
+        finally:
+            os.remove(hist_path)
+            os.remove(delivery_path)
+
 
 if __name__ == "__main__":
     unittest.main()

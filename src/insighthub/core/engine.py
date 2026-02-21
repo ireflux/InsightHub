@@ -31,7 +31,6 @@ class InsightEngine:
         "ref",
         "source",
     }
-
     def __init__(
         self,
         sources: List[BaseSource],
@@ -43,6 +42,9 @@ class InsightEngine:
         prompt_structure: str = "professional_briefing_v1",
         prompt_style: str = "professional_neutral_v1",
         prompt_variables: Optional[Dict[str, Any]] = None,
+        max_history_records: int = 3000,
+        max_delivery_item_records: int = 2000,
+        max_delivery_runs: int = 100,
     ):
         self.sources = sources
         self.llm_provider = llm_provider
@@ -50,6 +52,9 @@ class InsightEngine:
         self.prompts_dir = prompts_dir
         self.history_file = history_file
         self.delivery_state_file = delivery_state_file
+        self.max_history_records = max_history_records
+        self.max_delivery_item_records = max_delivery_item_records
+        self.max_delivery_runs = max_delivery_runs
         self.prompt_renderer = PromptRenderer(
             prompts_dir=prompts_dir,
             structure_name=prompt_structure,
@@ -58,21 +63,30 @@ class InsightEngine:
         )
         self.summarize_prompt_template = self._load_summarize_prompt_template()
 
-    def _load_history(self) -> Set[str]:
+    def _load_history_entries(self) -> List[str]:
         if not os.path.exists(self.history_file):
-            return set()
+            return []
         try:
             with open(self.history_file, "r", encoding="utf-8") as f:
                 data = json.load(f)
-                return set(data) if isinstance(data, list) else set()
+                if not isinstance(data, list):
+                    return []
+                # Preserve order and remove duplicates.
+                return list(dict.fromkeys(str(x) for x in data))
         except Exception as e:
             logger.warning("Failed to load history file.", extra={"event": "engine.history.load_failed", "error": str(e)})
-            return set()
+            return []
 
-    def _save_history(self, seen_ids: Set[str]):
+    def _load_history(self) -> Set[str]:
+        return set(self._load_history_entries())
+
+    def _save_history_entries(self, entries: List[str]):
+        pruned_entries = list(dict.fromkeys(entries))
+        if len(pruned_entries) > self.max_history_records:
+            pruned_entries = pruned_entries[-self.max_history_records :]
         try:
             with open(self.history_file, "w", encoding="utf-8") as f:
-                json.dump(sorted(list(seen_ids)), f, ensure_ascii=False, indent=2)
+                json.dump(pruned_entries, f, ensure_ascii=False, indent=2)
         except Exception as e:
             logger.error("Failed to save history file.", extra={"event": "engine.history.save_failed", "error": str(e)})
 
@@ -95,6 +109,9 @@ class InsightEngine:
         return {"updated_at": None, "runs": [], "items": {}}
 
     def _save_delivery_state(self, state: Dict[str, Any]) -> None:
+        self._prune_delivery_state_items(state, max_item_records=self.max_delivery_item_records)
+        if len(state.get("runs", [])) > self.max_delivery_runs:
+            state["runs"] = state["runs"][-self.max_delivery_runs :]
         state["updated_at"] = self._utc_now_iso()
         try:
             with open(self.delivery_state_file, "w", encoding="utf-8") as f:
@@ -104,6 +121,24 @@ class InsightEngine:
                 "Failed to save delivery state file.",
                 extra={"event": "engine.delivery_state.save_failed", "error": str(e)},
             )
+
+    def _prune_delivery_state_items(self, state: Dict[str, Any], max_item_records: int) -> None:
+        items = state.get("items")
+        if not isinstance(items, dict):
+            state["items"] = {}
+            return
+        if len(items) <= max_item_records:
+            return
+
+        def latest_updated_at(entry: Any) -> str:
+            if not isinstance(entry, dict):
+                return ""
+            values = [v.get("updated_at", "") for v in entry.values() if isinstance(v, dict)]
+            return max(values) if values else ""
+
+        sorted_keys = sorted(items.keys(), key=lambda k: latest_updated_at(items[k]), reverse=True)
+        keep = set(sorted_keys[:max_item_records])
+        state["items"] = {k: v for k, v in items.items() if k in keep}
 
     @staticmethod
     def _utc_now_iso() -> str:
@@ -269,7 +304,6 @@ class InsightEngine:
         }
 
         sink_successes = 0
-        delivered_item_keys: Set[str] = set()
         item_keys = [self._item_primary_key(item) for item in items]
 
         for sink, result in zip(self.sinks, results):
@@ -291,7 +325,6 @@ class InsightEngine:
                     "meta": result,
                 }
                 sink_successes += 1
-                delivered_item_keys.update(item_keys)
                 logger.info(
                     "Sink delivery succeeded.",
                     extra={"event": "engine.distribute.sink_succeeded", "sink": sink_key},
@@ -308,20 +341,20 @@ class InsightEngine:
                 }
 
         state["runs"].append(run_record)
-        if len(state["runs"]) > 100:
-            state["runs"] = state["runs"][-100:]
         self._save_delivery_state(state)
 
         if update_history and items:
             if sink_successes == 0:
                 logger.warning("No sinks succeeded; history not updated.", extra={"event": "engine.distribute.history_skipped"})
                 return
-            seen_ids = self._load_history()
-            seen_ids.update(delivered_item_keys)
-            self._save_history(seen_ids)
+            history_entries = self._load_history_entries()
+            history_set = set(history_entries)
+            new_entries = [key for key in item_keys if key not in history_set]
+            history_entries.extend(new_entries)
+            self._save_history_entries(history_entries)
             logger.info(
                 "History updated after distribution.",
-                extra={"event": "engine.distribute.history_updated", "updated_items_count": len(delivered_item_keys)},
+                extra={"event": "engine.distribute.history_updated", "updated_items_count": len(new_entries)},
             )
 
     def save_items(self, items: List[NewsItem], file_path: str):

@@ -31,9 +31,8 @@ class MarkdownFileSink(BaseSink):
         filepath = os.path.join(self.output_dir, filename)
         
         if curated_content:
-            # Add a header to the curated content
-            header = f"# InsightHub {now.strftime('%Y-%m-%d')}\n\n"
-            content = header + curated_content
+            # Use curated content as-is to avoid forcing a title into article body.
+            content = curated_content
         else:
             content = self._format_as_feishu_markdown(items, now)
         

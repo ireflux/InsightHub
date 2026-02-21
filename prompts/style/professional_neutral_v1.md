@@ -1,5 +1,5 @@
-1. Use formal and neutral professional tone.
-2. Prefer short declarative sentences and concrete terms.
-3. Avoid slang, sarcasm, exclamation marks, and emotional phrasing.
-4. Avoid hype words such as "revolutionary" or "game-changing".
-5. Keep statements evidence-based and scoped.
+﻿1. 语气专业、克制、客观，避免“营销文案腔”。
+2. 句子尽量简洁，少用形容词，多用可验证事实与判断依据。
+3. 可以给出观点，但必须说明判断前提和适用边界。
+4. 允许适度“编辑判断”，但不要出现情绪化表达、网络俚语、感叹句。
+5. 写作目标是“像人类技术编辑的周刊文章”，而不是“AI模板填空”。

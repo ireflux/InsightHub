@@ -38,12 +38,19 @@ class PromptConfig(BaseModel):
     variables: Dict[str, Any] = Field(default_factory=dict)
 
 
+class StateConfig(BaseModel):
+    max_history_records: int = 3000
+    max_delivery_item_records: int = 2000
+    max_delivery_runs: int = 100
+
+
 class AppSettings(BaseModel):
     llm_provider: LLMProviderConfig
     max_items: int = 8
     sources: List[SourceConfig] = Field(default_factory=list)
     sinks: List[SinkConfig] = Field(default_factory=list)
     prompt: PromptConfig = Field(default_factory=PromptConfig)
+    state: StateConfig = Field(default_factory=StateConfig)
 
     class Config:
         extra = "forbid"
@@ -81,6 +88,13 @@ class AppSettings(BaseModel):
                 raise ConfigValidationError("Sink 'markdown_file' requires output_dir.")
             if sink.name == "feishu_doc" and sink.doc_id and sink.space_id:
                 logger.warning("Both feishu_doc.doc_id and space_id are set; doc_id will take precedence.")
+
+        if self.state.max_history_records <= 0:
+            raise ConfigValidationError("state.max_history_records must be > 0.")
+        if self.state.max_delivery_item_records <= 0:
+            raise ConfigValidationError("state.max_delivery_item_records must be > 0.")
+        if self.state.max_delivery_runs <= 0:
+            raise ConfigValidationError("state.max_delivery_runs must be > 0.")
 
     def validate_runtime_requirements(self) -> None:
         provider = self.llm_provider.name.lower()

@@ -87,8 +87,8 @@ class FeishuDocSink(BaseSink):
                     section_title = datetime.now().strftime("%Y-%m-%d")
                     full_markdown = f"## {section_title}\n\n{content}"
                 else:
-                    # For new docs, include top-level heading once.
-                    full_markdown = f"# {doc_title}\n\n{content}"
+                    # For new docs, use content as-is (doc title is already set in Feishu metadata).
+                    full_markdown = content
                 
                 convert_resp = await client.post(
                     self.BLOCK_CONVERT_URL, 

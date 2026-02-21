@@ -16,13 +16,15 @@ class TestPromptRenderer(unittest.TestCase):
             prompts_dir="prompts",
             structure_name="professional_briefing_v1",
             style_name="professional_neutral_v1",
+            variables={"min_items": 12},
         )
 
         template = renderer.render_summarize_template()
 
-        self.assertIn("## Executive Summary", template)
-        self.assertIn("## Detailed Items", template)
-        self.assertIn("formal and neutral professional tone", template)
+        self.assertIn("## 本期导读", template)
+        self.assertIn("## 详细解读", template)
+        self.assertIn("仅使用中文输出", template)
+        self.assertIn("至少输出 12 条", template)
         self.assertIn("{content}", template)
 
 

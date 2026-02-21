@@ -13,7 +13,13 @@ max_items: 8
 prompt:
   structure: "professional_briefing_v1"
   style: "professional_neutral_v1"
-  variables: {}
+  variables:
+    min_items: 12
+
+state:
+  max_history_records: 3000
+  max_delivery_item_records: 2000
+  max_delivery_runs: 100
 
 sources:
   - name: "github_trending"
