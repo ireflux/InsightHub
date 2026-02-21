@@ -1,7 +1,6 @@
 import httpx
 import logging
-import asyncio
-from typing import List, Optional
+from typing import List
 from insighthub.sources.base import BaseSource
 from insighthub.models import NewsItem
 
@@ -22,11 +21,8 @@ class V2EXHotSource(BaseSource):
             max_items: Maximum number of items to fetch.
         """
         super().__init__(name="V2EX Hot", max_items=max_items)
-        
-    async def fetch(self) -> List[NewsItem]:
-        """
-        Fetches hot topics from V2EX's API and returns them in the unified data format.
-        """
+
+    async def discover_raw(self) -> List[dict]:
         headers = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
         }
@@ -34,32 +30,13 @@ class V2EXHotSource(BaseSource):
             try:
                 response = await client.get(self.API_URL)
                 response.raise_for_status()
-                items = self._parse_json(response.json())
-                
-                # Fetch full content for top items if needed
-                # Actually V2EX hot API already provides some content, but let's 
-                # use _fetch_page_content to get more if it's truncated or just to be consistent.
-                # However, the API content is usually good enough.
-                # Let's see if we should fetch more.
-                
-                # For consistency with other sources, let's try to fetch full page content
-                logger.info(f"Fetching full content for {len(items)} V2EX topics...")
-                content_tasks = [self._fetch_page_content(item.url) for item in items]
-                contents = await asyncio.gather(*content_tasks)
-                
-                for item, full_content in zip(items, contents):
-                    if full_content:
-                        item.content = full_content
-                
-                return items
+                return response.json()
             except httpx.HTTPStatusError as e:
-                logger.error(f"HTTP error occurred while fetching V2EX Hot list: {e}")
-                return []
+                raise self.source_fetch_error(f"V2EX HTTP error: {e}")
             except Exception as e:
-                logger.error(f"An error occurred while fetching V2EX Hot list: {e}", exc_info=True)
-                return []
+                raise self.source_fetch_error(f"V2EX fetch failed: {e}")
 
-    def _parse_json(self, json_data: List[dict]) -> List[NewsItem]:
+    def normalize_raw(self, json_data: List[dict]) -> List[NewsItem]:
         """
         Parses the JSON response from V2EX's API and returns list of NewsItem.
         """
@@ -83,4 +60,15 @@ class V2EXHotSource(BaseSource):
                 content=content,
                 original_data=item
             ))
+        return items
+
+    async def enrich_items(self, items: List[NewsItem]) -> List[NewsItem]:
+        logger.info(
+            "Fetching full content for V2EX items.",
+            extra={"event": "source.enrich.start", "source": self.name, "items_count": len(items)},
+        )
+        contents = await self._fetch_page_contents([item.url for item in items])
+        for item, full_content in zip(items, contents):
+            if full_content:
+                item.content = full_content
         return items

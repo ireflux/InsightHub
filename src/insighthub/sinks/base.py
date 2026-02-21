@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from typing import List, Optional
+from typing import Dict, List, Optional
 from insighthub.models import NewsItem
 
 class BaseSink(ABC):
@@ -10,13 +10,19 @@ class BaseSink(ABC):
     and rendering it to a specific output format or destination.
     """
     
+    def sink_id(self) -> str:
+        return self.__class__.__name__
+
     @abstractmethod
-    async def render(self, items: List[NewsItem], curated_content: Optional[str] = None):
+    async def render(self, items: List[NewsItem], curated_content: Optional[str] = None) -> Dict[str, str]:
         """
         Renders the items or the pre-rendered curated content to the sink's target.
         
         Args:
             items: A list of NewsItem objects.
             curated_content: Optional pre-rendered Markdown content (e.g., from batch AI call).
+
+        Returns:
+            Optional metadata dictionary from sink execution.
         """
         pass

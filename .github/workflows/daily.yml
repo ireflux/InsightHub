@@ -1,8 +1,7 @@
-name: Daily InsightHub
+﻿name: Daily InsightHub
 
 on:
   schedule:
-    # 每天北京时间上午 9:00 运行 (UTC 1:00)
     - cron: '0 1 * * *'
   workflow_dispatch: {}
 
@@ -10,33 +9,39 @@ jobs:
   run-daily:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # 允许提交 history.json 回仓库
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
+          python-version: '3.11'
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install .
+
+      - name: Run tests
+        run: |
+          python -m unittest discover -s tests -v
 
       - name: Run InsightHub workflow
         env:
           FEISHU_APP_ID: ${{ secrets.FEISHU_APP_ID }}
           FEISHU_APP_SECRET: ${{ secrets.FEISHU_APP_SECRET }}
           FEISHU_SPACE_ID: ${{ secrets.FEISHU_SPACE_ID }}
+          FEISHU_DOC_ID: ${{ secrets.FEISHU_DOC_ID }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           ZHIPUAI_API_KEY: ${{ secrets.ZHIPUAI_API_KEY }}
           LLM_MODEL: ${{ vars.LLM_MODEL || 'glm-4.7-flash' }}
         run: |
-          python -u scripts/run_workflow.py
+          insighthub run
 
       - name: Commit and push history.json
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: update history.json [skip ci]"
-          file_pattern: 'history.json'
+          commit_message: 'chore: update history.json [skip ci]'
+          file_pattern: 'history.json delivery_state.json'

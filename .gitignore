@@ -134,3 +134,5 @@ venv.bak/
 
 logs/
 *.log
+
+output/

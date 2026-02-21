@@ -1,17 +1,3 @@
-# Core
-httpx[http2]
-pydantic
-pyyaml
-tenacity
-
-# Web Scraping
-beautifulsoup4
-lxml
-
-# LLM Providers (to be enabled as needed)
-zhipuai
-openrouter
-
-# Dependencies required by some provider packages
-sniffio
-aiofiles
+﻿# Compatibility layer for environments still using `pip install -r requirements.txt`.
+# Canonical dependency source is pyproject.toml.
+-e .

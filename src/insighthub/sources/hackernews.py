@@ -1,6 +1,5 @@
 import httpx
 import logging
-import asyncio
 from bs4 import BeautifulSoup
 from typing import List
 from insighthub.sources.base import BaseSource
@@ -17,12 +16,8 @@ class HackerNewsSource(BaseSource):
     
     def __init__(self, max_items: int = 8):
         super().__init__(name="Hacker News", max_items=max_items)
-        
-    async def fetch(self) -> List[NewsItem]:
-        """
-        Fetches top stories from Hacker News and returns them as NewsItem objects.
-        Now fetches full content for each item to support Reading Mode.
-        """
+
+    async def discover_raw(self) -> str:
         headers = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
         }
@@ -30,23 +25,11 @@ class HackerNewsSource(BaseSource):
             try:
                 response = await client.get(self.BASE_URL, follow_redirects=True)
                 response.raise_for_status()
-                items = self._parse_html(response.text)
-                
-                # Fetch full content for each item in parallel to support Reading Mode
-                logger.info(f"Fetching full content for {len(items)} Hacker News items...")
-                content_tasks = [self._fetch_page_content(item.url) for item in items]
-                contents = await asyncio.gather(*content_tasks)
-                
-                for item, full_content in zip(items, contents):
-                    if full_content:
-                        item.content = full_content
-                
-                return items
+                return response.text
             except Exception as e:
-                logger.error(f"An error occurred while fetching Hacker News: {e}", exc_info=True)
-                return []
+                raise self.source_fetch_error(f"Hacker News fetch failed: {e}")
 
-    def _parse_html(self, html: str) -> List[NewsItem]:
+    def normalize_raw(self, html: str) -> List[NewsItem]:
         """
         Parses the Hacker News HTML to extract stories.
         """
@@ -86,4 +69,15 @@ class HackerNewsSource(BaseSource):
                 logger.warning(f"Failed to parse a Hacker News item: {e}")
                 continue
                 
+        return items
+
+    async def enrich_items(self, items: List[NewsItem]) -> List[NewsItem]:
+        logger.info(
+            "Fetching full content for Hacker News items.",
+            extra={"event": "source.enrich.start", "source": self.name, "items_count": len(items)},
+        )
+        contents = await self._fetch_page_contents([item.url for item in items])
+        for item, full_content in zip(items, contents):
+            if full_content:
+                item.content = full_content
         return items

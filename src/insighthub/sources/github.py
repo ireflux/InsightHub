@@ -16,30 +16,23 @@ class GitHubTrendingSource(BaseSource):
     
     def __init__(self, max_items: int = 8):
         super().__init__(name="GitHub Trending", max_items=max_items)
-        
-    async def fetch(self) -> List[NewsItem]:
-        """
-        Fetches trending repositories from GitHub, parses them,
-        and returns them in the unified data format.
-        """
+
+    async def discover_raw(self) -> str:
         # Set a sensible timeout and User-Agent to reduce chance of being blocked
         headers = {"User-Agent": "InsightHub/1.0 (+https://github.com/your/repo)"}
         async with httpx.AsyncClient(timeout=20.0, headers=headers) as client:
             try:
                 response = await client.get(self.TRENDING_URL, follow_redirects=True)
                 response.raise_for_status()
-                return self._parse_html(response.text)
+                return response.text
             except httpx.ConnectTimeout:
-                logger.warning("An error occurred: connection to GitHub timed out. Check your network/proxy or increase the timeout.")
-                return []
+                raise self.source_fetch_error("Connection to GitHub timed out. Check network/proxy or increase timeout.")
             except httpx.HTTPStatusError as e:
-                logger.error(f"HTTP error occurred: {e}")
-                return []
+                raise self.source_fetch_error(f"GitHub HTTP error: {e}")
             except Exception as e:
-                logger.error(f"An error occurred: {e}", exc_info=True)
-                return []
+                raise self.source_fetch_error(f"GitHub fetch failed: {e}")
 
-    def _parse_html(self, html: str) -> List[NewsItem]:
+    def normalize_raw(self, html: str) -> List[NewsItem]:
         """
         Parses the GitHub Trending HTML to extract repository information.
         Returns a list of NewsItem items.

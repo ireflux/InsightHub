@@ -1,7 +1,5 @@
 import httpx
-import re
 import logging
-import asyncio
 from typing import List, Pattern, Optional
 from insighthub.sources.base import BaseSource
 from insighthub.models import NewsItem
@@ -26,39 +24,22 @@ class ZhihuHotSource(BaseSource):
         """
         super().__init__(name="Zhihu Hot", max_items=max_items)
         self.keyword_filter = keyword_filter
-        
-    async def fetch(self) -> List[NewsItem]:
-        """
-        Fetches hot topics from Zhihu's API, filters them,
-        and returns them in the unified data format.
-        """
+
+    async def discover_raw(self) -> dict:
         headers = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36"
         }
-        async with httpx.AsyncClient(headers=headers) as client:
+        async with httpx.AsyncClient(headers=headers, timeout=20.0) as client:
             try:
                 response = await client.get(self.API_URL)
                 response.raise_for_status()
-                items = self._parse_json(response.json())
-                
-                # Fetch full content for top items
-                logger.info(f"Fetching full content for {len(items)} Zhihu topics...")
-                content_tasks = [self._fetch_page_content(item.url) for item in items]
-                contents = await asyncio.gather(*content_tasks)
-                
-                for item, full_content in zip(items, contents):
-                    if full_content:
-                        item.content = full_content
-                
-                return items
+                return response.json()
             except httpx.HTTPStatusError as e:
-                logger.error(f"HTTP error occurred while fetching Zhihu Hot list: {e}")
-                return []
+                raise self.source_fetch_error(f"Zhihu HTTP error: {e}")
             except Exception as e:
-                logger.error(f"An error occurred while fetching Zhihu Hot list: {e}", exc_info=True)
-                return []
+                raise self.source_fetch_error(f"Zhihu fetch failed: {e}")
 
-    def _parse_json(self, json_data: dict) -> List[NewsItem]:
+    def normalize_raw(self, json_data: dict) -> List[NewsItem]:
         """
         Parses the JSON response from Zhihu's API and returns list of dict items.
         """
@@ -89,4 +70,15 @@ class ZhihuHotSource(BaseSource):
                 content=content,
                 original_data=item
             ))
+        return items
+
+    async def enrich_items(self, items: List[NewsItem]) -> List[NewsItem]:
+        logger.info(
+            "Fetching full content for Zhihu items.",
+            extra={"event": "source.enrich.start", "source": self.name, "items_count": len(items)},
+        )
+        contents = await self._fetch_page_contents([item.url for item in items])
+        for item, full_content in zip(items, contents):
+            if full_content:
+                item.content = full_content
         return items

@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "insighthub"
+version = "0.1.0"
+description = "InsightHub: async tech-signal aggregation and summarization workflow"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "httpx[http2]",
+  "pydantic>=2,<3",
+  "pyyaml",
+  "tenacity",
+  "beautifulsoup4",
+  "lxml",
+  "zhipuai",
+  "openrouter",
+  "sniffio",
+  "aiofiles",
+]
+
+[project.scripts]
+insighthub = "insighthub.cli:main"
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "pytest-asyncio",
+  "ruff",
+  "mypy",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

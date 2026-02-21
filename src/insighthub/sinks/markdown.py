@@ -16,6 +16,7 @@ class MarkdownFileSink(BaseSink):
     def __init__(self, output_dir: str = "output"):
         self.output_dir = output_dir
         os.makedirs(self.output_dir, exist_ok=True)
+        self.name = "markdown_file"
         
     async def render(self, items: List[NewsItem], curated_content: Optional[str] = None):
         """
@@ -23,7 +24,7 @@ class MarkdownFileSink(BaseSink):
         """
         if not items and not curated_content:
             logger.info("MarkdownFileSink: Nothing to render.")
-            return
+            return {"status": "skipped", "reason": "empty_input"}
             
         now = datetime.datetime.now()
         filename = f"InsightHub_{now.strftime('%Y-%m-%d_%H-%M')}.md"
@@ -40,6 +41,7 @@ class MarkdownFileSink(BaseSink):
             await f.write(content)
             
         logger.info(f"Successfully generated Markdown file: {filepath}")
+        return {"status": "success", "file_path": filepath}
 
     def _format_as_feishu_markdown(self, items: List[NewsItem], timestamp: datetime.datetime) -> str:
         """

@@ -4,25 +4,26 @@
 # Supported providers: "openrouter", "zhipuai"
 llm_provider:
   name: "zhipuai"
-  # API keys can be set here or via environment variables:
-  # OPENROUTER_API_KEY or ZHIPUAI_API_KEY
-  api_key: "b719cdbb71f941eaa8de77f30395779e.s1lDUtBu023vBRyj"
+  # API key must be provided via environment variables:
+  # - OPENROUTER_API_KEY (for openrouter)
+  # - ZHIPUAI_API_KEY (for zhipuai)
   # Specify the model to use for the selected provider
   model: "glm-4.7-flash" # e.g., "glm-4.7-flash" for zhipuai
-
-# Database Configuration
-
-# Database configuration removed. Deduplication is now performed via
-# Feishu Docs API (cloud). The local SQLite path was removed to simplify
-# running in ephemeral CI environments (GitHub Actions).
 
 # Sources Configuration
 # Enable or disable sources by adding or removing them from this list.
 max_items: 8
+
+prompt:
+  structure: "professional_briefing_v1"
+  style: "professional_neutral_v1"
+  variables: {}
+
 sources:
   - name: "github_trending"
   - name: "hacker_news"
   - name: "v2ex_hot"
+  - name: "slashdot"
   # - name: "zhihu_hot"
   #   # Optional: Add a regex filter for zhihu titles
   #   keyword_filter: "编程|AI|Python|技术|开发|机器学习|深度学习"
@@ -34,9 +35,11 @@ sinks:
     output_dir: "output"
   # Example of using Feishu Docs API (recommended)
   - name: "feishu_doc"
-    app_id: "cli_a9fd3ac5a5b89bb6"
-    app_secret: "s25jlzjxpr9pP5ihxfWBBVMy2uVAFlz2"
+    # Credentials must be provided via environment variables:
+    # FEISHU_APP_ID / FEISHU_APP_SECRET
     # optional: default title for created documents
-    default_title: "InsightHub"
+    default_title: "InsightHub {date}"
     # optional: Wiki Space ID. If provided, creates a node in this Wiki Space instead of a standalone Doc.
     space_id: "7599692883666422737"
+    # optional: existing doc id. If set, the workflow updates this doc instead of creating a new one.
+    # doc_id: ""

@@ -1,21 +1,37 @@
-import asyncio
-import os
+﻿import asyncio
 import json
 import logging
-from typing import List, Set, Optional
-from insighthub.sources.base import BaseSource
+import os
+from datetime import datetime, timezone
+from typing import Any, Dict, List, Optional, Set
+from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
+
+from insighthub.core.retry import with_retry
+from insighthub.errors import LLMProcessingError, PromptRenderingError, SinkDeliveryError, SourceFetchError
 from insighthub.llm_providers.base import BaseLLMProvider
-from insighthub.sinks.base import BaseSink
 from insighthub.models import NewsItem
+from insighthub.prompting import PromptRenderer
+from insighthub.sinks.base import BaseSink
+from insighthub.sources.base import BaseSource
 
 logger = logging.getLogger(__name__)
+
 
 class InsightEngine:
     """
     The core orchestrator of the InsightHub workflow.
-    Refactored for batch processing: collects all items and calls AI once.
     """
-    
+
+    TRACKING_QUERY_PARAMS = {
+        "utm_source",
+        "utm_medium",
+        "utm_campaign",
+        "utm_term",
+        "utm_content",
+        "ref",
+        "source",
+    }
+
     def __init__(
         self,
         sources: List[BaseSource],
@@ -23,101 +39,314 @@ class InsightEngine:
         sinks: List[BaseSink],
         prompts_dir: str = "prompts",
         history_file: str = "history.json",
+        delivery_state_file: str = "delivery_state.json",
+        prompt_structure: str = "professional_briefing_v1",
+        prompt_style: str = "professional_neutral_v1",
+        prompt_variables: Optional[Dict[str, Any]] = None,
     ):
         self.sources = sources
         self.llm_provider = llm_provider
         self.sinks = sinks
         self.prompts_dir = prompts_dir
         self.history_file = history_file
-        # Updated to use .md template
-        self.summarize_prompt_template = self._load_prompt("summarize_prompt.md")
+        self.delivery_state_file = delivery_state_file
+        self.prompt_renderer = PromptRenderer(
+            prompts_dir=prompts_dir,
+            structure_name=prompt_structure,
+            style_name=prompt_style,
+            variables=prompt_variables or {},
+        )
+        self.summarize_prompt_template = self._load_summarize_prompt_template()
 
     def _load_history(self) -> Set[str]:
-        """Loads processed item IDs from the history file."""
         if not os.path.exists(self.history_file):
             return set()
         try:
-            with open(self.history_file, 'r', encoding='utf-8') as f:
+            with open(self.history_file, "r", encoding="utf-8") as f:
                 data = json.load(f)
                 return set(data) if isinstance(data, list) else set()
         except Exception as e:
-            logger.warning(f"Failed to load history from {self.history_file}: {e}")
+            logger.warning("Failed to load history file.", extra={"event": "engine.history.load_failed", "error": str(e)})
             return set()
 
     def _save_history(self, seen_ids: Set[str]):
-        """Saves processed item IDs to the history file."""
         try:
-            with open(self.history_file, 'w', encoding='utf-8') as f:
-                json.dump(list(seen_ids), f, ensure_ascii=False, indent=2)
+            with open(self.history_file, "w", encoding="utf-8") as f:
+                json.dump(sorted(list(seen_ids)), f, ensure_ascii=False, indent=2)
         except Exception as e:
-            logger.error(f"Failed to save history to {self.history_file}: {e}")
+            logger.error("Failed to save history file.", extra={"event": "engine.history.save_failed", "error": str(e)})
+
+    def _load_delivery_state(self) -> Dict[str, Any]:
+        if not os.path.exists(self.delivery_state_file):
+            return {"updated_at": None, "runs": [], "items": {}}
+        try:
+            with open(self.delivery_state_file, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                if isinstance(data, dict):
+                    data.setdefault("updated_at", None)
+                    data.setdefault("runs", [])
+                    data.setdefault("items", {})
+                    return data
+        except Exception as e:
+            logger.warning(
+                "Failed to load delivery state file.",
+                extra={"event": "engine.delivery_state.load_failed", "error": str(e)},
+            )
+        return {"updated_at": None, "runs": [], "items": {}}
+
+    def _save_delivery_state(self, state: Dict[str, Any]) -> None:
+        state["updated_at"] = self._utc_now_iso()
+        try:
+            with open(self.delivery_state_file, "w", encoding="utf-8") as f:
+                json.dump(state, f, ensure_ascii=False, indent=2)
+        except Exception as e:
+            logger.error(
+                "Failed to save delivery state file.",
+                extra={"event": "engine.delivery_state.save_failed", "error": str(e)},
+            )
+
+    @staticmethod
+    def _utc_now_iso() -> str:
+        return datetime.now(timezone.utc).isoformat()
 
     async def run(self):
-        """
-        Runs the full workflow:
-        1. Loads processed history.
-        2. Fetches data from all sources.
-        3. Deduplicates.
-        4. Batch summarizes ALL new items in one AI call.
-        5. Sends the curated content to all sinks.
-        6. Updates history.
-        """
-        # 1. Load History
-        seen_ids = self._load_history()
-        logger.info(f"Loaded {len(seen_ids)} seen items from history.")
-
-        # 2. Fetch from all sources
-        fetch_tasks = [source.fetch() for source in self.sources]
-        all_items_nested = await asyncio.gather(*fetch_tasks)
-        all_items: List[NewsItem] = [item for sublist in all_items_nested for item in sublist]
-        logger.info(f"Fetched {len(all_items)} total items from {len(self.sources)} sources.")
-
-        # 3. Deduplicate
-        new_items = [item for item in all_items if item.id not in seen_ids]
-        logger.info(f"Found {len(new_items)} new items after deduplication.")
-        
+        new_items = await self.fetch()
         if not new_items:
-            logger.info("No new items to process. Exiting.")
+            logger.info("No new items to process.", extra={"event": "engine.run.no_new_items"})
             return
 
-        # 4. Batch Summarize
-        # Prepare the combined content for the AI
+        curated_markdown = await self.summarize(new_items)
+        await self.distribute(curated_markdown, new_items)
+
+    async def _fetch_from_source(self, source: BaseSource) -> List[NewsItem]:
+        source_name = getattr(source, "name", source.__class__.__name__)
+
+        async def op() -> List[NewsItem]:
+            try:
+                return await source.fetch()
+            except SourceFetchError:
+                raise
+            except Exception as e:
+                raise SourceFetchError(f"Source '{source_name}' failed: {e}") from e
+
+        return await with_retry(
+            op,
+            logger=logger,
+            operation_name=f"source.fetch:{source_name}",
+            max_attempts=3,
+            base_delay_seconds=1.0,
+        )
+
+    async def fetch(self, ignore_history: bool = False) -> List[NewsItem]:
+        seen_ids = set() if ignore_history else self._load_history()
+        if not ignore_history:
+            logger.info(
+                "Loaded history entries.",
+                extra={"event": "engine.fetch.history_loaded", "seen_ids_count": len(seen_ids)},
+            )
+
+        fetch_tasks = [self._fetch_from_source(source) for source in self.sources]
+        source_results = await asyncio.gather(*fetch_tasks, return_exceptions=True)
+
+        all_items: List[NewsItem] = []
+        for source, result in zip(self.sources, source_results):
+            source_name = getattr(source, "name", source.__class__.__name__)
+            if isinstance(result, Exception):
+                logger.error(
+                    "Source fetch failed.",
+                    extra={"event": "engine.fetch.source_failed", "source": source_name, "error": str(result)},
+                )
+                continue
+            logger.info(
+                "Source fetch succeeded.",
+                extra={"event": "engine.fetch.source_succeeded", "source": source_name, "items_count": len(result)},
+            )
+            all_items.extend(result)
+
+        logger.info(
+            "Fetched items from all sources.",
+            extra={"event": "engine.fetch.completed", "items_total": len(all_items), "sources_total": len(self.sources)},
+        )
+
+        new_items: List[NewsItem] = []
+        seen_in_batch: Set[str] = set()
+        for item in all_items:
+            primary_key = self._item_primary_key(item)
+            if primary_key in seen_in_batch:
+                continue
+            seen_in_batch.add(primary_key)
+
+            candidates = self._item_identity_candidates(item)
+            if any(candidate in seen_ids for candidate in candidates):
+                continue
+            new_items.append(item)
+
+        logger.info(
+            "Deduplication completed.",
+            extra={"event": "engine.fetch.deduplicated", "new_items_count": len(new_items)},
+        )
+        return new_items
+
+    async def summarize(self, items: List[NewsItem]) -> str:
+        if not items:
+            return ""
+
         combined_input = ""
-        for i, item in enumerate(new_items, start=1):
+        for i, item in enumerate(items, start=1):
             combined_input += f"--- Item {i} ---\n"
             combined_input += f"Title: {item.title}\n"
             combined_input += f"URL: {item.url}\n"
             combined_input += f"Content: {item.content}\n\n"
 
-        logger.info(f"Calling AI once to summarize {len(new_items)} items...")
-        try:
-            curated_markdown = await self.llm_provider.summarize(combined_input, self.summarize_prompt_template)
-            logger.info("AI batch summarization successful.")
-        except Exception as e:
-            logger.error(f"Failed to perform batch summarization: {e}", exc_info=True)
-            # Fallback: simple list if AI fails completely
-            curated_markdown = "## 汇总内容 (AI总结失败)\n"
-            for item in new_items:
-                curated_markdown += f"- [{item.title}]({item.url}): {self._fallback_summary(item.content or '')}\n"
+        logger.info(
+            "Calling LLM summarization.",
+            extra={"event": "engine.summarize.start", "items_count": len(items)},
+        )
 
-        # 5. Send to sinks
-        # We pass both the items (for metadata/tracking) and the pre-rendered content
-        logger.info(f"Sending curated content to {len(self.sinks)} sinks...")
-        sink_tasks = [sink.render(new_items, curated_content=curated_markdown) for sink in self.sinks]
-        await asyncio.gather(*sink_tasks)
-        
-        # 6. Update history
-        # We mark all input items as seen if the process reached here
-        new_seen_ids = {item.id for item in new_items}
-        seen_ids.update(new_seen_ids)
-        self._save_history(seen_ids)
-        logger.info("History updated.")
-            
+        async def op() -> str:
+            try:
+                return await self.llm_provider.summarize(combined_input, self.summarize_prompt_template)
+            except LLMProcessingError:
+                raise
+            except Exception as e:
+                raise LLMProcessingError(f"LLM summarization failed: {e}") from e
+
+        try:
+            curated_markdown = await with_retry(
+                op,
+                logger=logger,
+                operation_name="llm.summarize",
+                max_attempts=3,
+                base_delay_seconds=2.0,
+            )
+            logger.info("LLM summarization succeeded.", extra={"event": "engine.summarize.succeeded"})
+            return curated_markdown
+        except Exception as e:
+            logger.error("LLM summarization failed; using fallback.", extra={"event": "engine.summarize.fallback", "error": str(e)})
+            curated_markdown = "## 汇总内容 (AI 总结失败)\n"
+            for item in items:
+                curated_markdown += f"- [{item.title}]({item.url}): {self._fallback_summary(item.content or '')}\n"
+            return curated_markdown
+
+    async def _deliver_to_sink(self, sink: BaseSink, items: List[NewsItem], curated_content: str) -> Dict[str, Any]:
+        sink_key = sink.sink_id()
+
+        async def op() -> Dict[str, Any]:
+            try:
+                return await sink.render(items, curated_content=curated_content)
+            except SinkDeliveryError:
+                raise
+            except Exception as e:
+                raise SinkDeliveryError(f"Sink '{sink_key}' failed: {e}") from e
+
+        result = await with_retry(
+            op,
+            logger=logger,
+            operation_name=f"sink.render:{sink_key}",
+            max_attempts=2,
+            base_delay_seconds=1.0,
+        )
+        return result or {"status": "success"}
+
+    async def distribute(self, curated_content: str, items: List[NewsItem], update_history: bool = True):
+        if not curated_content:
+            logger.warning("No content to distribute.", extra={"event": "engine.distribute.empty_content"})
+            return
+
+        logger.info(
+            "Sending curated content to sinks.",
+            extra={"event": "engine.distribute.start", "sinks_count": len(self.sinks), "items_count": len(items)},
+        )
+
+        sink_tasks = [self._deliver_to_sink(sink, items, curated_content) for sink in self.sinks]
+        results = await asyncio.gather(*sink_tasks, return_exceptions=True)
+
+        state = self._load_delivery_state()
+        run_record: Dict[str, Any] = {
+            "timestamp": self._utc_now_iso(),
+            "items_count": len(items),
+            "sinks": {},
+        }
+
+        sink_successes = 0
+        delivered_item_keys: Set[str] = set()
+        item_keys = [self._item_primary_key(item) for item in items]
+
+        for sink, result in zip(self.sinks, results):
+            sink_key = sink.sink_id()
+            if isinstance(result, Exception):
+                run_record["sinks"][sink_key] = {
+                    "status": "failed",
+                    "error": str(result),
+                }
+                logger.error(
+                    "Sink delivery failed.",
+                    extra={"event": "engine.distribute.sink_failed", "sink": sink_key, "error": str(result)},
+                )
+                status = "failed"
+                error = str(result)
+            else:
+                run_record["sinks"][sink_key] = {
+                    "status": "success",
+                    "meta": result,
+                }
+                sink_successes += 1
+                delivered_item_keys.update(item_keys)
+                logger.info(
+                    "Sink delivery succeeded.",
+                    extra={"event": "engine.distribute.sink_succeeded", "sink": sink_key},
+                )
+                status = "success"
+                error = None
+
+            for key in item_keys:
+                item_state = state["items"].setdefault(key, {})
+                item_state[sink_key] = {
+                    "status": status,
+                    "updated_at": self._utc_now_iso(),
+                    "error": error,
+                }
+
+        state["runs"].append(run_record)
+        if len(state["runs"]) > 100:
+            state["runs"] = state["runs"][-100:]
+        self._save_delivery_state(state)
+
+        if update_history and items:
+            if sink_successes == 0:
+                logger.warning("No sinks succeeded; history not updated.", extra={"event": "engine.distribute.history_skipped"})
+                return
+            seen_ids = self._load_history()
+            seen_ids.update(delivered_item_keys)
+            self._save_history(seen_ids)
+            logger.info(
+                "History updated after distribution.",
+                extra={"event": "engine.distribute.history_updated", "updated_items_count": len(delivered_item_keys)},
+            )
+
+    def save_items(self, items: List[NewsItem], file_path: str):
+        data = [item.dict() for item in items]
+        with open(file_path, "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+
+    def load_items(self, file_path: str) -> List[NewsItem]:
+        with open(file_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+            return [NewsItem(**item) for item in data]
+
+    def save_content(self, content: str, file_path: str):
+        with open(file_path, "w", encoding="utf-8") as f:
+            f.write(content)
+
+    def load_content(self, file_path: str) -> str:
+        with open(file_path, "r", encoding="utf-8") as f:
+            return f.read()
+
     def _fallback_summary(self, text: str) -> str:
-        """Simple heuristic to truncate content if LLM fails."""
         if not text:
             return "(No content to summarize)"
         import re
+
         s = text.strip()
         parts = re.split(r"(?<=[.!?])\s+", s)
         if parts and len(parts[0]) > 20:
@@ -125,11 +354,68 @@ class InsightEngine:
         return (s[:360] + "...") if len(s) > 360 else s
 
     def _load_prompt(self, filename: str) -> str:
-        """Loads a prompt template from the prompts directory."""
         path = os.path.join(self.prompts_dir, filename)
         try:
-            with open(path, 'r', encoding='utf-8') as f:
+            with open(path, "r", encoding="utf-8") as f:
                 return f.read()
         except FileNotFoundError:
-            logger.error(f"Prompt template not found at '{path}'.")
+            logger.error("Prompt template not found.", extra={"event": "engine.prompt.not_found", "path": path})
             return "Summarize these items into a report:\n{content}"
+
+    def _load_summarize_prompt_template(self) -> str:
+        try:
+            template = self.prompt_renderer.render_summarize_template()
+            logger.info(
+                "Loaded composed summarize prompt.",
+                extra={
+                    "event": "engine.prompt.loaded_composed",
+                    "prompt_structure": self.prompt_renderer.structure_name,
+                    "prompt_style": self.prompt_renderer.style_name,
+                },
+            )
+            return template
+        except PromptRenderingError as e:
+            logger.warning(
+                "Failed to load composed prompt; fallback to legacy summarize_prompt.md.",
+                extra={"event": "engine.prompt.fallback_legacy", "error": str(e)},
+            )
+            return self._load_prompt("summarize_prompt.md")
+
+    def _item_primary_key(self, item: NewsItem) -> str:
+        normalized_id = self._normalize_possible_url(item.id)
+        if normalized_id:
+            return normalized_id
+        normalized_url = self._normalize_possible_url(item.url)
+        return normalized_url or item.id
+
+    def _item_identity_candidates(self, item: NewsItem) -> Set[str]:
+        candidates: Set[str] = {item.id}
+        normalized_id = self._normalize_possible_url(item.id)
+        if normalized_id:
+            candidates.add(normalized_id)
+        normalized_url = self._normalize_possible_url(item.url)
+        if normalized_url:
+            candidates.add(normalized_url)
+        return candidates
+
+    def _normalize_possible_url(self, value: Optional[str]) -> Optional[str]:
+        if not value or not isinstance(value, str):
+            return None
+        if not (value.startswith("http://") or value.startswith("https://")):
+            return None
+        return self._normalize_url(value)
+
+    def _normalize_url(self, url: str) -> str:
+        parts = urlsplit(url)
+        cleaned_query = urlencode(
+            [(k, v) for k, v in parse_qsl(parts.query, keep_blank_values=True) if k not in self.TRACKING_QUERY_PARAMS],
+            doseq=True,
+        )
+        cleaned_path = parts.path.rstrip("/") if parts.path != "/" else parts.path
+        return urlunsplit((
+            parts.scheme.lower(),
+            parts.netloc.lower(),
+            cleaned_path,
+            cleaned_query,
+            "",
+        ))

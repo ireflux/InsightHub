@@ -1,4 +1,5 @@
 import os
+import asyncio
 import logging
 from typing import List
 from zhipuai import ZhipuAI
@@ -24,6 +25,13 @@ class ZhipuAIProvider(BaseLLMProvider):
         self.client = ZhipuAI(api_key=api_key)
         self.model = model or self.DEFAULT_MODEL
 
+    def _sync_chat(self, prompt: str) -> str:
+        response = self.client.chat.completions.create(
+            model=self.model,
+            messages=[{"role": "user", "content": prompt}],
+        )
+        return response.choices[0].message.content.strip()
+
     @retry(wait=wait_exponential(multiplier=1, min=4, max=10), stop=stop_after_attempt(3))
     async def summarize(self, content: str, prompt_template: str) -> str:
         """
@@ -31,11 +39,7 @@ class ZhipuAIProvider(BaseLLMProvider):
         """
         prompt = prompt_template.format(content=content)
         try:
-            response = self.client.chat.completions.create(
-                model=self.model,
-                messages=[{"role": "user", "content": prompt}],
-            )
-            return response.choices[0].message.content.strip()
+            return await asyncio.to_thread(self._sync_chat, prompt)
         except Exception as e:
             logger.error(f"Error calling ZhipuAI API: {e}", exc_info=True)
             raise
@@ -47,11 +51,7 @@ class ZhipuAIProvider(BaseLLMProvider):
         """
         prompt = prompt_template.format(content=content, categories=", ".join(categories))
         try:
-            response = self.client.chat.completions.create(
-                model=self.model,
-                messages=[{"role": "user", "content": prompt}],
-            )
-            result = response.choices[0].message.content.strip()
+            result = await asyncio.to_thread(self._sync_chat, prompt)
             for category in categories:
                 if category.lower() in result.lower():
                     return category

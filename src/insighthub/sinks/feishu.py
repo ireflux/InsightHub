@@ -1,8 +1,8 @@
 import httpx
 import logging
-import re
 from datetime import datetime
-from typing import List, Dict, Optional, Any
+from typing import List, Optional
+from insighthub.errors import SinkDeliveryError
 from insighthub.sinks.base import BaseSink
 from insighthub.models import NewsItem
 
@@ -21,13 +21,22 @@ class FeishuDocSink(BaseSink):
     BLOCK_CONVERT_URL = "https://open.feishu.cn/open-apis/docx/v1/documents/blocks/convert"
     BLOCK_DESCENDANT_CREATE_URL_TEMPLATE = "https://open.feishu.cn/open-apis/docx/v1/documents/{document_id}/blocks/{block_id}/descendant"
 
-    def __init__(self, app_id: str, app_secret: str, default_title: Optional[str] = None, space_id: Optional[str] = None):
+    def __init__(
+        self,
+        app_id: str,
+        app_secret: str,
+        default_title: Optional[str] = None,
+        space_id: Optional[str] = None,
+        doc_id: Optional[str] = None,
+    ):
         if not app_id or not app_secret:
             raise ValueError("Feishu app_id and app_secret are required for FeishuDocSink")
         self.app_id = app_id
         self.app_secret = app_secret
         self.default_title = default_title or "InsightHub"
         self.space_id = space_id
+        self.doc_id = doc_id
+        self.name = "feishu_doc"
 
     async def _get_tenant_access_token(self) -> str:
         async with httpx.AsyncClient() as client:
@@ -42,18 +51,19 @@ class FeishuDocSink(BaseSink):
     async def render(self, items: List[NewsItem], curated_content: Optional[str] = None):
         if not items and not curated_content:
             logger.info("FeishuDocSink: Nothing to render.")
-            return
+            return {"status": "skipped", "reason": "empty_input"}
 
         token = await self._get_tenant_access_token()
         headers = {"Authorization": f"Bearer {token}", "Content-Type": "application/json; charset=utf-8"}
 
-        # Dynamic title: InsightHub yyyy-MM-dd
-        doc_title = f"{self.default_title} {datetime.now().strftime('%Y-%m-%d')}"
+        doc_title = self.default_title
 
         async with httpx.AsyncClient() as client:
             try:
-                document_id = None
-                if self.space_id:
+                if self.doc_id:
+                    document_id = self.doc_id
+                    logger.info(f"FeishuDocSink: Updating existing document {document_id}.")
+                elif self.space_id:
                     wiki_url = self.WIKI_NODE_CREATE_URL_TEMPLATE.format(space_id=self.space_id)
                     create_body = {"obj_type": "docx", "node_type": "origin", "title": doc_title}
                     create_resp = await client.post(wiki_url, json=create_body, headers=headers)
@@ -66,15 +76,19 @@ class FeishuDocSink(BaseSink):
                     document_id = create_resp.json().get("data", {}).get("document", {}).get("document_id")
 
                 if not document_id:
-                    logger.error("Failed to determine document_id.")
-                    return
+                    raise SinkDeliveryError("Failed to determine document_id.")
 
-                logger.info(f"FeishuDocSink: Document {document_id} created. Converting content...")
+                logger.info(f"FeishuDocSink: Converting content for document {document_id}...")
 
                 # 1. Convert Markdown to Blocks
                 content = curated_content or "No curated content provided."
-                # Prepend title as Heading 1
-                full_markdown = f"# {doc_title}\n\n{content}"
+                if self.doc_id:
+                    # Append a dated section when updating an existing doc.
+                    section_title = datetime.now().strftime("%Y-%m-%d")
+                    full_markdown = f"## {section_title}\n\n{content}"
+                else:
+                    # For new docs, include top-level heading once.
+                    full_markdown = f"# {doc_title}\n\n{content}"
                 
                 convert_resp = await client.post(
                     self.BLOCK_CONVERT_URL, 
@@ -154,6 +168,8 @@ class FeishuDocSink(BaseSink):
                         resp.raise_for_status()
 
                 logger.info(f"FeishuDocSink: Successfully rendered document {document_id}")
+                return {"status": "success", "document_id": document_id}
 
             except Exception as e:
                 logger.error(f"Error in FeishuDocSink: {e}", exc_info=True)
+                raise SinkDeliveryError(f"Feishu sink delivery failed: {e}") from e
