@@ -1,0 +1,411 @@
+{
+  "updated_at": "2026-02-21T15:18:42.174149+00:00",
+  "runs": [
+    {
+      "timestamp": "2026-02-21T15:18:42.173394+00:00",
+      "items_count": 32,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/InsightHub_2026-02-21_15-18.md"
+          }
+        },
+        "FeishuDocSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "document_id": "W3MzdgLDVoeuMNx3vKRccTg4noc"
+          }
+        }
+      }
+    }
+  ],
+  "items": {
+    "https://github.com/vxcontrol/pentagi": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.173833+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.174049+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/abhigyanpatwari/GitNexus": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.173840+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.174053+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/obra/superpowers": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.173844+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.174056+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/huggingface/skills": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.173848+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.174059+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/PowerShell/PowerShell": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.173851+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.174062+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/anthropics/claude-code": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.173854+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.174065+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/stan-smith/FossFLOW": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.173862+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.174067+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/ggml-org/ggml": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.173866+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.174070+00:00",
+        "error": null
+      }
+    },
+    "https://thelocalstack.eu/posts/linkedin-identity-verification-privacy": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.173869+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.174073+00:00",
+        "error": null
+      }
+    },
+    "https://f-droid.org/2026/02/20/twif.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.173872+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.174076+00:00",
+        "error": null
+      }
+    },
+    "https://words.filippo.io/dependabot": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.173876+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.174079+00:00",
+        "error": null
+      }
+    },
+    "https://dixken.de/blog/i-found-a-vulnerability-they-found-a-lawyer": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.173879+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.174082+00:00",
+        "error": null
+      }
+    },
+    "https://igorstechnoclub.com/sandbox-exec": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.173882+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.174085+00:00",
+        "error": null
+      }
+    },
+    "https://simonwillison.net/2026/Feb/21/claws": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.173884+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.174088+00:00",
+        "error": null
+      }
+    },
+    "https://pilk.website/3/facebook-is-absolutely-cooked": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.173887+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.174091+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/ggml-org/llama.cpp/discussions/19759": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.173890+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.174094+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1193400": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.173893+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.174097+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1193363": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.173896+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.174100+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1193358": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.173900+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.174103+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1193355": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.173903+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.174106+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1193393": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.173906+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.174109+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1193339": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.173909+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.174113+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1193350": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.173912+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.174116+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1193375": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.173914+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.174119+00:00",
+        "error": null
+      }
+    },
+    "https://science.slashdot.org/story/26/02/21/0056213/hazardous-substances-found-in-all-headphones-tested-by-toxfree-project": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.173918+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.174122+00:00",
+        "error": null
+      }
+    },
+    "https://hardware.slashdot.org/story/26/02/21/0049226/openais-first-chatgpt-gadget-could-be-a-smart-speaker-with-a-camera": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.173921+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.174126+00:00",
+        "error": null
+      }
+    },
+    "https://hardware.slashdot.org/story/26/02/21/0043212/us-particle-accelerators-turn-nuclear-waste-into-electricity-cut-radioactive-life-by-997": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.173924+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.174128+00:00",
+        "error": null
+      }
+    },
+    "https://science.slashdot.org/story/26/02/20/238201/nasa-eyes-march-6-to-launch-4-astronauts-to-the-moon-on-artemis-ii-mission": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.173927+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.174131+00:00",
+        "error": null
+      }
+    },
+    "https://tech.slashdot.org/story/26/02/20/232201/fury-over-discords-age-checks-explodes-after-shady-persona-test-in-uk": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.173930+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.174134+00:00",
+        "error": null
+      }
+    },
+    "https://tech.slashdot.org/story/26/02/20/2243230/pinterest-is-drowning-in-a-sea-of-ai-slop-and-auto-moderation": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.173934+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.174137+00:00",
+        "error": null
+      }
+    },
+    "https://tech.slashdot.org/story/26/02/20/2235224/metas-metaverse-leaves-virtual-reality": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.173937+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.174140+00:00",
+        "error": null
+      }
+    },
+    "https://it.slashdot.org/story/26/02/20/2143205/cyber-stocks-slide-as-anthropic-unveils-claude-code-security": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.173940+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-21T15:18:42.174143+00:00",
+        "error": null
+      }
+    }
+  }
+}
