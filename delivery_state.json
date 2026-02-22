@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-02-21T15:53:40.030746+00:00",
+  "updated_at": "2026-02-22T03:39:29.293104+00:00",
   "runs": [
     {
       "timestamp": "2026-02-21T15:53:40.030101+00:00",
@@ -17,6 +17,26 @@
           "meta": {
             "status": "success",
             "document_id": "FrYQd7mxNoIk7vxeCNLcUT3XnKc"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-02-22T03:39:29.292546+00:00",
+      "items_count": 20,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/InsightHub_2026-02-22_03-39.md"
+          }
+        },
+        "FeishuDocSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "document_id": "VsYedrEMTo0GeYxJJojcfVLengf"
           }
         }
       }
@@ -308,6 +328,246 @@
       "FeishuDocSink": {
         "status": "success",
         "updated_at": "2026-02-21T15:53:40.030735+00:00",
+        "error": null
+      }
+    },
+    "https://boristane.com/blog/how-i-use-claude-code": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-22T03:39:29.292859+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-22T03:39:29.293031+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/Leading-AI-IO/palantir-ontology-strategy": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-22T03:39:29.292866+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-22T03:39:29.293036+00:00",
+        "error": null
+      }
+    },
+    "https://ukiyo-e.org/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-22T03:39:29.292870+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-22T03:39:29.293039+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/xaskasdf/ntransformer": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-22T03:39:29.292873+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-22T03:39:29.293042+00:00",
+        "error": null
+      }
+    },
+    "https://www.sambent.com/a-botnet-accidentally-destroyed-i2p-the-full-story": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-22T03:39:29.292877+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-22T03:39:29.293045+00:00",
+        "error": null
+      }
+    },
+    "https://www.science.org/doi/10.1126/science.adq7188": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-22T03:39:29.292880+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-22T03:39:29.293049+00:00",
+        "error": null
+      }
+    },
+    "https://phys.org/news/2026-02-scientists-tectonic-moon.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-22T03:39:29.292888+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-22T03:39:29.293052+00:00",
+        "error": null
+      }
+    },
+    "https://www.harudagondi.space/blog/parse-dont-validate-and-type-driven-design-in-rust": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-22T03:39:29.292893+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-22T03:39:29.293055+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1193408": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-22T03:39:29.292896+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-22T03:39:29.293058+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1193384": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-22T03:39:29.292899+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-22T03:39:29.293061+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1193401": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-22T03:39:29.292903+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-22T03:39:29.293065+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1193390": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-22T03:39:29.292906+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-22T03:39:29.293068+00:00",
+        "error": null
+      }
+    },
+    "https://yro.slashdot.org/story/26/02/22/004205/dna-technology-convicts-a-64-year-old-for-murdering-a-teenager-in-1982": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-22T03:39:29.292909+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-22T03:39:29.293072+00:00",
+        "error": null
+      }
+    },
+    "https://yro.slashdot.org/story/26/02/21/2316255/pro-gamer-consumer-movement-stop-killing-games-will-launch-ngos-in-america-and-the-eu": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-22T03:39:29.292913+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-22T03:39:29.293075+00:00",
+        "error": null
+      }
+    },
+    "https://developers.slashdot.org/story/26/02/21/2220205/hit-piece-writing-ai-deleted-but-is-this-a-warning-about-ai-generated-harassment": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-22T03:39:29.292916+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-22T03:39:29.293078+00:00",
+        "error": null
+      }
+    },
+    "https://yro.slashdot.org/story/26/02/21/2140216/americas-peace-corps-announces-tech-corps-volunteers-to-help-bring-ai-to-foreign-countries": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-22T03:39:29.292919+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-22T03:39:29.293082+00:00",
+        "error": null
+      }
+    },
+    "https://news.slashdot.org/story/26/02/21/1932253/codeorg-president-steps-down-citing-upending-of-cs-by-ai": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-22T03:39:29.292922+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-22T03:39:29.293085+00:00",
+        "error": null
+      }
+    },
+    "https://linux.slashdot.org/story/26/02/21/0752214/t2-linux-restores-xaa-in-xorg-making-2d-graphics-fast-again": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-22T03:39:29.292926+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-22T03:39:29.293088+00:00",
+        "error": null
+      }
+    },
+    "https://games.slashdot.org/story/26/02/21/0632214/the-salvation-army-opens-a-digital-thrift-store-on-roblox": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-22T03:39:29.292930+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-22T03:39:29.293092+00:00",
+        "error": null
+      }
+    },
+    "https://science.slashdot.org/story/26/02/21/0614256/researchers-discover-ancient-bacteria-strain-that-resists-10-modern-antibiotics": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-22T03:39:29.292933+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-22T03:39:29.293095+00:00",
         "error": null
       }
     }
