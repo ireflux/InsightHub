@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-02-24T03:38:18.353915+00:00",
+  "updated_at": "2026-02-25T03:40:07.679551+00:00",
   "runs": [
     {
       "timestamp": "2026-02-21T15:53:40.030101+00:00",
@@ -77,6 +77,26 @@
           "meta": {
             "status": "success",
             "document_id": "LrEUdckmhoKf76xCnHuc4gGBnkc"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-02-25T03:40:07.678984+00:00",
+      "items_count": 27,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/InsightHub_2026-02-25_03-40.md"
+          }
+        },
+        "FeishuDocSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "document_id": "W3kidWpCToD91Px5qn8c6gc4nve"
           }
         }
       }
@@ -1268,6 +1288,330 @@
       "FeishuDocSink": {
         "status": "success",
         "updated_at": "2026-02-24T03:38:18.353906+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/LadybirdBrowser/ladybird": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679274+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679461+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/ruvnet/ruvector": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679281+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679465+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/D4Vinci/Scrapling": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679284+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679469+00:00",
+        "error": null
+      }
+    },
+    "https://www.calebleak.com/posts/dog-game": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679288+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679472+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/moonshine-ai/moonshine": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679291+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679474+00:00",
+        "error": null
+      }
+    },
+    "https://laughingmeme.org/2026/02/09/code-has-always-been-the-easy-part.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679295+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679477+00:00",
+        "error": null
+      }
+    },
+    "https://matklad.github.io/2026/02/14/justifying-text-wrap-pretty.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679302+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679481+00:00",
+        "error": null
+      }
+    },
+    "https://www.apple.com/newsroom/2026/02/apple-accelerates-us-manufacturing-with-mac-mini-production": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679307+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679484+00:00",
+        "error": null
+      }
+    },
+    "https://www.mariannefeng.com/portfolio/kindle": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679310+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679487+00:00",
+        "error": null
+      }
+    },
+    "https://www.thebignewsletter.com/p/amazon-busted-for-widespread-price": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679313+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679490+00:00",
+        "error": null
+      }
+    },
+    "https://pi.dev": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679317+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679493+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1193730": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679320+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679496+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1193738": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679323+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679499+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1193741": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679326+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679502+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1193850": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679329+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679505+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1193867": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679333+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679508+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1193893": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679336+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679511+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1193760": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679339+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679514+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1193860": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679343+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679517+00:00",
+        "error": null
+      }
+    },
+    "https://science.slashdot.org/story/26/02/24/200231/first-british-baby-born-using-transplanted-womb-from-dead-donor": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679346+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679520+00:00",
+        "error": null
+      }
+    },
+    "https://it.slashdot.org/story/26/02/24/1950253/meta-ai-security-researcher-said-an-openclaw-agent-ran-amok-on-her-inbox": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679349+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679523+00:00",
+        "error": null
+      }
+    },
+    "https://news.slashdot.org/story/26/02/24/1935207/new-datacentres-risk-doubling-great-britains-electricity-use-regulator-says": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679353+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679526+00:00",
+        "error": null
+      }
+    },
+    "https://it.slashdot.org/story/26/02/24/1911240/crowdstrike-says-attackers-are-moving-through-networks-in-under-30-minutes": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679356+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679529+00:00",
+        "error": null
+      }
+    },
+    "https://tech.slashdot.org/story/26/02/24/1850232/hegseth-gives-anthropic-until-friday-to-back-down-on-ai-safeguards": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679359+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679532+00:00",
+        "error": null
+      }
+    },
+    "https://news.slashdot.org/story/26/02/24/1751207/the-us-spent-30-billion-on-classroom-laptops-and-got-the-first-generation-less-capable-than-its-parents": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679363+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679535+00:00",
+        "error": null
+      }
+    },
+    "https://developers.slashdot.org/story/26/02/24/1643213/microsoft-execs-worry-ai-will-eat-entry-level-coding-jobs": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679366+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679538+00:00",
+        "error": null
+      }
+    },
+    "https://games.slashdot.org/story/26/02/24/165200/billions-of-dollars-later-and-still-nobody-knows-what-an-xbox-is": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679369+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-25T03:40:07.679541+00:00",
         "error": null
       }
     }
