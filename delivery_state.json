@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-02-26T03:36:31.746564+00:00",
+  "updated_at": "2026-02-27T03:39:23.017933+00:00",
   "runs": [
     {
       "timestamp": "2026-02-21T15:53:40.030101+00:00",
@@ -117,6 +117,26 @@
           "meta": {
             "status": "success",
             "document_id": "SUBTdBvomoVzXdx7hobc4VT5nUY"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-02-27T03:39:23.017365+00:00",
+      "items_count": 27,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/InsightHub_2026-02-27_03-39.md"
+          }
+        },
+        "FeishuDocSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "document_id": "Wxt4dlUuXoKoEPxWS5Cc0DqgnZc"
           }
         }
       }
@@ -1956,6 +1976,330 @@
       "FeishuDocSink": {
         "status": "success",
         "updated_at": "2026-02-26T03:36:31.746556+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/clockworklabs/SpacetimeDB": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017638+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017846+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/farion1231/cc-switch": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017645+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017850+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/ruvnet/claude-flow": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017650+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017853+00:00",
+        "error": null
+      }
+    },
+    "https://www.anthropic.com/news/statement-department-of-war": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017653+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017856+00:00",
+        "error": null
+      }
+    },
+    "https://twitter.com/jack/status/2027129697092731343": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017656+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017859+00:00",
+        "error": null
+      }
+    },
+    "https://amplifying.ai/research/claude-code-picks": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017659+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017862+00:00",
+        "error": null
+      }
+    },
+    "https://www.ndss-symposium.org/wp-content/uploads/2026-f1282-paper.pdf": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017667+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017865+00:00",
+        "error": null
+      }
+    },
+    "https://read.technically.dev/p/vibe-coding-and-the-maker-movement": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017671+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017868+00:00",
+        "error": null
+      }
+    },
+    "https://news.kalshi.com/p/kalshi-trading-violation-enforcement-cases": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017675+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017871+00:00",
+        "error": null
+      }
+    },
+    "https://www.usecardboard.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017678+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017874+00:00",
+        "error": null
+      }
+    },
+    "https://stackoverflow.com/questions/818255/what-does-21-mean": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017681+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017877+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1194204": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017684+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017880+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1194277": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017687+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017883+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1194400": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017690+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017886+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1194270": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017693+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017889+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1194267": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017696+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017892+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1194218": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017699+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017895+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1194265": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017723+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017898+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1194421": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017727+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017901+00:00",
+        "error": null
+      }
+    },
+    "https://yro.slashdot.org/story/26/02/26/2242230/four-convicted-over-spyware-affair-that-shook-greece": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017730+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017904+00:00",
+        "error": null
+      }
+    },
+    "https://tech.slashdot.org/story/26/02/26/233213/colorado-lawmakers-push-for-age-verification-at-the-operating-system-level": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017733+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017907+00:00",
+        "error": null
+      }
+    },
+    "https://slashdot.org/story/26/02/26/2250206/jack-dorseys-block-cuts-nearly-half-of-its-staff-in-ai-gamble": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017736+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017910+00:00",
+        "error": null
+      }
+    },
+    "https://news.slashdot.org/story/26/02/26/2154237/whats-the-point-of-school-when-ai-can-do-your-homework": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017739+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017913+00:00",
+        "error": null
+      }
+    },
+    "https://tech.slashdot.org/story/26/02/26/2145253/google-launches-nano-banana-2-model-with-faster-image-generation": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017742+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017916+00:00",
+        "error": null
+      }
+    },
+    "https://tech.slashdot.org/story/26/02/26/2045225/chinese-officials-use-of-chatgpt-revealed-a-global-intimidation-opperation": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017745+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017919+00:00",
+        "error": null
+      }
+    },
+    "https://mobile.slashdot.org/story/26/02/26/2036231/iphone-and-ipad-are-first-consumer-devices-cleared-for-nato-classified-data": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017748+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017922+00:00",
+        "error": null
+      }
+    },
+    "https://news.slashdot.org/story/26/02/26/182239/firefox-148-lets-you-kill-all-ai-features-in-one-click": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017751+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-27T03:39:23.017925+00:00",
         "error": null
       }
     }
