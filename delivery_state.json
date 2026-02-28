@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-02-27T03:39:23.017933+00:00",
+  "updated_at": "2026-02-28T03:13:50.928004+00:00",
   "runs": [
     {
       "timestamp": "2026-02-21T15:53:40.030101+00:00",
@@ -137,6 +137,26 @@
           "meta": {
             "status": "success",
             "document_id": "Wxt4dlUuXoKoEPxWS5Cc0DqgnZc"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-02-28T03:13:50.927465+00:00",
+      "items_count": 26,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/InsightHub_2026-02-28_03-13.md"
+          }
+        },
+        "FeishuDocSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "document_id": "HJfCdZ37loRRb5xNpEZcpE8jnWb"
           }
         }
       }
@@ -2300,6 +2320,318 @@
       "FeishuDocSink": {
         "status": "success",
         "updated_at": "2026-02-27T03:39:23.017925+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/ruvnet/wifi-densepose": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927735+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927916+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/ruvnet/ruflo": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927742+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927921+00:00",
+        "error": null
+      }
+    },
+    "https://notdivided.org": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927747+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927924+00:00",
+        "error": null
+      }
+    },
+    "https://www.anthropic.com/news/statement-comments-secretary-war": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927751+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927927+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/anadim/AdderBoard": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927755+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927930+00:00",
+        "error": null
+      }
+    },
+    "https://techcrunch.com/2026/02/27/openai-raises-110b-in-one-of-the-largest-private-funding-rounds-in-history": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927759+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927933+00:00",
+        "error": null
+      }
+    },
+    "https://www.science.org/doi/10.1126/science.adt2760": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927767+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927937+00:00",
+        "error": null
+      }
+    },
+    "https://www.pcgamer.com/software/operating-systems/a-new-california-law-says-all-operating-systems-including-linux-need-to-have-some-form-of-age-verification-at-account-setup": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927771+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927940+00:00",
+        "error": null
+      }
+    },
+    "https://www.cnn.com/2026/02/25/politics/chatgpt-china-intimidation-operation": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927774+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927944+00:00",
+        "error": null
+      }
+    },
+    "https://blog.cloudflare.com/a-better-web-streams-api": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927777+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927947+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1194560": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927780+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927950+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1194586": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927784+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927954+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1194470": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927786+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927957+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1194542": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927789+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927960+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1194561": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927792+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927963+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1194599": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927795+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927965+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1194510": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927798+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927969+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1194623": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927801+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927971+00:00",
+        "error": null
+      }
+    },
+    "https://games.slashdot.org/story/26/02/27/2332219/human-brain-cells-on-a-chip-learned-to-play-doom-in-a-week": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927804+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927974+00:00",
+        "error": null
+      }
+    },
+    "https://news.slashdot.org/story/26/02/27/2226234/hyperion-author-dan-simmons-dies-from-stroke-at-77": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927807+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927977+00:00",
+        "error": null
+      }
+    },
+    "https://yro.slashdot.org/story/26/02/27/2215238/cisa-replaces-bumbling-acting-director-after-a-year": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927810+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927980+00:00",
+        "error": null
+      }
+    },
+    "https://slashdot.org/story/26/02/27/2151236/perplexity-announces-computer-an-ai-agent-that-assigns-work-to-other-ai-agent": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927813+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927983+00:00",
+        "error": null
+      }
+    },
+    "https://tech.slashdot.org/story/26/02/27/2144239/south-korea-set-to-get-a-fully-functioning-google-maps": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927815+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927986+00:00",
+        "error": null
+      }
+    },
+    "https://tech.slashdot.org/story/26/02/27/2138211/trump-orders-federal-agencies-to-stop-using-anthropic-ai-tech-immediately": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927818+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927989+00:00",
+        "error": null
+      }
+    },
+    "https://tech.slashdot.org/story/26/02/27/2133209/us-military-accidentally-shoots-down-border-protection-drone-with-laser": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927821+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927992+00:00",
+        "error": null
+      }
+    },
+    "https://news.slashdot.org/story/26/02/27/207211/white-house-stalls-release-of-approved-us-science-budgets": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927824+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-02-28T03:13:50.927995+00:00",
         "error": null
       }
     }
