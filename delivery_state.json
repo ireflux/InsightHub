@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-02-28T03:13:50.928004+00:00",
+  "updated_at": "2026-03-01T03:47:54.600988+00:00",
   "runs": [
     {
       "timestamp": "2026-02-21T15:53:40.030101+00:00",
@@ -157,6 +157,26 @@
           "meta": {
             "status": "success",
             "document_id": "HJfCdZ37loRRb5xNpEZcpE8jnWb"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-01T03:47:54.600411+00:00",
+      "items_count": 28,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/InsightHub_2026-03-01_03-47.md"
+          }
+        },
+        "FeishuDocSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "document_id": "E5AKdSVqvoMOuOxKvtvcAaP7nYb"
           }
         }
       }
@@ -2632,6 +2652,342 @@
       "FeishuDocSink": {
         "status": "success",
         "updated_at": "2026-02-28T03:13:50.927995+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/moeru-ai/airi": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600678+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600897+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/tukaani-project/xz": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600685+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600902+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/Shubhamsaboo/awesome-llm-apps": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600689+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600905+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/Wei-Shaw/claude-relay-service": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600694+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600908+00:00",
+        "error": null
+      }
+    },
+    "http://karpathy.github.io/2026/02/12/microgpt": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600698+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600911+00:00",
+        "error": null
+      }
+    },
+    "https://twitter.com/OpenAI/status/2027846016423321831": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600702+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600914+00:00",
+        "error": null
+      }
+    },
+    "https://dl.acm.org/doi/fullHtml/10.1145/238386.238611": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600711+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600917+00:00",
+        "error": null
+      }
+    },
+    "https://help.obsidian.md/sync/headless": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600715+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600920+00:00",
+        "error": null
+      }
+    },
+    "https://ben-mini.com/2026/the-happiest-ive-ever-been": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600719+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600923+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/jonwiggins/xmloxide": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600723+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600926+00:00",
+        "error": null
+      }
+    },
+    "https://www.inconspicuous.info/p/h-bomb-a-frank-lloyd-wright-typographic": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600727+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600929+00:00",
+        "error": null
+      }
+    },
+    "https://robservatory.com/block-the-upgrade-to-tahoe-alerts-and-system-settings-indicator": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600730+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600932+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1194797": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600733+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600935+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1194772": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600736+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600938+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1194800": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600740+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600941+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1194801": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600743+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600944+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1194846": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600746+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600946+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1194795": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600749+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600949+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1194865": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600752+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600952+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1194849": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600755+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600956+00:00",
+        "error": null
+      }
+    },
+    "https://news.slashdot.org/story/26/03/01/0233230/sam-altman-answers-questions-on-xcom-about-pentagon-deal-threats-to-anthropic": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600758+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600959+00:00",
+        "error": null
+      }
+    },
+    "https://slashdot.org/story/26/02/28/2321238/duolingo-grows-but-users-disliked-increased-ads-and-subscription-pushes-stock-plummets-again": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600761+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600961+00:00",
+        "error": null
+      }
+    },
+    "https://entertainment.slashdot.org/story/26/02/28/0514259/new-star-wars-movies-are-coming-to-theatres-but-will-audiences": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600764+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600964+00:00",
+        "error": null
+      }
+    },
+    "https://tech.slashdot.org/story/26/02/28/2028232/us-threatens-anthropic-with-supply-chain-risk-designation-openai-signs-new-war-department-deal": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600767+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600967+00:00",
+        "error": null
+      }
+    },
+    "https://science.slashdot.org/story/26/02/28/0632201/antarcticas-massive-neutrino-observatory-gets-an-upgrade": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600770+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600970+00:00",
+        "error": null
+      }
+    },
+    "https://hardware.slashdot.org/story/26/02/28/0446211/worlds-largest-battery-soon-at-google-data-center-100-hour-iron-air-storage": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600773+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600973+00:00",
+        "error": null
+      }
+    },
+    "https://news.slashdot.org/story/26/02/28/1733240/after-us-israel-attacks-90-million-iranians-lose-internet-connectivity": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600776+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600976+00:00",
+        "error": null
+      }
+    },
+    "https://news.slashdot.org/story/26/02/28/0541228/americas-teenagers-say-ai-cheating-has-become-a-regular-feature-of-student-life": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600779+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-01T03:47:54.600979+00:00",
         "error": null
       }
     }
