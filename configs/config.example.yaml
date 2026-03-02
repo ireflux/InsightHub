@@ -119,7 +119,7 @@ sinks:
     - id: "feishu_daily"
       type: "feishu_doc"
       params:
-        default_title: "InsightHub {date}"
+        default_title: "每日技术趋势观察 {date}"
         # optional
         # space_id: ""
         # doc_id: ""

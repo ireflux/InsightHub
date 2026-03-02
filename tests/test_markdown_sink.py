@@ -1,4 +1,4 @@
-import json
+﻿import json
 import os
 import sys
 import tempfile
@@ -49,16 +49,21 @@ class TestMarkdownSink(unittest.IsolatedAsyncioTestCase):
                 )
             ]
 
-            result = await sink.render(items, curated_content="# Daily Title\n\nSummary line.")
+            result = await sink.render(items, curated_content="# InsightHub 每日技术趋势观察\n\nSummary line.")
             self.assertEqual(result["status"], "success")
             self.assertIn("-run123.md", result["file_path"].replace("\\", "/"))
+
+            with open(result["file_path"], "r", encoding="utf-8") as f:
+                md_body = f.read()
+            self.assertFalse(md_body.lstrip().startswith("# "))
+            self.assertIn("Summary line.", md_body)
 
             with open(result["manifest_path"], "r", encoding="utf-8") as f:
                 manifest = json.load(f)
             self.assertEqual(len(manifest["posts"]), 1)
             post = manifest["posts"][0]
             self.assertEqual(post["run_id"], "run123")
-            self.assertEqual(post["title"], "Daily Title")
+            self.assertEqual(post["title"], "每日技术趋势观察 " + post["date"])
             self.assertIn("hacker_news", post["tags"])
             self.assertFalse(post["is_empty_update"])
 
@@ -66,14 +71,22 @@ class TestMarkdownSink(unittest.IsolatedAsyncioTestCase):
         with tempfile.TemporaryDirectory() as tmp_dir:
             set_run_id("empty123")
             sink = MarkdownFileSink(output_dir=tmp_dir, timezone_name="Asia/Shanghai")
-            result = await sink.render([], curated_content="# InsightHub Daily\n\n> 今日无更新。")
+            result = await sink.render([], curated_content="# 每日技术趋势观察\n\n> 今日无更新。")
             self.assertEqual(result["status"], "success")
             self.assertTrue(result["is_empty_update"])
+
+            with open(result["file_path"], "r", encoding="utf-8") as f:
+                md_body = f.read()
+            self.assertFalse(md_body.lstrip().startswith("# "))
 
             with open(result["manifest_path"], "r", encoding="utf-8") as f:
                 manifest = json.load(f)
             self.assertTrue(manifest["posts"][0]["is_empty_update"])
             self.assertEqual(manifest["posts"][0]["item_count"], 0)
+            self.assertEqual(
+                manifest["posts"][0]["title"],
+                "每日技术趋势观察 " + manifest["posts"][0]["date"],
+            )
 
     async def test_engine_run_generates_no_update_post(self):
         with tempfile.TemporaryDirectory() as tmp_dir:
@@ -104,6 +117,10 @@ class TestMarkdownSink(unittest.IsolatedAsyncioTestCase):
                     manifest = json.load(f)
                 self.assertEqual(len(manifest["posts"]), 1)
                 self.assertTrue(manifest["posts"][0]["is_empty_update"])
+                self.assertEqual(
+                    manifest["posts"][0]["title"],
+                    "每日技术趋势观察 " + manifest["posts"][0]["date"],
+                )
             finally:
                 os.remove(hist_path)
                 os.remove(delivery_path)

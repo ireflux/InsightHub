@@ -179,7 +179,7 @@ sinks:
       type: "feishu_doc"
       enabled: false
       params:
-        default_title: "InsightHub {date}"
+        default_title: "每日技术趋势观察 {date}"
 
 prompt:
   structure: "professional_briefing_v1"
@@ -301,7 +301,7 @@ sinks:
       type: "feishu_doc"
       enabled: false
       params:
-        default_title: "InsightHub {date}"
+        default_title: "每日技术趋势观察 {date}"
         space_id: "your_feishu_space_id"
 ```
 

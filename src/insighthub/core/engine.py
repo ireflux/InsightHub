@@ -500,7 +500,7 @@ class InsightEngine:
         now = datetime.now(ZoneInfo(self.timezone_name))
         date_str = now.strftime("%Y-%m-%d")
         return (
-            f"# InsightHub Daily {date_str}\n\n"
+            f"# 每日技术趋势观察 {date_str}\n\n"
             "> 今日无更新。\n\n"
             "今天没有发现通过筛选的新内容，明日再见。"
         )

@@ -7,6 +7,7 @@ from insighthub.sinks.base import BaseSink
 from insighthub.models import NewsItem
 
 logger = logging.getLogger(__name__)
+TITLE_PREFIX = "每日技术趋势观察"
 
 class FeishuDocSink(BaseSink):
     """
@@ -33,7 +34,7 @@ class FeishuDocSink(BaseSink):
             raise ValueError("Feishu app_id and app_secret are required for FeishuDocSink")
         self.app_id = app_id
         self.app_secret = app_secret
-        self.default_title = default_title or "InsightHub"
+        self.default_title = default_title or f"{TITLE_PREFIX} {datetime.now().strftime('%Y-%m-%d')}"
         self.space_id = space_id
         self.doc_id = doc_id
         self.name = "feishu_doc"
@@ -84,7 +85,7 @@ class FeishuDocSink(BaseSink):
                 content = curated_content or "No curated content provided."
                 if self.doc_id:
                     # Append a dated section when updating an existing doc.
-                    section_title = datetime.now().strftime("%Y-%m-%d")
+                    section_title = f"{TITLE_PREFIX} {datetime.now().strftime('%Y-%m-%d')}"
                     full_markdown = f"## {section_title}\n\n{content}"
                 else:
                     # For new docs, use content as-is (doc title is already set in Feishu metadata).

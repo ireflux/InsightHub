@@ -12,6 +12,7 @@ from insighthub.models import NewsItem
 from insighthub.observability import get_run_id
 
 logger = logging.getLogger(__name__)
+TITLE_PREFIX = "每日技术趋势观察"
 
 class MarkdownFileSink(BaseSink):
     """
@@ -45,10 +46,10 @@ class MarkdownFileSink(BaseSink):
         filepath = os.path.join(self.posts_dir, filename)
         
         if curated_content:
-            # Use curated content as-is to avoid forcing a title into article body.
             content = curated_content
         else:
             content = self._format_as_feishu_markdown(items, now)
+        content = self._normalize_content(content)
 
         async with aiofiles.open(filepath, 'w', encoding='utf-8') as f:
             await f.write(content)
@@ -115,7 +116,7 @@ class MarkdownFileSink(BaseSink):
             "id": slug,
             "run_id": run_id,
             "date": now.strftime("%Y-%m-%d"),
-            "title": self._extract_title(content, now),
+            "title": self._standard_title(now),
             "slug": slug,
             "markdown_path": markdown_rel_path,
             "summary": self._extract_summary(content),
@@ -152,12 +153,32 @@ class MarkdownFileSink(BaseSink):
             logger.warning("MarkdownFileSink: Failed to load manifest, rebuilding from scratch.")
         return {"site_timezone": self.timezone_name, "generated_at": None, "posts": []}
 
+    def _standard_title(self, now: datetime.datetime) -> str:
+        return f"{TITLE_PREFIX} {now.strftime('%Y-%m-%d')}"
+
+    def _normalize_content(self, content: str) -> str:
+        """
+        Remove leading H1 from curated markdown to avoid duplicated title:
+        page title is rendered from manifest metadata.
+        """
+        if not content:
+            return content
+        lines = content.splitlines()
+        idx = 0
+        while idx < len(lines) and not lines[idx].strip():
+            idx += 1
+        if idx < len(lines) and lines[idx].lstrip().startswith("# "):
+            lines.pop(idx)
+        while lines and not lines[0].strip():
+            lines.pop(0)
+        return "\n".join(lines).strip() + ("\n" if lines else "")
+
     def _extract_title(self, content: str, now: datetime.datetime) -> str:
         for line in content.splitlines():
             stripped = line.strip()
             if stripped.startswith("#"):
                 return stripped.lstrip("#").strip()
-        return f"InsightHub Daily {now.strftime('%Y-%m-%d')}"
+        return self._standard_title(now)
 
     def _extract_summary(self, content: str) -> str:
         for line in content.splitlines():

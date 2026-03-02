@@ -170,7 +170,7 @@ def _build_single_sink(
         app_secret = sink_params.get("app_secret")
         space_id = sink_params.get("space_id")
         doc_id = sink_params.get("doc_id")
-        default_title = sink_params.get("default_title") or "InsightHub"
+        default_title = sink_params.get("default_title") or "每日技术趋势观察 {date}"
         formatted_title = _format_title(default_title, now)
 
         if app_id and app_secret:
@@ -208,7 +208,7 @@ def _build_single_sink(
 
 
 def _format_title(template: str, now: datetime.datetime) -> str:
-    date_str = now.strftime("%Y%m%d")
+    date_str = now.strftime("%Y-%m-%d")
     try:
         return template.format(date=date_str)
     except Exception:

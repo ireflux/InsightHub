@@ -28,7 +28,7 @@ sinks:
       params:
         app_id: insecure_app_id
         app_secret: insecure_app_secret
-        default_title: InsightHub {date}
+        default_title: 每日技术趋势观察 {date}
 """
         with tempfile.NamedTemporaryFile("w", suffix=".yaml", delete=False, encoding="utf-8") as tmp:
             tmp.write(config_content)

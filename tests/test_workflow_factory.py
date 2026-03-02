@@ -55,7 +55,7 @@ class TestWorkflowFactory(unittest.TestCase):
                         "params": {
                             "app_id": "app",
                             "app_secret": "secret",
-                            "default_title": "InsightHub {date}",
+                            "default_title": "每日技术趋势观察 {date}",
                             "doc_id": "doc-token",
                         },
                     },
@@ -68,7 +68,7 @@ class TestWorkflowFactory(unittest.TestCase):
 
         self.assertEqual(len(sinks), 2)
         feishu_sink = sinks[1]
-        self.assertEqual(feishu_sink.default_title, "InsightHub 20260221")
+        self.assertEqual(feishu_sink.default_title, "每日技术趋势观察 2026-02-21")
         self.assertEqual(feishu_sink.doc_id, "doc-token")
 
     def test_build_llm_provider_openrouter(self):

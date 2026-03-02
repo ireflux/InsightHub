@@ -127,6 +127,6 @@ sinks:
       type: "feishu_doc"
       enabled: true
       params:
-        default_title: "InsightHub {date}"
+        default_title: "每日技术趋势观察 {date}"
         space_id: "7599692883666422737"
         # doc_id: ""
