@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-02T15:26:54.859976+00:00",
+  "updated_at": "2026-03-02T15:37:42.764332+00:00",
   "runs": [
     {
       "timestamp": "2026-03-02T15:26:54.859381+00:00",
@@ -20,6 +20,29 @@
           "meta": {
             "status": "success",
             "document_id": "RnszdQwnhoXOvexRvKFcQxsYnag"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-02T15:37:42.764118+00:00",
+      "items_count": 1,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-03-02-48ca8d78d49e.md",
+            "slug": "2026-03-02-48ca8d78d49e",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        },
+        "FeishuDocSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "document_id": "QWxXdu6FioejrxxIjlTcX9VinVc"
           }
         }
       }
@@ -359,6 +382,18 @@
       "FeishuDocSink": {
         "status": "success",
         "updated_at": "2026-03-02T15:26:54.859967+00:00",
+        "error": null
+      }
+    },
+    "https://www.apple.com/newsroom/2026/03/apple-introduces-the-new-ipad-air-powered-by-m4": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T15:37:42.764237+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T15:37:42.764322+00:00",
         "error": null
       }
     }
