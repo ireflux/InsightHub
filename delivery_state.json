@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-01T03:47:54.600988+00:00",
+  "updated_at": "2026-03-02T03:33:15.627241+00:00",
   "runs": [
     {
       "timestamp": "2026-02-21T15:53:40.030101+00:00",
@@ -177,6 +177,26 @@
           "meta": {
             "status": "success",
             "document_id": "E5AKdSVqvoMOuOxKvtvcAaP7nYb"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-02T03:33:15.626660+00:00",
+      "items_count": 27,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/InsightHub_2026-03-02_03-33.md"
+          }
+        },
+        "FeishuDocSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "document_id": "NW9tdH901o89oFxaxSsc92zynMg"
           }
         }
       }
@@ -2988,6 +3008,330 @@
       "FeishuDocSink": {
         "status": "success",
         "updated_at": "2026-03-01T03:47:54.600979+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/microsoft/markitdown": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.626942+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.627132+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/alibaba/OpenSandbox": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.626948+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.627136+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/K-Dense-AI/claude-scientific-skills": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.626952+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.627140+00:00",
+        "error": null
+      }
+    },
+    "https://developer.chrome.com/blog/webmcp-epp": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.626955+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.627144+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/kossisoroyce/timber": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.626958+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.627148+00:00",
+        "error": null
+      }
+    },
+    "https://9to5mac.com/2026/03/01/claude-hits-1-on-the-app-store-as-users-rally-behind-anthropics-government-standoff": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.626962+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.627152+00:00",
+        "error": null
+      }
+    },
+    "https://ghostty.org/docs": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.626971+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.627156+00:00",
+        "error": null
+      }
+    },
+    "https://littlefreelibrary.org/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.626975+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.627160+00:00",
+        "error": null
+      }
+    },
+    "https://tovejansson.com/hobbit-tolkien": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.626979+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.627163+00:00",
+        "error": null
+      }
+    },
+    "https://atempleton.bearblog.dev/how-next-gen-spacecraft-are-overwhelming-our-communication-networks": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.626982+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.627167+00:00",
+        "error": null
+      }
+    },
+    "https://www.tone3000.com/blog/running-nam-on-embedded-hardware": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.626986+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.627171+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1195075": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.626989+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.627176+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1195108": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.626993+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.627181+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1194993": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.626996+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.627185+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1195026": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.626999+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.627190+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1195089": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.627002+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.627195+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1195002": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.627006+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.627200+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1194981": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.627009+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.627203+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1194957": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.627014+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.627206+00:00",
+        "error": null
+      }
+    },
+    "https://tech.slashdot.org/story/26/03/02/023210/does-a-gas-guzzler-revival-risk-dead-end-futures-for-us-automakers": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.627017+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.627209+00:00",
+        "error": null
+      }
+    },
+    "https://news.slashdot.org/story/26/03/01/2332240/norways-consumer-council-calls-for-right-to-repair-and-antitrust-enforcement---and-mocks-enshittification": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.627020+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.627213+00:00",
+        "error": null
+      }
+    },
+    "https://slashdot.org/story/26/03/01/1924223/ais-cant-stop-recommending-nuclear-strikes-in-war-game-simulations": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.627024+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.627215+00:00",
+        "error": null
+      }
+    },
+    "https://news.slashdot.org/story/26/03/01/2136222/chronic-ocean-heating-fuels-staggering-loss-of-marine-life-study-finds": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.627027+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.627218+00:00",
+        "error": null
+      }
+    },
+    "https://slashdot.org/story/26/02/28/2046221/anthropics-claude-passes-chatgpt-now-1-on-apples-top-apps-chart-after-pentagon-controversy": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.627031+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.627221+00:00",
+        "error": null
+      }
+    },
+    "https://tech.slashdot.org/story/26/03/01/1945208/america-used-anthropics-ai-for-its-attack-on-iran-one-day-after-banning-it": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.627035+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.627224+00:00",
+        "error": null
+      }
+    },
+    "https://tech.slashdot.org/story/26/03/01/054233/americans-listen-to-podcasts-more-than-talk-radio-now-study-shows": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.627039+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.627228+00:00",
+        "error": null
+      }
+    },
+    "https://news.slashdot.org/story/26/03/01/0332257/north-americas-bird-populations-are-shrinking-faster-blame-climate-change-and-agriculture": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.627042+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T03:33:15.627231+00:00",
         "error": null
       }
     }
