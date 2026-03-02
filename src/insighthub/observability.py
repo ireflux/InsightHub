@@ -39,6 +39,9 @@ def new_run_id() -> str:
 def set_run_id(run_id: str) -> None:
     RUN_ID_CONTEXT.set(run_id)
 
+def get_run_id() -> str:
+    return RUN_ID_CONTEXT.get()
+
 
 class RunContextFilter(logging.Filter):
     def filter(self, record: logging.LogRecord) -> bool:

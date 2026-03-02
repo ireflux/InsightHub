@@ -1,8 +1,8 @@
-﻿name: Daily InsightHub
+name: Daily InsightHub
 
 on:
   schedule:
-    - cron: '0 1 * * *'
+    - cron: "0 1 * * *"
   workflow_dispatch: {}
 
 jobs:
@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    env:
+      TZ: Asia/Shanghai
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -17,7 +19,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: "3.11"
 
       - name: Install dependencies
         run: |
@@ -40,8 +42,8 @@ jobs:
         run: |
           insighthub run
 
-      - name: Commit and push history.json
+      - name: Commit and push daily artifacts
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: 'chore: update history.json [skip ci]'
-          file_pattern: 'history.json delivery_state.json'
+          commit_message: "chore: update daily artifacts [skip ci]"
+          file_pattern: "history.json delivery_state.json output/posts/** output/manifest/index.json"

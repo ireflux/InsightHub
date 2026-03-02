@@ -5,6 +5,7 @@ import os
 from datetime import datetime, timezone
 from typing import Any, Dict, List, Optional, Set
 from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
+from zoneinfo import ZoneInfo
 
 from insighthub.core.retry import with_retry
 from insighthub.errors import LLMProcessingError, PromptRenderingError, SinkDeliveryError, SourceFetchError
@@ -43,6 +44,7 @@ class InsightEngine:
         llm_retry_policy: Optional[RetryPolicyConfig] = None,
         sink_retry_policy: Optional[RetryPolicyConfig] = None,
         dedup_config: Optional[RuntimeDedupConfig] = None,
+        timezone_name: str = "Asia/Shanghai",
     ):
         self.sources = sources
         self.llm_provider = llm_provider
@@ -58,6 +60,7 @@ class InsightEngine:
         self.llm_retry_policy = llm_retry_policy or RetryPolicyConfig(max_attempts=3, base_delay_seconds=2.0)
         self.sink_retry_policy = sink_retry_policy or RetryPolicyConfig(max_attempts=2, base_delay_seconds=1.0)
         self.dedup_config = dedup_config or RuntimeDedupConfig()
+        self.timezone_name = timezone_name
         self._strip_query_params = set(self.dedup_config.strip_query_params)
         self.scorer = ContentScorer(config=self.scoring_config, llm_provider=llm_provider)
         self.prompt_renderer = PromptRenderer(
@@ -153,6 +156,7 @@ class InsightEngine:
         new_items = await self.fetch()
         if not new_items:
             logger.info("No new items to process.", extra={"event": "engine.run.no_new_items"})
+            await self.distribute(self._build_no_update_markdown(), [], update_history=False)
             return
 
         items_for_summary = new_items
@@ -491,3 +495,12 @@ class InsightEngine:
             cleaned_query,
             "",
         ))
+
+    def _build_no_update_markdown(self) -> str:
+        now = datetime.now(ZoneInfo(self.timezone_name))
+        date_str = now.strftime("%Y-%m-%d")
+        return (
+            f"# InsightHub Daily {date_str}\n\n"
+            "> 今日无更新。\n\n"
+            "今天没有发现通过筛选的新内容，明日再见。"
+        )

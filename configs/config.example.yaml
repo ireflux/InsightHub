@@ -53,6 +53,7 @@ state:
   max_delivery_runs: 100
 
 runtime:
+  timezone: "Asia/Shanghai"
   paths:
     prompts_dir: "prompts"
     history_file: "history.json"

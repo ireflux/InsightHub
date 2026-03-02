@@ -135,4 +135,10 @@ venv.bak/
 logs/
 *.log
 
-output/
+output/*
+!output/posts/
+!output/posts/**
+!output/manifest/
+!output/manifest/**
+
+.codex/

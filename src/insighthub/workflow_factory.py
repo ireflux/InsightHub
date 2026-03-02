@@ -2,6 +2,7 @@ import datetime
 import logging
 import re
 from typing import List
+from zoneinfo import ZoneInfo
 
 from insighthub.llm_providers import LLMFactory
 from insighthub.llm_providers.base import BaseLLMProvider
@@ -138,13 +139,14 @@ def build_sinks(
     now: datetime.datetime | None = None,
 ) -> List[BaseSink]:
     sinks: List[BaseSink] = []
-    now = now or datetime.datetime.now()
+    tz = ZoneInfo(app_settings.runtime.timezone)
+    now = now or datetime.datetime.now(tz)
 
     for sink_config in app_settings.sinks.items:
         enabled = app_settings.sinks.defaults.enabled if sink_config.enabled is None else sink_config.enabled
         if not enabled:
             continue
-        sink = _build_single_sink(sink_config, logger=logger, now=now)
+        sink = _build_single_sink(sink_config, logger=logger, now=now, timezone_name=app_settings.runtime.timezone)
         if sink is not None:
             sinks.append(sink)
     return sinks
@@ -155,12 +157,13 @@ def _build_single_sink(
     *,
     logger: logging.Logger,
     now: datetime.datetime,
+    timezone_name: str,
 ) -> BaseSink | None:
     sink_type = sink_config.type
     sink_params = sink_config.params
     if sink_type == "markdown_file":
         output_dir = sink_params.get("output_dir") or "output"
-        return MarkdownFileSink(output_dir=output_dir)
+        return MarkdownFileSink(output_dir=output_dir, timezone_name=timezone_name)
 
     if sink_type == "feishu_doc":
         app_id = sink_params.get("app_id")

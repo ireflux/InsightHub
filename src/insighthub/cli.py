@@ -119,6 +119,7 @@ async def run_cli():
         llm_retry_policy=settings.runtime.retry.llm_summarize,
         sink_retry_policy=settings.runtime.retry.sink_render,
         dedup_config=settings.runtime.dedup,
+        timezone_name=settings.runtime.timezone,
     )
 
     if args.command == "fetch":

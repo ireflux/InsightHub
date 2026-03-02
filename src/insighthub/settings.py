@@ -2,6 +2,7 @@ import os
 import yaml
 import logging
 from typing import Any, Dict, List, Optional
+from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 from pydantic import BaseModel, Field
 
 from insighthub.errors import ConfigValidationError
@@ -141,6 +142,7 @@ class ObservabilityConfig(BaseModel):
 
 
 class RuntimeConfig(BaseModel):
+    timezone: str = "Asia/Shanghai"
     paths: RuntimePathsConfig = Field(default_factory=RuntimePathsConfig)
     retry: RuntimeRetryConfig = Field(default_factory=RuntimeRetryConfig)
     timeouts: RuntimeTimeoutsConfig = Field(default_factory=RuntimeTimeoutsConfig)
@@ -253,6 +255,10 @@ class AppSettings(BaseModel):
             raise ConfigValidationError("runtime.paths.delivery_state_file must not be empty.")
         if not self.runtime.paths.logs_dir.strip():
             raise ConfigValidationError("runtime.paths.logs_dir must not be empty.")
+        try:
+            ZoneInfo(self.runtime.timezone)
+        except ZoneInfoNotFoundError as e:
+            raise ConfigValidationError(f"runtime.timezone is invalid: {self.runtime.timezone}") from e
 
         observability_level = self.runtime.observability.level.upper()
         if observability_level not in {"DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"}:

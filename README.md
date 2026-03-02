@@ -580,6 +580,34 @@ Use cron (Unix/macOS) or Task Scheduler (Windows):
 0 8 * * * /path/to/insighthub run >> /var/log/insighthub.log 2>&1
 ```
 
+### GitHub Pages Deployment (gh-pages)
+
+This repository now supports a two-workflow static-site pipeline:
+
+1. `.github/workflows/daily.yml`
+- Runs tests and `insighthub run`
+- Commits daily artifacts to `main`:
+  - `output/posts/YYYY-MM-DD-<run_id>.md`
+  - `output/manifest/index.json`
+  - `history.json`
+  - `delivery_state.json`
+
+2. `.github/workflows/deploy-pages.yml`
+- Triggers after daily workflow success (or manual dispatch)
+- Pre-renders static HTML site from manifest + markdown
+- Publishes `site/` to `gh-pages`
+
+Site build command:
+
+```bash
+python scripts/build_site.py \
+  --manifest output/manifest/index.json \
+  --content-root output \
+  --output-dir site
+```
+
+Timezone is configurable via `runtime.timezone` (default `Asia/Shanghai`).
+
 ### Docker
 
 Create a `Dockerfile` for containerized deployment:

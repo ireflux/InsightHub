@@ -19,6 +19,7 @@ dependencies = [
   "openrouter",
   "sniffio",
   "aiofiles",
+  "markdown",
 ]
 
 [project.scripts]
