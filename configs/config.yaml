@@ -124,7 +124,7 @@ sinks:
         output_dir: "output"
     - id: "feishu_daily"
       type: "feishu_doc"
-      enabled: false
+      enabled: true
       params:
         default_title: "InsightHub {date}"
         space_id: "7599692883666422737"
