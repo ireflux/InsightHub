@@ -5,7 +5,8 @@ from typing import List
 
 from insighthub.llm_providers import LLMFactory
 from insighthub.llm_providers.base import BaseLLMProvider
-from insighthub.settings import AppSettings, SinkConfig, SourceConfig
+from insighthub.llm_providers.failover import FailoverLLMProvider
+from insighthub.settings import AppSettings, LLMEndpointConfig, SinkConfig, SourceConfig
 from insighthub.sinks import BaseSink, FeishuDocSink, MarkdownFileSink
 from insighthub.sources import (
     GitHubTrendingSource,
@@ -18,14 +19,36 @@ from insighthub.sources.base import BaseSource
 
 
 def build_llm_provider(app_settings: AppSettings, logger: logging.Logger) -> BaseLLMProvider | None:
-    provider_name = app_settings.llm_provider.name
-    provider_api_key = app_settings.llm_provider.api_key
-    provider_model = app_settings.llm_provider.model
+    primary_cfg = app_settings.llm.primary
+    primary_provider = _create_provider(primary_cfg, logger=logger, role="primary")
+    if primary_provider is None:
+        return None
+
+    fallback_providers: List[BaseLLMProvider] = []
+    labels = [f"primary:{primary_cfg.provider}"]
+    for idx, fallback_cfg in enumerate(app_settings.llm.fallbacks):
+        fallback_provider = _create_provider(fallback_cfg, logger=logger, role=f"fallback[{idx}]")
+        if fallback_provider is not None:
+            fallback_providers.append(fallback_provider)
+            labels.append(f"fallback:{fallback_cfg.provider}")
+
+    if fallback_providers:
+        return FailoverLLMProvider([primary_provider, *fallback_providers], labels)
+    return primary_provider
+
+
+def _create_provider(
+    endpoint_config: LLMEndpointConfig,
+    *,
+    logger: logging.Logger,
+    role: str,
+) -> BaseLLMProvider | None:
+    provider_name = endpoint_config.provider
     try:
         return LLMFactory.create_provider(
             provider_name,
-            api_key=provider_api_key,
-            model=provider_model,
+            api_key=endpoint_config.api_key,
+            model=endpoint_config.model,
         )
     except (ValueError, ImportError) as e:
         logger.error(
@@ -33,6 +56,7 @@ def build_llm_provider(app_settings: AppSettings, logger: logging.Logger) -> Bas
             extra={
                 "event": "workflow.llm_init_failed",
                 "provider": provider_name,
+                "role": role,
                 "error": str(e),
             },
         )
@@ -41,23 +65,44 @@ def build_llm_provider(app_settings: AppSettings, logger: logging.Logger) -> Bas
 
 def build_sources(app_settings: AppSettings, logger: logging.Logger) -> List[BaseSource]:
     sources: List[BaseSource] = []
-    max_items = app_settings.max_items
 
-    for src_config in app_settings.sources:
-        source = _build_single_source(src_config, max_items=max_items, logger=logger)
+    for src_config in app_settings.sources.items:
+        if not src_config.enabled:
+            continue
+        source = _build_single_source(src_config, app_settings=app_settings, logger=logger)
         if source is not None:
             sources.append(source)
     return sources
 
 
 def _build_single_source(
-    src_config: SourceConfig, *, max_items: int, logger: logging.Logger
+    src_config: SourceConfig, *, app_settings: AppSettings, logger: logging.Logger
 ) -> BaseSource | None:
-    source_name = src_config.name
-    if source_name == "github_trending":
-        return GitHubTrendingSource(max_items=max_items)
-    if source_name == "zhihu_hot":
-        keyword_pattern = src_config.keyword_filter
+    source_type = src_config.type
+    defaults = app_settings.sources.defaults
+    max_items = src_config.max_items if src_config.max_items is not None else defaults.max_items
+    discover_timeout = app_settings.runtime.timeouts.source_discover_timeout_seconds
+    content_fetch_concurrency = (
+        src_config.content_fetch_concurrency
+        if src_config.content_fetch_concurrency is not None
+        else defaults.content_fetch_concurrency
+    )
+    content_fetch_timeout = (
+        src_config.content_fetch_timeout
+        if src_config.content_fetch_timeout is not None
+        else defaults.content_fetch_timeout
+    )
+    common_kwargs = {
+        "max_items": max_items,
+        "discover_timeout": discover_timeout,
+        "content_fetch_concurrency": content_fetch_concurrency,
+        "content_fetch_timeout": content_fetch_timeout,
+    }
+
+    if source_type == "github_trending":
+        return GitHubTrendingSource(**common_kwargs)
+    if source_type == "zhihu_hot":
+        keyword_pattern = src_config.params.get("keyword_filter")
         pattern = None
         if keyword_pattern:
             try:
@@ -67,22 +112,22 @@ def _build_single_source(
                     "Invalid zhihu keyword regex; source skipped.",
                     extra={
                         "event": "workflow.source_invalid_regex",
-                        "source_name": source_name,
+                        "source_id": src_config.id,
                         "error": str(e),
                     },
                 )
                 return None
-        return ZhihuHotSource(keyword_filter=pattern, max_items=max_items)
-    if source_name == "hacker_news":
-        return HackerNewsSource(max_items=max_items)
-    if source_name == "v2ex_hot":
-        return V2EXHotSource(max_items=max_items)
-    if source_name == "slashdot":
-        return SlashdotSource(max_items=max_items)
+        return ZhihuHotSource(keyword_filter=pattern, **common_kwargs)
+    if source_type == "hacker_news":
+        return HackerNewsSource(**common_kwargs)
+    if source_type == "v2ex_hot":
+        return V2EXHotSource(**common_kwargs)
+    if source_type == "slashdot":
+        return SlashdotSource(**common_kwargs)
 
     logger.warning(
         "Unknown source in config, skipping.",
-        extra={"event": "workflow.unknown_source", "source_name": source_name},
+        extra={"event": "workflow.unknown_source", "source_type": source_type, "source_id": src_config.id},
     )
     return None
 
@@ -95,7 +140,10 @@ def build_sinks(
     sinks: List[BaseSink] = []
     now = now or datetime.datetime.now()
 
-    for sink_config in app_settings.sinks:
+    for sink_config in app_settings.sinks.items:
+        enabled = app_settings.sinks.defaults.enabled if sink_config.enabled is None else sink_config.enabled
+        if not enabled:
+            continue
         sink = _build_single_sink(sink_config, logger=logger, now=now)
         if sink is not None:
             sinks.append(sink)
@@ -108,17 +156,18 @@ def _build_single_sink(
     logger: logging.Logger,
     now: datetime.datetime,
 ) -> BaseSink | None:
-    sink_name = sink_config.name
-    if sink_name == "markdown_file":
-        output_dir = sink_config.output_dir or "output"
+    sink_type = sink_config.type
+    sink_params = sink_config.params
+    if sink_type == "markdown_file":
+        output_dir = sink_params.get("output_dir") or "output"
         return MarkdownFileSink(output_dir=output_dir)
 
-    if sink_name == "feishu_doc":
-        app_id = sink_config.app_id
-        app_secret = sink_config.app_secret
-        space_id = sink_config.space_id
-        doc_id = sink_config.doc_id
-        default_title = sink_config.default_title or "InsightHub"
+    if sink_type == "feishu_doc":
+        app_id = sink_params.get("app_id")
+        app_secret = sink_params.get("app_secret")
+        space_id = sink_params.get("space_id")
+        doc_id = sink_params.get("doc_id")
+        default_title = sink_params.get("default_title") or "InsightHub"
         formatted_title = _format_title(default_title, now)
 
         if app_id and app_secret:
@@ -136,6 +185,7 @@ def _build_single_sink(
                     extra={
                         "event": "workflow.sink_init_failed",
                         "sink": "feishu_doc",
+                        "sink_id": sink_config.id,
                         "error": str(e),
                     },
                 )
@@ -143,13 +193,13 @@ def _build_single_sink(
 
         logger.warning(
             "feishu_doc sink enabled but credentials are missing. Skipping.",
-            extra={"event": "workflow.sink_skipped", "sink": "feishu_doc"},
+            extra={"event": "workflow.sink_skipped", "sink": "feishu_doc", "sink_id": sink_config.id},
         )
         return None
 
     logger.warning(
         "Unknown sink in config, skipping.",
-        extra={"event": "workflow.unknown_sink", "sink_name": sink_name},
+        extra={"event": "workflow.unknown_sink", "sink_type": sink_type, "sink_id": sink_config.id},
     )
     return None
 

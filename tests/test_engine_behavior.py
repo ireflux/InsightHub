@@ -14,6 +14,7 @@ from insighthub.llm_providers.base import BaseLLMProvider
 from insighthub.models import NewsItem
 from insighthub.sinks.base import BaseSink
 from insighthub.sources.base import BaseSource
+from insighthub.settings import RuntimeDedupConfig, ScoringConfig
 
 
 class DummySource(BaseSource):
@@ -26,7 +27,11 @@ class DummySource(BaseSource):
 
 
 class DummyProvider(BaseLLMProvider):
+    def __init__(self):
+        self.last_content = ""
+
     async def summarize(self, content: str, prompt_template: str) -> str:
+        self.last_content = content
         return "ok"
 
     async def classify(self, content: str, categories: List[str], prompt_template: str) -> str:
@@ -75,6 +80,46 @@ class TestEngineDedup(unittest.IsolatedAsyncioTestCase):
             items = await engine.fetch(ignore_history=False)
             self.assertEqual(len(items), 1)
             self.assertEqual(items[0].url, "https://example.com/post?utm_source=hn&id=1")
+        finally:
+            os.remove(hist_path)
+            os.remove(delivery_path)
+
+    async def test_fetch_can_disable_url_normalization_dedup(self):
+        item1 = NewsItem(
+            id="https://example.com/post?utm_source=hn&id=1",
+            title="A",
+            url="https://example.com/post?utm_source=hn&id=1",
+            source="dummy",
+            content="x",
+        )
+        item2 = NewsItem(
+            id="https://example.com/post?id=1",
+            title="A duplicate",
+            url="https://example.com/post?id=1",
+            source="dummy",
+            content="y",
+        )
+
+        with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False, encoding="utf-8") as tmp_hist, tempfile.NamedTemporaryFile(
+            "w", suffix=".json", delete=False, encoding="utf-8"
+        ) as tmp_delivery:
+            tmp_hist.write("[]")
+            hist_path = tmp_hist.name
+            tmp_delivery.write("{}")
+            delivery_path = tmp_delivery.name
+
+        engine = InsightEngine(
+            sources=[DummySource([item1, item2])],
+            llm_provider=DummyProvider(),
+            sinks=[DummySink()],
+            history_file=hist_path,
+            delivery_state_file=delivery_path,
+            dedup_config=RuntimeDedupConfig(normalize_url=False, strip_query_params=["utm_source"]),
+        )
+
+        try:
+            items = await engine.fetch(ignore_history=False)
+            self.assertEqual(len(items), 2)
         finally:
             os.remove(hist_path)
             os.remove(delivery_path)
@@ -237,6 +282,50 @@ class TestEngineDedup(unittest.IsolatedAsyncioTestCase):
             self.assertIn("https://example.com/3", data)
             self.assertNotIn("https://example.com/1", data)
             self.assertNotIn("https://example.com/2", data)
+        finally:
+            os.remove(hist_path)
+            os.remove(delivery_path)
+
+    async def test_run_uses_scored_subset_for_summary(self):
+        low_item = NewsItem(
+            id="https://example.com/low-priority",
+            title="Small update",
+            url="https://example.com/low-priority",
+            source="Hacker News",
+            content="Tiny update",
+            original_data={"hn_score": 2, "hn_comments": 0},
+        )
+        high_item = NewsItem(
+            id="https://example.com/high-priority",
+            title="Major research release with benchmark",
+            url="https://example.com/high-priority",
+            source="Hacker News",
+            content="Deep architecture analysis and benchmark results " * 40,
+            original_data={"hn_score": 600, "hn_comments": 220},
+        )
+
+        with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False, encoding="utf-8") as tmp_hist, tempfile.NamedTemporaryFile(
+            "w", suffix=".json", delete=False, encoding="utf-8"
+        ) as tmp_delivery:
+            tmp_hist.write("[]")
+            hist_path = tmp_hist.name
+            tmp_delivery.write("{}")
+            delivery_path = tmp_delivery.name
+
+        provider = DummyProvider()
+        engine = InsightEngine(
+            sources=[DummySource([low_item, high_item])],
+            llm_provider=provider,
+            sinks=[DummySink()],
+            history_file=hist_path,
+            delivery_state_file=delivery_path,
+            scoring_config=ScoringConfig(enabled=True, use_llm=False, min_score_for_summary=5.0, keep_top_n=1),
+        )
+
+        try:
+            await engine.run()
+            self.assertIn("high-priority", provider.last_content)
+            self.assertNotIn("low-priority", provider.last_content)
         finally:
             os.remove(hist_path)
             os.remove(delivery_path)

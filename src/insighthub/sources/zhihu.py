@@ -13,7 +13,14 @@ class ZhihuHotSource(BaseSource):
     
     API_URL = "https://www.zhihu.com/api/v4/trending/hot_list"
     
-    def __init__(self, keyword_filter: Optional[Pattern] = None, max_items: int = 8):
+    def __init__(
+        self,
+        keyword_filter: Optional[Pattern] = None,
+        max_items: int = 8,
+        discover_timeout: float = 20.0,
+        content_fetch_concurrency: int = 4,
+        content_fetch_timeout: float = 10.0,
+    ):
         """
         Initializes the ZhihuHotSource.
         
@@ -22,14 +29,20 @@ class ZhihuHotSource(BaseSource):
                             Only topics with titles matching the pattern will be fetched.
             max_items: Maximum number of items to fetch.
         """
-        super().__init__(name="Zhihu Hot", max_items=max_items)
+        super().__init__(
+            name="Zhihu Hot",
+            max_items=max_items,
+            discover_timeout=discover_timeout,
+            content_fetch_concurrency=content_fetch_concurrency,
+            content_fetch_timeout=content_fetch_timeout,
+        )
         self.keyword_filter = keyword_filter
 
     async def discover_raw(self) -> dict:
         headers = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36"
         }
-        async with httpx.AsyncClient(headers=headers, timeout=20.0) as client:
+        async with httpx.AsyncClient(headers=headers, timeout=self.discover_timeout) as client:
             try:
                 response = await client.get(self.API_URL)
                 response.raise_for_status()

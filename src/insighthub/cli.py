@@ -14,28 +14,40 @@ from insighthub.workflow_factory import build_llm_provider, build_sinks, build_s
 
 def setup_logging(run_id: str):
     """Set up structured logging to both console and file."""
-    log_dir = "logs"
-    if not os.path.exists(log_dir):
+    obs = settings.runtime.observability
+    log_dir = settings.runtime.paths.logs_dir
+    if obs.file_enabled and not os.path.exists(log_dir):
         os.makedirs(log_dir)
 
     today_str = datetime.datetime.now().strftime("%Y-%m-%d")
-    log_file = os.path.join(log_dir, f"insighthub_{today_str}.log")
+    log_file = os.path.join(log_dir, f"{obs.file_name_prefix}_{today_str}.log")
 
     logger = logging.getLogger()
-    logger.setLevel(logging.INFO)
+    logger.setLevel(getattr(logging, obs.level.upper(), logging.INFO))
 
     if logger.hasHandlers():
         logger.handlers.clear()
 
-    console_handler = logging.StreamHandler(sys.stdout)
-    console_handler.setFormatter(JsonLogFormatter())
-    console_handler.addFilter(RunContextFilter())
-    logger.addHandler(console_handler)
+    formatter: logging.Formatter
+    if obs.format == "json":
+        formatter = JsonLogFormatter()
+    else:
+        formatter = logging.Formatter(
+            fmt="%(asctime)s %(levelname)s %(name)s [run_id=%(run_id)s] %(message)s",
+            datefmt="%Y-%m-%dT%H:%M:%S%z",
+        )
 
-    file_handler = logging.FileHandler(log_file, encoding="utf-8")
-    file_handler.setFormatter(JsonLogFormatter())
-    file_handler.addFilter(RunContextFilter())
-    logger.addHandler(file_handler)
+    if obs.console_enabled:
+        console_handler = logging.StreamHandler(sys.stdout)
+        console_handler.setFormatter(formatter)
+        console_handler.addFilter(RunContextFilter())
+        logger.addHandler(console_handler)
+
+    if obs.file_enabled:
+        file_handler = logging.FileHandler(log_file, encoding="utf-8")
+        file_handler.setFormatter(formatter)
+        file_handler.addFilter(RunContextFilter())
+        logger.addHandler(file_handler)
 
     set_run_id(run_id)
     return logging.getLogger(__name__)
@@ -93,15 +105,20 @@ async def run_cli():
         sources=sources,
         llm_provider=llm_provider,
         sinks=sinks,
-        prompts_dir="prompts",
-        history_file="history.json",
-        delivery_state_file="delivery_state.json",
+        prompts_dir=settings.runtime.paths.prompts_dir,
+        history_file=settings.runtime.paths.history_file,
+        delivery_state_file=settings.runtime.paths.delivery_state_file,
         prompt_structure=settings.prompt.structure,
         prompt_style=settings.prompt.style,
         prompt_variables=settings.prompt.variables,
         max_history_records=settings.state.max_history_records,
         max_delivery_item_records=settings.state.max_delivery_item_records,
         max_delivery_runs=settings.state.max_delivery_runs,
+        scoring_config=settings.scoring,
+        source_retry_policy=settings.runtime.retry.source_fetch,
+        llm_retry_policy=settings.runtime.retry.llm_summarize,
+        sink_retry_policy=settings.runtime.retry.sink_render,
+        dedup_config=settings.runtime.dedup,
     )
 
     if args.command == "fetch":
@@ -119,6 +136,8 @@ async def run_cli():
         logger.info("Executing subcommand: summarize")
         items = engine.load_items(args.input)
         if items:
+            if settings.scoring.enabled:
+                items = await engine.score_items(items)
             content = await engine.summarize(items)
             output_path = args.output
             os.makedirs(os.path.dirname(os.path.abspath(output_path)), exist_ok=True)

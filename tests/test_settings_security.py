@@ -1,4 +1,4 @@
-﻿import os
+import os
 import sys
 import tempfile
 import unittest
@@ -14,15 +14,21 @@ from insighthub.settings import AppSettings
 class TestSettingsSecurity(unittest.TestCase):
     def test_env_secrets_override_and_config_secrets_are_ignored(self):
         config_content = """
-llm_provider:
-  name: zhipuai
-  api_key: insecure_config_key
-  model: glm-4.7-flash
+llm:
+  primary:
+    provider: zhipuai
+    api_key: insecure_config_key
+    model: glm-4.7-flash
 sinks:
-  - name: feishu_doc
-    app_id: insecure_app_id
-    app_secret: insecure_app_secret
-    default_title: InsightHub {date}
+  defaults:
+    enabled: true
+  items:
+    - id: feishu
+      type: feishu_doc
+      params:
+        app_id: insecure_app_id
+        app_secret: insecure_app_secret
+        default_title: InsightHub {date}
 """
         with tempfile.NamedTemporaryFile("w", suffix=".yaml", delete=False, encoding="utf-8") as tmp:
             tmp.write(config_content)
@@ -39,9 +45,9 @@ sinks:
 
         try:
             settings = AppSettings.load(tmp_path)
-            self.assertEqual(settings.llm_provider.api_key, "env_zhipu_key")
-            self.assertEqual(settings.sinks[0].app_id, "env_app_id")
-            self.assertEqual(settings.sinks[0].app_secret, "env_app_secret")
+            self.assertEqual(settings.llm.primary.api_key, "env_zhipu_key")
+            self.assertEqual(settings.sinks.items[0].params.get("app_id"), "env_app_id")
+            self.assertEqual(settings.sinks.items[0].params.get("app_secret"), "env_app_secret")
         finally:
             os.remove(tmp_path)
             for key, value in old_env.items():
@@ -52,14 +58,107 @@ sinks:
 
     def test_unsupported_provider_raises(self):
         config_content = """
-llm_provider:
-  name: bad_provider
-  model: x
+llm:
+  primary:
+    provider: bad_provider
+    model: x
 sources:
-  - name: github_trending
+  items:
+    - id: github
+      type: github_trending
 sinks:
-  - name: markdown_file
-    output_dir: output
+  items:
+    - id: markdown
+      type: markdown_file
+      params:
+        output_dir: output
+"""
+        with tempfile.NamedTemporaryFile("w", suffix=".yaml", delete=False, encoding="utf-8") as tmp:
+            tmp.write(config_content)
+            tmp_path = tmp.name
+        try:
+            with self.assertRaises(Exception):
+                AppSettings.load(tmp_path)
+        finally:
+            os.remove(tmp_path)
+
+    def test_invalid_scoring_threshold_raises(self):
+        config_content = """
+llm:
+  primary:
+    provider: zhipuai
+    model: glm-4.7-flash
+sources:
+  items:
+    - id: github
+      type: github_trending
+sinks:
+  items:
+    - id: markdown
+      type: markdown_file
+      params:
+        output_dir: output
+scoring:
+  min_score_for_summary: 12
+"""
+        with tempfile.NamedTemporaryFile("w", suffix=".yaml", delete=False, encoding="utf-8") as tmp:
+            tmp.write(config_content)
+            tmp_path = tmp.name
+        try:
+            with self.assertRaises(Exception):
+                AppSettings.load(tmp_path)
+        finally:
+            os.remove(tmp_path)
+
+    def test_invalid_retry_policy_raises(self):
+        config_content = """
+llm:
+  primary:
+    provider: zhipuai
+    model: glm-4.7-flash
+runtime:
+  retry:
+    source_fetch:
+      max_attempts: 0
+sources:
+  items:
+    - id: github
+      type: github_trending
+sinks:
+  items:
+    - id: markdown
+      type: markdown_file
+      params:
+        output_dir: output
+"""
+        with tempfile.NamedTemporaryFile("w", suffix=".yaml", delete=False, encoding="utf-8") as tmp:
+            tmp.write(config_content)
+            tmp_path = tmp.name
+        try:
+            with self.assertRaises(Exception):
+                AppSettings.load(tmp_path)
+        finally:
+            os.remove(tmp_path)
+
+    def test_invalid_observability_format_raises(self):
+        config_content = """
+llm:
+  primary:
+    provider: zhipuai
+    model: glm-4.7-flash
+runtime:
+  observability:
+    format: xml
+sources:
+  items:
+    - id: github
+      type: github_trending
+sinks:
+  items:
+    - id: markdown
+      type: markdown_file
+      params:
+        output_dir: output
 """
         with tempfile.NamedTemporaryFile("w", suffix=".yaml", delete=False, encoding="utf-8") as tmp:
             tmp.write(config_content)

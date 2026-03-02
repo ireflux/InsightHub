@@ -13,20 +13,32 @@ class V2EXHotSource(BaseSource):
     
     API_URL = "https://www.v2ex.com/api/topics/hot.json"
     
-    def __init__(self, max_items: int = 8):
+    def __init__(
+        self,
+        max_items: int = 8,
+        discover_timeout: float = 20.0,
+        content_fetch_concurrency: int = 4,
+        content_fetch_timeout: float = 10.0,
+    ):
         """
         Initializes the V2EXHotSource.
         
         Args:
             max_items: Maximum number of items to fetch.
         """
-        super().__init__(name="V2EX Hot", max_items=max_items)
+        super().__init__(
+            name="V2EX Hot",
+            max_items=max_items,
+            discover_timeout=discover_timeout,
+            content_fetch_concurrency=content_fetch_concurrency,
+            content_fetch_timeout=content_fetch_timeout,
+        )
 
     async def discover_raw(self) -> List[dict]:
         headers = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
         }
-        async with httpx.AsyncClient(headers=headers, timeout=20.0) as client:
+        async with httpx.AsyncClient(headers=headers, timeout=self.discover_timeout) as client:
             try:
                 response = await client.get(self.API_URL)
                 response.raise_for_status()

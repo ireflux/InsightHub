@@ -14,14 +14,26 @@ class SlashdotSource(BaseSource):
     
     RSS_URL = "https://rss.slashdot.org/Slashdot/slashdotMain"
     
-    def __init__(self, max_items: int = 8):
-        super().__init__(name="Slashdot", max_items=max_items)
+    def __init__(
+        self,
+        max_items: int = 8,
+        discover_timeout: float = 20.0,
+        content_fetch_concurrency: int = 4,
+        content_fetch_timeout: float = 10.0,
+    ):
+        super().__init__(
+            name="Slashdot",
+            max_items=max_items,
+            discover_timeout=discover_timeout,
+            content_fetch_concurrency=content_fetch_concurrency,
+            content_fetch_timeout=content_fetch_timeout,
+        )
 
     async def discover_raw(self) -> str:
         headers = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
         }
-        async with httpx.AsyncClient(timeout=20.0, headers=headers) as client:
+        async with httpx.AsyncClient(timeout=self.discover_timeout, headers=headers) as client:
             try:
                 response = await client.get(self.RSS_URL, follow_redirects=True)
                 response.raise_for_status()

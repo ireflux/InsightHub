@@ -12,6 +12,13 @@ class NewsItem(BaseModel):
     source: str = Field(..., description="Source name (e.g., 'GitHub Trending', 'Zhihu Hot')")
     content: Optional[str] = Field(None, description="Full text or main content extracted")
     summary: Optional[str] = Field(None, description="AI generated summary")
+    ai_score: Optional[float] = Field(None, description="AI quality score (0-10)")
+    score_tier: Optional[str] = Field(None, description="Score tier label")
+    score_breakdown: Dict[str, float] = Field(
+        default_factory=dict,
+        description="Per-dimension score breakdown",
+    )
+    score_reason: Optional[str] = Field(None, description="Short reason for the assigned score")
     publish_date: Optional[datetime] = Field(None, description="Publication date if available")
     original_data: Optional[Dict[str, Any]] = Field(default_factory=dict, description="Raw data from the source")
 

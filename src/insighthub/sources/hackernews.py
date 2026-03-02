@@ -14,14 +14,26 @@ class HackerNewsSource(BaseSource):
     
     BASE_URL = "https://news.ycombinator.com/"
     
-    def __init__(self, max_items: int = 8):
-        super().__init__(name="Hacker News", max_items=max_items)
+    def __init__(
+        self,
+        max_items: int = 8,
+        discover_timeout: float = 20.0,
+        content_fetch_concurrency: int = 4,
+        content_fetch_timeout: float = 10.0,
+    ):
+        super().__init__(
+            name="Hacker News",
+            max_items=max_items,
+            discover_timeout=discover_timeout,
+            content_fetch_concurrency=content_fetch_concurrency,
+            content_fetch_timeout=content_fetch_timeout,
+        )
 
     async def discover_raw(self) -> str:
         headers = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
         }
-        async with httpx.AsyncClient(timeout=20.0, headers=headers) as client:
+        async with httpx.AsyncClient(timeout=self.discover_timeout, headers=headers) as client:
             try:
                 response = await client.get(self.BASE_URL, follow_redirects=True)
                 response.raise_for_status()
@@ -52,6 +64,26 @@ class HackerNewsSource(BaseSource):
                     url = f"{self.BASE_URL}{url}"
                 
                 story_id = tr.get("id", url)
+                subtext_row = tr.find_next_sibling("tr")
+                subtext = subtext_row.select_one("td.subtext") if subtext_row else None
+
+                hn_score = 0
+                hn_comments = 0
+                if subtext:
+                    score_tag = subtext.select_one("span.score")
+                    if score_tag:
+                        score_text = score_tag.get_text(strip=True)
+                        score_match = "".join(ch for ch in score_text if ch.isdigit())
+                        if score_match:
+                            hn_score = int(score_match)
+
+                    for link in subtext.select("a"):
+                        text = link.get_text(strip=True).lower()
+                        if "comment" in text:
+                            digits = "".join(ch for ch in text if ch.isdigit())
+                            if digits:
+                                hn_comments = int(digits)
+                            break
                 
                 # Hacker News front page doesn't show excerpts easily without a second request per item.
                 # For now, we use the title as the content context.
@@ -63,7 +95,11 @@ class HackerNewsSource(BaseSource):
                     url=url,
                     source=self.name,
                     content=content,
-                    original_data={}
+                    original_data={
+                        "story_id": story_id,
+                        "hn_score": hn_score,
+                        "hn_comments": hn_comments,
+                    }
                 ))
             except Exception as e:
                 logger.warning(f"Failed to parse a Hacker News item: {e}")

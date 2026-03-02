@@ -3,12 +3,43 @@
 # Copy this file to configs/config.yaml and adjust as needed.
 # Secrets must be provided via environment variables.
 
-llm_provider:
-  # Supported: openrouter, zhipuai
-  name: "zhipuai"
-  model: "glm-4.7-flash"
+llm:
+  primary:
+    provider: "zhipuai"
+    model: "glm-4.7-flash"
+  fallbacks: []
+  # fallbacks:
+  #   - provider: "openrouter"
+  #     model: "xiaomi/mimo-v2-flash:free"
 
-max_items: 8
+sources:
+  defaults:
+    max_items: 8
+    content_fetch_concurrency: 4
+    content_fetch_timeout: 10.0
+  items:
+    - id: "github_main"
+      type: "github_trending"
+      enabled: true
+      max_items: 10
+      params: {}
+    - id: "hn_main"
+      type: "hacker_news"
+      enabled: true
+      params: {}
+    - id: "v2ex_main"
+      type: "v2ex_hot"
+      enabled: true
+      params: {}
+    - id: "slashdot_main"
+      type: "slashdot"
+      enabled: true
+      params: {}
+    # - id: "zhihu_ai"
+    #   type: "zhihu_hot"
+    #   enabled: false
+    #   params:
+    #     keyword_filter: "编程|AI|Python|技术|机器学习|深度学习"
 
 prompt:
   structure: "professional_briefing_v1"
@@ -21,24 +52,78 @@ state:
   max_delivery_item_records: 2000
   max_delivery_runs: 100
 
-sources:
-  - name: "github_trending"
-  - name: "hacker_news"
-  - name: "v2ex_hot"
-  - name: "slashdot"
-  # - name: "zhihu_hot"
-  #   keyword_filter: "编程|AI|Python|技术|开发|机器学习|深度学习"
+runtime:
+  paths:
+    prompts_dir: "prompts"
+    history_file: "history.json"
+    delivery_state_file: "delivery_state.json"
+    logs_dir: "logs"
+  retry:
+    source_fetch:
+      max_attempts: 3
+      base_delay_seconds: 1.0
+      backoff_multiplier: 2.0
+      max_delay_seconds: 30.0
+    llm_summarize:
+      max_attempts: 3
+      base_delay_seconds: 2.0
+      backoff_multiplier: 2.0
+      max_delay_seconds: 30.0
+    sink_render:
+      max_attempts: 2
+      base_delay_seconds: 1.0
+      backoff_multiplier: 2.0
+      max_delay_seconds: 30.0
+  timeouts:
+    source_discover_timeout_seconds: 20.0
+  dedup:
+    normalize_url: true
+    strip_query_params:
+      - "utm_source"
+      - "utm_medium"
+      - "utm_campaign"
+      - "utm_term"
+      - "utm_content"
+      - "ref"
+      - "source"
+  observability:
+    level: "INFO"
+    format: "json"
+    console_enabled: true
+    file_enabled: true
+    file_name_prefix: "insighthub"
+
+scoring:
+  enabled: false
+  use_llm: false
+  llm_blend_alpha: 0.7
+  min_score_for_summary: 5.0
+  keep_top_n: 8
+  max_items_for_llm_scoring: 20
+  weights:
+    technical_depth_and_novelty: 0.30
+    potential_impact: 0.25
+    writing_quality: 0.15
+    community_discussion: 0.15
+    engagement_signals: 0.15
 
 sinks:
-  - name: "markdown_file"
-    output_dir: "output"
-  - name: "feishu_doc"
-    default_title: "InsightHub {date}"
-    # optional
-    # space_id: ""
-    # doc_id: ""
+  defaults:
+    enabled: true
+  items:
+    - id: "markdown_local"
+      type: "markdown_file"
+      params:
+        output_dir: "output"
+    - id: "feishu_daily"
+      type: "feishu_doc"
+      params:
+        default_title: "InsightHub {date}"
+        # optional
+        # space_id: ""
+        # doc_id: ""
 
-# Required env vars by provider:
+# Required env vars by LLM providers:
 # - ZHIPUAI_API_KEY (for zhipuai)
 # - OPENROUTER_API_KEY (for openrouter)
 #

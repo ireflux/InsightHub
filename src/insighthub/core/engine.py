@@ -11,6 +11,8 @@ from insighthub.errors import LLMProcessingError, PromptRenderingError, SinkDeli
 from insighthub.llm_providers.base import BaseLLMProvider
 from insighthub.models import NewsItem
 from insighthub.prompting import PromptRenderer
+from insighthub.scoring import ContentScorer
+from insighthub.settings import RetryPolicyConfig, RuntimeDedupConfig, ScoringConfig
 from insighthub.sinks.base import BaseSink
 from insighthub.sources.base import BaseSource
 
@@ -22,15 +24,6 @@ class InsightEngine:
     The core orchestrator of the InsightHub workflow.
     """
 
-    TRACKING_QUERY_PARAMS = {
-        "utm_source",
-        "utm_medium",
-        "utm_campaign",
-        "utm_term",
-        "utm_content",
-        "ref",
-        "source",
-    }
     def __init__(
         self,
         sources: List[BaseSource],
@@ -45,6 +38,11 @@ class InsightEngine:
         max_history_records: int = 3000,
         max_delivery_item_records: int = 2000,
         max_delivery_runs: int = 100,
+        scoring_config: Optional[ScoringConfig] = None,
+        source_retry_policy: Optional[RetryPolicyConfig] = None,
+        llm_retry_policy: Optional[RetryPolicyConfig] = None,
+        sink_retry_policy: Optional[RetryPolicyConfig] = None,
+        dedup_config: Optional[RuntimeDedupConfig] = None,
     ):
         self.sources = sources
         self.llm_provider = llm_provider
@@ -55,6 +53,13 @@ class InsightEngine:
         self.max_history_records = max_history_records
         self.max_delivery_item_records = max_delivery_item_records
         self.max_delivery_runs = max_delivery_runs
+        self.scoring_config = scoring_config or ScoringConfig()
+        self.source_retry_policy = source_retry_policy or RetryPolicyConfig(max_attempts=3, base_delay_seconds=1.0)
+        self.llm_retry_policy = llm_retry_policy or RetryPolicyConfig(max_attempts=3, base_delay_seconds=2.0)
+        self.sink_retry_policy = sink_retry_policy or RetryPolicyConfig(max_attempts=2, base_delay_seconds=1.0)
+        self.dedup_config = dedup_config or RuntimeDedupConfig()
+        self._strip_query_params = set(self.dedup_config.strip_query_params)
+        self.scorer = ContentScorer(config=self.scoring_config, llm_provider=llm_provider)
         self.prompt_renderer = PromptRenderer(
             prompts_dir=prompts_dir,
             structure_name=prompt_structure,
@@ -150,7 +155,12 @@ class InsightEngine:
             logger.info("No new items to process.", extra={"event": "engine.run.no_new_items"})
             return
 
-        curated_markdown = await self.summarize(new_items)
+        items_for_summary = new_items
+        if self.scoring_config.enabled:
+            items_for_summary = await self.score_items(new_items)
+
+        curated_markdown = await self.summarize(items_for_summary)
+        # Keep history for all fetched items to avoid repeatedly scoring low-priority items.
         await self.distribute(curated_markdown, new_items)
 
     async def _fetch_from_source(self, source: BaseSource) -> List[NewsItem]:
@@ -168,8 +178,10 @@ class InsightEngine:
             op,
             logger=logger,
             operation_name=f"source.fetch:{source_name}",
-            max_attempts=3,
-            base_delay_seconds=1.0,
+            max_attempts=self.source_retry_policy.max_attempts,
+            base_delay_seconds=self.source_retry_policy.base_delay_seconds,
+            backoff_multiplier=self.source_retry_policy.backoff_multiplier,
+            max_delay_seconds=self.source_retry_policy.max_delay_seconds,
         )
 
     async def fetch(self, ignore_history: bool = False) -> List[NewsItem]:
@@ -231,6 +243,10 @@ class InsightEngine:
             combined_input += f"--- Item {i} ---\n"
             combined_input += f"Title: {item.title}\n"
             combined_input += f"URL: {item.url}\n"
+            if item.ai_score is not None:
+                combined_input += f"AI Score: {item.ai_score} ({item.score_tier or 'Unrated'})\n"
+                if item.score_reason:
+                    combined_input += f"Score Reason: {item.score_reason}\n"
             combined_input += f"Content: {item.content}\n\n"
 
         logger.info(
@@ -251,8 +267,10 @@ class InsightEngine:
                 op,
                 logger=logger,
                 operation_name="llm.summarize",
-                max_attempts=3,
-                base_delay_seconds=2.0,
+                max_attempts=self.llm_retry_policy.max_attempts,
+                base_delay_seconds=self.llm_retry_policy.base_delay_seconds,
+                backoff_multiplier=self.llm_retry_policy.backoff_multiplier,
+                max_delay_seconds=self.llm_retry_policy.max_delay_seconds,
             )
             logger.info("LLM summarization succeeded.", extra={"event": "engine.summarize.succeeded"})
             return curated_markdown
@@ -262,6 +280,23 @@ class InsightEngine:
             for item in items:
                 curated_markdown += f"- [{item.title}]({item.url}): {self._fallback_summary(item.content or '')}\n"
             return curated_markdown
+
+    async def score_items(self, items: List[NewsItem]) -> List[NewsItem]:
+        if not items:
+            return items
+        logger.info("Starting content scoring.", extra={"event": "engine.score.start", "items_count": len(items)})
+        scored_items = await self.scorer.score_items(items)
+        selected = self.scorer.select_items_for_summary(scored_items)
+        logger.info(
+            "Content scoring completed.",
+            extra={
+                "event": "engine.score.completed",
+                "items_count": len(scored_items),
+                "selected_count": len(selected),
+                "threshold": self.scoring_config.min_score_for_summary,
+            },
+        )
+        return selected or scored_items[:1]
 
     async def _deliver_to_sink(self, sink: BaseSink, items: List[NewsItem], curated_content: str) -> Dict[str, Any]:
         sink_key = sink.sink_id()
@@ -278,8 +313,10 @@ class InsightEngine:
             op,
             logger=logger,
             operation_name=f"sink.render:{sink_key}",
-            max_attempts=2,
-            base_delay_seconds=1.0,
+            max_attempts=self.sink_retry_policy.max_attempts,
+            base_delay_seconds=self.sink_retry_policy.base_delay_seconds,
+            backoff_multiplier=self.sink_retry_policy.backoff_multiplier,
+            max_delay_seconds=self.sink_retry_policy.max_delay_seconds,
         )
         return result or {"status": "success"}
 
@@ -432,6 +469,8 @@ class InsightEngine:
         return candidates
 
     def _normalize_possible_url(self, value: Optional[str]) -> Optional[str]:
+        if not self.dedup_config.normalize_url:
+            return None
         if not value or not isinstance(value, str):
             return None
         if not (value.startswith("http://") or value.startswith("https://")):
@@ -441,7 +480,7 @@ class InsightEngine:
     def _normalize_url(self, url: str) -> str:
         parts = urlsplit(url)
         cleaned_query = urlencode(
-            [(k, v) for k, v in parse_qsl(parts.query, keep_blank_values=True) if k not in self.TRACKING_QUERY_PARAMS],
+            [(k, v) for k, v in parse_qsl(parts.query, keep_blank_values=True) if k not in self._strip_query_params],
             doseq=True,
         )
         cleaned_path = parts.path.rstrip("/") if parts.path != "/" else parts.path

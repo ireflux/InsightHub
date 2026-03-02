@@ -1,51 +1,131 @@
 # InsightHub Configuration
 
-# LLM Provider Configuration
-# Supported providers: "openrouter", "zhipuai"
-llm_provider:
-  name: "zhipuai"
-  # API key must be provided via environment variables:
-  # - OPENROUTER_API_KEY (for openrouter)
-  # - ZHIPUAI_API_KEY (for zhipuai)
-  # Specify the model to use for the selected provider
-  model: "glm-4.7-flash" # e.g., "glm-4.7-flash" for zhipuai
+# LLM configuration
+# API keys must be provided via environment variables:
+# - ZHIPUAI_API_KEY
+# - OPENROUTER_API_KEY
+llm:
+  primary:
+    provider: "zhipuai"
+    model: "glm-4.7-flash"
+  fallbacks: []
+  # fallbacks:
+  #   - provider: "openrouter"
+  #     model: "xiaomi/mimo-v2-flash:free"
 
-# Sources Configuration
-# Enable or disable sources by adding or removing them from this list.
-max_items: 8
+# Sources configuration
+sources:
+  defaults:
+    max_items: 8
+    content_fetch_concurrency: 4
+    content_fetch_timeout: 10.0
+  items:
+    - id: "github_main"
+      type: "github_trending"
+      enabled: true
+      max_items: 5
+      params: {}
+    - id: "hn_main"
+      type: "hacker_news"
+      enabled: true
+      max_items: 8
+      params: {}
+    - id: "v2ex_main"
+      type: "v2ex_hot"
+      enabled: true
+      max_items: 8
+      params: {}
+    - id: "slashdot_main"
+      type: "slashdot"
+      enabled: true
+      max_items: 8
+      params: {}
+    # - id: "zhihu_ai"
+    #   type: "zhihu_hot"
+    #   enabled: false
+    #   params:
+    #     keyword_filter: "编程|AI|Python|技术|机器学习|深度学习"
 
 prompt:
   structure: "professional_briefing_v1"
   style: "professional_neutral_v1"
   variables:
-    min_items: 12
+    min_items: 8
 
 state:
   max_history_records: 3000
   max_delivery_item_records: 2000
   max_delivery_runs: 100
 
-sources:
-  - name: "github_trending"
-  - name: "hacker_news"
-  - name: "v2ex_hot"
-  - name: "slashdot"
-  # - name: "zhihu_hot"
-  #   # Optional: Add a regex filter for zhihu titles
-  #   keyword_filter: "编程|AI|Python|技术|开发|机器学习|深度学习"
+runtime:
+  paths:
+    prompts_dir: "prompts"
+    history_file: "history.json"
+    delivery_state_file: "delivery_state.json"
+    logs_dir: "logs"
+  retry:
+    source_fetch:
+      max_attempts: 3
+      base_delay_seconds: 1.0
+      backoff_multiplier: 2.0
+      max_delay_seconds: 30.0
+    llm_summarize:
+      max_attempts: 3
+      base_delay_seconds: 2.0
+      backoff_multiplier: 2.0
+      max_delay_seconds: 30.0
+    sink_render:
+      max_attempts: 2
+      base_delay_seconds: 1.0
+      backoff_multiplier: 2.0
+      max_delay_seconds: 30.0
+  timeouts:
+    source_discover_timeout_seconds: 20.0
+  dedup:
+    normalize_url: true
+    strip_query_params:
+      - "utm_source"
+      - "utm_medium"
+      - "utm_campaign"
+      - "utm_term"
+      - "utm_content"
+      - "ref"
+      - "source"
+  observability:
+    level: "INFO"
+    format: "json"
+    console_enabled: true
+    file_enabled: true
+    file_name_prefix: "insighthub"
 
-# Sinks Configuration
-# Enable or disable sinks by adding or removing them from this list.
+scoring:
+  enabled: true
+  use_llm: true
+  llm_blend_alpha: 0.7
+  min_score_for_summary: 5.0
+  keep_top_n: 8
+  max_items_for_llm_scoring: 20
+  weights:
+    technical_depth_and_novelty: 0.30
+    potential_impact: 0.25
+    writing_quality: 0.15
+    community_discussion: 0.15
+    engagement_signals: 0.15
+
+# Sinks configuration
 sinks:
-  - name: "markdown_file"
-    output_dir: "output"
-  # Example of using Feishu Docs API (recommended)
-  - name: "feishu_doc"
-    # Credentials must be provided via environment variables:
-    # FEISHU_APP_ID / FEISHU_APP_SECRET
-    # optional: default title for created documents
-    default_title: "InsightHub {date}"
-    # optional: Wiki Space ID. If provided, creates a node in this Wiki Space instead of a standalone Doc.
-    space_id: "7599692883666422737"
-    # optional: existing doc id. If set, the workflow updates this doc instead of creating a new one.
-    # doc_id: ""
+  defaults:
+    enabled: true
+  items:
+    - id: "markdown_local"
+      type: "markdown_file"
+      enabled: true
+      params:
+        output_dir: "output"
+    - id: "feishu_daily"
+      type: "feishu_doc"
+      enabled: false
+      params:
+        default_title: "InsightHub {date}"
+        space_id: "7599692883666422737"
+        # doc_id: ""

@@ -27,11 +27,13 @@ class BaseSource(ABC):
         self,
         name: str,
         max_items: int = 8,
+        discover_timeout: float = 20.0,
         content_fetch_concurrency: int = 4,
         content_fetch_timeout: float = 10.0,
     ):
         self.name = name
         self.max_items = max_items
+        self.discover_timeout = max(discover_timeout, 1.0)
         self.content_fetch_concurrency = max(content_fetch_concurrency, 1)
         self.content_fetch_timeout = max(content_fetch_timeout, 1.0)
 

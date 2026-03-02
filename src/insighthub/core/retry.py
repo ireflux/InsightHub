@@ -14,6 +14,8 @@ async def with_retry(
     operation_name: str,
     max_attempts: int = 3,
     base_delay_seconds: float = 1.0,
+    backoff_multiplier: float = 2.0,
+    max_delay_seconds: float = 30.0,
 ) -> T:
     last_error: Exception | None = None
     for attempt in range(1, max_attempts + 1):
@@ -24,13 +26,14 @@ async def with_retry(
             retryable = isinstance(exc, InsightHubError) and exc.retryable
             if not retryable or attempt >= max_attempts:
                 raise
-            delay = base_delay_seconds * (2 ** (attempt - 1))
+            delay = min(base_delay_seconds * (backoff_multiplier ** (attempt - 1)), max_delay_seconds)
             logger.warning(
                 "Retrying operation after failure.",
                 extra={
                     "operation": operation_name,
                     "attempt": attempt,
                     "next_delay_seconds": delay,
+                    "backoff_multiplier": backoff_multiplier,
                     "error": str(exc),
                 },
             )

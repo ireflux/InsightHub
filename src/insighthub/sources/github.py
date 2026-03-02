@@ -14,13 +14,25 @@ class GitHubTrendingSource(BaseSource):
     
     TRENDING_URL = "https://github.com/trending"
     
-    def __init__(self, max_items: int = 8):
-        super().__init__(name="GitHub Trending", max_items=max_items)
+    def __init__(
+        self,
+        max_items: int = 8,
+        discover_timeout: float = 20.0,
+        content_fetch_concurrency: int = 4,
+        content_fetch_timeout: float = 10.0,
+    ):
+        super().__init__(
+            name="GitHub Trending",
+            max_items=max_items,
+            discover_timeout=discover_timeout,
+            content_fetch_concurrency=content_fetch_concurrency,
+            content_fetch_timeout=content_fetch_timeout,
+        )
 
     async def discover_raw(self) -> str:
         # Set a sensible timeout and User-Agent to reduce chance of being blocked
         headers = {"User-Agent": "InsightHub/1.0 (+https://github.com/your/repo)"}
-        async with httpx.AsyncClient(timeout=20.0, headers=headers) as client:
+        async with httpx.AsyncClient(timeout=self.discover_timeout, headers=headers) as client:
             try:
                 response = await client.get(self.TRENDING_URL, follow_redirects=True)
                 response.raise_for_status()
