@@ -1,8 +1,8 @@
 import os
 from typing import List, Optional
 import httpx
-from tenacity import retry, stop_after_attempt, wait_exponential
 from insighthub.llm_providers.base import BaseLLMProvider
+from insighthub.errors import LLMProcessingError
 
 
 class OpenRouterProvider(BaseLLMProvider):
@@ -82,18 +82,36 @@ class OpenRouterProvider(BaseLLMProvider):
 
         raise AttributeError("Unable to extract text from OpenRouter response")
 
-    @retry(wait=wait_exponential(multiplier=1, min=4, max=10), stop=stop_after_attempt(3))
     async def summarize(self, content: str, prompt_template: str) -> str:
+        """
+        Summarizes content using the OpenRouter API.
+        
+        Note: Retry logic is handled by the engine layer (with_retry).
+        Do not add retry decorators here to avoid nested retry loops.
+        """
         prompt = prompt_template.format(content=content)
-        raw = await self._call_chat([{"role": "user", "content": prompt}])
-        return self._extract_text_from_response(raw)
+        try:
+            raw = await self._call_chat([{"role": "user", "content": prompt}])
+            return self._extract_text_from_response(raw)
+        except Exception as e:
+            # Wrap in LLMProcessingError which is marked as retryable
+            raise LLMProcessingError(f"OpenRouter summarization failed: {e}") from e
 
-    @retry(wait=wait_exponential(multiplier=1, min=4, max=10), stop=stop_after_attempt(3))
     async def classify(self, content: str, categories: List[str], prompt_template: str) -> str:
+        """
+        Classifies content using the OpenRouter API.
+        
+        Note: Retry logic is handled by the engine layer (with_retry).
+        Do not add retry decorators here to avoid nested retry loops.
+        """
         prompt = prompt_template.format(content=content, categories=", ".join(categories))
-        raw = await self._call_chat([{"role": "user", "content": prompt}])
-        result = self._extract_text_from_response(raw)
-        for category in categories:
-            if category.lower() in result.lower():
-                return category
-        return "Uncategorized"
+        try:
+            raw = await self._call_chat([{"role": "user", "content": prompt}])
+            result = self._extract_text_from_response(raw)
+            for category in categories:
+                if category.lower() in result.lower():
+                    return category
+            return "Uncategorized"
+        except Exception as e:
+            # Wrap in LLMProcessingError which is marked as retryable
+            raise LLMProcessingError(f"OpenRouter classification failed: {e}") from e

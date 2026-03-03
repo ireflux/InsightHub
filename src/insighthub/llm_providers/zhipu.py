@@ -3,8 +3,8 @@ import asyncio
 import logging
 from typing import List
 from zhipuai import ZhipuAI
-from tenacity import retry, stop_after_attempt, wait_exponential
 from insighthub.llm_providers.base import BaseLLMProvider
+from insighthub.errors import LLMProcessingError
 
 logger = logging.getLogger(__name__)
 
@@ -34,22 +34,27 @@ class ZhipuAIProvider(BaseLLMProvider):
         )
         return response.choices[0].message.content.strip()
 
-    @retry(wait=wait_exponential(multiplier=1, min=4, max=10), stop=stop_after_attempt(3))
     async def summarize(self, content: str, prompt_template: str) -> str:
         """
         Summarizes content using the specified ZhipuAI model.
+        
+        Note: Retry logic is handled by the engine layer (with_retry).
+        Do not add retry decorators here to avoid nested retry loops.
         """
         prompt = prompt_template.format(content=content)
         try:
             return await asyncio.to_thread(self._sync_chat, prompt)
         except Exception as e:
             logger.error(f"Error calling ZhipuAI API: {e}", exc_info=True)
-            raise
+            # Wrap in LLMProcessingError which is marked as retryable
+            raise LLMProcessingError(f"ZhipuAI summarization failed: {e}") from e
 
-    @retry(wait=wait_exponential(multiplier=1, min=4, max=10), stop=stop_after_attempt(3))
     async def classify(self, content: str, categories: List[str], prompt_template: str) -> str:
         """
         Classifies content into categories using the specified ZhipuAI model.
+        
+        Note: Retry logic is handled by the engine layer (with_retry).
+        Do not add retry decorators here to avoid nested retry loops.
         """
         prompt = prompt_template.format(content=content, categories=", ".join(categories))
         try:
@@ -60,4 +65,5 @@ class ZhipuAIProvider(BaseLLMProvider):
             return "Uncategorized"
         except Exception as e:
             logger.error(f"Error calling ZhipuAI API: {e}", exc_info=True)
-            raise
+            # Wrap in LLMProcessingError which is marked as retryable
+            raise LLMProcessingError(f"ZhipuAI classification failed: {e}") from e
