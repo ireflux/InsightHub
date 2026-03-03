@@ -42,8 +42,9 @@ sources:
     #     keyword_filter: "编程|AI|Python|技术|机器学习|深度学习"
 
 prompt:
-  structure: "professional_briefing_v3"
-  style: "professional_neutral_v3"
+  structure: "professional_briefing_v4"
+  style: "professional_neutral_v4"
+  scoring: "technical_content_scoring_v2_clustering"
   variables: {}
 
 publishing:

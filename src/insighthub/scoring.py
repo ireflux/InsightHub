@@ -2,7 +2,8 @@ import json
 import logging
 import os
 import re
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, List, Optional, Set, Tuple
+from collections import defaultdict
 
 from insighthub.llm_providers.base import BaseLLMProvider
 from insighthub.models import NewsItem
@@ -27,12 +28,15 @@ def tier_from_score(score: float) -> str:
 
 
 class ContentScorer:
-    DEFAULT_SCORING_PROMPT_PATH = os.path.join("prompts", "scoring", "technical_content_scoring_v1.md")
+    DEFAULT_SCORING_PROMPT_PATH = os.path.join("prompts", "scoring", "technical_content_scoring_v2_clustering.md")
 
     def __init__(self, config: ScoringConfig, llm_provider: Optional[BaseLLMProvider] = None):
         self.config = config
         self.llm_provider = llm_provider
-        self.scoring_prompt_template = self._load_scoring_prompt_template()
+        # 从 config 读取评分提示词名称，或使用默认值
+        scoring_prompt_name = getattr(config, 'scoring_prompt_name', 'technical_content_scoring_v2_clustering')
+        prompt_path = os.path.join("prompts", "scoring", f"{scoring_prompt_name}.md")
+        self.scoring_prompt_template = self._load_scoring_prompt_template(prompt_path)
 
     async def score_items(self, items: List[NewsItem]) -> List[NewsItem]:
         if not items:
@@ -88,6 +92,202 @@ class ContentScorer:
         if self.config.keep_top_n is not None:
             filtered = filtered[: self.config.keep_top_n]
         return filtered
+
+    async def score_items_with_clustering(self, items: List[NewsItem]) -> Tuple[List[NewsItem], Dict[str, object]]:
+        """
+        Enhanced scoring with topic clustering analysis for v4 briefing.
+        Returns both scored items and clustering metadata.
+        """
+        # Step 1: Score items using standard scoring
+        scored_items = await self.score_items(items)
+        
+        # Step 2: Extract topics and analyze relationships
+        topic_keywords = self._extract_topic_keywords(scored_items)
+        
+        # Step 3: Calculate topical relevance for each item
+        for idx, item in enumerate(scored_items):
+            related_ids = self._find_related_items(item, scored_items, topic_keywords)
+            topical_relevance = self._calculate_topical_relevance(item, related_ids, len(scored_items))
+            cross_domain_potential = self._calculate_cross_domain_potential(item, topic_keywords)
+            narrative_conn = self._calculate_narrative_connectivity(item, scored_items, topic_keywords)
+            is_hub = topical_relevance >= 8.0 and len(related_ids) >= 2
+            
+            item.topical_relevance_to_batch = round(topical_relevance, 2)
+            item.cross_domain_insight_potential = round(cross_domain_potential, 2)
+            item.narrative_connectivity = round(narrative_conn, 2)
+            item.is_cluster_hub = is_hub
+            item.related_item_ids = related_ids
+        
+        # Step 4: Identify topic clusters
+        clusters = self._identify_topic_clusters(scored_items, topic_keywords)
+        
+        # Step 5: Assign suggested_topic_cluster for each item
+        item_to_cluster = {}
+        for cluster_name, cluster_items in clusters.items():
+            for item_id in cluster_items:
+                item_to_cluster[item_id] = cluster_name
+        
+        for item in scored_items:
+            item.suggested_topic_cluster = item_to_cluster.get(item.id, "未分类")
+        
+        clustering_metadata = {
+            "total_items": len(scored_items),
+            "identified_topic_keywords": topic_keywords,
+            "clusters": clusters,
+            "cluster_hubs": [item.id for item in scored_items if item.is_cluster_hub],
+        }
+        
+        return scored_items, clustering_metadata
+
+    def _extract_topic_keywords(self, items: List[NewsItem]) -> Dict[str, int]:
+        """
+        Extract key topic indicators from all items.
+        Returns a dict of keyword -> frequency map.
+        """
+        keywords: Dict[str, int] = defaultdict()
+        
+        common_keywords = {
+            # Hardware/Architecture
+            "arm": "hardware", "x86": "hardware", "cpu": "hardware", "gpu": "hardware", 
+            "芯片": "hardware", "处理器": "hardware", "架构": "hardware",
+            # AI/ML
+            "ai": "ai_ml", "llm": "ai_ml", "ml": "ai_ml", "neural": "ai_ml",
+            "model": "ai_ml", "inference": "ai_ml", "agent": "ai_ml",
+            "大模型": "ai_ml", "推理": "ai_ml", "训练": "ai_ml",
+            # Security/Privacy
+            "security": "security", "privacy": "security", "encryption": "security",
+            "安全": "security", "隐私": "security", "加密": "security",
+            # Performance/Optimization
+            "performance": "performance", "latency": "performance", "optimization": "performance",
+            "性能": "performance", "延迟": "performance", "优化": "performance",
+            # Data/Systems
+            "database": "systems", "distributed": "systems", "system": "systems",
+            "数据库": "systems", "分布式": "systems", "系统": "systems",
+            # Edge/Mobile
+            "edge": "edge_mobile", "mobile": "edge_mobile", "device": "edge_mobile",
+            "边缘": "edge_mobile", "移动": "edge_mobile", "设备": "edge_mobile",
+        }
+        
+        topic_groups: Dict[str, Set[str]] = defaultdict(set)
+        
+        for item in items:
+            text = f"{item.title or ''} {item.content or ''}".lower()
+            for keyword, group in common_keywords.items():
+                if keyword in text:
+                    topic_groups[group].add(item.id)
+        
+        return topic_groups
+
+    def _find_related_items(self, item: NewsItem, all_items: List[NewsItem], 
+                           topic_keywords: Dict[str, Set[str]]) -> List[str]:
+        """
+        Find IDs of items related to the given item.
+        """
+        related = []
+        item_text = f"{item.title or ''} {item.content or ''}".lower()
+        
+        # Keyword-based relevance
+        for other in all_items:
+            if other.id == item.id:
+                continue
+            other_text = f"{other.title or ''} {other.content or ''}".lower()
+            
+            # Simple shared keyword detection
+            shared_keywords = 0
+            for group, item_ids in topic_keywords.items():
+                if item.id in item_ids and other.id in item_ids:
+                    shared_keywords += 1
+            
+            if shared_keywords >= 1:
+                related.append(other.id)
+        
+        return related[:5]  # Limit to 5 most related items
+
+    @staticmethod
+    def _calculate_topical_relevance(item: NewsItem, related_ids: List[str], total_items: int) -> float:
+        """
+        Calculate topical relevance score based on how many related items exist.
+        """
+        if total_items <= 1:
+            return 5.0
+        
+        relation_ratio = len(related_ids) / (total_items - 1)
+        
+        if len(related_ids) >= 3:
+            score = 8.0 + relation_ratio * 2.0
+        elif len(related_ids) == 2:
+            score = 6.5 + relation_ratio * 1.5
+        elif len(related_ids) == 1:
+            score = 4.0 + relation_ratio * 1.0
+        else:
+            score = 2.0
+        
+        return min(10.0, score)
+
+    @staticmethod
+    def _calculate_cross_domain_potential(item: NewsItem, topic_keywords: Dict[str, Set[str]]) -> float:
+        """
+        Estimate cross-domain insight potential based on topic diversity coverage.
+        """
+        item_groups = []
+        for group, item_ids in topic_keywords.items():
+            if item.id in item_ids:
+                item_groups.append(group)
+        
+        # More diverse topics = higher cross-domain potential
+        diversity_score = min(10.0, 2.0 + len(item_groups) * 2.5)
+        return diversity_score
+
+    @staticmethod
+    def _calculate_narrative_connectivity(item: NewsItem, all_items: List[NewsItem],
+                                        topic_keywords: Dict[str, Set[str]]) -> float:
+        """
+        Estimate how easily this item can be integrated into a narrative.
+        """
+        # Items with good evidence quality and clarity are more narrative-friendly
+        base_score = 5.0
+        
+        if item.content and len(item.content) > 300:
+            base_score += 2.0
+        
+        if item.score_breakdown.get("writing_quality", 0) >= 6.0:
+            base_score += 2.0
+        
+        return min(10.0, base_score)
+
+    def _identify_topic_clusters(self, items: List[NewsItem], 
+                                topic_keywords: Dict[str, Set[str]]) -> Dict[str, List[str]]:
+        """
+        Identify main topic clusters from items.
+        """
+        clusters = {}
+        
+        for group_name, item_ids in topic_keywords.items():
+            if len(item_ids) >= 2:  # Only clusters with 2+ items
+                sorted_by_score = sorted(
+                    [i for i in items if i.id in item_ids],
+                    key=lambda x: x.ai_score or 0.0,
+                    reverse=True
+                )
+                cluster_name = self._generate_cluster_name(group_name, list(item_ids))
+                clusters[cluster_name] = list(item_ids)
+        
+        return clusters
+
+    @staticmethod
+    def _generate_cluster_name(group: str, item_ids: List[str]) -> str:
+        """
+        Generate a human-readable cluster name from the group identifier.
+        """
+        group_names = {
+            "hardware": "硬件架构演进",
+            "ai_ml": "AI/ML 技术进展",
+            "security": "安全与隐私",
+            "performance": "性能优化",
+            "systems": "系统与基础设施",
+            "edge_mobile": "边缘与移动计算",
+        }
+        return group_names.get(group, f"主题-{group}")
 
     def _rule_score(self, item: NewsItem) -> Tuple[Dict[str, float], float]:
         text = f"{item.title or ''}\n{item.content or ''}".lower()
@@ -249,14 +449,16 @@ class ContentScorer:
         return json.dumps(payload, ensure_ascii=False)
 
     @classmethod
-    def _load_scoring_prompt_template(cls) -> str:
+    def _load_scoring_prompt_template(cls, path: Optional[str] = None) -> str:
+        if path is None:
+            path = cls.DEFAULT_SCORING_PROMPT_PATH
         try:
-            with open(cls.DEFAULT_SCORING_PROMPT_PATH, "r", encoding="utf-8") as f:
+            with open(path, "r", encoding="utf-8") as f:
                 return f.read().strip()
         except Exception as e:
             logger.warning(
                 "Failed to load scoring prompt template; using fallback.",
-                extra={"event": "scoring.prompt.fallback", "path": cls.DEFAULT_SCORING_PROMPT_PATH, "error": str(e)},
+                extra={"event": "scoring.prompt.fallback", "path": path, "error": str(e)},
             )
             return (
                 "你是技术内容评分器。请按五个维度给每个条目打分，并只输出 JSON："

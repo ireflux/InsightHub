@@ -102,6 +102,7 @@ class ScoringConfig(BaseModel):
     keep_top_n: Optional[int] = None
     max_items_for_llm_scoring: int = 20
     weights: ScoringWeights = Field(default_factory=ScoringWeights)
+    scoring_prompt_name: str = "technical_content_scoring_v2_clustering"  # ⭐ 新增
 
 
 class RetryPolicyConfig(BaseModel):
