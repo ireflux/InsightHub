@@ -11,7 +11,7 @@ from insighthub.prompting import PromptRenderer
 
 
 class TestPromptRenderer(unittest.TestCase):
-    def test_render_professional_prompt_contains_sections(self):
+    def test_render_professional_prompt_contains_paper_like_sections(self):
         renderer = PromptRenderer(
             prompts_dir="prompts",
             structure_name="professional_briefing_v1",
@@ -21,12 +21,15 @@ class TestPromptRenderer(unittest.TestCase):
 
         template = renderer.render_summarize_template()
 
-        self.assertIn("## 本期导读", template)
-        self.assertIn("## 详细解读", template)
-        self.assertIn("仅使用中文输出", template)
-        self.assertIn("至少输出 12 条", template)
+        self.assertIn("## 摘要（Abstract）", template)
+        self.assertIn("## 方法与样本（Methodology）", template)
+        self.assertIn("## 主要发现（Key Findings）", template)
+        self.assertIn("## 深度分析（Analysis）", template)
+        self.assertIn("至少输出 12 个分析小节", template)
+        self.assertIn("不编造来源", template)
         self.assertIn("{content}", template)
 
 
 if __name__ == "__main__":
     unittest.main()
+
