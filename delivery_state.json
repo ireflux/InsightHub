@@ -1,0 +1,378 @@
+{
+  "updated_at": "2026-03-03T14:37:58.336595+00:00",
+  "runs": [
+    {
+      "timestamp": "2026-03-03T14:37:58.335999+00:00",
+      "items_count": 29,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-03-03-d0432859eea4.md",
+            "slug": "2026-03-03-d0432859eea4",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        },
+        "FeishuDocSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "document_id": "JoKzdFi1Ko1ybOxsawFcPJj4nag"
+          }
+        }
+      }
+    }
+  ],
+  "items": {
+    "https://github.com/ruvnet/RuView": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336296+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336490+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/K-Dense-AI/claude-scientific-skills": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336302+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336495+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/moeru-ai/airi": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336307+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336499+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/CodebuffAI/codebuff": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336311+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336504+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/agentscope-ai/agentscope": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336315+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336507+00:00",
+        "error": null
+      }
+    },
+    "https://www.apple.com/newsroom/2026/03/apple-introduces-macbook-pro-with-all-new-m5-pro-and-m5-max": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336319+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336511+00:00",
+        "error": null
+      }
+    },
+    "https://www.bbc.com/news/articles/c178zzw780xo": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336327+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336514+00:00",
+        "error": null
+      }
+    },
+    "https://www.apple.com/newsroom/2026/03/apple-unveils-new-studio-display-and-all-new-studio-display-xdr": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336331+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336517+00:00",
+        "error": null
+      }
+    },
+    "https://editor.p5js.org/isohedral/full/vJa5RiZWs": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336335+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336520+00:00",
+        "error": null
+      }
+    },
+    "https://www.svd.se/a/K8nrV4/metas-ai-smart-glasses-and-data-privacy-concerns-workers-say-we-see-everything": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336339+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336523+00:00",
+        "error": null
+      }
+    },
+    "https://twitter.com/Gavriel_Cohen/status/2028821432759717930": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336343+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336527+00:00",
+        "error": null
+      }
+    },
+    "https://chipsandcheese.com/p/arms-cortex-x925-reaching-desktop": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336346+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336530+00:00",
+        "error": null
+      }
+    },
+    "https://www.cbc.ca/news/canada/british-columbia/b-c-adopting-year-round-daylight-time-9.7111657": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336349+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336533+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1195383": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336352+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336536+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1195346": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336355+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336540+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1195386": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336358+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336543+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1195456": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336362+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336546+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1195350": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336365+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336549+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1195366": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336368+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336552+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1195332": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336371+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336556+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1195367": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336374+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336559+00:00",
+        "error": null
+      }
+    },
+    "https://tech.slashdot.org/story/26/03/03/0512224/hacked-tehran-traffic-cameras-fed-israeli-intelligence-before-strike-on-khamenei": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336378+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336563+00:00",
+        "error": null
+      }
+    },
+    "https://tech.slashdot.org/story/26/03/03/0423206/amazon-cloud-units-data-centers-in-uae-bahrain-damaged-in-drone-strikes": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336381+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336566+00:00",
+        "error": null
+      }
+    },
+    "https://hardware.slashdot.org/story/26/03/03/0439237/the-19th-century-silent-film-that-first-captured-a-robot-attack": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336385+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336570+00:00",
+        "error": null
+      }
+    },
+    "https://science.slashdot.org/story/26/03/03/048214/superagers-secret-ingredient-may-be-the-growth-of-new-brain-cells": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336388+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336573+00:00",
+        "error": null
+      }
+    },
+    "https://news.slashdot.org/story/26/03/02/2210232/iowa-county-rolls-out-extensive-zoning-rules-for-data-centers": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336391+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336576+00:00",
+        "error": null
+      }
+    },
+    "https://yro.slashdot.org/story/26/03/02/2151248/british-columbia-to-end-time-changes-adopt-year-round-daylight-time": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336394+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336579+00:00",
+        "error": null
+      }
+    },
+    "https://apple.slashdot.org/story/26/03/02/2140230/apple-might-use-google-servers-to-store-data-for-its-upgraded-ai-siri": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336397+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336583+00:00",
+        "error": null
+      }
+    },
+    "https://entertainment.slashdot.org/story/26/03/02/2125201/hbo-max-and-paramount-to-merge-into-one-streaming-service": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336400+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T14:37:58.336586+00:00",
+        "error": null
+      }
+    }
+  }
+}
