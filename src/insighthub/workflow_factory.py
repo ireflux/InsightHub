@@ -7,6 +7,7 @@ from zoneinfo import ZoneInfo
 from insighthub.llm_providers import LLMFactory
 from insighthub.llm_providers.base import BaseLLMProvider
 from insighthub.llm_providers.failover import FailoverLLMProvider
+from insighthub.publishing import TitlePolicy
 from insighthub.settings import AppSettings, LLMEndpointConfig, SinkConfig, SourceConfig
 from insighthub.sinks import BaseSink, FeishuDocSink, MarkdownFileSink
 from insighthub.sources import (
@@ -141,12 +142,24 @@ def build_sinks(
     sinks: List[BaseSink] = []
     tz = ZoneInfo(app_settings.runtime.timezone)
     now = now or datetime.datetime.now(tz)
+    title_policy = TitlePolicy(
+        template=app_settings.publishing.title.template,
+        date_format=app_settings.publishing.title.date_format,
+        timezone_name=app_settings.publishing.title.timezone or app_settings.runtime.timezone,
+        strip_leading_h1=app_settings.publishing.title.strip_leading_h1,
+    )
 
     for sink_config in app_settings.sinks.items:
         enabled = app_settings.sinks.defaults.enabled if sink_config.enabled is None else sink_config.enabled
         if not enabled:
             continue
-        sink = _build_single_sink(sink_config, logger=logger, now=now, timezone_name=app_settings.runtime.timezone)
+        sink = _build_single_sink(
+            sink_config,
+            logger=logger,
+            now=now,
+            timezone_name=app_settings.runtime.timezone,
+            title_policy=title_policy,
+        )
         if sink is not None:
             sinks.append(sink)
     return sinks
@@ -158,27 +171,25 @@ def _build_single_sink(
     logger: logging.Logger,
     now: datetime.datetime,
     timezone_name: str,
+    title_policy: TitlePolicy,
 ) -> BaseSink | None:
     sink_type = sink_config.type
     sink_params = sink_config.params
     if sink_type == "markdown_file":
         output_dir = sink_params.get("output_dir") or "output"
-        return MarkdownFileSink(output_dir=output_dir, timezone_name=timezone_name)
+        return MarkdownFileSink(output_dir=output_dir, timezone_name=timezone_name, title_policy=title_policy)
 
     if sink_type == "feishu_doc":
         app_id = sink_params.get("app_id")
         app_secret = sink_params.get("app_secret")
         space_id = sink_params.get("space_id")
         doc_id = sink_params.get("doc_id")
-        default_title = sink_params.get("default_title") or "每日技术趋势观察 {date}"
-        formatted_title = _format_title(default_title, now)
-
         if app_id and app_secret:
             try:
                 return FeishuDocSink(
                     app_id=app_id,
                     app_secret=app_secret,
-                    default_title=formatted_title,
+                    title_policy=title_policy,
                     space_id=space_id,
                     doc_id=doc_id,
                 )
@@ -205,11 +216,3 @@ def _build_single_sink(
         extra={"event": "workflow.unknown_sink", "sink_type": sink_type, "sink_id": sink_config.id},
     )
     return None
-
-
-def _format_title(template: str, now: datetime.datetime) -> str:
-    date_str = now.strftime("%Y-%m-%d")
-    try:
-        return template.format(date=date_str)
-    except Exception:
-        return template.replace("{date}", date_str)

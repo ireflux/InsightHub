@@ -52,6 +52,12 @@ prompt:
   variables:
     min_items: 8
 
+publishing:
+  title:
+    template: "每日技术趋势观察 {date}"
+    date_format: "%Y-%m-%d"
+    strip_leading_h1: true
+
 state:
   max_history_records: 3000
   max_delivery_item_records: 2000
@@ -127,6 +133,5 @@ sinks:
       type: "feishu_doc"
       enabled: true
       params:
-        default_title: "每日技术趋势观察 {date}"
         space_id: "7599692883666422737"
         # doc_id: ""

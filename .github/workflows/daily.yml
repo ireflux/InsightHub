@@ -38,7 +38,7 @@ jobs:
           FEISHU_DOC_ID: ${{ secrets.FEISHU_DOC_ID }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           ZHIPUAI_API_KEY: ${{ secrets.ZHIPUAI_API_KEY }}
-          LLM_MODEL: ${{ vars.LLM_MODEL || 'glm-4.7-flash' }}
+          LLM_MODEL: ${{ vars.LLM_MODEL }}
         run: |
           insighthub run
 

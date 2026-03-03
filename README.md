@@ -1,4 +1,4 @@
-# InsightHub
+﻿# InsightHub
 
 <div align="center">
 
@@ -8,7 +8,7 @@ A powerful async Python workflow for aggregating technical intelligence from mul
 
 </div>
 
-## 📋 Overview
+## 馃搵 Overview
 
 InsightHub is a production-ready, composable workflow engine that:
 
@@ -21,19 +21,19 @@ InsightHub is a production-ready, composable workflow engine that:
 
 Perfect for teams building tech briefings, knowledge bases, or automated content curation systems.
 
-## ✨ Key Features
+## 鉁?Key Features
 
 - **Multi-source aggregation**: Fetch from GitHub Trending, Hacker News, V2EX, Zhihu Hot, and Slashdot
 - **Flexible LLM support**: Primary/fallback providers (Zhipu AI, OpenRouter) with automatic failover
 - **Intelligent content scoring**: Rule-based + optional LLM scoring with customizable weights
 - **Multiple output formats**: Markdown files and Feishu documents with templated rendering
-- **Composable workflows**: Run individual stages (fetch → score → summarize → distribute) or full pipeline
+- **Composable workflows**: Run individual stages (fetch 鈫?score 鈫?summarize 鈫?distribute) or full pipeline
 - **Deduplication & history**: Track processed items and avoid duplicates across runs
 - **Structured observability**: JSON-formatted logs with run context tracking
 - **Extensible architecture**: Plugin-based sources and sinks with consistent interfaces
 - **Async-first design**: Non-blocking concurrent fetching and processing
 
-## 🎯 Quick Start
+## 馃幆 Quick Start
 
 ### Installation
 
@@ -68,7 +68,7 @@ pip install -e .
 ### Run the Full Workflow
 
 ```bash
-# Run complete pipeline: fetch → score → summarize → distribute
+# Run complete pipeline: fetch 鈫?score 鈫?summarize 鈫?distribute
 insighthub run
 ```
 
@@ -88,22 +88,17 @@ insighthub summarize --input output/raw_data.json --output output/summary.md
 insighthub distribute --input output/summary.md --items output/raw_data.json
 ```
 
-## 🏗️ Architecture
+## 馃彈锔?Architecture
 
 ### Data Flow
 
 ```
-Sources → Fetch & Content Extraction → Deduplication
-    ↓
-Score (Rule-based + Optional LLM)
-    ↓
-Filter & Select
-    ↓
-Summarize (LLM with Prompt Template)
-    ↓
-Render & Distribute (Markdown, Feishu)
-    ↓
-Track History & Delivery State
+Sources 鈫?Fetch & Content Extraction 鈫?Deduplication
+    鈫?Score (Rule-based + Optional LLM)
+    鈫?Filter & Select
+    鈫?Summarize (LLM with Prompt Template)
+    鈫?Render & Distribute (Markdown, Feishu)
+    鈫?Track History & Delivery State
 ```
 
 ### Core Components
@@ -118,7 +113,7 @@ Track History & Delivery State
 | **Sinks** | Outputs formatted content to Markdown or Feishu |
 | **RetryPolicy** | Exponential backoff for resilient external calls |
 
-## 📦 Supported Sources
+## 馃摝 Supported Sources
 
 | Source | Type ID | Description |
 |--------|---------|-------------|
@@ -128,14 +123,14 @@ Track History & Delivery State
 | Slashdot | `slashdot` | Latest stories from Slashdot |
 | Zhihu Hot | `zhihu_hot` | Hot content from Zhihu (with keyword filtering) |
 
-## 🔌 Supported Sinks
+## 馃攲 Supported Sinks
 
 | Sink | Type ID | Description |
 |-----|---------|-------------|
 | Markdown File | `markdown_file` | Write to local Markdown files |
 | Feishu Document | `feishu_doc` | Create/update Feishu wiki docs |
 
-## ⚙️ Configuration
+## 鈿欙笍 Configuration
 
 ### Main Config File
 
@@ -165,7 +160,7 @@ sources:
       type: "zhihu_hot"
       enabled: false
       params:
-        keyword_filter: "编程|AI|Python|机器学习"
+        keyword_filter: "缂栫▼|AI|Python|鏈哄櫒瀛︿範"
 
 sinks:
   defaults:
@@ -179,7 +174,13 @@ sinks:
       type: "feishu_doc"
       enabled: false
       params:
-        default_title: "每日技术趋势观察 {date}"
+        space_id: "your_feishu_space_id"
+
+publishing:
+  title:
+    template: "每日技术趋势观察 {date}"
+    date_format: "%Y-%m-%d"
+    strip_leading_h1: true
 
 prompt:
   structure: "professional_briefing_v1"
@@ -281,7 +282,7 @@ sources:
       type: "zhihu_hot"
       enabled: false
       params:
-        keyword_filter: "编程|AI"       # Regex filter for Zhihu
+        keyword_filter: "缂栫▼|AI"       # Regex filter for Zhihu
 ```
 
 #### Sinks (`sinks`)
@@ -301,8 +302,19 @@ sinks:
       type: "feishu_doc"
       enabled: false
       params:
-        default_title: "每日技术趋势观察 {date}"
         space_id: "your_feishu_space_id"
+```
+
+#### Publishing (`publishing`)
+
+Global title policy for markdown, Feishu, and static pages:
+
+```yaml
+publishing:
+  title:
+    template: "每日技术趋势观察 {date}"
+    date_format: "%Y-%m-%d"
+    strip_leading_h1: true
 ```
 
 #### Prompt Configuration (`prompt`)
@@ -398,7 +410,7 @@ runtime:
     file_name_prefix: "insighthub"
 ```
 
-## 🔐 Environment Variables
+## 馃攼 Environment Variables
 
 ### LLM Providers
 
@@ -412,7 +424,7 @@ runtime:
 - `FEISHU_SPACE_ID`: (Optional) Default space ID for documents
 - `FEISHU_DOC_ID`: (Optional) Default document ID for updates
 
-## 📊 Content Scoring
+## 馃搳 Content Scoring
 
 InsightHub uses a multi-dimensional scoring system to prioritize valuable content:
 
@@ -451,14 +463,14 @@ When enabled, InsightHub:
 3. Blends scores using alpha parameter
 4. Uses LLM's reasoning for summary generation
 
-## 🛠️ Advanced Usage
+## 馃洜锔?Advanced Usage
 
 ### Source-Specific Parameters
 
 **Zhihu Hot (`zhihu_hot`)**:
 ```yaml
 params:
-  keyword_filter: "编程|AI|深度学习|Python"  # Regex filter on title
+  keyword_filter: "缂栫▼|AI|娣卞害瀛︿範|Python"  # Regex filter on title
 ```
 
 ### Running Individual Stages
@@ -486,7 +498,7 @@ Create custom templates in `prompts/`:
 
 Template variables are passed via config's `prompt.variables`.
 
-## 🧪 Development
+## 馃И Development
 
 ### Install Dev Dependencies
 
@@ -512,23 +524,23 @@ mypy src/ --ignore-missing-imports
 
 ```
 InsightHub/
-├── src/insighthub/
-│   ├── core/              # Engine and retry logic
-│   ├── llm_providers/     # LLM integrations (Zhipu, OpenRouter)
-│   ├── sources/           # Data source implementations
-│   ├── sinks/             # Output implementations (Markdown, Feishu)
-│   ├── prompting/         # Prompt rendering
-│   ├── cli.py             # CLI entry point
-│   ├── models.py          # Data models (NewsItem)
-│   ├── scoring.py         # Content scoring logic
-│   ├── settings.py        # Configuration models
-│   └── workflow_factory.py # Factory functions
-├── configs/
-│   ├── config.example.yaml
-│   └── config.yaml        # Runtime config (not in git)
-├── prompts/               # Prompt templates
-├── tests/                 # Test suite
-└── README.md
+鈹溾攢鈹€ src/insighthub/
+鈹?  鈹溾攢鈹€ core/              # Engine and retry logic
+鈹?  鈹溾攢鈹€ llm_providers/     # LLM integrations (Zhipu, OpenRouter)
+鈹?  鈹溾攢鈹€ sources/           # Data source implementations
+鈹?  鈹溾攢鈹€ sinks/             # Output implementations (Markdown, Feishu)
+鈹?  鈹溾攢鈹€ prompting/         # Prompt rendering
+鈹?  鈹溾攢鈹€ cli.py             # CLI entry point
+鈹?  鈹溾攢鈹€ models.py          # Data models (NewsItem)
+鈹?  鈹溾攢鈹€ scoring.py         # Content scoring logic
+鈹?  鈹溾攢鈹€ settings.py        # Configuration models
+鈹?  鈹斺攢鈹€ workflow_factory.py # Factory functions
+鈹溾攢鈹€ configs/
+鈹?  鈹溾攢鈹€ config.example.yaml
+鈹?  鈹斺攢鈹€ config.yaml        # Runtime config (not in git)
+鈹溾攢鈹€ prompts/               # Prompt templates
+鈹溾攢鈹€ tests/                 # Test suite
+鈹斺攢鈹€ README.md
 ```
 
 ### Testing
@@ -544,7 +556,7 @@ pytest --cov=src tests/
 pytest tests/test_engine_behavior.py -v
 ```
 
-## 📝 State Files
+## 馃摑 State Files
 
 InsightHub maintains state across runs:
 
@@ -553,7 +565,7 @@ InsightHub maintains state across runs:
 
 These files enable InsightHub to avoid reprocessing and provide delivery tracking.
 
-## 🚀 Deployment
+## 馃殌 Deployment
 
 ### Environment Setup
 
@@ -620,11 +632,11 @@ RUN pip install -e .
 CMD ["insighthub", "run"]
 ```
 
-## 📄 License
+## 馃搫 License
 
 MIT License - See LICENSE file for details
 
-## 🤝 Contributing
+## 馃 Contributing
 
 Contributions welcome! Please:
 
@@ -634,10 +646,11 @@ Contributions welcome! Please:
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📧 Support
+## 馃摟 Support
 
 For issues, questions, or suggestions, please open an issue on the repository.
 
 ---
 
-**Built with ❤️ for knowledge discovery and content curation**
+**Built with 鉂わ笍 for knowledge discovery and content curation**
+

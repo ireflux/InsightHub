@@ -3,11 +3,11 @@ import logging
 from datetime import datetime
 from typing import List, Optional
 from insighthub.errors import SinkDeliveryError
+from insighthub.publishing import TitlePolicy
 from insighthub.sinks.base import BaseSink
 from insighthub.models import NewsItem
 
 logger = logging.getLogger(__name__)
-TITLE_PREFIX = "每日技术趋势观察"
 
 class FeishuDocSink(BaseSink):
     """
@@ -26,7 +26,7 @@ class FeishuDocSink(BaseSink):
         self,
         app_id: str,
         app_secret: str,
-        default_title: Optional[str] = None,
+        title_policy: Optional[TitlePolicy] = None,
         space_id: Optional[str] = None,
         doc_id: Optional[str] = None,
     ):
@@ -34,7 +34,12 @@ class FeishuDocSink(BaseSink):
             raise ValueError("Feishu app_id and app_secret are required for FeishuDocSink")
         self.app_id = app_id
         self.app_secret = app_secret
-        self.default_title = default_title or f"{TITLE_PREFIX} {datetime.now().strftime('%Y-%m-%d')}"
+        self.title_policy = title_policy or TitlePolicy(
+            template="每日技术趋势观察 {date}",
+            date_format="%Y-%m-%d",
+            timezone_name="Asia/Shanghai",
+            strip_leading_h1=True,
+        )
         self.space_id = space_id
         self.doc_id = doc_id
         self.name = "feishu_doc"
@@ -57,7 +62,8 @@ class FeishuDocSink(BaseSink):
         token = await self._get_tenant_access_token()
         headers = {"Authorization": f"Bearer {token}", "Content-Type": "application/json; charset=utf-8"}
 
-        doc_title = self.default_title
+        now = datetime.now()
+        doc_title = self.title_policy.render(now)
 
         async with httpx.AsyncClient() as client:
             try:
@@ -85,7 +91,7 @@ class FeishuDocSink(BaseSink):
                 content = curated_content or "No curated content provided."
                 if self.doc_id:
                     # Append a dated section when updating an existing doc.
-                    section_title = f"{TITLE_PREFIX} {datetime.now().strftime('%Y-%m-%d')}"
+                    section_title = self.title_policy.render(now)
                     full_markdown = f"## {section_title}\n\n{content}"
                 else:
                     # For new docs, use content as-is (doc title is already set in Feishu metadata).

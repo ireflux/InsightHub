@@ -12,6 +12,7 @@ from insighthub.errors import LLMProcessingError, PromptRenderingError, SinkDeli
 from insighthub.llm_providers.base import BaseLLMProvider
 from insighthub.models import NewsItem
 from insighthub.prompting import PromptRenderer
+from insighthub.publishing import TitlePolicy
 from insighthub.scoring import ContentScorer
 from insighthub.settings import RetryPolicyConfig, RuntimeDedupConfig, ScoringConfig
 from insighthub.sinks.base import BaseSink
@@ -45,6 +46,7 @@ class InsightEngine:
         sink_retry_policy: Optional[RetryPolicyConfig] = None,
         dedup_config: Optional[RuntimeDedupConfig] = None,
         timezone_name: str = "Asia/Shanghai",
+        title_policy: Optional[TitlePolicy] = None,
     ):
         self.sources = sources
         self.llm_provider = llm_provider
@@ -61,6 +63,12 @@ class InsightEngine:
         self.sink_retry_policy = sink_retry_policy or RetryPolicyConfig(max_attempts=2, base_delay_seconds=1.0)
         self.dedup_config = dedup_config or RuntimeDedupConfig()
         self.timezone_name = timezone_name
+        self.title_policy = title_policy or TitlePolicy(
+            template="每日技术趋势观察 {date}",
+            date_format="%Y-%m-%d",
+            timezone_name=timezone_name,
+            strip_leading_h1=True,
+        )
         self._strip_query_params = set(self.dedup_config.strip_query_params)
         self.scorer = ContentScorer(config=self.scoring_config, llm_provider=llm_provider)
         self.prompt_renderer = PromptRenderer(
@@ -498,9 +506,9 @@ class InsightEngine:
 
     def _build_no_update_markdown(self) -> str:
         now = datetime.now(ZoneInfo(self.timezone_name))
-        date_str = now.strftime("%Y-%m-%d")
+        title = self.title_policy.render(now)
         return (
-            f"# 每日技术趋势观察 {date_str}\n\n"
+            f"# {title}\n\n"
             "> 今日无更新。\n\n"
             "今天没有发现通过筛选的新内容，明日再见。"
         )

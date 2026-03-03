@@ -7,21 +7,32 @@ import uuid
 from typing import List, Optional
 from zoneinfo import ZoneInfo
 import aiofiles
+from insighthub.publishing import TitlePolicy
 from insighthub.sinks.base import BaseSink
 from insighthub.models import NewsItem
 from insighthub.observability import get_run_id
 
 logger = logging.getLogger(__name__)
-TITLE_PREFIX = "每日技术趋势观察"
 
 class MarkdownFileSink(BaseSink):
     """
     A sink that writes content to a local Markdown file.
     """
     
-    def __init__(self, output_dir: str = "output", timezone_name: str = "Asia/Shanghai"):
+    def __init__(
+        self,
+        output_dir: str = "output",
+        timezone_name: str = "Asia/Shanghai",
+        title_policy: Optional[TitlePolicy] = None,
+    ):
         self.output_dir = output_dir
         self.timezone_name = timezone_name
+        self.title_policy = title_policy or TitlePolicy(
+            template="每日技术趋势观察 {date}",
+            date_format="%Y-%m-%d",
+            timezone_name=timezone_name,
+            strip_leading_h1=True,
+        )
         self.posts_dir = os.path.join(self.output_dir, "posts")
         self.manifest_dir = os.path.join(self.output_dir, "manifest")
         self.manifest_path = os.path.join(self.manifest_dir, "index.json")
@@ -49,7 +60,7 @@ class MarkdownFileSink(BaseSink):
             content = curated_content
         else:
             content = self._format_as_feishu_markdown(items, now)
-        content = self._normalize_content(content)
+        content = self.title_policy.normalize_markdown(content)
 
         async with aiofiles.open(filepath, 'w', encoding='utf-8') as f:
             await f.write(content)
@@ -116,7 +127,7 @@ class MarkdownFileSink(BaseSink):
             "id": slug,
             "run_id": run_id,
             "date": now.strftime("%Y-%m-%d"),
-            "title": self._standard_title(now),
+            "title": self.title_policy.render(now, run_id=run_id),
             "slug": slug,
             "markdown_path": markdown_rel_path,
             "summary": self._extract_summary(content),
@@ -153,32 +164,12 @@ class MarkdownFileSink(BaseSink):
             logger.warning("MarkdownFileSink: Failed to load manifest, rebuilding from scratch.")
         return {"site_timezone": self.timezone_name, "generated_at": None, "posts": []}
 
-    def _standard_title(self, now: datetime.datetime) -> str:
-        return f"{TITLE_PREFIX} {now.strftime('%Y-%m-%d')}"
-
-    def _normalize_content(self, content: str) -> str:
-        """
-        Remove leading H1 from curated markdown to avoid duplicated title:
-        page title is rendered from manifest metadata.
-        """
-        if not content:
-            return content
-        lines = content.splitlines()
-        idx = 0
-        while idx < len(lines) and not lines[idx].strip():
-            idx += 1
-        if idx < len(lines) and lines[idx].lstrip().startswith("# "):
-            lines.pop(idx)
-        while lines and not lines[0].strip():
-            lines.pop(0)
-        return "\n".join(lines).strip() + ("\n" if lines else "")
-
     def _extract_title(self, content: str, now: datetime.datetime) -> str:
         for line in content.splitlines():
             stripped = line.strip()
             if stripped.startswith("#"):
                 return stripped.lstrip("#").strip()
-        return self._standard_title(now)
+        return self.title_policy.render(now)
 
     def _extract_summary(self, content: str) -> str:
         for line in content.splitlines():

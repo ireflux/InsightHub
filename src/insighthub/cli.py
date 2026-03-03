@@ -8,6 +8,7 @@ import sys
 from insighthub.core.engine import InsightEngine
 from insighthub.errors import ConfigValidationError
 from insighthub.observability import JsonLogFormatter, RunContextFilter, new_run_id, set_run_id
+from insighthub.publishing import TitlePolicy
 from insighthub.settings import settings
 from insighthub.workflow_factory import build_llm_provider, build_sinks, build_sources
 
@@ -101,6 +102,13 @@ async def run_cli():
     if not sinks:
         logger.warning("No sinks are enabled in the configuration.", extra={"event": "workflow.no_sinks"})
 
+    title_policy = TitlePolicy(
+        template=settings.publishing.title.template,
+        date_format=settings.publishing.title.date_format,
+        timezone_name=settings.publishing.title.timezone or settings.runtime.timezone,
+        strip_leading_h1=settings.publishing.title.strip_leading_h1,
+    )
+
     engine = InsightEngine(
         sources=sources,
         llm_provider=llm_provider,
@@ -120,6 +128,7 @@ async def run_cli():
         sink_retry_policy=settings.runtime.retry.sink_render,
         dedup_config=settings.runtime.dedup,
         timezone_name=settings.runtime.timezone,
+        title_policy=title_policy,
     )
 
     if args.command == "fetch":

@@ -15,15 +15,17 @@ class ZhipuAIProvider(BaseLLMProvider):
     API key is read from the `ZHIPUAI_API_KEY` environment variable.
     """
     
-    DEFAULT_MODEL = "glm-4.7-flash" # Note: The user requested glm-4.5-flash, but the common one is glm-4.7-flash. Using this for better compatibility. I will add a comment about this.
-    
     def __init__(self, api_key: str = None, model: str = None):
         api_key = api_key or os.getenv("ZHIPUAI_API_KEY")
         if not api_key:
             raise ValueError("ZhipuAI API key not provided or found in environment variables.")
-        
+
+        model = model or os.getenv("LLM_MODEL")
+        if not model:
+            raise ValueError("ZhipuAI model not provided. Set llm.primary.model or LLM_MODEL.")
+
         self.client = ZhipuAI(api_key=api_key)
-        self.model = model or self.DEFAULT_MODEL
+        self.model = model
 
     def _sync_chat(self, prompt: str) -> str:
         response = self.client.chat.completions.create(

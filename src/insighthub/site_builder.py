@@ -26,7 +26,7 @@ def build_site(
     content_root: str,
     output_dir: str,
     site_url: str,
-    site_title: str = "InsightHub Daily",
+    site_title: str = "每日技术趋势观察",
     posts_per_page: int = 20,
 ) -> Dict[str, Any]:
     manifest = _load_manifest(manifest_path)
@@ -208,7 +208,7 @@ def _render_post_page(
   <main class="container shell">
     <header class="post-header panel">
       <a class="back-link" href="{escape(base_path)}/">Back to Home</a>
-      <p class="kicker">InsightHub Daily</p>
+      <p class="kicker">Daily Technical Trend Briefing</p>
       <h1>{title}</h1>
       <p class="meta">{date} · {item_count} items</p>
       <div class="tags">{tag_html}</div>

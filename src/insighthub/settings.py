@@ -1,6 +1,7 @@
 import os
 import yaml
 import logging
+from datetime import datetime
 from typing import Any, Dict, List, Optional
 from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 from pydantic import BaseModel, Field
@@ -21,9 +22,7 @@ class LLMEndpointConfig(BaseModel):
 
 
 class LLMConfig(BaseModel):
-    primary: LLMEndpointConfig = Field(
-        default_factory=lambda: LLMEndpointConfig(provider="zhipuai", model="glm-4.7-flash")
-    )
+    primary: LLMEndpointConfig = Field(default_factory=lambda: LLMEndpointConfig(provider="zhipuai"))
     fallbacks: List[LLMEndpointConfig] = Field(default_factory=list)
 
 
@@ -68,6 +67,17 @@ class PromptConfig(BaseModel):
     structure: str = "professional_briefing_v1"
     style: str = "professional_neutral_v1"
     variables: Dict[str, Any] = Field(default_factory=dict)
+
+
+class PublishingTitleConfig(BaseModel):
+    template: str = "每日技术趋势观察 {date}"
+    date_format: str = "%Y-%m-%d"
+    timezone: Optional[str] = None
+    strip_leading_h1: bool = True
+
+
+class PublishingConfig(BaseModel):
+    title: PublishingTitleConfig = Field(default_factory=PublishingTitleConfig)
 
 
 class StateConfig(BaseModel):
@@ -157,6 +167,7 @@ class AppSettings(BaseModel):
     prompt: PromptConfig = Field(default_factory=PromptConfig)
     state: StateConfig = Field(default_factory=StateConfig)
     scoring: ScoringConfig = Field(default_factory=ScoringConfig)
+    publishing: PublishingConfig = Field(default_factory=PublishingConfig)
     runtime: RuntimeConfig = Field(default_factory=RuntimeConfig)
 
     class Config:
@@ -233,6 +244,10 @@ class AppSettings(BaseModel):
                 space_id = sink.params.get("space_id")
                 if doc_id and space_id:
                     logger.warning("Both feishu_doc.params.doc_id and space_id are set; doc_id will take precedence.")
+                if "default_title" in sink.params:
+                    raise ConfigValidationError(
+                        "sinks.items[].params.default_title has been removed. Use publishing.title.template instead."
+                    )
 
         if self.state.max_history_records <= 0:
             raise ConfigValidationError("state.max_history_records must be > 0.")
@@ -259,6 +274,18 @@ class AppSettings(BaseModel):
             ZoneInfo(self.runtime.timezone)
         except ZoneInfoNotFoundError as e:
             raise ConfigValidationError(f"runtime.timezone is invalid: {self.runtime.timezone}") from e
+        if not self.publishing.title.template.strip():
+            raise ConfigValidationError("publishing.title.template must not be empty.")
+        try:
+            _ = datetime.now().strftime(self.publishing.title.date_format)
+        except Exception as e:
+            raise ConfigValidationError("publishing.title.date_format is invalid.") from e
+        publishing_tz = self.publishing.title.timezone
+        if publishing_tz:
+            try:
+                ZoneInfo(publishing_tz)
+            except ZoneInfoNotFoundError as e:
+                raise ConfigValidationError(f"publishing.title.timezone is invalid: {publishing_tz}") from e
 
         observability_level = self.runtime.observability.level.upper()
         if observability_level not in {"DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"}:
@@ -290,6 +317,8 @@ class AppSettings(BaseModel):
             (f"llm.fallbacks[{i}]", ep) for i, ep in enumerate(self.llm.fallbacks)
         ]
         for location, endpoint in endpoints:
+            if not endpoint.model or not str(endpoint.model).strip():
+                raise ConfigValidationError(f"{location}.model is required. Set it via config or LLM_MODEL env.")
             if endpoint.provider.lower() == "openrouter" and not endpoint.api_key:
                 raise ConfigValidationError(f"Missing OPENROUTER_API_KEY for {location} provider 'openrouter'.")
             if endpoint.provider.lower() == "zhipuai" and not endpoint.api_key:
@@ -318,13 +347,14 @@ class AppSettings(BaseModel):
         
         # 2. Process environment variable fallbacks
         if "llm" not in config_data:
-            config_data["llm"] = {"primary": {"provider": "zhipuai", "model": "glm-4.7-flash"}, "fallbacks": []}
+            config_data["llm"] = {"primary": {"provider": "zhipuai"}, "fallbacks": []}
 
         llm_config = config_data["llm"]
         primary_cfg = llm_config.get("primary") or {}
         if primary_cfg.get("api_key"):
             logger.warning("`llm.primary.api_key` in config is ignored for security; use environment variables instead.")
         primary_cfg["api_key"] = cls._api_key_from_env(primary_cfg.get("provider"))
+        primary_cfg["model"] = primary_cfg.get("model") or os.getenv("LLM_MODEL")
         llm_config["primary"] = primary_cfg
 
         fallback_cfgs = llm_config.get("fallbacks") or []
@@ -332,6 +362,7 @@ class AppSettings(BaseModel):
             if endpoint.get("api_key"):
                 logger.warning("`llm.fallbacks[].api_key` in config is ignored for security; use environment variables instead.")
             endpoint["api_key"] = cls._api_key_from_env(endpoint.get("provider"))
+            endpoint["model"] = endpoint.get("model") or os.getenv("LLM_MODEL")
         llm_config["fallbacks"] = fallback_cfgs
 
         sinks_cfg = config_data.get("sinks") or {}

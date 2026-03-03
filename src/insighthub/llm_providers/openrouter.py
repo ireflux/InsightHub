@@ -13,7 +13,6 @@ class OpenRouterProvider(BaseLLMProvider):
     - Optional `OPENROUTER_API_URL` env var to override the base API URL.
     """
 
-    DEFAULT_MODEL = "xiaomi/mimo-v2-flash:free"
     # Use the official domain/path from OpenRouter quickstart examples
     DEFAULT_BASE_URL = "https://openrouter.ai/api/v1"
 
@@ -22,7 +21,9 @@ class OpenRouterProvider(BaseLLMProvider):
         if not api_key:
             raise ValueError("OpenRouter API key not provided or found in environment variables.")
 
-        self.model = model or self.DEFAULT_MODEL
+        self.model = model or os.getenv("LLM_MODEL") or os.getenv("OPENROUTER_MODEL")
+        if not self.model:
+            raise ValueError("OpenRouter model not provided. Set llm.primary.model or LLM_MODEL.")
         self.base_url = base_url or os.getenv("OPENROUTER_API_URL") or self.DEFAULT_BASE_URL
 
         headers = {
@@ -96,4 +97,3 @@ class OpenRouterProvider(BaseLLMProvider):
             if category.lower() in result.lower():
                 return category
         return "Uncategorized"
-
