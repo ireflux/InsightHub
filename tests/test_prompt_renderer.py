@@ -11,23 +11,22 @@ from insighthub.prompting import PromptRenderer
 
 
 class TestPromptRenderer(unittest.TestCase):
-    def test_render_professional_prompt_contains_paper_like_sections(self):
+    def test_render_media_style_v3_prompt(self):
         renderer = PromptRenderer(
             prompts_dir="prompts",
-            structure_name="professional_briefing_v1",
-            style_name="professional_neutral_v1",
-            variables={"min_items": 12},
+            structure_name="professional_briefing_v3",
+            style_name="professional_neutral_v3",
+            variables={},
         )
 
         template = renderer.render_summarize_template()
-
-        self.assertIn("## 摘要（Abstract）", template)
-        self.assertIn("## 方法与样本（Methodology）", template)
-        self.assertIn("## 主要发现（Key Findings）", template)
-        self.assertIn("## 深度分析（Analysis）", template)
-        self.assertIn("至少输出 12 个分析小节", template)
-        self.assertIn("不编造来源", template)
+        self.assertIn("## 今天发生了什么", template)
+        self.assertIn("## 核心判断", template)
+        self.assertIn("## 重点解读", template)
+        self.assertIn("输出 4-6 个小节", template)
+        self.assertIn("媒体化写作要求", template)
         self.assertIn("{content}", template)
+        self.assertNotIn("{min_items}", template)
 
 
 if __name__ == "__main__":

@@ -185,8 +185,7 @@ publishing:
 prompt:
   structure: "professional_briefing_v1"
   style: "professional_neutral_v1"
-  variables:
-    min_items: 12
+  variables: {}
 
 scoring:
   enabled: true
@@ -325,9 +324,7 @@ Customize AI summarization:
 prompt:
   structure: "professional_briefing_v1"  # Template from prompts/structure/
   style: "professional_neutral_v1"       # Template from prompts/style/
-  variables:                             # Variables passed to templates
-    min_items: 12
-    report_date: "2024-01-15"
+  variables: {}
 ```
 
 Prompt templates are loaded from:
