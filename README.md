@@ -1,4 +1,4 @@
-﻿# InsightHub
+# InsightHub
 
 <div align="center">
 

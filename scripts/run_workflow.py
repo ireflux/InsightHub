@@ -1,4 +1,4 @@
-﻿"""Thin script wrapper for the packaged CLI."""
+"""Thin script wrapper for the packaged CLI."""
 
 from insighthub.cli import main
 
