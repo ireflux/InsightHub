@@ -1,0 +1,378 @@
+{
+  "updated_at": "2026-03-03T10:41:44.763200+00:00",
+  "runs": [
+    {
+      "timestamp": "2026-03-03T10:41:44.762768+00:00",
+      "items_count": 29,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-03-03-b4469ab493c9.md",
+            "slug": "2026-03-03-b4469ab493c9",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        },
+        "FeishuDocSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "document_id": "HMa2dRseDocwMBxe6TdcgbCBnAZ"
+          }
+        }
+      }
+    }
+  ],
+  "items": {
+    "https://github.com/ruvnet/RuView": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763001+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763123+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/moeru-ai/airi": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763005+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763126+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/anthropics/prompt-eng-interactive-tutorial": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763007+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763129+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/ruvnet/ruflo": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763009+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763132+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/alibaba/OpenSandbox": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763010+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763135+00:00",
+        "error": null
+      }
+    },
+    "https://www.svd.se/a/K8nrV4/metas-ai-smart-glasses-and-data-privacy-concerns-workers-say-we-see-everything": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763012+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763137+00:00",
+        "error": null
+      }
+    },
+    "https://chipsandcheese.com/p/arms-cortex-x925-reaching-desktop": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763018+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763140+00:00",
+        "error": null
+      }
+    },
+    "https://www.cbc.ca/news/canada/british-columbia/b-c-adopting-year-round-daylight-time-9.7111657": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763021+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763143+00:00",
+        "error": null
+      }
+    },
+    "https://futurism.com/artificial-intelligence/ars-technica-fires-reporter-ai-quotes": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763023+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763146+00:00",
+        "error": null
+      }
+    },
+    "https://blog.replit.com/browsers-dont-want-to-be-cameras": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763024+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763158+00:00",
+        "error": null
+      }
+    },
+    "https://mitxela.com/projects/screwcounter": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763026+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763162+00:00",
+        "error": null
+      }
+    },
+    "https://www.ntik.me/posts/voice-agent": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763028+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763163+00:00",
+        "error": null
+      }
+    },
+    "https://www.jeffgeerling.com/blog/2026/pint-sized-macintosh-pico-micro-mac": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763029+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763165+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1195383": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763031+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763166+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1195346": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763033+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763169+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1195386": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763034+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763170+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1195456": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763036+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763172+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1195350": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763038+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763174+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1195366": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763039+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763175+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1195332": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763041+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763177+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1195367": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763043+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763179+00:00",
+        "error": null
+      }
+    },
+    "https://hardware.slashdot.org/story/26/03/03/0439237/the-19th-century-silent-film-that-first-captured-a-robot-attack": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763045+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763181+00:00",
+        "error": null
+      }
+    },
+    "https://science.slashdot.org/story/26/03/03/048214/superagers-secret-ingredient-may-be-the-growth-of-new-brain-cells": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763047+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763183+00:00",
+        "error": null
+      }
+    },
+    "https://news.slashdot.org/story/26/03/02/2210232/iowa-county-rolls-out-extensive-zoning-rules-for-data-centers": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763048+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763185+00:00",
+        "error": null
+      }
+    },
+    "https://yro.slashdot.org/story/26/03/02/2151248/british-columbia-to-end-time-changes-adopt-year-round-daylight-time": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763050+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763186+00:00",
+        "error": null
+      }
+    },
+    "https://apple.slashdot.org/story/26/03/02/2140230/apple-might-use-google-servers-to-store-data-for-its-upgraded-ai-siri": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763052+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763188+00:00",
+        "error": null
+      }
+    },
+    "https://entertainment.slashdot.org/story/26/03/02/2125201/hbo-max-and-paramount-to-merge-into-one-streaming-service": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763053+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763190+00:00",
+        "error": null
+      }
+    },
+    "https://yro.slashdot.org/story/26/03/02/1856252/charter-gets-fcc-permission-to-buy-cox-become-largest-isp-in-the-us": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763055+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763192+00:00",
+        "error": null
+      }
+    },
+    "https://tech.slashdot.org/story/26/03/02/1847201/microsoft-bans-microslop-on-its-discord-then-locks-the-server": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763057+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-03T10:41:44.763194+00:00",
+        "error": null
+      }
+    }
+  }
+}
