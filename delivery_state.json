@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-02T15:37:42.764332+00:00",
+  "updated_at": "2026-03-02T20:31:04.307549+00:00",
   "runs": [
     {
       "timestamp": "2026-03-02T15:26:54.859381+00:00",
@@ -43,6 +43,29 @@
           "meta": {
             "status": "success",
             "document_id": "QWxXdu6FioejrxxIjlTcX9VinVc"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-02T20:31:04.307179+00:00",
+      "items_count": 10,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-03-03-f5cb22fefb38.md",
+            "slug": "2026-03-03-f5cb22fefb38",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        },
+        "FeishuDocSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "document_id": "AlJNd8ARvoFWK8xxDIQcM6bZn3g"
           }
         }
       }
@@ -394,6 +417,126 @@
       "FeishuDocSink": {
         "status": "success",
         "updated_at": "2026-03-02T15:37:42.764322+00:00",
+        "error": null
+      }
+    },
+    "https://gist.github.com/shraiwi/009c652da6ce8c99a6e1e0c86fe66886": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T20:31:04.307372+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T20:31:04.307503+00:00",
+        "error": null
+      }
+    },
+    "https://health.ucdavis.edu/news/headlines/first-ever-in-utero-stem-cell-therapy-for-fetal-spina-bifida-repair-is-safe-study-finds/2026/02": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T20:31:04.307376+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T20:31:04.307508+00:00",
+        "error": null
+      }
+    },
+    "https://govbase.com": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T20:31:04.307379+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T20:31:04.307512+00:00",
+        "error": null
+      }
+    },
+    "https://news.ycombinator.com/item?id=47219668": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T20:31:04.307381+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T20:31:04.307516+00:00",
+        "error": null
+      }
+    },
+    "https://news.ycombinator.com/item?id=47220320": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T20:31:04.307383+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T20:31:04.307520+00:00",
+        "error": null
+      }
+    },
+    "https://tech.slashdot.org/story/26/03/02/1847201/microsoft-bans-microslop-on-its-discord-then-locks-the-server": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T20:31:04.307385+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T20:31:04.307523+00:00",
+        "error": null
+      }
+    },
+    "https://tech.slashdot.org/story/26/03/02/178237/motorola-partners-with-grapheneos": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T20:31:04.307392+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T20:31:04.307527+00:00",
+        "error": null
+      }
+    },
+    "https://news.slashdot.org/story/26/03/02/0440220/editor-at-184-year-old-ohio-newspaper-pushes-to-let-ai-draft-news-articles": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T20:31:04.307394+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T20:31:04.307531+00:00",
+        "error": null
+      }
+    },
+    "https://apple.slashdot.org/story/26/03/02/1648230/apple-introduces-iphone-17e-with-magsafe-and-a19": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T20:31:04.307397+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T20:31:04.307535+00:00",
+        "error": null
+      }
+    },
+    "https://slashdot.org/story/26/03/02/0424251/south-korean-police-lose-seized-crypto-by-posting-password-online": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T20:31:04.307399+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-02T20:31:04.307539+00:00",
         "error": null
       }
     }
