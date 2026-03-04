@@ -47,13 +47,25 @@ def _create_provider(
 ) -> BaseLLMProvider | None:
     provider_name = endpoint_config.provider
     try:
-        return LLMFactory.create_provider(
+        provider = LLMFactory.create_provider(
             provider_name,
             api_key=endpoint_config.api_key,
             model=endpoint_config.model,
             base_url=endpoint_config.base_url,
             params=endpoint_config.params,
         )
+        logger.info(
+            "LLM provider initialized.",
+            extra={
+                "event": "workflow.llm_init_succeeded",
+                "provider": provider_name,
+                "role": role,
+                "effective_provider_class": provider.__class__.__name__,
+                "effective_base_url": getattr(provider, "base_url", None),
+                "effective_model": getattr(provider, "model", None),
+            },
+        )
+        return provider
     except (ValueError, ImportError) as e:
         logger.error(
             "Error initializing LLM provider.",

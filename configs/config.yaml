@@ -6,8 +6,8 @@
 # - OPENROUTER_API_KEY
 llm:
   primary:
-    provider: "zhipuai"
-    model: "glm-4.7-flash"
+    provider: "nvidia"
+    model: "minimaxai/minimax-m2.5"
   fallbacks: []
   # fallbacks:
   #   - provider: "openrouter"
