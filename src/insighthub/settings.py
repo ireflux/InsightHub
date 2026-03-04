@@ -10,7 +10,7 @@ from insighthub.errors import ConfigValidationError
 
 logger = logging.getLogger(__name__)
 
-SUPPORTED_LLM_PROVIDERS = {"openrouter", "zhipuai"}
+SUPPORTED_LLM_PROVIDERS = {"openrouter", "zhipuai", "nvidia", "custom_openai", "custom_anthropic"}
 SUPPORTED_SOURCES = {"github_trending", "zhihu_hot", "hacker_news", "v2ex_hot", "slashdot"}
 SUPPORTED_SINKS = {"markdown_file", "feishu_doc"}
 
@@ -19,6 +19,8 @@ class LLMEndpointConfig(BaseModel):
     provider: str
     api_key: Optional[str] = None
     model: Optional[str] = None
+    base_url: Optional[str] = None
+    params: Dict[str, Any] = Field(default_factory=dict)
 
 
 class LLMConfig(BaseModel):
@@ -185,6 +187,8 @@ class AppSettings(BaseModel):
                 f"Unsupported llm providers: {unsupported_providers}. "
                 f"Supported: {sorted(SUPPORTED_LLM_PROVIDERS)}"
             )
+        for endpoint in endpoints:
+            self._validate_llm_endpoint(endpoint)
 
         source_ids = [source.id for source in self.sources.items]
         if len(source_ids) != len(set(source_ids)):
@@ -325,6 +329,14 @@ class AppSettings(BaseModel):
                 raise ConfigValidationError(f"Missing OPENROUTER_API_KEY for {location} provider 'openrouter'.")
             if endpoint.provider.lower() == "zhipuai" and not endpoint.api_key:
                 raise ConfigValidationError(f"Missing ZHIPUAI_API_KEY for {location} provider 'zhipuai'.")
+            if endpoint.provider.lower() == "nvidia" and not endpoint.api_key:
+                raise ConfigValidationError(f"Missing NVIDIA_API_KEY for {location} provider 'nvidia'.")
+            if endpoint.provider.lower() == "custom_openai" and not endpoint.api_key:
+                raise ConfigValidationError(f"Missing CUSTOM_OPENAI_API_KEY for {location} provider 'custom_openai'.")
+            if endpoint.provider.lower() == "custom_anthropic" and not endpoint.api_key:
+                raise ConfigValidationError(
+                    f"Missing CUSTOM_ANTHROPIC_API_KEY for {location} provider 'custom_anthropic'."
+                )
 
         for sink in self.sinks.items:
             enabled = self.sinks.defaults.enabled if sink.enabled is None else sink.enabled
@@ -353,10 +365,14 @@ class AppSettings(BaseModel):
 
         llm_config = config_data["llm"]
         primary_cfg = llm_config.get("primary") or {}
+        env_provider = os.getenv("LLM_PROVIDER")
+        if env_provider:
+            primary_cfg["provider"] = env_provider
         if primary_cfg.get("api_key"):
             logger.warning("`llm.primary.api_key` in config is ignored for security; use environment variables instead.")
         primary_cfg["api_key"] = cls._api_key_from_env(primary_cfg.get("provider"))
         primary_cfg["model"] = primary_cfg.get("model") or os.getenv("LLM_MODEL")
+        primary_cfg["base_url"] = primary_cfg.get("base_url") or cls._base_url_from_env(primary_cfg.get("provider"))
         llm_config["primary"] = primary_cfg
 
         fallback_cfgs = llm_config.get("fallbacks") or []
@@ -365,6 +381,7 @@ class AppSettings(BaseModel):
                 logger.warning("`llm.fallbacks[].api_key` in config is ignored for security; use environment variables instead.")
             endpoint["api_key"] = cls._api_key_from_env(endpoint.get("provider"))
             endpoint["model"] = endpoint.get("model") or os.getenv("LLM_MODEL")
+            endpoint["base_url"] = endpoint.get("base_url") or cls._base_url_from_env(endpoint.get("provider"))
         llm_config["fallbacks"] = fallback_cfgs
 
         sinks_cfg = config_data.get("sinks") or {}
@@ -406,6 +423,52 @@ class AppSettings(BaseModel):
             return os.getenv("OPENROUTER_API_KEY")
         if provider == "zhipuai":
             return os.getenv("ZHIPUAI_API_KEY")
+        if provider == "nvidia":
+            return os.getenv("NVIDIA_API_KEY")
+        if provider == "custom_openai":
+            return os.getenv("CUSTOM_OPENAI_API_KEY")
+        if provider == "custom_anthropic":
+            return os.getenv("CUSTOM_ANTHROPIC_API_KEY")
         return None
+
+    @staticmethod
+    def _base_url_from_env(provider_name: Optional[str]) -> Optional[str]:
+        if not provider_name:
+            return None
+        provider = provider_name.lower()
+        if provider == "custom_openai":
+            return os.getenv("CUSTOM_OPENAI_BASE_URL")
+        if provider == "custom_anthropic":
+            return os.getenv("CUSTOM_ANTHROPIC_BASE_URL")
+        return None
+
+    @staticmethod
+    def _validate_llm_endpoint(endpoint: LLMEndpointConfig) -> None:
+        provider = endpoint.provider.lower()
+        params = endpoint.params or {}
+        allowed_params = {"temperature", "top_p", "max_tokens", "stop", "stream"}
+        unknown = sorted(set(params.keys()) - allowed_params)
+        if unknown:
+            raise ConfigValidationError(
+                f"llm endpoint '{provider}' has unsupported params: {unknown}. Allowed: {sorted(allowed_params)}"
+            )
+
+        if "temperature" in params and not isinstance(params["temperature"], (int, float)):
+            raise ConfigValidationError("llm endpoint params.temperature must be number.")
+        if "top_p" in params and not isinstance(params["top_p"], (int, float)):
+            raise ConfigValidationError("llm endpoint params.top_p must be number.")
+        if "max_tokens" in params and (not isinstance(params["max_tokens"], int) or params["max_tokens"] <= 0):
+            raise ConfigValidationError("llm endpoint params.max_tokens must be positive integer.")
+        if "stop" in params and not (
+            isinstance(params["stop"], str)
+            or (isinstance(params["stop"], list) and all(isinstance(x, str) for x in params["stop"]))
+        ):
+            raise ConfigValidationError("llm endpoint params.stop must be string or list of strings.")
+        if params.get("stream") is True:
+            raise ConfigValidationError("llm endpoint params.stream=true is not supported currently.")
+
+        if provider in {"custom_openai", "custom_anthropic"}:
+            if not endpoint.base_url or not str(endpoint.base_url).strip():
+                raise ConfigValidationError(f"llm endpoint '{provider}' requires non-empty base_url.")
 
 settings = AppSettings.load()

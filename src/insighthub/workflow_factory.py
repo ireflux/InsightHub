@@ -51,6 +51,8 @@ def _create_provider(
             provider_name,
             api_key=endpoint_config.api_key,
             model=endpoint_config.model,
+            base_url=endpoint_config.base_url,
+            params=endpoint_config.params,
         )
     except (ValueError, ImportError) as e:
         logger.error(

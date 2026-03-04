@@ -5,12 +5,32 @@
 
 llm:
   primary:
-    provider: "zhipuai"
-    model: "glm-4.7-flash"
+    provider: "nvidia"
+    model: "minimaxai/minimax-m2.5"
+    # base_url: "https://api.openai.com/v1"  # required for custom_openai/custom_anthropic
+    # params:                                # optional, whitelist only
+    #   temperature: 0.7
+    #   top_p: 0.95
+    #   max_tokens: 4096
+    #   stop: ["\n\n"]
+    #   stream: false                        # true is not supported currently
   fallbacks: []
   # fallbacks:
   #   - provider: "openrouter"
   #     model: "xiaomi/mimo-v2-flash:free"
+  #   - provider: "custom_openai"
+  #     model: "gpt-4o-mini"
+  #     base_url: "https://api.openai.com/v1"
+  #     params:
+  #       temperature: 0.7
+  #       top_p: 0.95
+  #       max_tokens: 4096
+  #   - provider: "custom_anthropic"
+  #     model: "claude-3-5-sonnet-latest"
+  #     base_url: "https://api.anthropic.com/v1"
+  #     params:
+  #       temperature: 0.3
+  #       max_tokens: 4096
 
 sources:
   defaults:
@@ -44,7 +64,7 @@ sources:
 prompt:
   structure: "professional_briefing_v4"
   style: "professional_neutral_v4"
-  scoring: "technical_content_scoring_v2_clustering"
+  scoring: "technical_content_scoring_v2"
   variables: {}
 
 publishing:
@@ -108,11 +128,12 @@ scoring:
   keep_top_n: 8
   max_items_for_llm_scoring: 20
   weights:
-    technical_depth_and_novelty: 0.30
-    potential_impact: 0.25
-    writing_quality: 0.15
-    community_discussion: 0.15
-    engagement_signals: 0.15
+    technical_depth_and_novelty: 0.25
+    practical_impact: 0.20
+    evidence_quality: 0.20
+    topical_relevance_to_batch: 0.20
+    cross_domain_insight_potential: 0.10
+    narrative_connectivity: 0.05
 
 sinks:
   defaults:
@@ -132,6 +153,14 @@ sinks:
 # Required env vars by LLM providers:
 # - ZHIPUAI_API_KEY (for zhipuai)
 # - OPENROUTER_API_KEY (for openrouter)
+# - NVIDIA_API_KEY (for nvidia)
+# - CUSTOM_OPENAI_API_KEY (for custom_openai)
+# - CUSTOM_ANTHROPIC_API_KEY (for custom_anthropic)
+#
+# Optional env vars for custom providers:
+# - CUSTOM_OPENAI_BASE_URL
+# - CUSTOM_ANTHROPIC_BASE_URL
+# - CUSTOM_ANTHROPIC_VERSION (default: 2023-06-01)
 #
 # Required env vars for Feishu sink:
 # - FEISHU_APP_ID

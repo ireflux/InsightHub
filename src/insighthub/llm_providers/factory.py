@@ -1,6 +1,8 @@
 from typing import Type
 from insighthub.llm_providers.base import BaseLLMProvider
+from insighthub.llm_providers.custom import CustomAnthropicProvider, CustomOpenAIProvider
 from insighthub.llm_providers.openrouter import OpenRouterProvider
+from insighthub.llm_providers.nvidia import NvidiaProvider
 from insighthub.llm_providers.zhipu import ZhipuAIProvider
 
 class LLMFactory:
@@ -10,7 +12,10 @@ class LLMFactory:
     
     _providers = {
         "openrouter": OpenRouterProvider,
+        "nvidia": NvidiaProvider,
         "zhipuai": ZhipuAIProvider,
+        "custom_openai": CustomOpenAIProvider,
+        "custom_anthropic": CustomAnthropicProvider,
     }
 
     @staticmethod
