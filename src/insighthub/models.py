@@ -1,4 +1,4 @@
-from typing import Optional, Dict, Any
+from typing import Optional, Dict, Any, List
 from datetime import datetime
 from pydantic import BaseModel, Field
 
@@ -23,12 +23,24 @@ class NewsItem(BaseModel):
     original_data: Optional[Dict[str, Any]] = Field(default_factory=dict, description="Raw data from the source")
     
     # Clustering & thematic organization (v4 briefing support)
-    topical_relevance_to_batch: Optional[float] = Field(None, description="Relevance score (0-10) to other items in batch for clustering")
-    cross_domain_insight_potential: Optional[float] = Field(None, description="Score (0-10) for cross-domain connection potential")
-    narrative_connectivity: Optional[float] = Field(None, description="Score (0-10) for narrative integration potential")
-    is_cluster_hub: Optional[bool] = Field(False, description="Whether this item is a cluster hub connecting multiple topics")
-    suggested_topic_cluster: Optional[str] = Field(None, description="Suggested topic/theme clustering label")
-    related_item_ids: Optional[list] = Field(default_factory=list, description="List of related item IDs in the same cluster")
+    topical_relevance_to_batch: Optional[float] = Field(
+        None, description="Relevance score (0-10) to other items in batch for clustering"
+    )
+    cross_domain_insight_potential: Optional[float] = Field(
+        None, description="Score (0-10) for cross-domain connection potential"
+    )
+    narrative_connectivity: Optional[float] = Field(
+        None, description="Score (0-10) for narrative integration potential"
+    )
+    is_cluster_hub: bool = Field(
+        False, description="Whether this item is a cluster hub connecting multiple topics"
+    )
+    suggested_topic_cluster: Optional[str] = Field(
+        None, description="Suggested topic/theme clustering label"
+    )
+    related_item_ids: List[str] = Field(
+        default_factory=list, description="List of related item IDs in the same cluster"
+    )
 
     class Config:
         from_attributes = True

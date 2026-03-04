@@ -87,11 +87,12 @@ class StateConfig(BaseModel):
 
 
 class ScoringWeights(BaseModel):
-    technical_depth_and_novelty: float = 0.30
-    potential_impact: float = 0.25
-    writing_quality: float = 0.15
-    community_discussion: float = 0.15
-    engagement_signals: float = 0.15
+    technical_depth_and_novelty: float = 0.25
+    practical_impact: float = 0.20
+    evidence_quality: float = 0.20
+    topical_relevance_to_batch: float = 0.20
+    cross_domain_insight_potential: float = 0.10
+    narrative_connectivity: float = 0.05
 
 
 class ScoringConfig(BaseModel):
@@ -102,7 +103,7 @@ class ScoringConfig(BaseModel):
     keep_top_n: Optional[int] = None
     max_items_for_llm_scoring: int = 20
     weights: ScoringWeights = Field(default_factory=ScoringWeights)
-    scoring_prompt_name: str = "technical_content_scoring_v2_clustering"  # ⭐ 新增
+    scoring_prompt_name: str = "technical_content_scoring_v2"
 
 
 class RetryPolicyConfig(BaseModel):

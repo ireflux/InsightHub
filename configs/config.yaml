@@ -49,7 +49,7 @@ sources:
 prompt:
   structure: "professional_briefing_v4"
   style: "professional_neutral_v4"
-  scoring: "technical_content_scoring_v2_clustering"
+  scoring: "technical_content_scoring_v2"
   variables: {}
 
 publishing:

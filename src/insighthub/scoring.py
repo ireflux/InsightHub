@@ -2,8 +2,8 @@ import json
 import logging
 import os
 import re
-from typing import Dict, List, Optional, Set, Tuple
 from collections import defaultdict
+from typing import Dict, List, Optional, Set, Tuple
 
 from insighthub.llm_providers.base import BaseLLMProvider
 from insighthub.models import NewsItem
@@ -19,6 +19,15 @@ SCORE_TIERS: List[Tuple[float, str]] = [
     (0.0, "Noise"),
 ]
 
+TOPIC_LEXICON: Dict[str, Set[str]] = {
+    "hardware": {"arm", "x86", "cpu", "gpu", "芯片", "处理器", "架构"},
+    "ai_ml": {"ai", "llm", "ml", "neural", "model", "inference", "agent", "大模型", "推理", "训练"},
+    "security": {"security", "privacy", "encryption", "安全", "隐私", "加密"},
+    "performance": {"performance", "latency", "optimization", "性能", "延迟", "优化"},
+    "systems": {"database", "distributed", "system", "数据库", "分布式", "系统"},
+    "edge_mobile": {"edge", "mobile", "device", "边缘", "移动", "设备"},
+}
+
 
 def tier_from_score(score: float) -> str:
     for threshold, label in SCORE_TIERS:
@@ -28,13 +37,13 @@ def tier_from_score(score: float) -> str:
 
 
 class ContentScorer:
-    DEFAULT_SCORING_PROMPT_PATH = os.path.join("prompts", "scoring", "technical_content_scoring_v2_clustering.md")
+    DEFAULT_SCORING_PROMPT_PATH = os.path.join("prompts", "scoring", "technical_content_scoring_v2.md")
 
     def __init__(self, config: ScoringConfig, llm_provider: Optional[BaseLLMProvider] = None):
         self.config = config
         self.llm_provider = llm_provider
         # 从 config 读取评分提示词名称，或使用默认值
-        scoring_prompt_name = getattr(config, 'scoring_prompt_name', 'technical_content_scoring_v2_clustering')
+        scoring_prompt_name = getattr(config, "scoring_prompt_name", "technical_content_scoring_v2")
         prompt_path = os.path.join("prompts", "scoring", f"{scoring_prompt_name}.md")
         self.scoring_prompt_template = self._load_scoring_prompt_template(prompt_path)
 
@@ -98,188 +107,175 @@ class ContentScorer:
         Enhanced scoring with topic clustering analysis for v4 briefing.
         Returns both scored items and clustering metadata.
         """
-        # Step 1: Score items using standard scoring
         scored_items = await self.score_items(items)
-        
-        # Step 2: Extract topics and analyze relationships
-        topic_keywords = self._extract_topic_keywords(scored_items)
-        
-        # Step 3: Calculate topical relevance for each item
-        for idx, item in enumerate(scored_items):
-            related_ids = self._find_related_items(item, scored_items, topic_keywords)
-            topical_relevance = self._calculate_topical_relevance(item, related_ids, len(scored_items))
-            cross_domain_potential = self._calculate_cross_domain_potential(item, topic_keywords)
-            narrative_conn = self._calculate_narrative_connectivity(item, scored_items, topic_keywords)
-            is_hub = topical_relevance >= 8.0 and len(related_ids) >= 2
-            
+
+        topic_groups = self._extract_topic_keywords(scored_items)
+        total_items = len(scored_items)
+        small_batch_mode = total_items <= 3
+
+        for item in scored_items:
+            related_ids = self._find_related_items(item, scored_items, topic_groups)
+            topical_relevance = self._calculate_topical_relevance(related_ids, total_items, small_batch_mode)
+            cross_domain_potential = self._calculate_cross_domain_potential(item, topic_groups)
+            narrative_conn = self._calculate_narrative_connectivity(item, topic_groups, small_batch_mode)
+
+            hub_threshold = 2 if small_batch_mode else 3
+            is_hub = topical_relevance >= 8.0 and len(related_ids) >= hub_threshold
+
             item.topical_relevance_to_batch = round(topical_relevance, 2)
             item.cross_domain_insight_potential = round(cross_domain_potential, 2)
             item.narrative_connectivity = round(narrative_conn, 2)
             item.is_cluster_hub = is_hub
             item.related_item_ids = related_ids
-        
-        # Step 4: Identify topic clusters
-        clusters = self._identify_topic_clusters(scored_items, topic_keywords)
-        
-        # Step 5: Assign suggested_topic_cluster for each item
-        item_to_cluster = {}
+            # Rebuild six-dimension breakdown to keep one scoring schema end-to-end.
+            item.score_breakdown = {
+                **(item.score_breakdown or {}),
+                "topical_relevance_to_batch": item.topical_relevance_to_batch,
+                "cross_domain_insight_potential": item.cross_domain_insight_potential,
+                "narrative_connectivity": item.narrative_connectivity,
+            }
+            item.ai_score = self._weighted_score(item.score_breakdown)
+            item.score_tier = tier_from_score(item.ai_score)
+
+        clusters = self._identify_topic_clusters(scored_items, topic_groups)
+        item_to_cluster: Dict[str, str] = {}
         for cluster_name, cluster_items in clusters.items():
             for item_id in cluster_items:
                 item_to_cluster[item_id] = cluster_name
-        
+
         for item in scored_items:
             item.suggested_topic_cluster = item_to_cluster.get(item.id, "未分类")
-        
+
         clustering_metadata = {
-            "total_items": len(scored_items),
-            "identified_topic_keywords": topic_keywords,
+            "total_items": total_items,
+            "small_batch_mode": small_batch_mode,
+            "identified_topics": sorted(topic_groups.keys()),
             "clusters": clusters,
             "cluster_hubs": [item.id for item in scored_items if item.is_cluster_hub],
         }
-        
+
         return scored_items, clustering_metadata
 
-    def _extract_topic_keywords(self, items: List[NewsItem]) -> Dict[str, int]:
+    def _extract_topic_keywords(self, items: List[NewsItem]) -> Dict[str, Set[str]]:
         """
-        Extract key topic indicators from all items.
-        Returns a dict of keyword -> frequency map.
+        Return topic -> set(item_id) map using a lightweight lexicon.
         """
-        keywords: Dict[str, int] = defaultdict()
-        
-        common_keywords = {
-            # Hardware/Architecture
-            "arm": "hardware", "x86": "hardware", "cpu": "hardware", "gpu": "hardware", 
-            "芯片": "hardware", "处理器": "hardware", "架构": "hardware",
-            # AI/ML
-            "ai": "ai_ml", "llm": "ai_ml", "ml": "ai_ml", "neural": "ai_ml",
-            "model": "ai_ml", "inference": "ai_ml", "agent": "ai_ml",
-            "大模型": "ai_ml", "推理": "ai_ml", "训练": "ai_ml",
-            # Security/Privacy
-            "security": "security", "privacy": "security", "encryption": "security",
-            "安全": "security", "隐私": "security", "加密": "security",
-            # Performance/Optimization
-            "performance": "performance", "latency": "performance", "optimization": "performance",
-            "性能": "performance", "延迟": "performance", "优化": "performance",
-            # Data/Systems
-            "database": "systems", "distributed": "systems", "system": "systems",
-            "数据库": "systems", "分布式": "systems", "系统": "systems",
-            # Edge/Mobile
-            "edge": "edge_mobile", "mobile": "edge_mobile", "device": "edge_mobile",
-            "边缘": "edge_mobile", "移动": "edge_mobile", "设备": "edge_mobile",
-        }
-        
         topic_groups: Dict[str, Set[str]] = defaultdict(set)
-        
         for item in items:
             text = f"{item.title or ''} {item.content or ''}".lower()
-            for keyword, group in common_keywords.items():
-                if keyword in text:
-                    topic_groups[group].add(item.id)
-        
+            for topic, keywords in TOPIC_LEXICON.items():
+                if any(kw in text for kw in keywords):
+                    topic_groups[topic].add(item.id)
+
         return topic_groups
 
-    def _find_related_items(self, item: NewsItem, all_items: List[NewsItem], 
-                           topic_keywords: Dict[str, Set[str]]) -> List[str]:
+    def _find_related_items(
+        self, item: NewsItem, all_items: List[NewsItem], topic_groups: Dict[str, Set[str]]
+    ) -> List[str]:
         """
-        Find IDs of items related to the given item.
+        Find related item IDs based on shared topic groups and rank by overlap.
         """
-        related = []
-        item_text = f"{item.title or ''} {item.content or ''}".lower()
-        
-        # Keyword-based relevance
+        item_topics = {topic for topic, item_ids in topic_groups.items() if item.id in item_ids}
+        scored_related: List[Tuple[str, int, float]] = []
+
         for other in all_items:
-            if other.id == item.id:
+            if other.id == item.id or not other.id:
                 continue
-            other_text = f"{other.title or ''} {other.content or ''}".lower()
-            
-            # Simple shared keyword detection
-            shared_keywords = 0
-            for group, item_ids in topic_keywords.items():
-                if item.id in item_ids and other.id in item_ids:
-                    shared_keywords += 1
-            
-            if shared_keywords >= 1:
-                related.append(other.id)
-        
-        return related[:5]  # Limit to 5 most related items
+            other_topics = {topic for topic, item_ids in topic_groups.items() if other.id in item_ids}
+            overlap = len(item_topics & other_topics)
+            if overlap > 0:
+                scored_related.append((other.id, overlap, other.ai_score or 0.0))
+
+        scored_related.sort(key=lambda x: (x[1], x[2]), reverse=True)
+        return [item_id for item_id, _, _ in scored_related[:5]]
 
     @staticmethod
-    def _calculate_topical_relevance(item: NewsItem, related_ids: List[str], total_items: int) -> float:
+    def _calculate_topical_relevance(related_ids: List[str], total_items: int, small_batch_mode: bool) -> float:
         """
-        Calculate topical relevance score based on how many related items exist.
+        Convert related-item count to 0-10 score aligned with v4.2 bands.
         """
         if total_items <= 1:
-            return 5.0
-        
-        relation_ratio = len(related_ids) / (total_items - 1)
-        
-        if len(related_ids) >= 3:
+            return 3.0
+
+        related_count = len(related_ids)
+        relation_ratio = related_count / max(1, total_items - 1)
+
+        if related_count >= 3:
             score = 8.0 + relation_ratio * 2.0
-        elif len(related_ids) == 2:
-            score = 6.5 + relation_ratio * 1.5
-        elif len(related_ids) == 1:
-            score = 4.0 + relation_ratio * 1.0
+        elif related_count == 2:
+            score = 6.0 + relation_ratio * 1.5
+        elif related_count == 1:
+            score = 4.0 + relation_ratio
         else:
             score = 2.0
-        
+
+        if small_batch_mode:
+            score = score * 0.9
         return min(10.0, score)
 
     @staticmethod
-    def _calculate_cross_domain_potential(item: NewsItem, topic_keywords: Dict[str, Set[str]]) -> float:
+    def _calculate_cross_domain_potential(item: NewsItem, topic_groups: Dict[str, Set[str]]) -> float:
         """
-        Estimate cross-domain insight potential based on topic diversity coverage.
+        More topic coverage implies higher cross-domain insight potential.
         """
-        item_groups = []
-        for group, item_ids in topic_keywords.items():
-            if item.id in item_ids:
-                item_groups.append(group)
-        
-        # More diverse topics = higher cross-domain potential
-        diversity_score = min(10.0, 2.0 + len(item_groups) * 2.5)
-        return diversity_score
+        topic_count = sum(1 for _, item_ids in topic_groups.items() if item.id in item_ids)
+        if topic_count >= 4:
+            return 9.0
+        if topic_count == 3:
+            return 7.5
+        if topic_count == 2:
+            return 6.0
+        if topic_count == 1:
+            return 4.5
+        return 3.0
 
     @staticmethod
-    def _calculate_narrative_connectivity(item: NewsItem, all_items: List[NewsItem],
-                                        topic_keywords: Dict[str, Set[str]]) -> float:
+    def _calculate_narrative_connectivity(
+        item: NewsItem, topic_groups: Dict[str, Set[str]], small_batch_mode: bool
+    ) -> float:
         """
-        Estimate how easily this item can be integrated into a narrative.
+        Estimate narrative fitness using content richness + topic overlap.
         """
-        # Items with good evidence quality and clarity are more narrative-friendly
-        base_score = 5.0
-        
+        base_score = 4.5
+        topic_count = sum(1 for _, item_ids in topic_groups.items() if item.id in item_ids)
+        base_score += min(2.0, topic_count * 0.7)
+
         if item.content and len(item.content) > 300:
-            base_score += 2.0
-        
-        if item.score_breakdown.get("writing_quality", 0) >= 6.0:
-            base_score += 2.0
-        
+            base_score += 1.2
+        if item.content and len(item.content) > 900:
+            base_score += 0.8
+
+        if item.score_breakdown.get("technical_depth_and_novelty", 0.0) >= 6.0:
+            base_score += 1.0
+
+        if small_batch_mode:
+            base_score -= 0.6
         return min(10.0, base_score)
 
-    def _identify_topic_clusters(self, items: List[NewsItem], 
-                                topic_keywords: Dict[str, Set[str]]) -> Dict[str, List[str]]:
+    def _identify_topic_clusters(
+        self, items: List[NewsItem], topic_groups: Dict[str, Set[str]]
+    ) -> Dict[str, List[str]]:
         """
-        Identify main topic clusters from items.
+        Build topic clusters with at least two items.
         """
-        clusters = {}
-        
-        for group_name, item_ids in topic_keywords.items():
-            if len(item_ids) >= 2:  # Only clusters with 2+ items
-                sorted_by_score = sorted(
-                    [i for i in items if i.id in item_ids],
-                    key=lambda x: x.ai_score or 0.0,
-                    reverse=True
-                )
-                cluster_name = self._generate_cluster_name(group_name, list(item_ids))
-                clusters[cluster_name] = list(item_ids)
-        
+        by_id = {item.id: item for item in items}
+        clusters: Dict[str, List[str]] = {}
+
+        for topic, item_ids in topic_groups.items():
+            if len(item_ids) < 2:
+                continue
+            sorted_ids = sorted(item_ids, key=lambda item_id: by_id[item_id].ai_score or 0.0, reverse=True)
+            cluster_name = self._generate_cluster_name(topic)
+            clusters[cluster_name] = sorted_ids
+
         return clusters
 
     @staticmethod
-    def _generate_cluster_name(group: str, item_ids: List[str]) -> str:
+    def _generate_cluster_name(topic: str) -> str:
         """
-        Generate a human-readable cluster name from the group identifier.
+        Generate a stable display name for topic cluster.
         """
-        group_names = {
+        topic_names = {
             "hardware": "硬件架构演进",
             "ai_ml": "AI/ML 技术进展",
             "security": "安全与隐私",
@@ -287,7 +283,7 @@ class ContentScorer:
             "systems": "系统与基础设施",
             "edge_mobile": "边缘与移动计算",
         }
-        return group_names.get(group, f"主题-{group}")
+        return topic_names.get(topic, f"主题-{topic}")
 
     def _rule_score(self, item: NewsItem) -> Tuple[Dict[str, float], float]:
         text = f"{item.title or ''}\n{item.content or ''}".lower()
@@ -314,22 +310,32 @@ class ContentScorer:
         )
         keyword_hits = sum(1 for kw in novelty_keywords if kw in text)
         content_len = len(item.content or "")
+        matched_topics = self._topic_count_for_text(text)
+        digit_hits = len(re.findall(r"\d+(\.\d+)?", item.content or ""))
+        link_hits = len(re.findall(r"https?://", item.content or ""))
 
         technical_depth = min(10.0, 3.0 + keyword_hits * 0.7 + min(content_len / 1200.0, 2.5))
-        potential_impact = min(10.0, 2.5 + keyword_hits * 0.5 + engagement * 0.4)
-        writing_quality = min(10.0, 2.0 + min(content_len / 700.0, 4.0))
-        community_discussion = discussion
-        engagement_signals = engagement
+        practical_impact = min(10.0, 2.4 + keyword_hits * 0.45 + engagement * 0.35 + discussion * 0.15)
+        evidence_quality = min(10.0, 2.0 + min(content_len / 900.0, 3.0) + min(digit_hits * 0.35 + link_hits * 0.8, 5.0))
+        # Batch-level topical relevance is re-estimated in score_items_with_clustering.
+        topical_relevance = min(10.0, 3.0 + matched_topics * 1.0)
+        cross_domain = min(10.0, 2.5 + matched_topics * 1.8)
+        narrative_connectivity = min(10.0, 3.0 + min(content_len / 700.0, 3.5) + min(matched_topics * 0.8, 2.5))
 
         breakdown = {
             "technical_depth_and_novelty": round(technical_depth, 2),
-            "potential_impact": round(potential_impact, 2),
-            "writing_quality": round(writing_quality, 2),
-            "community_discussion": round(community_discussion, 2),
-            "engagement_signals": round(engagement_signals, 2),
+            "practical_impact": round(practical_impact, 2),
+            "evidence_quality": round(evidence_quality, 2),
+            "topical_relevance_to_batch": round(topical_relevance, 2),
+            "cross_domain_insight_potential": round(cross_domain, 2),
+            "narrative_connectivity": round(narrative_connectivity, 2),
         }
         score = self._weighted_score(breakdown)
         return breakdown, score
+
+    @staticmethod
+    def _topic_count_for_text(text: str) -> int:
+        return sum(1 for _, keywords in TOPIC_LEXICON.items() if any(kw in text for kw in keywords))
 
     def _weighted_score(self, breakdown: Dict[str, float]) -> float:
         weights = self.config.weights.model_dump()
@@ -411,10 +417,11 @@ class ContentScorer:
 
                 breakdown = {
                     "technical_depth_and_novelty": self._clamp_score(one.get("technical_depth_and_novelty", 0)),
-                    "potential_impact": self._clamp_score(one.get("potential_impact", 0)),
-                    "writing_quality": self._clamp_score(one.get("writing_quality", 0)),
-                    "community_discussion": self._clamp_score(one.get("community_discussion", 0)),
-                    "engagement_signals": self._clamp_score(one.get("engagement_signals", 0)),
+                    "practical_impact": self._clamp_score(one.get("practical_impact", 0)),
+                    "evidence_quality": self._clamp_score(one.get("evidence_quality", 0)),
+                    "topical_relevance_to_batch": self._clamp_score(one.get("topical_relevance_to_batch", 0)),
+                    "cross_domain_insight_potential": self._clamp_score(one.get("cross_domain_insight_potential", 0)),
+                    "narrative_connectivity": self._clamp_score(one.get("narrative_connectivity", 0)),
                 }
                 score = self._clamp_score(one.get("score", self._weighted_score(breakdown)))
                 reason = str(one.get("reason", "")).strip() or "LLM批量评分。"
@@ -461,9 +468,10 @@ class ContentScorer:
                 extra={"event": "scoring.prompt.fallback", "path": path, "error": str(e)},
             )
             return (
-                "你是技术内容评分器。请按五个维度给每个条目打分，并只输出 JSON："
-                "technical_depth_and_novelty, potential_impact, writing_quality, community_discussion, "
-                "engagement_signals, score, tier, reason, confidence。"
+                "你是技术内容评分器。请只输出 JSON，字段包括："
+                "technical_depth_and_novelty, practical_impact, evidence_quality, "
+                "topical_relevance_to_batch, cross_domain_insight_potential, narrative_connectivity, "
+                "score, tier, reason, confidence。"
             )
 
     @staticmethod
