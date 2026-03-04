@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-04T06:31:03.244495+00:00",
+  "updated_at": "2026-03-04T13:26:31.754864+00:00",
   "runs": [
     {
       "timestamp": "2026-03-04T06:31:03.244012+00:00",
@@ -20,6 +20,52 @@
           "meta": {
             "status": "success",
             "document_id": "YlRBdkZSjob3hcx8Ri4cf483nDb"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-04T10:41:39.102413+00:00",
+      "items_count": 14,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-03-04-55251e98da30.md",
+            "slug": "2026-03-04-55251e98da30",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        },
+        "FeishuDocSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "document_id": "RgmYdbK8RoEra8xJ177caDidn5w"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-04T13:26:31.754555+00:00",
+      "items_count": 7,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-03-04-d5fd790a9125.md",
+            "slug": "2026-03-04-d5fd790a9125",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        },
+        "FeishuDocSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "document_id": "Liy6dqOYXokJ6PxYJ8Rcp8Nxn6b"
           }
         }
       }
@@ -275,6 +321,258 @@
       "FeishuDocSink": {
         "status": "success",
         "updated_at": "2026-03-04T06:31:03.244486+00:00",
+        "error": null
+      }
+    },
+    "https://www.rfc-editor.org/rfc/rfc9849.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T10:41:39.102631+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T10:41:39.102799+00:00",
+        "error": null
+      }
+    },
+    "https://simonwillison.net/guides/agentic-engineering-patterns": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T10:41:39.102635+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T10:41:39.102803+00:00",
+        "error": null
+      }
+    },
+    "https://www.eurosky.tech": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T10:41:39.102637+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T10:41:39.102806+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/vladich/pg_jitter": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T10:41:39.102640+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T10:41:39.102809+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1195736": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T10:41:39.102645+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T10:41:39.102812+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1195649": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T10:41:39.102649+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T10:41:39.102815+00:00",
+        "error": null
+      }
+    },
+    "https://entertainment.slashdot.org/story/26/03/04/0013218/game-of-thrones-movie-in-the-works": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T10:41:39.102658+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T10:41:39.102818+00:00",
+        "error": null
+      }
+    },
+    "https://science.slashdot.org/story/26/03/03/2358209/nasa-repairs-artemis-2-rocket-continues-eyeing-april-moon-launch": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T10:41:39.102663+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T10:41:39.102821+00:00",
+        "error": null
+      }
+    },
+    "https://apple.slashdot.org/story/26/03/03/2049253/a-possible-us-government-iphone-hacking-toolkit-is-now-in-the-hands-of-foreign-spies-criminals": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T10:41:39.102667+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T10:41:39.102824+00:00",
+        "error": null
+      }
+    },
+    "https://developers.slashdot.org/story/26/03/04/0039214/openai-is-developing-an-alternative-to-github": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T10:41:39.102671+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T10:41:39.102827+00:00",
+        "error": null
+      }
+    },
+    "https://tech.slashdot.org/story/26/03/03/2040230/google-chrome-is-switching-to-a-two-week-release-cycle": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T10:41:39.102675+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T10:41:39.102830+00:00",
+        "error": null
+      }
+    },
+    "https://tech.slashdot.org/story/26/03/03/1951222/libreoffice-says-its-ui-is-way-better-than-microsoft-offices": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T10:41:39.102679+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T10:41:39.102833+00:00",
+        "error": null
+      }
+    },
+    "https://yro.slashdot.org/story/26/03/03/1926214/metas-ai-display-glasses-reportedly-share-intimate-videos-with-human-moderators": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T10:41:39.102682+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T10:41:39.102836+00:00",
+        "error": null
+      }
+    },
+    "https://yro.slashdot.org/story/26/03/03/1918247/openai-amends-pentagon-deal-as-sam-altman-admits-it-looks-sloppy": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T10:41:39.102685+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T10:41:39.102839+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/KeygraphHQ/shannon": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T13:26:31.754709+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T13:26:31.754831+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/aquasecurity/trivy": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T13:26:31.754713+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T13:26:31.754837+00:00",
+        "error": null
+      }
+    },
+    "https://iev.ee/blog/resharp-how-we-built-the-fastest-regex-in-fsharp": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T13:26:31.754715+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T13:26:31.754841+00:00",
+        "error": null
+      }
+    },
+    "https://jiga.io/about-us": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T13:26:31.754717+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T13:26:31.754844+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1195630": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T13:26:31.754719+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T13:26:31.754847+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1195788": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T13:26:31.754721+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T13:26:31.754851+00:00",
+        "error": null
+      }
+    },
+    "https://slashdot.org/story/26/03/04/0017232/chatgpt-gets-gpt-53-instant-update-with-less-cringe-fewer-hallucinations": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T13:26:31.754727+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T13:26:31.754855+00:00",
         "error": null
       }
     }

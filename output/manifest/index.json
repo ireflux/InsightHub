@@ -1,7 +1,53 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-03-04T14:30:59.548856+08:00",
+  "generated_at": "2026-03-04T21:26:28.242680+08:00",
   "posts": [
+    {
+      "id": "2026-03-04-d5fd790a9125",
+      "run_id": "d5fd790a9125",
+      "date": "2026-03-04",
+      "title": "每日技术趋势观察 2026-03-04",
+      "slug": "2026-03-04-d5fd790a9125",
+      "markdown_path": "posts/2026-03-04-d5fd790a9125.md",
+      "summary": "- [RE#: how we built the fastest regex engine in F#](https://iev.ee/blog/resharp-how-we-built-the-fastest-regex-in-fsharp/): RE#: how we built the world's fastest regex engine in F# | ian erik varatal",
+      "tags": [
+        "github_trending",
+        "hacker_news",
+        "slashdot",
+        "v2ex_hot"
+      ],
+      "sources": [
+        "GitHub Trending",
+        "Hacker News",
+        "Slashdot",
+        "V2EX Hot"
+      ],
+      "item_count": 7,
+      "is_empty_update": false,
+      "created_at": "2026-03-04T21:26:28.242680+08:00"
+    },
+    {
+      "id": "2026-03-04-55251e98da30",
+      "run_id": "55251e98da30",
+      "date": "2026-03-04",
+      "title": "每日技术趋势观察 2026-03-04",
+      "slug": "2026-03-04-55251e98da30",
+      "markdown_path": "posts/2026-03-04-55251e98da30.md",
+      "summary": "- [OpenAI Is Developing an Alternative To GitHub](https://developers.slashdot.org/story/26/03/04/0039214/openai-is-developing-an-alternative-to-github?utm_source=rss1.0mainlinkanon&utm_medium=feed): O",
+      "tags": [
+        "hacker_news",
+        "slashdot",
+        "v2ex_hot"
+      ],
+      "sources": [
+        "Hacker News",
+        "Slashdot",
+        "V2EX Hot"
+      ],
+      "item_count": 14,
+      "is_empty_update": false,
+      "created_at": "2026-03-04T18:41:35.063845+08:00"
+    },
     {
       "id": "2026-03-04-3665d89b1e03",
       "run_id": "3665d89b1e03",
