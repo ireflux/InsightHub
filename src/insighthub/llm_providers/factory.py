@@ -1,3 +1,4 @@
+import inspect
 from typing import Type
 from insighthub.llm_providers.base import BaseLLMProvider
 from insighthub.llm_providers.custom import CustomAnthropicProvider, CustomOpenAIProvider
@@ -36,7 +37,16 @@ class LLMFactory:
         provider_class = LLMFactory._providers.get(provider_name.lower())
         if not provider_class:
             raise ValueError(f"Unsupported LLM provider: {provider_name}")
-        return provider_class(**kwargs)
+        # Keep workflow_factory simple: pass a superset of kwargs and
+        # dispatch only the parameters supported by each provider constructor.
+        sig = inspect.signature(provider_class.__init__)
+        accepted = {
+            name
+            for name, param in sig.parameters.items()
+            if name != "self" and param.kind in (inspect.Parameter.POSITIONAL_OR_KEYWORD, inspect.Parameter.KEYWORD_ONLY)
+        }
+        filtered_kwargs = {k: v for k, v in kwargs.items() if k in accepted}
+        return provider_class(**filtered_kwargs)
 
     @staticmethod
     def get_available_providers() -> list[str]:
