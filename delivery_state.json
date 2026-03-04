@@ -1,0 +1,282 @@
+{
+  "updated_at": "2026-03-04T06:31:03.244495+00:00",
+  "runs": [
+    {
+      "timestamp": "2026-03-04T06:31:03.244012+00:00",
+      "items_count": 21,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-03-04-3665d89b1e03.md",
+            "slug": "2026-03-04-3665d89b1e03",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        },
+        "FeishuDocSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "document_id": "YlRBdkZSjob3hcx8Ri4cf483nDb"
+          }
+        }
+      }
+    }
+  ],
+  "items": {
+    "https://github.com/msitarzewski/agency-agents": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T06:31:03.244254+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T06:31:03.244424+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/ruvnet/RuView": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T06:31:03.244258+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T06:31:03.244431+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/K-Dense-AI/claude-scientific-skills": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T06:31:03.244262+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T06:31:03.244435+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/moeru-ai/airi": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T06:31:03.244265+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T06:31:03.244438+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/CodebuffAI/codebuff": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T06:31:03.244268+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T06:31:03.244441+00:00",
+        "error": null
+      }
+    },
+    "https://grapheneos.social/@GrapheneOS/116160393783585567": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T06:31:03.244271+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T06:31:03.244444+00:00",
+        "error": null
+      }
+    },
+    "https://terriblesoftware.org/2026/03/03/nobody-gets-promoted-for-simplicity": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T06:31:03.244279+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T06:31:03.244447+00:00",
+        "error": null
+      }
+    },
+    "https://www.bbc.com/news/articles/cly2m5e5ke4o": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T06:31:03.244283+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T06:31:03.244449+00:00",
+        "error": null
+      }
+    },
+    "https://develop--gpvm-website.netlify.app/resources": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T06:31:03.244286+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T06:31:03.244452+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/Ataraxy-Labs/weave": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T06:31:03.244289+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T06:31:03.244455+00:00",
+        "error": null
+      }
+    },
+    "https://www.apple.com/newsroom/2026/03/apple-introduces-macbook-pro-with-all-new-m5-pro-and-m5-max": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T06:31:03.244292+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T06:31:03.244458+00:00",
+        "error": null
+      }
+    },
+    "https://arxiv.org/abs/2603.03251": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T06:31:03.244295+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T06:31:03.244461+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/robertcprice/nCPU": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T06:31:03.244298+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T06:31:03.244464+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1195613": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T06:31:03.244301+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T06:31:03.244467+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1195456": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T06:31:03.244304+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T06:31:03.244469+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1195677": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T06:31:03.244306+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T06:31:03.244472+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1195636": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T06:31:03.244309+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T06:31:03.244475+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1195707": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T06:31:03.244312+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T06:31:03.244478+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1195568": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T06:31:03.244315+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T06:31:03.244481+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1195670": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T06:31:03.244318+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T06:31:03.244483+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1195497": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T06:31:03.244321+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T06:31:03.244486+00:00",
+        "error": null
+      }
+    }
+  }
+}
