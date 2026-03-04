@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-04T10:41:39.102849+00:00",
+  "updated_at": "2026-03-04T13:26:31.754864+00:00",
   "runs": [
     {
       "timestamp": "2026-03-04T06:31:03.244012+00:00",
@@ -43,6 +43,29 @@
           "meta": {
             "status": "success",
             "document_id": "RgmYdbK8RoEra8xJ177caDidn5w"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-04T13:26:31.754555+00:00",
+      "items_count": 7,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-03-04-d5fd790a9125.md",
+            "slug": "2026-03-04-d5fd790a9125",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        },
+        "FeishuDocSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "document_id": "Liy6dqOYXokJ6PxYJ8Rcp8Nxn6b"
           }
         }
       }
@@ -466,6 +489,90 @@
       "FeishuDocSink": {
         "status": "success",
         "updated_at": "2026-03-04T10:41:39.102839+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/KeygraphHQ/shannon": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T13:26:31.754709+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T13:26:31.754831+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/aquasecurity/trivy": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T13:26:31.754713+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T13:26:31.754837+00:00",
+        "error": null
+      }
+    },
+    "https://iev.ee/blog/resharp-how-we-built-the-fastest-regex-in-fsharp": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T13:26:31.754715+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T13:26:31.754841+00:00",
+        "error": null
+      }
+    },
+    "https://jiga.io/about-us": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T13:26:31.754717+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T13:26:31.754844+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1195630": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T13:26:31.754719+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T13:26:31.754847+00:00",
+        "error": null
+      }
+    },
+    "https://www.v2ex.com/t/1195788": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T13:26:31.754721+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T13:26:31.754851+00:00",
+        "error": null
+      }
+    },
+    "https://slashdot.org/story/26/03/04/0017232/chatgpt-gets-gpt-53-instant-update-with-less-cringe-fewer-hallucinations": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T13:26:31.754727+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-04T13:26:31.754855+00:00",
         "error": null
       }
     }
