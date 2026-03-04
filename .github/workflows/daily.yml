@@ -32,13 +32,18 @@ jobs:
 
       - name: Run InsightHub workflow
         env:
+          CUSTOM_OPENAI_BASE_URL: ${{ secrets.CUSTOM_OPENAI_BASE_URL }}
+          LLM_PROVIDER: ${{ secrets.LLM_PROVIDER }}
+          LLM_MODEL: ${{ vars.LLM_MODEL }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+          ZHIPUAI_API_KEY: ${{ secrets.ZHIPUAI_API_KEY }}
+          CUSTOM_OPENAI_API_KEY: ${{ secrets.CUSTOM_OPENAI_API_KEY }}
           FEISHU_APP_ID: ${{ secrets.FEISHU_APP_ID }}
           FEISHU_APP_SECRET: ${{ secrets.FEISHU_APP_SECRET }}
           FEISHU_SPACE_ID: ${{ secrets.FEISHU_SPACE_ID }}
           FEISHU_DOC_ID: ${{ secrets.FEISHU_DOC_ID }}
-          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-          ZHIPUAI_API_KEY: ${{ secrets.ZHIPUAI_API_KEY }}
-          LLM_MODEL: ${{ vars.LLM_MODEL }}
+          
         run: |
           insighthub run
 
