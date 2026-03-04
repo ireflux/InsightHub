@@ -415,13 +415,21 @@ class ContentScorer:
                 if not one:
                     continue
 
+                community_discussion = one.get("community_discussion", 0)
+                engagement_signals = one.get("engagement_signals", 0)
                 breakdown = {
                     "technical_depth_and_novelty": self._clamp_score(one.get("technical_depth_and_novelty", 0)),
-                    "practical_impact": self._clamp_score(one.get("practical_impact", 0)),
-                    "evidence_quality": self._clamp_score(one.get("evidence_quality", 0)),
-                    "topical_relevance_to_batch": self._clamp_score(one.get("topical_relevance_to_batch", 0)),
-                    "cross_domain_insight_potential": self._clamp_score(one.get("cross_domain_insight_potential", 0)),
-                    "narrative_connectivity": self._clamp_score(one.get("narrative_connectivity", 0)),
+                    "practical_impact": self._clamp_score(one.get("practical_impact", one.get("potential_impact", 0))),
+                    "evidence_quality": self._clamp_score(one.get("evidence_quality", one.get("writing_quality", 0))),
+                    "topical_relevance_to_batch": self._clamp_score(
+                        one.get("topical_relevance_to_batch", community_discussion)
+                    ),
+                    "cross_domain_insight_potential": self._clamp_score(
+                        one.get("cross_domain_insight_potential", engagement_signals)
+                    ),
+                    "narrative_connectivity": self._clamp_score(
+                        one.get("narrative_connectivity", (community_discussion + engagement_signals) / 2)
+                    ),
                 }
                 score = self._clamp_score(one.get("score", self._weighted_score(breakdown)))
                 reason = str(one.get("reason", "")).strip() or "LLM批量评分。"

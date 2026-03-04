@@ -21,13 +21,13 @@ InsightHub is a production-ready, composable workflow engine that:
 
 Perfect for teams building tech briefings, knowledge bases, or automated content curation systems.
 
-## 鉁?Key Features
+## Key Features
 
 - **Multi-source aggregation**: Fetch from GitHub Trending, Hacker News, V2EX, Zhihu Hot, and Slashdot
 - **Flexible LLM support**: Primary/fallback providers (Zhipu AI, OpenRouter) with automatic failover
 - **Intelligent content scoring**: Rule-based + optional LLM scoring with customizable weights
 - **Multiple output formats**: Markdown files and Feishu documents with templated rendering
-- **Composable workflows**: Run individual stages (fetch 鈫?score 鈫?summarize 鈫?distribute) or full pipeline
+- **Composable workflows**: Run individual stages (fetch -> score -> summarize -> distribute) or full pipeline
 - **Deduplication & history**: Track processed items and avoid duplicates across runs
 - **Structured observability**: JSON-formatted logs with run context tracking
 - **Extensible architecture**: Plugin-based sources and sinks with consistent interfaces
@@ -68,7 +68,7 @@ pip install -e .
 ### Run the Full Workflow
 
 ```bash
-# Run complete pipeline: fetch 鈫?score 鈫?summarize 鈫?distribute
+# Run complete pipeline: fetch -> score -> summarize -> distribute
 insighthub run
 ```
 
@@ -88,17 +88,17 @@ insighthub summarize --input output/raw_data.json --output output/summary.md
 insighthub distribute --input output/summary.md --items output/raw_data.json
 ```
 
-## 馃彈锔?Architecture
+## Architecture
 
 ### Data Flow
 
 ```
-Sources 鈫?Fetch & Content Extraction 鈫?Deduplication
-    鈫?Score (Rule-based + Optional LLM)
-    鈫?Filter & Select
-    鈫?Summarize (LLM with Prompt Template)
-    鈫?Render & Distribute (Markdown, Feishu)
-    鈫?Track History & Delivery State
+Sources -> Fetch & Content Extraction -> Deduplication
+    -> Score (Rule-based + Optional LLM)
+    -> Filter & Select
+    -> Summarize (LLM with Prompt Template)
+    -> Render & Distribute (Markdown, Feishu)
+    -> Track History & Delivery State
 ```
 
 ### Core Components
@@ -194,10 +194,11 @@ scoring:
   keep_top_n: 20
   weights:
     technical_depth_and_novelty: 0.30
-    potential_impact: 0.25
-    writing_quality: 0.15
-    community_discussion: 0.15
-    engagement_signals: 0.15
+    practical_impact: 0.25
+    evidence_quality: 0.15
+    topical_relevance_to_batch: 0.15
+    cross_domain_insight_potential: 0.10
+    narrative_connectivity: 0.05
 
 state:
   max_history_records: 3000
@@ -346,10 +347,11 @@ scoring:
   max_items_for_llm_scoring: 20      # Batch size for LLM scoring
   weights:                           # Score dimension weights
     technical_depth_and_novelty: 0.30
-    potential_impact: 0.25
-    writing_quality: 0.15
-    community_discussion: 0.15
-    engagement_signals: 0.15
+    practical_impact: 0.25
+    evidence_quality: 0.15
+    topical_relevance_to_batch: 0.15
+    cross_domain_insight_potential: 0.10
+    narrative_connectivity: 0.05
 ```
 
 **Scoring Tiers**:
@@ -460,14 +462,14 @@ When enabled, InsightHub:
 3. Blends scores using alpha parameter
 4. Uses LLM's reasoning for summary generation
 
-## 馃洜锔?Advanced Usage
+## Advanced Usage
 
 ### Source-Specific Parameters
 
 **Zhihu Hot (`zhihu_hot`)**:
 ```yaml
 params:
-  keyword_filter: "缂栫▼|AI|娣卞害瀛︿範|Python"  # Regex filter on title
+  keyword_filter: "??|AI|????|Python"  # Regex filter on title
 ```
 
 ### Running Individual Stages
@@ -495,7 +497,7 @@ Create custom templates in `prompts/`:
 
 Template variables are passed via config's `prompt.variables`.
 
-## 馃И Development
+## Development
 
 ### Install Dev Dependencies
 
@@ -650,4 +652,3 @@ For issues, questions, or suggestions, please open an issue on the repository.
 ---
 
 **Built with 鉂わ笍 for knowledge discovery and content curation**
-

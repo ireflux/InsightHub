@@ -4,7 +4,7 @@ import logging
 from datetime import datetime
 from typing import Any, Dict, List, Optional
 from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, model_validator
 
 from insighthub.errors import ConfigValidationError
 
@@ -95,6 +95,52 @@ class ScoringWeights(BaseModel):
     topical_relevance_to_batch: float = 0.20
     cross_domain_insight_potential: float = 0.10
     narrative_connectivity: float = 0.05
+
+    @model_validator(mode="before")
+    @classmethod
+    def normalize_legacy_fields(cls, data: Any) -> Any:
+        """
+        Backward compatibility for older scoring weight schema:
+        - potential_impact -> practical_impact
+        - writing_quality -> evidence_quality
+        - community_discussion -> topical_relevance_to_batch
+        - engagement_signals -> cross_domain_insight_potential
+        - narrative_connectivity defaults to avg(community_discussion, engagement_signals)
+        """
+        if not isinstance(data, dict):
+            return data
+
+        raw = dict(data)
+        legacy_keys = {"potential_impact", "writing_quality", "community_discussion", "engagement_signals"}
+        if not any(k in raw for k in legacy_keys):
+            return raw
+
+        logger.warning(
+            "Detected legacy scoring.weights field names; auto-mapping to current schema.",
+            extra={"event": "settings.scoring.weights_legacy_fields_mapped"},
+        )
+
+        if "practical_impact" not in raw and "potential_impact" in raw:
+            raw["practical_impact"] = raw["potential_impact"]
+        if "evidence_quality" not in raw and "writing_quality" in raw:
+            raw["evidence_quality"] = raw["writing_quality"]
+        if "topical_relevance_to_batch" not in raw and "community_discussion" in raw:
+            raw["topical_relevance_to_batch"] = raw["community_discussion"]
+        if "cross_domain_insight_potential" not in raw and "engagement_signals" in raw:
+            raw["cross_domain_insight_potential"] = raw["engagement_signals"]
+
+        if "narrative_connectivity" not in raw:
+            candidates = []
+            for k in ("community_discussion", "engagement_signals"):
+                value = raw.get(k)
+                if isinstance(value, (int, float)):
+                    candidates.append(float(value))
+            if candidates:
+                raw["narrative_connectivity"] = sum(candidates) / len(candidates)
+
+        for key in legacy_keys:
+            raw.pop(key, None)
+        return raw
 
 
 class ScoringConfig(BaseModel):

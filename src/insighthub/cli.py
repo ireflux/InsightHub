@@ -65,10 +65,17 @@ def build_parser() -> argparse.ArgumentParser:
     p_summarize = subparsers.add_parser("summarize", help="Summarize items using AI")
     p_summarize.add_argument("--input", "-i", required=True, help="Input JSON file with items")
     p_summarize.add_argument("--output", "-o", default="output/summary.md", help="Output Markdown file")
+    p_summarize.add_argument(
+        "--items-output",
+        help="Output JSON file for items that actually entered final summary (default: <output>.items.json)",
+    )
 
     p_dist = subparsers.add_parser("distribute", help="Send content to sinks")
     p_dist.add_argument("--input", "-i", required=True, help="Input Markdown file content")
-    p_dist.add_argument("--items", help="Input JSON file with items (optional, for metadata)")
+    p_dist.add_argument(
+        "--items",
+        help="Input JSON file with summarized items metadata (default: auto-detect <input>.items.json if exists)",
+    )
     p_dist.add_argument("--no-history", action="store_true", help="Do not update history")
 
     subparsers.add_parser("run", help="Run the full workflow")
@@ -153,6 +160,10 @@ async def run_cli():
             os.makedirs(os.path.dirname(os.path.abspath(output_path)), exist_ok=True)
             engine.save_content(content, output_path)
             logger.info(f"Summary saved to {output_path}")
+            items_output_path = args.items_output or f"{os.path.splitext(output_path)[0]}.items.json"
+            os.makedirs(os.path.dirname(os.path.abspath(items_output_path)), exist_ok=True)
+            engine.save_items(items, items_output_path)
+            logger.info(f"Summarized items saved to {items_output_path}")
         else:
             logger.warning("No items loaded to summarize.")
 
@@ -160,7 +171,13 @@ async def run_cli():
         logger.info("Executing subcommand: distribute")
         content = engine.load_content(args.input)
         if content:
-            items = engine.load_items(args.items) if args.items else []
+            items_path = args.items
+            if not items_path:
+                default_items_path = f"{os.path.splitext(args.input)[0]}.items.json"
+                if os.path.exists(default_items_path):
+                    items_path = default_items_path
+                    logger.info(f"Auto-detected summarized items file: {items_path}")
+            items = engine.load_items(items_path) if items_path else []
             await engine.distribute(content, items, update_history=not args.no_history)
             logger.info("Distribution completed.")
         else:

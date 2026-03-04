@@ -114,10 +114,11 @@ scoring:
   max_items_for_llm_scoring: 20
   weights:
     technical_depth_and_novelty: 0.30
-    potential_impact: 0.25
-    writing_quality: 0.15
-    community_discussion: 0.15
-    engagement_signals: 0.15
+    practical_impact: 0.25
+    evidence_quality: 0.15
+    topical_relevance_to_batch: 0.15
+    cross_domain_insight_potential: 0.10
+    narrative_connectivity: 0.05
 
 # Sinks configuration
 sinks:

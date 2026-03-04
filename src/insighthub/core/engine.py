@@ -172,8 +172,7 @@ class InsightEngine:
             items_for_summary = await self.score_items(new_items)
 
         curated_markdown = await self.summarize(items_for_summary)
-        # Keep history for all fetched items to avoid repeatedly scoring low-priority items.
-        await self.distribute(curated_markdown, new_items)
+        await self.distribute(curated_markdown, items_for_summary)
 
     async def _fetch_from_source(self, source: BaseSource) -> List[NewsItem]:
         source_name = getattr(source, "name", source.__class__.__name__)
