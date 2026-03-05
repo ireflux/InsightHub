@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-04T16:00:43.400812+00:00",
+  "updated_at": "2026-03-05T10:40:16.718756+00:00",
   "runs": [
     {
       "timestamp": "2026-03-04T16:00:43.400441+00:00",
@@ -20,6 +20,29 @@
           "meta": {
             "status": "success",
             "document_id": "DPdPdmGproLmruxkkMpcwkk6nfe"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-05T10:40:16.718352+00:00",
+      "items_count": 8,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-03-05-878069fc8b56.md",
+            "slug": "2026-03-05-878069fc8b56",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        },
+        "FeishuDocSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "document_id": "HZhbdQdYAolOGux1KQrc0xtRnvh"
           }
         }
       }
@@ -119,6 +142,102 @@
       "FeishuDocSink": {
         "status": "success",
         "updated_at": "2026-03-04T16:00:43.400804+00:00",
+        "error": null
+      }
+    },
+    "https://arstechnica.com/gadgets/2026/03/amd-ryzen-ai-400-cpus-will-bring-upgraded-graphics-to-socket-am5-desktops": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-05T10:40:16.718571+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-05T10:40:16.718715+00:00",
+        "error": null
+      }
+    },
+    "https://it.slashdot.org/story/26/03/04/2314224/us-cybersecurity-adds-exploited-vmware-aria-operations-to-kev-catalog": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-05T10:40:16.718576+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-05T10:40:16.718721+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/googleworkspace/cli": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-05T10:40:16.718581+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-05T10:40:16.718725+00:00",
+        "error": null
+      }
+    },
+    "https://yro.slashdot.org/story/26/03/04/1937236/father-sues-google-claiming-gemini-chatbot-drove-son-into-fatal-delusion": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-05T10:40:16.718584+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-05T10:40:16.718729+00:00",
+        "error": null
+      }
+    },
+    "https://games.slashdot.org/story/26/03/04/1929211/sony-pulls-back-from-playstation-games-on-pc": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-05T10:40:16.718588+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-05T10:40:16.718734+00:00",
+        "error": null
+      }
+    },
+    "https://tech.slashdot.org/story/26/03/04/1856240/vehicle-tire-pressure-sensors-enable-silent-tracking": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-05T10:40:16.718591+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-05T10:40:16.718738+00:00",
+        "error": null
+      }
+    },
+    "https://developers.slashdot.org/story/26/03/04/2218226/google-ends-its-30-app-store-fee-welcomes-third-party-app-stores": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-05T10:40:16.718600+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-05T10:40:16.718741+00:00",
+        "error": null
+      }
+    },
+    "https://tech.slashdot.org/story/26/03/04/197220/computer-scientists-caution-against-internet-age-verification-mandates": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-05T10:40:16.718605+00:00",
+        "error": null
+      },
+      "FeishuDocSink": {
+        "status": "success",
+        "updated_at": "2026-03-05T10:40:16.718746+00:00",
         "error": null
       }
     }
