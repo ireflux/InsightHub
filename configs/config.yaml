@@ -6,8 +6,8 @@
 # - OPENROUTER_API_KEY
 llm:
   primary:
-    provider: "nvidia"
-    model: "minimaxai/minimax-m2.5"
+    provider: "zhipuai"
+    model: "glm-4.7-flash"
   fallbacks: []
   # fallbacks:
   #   - provider: "openrouter"
@@ -32,7 +32,7 @@ sources:
       params: {}
     - id: "v2ex_main"
       type: "v2ex_hot"
-      enabled: true
+      enabled: false
       max_items: 8
       params: {}
     - id: "slashdot_main"
@@ -40,21 +40,21 @@ sources:
       enabled: true
       max_items: 8
       params: {}
-    # - id: "zhihu_ai"
-    #   type: "zhihu_hot"
-    #   enabled: false
-    #   params:
-    #     keyword_filter: "编程|AI|Python|技术|机器学习|深度学习"
+    - id: "zhihu_ai"
+      type: "zhihu_hot"
+      enabled: false
+      params:
+        keyword_filter: ""
 
 prompt:
-  structure: "professional_briefing_v4"
-  style: "professional_neutral_v4"
-  scoring: "technical_content_scoring_v2"
+  structure: "morning_news_poetic_v1"
+  style: "poetic_brief_cn_v1"
+  scoring: "comment_priority_reasoning_v1"
   variables: {}
 
 publishing:
   title:
-    template: "每日技术趋势观察 {date}"
+    template: "每日趋势观察 {date}"
     date_format: "%Y-%m-%d"
     strip_leading_h1: true
 
@@ -107,18 +107,10 @@ runtime:
 
 scoring:
   enabled: true
-  use_llm: true
-  llm_blend_alpha: 0.7
-  min_score_for_summary: 5.0
+  use_llm: false
+  min_comments_for_summary: 1
   keep_top_n: 8
-  max_items_for_llm_scoring: 20
-  weights:
-    technical_depth_and_novelty: 0.30
-    practical_impact: 0.25
-    evidence_quality: 0.15
-    topical_relevance_to_batch: 0.15
-    cross_domain_insight_potential: 0.10
-    narrative_connectivity: 0.05
+  scoring_prompt_name: "comment_priority_reasoning_v1"
 
 # Sinks configuration
 sinks:
@@ -132,7 +124,7 @@ sinks:
         output_dir: "output"
     - id: "feishu_daily"
       type: "feishu_doc"
-      enabled: true
+      enabled: false
       params:
         space_id: "7599692883666422737"
         # doc_id: ""

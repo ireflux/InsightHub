@@ -18,7 +18,7 @@ def main() -> None:
     parser.add_argument("--content-root", default="output")
     parser.add_argument("--output-dir", default="site")
     parser.add_argument("--site-url", default=_default_site_url())
-    parser.add_argument("--site-title", default="每日技术趋势观察")
+    parser.add_argument("--site-title", default="每日趋势观察")
     parser.add_argument("--posts-per-page", type=int, default=20)
     args = parser.parse_args()
 

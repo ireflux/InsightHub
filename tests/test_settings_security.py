@@ -98,7 +98,7 @@ sinks:
       params:
         output_dir: output
 scoring:
-  min_score_for_summary: 12
+  min_comments_for_summary: -1
 """
         with tempfile.NamedTemporaryFile("w", suffix=".yaml", delete=False, encoding="utf-8") as tmp:
             tmp.write(config_content)

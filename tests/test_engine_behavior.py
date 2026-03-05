@@ -319,7 +319,7 @@ class TestEngineDedup(unittest.IsolatedAsyncioTestCase):
             sinks=[DummySink()],
             history_file=hist_path,
             delivery_state_file=delivery_path,
-            scoring_config=ScoringConfig(enabled=True, use_llm=False, min_score_for_summary=5.0, keep_top_n=1),
+            scoring_config=ScoringConfig(enabled=True, use_llm=False, min_comments_for_summary=1, keep_top_n=1),
         )
 
         try:

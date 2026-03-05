@@ -28,7 +28,7 @@ class MarkdownFileSink(BaseSink):
         self.output_dir = output_dir
         self.timezone_name = timezone_name
         self.title_policy = title_policy or TitlePolicy(
-            template="每日技术趋势观察 {date}",
+            template="每日趋势观察 {date}",
             date_format="%Y-%m-%d",
             timezone_name=timezone_name,
             strip_leading_h1=True,

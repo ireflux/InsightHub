@@ -90,15 +90,18 @@ async def run_cli():
     logger = setup_logging(run_id)
     logger.info("Starting InsightHub workflow.", extra={"event": "workflow.start", "command": args.command or "run"})
 
-    try:
-        settings.validate_runtime_requirements()
-    except ConfigValidationError as e:
-        logger.error("Runtime settings validation failed.", extra={"event": "workflow.validation_failed", "error": str(e)})
-        return
+    requires_llm = args.command in (None, "run", "summarize")
+    llm_provider = None
+    if requires_llm:
+        try:
+            settings.validate_runtime_requirements()
+        except ConfigValidationError as e:
+            logger.error("Runtime settings validation failed.", extra={"event": "workflow.validation_failed", "error": str(e)})
+            return
 
-    llm_provider = build_llm_provider(settings, logger=logger)
-    if llm_provider is None:
-        return
+        llm_provider = build_llm_provider(settings, logger=logger)
+        if llm_provider is None:
+            return
 
     sources = build_sources(settings, logger=logger)
     if not sources:
@@ -137,6 +140,13 @@ async def run_cli():
         timezone_name=settings.runtime.timezone,
         title_policy=title_policy,
     )
+
+    if requires_llm and llm_provider is None:
+        logger.error(
+            "LLM provider is required for this command but was not initialized.",
+            extra={"event": "workflow.llm_required_missing", "command": args.command or "run"},
+        )
+        return
 
     if args.command == "fetch":
         logger.info("Executing subcommand: fetch")

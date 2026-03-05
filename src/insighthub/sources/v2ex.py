@@ -70,7 +70,7 @@ class V2EXHotSource(BaseSource):
                 url=url,
                 source=self.name,
                 content=content,
-                original_data=item
+                original_data={**item, "comment_count": int(item.get("replies", 0) or 0)}
             ))
         return items
 

@@ -72,7 +72,7 @@ class PromptConfig(BaseModel):
 
 
 class PublishingTitleConfig(BaseModel):
-    template: str = "每日技术趋势观察 {date}"
+    template: str = "每日趋势观察 {date}"
     date_format: str = "%Y-%m-%d"
     timezone: Optional[str] = None
     strip_leading_h1: bool = True
@@ -88,70 +88,33 @@ class StateConfig(BaseModel):
     max_delivery_runs: int = 100
 
 
-class ScoringWeights(BaseModel):
-    technical_depth_and_novelty: float = 0.25
-    practical_impact: float = 0.20
-    evidence_quality: float = 0.20
-    topical_relevance_to_batch: float = 0.20
-    cross_domain_insight_potential: float = 0.10
-    narrative_connectivity: float = 0.05
-
-    @model_validator(mode="before")
-    @classmethod
-    def normalize_legacy_fields(cls, data: Any) -> Any:
-        """
-        Backward compatibility for older scoring weight schema:
-        - potential_impact -> practical_impact
-        - writing_quality -> evidence_quality
-        - community_discussion -> topical_relevance_to_batch
-        - engagement_signals -> cross_domain_insight_potential
-        - narrative_connectivity defaults to avg(community_discussion, engagement_signals)
-        """
-        if not isinstance(data, dict):
-            return data
-
-        raw = dict(data)
-        legacy_keys = {"potential_impact", "writing_quality", "community_discussion", "engagement_signals"}
-        if not any(k in raw for k in legacy_keys):
-            return raw
-
-        logger.warning(
-            "Detected legacy scoring.weights field names; auto-mapping to current schema.",
-            extra={"event": "settings.scoring.weights_legacy_fields_mapped"},
-        )
-
-        if "practical_impact" not in raw and "potential_impact" in raw:
-            raw["practical_impact"] = raw["potential_impact"]
-        if "evidence_quality" not in raw and "writing_quality" in raw:
-            raw["evidence_quality"] = raw["writing_quality"]
-        if "topical_relevance_to_batch" not in raw and "community_discussion" in raw:
-            raw["topical_relevance_to_batch"] = raw["community_discussion"]
-        if "cross_domain_insight_potential" not in raw and "engagement_signals" in raw:
-            raw["cross_domain_insight_potential"] = raw["engagement_signals"]
-
-        if "narrative_connectivity" not in raw:
-            candidates = []
-            for k in ("community_discussion", "engagement_signals"):
-                value = raw.get(k)
-                if isinstance(value, (int, float)):
-                    candidates.append(float(value))
-            if candidates:
-                raw["narrative_connectivity"] = sum(candidates) / len(candidates)
-
-        for key in legacy_keys:
-            raw.pop(key, None)
-        return raw
-
-
 class ScoringConfig(BaseModel):
     enabled: bool = False
     use_llm: bool = False
-    llm_blend_alpha: float = 0.7
-    min_score_for_summary: float = 0.0
+    min_comments_for_summary: int = 0
     keep_top_n: Optional[int] = None
-    max_items_for_llm_scoring: int = 20
-    weights: ScoringWeights = Field(default_factory=ScoringWeights)
-    scoring_prompt_name: str = "technical_content_scoring_v2"
+    scoring_prompt_name: str = "comment_priority_reasoning_v1"
+
+    @model_validator(mode="before")
+    @classmethod
+    def migrate_legacy_fields(cls, data: Any) -> Any:
+        if not isinstance(data, dict):
+            return data
+        raw = dict(data)
+        if "min_comments_for_summary" not in raw and "min_score_for_summary" in raw:
+            legacy = raw.get("min_score_for_summary")
+            try:
+                raw["min_comments_for_summary"] = max(0, int(float(legacy)))
+                logger.warning(
+                    "Detected legacy scoring.min_score_for_summary; mapped to scoring.min_comments_for_summary.",
+                    extra={"event": "settings.scoring.min_score_legacy_mapped"},
+                )
+            except (TypeError, ValueError):
+                pass
+
+        for key in ("min_score_for_summary", "llm_blend_alpha", "max_items_for_llm_scoring", "weights"):
+            raw.pop(key, None)
+        return raw
 
 
 class RetryPolicyConfig(BaseModel):
@@ -349,20 +312,10 @@ class AppSettings(BaseModel):
         if not self.runtime.observability.file_name_prefix.strip():
             raise ConfigValidationError("runtime.observability.file_name_prefix must not be empty.")
 
-        if not (0.0 <= self.scoring.min_score_for_summary <= 10.0):
-            raise ConfigValidationError("scoring.min_score_for_summary must be within [0, 10].")
-        if not (0.0 <= self.scoring.llm_blend_alpha <= 1.0):
-            raise ConfigValidationError("scoring.llm_blend_alpha must be within [0, 1].")
-        if self.scoring.max_items_for_llm_scoring <= 0:
-            raise ConfigValidationError("scoring.max_items_for_llm_scoring must be > 0.")
+        if self.scoring.min_comments_for_summary < 0:
+            raise ConfigValidationError("scoring.min_comments_for_summary must be >= 0.")
         if self.scoring.keep_top_n is not None and self.scoring.keep_top_n <= 0:
             raise ConfigValidationError("scoring.keep_top_n must be > 0 when provided.")
-
-        weight_values = self.scoring.weights.model_dump().values()
-        if any(v < 0 for v in weight_values):
-            raise ConfigValidationError("scoring.weights values must be >= 0.")
-        if sum(weight_values) <= 0:
-            raise ConfigValidationError("scoring.weights must have a positive total.")
 
     def validate_runtime_requirements(self) -> None:
         endpoints = [("llm.primary", self.llm.primary)] + [

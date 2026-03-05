@@ -74,6 +74,7 @@ class ZhihuHotSource(BaseSource):
 
             excerpt = target.get("excerpt", "No excerpt available.")
             content = f"Title: {title}\n\nExcerpt: {excerpt}"
+            answer_count = int(target.get("answer_count", 0) or 0)
             
             items.append(NewsItem(
                 id=url,
@@ -81,7 +82,7 @@ class ZhihuHotSource(BaseSource):
                 url=url,
                 source=self.name,
                 content=content,
-                original_data=item
+                original_data={**item, "comment_count": answer_count}
             ))
         return items
 

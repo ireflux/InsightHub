@@ -99,6 +99,7 @@ class HackerNewsSource(BaseSource):
                         "story_id": story_id,
                         "hn_score": hn_score,
                         "hn_comments": hn_comments,
+                        "comment_count": hn_comments,
                     }
                 ))
             except Exception as e:

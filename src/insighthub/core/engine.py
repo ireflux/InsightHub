@@ -64,7 +64,7 @@ class InsightEngine:
         self.dedup_config = dedup_config or RuntimeDedupConfig()
         self.timezone_name = timezone_name
         self.title_policy = title_policy or TitlePolicy(
-            template="每日技术趋势观察 {date}",
+            template="每日趋势观察 {date}",
             date_format="%Y-%m-%d",
             timezone_name=timezone_name,
             strip_leading_h1=True,
@@ -304,7 +304,7 @@ class InsightEngine:
                 "event": "engine.score.completed",
                 "items_count": len(scored_items),
                 "selected_count": len(selected),
-                "threshold": self.scoring_config.min_score_for_summary,
+                "min_comments_for_summary": self.scoring_config.min_comments_for_summary,
             },
         )
         return selected or scored_items[:1]

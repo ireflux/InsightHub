@@ -26,7 +26,7 @@ def build_site(
     content_root: str,
     output_dir: str,
     site_url: str,
-    site_title: str = "每日技术趋势观察",
+    site_title: str = "每日趋势观察",
     posts_per_page: int = 20,
 ) -> Dict[str, Any]:
     manifest = _load_manifest(manifest_path)

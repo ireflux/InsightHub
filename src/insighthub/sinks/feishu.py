@@ -35,7 +35,7 @@ class FeishuDocSink(BaseSink):
         self.app_id = app_id
         self.app_secret = app_secret
         self.title_policy = title_policy or TitlePolicy(
-            template="每日技术趋势观察 {date}",
+            template="每日趋势观察 {date}",
             date_format="%Y-%m-%d",
             timezone_name="Asia/Shanghai",
             strip_leading_h1=True,
