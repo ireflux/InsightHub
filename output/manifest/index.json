@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-03-06T12:21:47.256163+08:00",
+  "generated_at": "2026-03-06T18:34:17.639155+08:00",
   "posts": [
+    {
+      "id": "2026-03-06-6145eba42051",
+      "run_id": "6145eba42051",
+      "date": "2026-03-06",
+      "title": "每日趋势观察 2026-03-06",
+      "slug": "2026-03-06-6145eba42051",
+      "markdown_path": "posts/2026-03-06-6145eba42051.md",
+      "summary": "- [System76 on Age Verification Laws](https://blog.system76.com/post/system76-on-age-verification/): System76 on Age Verification Laws - System76 Blog Computers Engineered to Unleash Your Potential la",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 5,
+      "is_empty_update": false,
+      "created_at": "2026-03-06T18:34:17.639155+08:00"
+    },
     {
       "id": "2026-03-06-a93f30c89669",
       "run_id": "a93f30c89669",

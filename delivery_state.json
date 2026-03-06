@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-06T04:21:47.257941+00:00",
+  "updated_at": "2026-03-06T10:34:17.640864+00:00",
   "runs": [
     {
       "timestamp": "2026-03-06T04:21:47.257723+00:00",
@@ -11,6 +11,22 @@
             "status": "success",
             "file_path": "output/posts/2026-03-06-a93f30c89669.md",
             "slug": "2026-03-06-a93f30c89669",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-06T10:34:17.640675+00:00",
+      "items_count": 5,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-03-06-6145eba42051.md",
+            "slug": "2026-03-06-6145eba42051",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -72,6 +88,41 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-03-06T04:21:47.257931+00:00",
+        "error": null
+      }
+    },
+    "https://blog.system76.com/post/system76-on-age-verification": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-06T10:34:17.640836+00:00",
+        "error": null
+      }
+    },
+    "https://grith.ai/blog/clinejection-when-your-ai-tool-installs-another": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-06T10:34:17.640841+00:00",
+        "error": null
+      }
+    },
+    "https://yasint.dev/we-might-all-be-ai-engineers-now": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-06T10:34:17.640845+00:00",
+        "error": null
+      }
+    },
+    "https://dev.moment.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-06T10:34:17.640848+00:00",
+        "error": null
+      }
+    },
+    "https://runxiyu.org/comp/gplproxy": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-06T10:34:17.640851+00:00",
         "error": null
       }
     }
