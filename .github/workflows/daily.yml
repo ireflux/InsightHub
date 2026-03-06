@@ -47,7 +47,7 @@ jobs:
           FEISHU_DOC_ID: ${{ secrets.FEISHU_DOC_ID }}
           
         run: |
-          insighthub run
+          uv run python -m insighthub run
 
       - name: Commit and push daily artifacts
         uses: stefanzweifel/git-auto-commit-action@v5
