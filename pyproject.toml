@@ -20,6 +20,7 @@ dependencies = [
   "sniffio",
   "aiofiles",
   "markdown",
+  "tzdata; platform_system == 'Windows'",
 ]
 
 [project.scripts]
