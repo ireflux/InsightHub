@@ -1,0 +1,28 @@
+{
+  "site_timezone": "Asia/Shanghai",
+  "generated_at": "2026-03-07T23:32:37.688416+08:00",
+  "posts": [
+    {
+      "id": "2026-03-07-32fe9f5c43bd",
+      "run_id": "32fe9f5c43bd",
+      "date": "2026-03-07",
+      "title": "每日趋势观察 2026-03-07",
+      "slug": "2026-03-07-32fe9f5c43bd",
+      "markdown_path": "posts/2026-03-07-32fe9f5c43bd.md",
+      "summary": "今日科技圈聚焦于AI编程辅助工具对开发者体验的重塑，以及关键基础设施与新兴技术面临的挑战与突破。主线围绕AI如何降低技术门槛、量子计算的国家战略布局，以及传统IT系统在应对海量数据时的架构瓶颈展开。",
+      "tags": [
+        "github_trending",
+        "hacker_news",
+        "slashdot"
+      ],
+      "sources": [
+        "GitHub Trending",
+        "Hacker News",
+        "Slashdot"
+      ],
+      "item_count": 21,
+      "is_empty_update": false,
+      "created_at": "2026-03-07T23:32:37.688416+08:00"
+    }
+  ]
+}
