@@ -93,10 +93,7 @@ class ContentScorer:
                 -self._comment_count(x),
             ),
         )
-        filtered = [item for item in ranked if self._comment_count(item) >= self.config.min_comments_for_summary]
-        if self.config.keep_top_n is not None:
-            filtered = filtered[: self.config.keep_top_n]
-        return filtered
+        return ranked
 
     async def _llm_reason_batch(self, entries: List[Dict[str, object]]) -> Dict[int, str]:
         payload: List[Dict[str, object]] = []

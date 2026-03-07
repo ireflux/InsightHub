@@ -79,14 +79,14 @@ class CustomOpenAIProvider(BaseLLMProvider):
             raise RuntimeError(f"Invalid custom_openai response format: {data}") from e
 
     async def summarize(self, content: str, prompt_template: str) -> str:
-        prompt = prompt_template.format(content=content)
+        prompt = self.render_prompt(prompt_template, content=content)
         try:
             return await self._chat(prompt)
         except Exception as e:
             raise LLMProcessingError(f"custom_openai summarization failed: {e}") from e
 
     async def classify(self, content: str, categories: List[str], prompt_template: str) -> str:
-        prompt = prompt_template.format(content=content, categories=", ".join(categories))
+        prompt = self.render_prompt(prompt_template, content=content, categories=", ".join(categories))
         try:
             result = await self._chat(prompt)
             for category in categories:
@@ -172,14 +172,14 @@ class CustomAnthropicProvider(BaseLLMProvider):
             raise RuntimeError(f"Invalid custom_anthropic response format: {data}") from e
 
     async def summarize(self, content: str, prompt_template: str) -> str:
-        prompt = prompt_template.format(content=content)
+        prompt = self.render_prompt(prompt_template, content=content)
         try:
             return await self._chat(prompt)
         except Exception as e:
             raise LLMProcessingError(f"custom_anthropic summarization failed: {e}") from e
 
     async def classify(self, content: str, categories: List[str], prompt_template: str) -> str:
-        prompt = prompt_template.format(content=content, categories=", ".join(categories))
+        prompt = self.render_prompt(prompt_template, content=content, categories=", ".join(categories))
         try:
             result = await self._chat(prompt)
             for category in categories:

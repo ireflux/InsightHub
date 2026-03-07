@@ -286,7 +286,7 @@ class TestEngineDedup(unittest.IsolatedAsyncioTestCase):
             os.remove(hist_path)
             os.remove(delivery_path)
 
-    async def test_run_uses_scored_subset_for_summary(self):
+    async def test_run_uses_all_scored_items_for_summary(self):
         low_item = NewsItem(
             id="https://example.com/low-priority",
             title="Small update",
@@ -319,13 +319,13 @@ class TestEngineDedup(unittest.IsolatedAsyncioTestCase):
             sinks=[DummySink()],
             history_file=hist_path,
             delivery_state_file=delivery_path,
-            scoring_config=ScoringConfig(enabled=True, use_llm=False, min_comments_for_summary=1, keep_top_n=1),
+            scoring_config=ScoringConfig(enabled=True, use_llm=False),
         )
 
         try:
             await engine.run()
             self.assertIn("high-priority", provider.last_content)
-            self.assertNotIn("low-priority", provider.last_content)
+            self.assertIn("low-priority", provider.last_content)
         finally:
             os.remove(hist_path)
             os.remove(delivery_path)

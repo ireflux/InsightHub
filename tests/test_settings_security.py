@@ -81,7 +81,7 @@ sinks:
         finally:
             os.remove(tmp_path)
 
-    def test_invalid_scoring_threshold_raises(self):
+    def test_legacy_scoring_threshold_is_ignored(self):
         config_content = """
 llm:
   primary:
@@ -104,8 +104,8 @@ scoring:
             tmp.write(config_content)
             tmp_path = tmp.name
         try:
-            with self.assertRaises(Exception):
-                AppSettings.load(tmp_path)
+            settings = AppSettings.load(tmp_path)
+            self.assertTrue(settings.scoring is not None)
         finally:
             os.remove(tmp_path)
 

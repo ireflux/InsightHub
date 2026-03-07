@@ -89,7 +89,7 @@ class OpenRouterProvider(BaseLLMProvider):
         Note: Retry logic is handled by the engine layer (with_retry).
         Do not add retry decorators here to avoid nested retry loops.
         """
-        prompt = prompt_template.format(content=content)
+        prompt = self.render_prompt(prompt_template, content=content)
         try:
             raw = await self._call_chat([{"role": "user", "content": prompt}])
             return self._extract_text_from_response(raw)
@@ -104,7 +104,7 @@ class OpenRouterProvider(BaseLLMProvider):
         Note: Retry logic is handled by the engine layer (with_retry).
         Do not add retry decorators here to avoid nested retry loops.
         """
-        prompt = prompt_template.format(content=content, categories=", ".join(categories))
+        prompt = self.render_prompt(prompt_template, content=content, categories=", ".join(categories))
         try:
             raw = await self._call_chat([{"role": "user", "content": prompt}])
             result = self._extract_text_from_response(raw)

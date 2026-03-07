@@ -65,7 +65,6 @@ class TestScoring(unittest.IsolatedAsyncioTestCase):
             config=ScoringConfig(
                 enabled=True,
                 use_llm=False,
-                min_comments_for_summary=1,
             )
         )
 
@@ -77,9 +76,11 @@ class TestScoring(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(scored[2].id, github_one.id)
         self.assertEqual(scored[3].id, github_two.id)
 
-        self.assertEqual(len(selected), 2)
+        self.assertEqual(len(selected), 4)
         self.assertEqual(selected[0].id, high_comments.id)
         self.assertEqual(selected[1].id, low_comments.id)
+        self.assertEqual(selected[2].id, github_one.id)
+        self.assertEqual(selected[3].id, github_two.id)
 
     def test_tier_mapping(self):
         self.assertEqual(tier_from_score(250), "Explosive")

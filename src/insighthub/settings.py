@@ -91,8 +91,6 @@ class StateConfig(BaseModel):
 class ScoringConfig(BaseModel):
     enabled: bool = False
     use_llm: bool = False
-    min_comments_for_summary: int = 0
-    keep_top_n: Optional[int] = None
     scoring_prompt_name: str = "comment_priority_reasoning_v1"
 
     @model_validator(mode="before")
@@ -101,18 +99,14 @@ class ScoringConfig(BaseModel):
         if not isinstance(data, dict):
             return data
         raw = dict(data)
-        if "min_comments_for_summary" not in raw and "min_score_for_summary" in raw:
-            legacy = raw.get("min_score_for_summary")
-            try:
-                raw["min_comments_for_summary"] = max(0, int(float(legacy)))
-                logger.warning(
-                    "Detected legacy scoring.min_score_for_summary; mapped to scoring.min_comments_for_summary.",
-                    extra={"event": "settings.scoring.min_score_legacy_mapped"},
-                )
-            except (TypeError, ValueError):
-                pass
-
-        for key in ("min_score_for_summary", "llm_blend_alpha", "max_items_for_llm_scoring", "weights"):
+        for key in (
+            "min_comments_for_summary",
+            "min_score_for_summary",
+            "llm_blend_alpha",
+            "max_items_for_llm_scoring",
+            "weights",
+            "keep_top_n",
+        ):
             raw.pop(key, None)
         return raw
 
@@ -312,10 +306,6 @@ class AppSettings(BaseModel):
         if not self.runtime.observability.file_name_prefix.strip():
             raise ConfigValidationError("runtime.observability.file_name_prefix must not be empty.")
 
-        if self.scoring.min_comments_for_summary < 0:
-            raise ConfigValidationError("scoring.min_comments_for_summary must be >= 0.")
-        if self.scoring.keep_top_n is not None and self.scoring.keep_top_n <= 0:
-            raise ConfigValidationError("scoring.keep_top_n must be > 0 when provided.")
 
     def validate_runtime_requirements(self) -> None:
         endpoints = [("llm.primary", self.llm.primary)] + [

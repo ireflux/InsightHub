@@ -41,7 +41,7 @@ class ZhipuAIProvider(BaseLLMProvider):
         Note: Retry logic is handled by the engine layer (with_retry).
         Do not add retry decorators here to avoid nested retry loops.
         """
-        prompt = prompt_template.format(content=content)
+        prompt = self.render_prompt(prompt_template, content=content)
         try:
             return await asyncio.to_thread(self._sync_chat, prompt)
         except Exception as e:
@@ -56,7 +56,7 @@ class ZhipuAIProvider(BaseLLMProvider):
         Note: Retry logic is handled by the engine layer (with_retry).
         Do not add retry decorators here to avoid nested retry loops.
         """
-        prompt = prompt_template.format(content=content, categories=", ".join(categories))
+        prompt = self.render_prompt(prompt_template, content=content, categories=", ".join(categories))
         try:
             result = await asyncio.to_thread(self._sync_chat, prompt)
             for category in categories:

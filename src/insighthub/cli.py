@@ -70,6 +70,23 @@ def build_parser() -> argparse.ArgumentParser:
         help="Output JSON file for items that actually entered final summary (default: <output>.items.json)",
     )
 
+    p_debug_input = subparsers.add_parser(
+        "debug-summary-input",
+        help="Build and export the exact text payload that would be sent to LLM summarization",
+    )
+    p_debug_input.add_argument("--input", "-i", required=True, help="Input JSON file with items")
+    p_debug_input.add_argument(
+        "--output",
+        "-o",
+        default="output/summary_input.txt",
+        help="Output text file containing the composed summarize input",
+    )
+    p_debug_input.add_argument(
+        "--no-scoring",
+        action="store_true",
+        help="Skip scoring/order step and keep input order when exporting summarize input",
+    )
+
     p_dist = subparsers.add_parser("distribute", help="Send content to sinks")
     p_dist.add_argument("--input", "-i", required=True, help="Input Markdown file content")
     p_dist.add_argument(
@@ -177,6 +194,20 @@ async def run_cli():
         else:
             logger.warning("No items loaded to summarize.")
 
+    elif args.command == "debug-summary-input":
+        logger.info("Executing subcommand: debug-summary-input")
+        items = engine.load_items(args.input)
+        if items:
+            if settings.scoring.enabled and not args.no_scoring:
+                items = await engine.score_items(items)
+            combined_input = engine.build_summarize_input(items)
+            output_path = args.output
+            os.makedirs(os.path.dirname(os.path.abspath(output_path)), exist_ok=True)
+            engine.save_content(combined_input, output_path)
+            logger.info(f"Summarize input payload saved to {output_path}")
+        else:
+            logger.warning("No items loaded to build summarize input.")
+
     elif args.command == "distribute":
         logger.info("Executing subcommand: distribute")
         content = engine.load_content(args.input)
@@ -204,3 +235,7 @@ def main():
     if sys.platform == "win32":
         asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
     asyncio.run(run_cli())
+
+
+if __name__ == "__main__":
+    main()

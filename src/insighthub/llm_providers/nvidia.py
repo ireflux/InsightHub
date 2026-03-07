@@ -65,7 +65,7 @@ class NvidiaProvider(BaseLLMProvider):
             raise AttributeError("Unable to extract text from NVIDIA response")
 
     async def summarize(self, content: str, prompt_template: str) -> str:
-        prompt = prompt_template.format(content=content)
+        prompt = self.render_prompt(prompt_template, content=content)
         try:
             raw = await self._call_chat([{"role": "user", "content": prompt}])
             return self._extract_text_from_response(raw)
@@ -73,7 +73,7 @@ class NvidiaProvider(BaseLLMProvider):
             raise LLMProcessingError(f"NVIDIA summarization failed: {e}") from e
 
     async def classify(self, content: str, categories: List[str], prompt_template: str) -> str:
-        prompt = prompt_template.format(content=content, categories=", ".join(categories))
+        prompt = self.render_prompt(prompt_template, content=content, categories=", ".join(categories))
         try:
             raw = await self._call_chat([{"role": "user", "content": prompt}])
             result = self._extract_text_from_response(raw)

@@ -249,16 +249,7 @@ class InsightEngine:
         if not items:
             return ""
 
-        combined_input = ""
-        for i, item in enumerate(items, start=1):
-            combined_input += f"--- Item {i} ---\n"
-            combined_input += f"Title: {item.title}\n"
-            combined_input += f"URL: {item.url}\n"
-            if item.ai_score is not None:
-                combined_input += f"AI Score: {item.ai_score} ({item.score_tier or 'Unrated'})\n"
-                if item.score_reason:
-                    combined_input += f"Score Reason: {item.score_reason}\n"
-            combined_input += f"Content: {item.content}\n\n"
+        combined_input = self.build_summarize_input(items)
 
         logger.info(
             "Calling LLM summarization.",
@@ -304,10 +295,22 @@ class InsightEngine:
                 "event": "engine.score.completed",
                 "items_count": len(scored_items),
                 "selected_count": len(selected),
-                "min_comments_for_summary": self.scoring_config.min_comments_for_summary,
             },
         )
         return selected or scored_items[:1]
+
+    def build_summarize_input(self, items: List[NewsItem]) -> str:
+        combined_input = ""
+        for i, item in enumerate(items, start=1):
+            combined_input += f"--- Item {i} ---\n"
+            combined_input += f"Title: {item.title}\n"
+            combined_input += f"URL: {item.url}\n"
+            if item.ai_score is not None:
+                combined_input += f"AI Score: {item.ai_score} ({item.score_tier or 'Unrated'})\n"
+                if item.score_reason:
+                    combined_input += f"Score Reason: {item.score_reason}\n"
+            combined_input += f"Content: {item.content}\n\n"
+        return combined_input
 
     async def _deliver_to_sink(self, sink: BaseSink, items: List[NewsItem], curated_content: str) -> Dict[str, Any]:
         sink_key = sink.sink_id()

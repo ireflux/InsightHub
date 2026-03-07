@@ -38,3 +38,16 @@ class BaseLLMProvider(ABC):
             The most likely category from the list.
         """
         pass
+
+    @staticmethod
+    def render_prompt(prompt_template: str, **values: str) -> str:
+        """
+        Safely render prompt templates with known variables while keeping unknown
+        placeholders untouched.
+        """
+
+        class SafeDict(dict):
+            def __missing__(self, key):
+                return "{" + key + "}"
+
+        return prompt_template.format_map(SafeDict(values))

@@ -108,8 +108,6 @@ runtime:
 scoring:
   enabled: true
   use_llm: false
-  min_comments_for_summary: 1
-  keep_top_n: 8
   scoring_prompt_name: "comment_priority_reasoning_v1"
 
 # Sinks configuration
