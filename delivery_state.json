@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-07T15:32:37.690261+00:00",
+  "updated_at": "2026-03-08T10:25:49.310816+00:00",
   "runs": [
     {
       "timestamp": "2026-03-07T15:32:37.689828+00:00",
@@ -11,6 +11,22 @@
             "status": "success",
             "file_path": "output/posts/2026-03-07-32fe9f5c43bd.md",
             "slug": "2026-03-07-32fe9f5c43bd",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-08T10:25:49.310493+00:00",
+      "items_count": 16,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-03-08-859fefec5056.md",
+            "slug": "2026-03-08-859fefec5056",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -163,6 +179,118 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-03-07T15:32:37.690252+00:00",
+        "error": null
+      }
+    },
+    "https://devblog.ecuadors.net/cloud-vm-benchmarks-2026-performance-price-1i1m.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-08T10:25:49.310751+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/astral-sh/uv/pull/17643": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-08T10:25:49.310757+00:00",
+        "error": null
+      }
+    },
+    "https://unsloth.ai/docs/models/qwen3.5": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-08T10:25:49.310760+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/0x0mer/CasNum": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-08T10:25:49.310764+00:00",
+        "error": null
+      }
+    },
+    "https://kaizoudou.com/from-rgb-to-lab-color-space": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-08T10:25:49.310767+00:00",
+        "error": null
+      }
+    },
+    "https://curiosity-telescope.vercel.app/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-08T10:25:49.310770+00:00",
+        "error": null
+      }
+    },
+    "https://arxiv.org/abs/2603.03823": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-08T10:25:49.310778+00:00",
+        "error": null
+      }
+    },
+    "https://www.rijksmuseum.nl/en/press/press-releases/rijksmuseum-researchers-discover-new-painting-by-rembrandt-van-rijn": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-08T10:25:49.310782+00:00",
+        "error": null
+      }
+    },
+    "https://yro.slashdot.org/story/26/03/08/015225/daylight-saving-time-ritual-continues-but-are-there-alternatives": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-08T10:25:49.310785+00:00",
+        "error": null
+      }
+    },
+    "https://tech.slashdot.org/story/26/03/07/0321225/as-us-tariffs-hit-evs-hyundai-discontinues-its-cheapest-ioniq-6-while-kia-delays-ev6-adn-ev9-gt": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-08T10:25:49.310788+00:00",
+        "error": null
+      }
+    },
+    "https://entertainment.slashdot.org/story/26/03/08/0150256/steven-spielberg--dinosaurs--netflix--mixed-reviews": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-08T10:25:49.310791+00:00",
+        "error": null
+      }
+    },
+    "https://science.slashdot.org/story/26/03/08/004240/a-first-for-humanity-confirmed-nasas-dart-mission-slowed-the-asteroids-orbit": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-08T10:25:49.310794+00:00",
+        "error": null
+      }
+    },
+    "https://science.slashdot.org/story/26/03/07/2249259/japan-approves-stem-cell-treatments-for-parkinsons-heart-failure-in-world-firsts": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-08T10:25:49.310798+00:00",
+        "error": null
+      }
+    },
+    "https://hardware.slashdot.org/story/26/03/07/2213221/openais-head-of-robotics-resigns-says-pentagon-deal-was-rushed-without-the-guardrails-defined": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-08T10:25:49.310801+00:00",
+        "error": null
+      }
+    },
+    "https://science.slashdot.org/story/26/03/07/0753224/astronomers-think-theyve-spotted-a-galaxy-thats-999-dark-matter": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-08T10:25:49.310804+00:00",
+        "error": null
+      }
+    },
+    "https://news.slashdot.org/story/26/03/07/204222/how-anthropics-claude-helped-mozilla-improve-firefoxs-security": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-08T10:25:49.310807+00:00",
         "error": null
       }
     }
