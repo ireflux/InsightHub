@@ -1,7 +1,29 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-03-08T18:25:49.308983+08:00",
+  "generated_at": "2026-03-09T18:46:26.228290+08:00",
   "posts": [
+    {
+      "id": "2026-03-09-049b1b21d754",
+      "run_id": "049b1b21d754",
+      "date": "2026-03-09",
+      "title": "每日趋势观察 2026-03-09",
+      "slug": "2026-03-09-049b1b21d754",
+      "markdown_path": "posts/2026-03-09-049b1b21d754.md",
+      "summary": "今日科技新闻聚焦于 AI 安全机制与法律主体资格的边界。随着本地 AI 沙箱工具的问世和法院对 AI 代理权的明确裁决，技术落地与监管之间的张力成为核心议题。",
+      "tags": [
+        "github_trending",
+        "hacker_news",
+        "slashdot"
+      ],
+      "sources": [
+        "GitHub Trending",
+        "Hacker News",
+        "Slashdot"
+      ],
+      "item_count": 19,
+      "is_empty_update": false,
+      "created_at": "2026-03-09T18:46:26.228290+08:00"
+    },
     {
       "id": "2026-03-08-859fefec5056",
       "run_id": "859fefec5056",
