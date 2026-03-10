@@ -1,7 +1,27 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-03-09T18:46:26.228290+08:00",
+  "generated_at": "2026-03-10T18:40:13.821038+08:00",
   "posts": [
+    {
+      "id": "2026-03-10-cce834e2a093",
+      "run_id": "cce834e2a093",
+      "date": "2026-03-10",
+      "title": "每日趋势观察 2026-03-10",
+      "slug": "2026-03-10-cce834e2a093",
+      "markdown_path": "posts/2026-03-10-cce834e2a093.md",
+      "summary": "安全漏洞、游戏行业重组和 AI 长视频处理成为今日焦点。关键变量包括 FBI 窃听工具被入侵、EA 裁员以及 DeepMind 推出的 LoGeR 长视频重建模型。",
+      "tags": [
+        "hacker_news",
+        "slashdot"
+      ],
+      "sources": [
+        "Hacker News",
+        "Slashdot"
+      ],
+      "item_count": 16,
+      "is_empty_update": false,
+      "created_at": "2026-03-10T18:40:13.821038+08:00"
+    },
     {
       "id": "2026-03-09-049b1b21d754",
       "run_id": "049b1b21d754",
