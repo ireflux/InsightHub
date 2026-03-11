@@ -1,7 +1,29 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-03-10T18:40:13.821038+08:00",
+  "generated_at": "2026-03-11T18:39:19.448888+08:00",
   "posts": [
+    {
+      "id": "2026-03-11-070cdb5d5bbe",
+      "run_id": "070cdb5d5bbe",
+      "date": "2026-03-11",
+      "title": "每日趋势观察 2026-03-11",
+      "slug": "2026-03-11-070cdb5d5bbe",
+      "markdown_path": "posts/2026-03-11-070cdb5d5bbe.md",
+      "summary": "科技行业正加速将 AI 工作流嵌入核心开发流程，同时基础设施厂商推出新工具以简化内容获取与代码管理。关键变量包括 Cloudflare 推出的全站爬取 API、亚马逊针对 AI 生成代码的严格审查机制，以及计算机科学奠基人 Tony Hoare 的离世。",
+      "tags": [
+        "github_trending",
+        "hacker_news",
+        "slashdot"
+      ],
+      "sources": [
+        "GitHub Trending",
+        "Hacker News",
+        "Slashdot"
+      ],
+      "item_count": 18,
+      "is_empty_update": false,
+      "created_at": "2026-03-11T18:39:19.448888+08:00"
+    },
     {
       "id": "2026-03-10-cce834e2a093",
       "run_id": "cce834e2a093",

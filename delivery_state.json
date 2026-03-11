@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-10T10:40:13.823214+00:00",
+  "updated_at": "2026-03-11T10:39:19.451190+00:00",
   "runs": [
     {
       "timestamp": "2026-03-07T15:32:37.689828+00:00",
@@ -59,6 +59,22 @@
             "status": "success",
             "file_path": "output/posts/2026-03-10-cce834e2a093.md",
             "slug": "2026-03-10-cce834e2a093",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-11T10:39:19.450837+00:00",
+      "items_count": 18,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-03-11-070cdb5d5bbe.md",
+            "slug": "2026-03-11-070cdb5d5bbe",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -568,6 +584,132 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-03-10T10:40:13.823204+00:00",
+        "error": null
+      }
+    },
+    "https://geohot.github.io//blog/jekyll/update/2026/03/11/running-69-agents.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-11T10:39:19.451119+00:00",
+        "error": null
+      }
+    },
+    "https://developers.cloudflare.com/changelog/post/2026-03-10-br-crawl-endpoint": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-11T10:39:19.451127+00:00",
+        "error": null
+      }
+    },
+    "https://ziglang.org/devlog/2026": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-11T10:39:19.451131+00:00",
+        "error": null
+      }
+    },
+    "https://ionathan.ch/2026/02/16/angzarr.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-11T10:39:19.451133+00:00",
+        "error": null
+      }
+    },
+    "https://loopmaster.xyz/tutorials/tb303-from-scratch": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-11T10:39:19.451135+00:00",
+        "error": null
+      }
+    },
+    "https://www.hume.ai/blog/opensource-tada": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-11T10:39:19.451137+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/gcv/julia-snail": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-11T10:39:19.451143+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/RightNow-AI/autokernel": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-11T10:39:19.451146+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/NousResearch/hermes-agent": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-11T10:39:19.451148+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/promptfoo/promptfoo": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-11T10:39:19.451149+00:00",
+        "error": null
+      }
+    },
+    "https://yro.slashdot.org/story/26/03/11/0546238/valve-faces-second-class-action-lawsuit-over-loot-boxes": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-11T10:39:19.451151+00:00",
+        "error": null
+      }
+    },
+    "https://science.slashdot.org/story/26/03/11/0026235/a-1300-pound-nasa-spacecraft-to-re-enter-earths-atmosphere": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-11T10:39:19.451153+00:00",
+        "error": null
+      }
+    },
+    "https://slashdot.org/story/26/03/10/212214/after-outages-amazon-to-make-senior-engineers-sign-off-on-ai-assisted-changes": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-11T10:39:19.451170+00:00",
+        "error": null
+      }
+    },
+    "https://developers.slashdot.org/story/26/03/10/2038225/tony-hoare-turing-award-winning-computer-scientist-behind-quicksort-dies-at-92": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-11T10:39:19.451173+00:00",
+        "error": null
+      }
+    },
+    "https://it.slashdot.org/story/26/03/10/2022201/intel-demos-chip-to-compute-with-encrypted-data": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-11T10:39:19.451175+00:00",
+        "error": null
+      }
+    },
+    "https://yro.slashdot.org/story/26/03/10/2012222/amazon-wins-court-order-to-block-perplexitys-ai-shopping-bots": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-11T10:39:19.451177+00:00",
+        "error": null
+      }
+    },
+    "https://news.slashdot.org/story/26/03/10/200253/silicon-valley-is-buzzing-about-this-new-idea-ai-compute-as-compensation": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-11T10:39:19.451181+00:00",
+        "error": null
+      }
+    },
+    "https://mobile.slashdot.org/story/26/03/10/162222/att-outlines-250-billion-us-investment-plan-to-boost-infrastructure-in-ai-age": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-11T10:39:19.451183+00:00",
         "error": null
       }
     }
