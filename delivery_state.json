@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-11T10:39:19.451190+00:00",
+  "updated_at": "2026-03-12T10:40:04.156699+00:00",
   "runs": [
     {
       "timestamp": "2026-03-07T15:32:37.689828+00:00",
@@ -75,6 +75,22 @@
             "status": "success",
             "file_path": "output/posts/2026-03-11-070cdb5d5bbe.md",
             "slug": "2026-03-11-070cdb5d5bbe",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-12T10:40:04.156413+00:00",
+      "items_count": 18,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-03-12-dd6e6c6dffeb.md",
+            "slug": "2026-03-12-dd6e6c6dffeb",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -710,6 +726,132 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-03-11T10:39:19.451183+00:00",
+        "error": null
+      }
+    },
+    "https://bloomberg.github.io/js-blog/post/temporal": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-12T10:40:04.156640+00:00",
+        "error": null
+      }
+    },
+    "http://satproto.org/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-12T10:40:04.156647+00:00",
+        "error": null
+      }
+    },
+    "https://www.markround.com/blog/2026/03/05/returning-to-rails-in-2026": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-12T10:40:04.156651+00:00",
+        "error": null
+      }
+    },
+    "https://research.gold.ac.uk/id/eprint/2336/1/sbcl.pdf": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-12T10:40:04.156656+00:00",
+        "error": null
+      }
+    },
+    "https://www.oliver-charles.com/pages/3d-knitting": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-12T10:40:04.156665+00:00",
+        "error": null
+      }
+    },
+    "https://0dd.company/galleries/witches/7.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-12T10:40:04.156667+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/carlini/printf-tac-toe": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-12T10:40:04.156673+00:00",
+        "error": null
+      }
+    },
+    "https://iquilezles.org/articles/noacos": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-12T10:40:04.156675+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/obra/superpowers": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-12T10:40:04.156677+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/fishaudio/fish-speech": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-12T10:40:04.156679+00:00",
+        "error": null
+      }
+    },
+    "https://tech.slashdot.org/story/26/03/11/2342217/gfiber-and-astound-broadband-to-join-forces": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-12T10:40:04.156681+00:00",
+        "error": null
+      }
+    },
+    "https://science.slashdot.org/story/26/03/11/2151249/why-falling-cats-always-seem-to-land-on-their-feet": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-12T10:40:04.156683+00:00",
+        "error": null
+      }
+    },
+    "https://it.slashdot.org/story/26/03/11/2140227/researchers-discover-14000-routers-wrangled-into-never-before-seen-botnet": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-12T10:40:04.156684+00:00",
+        "error": null
+      }
+    },
+    "https://games.slashdot.org/story/26/03/11/2132256/microsofts-xbox-mode-is-coming-to-every-windows-11-pc": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-12T10:40:04.156686+00:00",
+        "error": null
+      }
+    },
+    "https://slashdot.org/story/26/03/11/2121238/grammarly-disables-tool-offering-generative-ai-feedback-credited-to-real-writers": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-12T10:40:04.156688+00:00",
+        "error": null
+      }
+    },
+    "https://it.slashdot.org/story/26/03/11/1953224/swiss-e-voting-pilot-cant-count-2048-ballots-after-usb-keys-fail-to-decrypt-them": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-12T10:40:04.156689+00:00",
+        "error": null
+      }
+    },
+    "https://yro.slashdot.org/story/26/03/11/192225/binance-sues-wsj-panicked-by-govt-probes-into-sanctioned-crypto-transfers": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-12T10:40:04.156691+00:00",
+        "error": null
+      }
+    },
+    "https://slashdot.org/story/26/03/11/177232/nvidia-is-planning-to-launch-its-own-open-source-openclaw-competitor": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-12T10:40:04.156693+00:00",
         "error": null
       }
     }

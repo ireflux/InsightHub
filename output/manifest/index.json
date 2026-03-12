@@ -1,7 +1,29 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-03-11T18:39:19.448888+08:00",
+  "generated_at": "2026-03-12T18:40:04.154685+08:00",
   "posts": [
+    {
+      "id": "2026-03-12-dd6e6c6dffeb",
+      "run_id": "dd6e6c6dffeb",
+      "date": "2026-03-12",
+      "title": "每日趋势观察 2026-03-12",
+      "slug": "2026-03-12-dd6e6c6dffeb",
+      "markdown_path": "posts/2026-03-12-dd6e6c6dffeb.md",
+      "summary": "JavaScript 标准化委员会完成历时九年的提案，推出全新的时间处理 API。同时，去中心化社交协议与开发者对经典框架的重拾热度成为技术圈关注焦点。主要变量包括：JS Temporal 的标准化落地、静态站点社交网络 s@ 的启动，以及 Ruby on Rails 开发体验的回归。",
+      "tags": [
+        "github_trending",
+        "hacker_news",
+        "slashdot"
+      ],
+      "sources": [
+        "GitHub Trending",
+        "Hacker News",
+        "Slashdot"
+      ],
+      "item_count": 18,
+      "is_empty_update": false,
+      "created_at": "2026-03-12T18:40:04.154685+08:00"
+    },
     {
       "id": "2026-03-11-070cdb5d5bbe",
       "run_id": "070cdb5d5bbe",
