@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-12T10:40:04.156699+00:00",
+  "updated_at": "2026-03-13T10:37:23.272510+00:00",
   "runs": [
     {
       "timestamp": "2026-03-07T15:32:37.689828+00:00",
@@ -91,6 +91,22 @@
             "status": "success",
             "file_path": "output/posts/2026-03-12-dd6e6c6dffeb.md",
             "slug": "2026-03-12-dd6e6c6dffeb",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-13T10:37:23.272205+00:00",
+      "items_count": 20,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-03-13-e3916efa33dd.md",
+            "slug": "2026-03-13-e3916efa33dd",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -852,6 +868,146 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-03-12T10:40:04.156693+00:00",
+        "error": null
+      }
+    },
+    "https://malus.sh": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-13T10:37:23.272416+00:00",
+        "error": null
+      }
+    },
+    "https://samhenri.gold/blog/20260312-this-is-not-the-computer-for-you": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-13T10:37:23.272420+00:00",
+        "error": null
+      }
+    },
+    "https://sharif.io/looking-stupid": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-13T10:37:23.272427+00:00",
+        "error": null
+      }
+    },
+    "https://vite.dev/blog/announcing-vite8": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-13T10:37:23.272432+00:00",
+        "error": null
+      }
+    },
+    "https://onecloudplease.com/blog/bucketsquatting-is-finally-dead": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-13T10:37:23.272436+00:00",
+        "error": null
+      }
+    },
+    "https://www.percepta.ai/blog/can-llms-be-computers": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-13T10:37:23.272446+00:00",
+        "error": null
+      }
+    },
+    "https://darkwebinformer.com/full-source-code-of-swedens-e-government-platform-leaked-from-compromised-cgi-sverige-infrastructure": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-13T10:37:23.272454+00:00",
+        "error": null
+      }
+    },
+    "https://lemire.me/blog/2026/03/08/prefix-sums-at-tens-of-gigabytes-per-second-with-arm-neon": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-13T10:37:23.272458+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/microsoft/BitNet": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-13T10:37:23.272462+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/langflow-ai/openrag": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-13T10:37:23.272466+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/InsForge/InsForge": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-13T10:37:23.272469+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/vectorize-io/hindsight": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-13T10:37:23.272472+00:00",
+        "error": null
+      }
+    },
+    "https://yro.slashdot.org/story/26/03/12/236257/london-man-wore-smart-glasses-for-high-court-coaching": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-13T10:37:23.272475+00:00",
+        "error": null
+      }
+    },
+    "https://slashdot.org/story/26/03/12/2049252/microsoft-backs-anthropic-to-halt-us-dods-supply-chain-risk-designation": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-13T10:37:23.272479+00:00",
+        "error": null
+      }
+    },
+    "https://apple.slashdot.org/story/26/03/12/2234239/google-chrome-is-finally-coming-to-arm64-linux": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-13T10:37:23.272482+00:00",
+        "error": null
+      }
+    },
+    "https://slashdot.org/story/26/03/12/212212/adobe-ceo-to-step-down-after-18-years": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-13T10:37:23.272485+00:00",
+        "error": null
+      }
+    },
+    "https://apple.slashdot.org/story/26/03/12/2042240/apples-macbook-neo-makes-repairs-easier-cheaper-than-other-macbooks": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-13T10:37:23.272488+00:00",
+        "error": null
+      }
+    },
+    "https://slashdot.org/story/26/03/12/191200/perplexitys-personal-computer-lets-ai-agents-access-your-local-files": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-13T10:37:23.272492+00:00",
+        "error": null
+      }
+    },
+    "https://tech.slashdot.org/story/26/03/12/1836249/honda-cancels-all-three-evs-that-it-planned-to-build-in-the-us": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-13T10:37:23.272495+00:00",
+        "error": null
+      }
+    },
+    "https://features.slashdot.org/story/26/03/12/1710246/anthropics-claude-ai-can-respond-with-charts-diagrams-and-other-visualschat": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-13T10:37:23.272501+00:00",
         "error": null
       }
     }

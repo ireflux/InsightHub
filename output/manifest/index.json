@@ -1,7 +1,29 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-03-12T18:40:04.154685+08:00",
+  "generated_at": "2026-03-13T18:37:23.270383+08:00",
   "posts": [
+    {
+      "id": "2026-03-13-e3916efa33dd",
+      "run_id": "e3916efa33dd",
+      "date": "2026-03-13",
+      "title": "每日趋势观察 2026-03-13",
+      "slug": "2026-03-13-e3916efa33dd",
+      "markdown_path": "posts/2026-03-13-e3916efa33dd.md",
+      "summary": "今日全球科技版图被一起严重的基础设施安全事件和几项关键产品的重大更新所主导。核心变量包括：瑞典政府平台源代码泄露事件、前端构建工具 Vite 8.0 的发布，以及 Adobe CEO 宣布卸任。",
+      "tags": [
+        "github_trending",
+        "hacker_news",
+        "slashdot"
+      ],
+      "sources": [
+        "GitHub Trending",
+        "Hacker News",
+        "Slashdot"
+      ],
+      "item_count": 20,
+      "is_empty_update": false,
+      "created_at": "2026-03-13T18:37:23.270383+08:00"
+    },
     {
       "id": "2026-03-12-dd6e6c6dffeb",
       "run_id": "dd6e6c6dffeb",
