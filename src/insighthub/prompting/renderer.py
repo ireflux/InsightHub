@@ -14,8 +14,8 @@ class PromptRenderer:
     def __init__(
         self,
         prompts_dir: str = "prompts",
-        structure_name: str = "professional_briefing_v1",
-        style_name: str = "professional_neutral_v1",
+        structure_name: str = "structure_prompt_v1",
+        style_name: str = "style_prompt_v1",
         variables: Optional[Dict[str, Any]] = None,
     ):
         self.prompts_dir = prompts_dir

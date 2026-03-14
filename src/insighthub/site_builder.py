@@ -42,13 +42,17 @@ def build_site(
 
     rendered_posts: List[Dict[str, Any]] = []
     for post in posts:
-        markdown_path = Path(content_root) / post.get("markdown_path", "")
-        raw_md = markdown_path.read_text(encoding="utf-8") if markdown_path.exists() else ""
+        markdown_rel = str(post.get("markdown_path", "")).strip()
+        markdown_path = _resolve_safe_path(Path(content_root), Path(content_root) / markdown_rel)
+        raw_md = markdown_path.read_text(encoding="utf-8") if markdown_path and markdown_path.exists() else ""
         html = _render_markdown(raw_md)
         safe_html = _sanitize_html(html)
-        slug = post["slug"]
+        slug = str(post.get("slug", "")).strip()
+        post_dir = _resolve_safe_path(out / "posts", out / "posts" / slug)
+        if not post_dir:
+            continue
         rel_path = f"posts/{slug}/index.html"
-        abs_path = out / "posts" / slug / "index.html"
+        abs_path = post_dir / "index.html"
         abs_path.parent.mkdir(parents=True, exist_ok=True)
 
         canonical_url = f"{site_url}/{rel_path.replace('index.html', '')}"
@@ -97,6 +101,16 @@ def _load_manifest(path: str) -> Dict[str, Any]:
         return {"posts": []}
     data.setdefault("posts", [])
     return data
+
+
+def _resolve_safe_path(base: Path, target: Path) -> Optional[Path]:
+    try:
+        base_resolved = base.resolve()
+        target_resolved = target.resolve()
+        target_resolved.relative_to(base_resolved)
+        return target_resolved
+    except Exception:
+        return None
 
 
 def _render_markdown(content: str) -> str:

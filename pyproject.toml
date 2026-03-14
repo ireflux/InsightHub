@@ -12,11 +12,9 @@ dependencies = [
   "httpx[http2]",
   "pydantic>=2,<3",
   "pyyaml",
-  "tenacity",
   "beautifulsoup4",
   "lxml",
   "zhipuai",
-  "openrouter",
   "sniffio",
   "aiofiles",
   "markdown",
@@ -46,3 +44,4 @@ target-version = "py310"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+asyncio_mode = "auto"

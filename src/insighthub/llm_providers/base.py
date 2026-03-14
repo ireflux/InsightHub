@@ -39,6 +39,10 @@ class BaseLLMProvider(ABC):
         """
         pass
 
+    async def aclose(self) -> None:
+        """Optional cleanup hook for providers with network clients."""
+        return None
+
     @staticmethod
     def render_prompt(prompt_template: str, **values: str) -> str:
         """

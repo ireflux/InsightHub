@@ -1,5 +1,5 @@
 import os
-from typing import List, Optional
+from typing import Any, Dict, List, Optional
 
 import httpx
 
@@ -14,11 +14,14 @@ class NvidiaProvider(BaseLLMProvider):
 
     DEFAULT_BASE_URL = "https://integrate.api.nvidia.com/v1"
 
+    ALLOWED_PARAMS = {"temperature", "top_p", "max_tokens", "stop", "stream"}
+
     def __init__(
         self,
         api_key: Optional[str] = None,
         model: Optional[str] = None,
         base_url: Optional[str] = None,
+        params: Optional[Dict[str, Any]] = None,
     ):
         api_key = api_key or os.getenv("NVIDIA_API_KEY")
         if not api_key:
@@ -29,9 +32,13 @@ class NvidiaProvider(BaseLLMProvider):
             raise ValueError("NVIDIA model not provided. Set llm.primary.model, LLM_MODEL, or NVIDIA_MODEL.")
 
         self.base_url = base_url or os.getenv("NVIDIA_API_URL") or self.DEFAULT_BASE_URL
-        self.temperature = float(os.getenv("NVIDIA_TEMPERATURE", "0.7"))
-        self.top_p = float(os.getenv("NVIDIA_TOP_P", "0.95"))
-        self.max_tokens = int(os.getenv("NVIDIA_MAX_TOKENS", "8192"))
+        self.params = self._sanitize_params(params)
+        if "temperature" not in self.params:
+            self.params["temperature"] = float(os.getenv("NVIDIA_TEMPERATURE", "0.7"))
+        if "top_p" not in self.params:
+            self.params["top_p"] = float(os.getenv("NVIDIA_TOP_P", "0.95"))
+        if "max_tokens" not in self.params:
+            self.params["max_tokens"] = int(os.getenv("NVIDIA_MAX_TOKENS", "8192"))
 
         headers = {
             "Authorization": f"Bearer {api_key}",
@@ -45,11 +52,10 @@ class NvidiaProvider(BaseLLMProvider):
         payload = {
             "model": self.model,
             "messages": messages,
-            "temperature": self.temperature,
-            "top_p": self.top_p,
-            "max_tokens": self.max_tokens,
+            **self.params,
             "stream": False,
         }
+        payload.pop("stream", None)
         resp = await self.client.post(url, json=payload)
         try:
             resp.raise_for_status()
@@ -63,6 +69,23 @@ class NvidiaProvider(BaseLLMProvider):
             return response["choices"][0]["message"]["content"].strip()
         except Exception:
             raise AttributeError("Unable to extract text from NVIDIA response")
+
+    @classmethod
+    def _sanitize_params(cls, params: Optional[Dict[str, Any]]) -> Dict[str, Any]:
+        clean: Dict[str, Any] = {}
+        if not params:
+            return clean
+        for key, value in params.items():
+            if key not in cls.ALLOWED_PARAMS:
+                continue
+            if key == "stream":
+                if bool(value):
+                    continue
+                clean[key] = False
+                continue
+            clean[key] = value
+        clean.pop("stream", None)
+        return clean
 
     async def summarize(self, content: str, prompt_template: str) -> str:
         prompt = self.render_prompt(prompt_template, content=content)
@@ -83,3 +106,6 @@ class NvidiaProvider(BaseLLMProvider):
             return "Uncategorized"
         except Exception as e:
             raise LLMProcessingError(f"NVIDIA classification failed: {e}") from e
+
+    async def aclose(self) -> None:
+        await self.client.aclose()

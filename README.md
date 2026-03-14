@@ -6,7 +6,7 @@ A production-ready, asynchronous Python workflow engine for aggregating technica
 
 ## Key Features
 
-- **Multi-source Aggregation**: GitHub Trending, Hacker News, V2EX, Zhihu Hot, and Slashdot.
+- **Multi-source Aggregation**: GitHub Trending, Hacker News, V2EX, and Slashdot.
 - **AI Scoring & Summarization**: Prioritize and summarize content using LLMs (ZhipuAI, OpenRouter, NVIDIA, Custom OpenAI/Anthropic).
 - **Flexible Distribution**: Output to Markdown files, Feishu documents, and static site manifests.
 - **Robust State Management**: Built-in deduplication, history tracking, and automatic retry logic.
@@ -55,7 +55,6 @@ insighthub run
 - **GitHub Trending** (`github_trending`)
 - **Hacker News** (`hacker_news`)
 - **V2EX** (`v2ex_hot`)
-- **Zhihu Hot** (`zhihu_hot`)
 - **Slashdot** (`slashdot`)
 
 ### Supported LLM Providers

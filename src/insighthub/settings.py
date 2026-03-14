@@ -11,7 +11,7 @@ from insighthub.errors import ConfigValidationError
 logger = logging.getLogger(__name__)
 
 SUPPORTED_LLM_PROVIDERS = {"openrouter", "zhipuai", "nvidia", "custom_openai", "custom_anthropic"}
-SUPPORTED_SOURCES = {"github_trending", "zhihu_hot", "hacker_news", "v2ex_hot", "slashdot"}
+SUPPORTED_SOURCES = {"github_trending", "hacker_news", "v2ex_hot", "slashdot"}
 SUPPORTED_SINKS = {"markdown_file", "feishu_doc"}
 
 
@@ -66,8 +66,8 @@ class SinksConfig(BaseModel):
 
 
 class PromptConfig(BaseModel):
-    structure: str = "professional_briefing_v1"
-    style: str = "professional_neutral_v1"
+    structure: str = "enriched_briefing_v1"
+    style: str = "signal_editor_cn_v1"
     variables: Dict[str, Any] = Field(default_factory=dict)
 
 
@@ -90,8 +90,7 @@ class StateConfig(BaseModel):
 
 class ScoringConfig(BaseModel):
     enabled: bool = False
-    use_llm: bool = False
-    scoring_prompt_name: str = "comment_priority_reasoning_v1"
+    scoring_threshold: Optional[float] = None
 
     @model_validator(mode="before")
     @classmethod
@@ -148,6 +147,7 @@ class RuntimePathsConfig(BaseModel):
     history_file: str = "history.json"
     delivery_state_file: str = "delivery_state.json"
     logs_dir: str = "logs"
+    stage_runs_dir: str = "output/runs"
 
 
 class ObservabilityConfig(BaseModel):
@@ -265,6 +265,9 @@ class AppSettings(BaseModel):
         if self.state.max_delivery_runs <= 0:
             raise ConfigValidationError("state.max_delivery_runs must be > 0.")
 
+        if self.scoring.scoring_threshold is not None and self.scoring.scoring_threshold < 0:
+            raise ConfigValidationError("scoring.scoring_threshold must be >= 0 when provided.")
+
         self._validate_retry_policy("runtime.retry.source_fetch", self.runtime.retry.source_fetch)
         self._validate_retry_policy("runtime.retry.llm_summarize", self.runtime.retry.llm_summarize)
         self._validate_retry_policy("runtime.retry.sink_render", self.runtime.retry.sink_render)
@@ -279,6 +282,8 @@ class AppSettings(BaseModel):
             raise ConfigValidationError("runtime.paths.delivery_state_file must not be empty.")
         if not self.runtime.paths.logs_dir.strip():
             raise ConfigValidationError("runtime.paths.logs_dir must not be empty.")
+        if not self.runtime.paths.stage_runs_dir.strip():
+            raise ConfigValidationError("runtime.paths.stage_runs_dir must not be empty.")
         try:
             ZoneInfo(self.runtime.timezone)
         except ZoneInfoNotFoundError as e:
@@ -460,4 +465,21 @@ class AppSettings(BaseModel):
             if not endpoint.base_url or not str(endpoint.base_url).strip():
                 raise ConfigValidationError(f"llm endpoint '{provider}' requires non-empty base_url.")
 
-settings = AppSettings.load()
+class _LazySettings:
+    def __init__(self):
+        self._value: Optional[AppSettings] = None
+
+    def get(self) -> AppSettings:
+        if self._value is None:
+            self._value = AppSettings.load()
+        return self._value
+
+    def __getattr__(self, name: str):
+        return getattr(self.get(), name)
+
+
+settings = _LazySettings()
+
+
+def get_settings() -> AppSettings:
+    return settings.get()

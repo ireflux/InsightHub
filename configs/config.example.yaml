@@ -17,7 +17,7 @@ llm:
   fallbacks: []
   # fallbacks:
   #   - provider: "openrouter"
-  #     model: "xiaomi/mimo-v2-flash:free"
+  #     model: "openai/gpt-5.4-pro"
   #   - provider: "custom_openai"
   #     model: "gpt-4o-mini"
   #     base_url: "https://api.openai.com/v1"
@@ -55,21 +55,15 @@ sources:
       type: "slashdot"
       enabled: true
       params: {}
-    # - id: "zhihu_ai"
-    #   type: "zhihu_hot"
-    #   enabled: false
-    #   params:
-    #     keyword_filter: "编程|AI|Python|技术|机器学习|深度学习"
 
 prompt:
-  structure: "professional_briefing_v4"
-  style: "professional_neutral_v4"
-  scoring: "technical_content_scoring_v2"
+  structure: "enriched_briefing_v1"
+  style: "signal_editor_cn_v1"
   variables: {}
 
 publishing:
   title:
-    template: "每日趋势观察 {date}"
+    template: "婵犳鍣徊鐣屾崲閹存惊娑㈠煛閸愨晜鍎遍柣搴秵娴滄粓鍩ｉ姀銈嗗仭婵炲棗绻愰埀顒佹倐閹?{date}"
     date_format: "%Y-%m-%d"
     strip_leading_h1: true
 
@@ -85,6 +79,7 @@ runtime:
     history_file: "history.json"
     delivery_state_file: "delivery_state.json"
     logs_dir: "logs"
+    stage_runs_dir: "output/runs"
   retry:
     source_fetch:
       max_attempts: 3
@@ -122,8 +117,9 @@ runtime:
 
 scoring:
   enabled: false
-  use_llm: false
-  scoring_prompt_name: "comment_priority_reasoning_v1"
+  # Items with AI score below this value will not enter summary.
+  # Set to null to disable filtering.
+  scoring_threshold: null
 
 sinks:
   defaults:

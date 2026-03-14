@@ -1,6 +1,5 @@
 import datetime
 import logging
-import re
 from typing import List
 from zoneinfo import ZoneInfo
 
@@ -15,7 +14,6 @@ from insighthub.sources import (
     HackerNewsSource,
     SlashdotSource,
     V2EXHotSource,
-    ZhihuHotSource,
 )
 from insighthub.sources.base import BaseSource
 
@@ -117,23 +115,6 @@ def _build_single_source(
 
     if source_type == "github_trending":
         return GitHubTrendingSource(**common_kwargs)
-    if source_type == "zhihu_hot":
-        keyword_pattern = src_config.params.get("keyword_filter")
-        pattern = None
-        if keyword_pattern:
-            try:
-                pattern = re.compile(keyword_pattern)
-            except re.error as e:
-                logger.warning(
-                    "Invalid zhihu keyword regex; source skipped.",
-                    extra={
-                        "event": "workflow.source_invalid_regex",
-                        "source_id": src_config.id,
-                        "error": str(e),
-                    },
-                )
-                return None
-        return ZhihuHotSource(keyword_filter=pattern, **common_kwargs)
     if source_type == "hacker_news":
         return HackerNewsSource(**common_kwargs)
     if source_type == "v2ex_hot":

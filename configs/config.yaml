@@ -6,12 +6,12 @@
 # - OPENROUTER_API_KEY
 llm:
   primary:
-    provider: "zhipuai"
-    model: "glm-4.7-flash"
+    provider: "openrouter"
+    model: "stepfun/step-3.5-flash:free"
   fallbacks: []
   # fallbacks:
   #   - provider: "openrouter"
-  #     model: "xiaomi/mimo-v2-flash:free"
+  #     model: "openai/gpt-5.4-pro"
 
 # Sources configuration
 sources:
@@ -40,16 +40,10 @@ sources:
       enabled: true
       max_items: 8
       params: {}
-    - id: "zhihu_ai"
-      type: "zhihu_hot"
-      enabled: false
-      params:
-        keyword_filter: ""
 
 prompt:
-  structure: "morning_news_poetic_v1"
-  style: "poetic_brief_cn_v1"
-  scoring: "comment_priority_reasoning_v1"
+  structure: "structure_prompt_v1"
+  style: "style_prompt_v1"
   variables: {}
 
 publishing:
@@ -70,6 +64,7 @@ runtime:
     history_file: "history.json"
     delivery_state_file: "delivery_state.json"
     logs_dir: "logs"
+    stage_runs_dir: "output/runs"
   retry:
     source_fetch:
       max_attempts: 3
@@ -107,8 +102,7 @@ runtime:
 
 scoring:
   enabled: true
-  use_llm: false
-  scoring_prompt_name: "comment_priority_reasoning_v1"
+  scoring_threshold: 6.0
 
 # Sinks configuration
 sinks:

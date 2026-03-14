@@ -1,5 +1,7 @@
 import httpx
 import logging
+import re
+import asyncio
 from bs4 import BeautifulSoup
 from typing import List
 from insighthub.sources.base import BaseSource
@@ -13,6 +15,7 @@ class HackerNewsSource(BaseSource):
     """
     
     BASE_URL = "https://news.ycombinator.com/"
+    API_BASE_URL = "https://hacker-news.firebaseio.com/v0"
     
     def __init__(
         self,
@@ -114,7 +117,73 @@ class HackerNewsSource(BaseSource):
             extra={"event": "source.enrich.start", "source": self.name, "items_count": len(items)},
         )
         contents = await self._fetch_page_contents([item.url for item in items])
-        for item, full_content in zip(items, contents):
+        top_comments_per_item = await self._fetch_top_comments_batch(items)
+
+        for item, full_content, top_comments in zip(items, contents, top_comments_per_item):
             if full_content:
                 item.content = full_content
+            if top_comments:
+                item.original_data = item.original_data or {}
+                item.original_data["top_comments"] = top_comments
+                item.original_data["discussion_url"] = f"{self.BASE_URL}item?id={item.original_data.get('story_id', '')}"
+
+                comments_block = "\n".join(
+                    f"[{one.get('author', 'anon')}]: {one.get('text', '')}"
+                    for one in top_comments
+                    if one.get("text")
+                )
+                if comments_block:
+                    base = item.content or f"Hacker News Story: {item.title}\nURL: {item.url}"
+                    item.content = f"{base}\n\n--- Top Comments ---\n{comments_block}"
         return items
+
+    async def _fetch_top_comments_batch(self, items: List[NewsItem]) -> List[List[dict]]:
+        headers = {"User-Agent": self.USER_AGENT}
+        timeout = httpx.Timeout(self.content_fetch_timeout)
+        async with httpx.AsyncClient(timeout=timeout, headers=headers) as client:
+            sem = asyncio.Semaphore(self.content_fetch_concurrency)
+
+            async def one(item: NewsItem) -> List[dict]:
+                async with sem:
+                    story_id = str((item.original_data or {}).get("story_id") or "").strip()
+                    if not story_id.isdigit():
+                        return []
+                    return await self._fetch_top_comments(client, int(story_id))
+
+            return await asyncio.gather(*(one(item) for item in items))
+
+    async def _fetch_top_comments(self, client: httpx.AsyncClient, story_id: int, limit: int = 5) -> List[dict]:
+        try:
+            story_resp = await client.get(f"{self.API_BASE_URL}/item/{story_id}.json")
+            story_resp.raise_for_status()
+            story = story_resp.json() or {}
+            comment_ids = story.get("kids", [])[:limit]
+        except Exception:
+            return []
+
+        async def fetch_comment(comment_id: int) -> dict:
+            try:
+                resp = await client.get(f"{self.API_BASE_URL}/item/{comment_id}.json")
+                resp.raise_for_status()
+                data = resp.json() or {}
+                text = self._clean_comment_text(str(data.get("text", "") or ""))
+                if not text:
+                    return {}
+                return {
+                    "id": data.get("id"),
+                    "author": data.get("by", "anon"),
+                    "text": text[:500],
+                }
+            except Exception:
+                return {}
+
+        rows = await asyncio.gather(*(fetch_comment(cid) for cid in comment_ids))
+        return [one for one in rows if isinstance(one, dict) and one.get("text")]
+
+    @staticmethod
+    def _clean_comment_text(raw: str) -> str:
+        if not raw:
+            return ""
+        text = BeautifulSoup(raw, "lxml").get_text(" ", strip=True)
+        text = re.sub(r"\s+", " ", text).strip()
+        return text

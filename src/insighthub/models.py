@@ -9,16 +9,16 @@ class NewsItem(BaseModel):
     id: str = Field(..., description="Unique identifier for the item (usually the URL)")
     title: str = Field(..., description="Title of the article or topic")
     url: str = Field(..., description="Source URL")
-    source: str = Field(..., description="Source name (e.g., 'GitHub Trending', 'Zhihu Hot')")
+    source: str = Field(..., description="Source name (e.g., 'GitHub Trending', 'V2EX Hot')")
     content: Optional[str] = Field(None, description="Full text or main content extracted")
     summary: Optional[str] = Field(None, description="AI generated summary")
-    ai_score: Optional[float] = Field(None, description="AI quality score (0-10)")
-    score_tier: Optional[str] = Field(None, description="Score tier label")
-    score_breakdown: Dict[str, float] = Field(
+    discussion_signal: Optional[float] = Field(None, description="Discussion heat/engagement signal")
+    discussion_tier: Optional[str] = Field(None, description="Discussion tier label")
+    discussion_breakdown: Dict[str, float] = Field(
         default_factory=dict,
-        description="Per-dimension score breakdown",
+        description="Per-dimension discussion breakdown",
     )
-    score_reason: Optional[str] = Field(None, description="Short reason for the assigned score")
+    ranking_reason: Optional[str] = Field(None, description="Short reason for the ranking")
     publish_date: Optional[datetime] = Field(None, description="Publication date if available")
     original_data: Optional[Dict[str, Any]] = Field(default_factory=dict, description="Raw data from the source")
     

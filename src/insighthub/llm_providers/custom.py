@@ -96,6 +96,9 @@ class CustomOpenAIProvider(BaseLLMProvider):
         except Exception as e:
             raise LLMProcessingError(f"custom_openai classification failed: {e}") from e
 
+    async def aclose(self) -> None:
+        await self.client.aclose()
+
 
 class CustomAnthropicProvider(BaseLLMProvider):
     """
@@ -188,3 +191,6 @@ class CustomAnthropicProvider(BaseLLMProvider):
             return "Uncategorized"
         except Exception as e:
             raise LLMProcessingError(f"custom_anthropic classification failed: {e}") from e
+
+    async def aclose(self) -> None:
+        await self.client.aclose()

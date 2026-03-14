@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 
 class BaseSource(ABC):
     """
-    Abstract base class for all data sources (e.g., GitHub, Zhihu, RSS).
+    Abstract base class for all data sources (e.g., GitHub, V2EX, RSS).
     
     Each source is responsible for fetching its raw data and parsing it
     into the `NewsItem` model.

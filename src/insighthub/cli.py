@@ -9,11 +9,11 @@ from insighthub.core.engine import InsightEngine
 from insighthub.errors import ConfigValidationError
 from insighthub.observability import JsonLogFormatter, RunContextFilter, new_run_id, set_run_id
 from insighthub.publishing import TitlePolicy
-from insighthub.settings import settings
+from insighthub.settings import get_settings
 from insighthub.workflow_factory import build_llm_provider, build_sinks, build_sources
 
 
-def setup_logging(run_id: str):
+def setup_logging(run_id: str, settings):
     """Set up structured logging to both console and file."""
     obs = settings.runtime.observability
     log_dir = settings.runtime.paths.logs_dir
@@ -99,35 +99,50 @@ def build_parser() -> argparse.ArgumentParser:
     return parser
 
 
+async def _close_llm_provider(provider):
+    if provider is None:
+        return
+    close_fn = getattr(provider, "aclose", None)
+    if callable(close_fn):
+        await close_fn()
+
+
+def _requires_sources(command: str | None) -> bool:
+    return command in (None, "run", "fetch")
+
+
 async def run_cli():
     parser = build_parser()
     args = parser.parse_args()
 
     run_id = new_run_id()
-    logger = setup_logging(run_id)
+    settings = get_settings()
+    logger = setup_logging(run_id, settings)
     logger.info("Starting InsightHub workflow.", extra={"event": "workflow.start", "command": args.command or "run"})
 
     requires_llm = args.command in (None, "run", "summarize")
+    requires_sources = _requires_sources(args.command)
     llm_provider = None
-    if requires_llm:
-        try:
-            settings.validate_runtime_requirements()
-        except ConfigValidationError as e:
-            logger.error("Runtime settings validation failed.", extra={"event": "workflow.validation_failed", "error": str(e)})
+    try:
+        if requires_llm:
+            try:
+                settings.validate_runtime_requirements()
+            except ConfigValidationError as e:
+                logger.error("Runtime settings validation failed.", extra={"event": "workflow.validation_failed", "error": str(e)})
+                return
+
+            llm_provider = build_llm_provider(settings, logger=logger)
+            if llm_provider is None:
+                return
+
+        sources = build_sources(settings, logger=logger) if requires_sources else []
+        if requires_sources and not sources:
+            logger.error("No sources are enabled in the configuration. Exiting.", extra={"event": "workflow.no_sources"})
             return
 
-        llm_provider = build_llm_provider(settings, logger=logger)
-        if llm_provider is None:
-            return
-
-    sources = build_sources(settings, logger=logger)
-    if not sources:
-        logger.error("No sources are enabled in the configuration. Exiting.", extra={"event": "workflow.no_sources"})
-        return
-
-    sinks = build_sinks(settings, logger=logger)
-    if not sinks:
-        logger.warning("No sinks are enabled in the configuration.", extra={"event": "workflow.no_sinks"})
+        sinks = build_sinks(settings, logger=logger)
+        if not sinks:
+            logger.warning("No sinks are enabled in the configuration.", extra={"event": "workflow.no_sinks"})
 
     title_policy = TitlePolicy(
         template=settings.publishing.title.template,
@@ -136,99 +151,102 @@ async def run_cli():
         strip_leading_h1=settings.publishing.title.strip_leading_h1,
     )
 
-    engine = InsightEngine(
-        sources=sources,
-        llm_provider=llm_provider,
-        sinks=sinks,
-        prompts_dir=settings.runtime.paths.prompts_dir,
-        history_file=settings.runtime.paths.history_file,
-        delivery_state_file=settings.runtime.paths.delivery_state_file,
-        prompt_structure=settings.prompt.structure,
-        prompt_style=settings.prompt.style,
-        prompt_variables=settings.prompt.variables,
-        max_history_records=settings.state.max_history_records,
-        max_delivery_item_records=settings.state.max_delivery_item_records,
-        max_delivery_runs=settings.state.max_delivery_runs,
-        scoring_config=settings.scoring,
-        source_retry_policy=settings.runtime.retry.source_fetch,
-        llm_retry_policy=settings.runtime.retry.llm_summarize,
-        sink_retry_policy=settings.runtime.retry.sink_render,
-        dedup_config=settings.runtime.dedup,
-        timezone_name=settings.runtime.timezone,
-        title_policy=title_policy,
-    )
-
-    if requires_llm and llm_provider is None:
-        logger.error(
-            "LLM provider is required for this command but was not initialized.",
-            extra={"event": "workflow.llm_required_missing", "command": args.command or "run"},
+        engine = InsightEngine(
+            sources=sources,
+            llm_provider=llm_provider,
+            sinks=sinks,
+            prompts_dir=settings.runtime.paths.prompts_dir,
+            history_file=settings.runtime.paths.history_file,
+            delivery_state_file=settings.runtime.paths.delivery_state_file,
+            prompt_structure=settings.prompt.structure,
+            prompt_style=settings.prompt.style,
+            prompt_variables=settings.prompt.variables,
+            max_history_records=settings.state.max_history_records,
+            max_delivery_item_records=settings.state.max_delivery_item_records,
+            max_delivery_runs=settings.state.max_delivery_runs,
+            scoring_config=settings.scoring,
+            source_retry_policy=settings.runtime.retry.source_fetch,
+            llm_retry_policy=settings.runtime.retry.llm_summarize,
+            sink_retry_policy=settings.runtime.retry.sink_render,
+            dedup_config=settings.runtime.dedup,
+            timezone_name=settings.runtime.timezone,
+            title_policy=title_policy,
+            stage_runs_dir=settings.runtime.paths.stage_runs_dir,
         )
-        return
 
-    if args.command == "fetch":
-        logger.info("Executing subcommand: fetch")
-        items = await engine.fetch(ignore_history=args.ignore_history)
-        if items:
-            output_path = args.output
-            os.makedirs(os.path.dirname(os.path.abspath(output_path)), exist_ok=True)
-            engine.save_items(items, output_path)
-            logger.info(f"Saved {len(items)} items to {output_path}")
+        if requires_llm and llm_provider is None:
+            logger.error(
+                "LLM provider is required for this command but was not initialized.",
+                extra={"event": "workflow.llm_required_missing", "command": args.command or "run"},
+            )
+            return
+
+        if args.command == "fetch":
+            logger.info("Executing subcommand: fetch")
+            items = await engine.fetch(ignore_history=args.ignore_history)
+            if items:
+                output_path = args.output
+                os.makedirs(os.path.dirname(os.path.abspath(output_path)), exist_ok=True)
+                engine.save_items(items, output_path)
+                logger.info(f"Saved {len(items)} items to {output_path}")
+            else:
+                logger.info("No new items fetched.")
+
+        elif args.command == "summarize":
+            logger.info("Executing subcommand: summarize")
+            items = engine.load_items(args.input)
+            if items:
+                if settings.scoring.enabled:
+                    items = await engine.score_items(items)
+                content = await engine.summarize(items)
+                output_path = args.output
+                os.makedirs(os.path.dirname(os.path.abspath(output_path)), exist_ok=True)
+                engine.save_content(content, output_path)
+                logger.info(f"Summary saved to {output_path}")
+                items_output_path = args.items_output or f"{os.path.splitext(output_path)[0]}.items.json"
+                os.makedirs(os.path.dirname(os.path.abspath(items_output_path)), exist_ok=True)
+                engine.save_items(items, items_output_path)
+                logger.info(f"Summarized items saved to {items_output_path}")
+            else:
+                logger.warning("No items loaded to summarize.")
+
+        elif args.command == "debug-summary-input":
+            logger.info("Executing subcommand: debug-summary-input")
+            items = engine.load_items(args.input)
+            if items:
+                if settings.scoring.enabled and not args.no_scoring:
+                    items = await engine.score_items(items)
+                combined_input = engine.build_summarize_input(items)
+                output_path = args.output
+                os.makedirs(os.path.dirname(os.path.abspath(output_path)), exist_ok=True)
+                engine.save_content(combined_input, output_path)
+                logger.info(f"Summarize input payload saved to {output_path}")
+            else:
+                logger.warning("No items loaded to build summarize input.")
+
+        elif args.command == "distribute":
+            logger.info("Executing subcommand: distribute")
+            content = engine.load_content(args.input)
+            if content:
+                items_path = args.items
+                if not items_path:
+                    default_items_path = f"{os.path.splitext(args.input)[0]}.items.json"
+                    if os.path.exists(default_items_path):
+                        items_path = default_items_path
+                        logger.info(f"Auto-detected summarized items file: {items_path}")
+                items = engine.load_items(items_path) if items_path else []
+                await engine.distribute(content, items, update_history=not args.no_history)
+                logger.info("Distribution completed.")
+            else:
+                logger.warning("No content loaded to distribute.")
+
         else:
-            logger.info("No new items fetched.")
+            logger.info("Executing full workflow (run)")
+            await engine.run()
 
-    elif args.command == "summarize":
-        logger.info("Executing subcommand: summarize")
-        items = engine.load_items(args.input)
-        if items:
-            if settings.scoring.enabled:
-                items = await engine.score_items(items)
-            content = await engine.summarize(items)
-            output_path = args.output
-            os.makedirs(os.path.dirname(os.path.abspath(output_path)), exist_ok=True)
-            engine.save_content(content, output_path)
-            logger.info(f"Summary saved to {output_path}")
-            items_output_path = args.items_output or f"{os.path.splitext(output_path)[0]}.items.json"
-            os.makedirs(os.path.dirname(os.path.abspath(items_output_path)), exist_ok=True)
-            engine.save_items(items, items_output_path)
-            logger.info(f"Summarized items saved to {items_output_path}")
-        else:
-            logger.warning("No items loaded to summarize.")
-
-    elif args.command == "debug-summary-input":
-        logger.info("Executing subcommand: debug-summary-input")
-        items = engine.load_items(args.input)
-        if items:
-            if settings.scoring.enabled and not args.no_scoring:
-                items = await engine.score_items(items)
-            combined_input = engine.build_summarize_input(items)
-            output_path = args.output
-            os.makedirs(os.path.dirname(os.path.abspath(output_path)), exist_ok=True)
-            engine.save_content(combined_input, output_path)
-            logger.info(f"Summarize input payload saved to {output_path}")
-        else:
-            logger.warning("No items loaded to build summarize input.")
-
-    elif args.command == "distribute":
-        logger.info("Executing subcommand: distribute")
-        content = engine.load_content(args.input)
-        if content:
-            items_path = args.items
-            if not items_path:
-                default_items_path = f"{os.path.splitext(args.input)[0]}.items.json"
-                if os.path.exists(default_items_path):
-                    items_path = default_items_path
-                    logger.info(f"Auto-detected summarized items file: {items_path}")
-            items = engine.load_items(items_path) if items_path else []
-            await engine.distribute(content, items, update_history=not args.no_history)
-            logger.info("Distribution completed.")
-        else:
-            logger.warning("No content loaded to distribute.")
-
-    else:
-        logger.info("Executing full workflow (run)")
-        await engine.run()
-
-    logger.info("Workflow/Command completed.", extra={"event": "workflow.completed"})
+        logger.info("Workflow/Command completed.", extra={"event": "workflow.completed"})
+    finally:
+        await _close_llm_provider(llm_provider)
 
 
 def main():

@@ -27,12 +27,7 @@ class MarkdownFileSink(BaseSink):
     ):
         self.output_dir = output_dir
         self.timezone_name = timezone_name
-        self.title_policy = title_policy or TitlePolicy(
-            template="每日趋势观察 {date}",
-            date_format="%Y-%m-%d",
-            timezone_name=timezone_name,
-            strip_leading_h1=True,
-        )
+        self.title_policy = title_policy
         self.posts_dir = os.path.join(self.output_dir, "posts")
         self.manifest_dir = os.path.join(self.output_dir, "manifest")
         self.manifest_path = os.path.join(self.manifest_dir, "index.json")
@@ -88,7 +83,7 @@ class MarkdownFileSink(BaseSink):
         Fallback formatter if curated_content is not provided.
         """
         header = f"# InsightHub {timestamp.strftime('%Y-%m-%d')}\n\n"
-        header += "> 由 InsightHub 自动生成的今日技术精选。\n\n"
+        header += "> 闂?InsightHub 闂佺厧顨庢禍婊勬叏閳哄懏鍋ㄩ柣鏃傤焾閻忓洭鏌ｉ妸銉ヮ仹缂侇喗鐗犲顕€濡烽敃鈧灇闂佸搫鐗滈崹宕囪姳閸ф鐒诲璺虹墐閸嬫挻绌遍幖濉"
         
         body = []
         for i, item in enumerate(items):

@@ -1,7 +1,8 @@
 import os
 import sys
 import tempfile
-import unittest
+import pytest
+from pathlib import Path
 from typing import List
 
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
@@ -43,7 +44,8 @@ class DummySink(BaseSink):
         return None
 
 
-class TestEngineDedup(unittest.IsolatedAsyncioTestCase):
+class TestEngineDedup:
+    @pytest.mark.asyncio
     async def test_fetch_deduplicates_tracking_urls(self):
         item1 = NewsItem(
             id="https://example.com/post?utm_source=hn&id=1",
@@ -78,12 +80,13 @@ class TestEngineDedup(unittest.IsolatedAsyncioTestCase):
 
         try:
             items = await engine.fetch(ignore_history=False)
-            self.assertEqual(len(items), 1)
-            self.assertEqual(items[0].url, "https://example.com/post?utm_source=hn&id=1")
+            assert len(items) == 1
+            assert items[0].url == "https://example.com/post?utm_source=hn&id=1"
         finally:
             os.remove(hist_path)
             os.remove(delivery_path)
 
+    @pytest.mark.asyncio
     async def test_fetch_can_disable_url_normalization_dedup(self):
         item1 = NewsItem(
             id="https://example.com/post?utm_source=hn&id=1",
@@ -119,11 +122,12 @@ class TestEngineDedup(unittest.IsolatedAsyncioTestCase):
 
         try:
             items = await engine.fetch(ignore_history=False)
-            self.assertEqual(len(items), 2)
+            assert len(items) == 2
         finally:
             os.remove(hist_path)
             os.remove(delivery_path)
 
+    @pytest.mark.asyncio
     async def test_history_not_updated_if_all_sinks_fail(self):
         class FailingSink(BaseSink):
             async def render(self, items: List[NewsItem], curated_content: str = None):
@@ -157,11 +161,12 @@ class TestEngineDedup(unittest.IsolatedAsyncioTestCase):
             await engine.distribute("summary", [item], update_history=True)
             with open(hist_path, "r", encoding="utf-8") as f:
                 content = f.read().strip()
-            self.assertEqual(content, "[]")
+            assert content == "[]"
         finally:
             os.remove(hist_path)
             os.remove(delivery_path)
 
+    @pytest.mark.asyncio
     async def test_delivery_state_is_persisted_per_sink(self):
         item = NewsItem(
             id="https://example.com/article2",
@@ -191,12 +196,13 @@ class TestEngineDedup(unittest.IsolatedAsyncioTestCase):
             await engine.distribute("summary", [item], update_history=True)
             with open(delivery_path, "r", encoding="utf-8") as f:
                 state = f.read()
-            self.assertIn("DummySink", state)
-            self.assertIn("success", state)
+            assert "DummySink" in state
+            assert "success" in state
         finally:
             os.remove(hist_path)
             os.remove(delivery_path)
 
+    @pytest.mark.asyncio
     async def test_delivery_state_prunes_old_items(self):
         item = NewsItem(
             id="https://example.com/new",
@@ -237,14 +243,15 @@ class TestEngineDedup(unittest.IsolatedAsyncioTestCase):
             engine._save_delivery_state(state)
             with open(delivery_path, "r", encoding="utf-8") as f:
                 saved = f.read()
-            self.assertIn('"b"', saved)
-            self.assertIn('"c"', saved)
-            self.assertNotIn('"a"', saved)
+            assert '"b"' in saved
+            assert '"c"' in saved
+            assert '"a"' not in saved
         finally:
             engine.max_delivery_item_records = old_limit
             os.remove(hist_path)
             os.remove(delivery_path)
 
+    @pytest.mark.asyncio
     async def test_history_prunes_old_records(self):
         items = [
             NewsItem(
@@ -278,14 +285,15 @@ class TestEngineDedup(unittest.IsolatedAsyncioTestCase):
             await engine.distribute("summary", items, update_history=True)
             with open(hist_path, "r", encoding="utf-8") as f:
                 data = f.read()
-            self.assertIn("https://example.com/4", data)
-            self.assertIn("https://example.com/3", data)
-            self.assertNotIn("https://example.com/1", data)
-            self.assertNotIn("https://example.com/2", data)
+            assert "https://example.com/4" in data
+            assert "https://example.com/3" in data
+            assert "https://example.com/1" not in data
+            assert "https://example.com/2" not in data
         finally:
             os.remove(hist_path)
             os.remove(delivery_path)
 
+    @pytest.mark.asyncio
     async def test_run_uses_all_scored_items_for_summary(self):
         low_item = NewsItem(
             id="https://example.com/low-priority",
@@ -319,17 +327,14 @@ class TestEngineDedup(unittest.IsolatedAsyncioTestCase):
             sinks=[DummySink()],
             history_file=hist_path,
             delivery_state_file=delivery_path,
-            scoring_config=ScoringConfig(enabled=True, use_llm=False),
+            scoring_config=ScoringConfig(enabled=True),
         )
 
         try:
             await engine.run()
-            self.assertIn("high-priority", provider.last_content)
-            self.assertIn("low-priority", provider.last_content)
+            assert "high-priority" in provider.last_content
+            assert "low-priority" in provider.last_content
         finally:
             os.remove(hist_path)
             os.remove(delivery_path)
 
-
-if __name__ == "__main__":
-    unittest.main()

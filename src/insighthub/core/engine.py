@@ -2,6 +2,7 @@ import asyncio
 import json
 import logging
 import os
+from pathlib import Path
 from datetime import datetime, timezone
 from typing import Any, Dict, List, Optional, Set
 from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
@@ -11,6 +12,7 @@ from insighthub.core.retry import with_retry
 from insighthub.errors import LLMProcessingError, PromptRenderingError, SinkDeliveryError, SourceFetchError
 from insighthub.llm_providers.base import BaseLLMProvider
 from insighthub.models import NewsItem
+from insighthub.observability import get_run_id
 from insighthub.prompting import PromptRenderer
 from insighthub.publishing import TitlePolicy
 from insighthub.scoring import ContentScorer
@@ -34,8 +36,8 @@ class InsightEngine:
         prompts_dir: str = "prompts",
         history_file: str = "history.json",
         delivery_state_file: str = "delivery_state.json",
-        prompt_structure: str = "professional_briefing_v1",
-        prompt_style: str = "professional_neutral_v1",
+        prompt_structure: str = "structure_prompt_v1",
+        prompt_style: str = "style_prompt_v1",
         prompt_variables: Optional[Dict[str, Any]] = None,
         max_history_records: int = 3000,
         max_delivery_item_records: int = 2000,
@@ -47,6 +49,7 @@ class InsightEngine:
         dedup_config: Optional[RuntimeDedupConfig] = None,
         timezone_name: str = "Asia/Shanghai",
         title_policy: Optional[TitlePolicy] = None,
+        stage_runs_dir: str = "output/runs",
     ):
         self.sources = sources
         self.llm_provider = llm_provider
@@ -63,14 +66,10 @@ class InsightEngine:
         self.sink_retry_policy = sink_retry_policy or RetryPolicyConfig(max_attempts=2, base_delay_seconds=1.0)
         self.dedup_config = dedup_config or RuntimeDedupConfig()
         self.timezone_name = timezone_name
-        self.title_policy = title_policy or TitlePolicy(
-            template="每日趋势观察 {date}",
-            date_format="%Y-%m-%d",
-            timezone_name=timezone_name,
-            strip_leading_h1=True,
-        )
+        self.stage_runs_dir = stage_runs_dir
+        self.title_policy = title_policy
         self._strip_query_params = set(self.dedup_config.strip_query_params)
-        self.scorer = ContentScorer(config=self.scoring_config, llm_provider=llm_provider)
+        self.scorer = ContentScorer(config=self.scoring_config)
         self.prompt_renderer = PromptRenderer(
             prompts_dir=prompts_dir,
             structure_name=prompt_structure,
@@ -161,17 +160,34 @@ class InsightEngine:
         return datetime.now(timezone.utc).isoformat()
 
     async def run(self):
+        run_id = self._resolve_run_id()
         new_items = await self.fetch()
+        self._save_stage_items(run_id, "raw", new_items)
         if not new_items:
             logger.info("No new items to process.", extra={"event": "engine.run.no_new_items"})
-            await self.distribute(self._build_no_update_markdown(), [], update_history=False)
+            curated_markdown = self._build_no_update_markdown()
+            self._save_stage_markdown(run_id, "summary", curated_markdown)
+            self._save_run_meta(run_id, {"stages": {"raw": 0, "summary": 0}})
+            await self.distribute(curated_markdown, [], update_history=False)
             return
 
         items_for_summary = new_items
         if self.scoring_config.enabled:
             items_for_summary = await self.score_items(new_items)
+        self._save_stage_items(run_id, "scored", items_for_summary)
 
         curated_markdown = await self.summarize(items_for_summary)
+        self._save_stage_markdown(run_id, "summary", curated_markdown)
+        self._save_run_meta(
+            run_id,
+            {
+                "stages": {
+                    "raw": len(new_items),
+                    "scored": len(items_for_summary) if self.scoring_config.enabled else None,
+                    "summary": len(items_for_summary),
+                }
+            },
+        )
         await self.distribute(curated_markdown, items_for_summary)
 
     async def _fetch_from_source(self, source: BaseSource) -> List[NewsItem]:
@@ -289,15 +305,37 @@ class InsightEngine:
         logger.info("Starting content scoring.", extra={"event": "engine.score.start", "items_count": len(items)})
         scored_items = await self.scorer.score_items(items)
         selected = self.scorer.select_items_for_summary(scored_items)
+        threshold = self.scoring_config.scoring_threshold
+        filtered = selected
+        if threshold is not None:
+            filtered = [
+                item
+                for item in selected
+                if item.discussion_signal is None or float(item.discussion_signal) >= threshold
+            ]
+            logger.info(
+                "Applied scoring threshold.",
+                extra={
+                    "event": "engine.score.filtered",
+                    "threshold": threshold,
+                    "before_count": len(selected),
+                    "after_count": len(filtered),
+                },
+            )
+            if not filtered:
+                logger.warning(
+                    "All items filtered by score threshold.",
+                    extra={"event": "engine.score.filtered_all", "threshold": threshold},
+                )
         logger.info(
             "Content scoring completed.",
             extra={
                 "event": "engine.score.completed",
                 "items_count": len(scored_items),
-                "selected_count": len(selected),
+                "selected_count": len(filtered),
             },
         )
-        return selected or scored_items[:1]
+        return filtered
 
     def build_summarize_input(self, items: List[NewsItem]) -> str:
         combined_input = ""
@@ -305,10 +343,12 @@ class InsightEngine:
             combined_input += f"--- Item {i} ---\n"
             combined_input += f"Title: {item.title}\n"
             combined_input += f"URL: {item.url}\n"
-            if item.ai_score is not None:
-                combined_input += f"AI Score: {item.ai_score} ({item.score_tier or 'Unrated'})\n"
-                if item.score_reason:
-                    combined_input += f"Score Reason: {item.score_reason}\n"
+            if item.discussion_signal is not None:
+                combined_input += (
+                    f"Discussion Signal: {item.discussion_signal} ({item.discussion_tier or 'Unrated'})\n"
+                )
+                if item.ranking_reason:
+                    combined_input += f"Ranking Reason: {item.ranking_reason}\n"
             combined_input += f"Content: {item.content}\n\n"
         return combined_input
 
@@ -409,7 +449,7 @@ class InsightEngine:
             )
 
     def save_items(self, items: List[NewsItem], file_path: str):
-        data = [item.dict() for item in items]
+        data = [item.model_dump() for item in items]
         with open(file_path, "w", encoding="utf-8") as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
 
@@ -460,10 +500,10 @@ class InsightEngine:
             return template
         except PromptRenderingError as e:
             logger.warning(
-                "Failed to load composed prompt; fallback to legacy summarize_prompt.md.",
-                extra={"event": "engine.prompt.fallback_legacy", "error": str(e)},
+                "Failed to load composed summarize prompt.",
+                extra={"error": str(e)},
             )
-            return self._load_prompt("summarize_prompt.md")
+            return None
 
     def _item_primary_key(self, item: NewsItem) -> str:
         normalized_id = self._normalize_possible_url(item.id)
@@ -505,6 +545,46 @@ class InsightEngine:
             cleaned_query,
             "",
         ))
+
+    def _resolve_run_id(self) -> str:
+        run_id = (get_run_id() or "").strip()
+        if run_id and run_id != "-":
+            return run_id
+        return datetime.now(timezone.utc).strftime("%Y%m%d%H%M%S")
+
+    def _run_dir(self, run_id: str) -> Path:
+        return Path(self.stage_runs_dir) / run_id
+
+    def _save_stage_items(self, run_id: str, stage: str, items: List[NewsItem]) -> None:
+        path = self._run_dir(run_id) / f"{stage}_items.json"
+        path.parent.mkdir(parents=True, exist_ok=True)
+        data = [item.model_dump() for item in items]
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+
+    def _save_stage_markdown(self, run_id: str, stage: str, content: str) -> None:
+        path = self._run_dir(run_id) / f"{stage}.md"
+        path.parent.mkdir(parents=True, exist_ok=True)
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(content)
+
+    def _save_run_meta(self, run_id: str, payload: Dict[str, Any]) -> None:
+        path = self._run_dir(run_id) / "meta.json"
+        path.parent.mkdir(parents=True, exist_ok=True)
+        existing: Dict[str, Any] = {}
+        if path.exists():
+            try:
+                with open(path, "r", encoding="utf-8") as f:
+                    loaded = json.load(f)
+                if isinstance(loaded, dict):
+                    existing = loaded
+            except Exception:
+                existing = {}
+        existing.update(payload)
+        existing["run_id"] = run_id
+        existing["updated_at"] = self._utc_now_iso()
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(existing, f, ensure_ascii=False, indent=2)
 
     def _build_no_update_markdown(self) -> str:
         now = datetime.now(ZoneInfo(self.timezone_name))

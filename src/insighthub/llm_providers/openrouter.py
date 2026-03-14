@@ -1,5 +1,5 @@
 import os
-from typing import List, Optional
+from typing import Any, Dict, List, Optional
 import httpx
 from insighthub.llm_providers.base import BaseLLMProvider
 from insighthub.errors import LLMProcessingError
@@ -16,7 +16,15 @@ class OpenRouterProvider(BaseLLMProvider):
     # Use the official domain/path from OpenRouter quickstart examples
     DEFAULT_BASE_URL = "https://openrouter.ai/api/v1"
 
-    def __init__(self, api_key: Optional[str] = None, model: Optional[str] = None, base_url: Optional[str] = None):
+    ALLOWED_PARAMS = {"temperature", "top_p", "max_tokens", "stop", "stream"}
+
+    def __init__(
+        self,
+        api_key: Optional[str] = None,
+        model: Optional[str] = None,
+        base_url: Optional[str] = None,
+        params: Optional[Dict[str, Any]] = None,
+    ):
         api_key = api_key or os.getenv("OPENROUTER_API_KEY")
         if not api_key:
             raise ValueError("OpenRouter API key not provided or found in environment variables.")
@@ -25,6 +33,7 @@ class OpenRouterProvider(BaseLLMProvider):
         if not self.model:
             raise ValueError("OpenRouter model not provided. Set llm.primary.model or LLM_MODEL.")
         self.base_url = base_url or os.getenv("OPENROUTER_API_URL") or self.DEFAULT_BASE_URL
+        self.params = self._sanitize_params(params)
 
         headers = {
             "Authorization": f"Bearer {api_key}",
@@ -52,6 +61,7 @@ class OpenRouterProvider(BaseLLMProvider):
         payload = {
             "model": self.model,
             "messages": messages,
+            **self.params,
         }
 
         resp = await self.client.post(url, json=payload)
@@ -81,6 +91,23 @@ class OpenRouterProvider(BaseLLMProvider):
             pass
 
         raise AttributeError("Unable to extract text from OpenRouter response")
+
+    @classmethod
+    def _sanitize_params(cls, params: Optional[Dict[str, Any]]) -> Dict[str, Any]:
+        clean: Dict[str, Any] = {}
+        if not params:
+            return clean
+        for key, value in params.items():
+            if key not in cls.ALLOWED_PARAMS:
+                continue
+            if key == "stream":
+                if bool(value):
+                    continue
+                clean[key] = False
+                continue
+            clean[key] = value
+        clean.pop("stream", None)
+        return clean
 
     async def summarize(self, content: str, prompt_template: str) -> str:
         """
@@ -115,3 +142,6 @@ class OpenRouterProvider(BaseLLMProvider):
         except Exception as e:
             # Wrap in LLMProcessingError which is marked as retryable
             raise LLMProcessingError(f"OpenRouter classification failed: {e}") from e
+
+    async def aclose(self) -> None:
+        await self.client.aclose()

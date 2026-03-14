@@ -34,12 +34,7 @@ class FeishuDocSink(BaseSink):
             raise ValueError("Feishu app_id and app_secret are required for FeishuDocSink")
         self.app_id = app_id
         self.app_secret = app_secret
-        self.title_policy = title_policy or TitlePolicy(
-            template="每日趋势观察 {date}",
-            date_format="%Y-%m-%d",
-            timezone_name="Asia/Shanghai",
-            strip_leading_h1=True,
-        )
+        self.title_policy = title_policy
         self.space_id = space_id
         self.doc_id = doc_id
         self.name = "feishu_doc"

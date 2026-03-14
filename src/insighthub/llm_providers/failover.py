@@ -44,3 +44,9 @@ class FailoverLLMProvider(BaseLLMProvider):
                     extra={"event": "llm.failover.classify_failed", "provider": label, "error": str(e)},
                 )
         raise RuntimeError(f"All LLM classify providers failed. Last error: {last_error}")
+
+    async def aclose(self) -> None:
+        for provider in self.providers:
+            close_fn = getattr(provider, "aclose", None)
+            if callable(close_fn):
+                await close_fn()
