@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-13T10:37:23.272510+00:00",
+  "updated_at": "2026-03-14T10:28:21.524410+00:00",
   "runs": [
     {
       "timestamp": "2026-03-07T15:32:37.689828+00:00",
@@ -107,6 +107,22 @@
             "status": "success",
             "file_path": "output/posts/2026-03-13-e3916efa33dd.md",
             "slug": "2026-03-13-e3916efa33dd",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-14T10:28:21.524130+00:00",
+      "items_count": 18,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-03-14-0c6facc5e7d8.md",
+            "slug": "2026-03-14-0c6facc5e7d8",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -1008,6 +1024,132 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-03-13T10:37:23.272501+00:00",
+        "error": null
+      }
+    },
+    "https://www.tomshardware.com/tech-industry/qatar-helium-shutdown-puts-chip-supply-chain-on-a-two-week-clock": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-14T10:28:21.524354+00:00",
+        "error": null
+      }
+    },
+    "https://claude.com/blog/1m-context-ga": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-14T10:28:21.524361+00:00",
+        "error": null
+      }
+    },
+    "https://channelsurfer.tv": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-14T10:28:21.524366+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/TomBadash/MouseControl": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-14T10:28:21.524370+00:00",
+        "error": null
+      }
+    },
+    "https://batsov.com/articles/2026/03/09/emacs-and-vim-in-the-age-of-ai": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-14T10:28:21.524373+00:00",
+        "error": null
+      }
+    },
+    "http://karpathy.github.io/2016/09/07/phd": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-14T10:28:21.524375+00:00",
+        "error": null
+      }
+    },
+    "https://lcamtuf.substack.com/p/you-gotta-think-outside-the-hypercube": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-14T10:28:21.524382+00:00",
+        "error": null
+      }
+    },
+    "https://jnkr.tech/blog/recursive-benefits-recursive": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-14T10:28:21.524384+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/lightpanda-io/browser": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-14T10:28:21.524386+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/public-apis/public-apis": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-14T10:28:21.524388+00:00",
+        "error": null
+      }
+    },
+    "https://entertainment.slashdot.org/story/26/03/14/0048239/two-long-lost-episodes-of-doctor-who-found": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-14T10:28:21.524390+00:00",
+        "error": null
+      }
+    },
+    "https://yro.slashdot.org/story/26/03/13/2111234/chatgpt-other-chatbots-approved-for-official-use-in-the-senate": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-14T10:28:21.524392+00:00",
+        "error": null
+      }
+    },
+    "https://it.slashdot.org/story/26/03/13/214229/instagram-discontinues-end-to-end-encryption-for-dms": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-14T10:28:21.524394+00:00",
+        "error": null
+      }
+    },
+    "https://tech.slashdot.org/story/26/03/13/190216/qatar-helium-shutdown-puts-chip-supply-chain-on-a-two-week-clock": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-14T10:28:21.524395+00:00",
+        "error": null
+      }
+    },
+    "https://news.slashdot.org/story/26/03/13/1926255/dont-get-used-to-cheap-ai": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-14T10:28:21.524397+00:00",
+        "error": null
+      }
+    },
+    "https://tech.slashdot.org/story/26/03/13/1953248/digg-relaunch-fails": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-14T10:28:21.524399+00:00",
+        "error": null
+      }
+    },
+    "https://science.slashdot.org/story/26/03/13/182207/backblaze-hosts-314-trillion-digits-of-pi-online": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-14T10:28:21.524401+00:00",
+        "error": null
+      }
+    },
+    "https://tech.slashdot.org/story/26/03/13/1756229/meta-delays-rollout-of-new-ai-model-after-performance-concerns": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-14T10:28:21.524403+00:00",
         "error": null
       }
     }

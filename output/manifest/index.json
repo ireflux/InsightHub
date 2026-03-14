@@ -1,7 +1,29 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-03-13T18:37:23.270383+08:00",
+  "generated_at": "2026-03-14T18:28:21.522417+08:00",
   "posts": [
+    {
+      "id": "2026-03-14-0c6facc5e7d8",
+      "run_id": "0c6facc5e7d8",
+      "date": "2026-03-14",
+      "title": "每日趋势观察 2026-03-14",
+      "slug": "2026-03-14-0c6facc5e7d8",
+      "markdown_path": "posts/2026-03-14-0c6facc5e7d8.md",
+      "summary": "硬件供应链面临物理中断，而 AI 领域竞争加剧，导致关键功能发布推迟和机构采用。",
+      "tags": [
+        "github_trending",
+        "hacker_news",
+        "slashdot"
+      ],
+      "sources": [
+        "GitHub Trending",
+        "Hacker News",
+        "Slashdot"
+      ],
+      "item_count": 18,
+      "is_empty_update": false,
+      "created_at": "2026-03-14T18:28:21.522417+08:00"
+    },
     {
       "id": "2026-03-13-e3916efa33dd",
       "run_id": "e3916efa33dd",
