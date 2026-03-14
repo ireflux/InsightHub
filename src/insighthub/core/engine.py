@@ -67,7 +67,12 @@ class InsightEngine:
         self.dedup_config = dedup_config or RuntimeDedupConfig()
         self.timezone_name = timezone_name
         self.stage_runs_dir = stage_runs_dir
-        self.title_policy = title_policy
+        self.title_policy = title_policy or TitlePolicy(
+            template="InsightHub {date}",
+            date_format="%Y-%m-%d",
+            timezone_name=timezone_name,
+            strip_leading_h1=True,
+        )
         self._strip_query_params = set(self.dedup_config.strip_query_params)
         self.scorer = ContentScorer(config=self.scoring_config)
         self.prompt_renderer = PromptRenderer(

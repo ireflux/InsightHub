@@ -27,7 +27,12 @@ class MarkdownFileSink(BaseSink):
     ):
         self.output_dir = output_dir
         self.timezone_name = timezone_name
-        self.title_policy = title_policy
+        self.title_policy = title_policy or TitlePolicy(
+            template="InsightHub {date}",
+            date_format="%Y-%m-%d",
+            timezone_name=timezone_name,
+            strip_leading_h1=True,
+        )
         self.posts_dir = os.path.join(self.output_dir, "posts")
         self.manifest_dir = os.path.join(self.output_dir, "manifest")
         self.manifest_path = os.path.join(self.manifest_dir, "index.json")

@@ -144,12 +144,12 @@ async def run_cli():
         if not sinks:
             logger.warning("No sinks are enabled in the configuration.", extra={"event": "workflow.no_sinks"})
 
-    title_policy = TitlePolicy(
-        template=settings.publishing.title.template,
-        date_format=settings.publishing.title.date_format,
-        timezone_name=settings.publishing.title.timezone or settings.runtime.timezone,
-        strip_leading_h1=settings.publishing.title.strip_leading_h1,
-    )
+        title_policy = TitlePolicy(
+            template=settings.publishing.title.template,
+            date_format=settings.publishing.title.date_format,
+            timezone_name=settings.publishing.title.timezone or settings.runtime.timezone,
+            strip_leading_h1=settings.publishing.title.strip_leading_h1,
+        )
 
         engine = InsightEngine(
             sources=sources,
