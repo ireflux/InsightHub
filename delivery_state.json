@@ -1,0 +1,65 @@
+{
+  "updated_at": "2026-03-14T16:54:17.666352+00:00",
+  "runs": [
+    {
+      "timestamp": "2026-03-14T16:54:17.666187+00:00",
+      "items_count": 6,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-03-15-733cc176f551.md",
+            "slug": "2026-03-15-733cc176f551",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    }
+  ],
+  "items": {
+    "https://claude.com/blog/1m-context-ga": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-14T16:54:17.666320+00:00",
+        "error": null
+      }
+    },
+    "https://www.westernmt.news/2025/04/21/montana-leads-the-nation-with-groundbreaking-right-to-compute-act": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-14T16:54:17.666324+00:00",
+        "error": null
+      }
+    },
+    "https://interpret.csis.org/translations/starlink-militarization-and-its-impact-on-global-strategic-stability": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-14T16:54:17.666327+00:00",
+        "error": null
+      }
+    },
+    "https://cemrehancavdar.com/2026/03/10/optimization-ladder": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-14T16:54:17.666331+00:00",
+        "error": null
+      }
+    },
+    "https://www.crowdsupply.com/baochip/dabao/updates/what-it-is-why-im-doing-it-now-and-how-it-came-about": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-14T16:54:17.666334+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/drojaazu/megadev": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-14T16:54:17.666338+00:00",
+        "error": null
+      }
+    }
+  }
+}
