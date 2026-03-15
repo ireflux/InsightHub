@@ -1,44 +1,25 @@
 import inspect
-from typing import Type
+from typing import Type, List
+from insighthub.core.registry import registry
 from insighthub.llm_providers.base import BaseLLMProvider
-from insighthub.llm_providers.custom import CustomAnthropicProvider, CustomOpenAIProvider
-from insighthub.llm_providers.openrouter import OpenRouterProvider
-from insighthub.llm_providers.nvidia import NvidiaProvider
-from insighthub.llm_providers.zhipu import ZhipuAIProvider
 
 class LLMFactory:
     """
     Factory for creating LLM provider instances.
+    Now delegates to the central registry.
     """
     
-    _providers = {
-        "openrouter": OpenRouterProvider,
-        "nvidia": NvidiaProvider,
-        "zhipuai": ZhipuAIProvider,
-        "custom_openai": CustomOpenAIProvider,
-        "custom_anthropic": CustomAnthropicProvider,
-    }
-
     @staticmethod
     def create_provider(provider_name: str, **kwargs) -> BaseLLMProvider:
         """
-        Creates an instance of the specified LLM provider.
-
-        Args:
-            provider_name: The name of the provider to create (e.g., 'openrouter').
-            **kwargs: Arguments to pass to the provider's constructor (e.g., api_key, model).
-
-        Returns:
-            An instance of the LLM provider.
-            
-        Raises:
-            ValueError: If the provider name is not supported.
+        Creates an instance of the specified LLM provider using the registry.
         """
-        provider_class = LLMFactory._providers.get(provider_name.lower())
+        provider_types = registry.get_llm_types()
+        provider_class = provider_types.get(provider_name.lower())
         if not provider_class:
             raise ValueError(f"Unsupported LLM provider: {provider_name}")
-        # Keep workflow_factory simple: pass a superset of kwargs and
-        # dispatch only the parameters supported by each provider constructor.
+
+        # Dispatch only parameters supported by the provider constructor
         sig = inspect.signature(provider_class.__init__)
         accepted = {
             name
@@ -49,6 +30,6 @@ class LLMFactory:
         return provider_class(**filtered_kwargs)
 
     @staticmethod
-    def get_available_providers() -> list[str]:
-        """Returns a list of available provider names."""
-        return list(LLMFactory._providers.keys())
+    def get_available_providers() -> List[str]:
+        """Returns a list of available provider names from the registry."""
+        return list(registry.get_llm_types().keys())

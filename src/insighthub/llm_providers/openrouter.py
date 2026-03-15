@@ -1,10 +1,12 @@
 import os
 from typing import Any, Dict, List, Optional
 import httpx
+from insighthub.core.registry import registry
 from insighthub.llm_providers.base import BaseLLMProvider
 from insighthub.errors import LLMProcessingError
 
 
+@registry.register_llm("openrouter")
 class OpenRouterProvider(BaseLLMProvider):
     """
     LLM Provider for OpenRouter using direct HTTP calls to the OpenRouter REST API.

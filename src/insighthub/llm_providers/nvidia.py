@@ -3,10 +3,12 @@ from typing import Any, Dict, List, Optional
 
 import httpx
 
+from insighthub.core.registry import registry
 from insighthub.errors import LLMProcessingError
 from insighthub.llm_providers.base import BaseLLMProvider
 
 
+@registry.register_llm("nvidia")
 class NvidiaProvider(BaseLLMProvider):
     """
     LLM provider for NVIDIA Integrate API (OpenAI-compatible chat endpoint).

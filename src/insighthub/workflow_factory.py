@@ -3,22 +3,34 @@ import logging
 from typing import List
 from zoneinfo import ZoneInfo
 
-from insighthub.llm_providers import LLMFactory
+from insighthub.core.registry import registry
 from insighthub.llm_providers.base import BaseLLMProvider
 from insighthub.llm_providers.failover import FailoverLLMProvider
 from insighthub.publishing import TitlePolicy
 from insighthub.settings import AppSettings, LLMEndpointConfig, SinkConfig, SourceConfig
-from insighthub.sinks import BaseSink, FeishuDocSink, MarkdownFileSink
-from insighthub.sources import (
-    GitHubTrendingSource,
-    HackerNewsSource,
-    SlashdotSource,
-    V2EXHotSource,
-)
+from insighthub.sinks import BaseSink
 from insighthub.sources.base import BaseSource
 
 
+def _ensure_registry_loaded():
+    """Import all plugin modules to trigger registration."""
+    # LLM Providers
+    import insighthub.llm_providers.openrouter
+    import insighthub.llm_providers.nvidia
+    import insighthub.llm_providers.zhipu
+    import insighthub.llm_providers.custom
+    # Sources
+    import insighthub.sources.github
+    import insighthub.sources.hackernews
+    import insighthub.sources.v2ex
+    import insighthub.sources.slashdot
+    # Sinks
+    import insighthub.sinks.markdown
+    import insighthub.sinks.feishu
+
+
 def build_llm_provider(app_settings: AppSettings, logger: logging.Logger) -> BaseLLMProvider | None:
+    _ensure_registry_loaded()
     primary_cfg = app_settings.llm.primary
     primary_provider = _create_provider(primary_cfg, logger=logger, role="primary")
     if primary_provider is None:
@@ -45,7 +57,7 @@ def _create_provider(
 ) -> BaseLLMProvider | None:
     provider_name = endpoint_config.provider
     try:
-        provider = LLMFactory.create_provider(
+        provider = registry.create_llm(
             provider_name,
             api_key=endpoint_config.api_key,
             model=endpoint_config.model,
@@ -78,6 +90,7 @@ def _create_provider(
 
 
 def build_sources(app_settings: AppSettings, logger: logging.Logger) -> List[BaseSource]:
+    _ensure_registry_loaded()
     sources: List[BaseSource] = []
 
     for src_config in app_settings.sources.items:
@@ -113,20 +126,14 @@ def _build_single_source(
         "content_fetch_timeout": content_fetch_timeout,
     }
 
-    if source_type == "github_trending":
-        return GitHubTrendingSource(**common_kwargs)
-    if source_type == "hacker_news":
-        return HackerNewsSource(**common_kwargs)
-    if source_type == "v2ex_hot":
-        return V2EXHotSource(**common_kwargs)
-    if source_type == "slashdot":
-        return SlashdotSource(**common_kwargs)
-
-    logger.warning(
-        "Unknown source in config, skipping.",
-        extra={"event": "workflow.unknown_source", "source_type": source_type, "source_id": src_config.id},
-    )
-    return None
+    try:
+        return registry.create_source(source_type, **common_kwargs)
+    except ValueError:
+        logger.warning(
+            "Unknown source in config, skipping.",
+            extra={"event": "workflow.unknown_source", "source_type": source_type, "source_id": src_config.id},
+        )
+        return None
 
 
 def build_sinks(
@@ -134,6 +141,7 @@ def build_sinks(
     logger: logging.Logger,
     now: datetime.datetime | None = None,
 ) -> List[BaseSink]:
+    _ensure_registry_loaded()
     sinks: List[BaseSink] = []
     tz = ZoneInfo(app_settings.runtime.timezone)
     now = now or datetime.datetime.now(tz)
@@ -170,44 +178,40 @@ def _build_single_sink(
 ) -> BaseSink | None:
     sink_type = sink_config.type
     sink_params = sink_config.params
-    if sink_type == "markdown_file":
-        output_dir = sink_params.get("output_dir") or "output"
-        return MarkdownFileSink(output_dir=output_dir, timezone_name=timezone_name, title_policy=title_policy)
+    
+    try:
+        if sink_type == "markdown_file":
+            kwargs = {
+                "output_dir": sink_params.get("output_dir") or "output",
+                "timezone_name": timezone_name,
+                "title_policy": title_policy
+            }
+        elif sink_type == "feishu_doc":
+            kwargs = {
+                "app_id": sink_params.get("app_id"),
+                "app_secret": sink_params.get("app_secret"),
+                "title_policy": title_policy,
+                "space_id": sink_params.get("space_id"),
+                "doc_id": sink_params.get("doc_id"),
+            }
+        else:
+            kwargs = sink_params
 
-    if sink_type == "feishu_doc":
-        app_id = sink_params.get("app_id")
-        app_secret = sink_params.get("app_secret")
-        space_id = sink_params.get("space_id")
-        doc_id = sink_params.get("doc_id")
-        if app_id and app_secret:
-            try:
-                return FeishuDocSink(
-                    app_id=app_id,
-                    app_secret=app_secret,
-                    title_policy=title_policy,
-                    space_id=space_id,
-                    doc_id=doc_id,
-                )
-            except ValueError as e:
-                logger.error(
-                    "Error initializing FeishuDocSink.",
-                    extra={
-                        "event": "workflow.sink_init_failed",
-                        "sink": "feishu_doc",
-                        "sink_id": sink_config.id,
-                        "error": str(e),
-                    },
-                )
-                return None
-
+        return registry.create_sink(sink_type, **kwargs)
+    except ValueError:
         logger.warning(
-            "feishu_doc sink enabled but credentials are missing. Skipping.",
-            extra={"event": "workflow.sink_skipped", "sink": "feishu_doc", "sink_id": sink_config.id},
+            "Unknown sink in config, skipping.",
+            extra={"event": "workflow.unknown_sink", "sink_type": sink_type, "sink_id": sink_config.id},
         )
         return None
-
-    logger.warning(
-        "Unknown sink in config, skipping.",
-        extra={"event": "workflow.unknown_sink", "sink_type": sink_type, "sink_id": sink_config.id},
-    )
-    return None
+    except Exception as e:
+        logger.error(
+            f"Error initializing {sink_type} sink.",
+            extra={
+                "event": "workflow.sink_init_failed",
+                "sink": sink_type,
+                "sink_id": sink_config.id,
+                "error": str(e),
+            },
+        )
+        return None

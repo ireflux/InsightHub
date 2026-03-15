@@ -3,6 +3,7 @@ from typing import Any, Dict, List, Optional
 
 import httpx
 
+from insighthub.core.registry import registry
 from insighthub.errors import LLMProcessingError
 from insighthub.llm_providers.base import BaseLLMProvider
 
@@ -26,6 +27,7 @@ def _sanitize_params(params: Optional[Dict[str, Any]]) -> Dict[str, Any]:
     return clean
 
 
+@registry.register_llm("custom_openai")
 class CustomOpenAIProvider(BaseLLMProvider):
     """
     Generic OpenAI-compatible provider with user-supplied base_url/model.
@@ -100,6 +102,7 @@ class CustomOpenAIProvider(BaseLLMProvider):
         await self.client.aclose()
 
 
+@registry.register_llm("custom_anthropic")
 class CustomAnthropicProvider(BaseLLMProvider):
     """
     Generic Anthropic-compatible provider with user-supplied base_url/model.

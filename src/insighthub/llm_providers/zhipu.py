@@ -3,11 +3,13 @@ import asyncio
 import logging
 from typing import List
 from zhipuai import ZhipuAI
+from insighthub.core.registry import registry
 from insighthub.llm_providers.base import BaseLLMProvider
 from insighthub.errors import LLMProcessingError
 
 logger = logging.getLogger(__name__)
 
+@registry.register_llm("zhipuai")
 class ZhipuAIProvider(BaseLLMProvider):
     """
     LLM Provider for ZhipuAI.
@@ -15,7 +17,16 @@ class ZhipuAIProvider(BaseLLMProvider):
     API key is read from the `ZHIPUAI_API_KEY` environment variable.
     """
     
-    def __init__(self, api_key: str = None, model: str = None):
+    def __init__(
+        self,
+        api_key: str = None,
+        model: str = None,
+        base_url: str | None = None,
+        params: dict | None = None,
+    ):
+        # base_url/params are accepted for interface parity with other providers.
+        # ZhipuAI SDK does not use base_url here; params are currently unused.
+        _ = (base_url, params)
         api_key = api_key or os.getenv("ZHIPUAI_API_KEY")
         if not api_key:
             raise ValueError("ZhipuAI API key not provided or found in environment variables.")

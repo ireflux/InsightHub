@@ -14,6 +14,7 @@ dependencies = [
   "pyyaml",
   "beautifulsoup4",
   "lxml",
+  "trafilatura",
   "zhipuai",
   "sniffio",
   "aiofiles",

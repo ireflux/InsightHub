@@ -7,12 +7,18 @@ from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 from pydantic import BaseModel, Field, model_validator
 
 from insighthub.errors import ConfigValidationError
+from insighthub.core.registry import registry
 
 logger = logging.getLogger(__name__)
 
-SUPPORTED_LLM_PROVIDERS = {"openrouter", "zhipuai", "nvidia", "custom_openai", "custom_anthropic"}
-SUPPORTED_SOURCES = {"github_trending", "hacker_news", "v2ex_hot", "slashdot"}
-SUPPORTED_SINKS = {"markdown_file", "feishu_doc"}
+def SUPPORTED_LLM_PROVIDERS():
+    return set(registry.get_llm_types().keys())
+
+def SUPPORTED_SOURCES():
+    return set(registry.get_source_types().keys())
+
+def SUPPORTED_SINKS():
+    return set(registry.get_sink_types().keys())
 
 
 class LLMEndpointConfig(BaseModel):
@@ -181,14 +187,17 @@ class AppSettings(BaseModel):
         extra = "forbid"
 
     def validate_schema_rules(self) -> None:
+        from insighthub.workflow_factory import _ensure_registry_loaded
+        _ensure_registry_loaded()
         endpoints = [self.llm.primary, *self.llm.fallbacks]
+        supported_llms = SUPPORTED_LLM_PROVIDERS()
         unsupported_providers = sorted(
-            {ep.provider for ep in endpoints if ep.provider.lower() not in SUPPORTED_LLM_PROVIDERS}
+            {ep.provider for ep in endpoints if ep.provider.lower() not in supported_llms}
         )
         if unsupported_providers:
             raise ConfigValidationError(
                 f"Unsupported llm providers: {unsupported_providers}. "
-                f"Supported: {sorted(SUPPORTED_LLM_PROVIDERS)}"
+                f"Supported: {sorted(supported_llms)}"
             )
         for endpoint in endpoints:
             self._validate_llm_endpoint(endpoint)
@@ -198,11 +207,12 @@ class AppSettings(BaseModel):
             raise ConfigValidationError("Duplicate source ids found in config.")
 
         source_types = [source.type for source in self.sources.items]
-        unsupported_sources = sorted({name for name in source_types if name not in SUPPORTED_SOURCES})
+        supported_sources = SUPPORTED_SOURCES()
+        unsupported_sources = sorted({name for name in source_types if name not in supported_sources})
         if unsupported_sources:
             raise ConfigValidationError(
                 f"Unsupported source types: {unsupported_sources}. "
-                f"Supported: {sorted(SUPPORTED_SOURCES)}"
+                f"Supported: {sorted(supported_sources)}"
             )
 
         sink_ids = [sink.id for sink in self.sinks.items]
@@ -210,11 +220,12 @@ class AppSettings(BaseModel):
             raise ConfigValidationError("Duplicate sink ids found in config.")
 
         sink_types = [sink.type for sink in self.sinks.items]
-        unsupported_sinks = sorted({name for name in sink_types if name not in SUPPORTED_SINKS})
+        supported_sinks = SUPPORTED_SINKS()
+        unsupported_sinks = sorted({name for name in sink_types if name not in supported_sinks})
         if unsupported_sinks:
             raise ConfigValidationError(
                 f"Unsupported sink types: {unsupported_sinks}. "
-                f"Supported: {sorted(SUPPORTED_SINKS)}"
+                f"Supported: {sorted(supported_sinks)}"
             )
 
         if self.sources.defaults.max_items <= 0:
@@ -344,6 +355,9 @@ class AppSettings(BaseModel):
 
     @classmethod
     def load(cls, config_path: str = "configs/config.yaml") -> "AppSettings":
+        from insighthub.workflow_factory import _ensure_registry_loaded
+        _ensure_registry_loaded()
+        
         # 1. Load from YAML
         config_data = {}
         if os.path.exists(config_path):

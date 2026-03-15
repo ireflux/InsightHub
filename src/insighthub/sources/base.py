@@ -1,6 +1,7 @@
 import logging
 import asyncio
 import httpx
+import trafilatura
 from abc import ABC
 from typing import Any, List, Optional
 from bs4 import BeautifulSoup
@@ -68,6 +69,7 @@ class BaseSource(ABC):
     async def _fetch_page_content(self, url: str, client: Optional[httpx.AsyncClient] = None) -> str:
         """
         Helper to fetch and extract text content from a URL for Reading Mode.
+        Uses trafilatura for high-quality extraction, falling back to BeautifulSoup.
         """
         if client is None:
             headers = {"User-Agent": self.USER_AGENT}
@@ -78,7 +80,15 @@ class BaseSource(ABC):
         try:
             response = await client.get(url, follow_redirects=True)
             response.raise_for_status()
-            soup = BeautifulSoup(response.text, "lxml")
+            html = response.text
+
+            # Try trafilatura first for clean extraction
+            extracted = trafilatura.extract(html, include_comments=False, include_tables=True)
+            if extracted and len(extracted.strip()) > 100:
+                return extracted.strip()[:4000]
+
+            # Fallback to BeautifulSoup
+            soup = BeautifulSoup(html, "lxml")
 
             # Remove script and style elements
             for script in soup(["script", "style"]):
@@ -87,8 +97,8 @@ class BaseSource(ABC):
             # Get text
             text = soup.get_text(separator=' ', strip=True)
 
-            # Limit text length to avoid token issues (approx 3000 chars)
-            return text[:3000]
+            # Limit text length to avoid token issues
+            return text[:4000]
         except Exception as e:
             logger.warning("Failed to fetch content from URL.", extra={"event": "source.content_fetch_failed", "source": self.name, "url": url, "error": str(e)})
             return ""

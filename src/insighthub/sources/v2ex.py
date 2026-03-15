@@ -2,11 +2,13 @@ import httpx
 import logging
 import asyncio
 from typing import List
+from insighthub.core.registry import registry
 from insighthub.sources.base import BaseSource
 from insighthub.models import NewsItem
 
 logger = logging.getLogger(__name__)
 
+@registry.register_source("v2ex_hot")
 class V2EXHotSource(BaseSource):
     """
     Source for fetching hot topics from V2EX.

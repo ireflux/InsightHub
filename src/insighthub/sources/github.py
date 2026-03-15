@@ -2,11 +2,13 @@ import httpx
 import logging
 from bs4 import BeautifulSoup
 from typing import List
+from insighthub.core.registry import registry
 from insighthub.sources.base import BaseSource
 from insighthub.models import NewsItem
 
 logger = logging.getLogger(__name__)
 
+@registry.register_source("github_trending")
 class GitHubTrendingSource(BaseSource):
     """
     Source for fetching trending repositories from GitHub.

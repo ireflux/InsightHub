@@ -2,6 +2,7 @@ import httpx
 import logging
 from datetime import datetime
 from typing import List, Optional
+from insighthub.core.registry import registry
 from insighthub.errors import SinkDeliveryError
 from insighthub.publishing import TitlePolicy
 from insighthub.sinks.base import BaseSink
@@ -9,6 +10,7 @@ from insighthub.models import NewsItem
 
 logger = logging.getLogger(__name__)
 
+@registry.register_sink("feishu_doc")
 class FeishuDocSink(BaseSink):
     """
     Sink that creates or updates a Feishu Cloud Document.

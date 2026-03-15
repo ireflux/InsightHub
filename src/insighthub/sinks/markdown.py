@@ -7,6 +7,7 @@ import uuid
 from typing import List, Optional
 from zoneinfo import ZoneInfo
 import aiofiles
+from insighthub.core.registry import registry
 from insighthub.publishing import TitlePolicy
 from insighthub.sinks.base import BaseSink
 from insighthub.models import NewsItem
@@ -14,6 +15,7 @@ from insighthub.observability import get_run_id
 
 logger = logging.getLogger(__name__)
 
+@registry.register_sink("markdown_file")
 class MarkdownFileSink(BaseSink):
     """
     A sink that writes content to a local Markdown file.
