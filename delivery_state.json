@@ -1,0 +1,86 @@
+{
+  "updated_at": "2026-03-16T10:53:21.470961+00:00",
+  "runs": [
+    {
+      "timestamp": "2026-03-16T10:53:21.470744+00:00",
+      "items_count": 9,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-03-16-cdfb6f973abe.md",
+            "slug": "2026-03-16-cdfb6f973abe",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    }
+  ],
+  "items": {
+    "https://thatshubham.com/blog/news-audit": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-16T10:53:21.470917+00:00",
+        "error": null
+      }
+    },
+    "https://www.michaelgeist.ca/2026/03/a-tale-of-two-bills-lawful-access-returns-with-changes-to-warrantless-access-but-dangerous-backdoor-surveillance-risks-remains": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-16T10:53:21.470922+00:00",
+        "error": null
+      }
+    },
+    "https://developer.chrome.com/blog/chrome-devtools-mcp-debug-your-browser-session": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-16T10:53:21.470924+00:00",
+        "error": null
+      }
+    },
+    "https://stopsloppypasta.ai/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-16T10:53:21.470926+00:00",
+        "error": null
+      }
+    },
+    "https://www.stavros.io/posts/how-i-write-software-with-llms": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-16T10:53:21.470929+00:00",
+        "error": null
+      }
+    },
+    "https://robot-daycare.com/posts/actuation_series_1": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-16T10:53:21.470935+00:00",
+        "error": null
+      }
+    },
+    "http://techno-fandom.org/~hobbit/cars/ev": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-16T10:53:21.470943+00:00",
+        "error": null
+      }
+    },
+    "https://www.itu.dk/~sestoft/bachelor/IEEE754_article.pdf": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-16T10:53:21.470948+00:00",
+        "error": null
+      }
+    },
+    "https://finnian.io/blog/home-assistant-waters-my-plants": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-16T10:53:21.470952+00:00",
+        "error": null
+      }
+    }
+  }
+}
