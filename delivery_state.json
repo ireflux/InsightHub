@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-17T10:52:02.837444+00:00",
+  "updated_at": "2026-03-18T10:53:50.390451+00:00",
   "runs": [
     {
       "timestamp": "2026-03-16T13:20:42.196476+00:00",
@@ -27,6 +27,22 @@
             "status": "success",
             "file_path": "output/posts/2026-03-17-ca5647c008a4.md",
             "slug": "2026-03-17-ca5647c008a4",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-18T10:53:50.390274+00:00",
+      "items_count": 6,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-03-18-675c86053873.md",
+            "slug": "2026-03-18-675c86053873",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -151,6 +167,48 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-03-17T10:52:02.837435+00:00",
+        "error": null
+      }
+    },
+    "https://www.tomshardware.com/video-games/console-gaming/microsofts-unhackable-xbox-one-has-been-hacked-by-bliss-the-2013-console-finally-fell-to-voltage-glitching-allowing-the-loading-of-unsigned-code-at-every-level": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-18T10:53:50.390426+00:00",
+        "error": null
+      }
+    },
+    "https://fidget-spinner.github.io/posts/jit-on-track.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-18T10:53:50.390431+00:00",
+        "error": null
+      }
+    },
+    "https://mistral.ai/news/forge": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-18T10:53:50.390434+00:00",
+        "error": null
+      }
+    },
+    "https://terathon.com/blog/decade-slug.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-18T10:53:50.390436+00:00",
+        "error": null
+      }
+    },
+    "https://www.sophielwang.com/blog/jpeg": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-18T10:53:50.390439+00:00",
+        "error": null
+      }
+    },
+    "https://willwarren.com/2026/03/12/building-my-own-cpu-part-3-from-simulation-to-hardware": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-18T10:53:50.390441+00:00",
         "error": null
       }
     }
