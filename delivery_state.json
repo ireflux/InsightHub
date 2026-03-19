@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-18T10:53:50.390451+00:00",
+  "updated_at": "2026-03-19T10:40:47.995043+00:00",
   "runs": [
     {
       "timestamp": "2026-03-16T13:20:42.196476+00:00",
@@ -43,6 +43,22 @@
             "status": "success",
             "file_path": "output/posts/2026-03-18-675c86053873.md",
             "slug": "2026-03-18-675c86053873",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-19T10:40:47.994774+00:00",
+      "items_count": 10,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-03-19-eb6b81cf4dc7.md",
+            "slug": "2026-03-19-eb6b81cf4dc7",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -209,6 +225,76 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-03-18T10:53:50.390441+00:00",
+        "error": null
+      }
+    },
+    "https://www.pew.org/en/research-and-analysis/articles/2026/03/18/austins-surge-of-new-housing-construction-drove-down-rents": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-19T10:40:47.994993+00:00",
+        "error": null
+      }
+    },
+    "https://nearzero.software/p/warranty-void-if-regenerated": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-19T10:40:47.994999+00:00",
+        "error": null
+      }
+    },
+    "https://haskellforall.com/2026/03/a-sufficiently-detailed-spec-is-code": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-19T10:40:47.995003+00:00",
+        "error": null
+      }
+    },
+    "https://openrocket.info/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-19T10:40:47.995007+00:00",
+        "error": null
+      }
+    },
+    "https://gitlab.com/IsolatedOctopi/nvidia_greenboost": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-19T10:40:47.995011+00:00",
+        "error": null
+      }
+    },
+    "https://lcamtuf.substack.com/p/conways-game-of-life-in-real-life": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-19T10:40:47.995015+00:00",
+        "error": null
+      }
+    },
+    "https://computer.rip/2026-03-14-lotusnotes.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-19T10:40:47.995023+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/iliazintchenko/agent-sat": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-19T10:40:47.995027+00:00",
+        "error": null
+      }
+    },
+    "https://blog.icml.cc/2026/03/18/on-violations-of-llm-review-policies": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-19T10:40:47.995030+00:00",
+        "error": null
+      }
+    },
+    "https://ir.cwi.nl/pub/5998/5998D.pdf": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-19T10:40:47.995034+00:00",
         "error": null
       }
     }
