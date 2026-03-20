@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-03-19T18:40:47.993045+08:00",
+  "generated_at": "2026-03-20T18:37:24.100776+08:00",
   "posts": [
+    {
+      "id": "2026-03-20-5f9ed3a23ddd",
+      "run_id": "5f9ed3a23ddd",
+      "date": "2026-03-20",
+      "title": "每日趋势观察 2026-03-20",
+      "slug": "2026-03-20-5f9ed3a23ddd",
+      "markdown_path": "posts/2026-03-20-5f9ed3a23ddd.md",
+      "summary": "- [Google details new 24-hour process to sideload unverified Android apps](https://arstechnica.com/gadgets/2026/03/google-details-new-24-hour-process-to-sideload-unverified-android-apps/): Google is p",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 10,
+      "is_empty_update": false,
+      "created_at": "2026-03-20T18:37:24.100776+08:00"
+    },
     {
       "id": "2026-03-19-eb6b81cf4dc7",
       "run_id": "eb6b81cf4dc7",

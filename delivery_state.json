@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-19T10:40:47.995043+00:00",
+  "updated_at": "2026-03-20T10:37:24.102635+00:00",
   "runs": [
     {
       "timestamp": "2026-03-16T13:20:42.196476+00:00",
@@ -59,6 +59,22 @@
             "status": "success",
             "file_path": "output/posts/2026-03-19-eb6b81cf4dc7.md",
             "slug": "2026-03-19-eb6b81cf4dc7",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-20T10:37:24.102379+00:00",
+      "items_count": 10,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-03-20-5f9ed3a23ddd.md",
+            "slug": "2026-03-20-5f9ed3a23ddd",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -295,6 +311,76 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-03-19T10:40:47.995034+00:00",
+        "error": null
+      }
+    },
+    "https://arstechnica.com/gadgets/2026/03/google-details-new-24-hour-process-to-sideload-unverified-android-apps": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-20T10:37:24.102584+00:00",
+        "error": null
+      }
+    },
+    "https://code.claude.com/docs/en/channels": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-20T10:37:24.102588+00:00",
+        "error": null
+      }
+    },
+    "https://www.science.org/content/article/arxiv-pioneering-preprint-server-declares-independence-cornell": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-20T10:37:24.102592+00:00",
+        "error": null
+      }
+    },
+    "https://forums.tigsource.com/index.php?topic=40832.msg1363742": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-20T10:37:24.102595+00:00",
+        "error": null
+      }
+    },
+    "https://www.fsf.org/blogs/licensing/2026-anthropic-settlement": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-20T10:37:24.102599+00:00",
+        "error": null
+      }
+    },
+    "https://gist.github.com/mattmanning/1002653/b7a1e88479a10eaae3bd5298b8b2c86e16fb4404": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-20T10:37:24.102603+00:00",
+        "error": null
+      }
+    },
+    "https://trustedsec.com/blog/full-disclosure-a-third-and-fourth-azure-sign-in-log-bypass-found": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-20T10:37:24.102611+00:00",
+        "error": null
+      }
+    },
+    "https://twitter.com/fynnso/status/2034706304875602030": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-20T10:37:24.102615+00:00",
+        "error": null
+      }
+    },
+    "https://ayosec.github.io/ffmpeg-drawvg": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-20T10:37:24.102619+00:00",
+        "error": null
+      }
+    },
+    "https://www.willwhang.dev/Reading-MK4001MTD": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-20T10:37:24.102624+00:00",
         "error": null
       }
     }
