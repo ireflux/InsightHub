@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-20T10:37:24.102635+00:00",
+  "updated_at": "2026-03-21T10:26:15.873997+00:00",
   "runs": [
     {
       "timestamp": "2026-03-16T13:20:42.196476+00:00",
@@ -75,6 +75,22 @@
             "status": "success",
             "file_path": "output/posts/2026-03-20-5f9ed3a23ddd.md",
             "slug": "2026-03-20-5f9ed3a23ddd",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-21T10:26:15.873781+00:00",
+      "items_count": 10,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-03-21-85d5e6b973ac.md",
+            "slug": "2026-03-21-85d5e6b973ac",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -381,6 +397,76 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-03-20T10:37:24.102624+00:00",
+        "error": null
+      }
+    },
+    "https://opencode.ai/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-21T10:26:15.873951+00:00",
+        "error": null
+      }
+    },
+    "https://www.nippon.com/en/japan-data/h01362": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-21T10:26:15.873955+00:00",
+        "error": null
+      }
+    },
+    "https://www.openui.com/blog/rust-wasm-parser": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-21T10:26:15.873958+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/ghostty-org/ghostling": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-21T10:26:15.873961+00:00",
+        "error": null
+      }
+    },
+    "https://bookofjoe2.blogspot.com/2026/02/molly-guard.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-21T10:26:15.873964+00:00",
+        "error": null
+      }
+    },
+    "https://mathweb.ucsd.edu/~crypto/Projects/MarkBarry": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-21T10:26:15.873969+00:00",
+        "error": null
+      }
+    },
+    "https://www.together.ai/blog/mamba-3": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-21T10:26:15.873977+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/eggricesoy/filmkit": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-21T10:26:15.873981+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/arnoldrobbins/LinuxByExample-2e": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-21T10:26:15.873984+00:00",
+        "error": null
+      }
+    },
+    "https://blogs.igalia.com/llepage/ffmpeg-101": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-21T10:26:15.873988+00:00",
         "error": null
       }
     }
