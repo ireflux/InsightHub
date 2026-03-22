@@ -1,0 +1,86 @@
+{
+  "updated_at": "2026-03-22T10:27:08.038058+00:00",
+  "runs": [
+    {
+      "timestamp": "2026-03-22T10:27:08.037856+00:00",
+      "items_count": 9,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-03-22-d4728ac11f68.md",
+            "slug": "2026-03-22-d4728ac11f68",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    }
+  ],
+  "items": {
+    "https://tinygrad.org/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-22T10:27:08.038016+00:00",
+        "error": null
+      }
+    },
+    "https://lucumr.pocoo.org/2026/3/20/some-things-just-take-time": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-22T10:27:08.038022+00:00",
+        "error": null
+      }
+    },
+    "https://43081j.com/2026/03/three-pillars-of-javascript-bloat": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-22T10:27:08.038026+00:00",
+        "error": null
+      }
+    },
+    "https://radar.cloudflare.com/domains/domain/archive.today": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-22T10:27:08.038030+00:00",
+        "error": null
+      }
+    },
+    "https://tooscut.app/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-22T10:27:08.038035+00:00",
+        "error": null
+      }
+    },
+    "https://mtbest.net/chest-fridge": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-22T10:27:08.038039+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/hectorvent/floci": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-22T10:27:08.038046+00:00",
+        "error": null
+      }
+    },
+    "https://pooladkhay.com/posts/first-kernel-patch": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-22T10:27:08.038049+00:00",
+        "error": null
+      }
+    },
+    "https://zenodo.org/records/18976656": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-22T10:27:08.038051+00:00",
+        "error": null
+      }
+    }
+  }
+}
