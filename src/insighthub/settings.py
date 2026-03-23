@@ -21,6 +21,11 @@ def SUPPORTED_SINKS():
     return set(registry.get_sink_types().keys())
 
 
+def _env_first(name: str, fallback: Optional[str]) -> Optional[str]:
+    value = os.getenv(name)
+    return fallback if value is None else value
+
+
 class LLMEndpointConfig(BaseModel):
     provider: str
     api_key: Optional[str] = None
@@ -379,8 +384,18 @@ class AppSettings(BaseModel):
         if primary_cfg.get("api_key"):
             logger.warning("`llm.primary.api_key` in config is ignored for security; use environment variables instead.")
         primary_cfg["api_key"] = cls._api_key_from_env(primary_cfg.get("provider"))
-        primary_cfg["model"] = primary_cfg.get("model") or os.getenv("LLM_MODEL")
-        primary_cfg["base_url"] = primary_cfg.get("base_url") or cls._base_url_from_env(primary_cfg.get("provider"))
+        primary_cfg["model"] = _env_first("LLM_MODEL", primary_cfg.get("model"))
+        primary_provider = str(primary_cfg.get("provider", "")).lower()
+        if primary_provider == "custom_openai":
+            primary_cfg["base_url"] = _env_first(
+                "CUSTOM_OPENAI_BASE_URL",
+                cls._base_url_from_env(primary_cfg.get("provider")) or primary_cfg.get("base_url"),
+            )
+        elif primary_provider == "custom_anthropic":
+            primary_cfg["base_url"] = _env_first(
+                "CUSTOM_ANTHROPIC_BASE_URL",
+                cls._base_url_from_env(primary_cfg.get("provider")) or primary_cfg.get("base_url"),
+            )
         llm_config["primary"] = primary_cfg
 
         fallback_cfgs = llm_config.get("fallbacks") or []
@@ -388,8 +403,18 @@ class AppSettings(BaseModel):
             if endpoint.get("api_key"):
                 logger.warning("`llm.fallbacks[].api_key` in config is ignored for security; use environment variables instead.")
             endpoint["api_key"] = cls._api_key_from_env(endpoint.get("provider"))
-            endpoint["model"] = endpoint.get("model") or os.getenv("LLM_MODEL")
-            endpoint["base_url"] = endpoint.get("base_url") or cls._base_url_from_env(endpoint.get("provider"))
+            endpoint["model"] = _env_first("LLM_MODEL", endpoint.get("model"))
+            provider = str(endpoint.get("provider", "")).lower()
+            if provider == "custom_openai":
+                endpoint["base_url"] = _env_first(
+                    "CUSTOM_OPENAI_BASE_URL",
+                    cls._base_url_from_env(endpoint.get("provider")) or endpoint.get("base_url"),
+                )
+            elif provider == "custom_anthropic":
+                endpoint["base_url"] = _env_first(
+                    "CUSTOM_ANTHROPIC_BASE_URL",
+                    cls._base_url_from_env(endpoint.get("provider")) or endpoint.get("base_url"),
+                )
         llm_config["fallbacks"] = fallback_cfgs
 
         sinks_cfg = config_data.get("sinks") or {}
@@ -401,8 +426,8 @@ class AppSettings(BaseModel):
                     logger.warning("`feishu_doc.params.app_id/app_secret` in config are ignored for security; use env vars.")
                 params["app_id"] = os.getenv("FEISHU_APP_ID")
                 params["app_secret"] = os.getenv("FEISHU_APP_SECRET")
-                params["space_id"] = params.get("space_id") or os.getenv("FEISHU_SPACE_ID")
-                params["doc_id"] = params.get("doc_id") or os.getenv("FEISHU_DOC_ID")
+                params["space_id"] = _env_first("FEISHU_SPACE_ID", params.get("space_id"))
+                params["doc_id"] = _env_first("FEISHU_DOC_ID", params.get("doc_id"))
                 sink["params"] = params
         sinks_cfg["items"] = sink_items
         config_data["sinks"] = sinks_cfg

@@ -271,6 +271,13 @@ class InsightEngine:
             return ""
 
         combined_input = self.build_summarize_input(items)
+        logger.info(
+            "LLM request configuration before summarization.",
+            extra={
+                "event": "engine.summarize.request_config",
+                **self._summarize_request_meta(),
+            },
+        )
 
         logger.info(
             "Calling LLM summarization.",
@@ -556,6 +563,29 @@ class InsightEngine:
         if run_id and run_id != "-":
             return run_id
         return datetime.now(timezone.utc).strftime("%Y%m%d%H%M%S")
+
+    def _summarize_request_meta(self) -> Dict[str, Any]:
+        provider_obj: Any = self.llm_provider
+        provider_label = None
+
+        # Failover provider exposes underlying providers in order; summarize() tries primary first.
+        providers = getattr(provider_obj, "providers", None)
+        if providers and isinstance(providers, list):
+            labels = getattr(provider_obj, "provider_labels", None) or []
+            provider_obj = providers[0]
+            provider_label = labels[0] if labels else None
+
+        effective_base_url = getattr(provider_obj, "base_url", None)
+        effective_model = getattr(provider_obj, "model", None)
+
+        return {
+            "request_base_url": effective_base_url,
+            "llm_provider_env": os.getenv("LLM_PROVIDER"),
+            "llm_model_env": os.getenv("LLM_MODEL"),
+            "effective_provider_class": provider_obj.__class__.__name__ if provider_obj else None,
+            "effective_provider_label": provider_label,
+            "effective_model": effective_model,
+        }
 
     def _run_dir(self, run_id: str) -> Path:
         return Path(self.stage_runs_dir) / run_id
