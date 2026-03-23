@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-22T10:27:08.038058+00:00",
+  "updated_at": "2026-03-23T10:52:12.659648+00:00",
   "runs": [
     {
       "timestamp": "2026-03-22T10:27:08.037856+00:00",
@@ -11,6 +11,22 @@
             "status": "success",
             "file_path": "output/posts/2026-03-22-d4728ac11f68.md",
             "slug": "2026-03-22-d4728ac11f68",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-23T10:52:12.659450+00:00",
+      "items_count": 10,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-03-23-c3bb779c2b8f.md",
+            "slug": "2026-03-23-c3bb779c2b8f",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -79,6 +95,76 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-03-22T10:27:08.038051+00:00",
+        "error": null
+      }
+    },
+    "https://stevekrouse.com/precision": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-23T10:52:12.659614+00:00",
+        "error": null
+      }
+    },
+    "https://stuartbreckenridge.net/2026-03-19-pc-gamer-recommends-rss-readers-in-a-37mb-article": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-23T10:52:12.659620+00:00",
+        "error": null
+      }
+    },
+    "https://bramcohen.com/p/manyana": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-23T10:52:12.659622+00:00",
+        "error": null
+      }
+    },
+    "https://larstofus.com/2026/03/22/the-gold-standard-of-optimization-a-look-under-the-hood-of-rollercoaster-tycoon": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-23T10:52:12.659624+00:00",
+        "error": null
+      }
+    },
+    "https://www.businessinsider.com/tin-can-landline-kids-cellphone-cell-alternative-how-2025-9": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-23T10:52:12.659626+00:00",
+        "error": null
+      }
+    },
+    "https://searchengineland.com/walmart-chatgpt-checkout-converted-worse-472071": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-23T10:52:12.659629+00:00",
+        "error": null
+      }
+    },
+    "https://indieweb.org/POSSE": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-23T10:52:12.659635+00:00",
+        "error": null
+      }
+    },
+    "https://www.da.vidbuchanan.co.uk/blog/dram-emfi.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-23T10:52:12.659637+00:00",
+        "error": null
+      }
+    },
+    "https://gzw1987-bit.github.io/iching-math": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-23T10:52:12.659639+00:00",
+        "error": null
+      }
+    },
+    "https://www.itsthatlady.dev/blog/building-an-ai-receptionist-for-my-brother": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-23T10:52:12.659641+00:00",
         "error": null
       }
     }
