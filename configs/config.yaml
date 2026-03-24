@@ -6,8 +6,8 @@
 # - OPENROUTER_API_KEY
 llm:
   primary:
-    provider: "openrouter"
-    model: "stepfun/step-3.5-flash:free"
+    provider: "zhipuai"
+    model: "glm-4.7-flash"
   fallbacks: []
   # fallbacks:
   #   - provider: "openrouter"

@@ -29,9 +29,9 @@ class NvidiaProvider(BaseLLMProvider):
         if not api_key:
             raise ValueError("NVIDIA API key not provided. Set llm.primary.api_key or NVIDIA_API_KEY.")
 
-        self.model = model or os.getenv("LLM_MODEL") or os.getenv("NVIDIA_MODEL")
+        self.model = model or os.getenv("NVIDIA_MODEL")
         if not self.model:
-            raise ValueError("NVIDIA model not provided. Set llm.primary.model, LLM_MODEL, or NVIDIA_MODEL.")
+            raise ValueError("NVIDIA model not provided. Set llm.primary.model or NVIDIA_MODEL.")
 
         self.base_url = base_url or os.getenv("NVIDIA_API_URL") or self.DEFAULT_BASE_URL
         self.params = self._sanitize_params(params)

@@ -44,7 +44,7 @@ class CustomOpenAIProvider(BaseLLMProvider):
         if not self.api_key:
             raise ValueError("Missing API key for custom_openai. Set CUSTOM_OPENAI_API_KEY or llm.*.api_key.")
 
-        self.model = model or os.getenv("LLM_MODEL")
+        self.model = model
         if not self.model:
             raise ValueError("Missing model for custom_openai.")
 
@@ -119,7 +119,7 @@ class CustomAnthropicProvider(BaseLLMProvider):
         if not self.api_key:
             raise ValueError("Missing API key for custom_anthropic. Set CUSTOM_ANTHROPIC_API_KEY or llm.*.api_key.")
 
-        self.model = model or os.getenv("LLM_MODEL")
+        self.model = model
         if not self.model:
             raise ValueError("Missing model for custom_anthropic.")
 

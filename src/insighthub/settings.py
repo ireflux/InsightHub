@@ -338,7 +338,7 @@ class AppSettings(BaseModel):
         ]
         for location, endpoint in endpoints:
             if not endpoint.model or not str(endpoint.model).strip():
-                raise ConfigValidationError(f"{location}.model is required. Set it via config or LLM_MODEL env.")
+                raise ConfigValidationError(f"{location}.model is required in config.")
             if endpoint.provider.lower() == "openrouter" and not endpoint.api_key:
                 raise ConfigValidationError(f"Missing OPENROUTER_API_KEY for {location} provider 'openrouter'.")
             if endpoint.provider.lower() == "zhipuai" and not endpoint.api_key:
@@ -382,13 +382,9 @@ class AppSettings(BaseModel):
 
         llm_config = config_data["llm"]
         primary_cfg = llm_config.get("primary") or {}
-        env_provider = os.getenv("LLM_PROVIDER")
-        if env_provider:
-            primary_cfg["provider"] = env_provider
         if primary_cfg.get("api_key"):
             logger.warning("`llm.primary.api_key` in config is ignored for security; use environment variables instead.")
         primary_cfg["api_key"] = cls._api_key_from_env(primary_cfg.get("provider"))
-        primary_cfg["model"] = _env_first("LLM_MODEL", primary_cfg.get("model"))
         primary_provider = str(primary_cfg.get("provider", "")).lower()
         if primary_provider == "custom_openai":
             primary_cfg["base_url"] = _env_first(
@@ -407,7 +403,6 @@ class AppSettings(BaseModel):
             if endpoint.get("api_key"):
                 logger.warning("`llm.fallbacks[].api_key` in config is ignored for security; use environment variables instead.")
             endpoint["api_key"] = cls._api_key_from_env(endpoint.get("provider"))
-            endpoint["model"] = _env_first("LLM_MODEL", endpoint.get("model"))
             provider = str(endpoint.get("provider", "")).lower()
             if provider == "custom_openai":
                 endpoint["base_url"] = _env_first(
@@ -430,8 +425,6 @@ class AppSettings(BaseModel):
                     logger.warning("`feishu_doc.params.app_id/app_secret` in config are ignored for security; use env vars.")
                 params["app_id"] = os.getenv("FEISHU_APP_ID")
                 params["app_secret"] = os.getenv("FEISHU_APP_SECRET")
-                params["space_id"] = _env_first("FEISHU_SPACE_ID", params.get("space_id"))
-                params["doc_id"] = _env_first("FEISHU_DOC_ID", params.get("doc_id"))
                 sink["params"] = params
         sinks_cfg["items"] = sink_items
         config_data["sinks"] = sinks_cfg

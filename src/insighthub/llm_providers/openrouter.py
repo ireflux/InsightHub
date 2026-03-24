@@ -31,9 +31,9 @@ class OpenRouterProvider(BaseLLMProvider):
         if not api_key:
             raise ValueError("OpenRouter API key not provided or found in environment variables.")
 
-        self.model = model or os.getenv("LLM_MODEL") or os.getenv("OPENROUTER_MODEL")
+        self.model = model or os.getenv("OPENROUTER_MODEL")
         if not self.model:
-            raise ValueError("OpenRouter model not provided. Set llm.primary.model or LLM_MODEL.")
+            raise ValueError("OpenRouter model not provided. Set llm.primary.model.")
         self.base_url = base_url or os.getenv("OPENROUTER_API_URL") or self.DEFAULT_BASE_URL
         self.params = self._sanitize_params(params)
 

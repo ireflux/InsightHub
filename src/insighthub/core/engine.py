@@ -580,8 +580,6 @@ class InsightEngine:
 
         return {
             "request_base_url": effective_base_url,
-            "llm_provider_env": os.getenv("LLM_PROVIDER"),
-            "llm_model_env": os.getenv("LLM_MODEL"),
             "effective_provider_class": provider_obj.__class__.__name__ if provider_obj else None,
             "effective_provider_label": provider_label,
             "effective_model": effective_model,

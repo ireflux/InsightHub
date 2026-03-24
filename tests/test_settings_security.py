@@ -173,55 +173,6 @@ sinks:
         os.remove(tmp_path)
 
 
-def test_env_values_take_priority_over_config_for_model_and_feishu_ids():
-    config_content = """
-llm:
-  primary:
-    provider: zhipuai
-    model: config-model
-sinks:
-  defaults:
-    enabled: true
-  items:
-    - id: feishu
-      type: feishu_doc
-      params:
-        app_id: insecure_app_id
-        app_secret: insecure_app_secret
-        space_id: config_space_id
-        doc_id: config_doc_id
-"""
-    with tempfile.NamedTemporaryFile("w", suffix=".yaml", delete=False, encoding="utf-8") as tmp:
-        tmp.write(config_content)
-        tmp_path = tmp.name
-
-    old_env = {
-        "LLM_MODEL": os.getenv("LLM_MODEL"),
-        "FEISHU_APP_ID": os.getenv("FEISHU_APP_ID"),
-        "FEISHU_APP_SECRET": os.getenv("FEISHU_APP_SECRET"),
-        "FEISHU_SPACE_ID": os.getenv("FEISHU_SPACE_ID"),
-        "FEISHU_DOC_ID": os.getenv("FEISHU_DOC_ID"),
-    }
-    os.environ["LLM_MODEL"] = "env-model"
-    os.environ["FEISHU_APP_ID"] = "env_app_id"
-    os.environ["FEISHU_APP_SECRET"] = "env_app_secret"
-    os.environ["FEISHU_SPACE_ID"] = "env_space_id"
-    os.environ["FEISHU_DOC_ID"] = "env_doc_id"
-
-    try:
-        settings = AppSettings.load(tmp_path)
-        assert settings.llm.primary.model == "env-model"
-        assert settings.sinks.items[0].params.get("space_id") == "env_space_id"
-        assert settings.sinks.items[0].params.get("doc_id") == "env_doc_id"
-    finally:
-        os.remove(tmp_path)
-        for key, value in old_env.items():
-            if value is None:
-                os.environ.pop(key, None)
-            else:
-                os.environ[key] = value
-
-
 def test_env_base_url_takes_priority_over_config_for_custom_openai():
     config_content = """
 llm:
@@ -253,27 +204,22 @@ llm:
                 os.environ[key] = value
 
 
-def test_empty_env_does_not_override_model_from_config():
+def test_llm_model_must_exist_in_config_when_no_env_fallback_is_used():
     config_content = """
 llm:
   primary:
     provider: zhipuai
-    model: config-model
 """
     with tempfile.NamedTemporaryFile("w", suffix=".yaml", delete=False, encoding="utf-8") as tmp:
         tmp.write(config_content)
         tmp_path = tmp.name
 
-    old_env = {
-        "ZHIPUAI_API_KEY": os.getenv("ZHIPUAI_API_KEY"),
-        "LLM_MODEL": os.getenv("LLM_MODEL"),
-    }
+    old_env = {"ZHIPUAI_API_KEY": os.getenv("ZHIPUAI_API_KEY")}
     os.environ["ZHIPUAI_API_KEY"] = "env_zhipu_key"
-    os.environ["LLM_MODEL"] = ""
-
     try:
         settings = AppSettings.load(tmp_path)
-        assert settings.llm.primary.model == "config-model"
+        with pytest.raises(Exception):
+            settings.validate_runtime_requirements()
     finally:
         os.remove(tmp_path)
         for key, value in old_env.items():

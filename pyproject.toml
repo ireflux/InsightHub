@@ -15,7 +15,6 @@ dependencies = [
   "beautifulsoup4",
   "lxml",
   "trafilatura",
-  "zhipuai",
   "sniffio",
   "aiofiles",
   "markdown",
