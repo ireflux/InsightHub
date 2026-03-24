@@ -1,0 +1,24 @@
+{
+  "site_timezone": "Asia/Shanghai",
+  "generated_at": "2026-03-24T18:52:42.706437+08:00",
+  "posts": [
+    {
+      "id": "2026-03-24-83806a9a6cfd",
+      "run_id": "83806a9a6cfd",
+      "date": "2026-03-24",
+      "title": "每日趋势观察 2026-03-24",
+      "slug": "2026-03-24-83806a9a6cfd",
+      "markdown_path": "posts/2026-03-24-83806a9a6cfd.md",
+      "summary": "- [iPhone 17 Pro Demonstrated Running a 400B LLM](https://twitter.com/anemll/status/2035901335984611412): We’ve detected that JavaScript is disabled in this browser.",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 10,
+      "is_empty_update": false,
+      "created_at": "2026-03-24T18:52:42.706437+08:00"
+    }
+  ]
+}
