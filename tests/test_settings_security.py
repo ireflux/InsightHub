@@ -251,3 +251,33 @@ llm:
                 os.environ.pop(key, None)
             else:
                 os.environ[key] = value
+
+
+def test_empty_env_does_not_override_model_from_config():
+    config_content = """
+llm:
+  primary:
+    provider: zhipuai
+    model: config-model
+"""
+    with tempfile.NamedTemporaryFile("w", suffix=".yaml", delete=False, encoding="utf-8") as tmp:
+        tmp.write(config_content)
+        tmp_path = tmp.name
+
+    old_env = {
+        "ZHIPUAI_API_KEY": os.getenv("ZHIPUAI_API_KEY"),
+        "LLM_MODEL": os.getenv("LLM_MODEL"),
+    }
+    os.environ["ZHIPUAI_API_KEY"] = "env_zhipu_key"
+    os.environ["LLM_MODEL"] = ""
+
+    try:
+        settings = AppSettings.load(tmp_path)
+        assert settings.llm.primary.model == "config-model"
+    finally:
+        os.remove(tmp_path)
+        for key, value in old_env.items():
+            if value is None:
+                os.environ.pop(key, None)
+            else:
+                os.environ[key] = value

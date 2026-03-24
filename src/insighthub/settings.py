@@ -23,7 +23,11 @@ def SUPPORTED_SINKS():
 
 def _env_first(name: str, fallback: Optional[str]) -> Optional[str]:
     value = os.getenv(name)
-    return fallback if value is None else value
+    if value is None:
+        return fallback
+    if isinstance(value, str) and not value.strip():
+        return fallback
+    return value
 
 
 class LLMEndpointConfig(BaseModel):

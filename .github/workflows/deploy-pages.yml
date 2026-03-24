@@ -19,6 +19,7 @@ jobs:
         uses: actions/checkout@v5
         with:
           fetch-depth: 0
+          ref: ${{ github.event_name == 'workflow_run' && format('refs/heads/{0}', github.event.workflow_run.head_branch) || github.ref }}
 
       - name: Set up Python
         uses: actions/setup-python@v6
@@ -30,13 +31,25 @@ jobs:
           python -m pip install --upgrade pip
           pip install .
 
+      - name: Check manifest
+        id: manifest
+        run: |
+          if [ -f output/manifest/index.json ]; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "::warning::output/manifest/index.json not found; skip site build/deploy for this run."
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Build static site
+        if: steps.manifest.outputs.exists == 'true'
         env:
           GITHUB_REPOSITORY: ${{ github.repository }}
         run: |
           python scripts/build_site.py --manifest output/manifest/index.json --content-root output --output-dir site
 
       - name: Deploy to gh-pages
+        if: steps.manifest.outputs.exists == 'true'
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
