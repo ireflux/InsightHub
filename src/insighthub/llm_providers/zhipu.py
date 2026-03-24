@@ -45,7 +45,7 @@ class ZhipuAIProvider(BaseLLMProvider):
                 "Content-Type": "application/json",
                 "Accept": "application/json",
             },
-            timeout=30.0,
+            timeout=120.0,
         )
 
     @classmethod
