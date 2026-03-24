@@ -47,7 +47,7 @@ class NvidiaProvider(BaseLLMProvider):
             "Content-Type": "application/json",
             "Accept": "application/json",
         }
-        self.client = httpx.AsyncClient(headers=headers, timeout=60.0)
+        self.client = httpx.AsyncClient(headers=headers, timeout=120.0)
 
     async def _call_chat(self, messages: List[dict]) -> dict:
         url = f"{self.base_url.rstrip('/')}/chat/completions"

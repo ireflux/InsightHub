@@ -52,7 +52,7 @@ class OpenRouterProvider(BaseLLMProvider):
             headers["X-Title"] = title
 
         # Reusable async HTTP client
-        self.client = httpx.AsyncClient(headers=headers, timeout=30.0)
+        self.client = httpx.AsyncClient(headers=headers, timeout=120.0)
 
     async def _call_chat(self, messages: List[dict]) -> dict:
         """
