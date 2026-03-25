@@ -1,0 +1,24 @@
+{
+  "site_timezone": "Asia/Shanghai",
+  "generated_at": "2026-03-25T18:49:35.930464+08:00",
+  "posts": [
+    {
+      "id": "2026-03-25-b6c012808631",
+      "run_id": "b6c012808631",
+      "date": "2026-03-25",
+      "title": "每日趋势观察 2026-03-25",
+      "slug": "2026-03-25-b6c012808631",
+      "markdown_path": "posts/2026-03-25-b6c012808631.md",
+      "summary": "人工智能领域的动态呈现出明显的分化趋势：一方面，OpenAI 关闭了 Sora 应用，暴露出生成式产品在用户留存上的挑战；另一方面，Google Research 推出了 TurboQuant 算法以优化 AI 模型的效率。安全与合规层面，LiteLLM 遭遇供应链攻击，Meta 也因误导用户关于儿童安全的问题被裁定支付巨额罚款。与此同时，基础设施与开源社区正在经历技术迭代，数据中心加速转向直流电",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 8,
+      "is_empty_update": false,
+      "created_at": "2026-03-25T18:49:35.930464+08:00"
+    }
+  ]
+}

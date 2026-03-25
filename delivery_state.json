@@ -1,0 +1,79 @@
+{
+  "updated_at": "2026-03-25T10:49:35.931891+00:00",
+  "runs": [
+    {
+      "timestamp": "2026-03-25T10:49:35.931655+00:00",
+      "items_count": 8,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-03-25-b6c012808631.md",
+            "slug": "2026-03-25-b6c012808631",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    }
+  ],
+  "items": {
+    "https://twitter.com/soraofficialapp/status/2036532795984715896": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-25T10:49:35.931848+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/BerriAI/litellm/issues/24512": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-25T10:49:35.931855+00:00",
+        "error": null
+      }
+    },
+    "https://spectrum.ieee.org/data-center-dc": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-25T10:49:35.931858+00:00",
+        "error": null
+      }
+    },
+    "https://flighty.com/airports": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-25T10:49:35.931862+00:00",
+        "error": null
+      }
+    },
+    "https://videojs.org/blog/videojs-v10-beta-hello-world-again": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-25T10:49:35.931865+00:00",
+        "error": null
+      }
+    },
+    "https://v-os.dev": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-25T10:49:35.931870+00:00",
+        "error": null
+      }
+    },
+    "https://research.google/blog/turboquant-redefining-ai-efficiency-with-extreme-compression": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-25T10:49:35.931878+00:00",
+        "error": null
+      }
+    },
+    "https://www.bbc.com/news/articles/cql75dn07n2o": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-25T10:49:35.931882+00:00",
+        "error": null
+      }
+    }
+  }
+}
