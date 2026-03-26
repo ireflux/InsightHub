@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-25T10:49:35.931891+00:00",
+  "updated_at": "2026-03-26T10:53:03.607880+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -11,6 +11,22 @@
             "status": "success",
             "file_path": "output/posts/2026-03-25-b6c012808631.md",
             "slug": "2026-03-25-b6c012808631",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-26T10:53:03.607649+00:00",
+      "items_count": 7,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-03-26-210f941c851f.md",
+            "slug": "2026-03-26-210f941c851f",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -72,6 +88,55 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-03-25T10:49:35.931882+00:00",
+        "error": null
+      }
+    },
+    "https://arcprize.org/arc-agi/3": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-26T10:53:03.607839+00:00",
+        "error": null
+      }
+    },
+    "https://bugs.xdavidhu.me/tesla/2026/03/23/running-tesla-model-3s-computer-on-my-desk-using-parts-from-crashed-cars": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-26T10:53:03.607845+00:00",
+        "error": null
+      }
+    },
+    "https://english.elpais.com/culture/2026-03-17/the-uncomfortable-truth-that-will-always-haunt-the-ramones-they-sold-more-t-shirts-than-records.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-26T10:53:03.607849+00:00",
+        "error": null
+      }
+    },
+    "https://whoami.wiki/blog/personal-encyclopedias": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-26T10:53:03.607858+00:00",
+        "error": null
+      }
+    },
+    "https://dfarq.homeip.net/what-came-after-486": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-26T10:53:03.607862+00:00",
+        "error": null
+      }
+    },
+    "https://www.swift.org/blog/swift-6.3-released": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-26T10:53:03.607865+00:00",
+        "error": null
+      }
+    },
+    "https://citiesandmemory.com/obsolete-sounds": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-26T10:53:03.607872+00:00",
         "error": null
       }
     }
