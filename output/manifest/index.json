@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-03-26T18:53:03.605589+08:00",
+  "generated_at": "2026-03-27T18:49:58.492486+08:00",
   "posts": [
+    {
+      "id": "2026-03-27-e20c1d12bda6",
+      "run_id": "e20c1d12bda6",
+      "date": "2026-03-27",
+      "title": "每日趋势观察 2026-03-27",
+      "slug": "2026-03-27-e20c1d12bda6",
+      "markdown_path": "posts/2026-03-27-e20c1d12bda6.md",
+      "summary": "科技界正在经历从“硬件拥有”到“服务与优化”的结构性转变。Apple 下架 Mac Pro，标志着高端台式机时代的终结，Mac Studio 取而代之成为旗舰；与此同时，AI 狂潮正通过推高内存价格和吞噬产能，重塑消费电子市场，迫使开发者寻找更高效的工具与更轻量的运行环境。从网页端的自动化任务调度到极客圈层的低成本 VPS 代理，技术演进的方向正变得愈发高效、去中心化，且对硬件资源的依赖度呈现两极",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 8,
+      "is_empty_update": false,
+      "created_at": "2026-03-27T18:49:58.492486+08:00"
+    },
     {
       "id": "2026-03-26-210f941c851f",
       "run_id": "210f941c851f",
