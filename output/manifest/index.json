@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-03-29T18:33:27.804563+08:00",
+  "generated_at": "2026-03-30T19:02:32.120984+08:00",
   "posts": [
+    {
+      "id": "2026-03-30-59855273eca7",
+      "run_id": "59855273eca7",
+      "date": "2026-03-30",
+      "title": "每日趋势观察 2026-03-30",
+      "slug": "2026-03-30-59855273eca7",
+      "markdown_path": "posts/2026-03-30-59855273eca7.md",
+      "summary": "AI 工具正面临更严格的反滥用审查与信任危机，从 Cloudflare 的加密反爬虫机制到 Copilot 在 PR 中插入广告，技术边界与用户体验的冲突加剧。与此同时，工程领域在回顾历史与探索理论，Voyager 1 依靠过时的硬件持续运行，VHDL 通过算法保证并发确定性，而 Waterfox 浏览器则在 15 年间坚持隐私优先。这些事件共同指向一个核心议题：在技术狂飙突进的时代，如何平衡安全",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 9,
+      "is_empty_update": false,
+      "created_at": "2026-03-30T19:02:32.120984+08:00"
+    },
     {
       "id": "2026-03-29-eecf5683c9b4",
       "run_id": "eecf5683c9b4",

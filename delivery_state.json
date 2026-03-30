@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-29T10:33:27.806499+00:00",
+  "updated_at": "2026-03-30T11:02:32.122898+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -75,6 +75,22 @@
             "status": "success",
             "file_path": "output/posts/2026-03-29-eecf5683c9b4.md",
             "slug": "2026-03-29-eecf5683c9b4",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-30T11:02:32.122642+00:00",
+      "items_count": 9,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-03-30-59855273eca7.md",
+            "slug": "2026-03-30-59855273eca7",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -360,6 +376,69 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-03-29T10:33:27.806490+00:00",
+        "error": null
+      }
+    },
+    "https://www.buchodi.com/chatgpt-wont-let-you-type-until-cloudflare-reads-your-react-state-i-decrypted-the-program-that-does-it": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-30T11:02:32.122824+00:00",
+        "error": null
+      }
+    },
+    "https://techfixated.com/a-1977-time-capsule-voyager-1-runs-on-69-kb-of-memory-and-an-8-track-tape-recorder-4": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-30T11:02:32.122828+00:00",
+        "error": null
+      }
+    },
+    "https://notes.zachmanson.com/copilot-edited-an-ad-into-my-pr": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-30T11:02:32.122834+00:00",
+        "error": null
+      }
+    },
+    "https://www.gjlondon.com/blog/ai-agents-could-make-free-software-matter-again": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-30T11:02:32.122838+00:00",
+        "error": null
+      }
+    },
+    "https://www.datagubbe.se/aipixels": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-30T11:02:32.122869+00:00",
+        "error": null
+      }
+    },
+    "https://www.waterfox.com/blog/15-years-of-forking": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-30T11:02:32.122874+00:00",
+        "error": null
+      }
+    },
+    "https://www.sigasi.com/opinion/jan/vhdls-crown-jewel": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-30T11:02:32.122882+00:00",
+        "error": null
+      }
+    },
+    "https://blog.lysk.tech/excalidraw-frame-export": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-30T11:02:32.122885+00:00",
+        "error": null
+      }
+    },
+    "https://dani2442.github.io/posts/continuous-rl": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-30T11:02:32.122889+00:00",
         "error": null
       }
     }
