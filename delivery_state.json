@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-30T11:02:32.122898+00:00",
+  "updated_at": "2026-03-31T10:53:00.296255+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -91,6 +91,22 @@
             "status": "success",
             "file_path": "output/posts/2026-03-30-59855273eca7.md",
             "slug": "2026-03-30-59855273eca7",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-31T10:53:00.296050+00:00",
+      "items_count": 9,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-03-31-578282c247a5.md",
+            "slug": "2026-03-31-578282c247a5",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -439,6 +455,69 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-03-30T11:02:32.122889+00:00",
+        "error": null
+      }
+    },
+    "https://www.stepsecurity.io/blog/axios-compromised-on-npm-malicious-versions-drop-remote-access-trojan": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-31T10:53:00.296223+00:00",
+        "error": null
+      }
+    },
+    "https://idlewords.com/2026/03/artemis_ii_is_not_safe_to_fly.htm": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-31T10:53:00.296229+00:00",
+        "error": null
+      }
+    },
+    "https://www.sambent.com/the-white-house-app-has-huawei-spyware-and-an-ice-tip-line": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-31T10:53:00.296231+00:00",
+        "error": null
+      }
+    },
+    "https://alexhwoods.com/dont-let-ai-write-for-you": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-31T10:53:00.296234+00:00",
+        "error": null
+      }
+    },
+    "https://ollama.com/blog/mlx": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-31T10:53:00.296236+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/drona23/claude-token-efficient": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-31T10:53:00.296238+00:00",
+        "error": null
+      }
+    },
+    "https://twitter.com/Fried_rice/status/2038894956459290963": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-31T10:53:00.296244+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/google-research/timesfm": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-31T10:53:00.296247+00:00",
+        "error": null
+      }
+    },
+    "https://responsiblestatecraft.org/iran-strait-of-hormuz": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-03-31T10:53:00.296248+00:00",
         "error": null
       }
     }
