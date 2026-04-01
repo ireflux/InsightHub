@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-31T10:53:00.296255+00:00",
+  "updated_at": "2026-04-01T10:56:27.048836+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -107,6 +107,22 @@
             "status": "success",
             "file_path": "output/posts/2026-03-31-578282c247a5.md",
             "slug": "2026-03-31-578282c247a5",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-01T10:56:27.048659+00:00",
+      "items_count": 8,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-04-01-a51eafd2400b.md",
+            "slug": "2026-04-01-a51eafd2400b",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -518,6 +534,62 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-03-31T10:53:00.296248+00:00",
+        "error": null
+      }
+    },
+    "https://ccunpacked.dev/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-01T10:56:27.048800+00:00",
+        "error": null
+      }
+    },
+    "https://prismml.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-01T10:56:27.048804+00:00",
+        "error": null
+      }
+    },
+    "https://scottlawsonbc.com/post/dot-system": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-01T10:56:27.048808+00:00",
+        "error": null
+      }
+    },
+    "https://home.cern/news/news/engineering/cern-levels-new-superconducting-karts": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-01T10:56:27.048815+00:00",
+        "error": null
+      }
+    },
+    "https://arxiv.org/abs/2602.04118": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-01T10:56:27.048818+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/yannick-cw/korb": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-01T10:56:27.048820+00:00",
+        "error": null
+      }
+    },
+    "https://www.jeffgeerling.com/blog/2026/minidv-with-raspberry-pi-firewire-hat": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-01T10:56:27.048827+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/califio/publications/blob/main/MADBugs/CVE-2026-4747/write-up.md": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-01T10:56:27.048829+00:00",
         "error": null
       }
     }
