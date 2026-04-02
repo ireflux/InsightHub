@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-01T10:56:27.048836+00:00",
+  "updated_at": "2026-04-02T10:52:26.345615+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -123,6 +123,22 @@
             "status": "success",
             "file_path": "output/posts/2026-04-01-a51eafd2400b.md",
             "slug": "2026-04-01-a51eafd2400b",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-02T10:52:26.345422+00:00",
+      "items_count": 10,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-04-02-1d8d77d461c3.md",
+            "slug": "2026-04-02-1d8d77d461c3",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -590,6 +606,76 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-04-01T10:56:27.048829+00:00",
+        "error": null
+      }
+    },
+    "https://www.nasa.gov/blogs/missions/2026/04/01/live-artemis-ii-launch-day-updates": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-02T10:52:26.345567+00:00",
+        "error": null
+      }
+    },
+    "https://blog.cloudflare.com/emdash-wordpress": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-02T10:52:26.345573+00:00",
+        "error": null
+      }
+    },
+    "https://www.phoronix.com/news/Steam-On-Linux-Tops-5p": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-02T10:52:26.345576+00:00",
+        "error": null
+      }
+    },
+    "https://scottaaronson.blog/?p=9665": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-02T10:52:26.345579+00:00",
+        "error": null
+      }
+    },
+    "https://spencermortensen.com/articles/email-obfuscation": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-02T10:52:26.345583+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/ocaml/ocaml/pull/14701": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-02T10:52:26.345587+00:00",
+        "error": null
+      }
+    },
+    "https://newsroom.ibm.com/2026-04-02-ibm-announces-strategic-collaboration-with-arm-to-shape-the-future-of-enterprise-computing": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-02T10:52:26.345594+00:00",
+        "error": null
+      }
+    },
+    "https://techcrunch.com/2026/03/31/mercor-says-it-was-hit-by-cyberattack-tied-to-compromise-of-open-source-litellm-project": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-02T10:52:26.345598+00:00",
+        "error": null
+      }
+    },
+    "https://ma.tt/2026/03/gone-almost-phishin": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-02T10:52:26.345602+00:00",
+        "error": null
+      }
+    },
+    "https://blogit.michelin.io/clojure-programming": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-02T10:52:26.345606+00:00",
         "error": null
       }
     }
