@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-02T10:52:26.345615+00:00",
+  "updated_at": "2026-04-03T10:43:41.078780+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -139,6 +139,22 @@
             "status": "success",
             "file_path": "output/posts/2026-04-02-1d8d77d461c3.md",
             "slug": "2026-04-02-1d8d77d461c3",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-03T10:43:41.078596+00:00",
+      "items_count": 6,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-04-03-13f23033f595.md",
+            "slug": "2026-04-03-13f23033f595",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -676,6 +692,48 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-04-02T10:52:26.345606+00:00",
+        "error": null
+      }
+    },
+    "https://deepmind.google/models/gemma/gemma-4": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-03T10:43:41.078746+00:00",
+        "error": null
+      }
+    },
+    "https://isolveproblems.substack.com/p/how-microsoft-vaporized-a-trillion": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-03T10:43:41.078754+00:00",
+        "error": null
+      }
+    },
+    "https://tailscale.com/blog/macos-notch-escape": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-03T10:43:41.078759+00:00",
+        "error": null
+      }
+    },
+    "https://www.sambent.com/proton-meet-isnt-what-they-told-you": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-03T10:43:41.078763+00:00",
+        "error": null
+      }
+    },
+    "https://only-eu.eu/en": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-03T10:43:41.078766+00:00",
+        "error": null
+      }
+    },
+    "https://www.espressif.com/en/news/ESP32_S31_Release": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-03T10:43:41.078770+00:00",
         "error": null
       }
     }
