@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-03T10:43:41.078780+00:00",
+  "updated_at": "2026-04-04T10:33:33.964965+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -155,6 +155,22 @@
             "status": "success",
             "file_path": "output/posts/2026-04-03-13f23033f595.md",
             "slug": "2026-04-03-13f23033f595",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-04T10:33:33.964741+00:00",
+      "items_count": 9,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-04-04-71eb73b3daaf.md",
+            "slug": "2026-04-04-71eb73b3daaf",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -734,6 +750,69 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-04-03T10:43:41.078770+00:00",
+        "error": null
+      }
+    },
+    "https://news.ycombinator.com/item?id=47633396": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-04T10:33:33.964916+00:00",
+        "error": null
+      }
+    },
+    "https://www.bbc.com/news/articles/ce8jzr423p9o": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-04T10:33:33.964923+00:00",
+        "error": null
+      }
+    },
+    "https://nvd.nist.gov/vuln/detail/CVE-2026-33579": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-04T10:33:33.964926+00:00",
+        "error": null
+      }
+    },
+    "https://www.ycombinator.com/companies/delve": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-04T10:33:33.964931+00:00",
+        "error": null
+      }
+    },
+    "https://www.inaturalist.org/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-04T10:33:33.964934+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/ExTV/Podroid": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-04T10:33:33.964937+00:00",
+        "error": null
+      }
+    },
+    "https://herbie.uwplse.org/doc/latest/tutorial.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-04T10:33:33.964945+00:00",
+        "error": null
+      }
+    },
+    "https://thoughts.wyounas.com/p/some-unusual-trees": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-04T10:33:33.964952+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/anthropics/claude-code/forks": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-04T10:33:33.964956+00:00",
         "error": null
       }
     }

@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-04-03T18:43:41.076876+08:00",
+  "generated_at": "2026-04-04T18:33:33.963068+08:00",
   "posts": [
+    {
+      "id": "2026-04-04-71eb73b3daaf",
+      "run_id": "71eb73b3daaf",
+      "date": "2026-04-04",
+      "title": "每日趋势观察 2026-04-04",
+      "slug": "2026-04-04-71eb73b3daaf",
+      "markdown_path": "posts/2026-04-04-71eb73b3daaf.md",
+      "summary": "科技行业正面临平台控制权与开发者生态之间的张力。Anthropic 限制了第三方工具 OpenClaw 的使用，以管理其 AI 服务的高需求，而 NASA 的 Artemis II 任务在绕月途中展示了地球的壮丽景色。在商业领域，创业公司 Delve 因涉嫌欺诈被 Y Combinator 移除，同时 Anthropic 利用 DMCA 下架了大量开源仓库的 fork，凸显了 AI 时代知识产权管",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 9,
+      "is_empty_update": false,
+      "created_at": "2026-04-04T18:33:33.963068+08:00"
+    },
     {
       "id": "2026-04-03-13f23033f595",
       "run_id": "13f23033f595",
