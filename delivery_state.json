@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-04T10:33:33.964965+00:00",
+  "updated_at": "2026-04-05T10:34:30.882364+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -171,6 +171,22 @@
             "status": "success",
             "file_path": "output/posts/2026-04-04-71eb73b3daaf.md",
             "slug": "2026-04-04-71eb73b3daaf",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-05T10:34:30.882103+00:00",
+      "items_count": 8,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-04-05-6d7d578053c2.md",
+            "slug": "2026-04-05-6d7d578053c2",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -813,6 +829,62 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-04-04T10:33:33.964956+00:00",
+        "error": null
+      }
+    },
+    "https://bmi.usercontent.opencode.de/eudi-wallet/wallet-development-documentation-public/latest/architecture-concept/06-mobile-devices/02-mdvm": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-05T10:34:30.882296+00:00",
+        "error": null
+      }
+    },
+    "https://jaso1024.com/mvidia": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-05T10:34:30.882331+00:00",
+        "error": null
+      }
+    },
+    "https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-05T10:34:30.882335+00:00",
+        "error": null
+      }
+    },
+    "https://composerprogrammer.com/introductiontocomputermusic.pdf": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-05T10:34:30.882338+00:00",
+        "error": null
+      }
+    },
+    "https://lisette.run/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-05T10:34:30.882341+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/JuliusBrussee/caveman": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-05T10:34:30.882345+00:00",
+        "error": null
+      }
+    },
+    "https://zml.ai/posts/zml-smi": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-05T10:34:30.882352+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/MidstallSoftware/aegis": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-05T10:34:30.882356+00:00",
         "error": null
       }
     }
