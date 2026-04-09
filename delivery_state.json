@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-08T10:56:53.009096+00:00",
+  "updated_at": "2026-04-09T10:59:13.501759+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -235,6 +235,22 @@
             "status": "success",
             "file_path": "output/posts/2026-04-08-e25d03d8ae4b.md",
             "slug": "2026-04-08-e25d03d8ae4b",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-09T10:59:13.501511+00:00",
+      "items_count": 10,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-04-09-6955277e9ad2.md",
+            "slug": "2026-04-09-6955277e9ad2",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -1101,6 +1117,76 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-04-08T10:56:53.009087+00:00",
+        "error": null
+      }
+    },
+    "https://bryankeller.github.io/2026/04/08/porting-mac-os-x-nintendo-wii.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-09T10:59:13.501693+00:00",
+        "error": null
+      }
+    },
+    "https://obdev.at/products/littlesnitch-linux/index.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-09T10:59:13.501699+00:00",
+        "error": null
+      }
+    },
+    "https://astral.sh/blog/open-source-security-at-astral": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-09T10:59:13.501702+00:00",
+        "error": null
+      }
+    },
+    "https://updates.thunderbird.net/en-US/thunderbird/140.0/apr26-1e/donate": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-09T10:59:13.501704+00:00",
+        "error": null
+      }
+    },
+    "https://braw.dev/blog/2026-04-06-reallocating-100-month-claude-spend": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-09T10:59:13.501706+00:00",
+        "error": null
+      }
+    },
+    "https://archive.org/details/DDJDVD6": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-09T10:59:13.501708+00:00",
+        "error": null
+      }
+    },
+    "http://ravensblight.com/papertoys.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-09T10:59:13.501737+00:00",
+        "error": null
+      }
+    },
+    "https://darkounity.com/blog/c-in-unity-2026-features-most-developers-still-dont-use": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-09T10:59:13.501743+00:00",
+        "error": null
+      }
+    },
+    "https://botctl.dev/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-09T10:59:13.501748+00:00",
+        "error": null
+      }
+    },
+    "https://theasc.com/articles/fantastic-voyage-creating-the-futurescape-for-the-fifth-element": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-09T10:59:13.501751+00:00",
         "error": null
       }
     }

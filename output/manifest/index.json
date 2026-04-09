@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-04-08T18:56:53.007062+08:00",
+  "generated_at": "2026-04-09T18:59:13.499610+08:00",
   "posts": [
+    {
+      "id": "2026-04-09-6955277e9ad2",
+      "run_id": "6955277e9ad2",
+      "date": "2026-04-09",
+      "title": "每日趋势观察 2026-04-09",
+      "slug": "2026-04-09-6955277e9ad2",
+      "markdown_path": "posts/2026-04-09-6955277e9ad2.md",
+      "summary": "今日概览",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 10,
+      "is_empty_update": false,
+      "created_at": "2026-04-09T18:59:13.499610+08:00"
+    },
     {
       "id": "2026-04-08-e25d03d8ae4b",
       "run_id": "e25d03d8ae4b",
