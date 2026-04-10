@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-09T10:59:13.501759+00:00",
+  "updated_at": "2026-04-10T10:54:45.745026+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -251,6 +251,22 @@
             "status": "success",
             "file_path": "output/posts/2026-04-09-6955277e9ad2.md",
             "slug": "2026-04-09-6955277e9ad2",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T10:54:45.744843+00:00",
+      "items_count": 7,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-04-10-428d585664c6.md",
+            "slug": "2026-04-10-428d585664c6",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -1187,6 +1203,55 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-04-09T10:59:13.501751+00:00",
+        "error": null
+      }
+    },
+    "https://blog.gitbutler.com/series-a": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-10T10:54:45.744984+00:00",
+        "error": null
+      }
+    },
+    "https://arhan.sh/blog/native-instant-space-switching-on-macos": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-10T10:54:45.744990+00:00",
+        "error": null
+      }
+    },
+    "https://david.coffee/i-still-prefer-mcp-over-skills": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-10T10:54:45.744994+00:00",
+        "error": null
+      }
+    },
+    "https://cacm.acm.org/news/how-nasa-built-artemis-iis-fault-tolerant-computer": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-10T10:54:45.744998+00:00",
+        "error": null
+      }
+    },
+    "https://blog.veitheller.de/Generative_art_over_the_years.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-10T10:54:45.745002+00:00",
+        "error": null
+      }
+    },
+    "https://ethz.ch/en/news-and-events/eth-news/news/2026/04/a-new-trick-brings-stability-to-quantum-operations.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-10T10:54:45.745008+00:00",
+        "error": null
+      }
+    },
+    "https://www.ansto.gov.au/news/artemis-ii-and-invisible-hazard-on-way-to-moon-part-1": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-10T10:54:45.745016+00:00",
         "error": null
       }
     }
