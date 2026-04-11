@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-10T10:54:45.745026+00:00",
+  "updated_at": "2026-04-11T10:35:21.237754+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -267,6 +267,22 @@
             "status": "success",
             "file_path": "output/posts/2026-04-10-428d585664c6.md",
             "slug": "2026-04-10-428d585664c6",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-11T10:35:21.237519+00:00",
+      "items_count": 10,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-04-11-11edd381b236.md",
+            "slug": "2026-04-11-11edd381b236",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -1252,6 +1268,76 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-04-10T10:54:45.745016+00:00",
+        "error": null
+      }
+    },
+    "https://kentwalters.com/posts/corners": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-11T10:35:21.237703+00:00",
+        "error": null
+      }
+    },
+    "https://www.cbsnews.com/live-updates/artemis-ii-splashdown-return": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-11T10:35:21.237711+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/torvalds/linux/blob/master/Documentation/process/coding-assistants.rst": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-11T10:35:21.237715+00:00",
+        "error": null
+      }
+    },
+    "https://www.bbc.com/news/articles/cr71lkzv49po": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-11T10:35:21.237719+00:00",
+        "error": null
+      }
+    },
+    "https://rowan441.github.io/1dchess/chess.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-11T10:35:21.237722+00:00",
+        "error": null
+      }
+    },
+    "https://lists.zx2c4.com/pipermail/wireguard/2026-April/009561.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-11T10:35:21.237727+00:00",
+        "error": null
+      }
+    },
+    "https://jack.cab/blog/every-firefox-extension": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-11T10:35:21.237734+00:00",
+        "error": null
+      }
+    },
+    "https://playstarfling.com": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-11T10:35:21.237738+00:00",
+        "error": null
+      }
+    },
+    "https://2swap.github.io/WeakC4/explanation": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-11T10:35:21.237741+00:00",
+        "error": null
+      }
+    },
+    "https://apnews.com/article/aadam-jacobs-collection-concerts-internet-archive-chicago-b1c9c4466a2db409a83523ad84b79d62": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-11T10:35:21.237745+00:00",
         "error": null
       }
     }
