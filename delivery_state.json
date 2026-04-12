@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-11T10:35:21.237754+00:00",
+  "updated_at": "2026-04-12T10:39:22.646580+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -283,6 +283,22 @@
             "status": "success",
             "file_path": "output/posts/2026-04-11-11edd381b236.md",
             "slug": "2026-04-11-11edd381b236",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T10:39:22.646342+00:00",
+      "items_count": 10,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-04-12-6545170a6621.md",
+            "slug": "2026-04-12-6545170a6621",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -1338,6 +1354,76 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-04-11T10:35:21.237745+00:00",
+        "error": null
+      }
+    },
+    "https://aisle.com/blog/ai-cybersecurity-after-mythos-the-jagged-frontier": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-12T10:39:22.646526+00:00",
+        "error": null
+      }
+    },
+    "https://stevehanov.ca/blog/how-i-run-multiple-10k-mrr-companies-on-a-20month-tech-stack": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-12T10:39:22.646534+00:00",
+        "error": null
+      }
+    },
+    "https://brennan.day/the-end-of-eleventy": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-12T10:39:22.646538+00:00",
+        "error": null
+      }
+    },
+    "https://www.theguardian.com/law/2026/apr/11/appeals-court-ruling-home-distilling-ban-unconstitutional": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-12T10:39:22.646541+00:00",
+        "error": null
+      }
+    },
+    "https://rdi.berkeley.edu/blog/trustworthy-benchmarks-cont": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-12T10:39:22.646545+00:00",
+        "error": null
+      }
+    },
+    "https://www.theregister.com/2026/04/12/ios_passcode_bug": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-12T10:39:22.646549+00:00",
+        "error": null
+      }
+    },
+    "https://philodev.one/posts/2026-04-code-complexity": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-12T10:39:22.646556+00:00",
+        "error": null
+      }
+    },
+    "https://morethanmoore.substack.com/p/an-interview-with-pat-gelsinger-2026": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-12T10:39:22.646560+00:00",
+        "error": null
+      }
+    },
+    "https://www.johndcook.com/blog/2026/04/06/tofolli-gates": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-12T10:39:22.646568+00:00",
+        "error": null
+      }
+    },
+    "https://puredanger.github.io/tech.puredanger.com/2007/07/11/miller-principle": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-12T10:39:22.646571+00:00",
         "error": null
       }
     }
