@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-12T10:39:22.646580+00:00",
+  "updated_at": "2026-04-13T11:17:50.131285+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -299,6 +299,22 @@
             "status": "success",
             "file_path": "output/posts/2026-04-12-6545170a6621.md",
             "slug": "2026-04-12-6545170a6621",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-13T11:17:50.131057+00:00",
+      "items_count": 10,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-04-13-d89402b82cf4.md",
+            "slug": "2026-04-13-d89402b82cf4",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -1424,6 +1440,76 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-04-12T10:39:22.646571+00:00",
+        "error": null
+      }
+    },
+    "https://news.ycombinator.com/item?id=47741527": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-13T11:17:50.131242+00:00",
+        "error": null
+      }
+    },
+    "https://essays.johnloeber.com/p/4-bring-back-idiomatic-design": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-13T11:17:50.131249+00:00",
+        "error": null
+      }
+    },
+    "https://boringbar.app/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-13T11:17:50.131253+00:00",
+        "error": null
+      }
+    },
+    "https://blinry.org/diy-soft-drinks": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-13T11:17:50.131257+00:00",
+        "error": null
+      }
+    },
+    "https://arxiv.org/abs/2603.21852": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-13T11:17:50.131261+00:00",
+        "error": null
+      }
+    },
+    "https://www.lesswrong.com/posts/jTGbKKGqs5EdyYoRc/most-people-can-t-juggle-one-ball": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-13T11:17:50.131266+00:00",
+        "error": null
+      }
+    },
+    "https://www.eetimes.com/taking-on-cuda-with-rocm-one-step-after-another": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-13T11:17:50.131272+00:00",
+        "error": null
+      }
+    },
+    "https://www.viktorcessan.com/the-economics-of-software-teams": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-13T11:17:50.131274+00:00",
+        "error": null
+      }
+    },
+    "https://arxiv.org/abs/2604.07902": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-13T11:17:50.131276+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/brightbeanxyz/brightbean-studio": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-13T11:17:50.131278+00:00",
         "error": null
       }
     }
