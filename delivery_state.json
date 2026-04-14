@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-13T11:17:50.131285+00:00",
+  "updated_at": "2026-04-14T11:03:26.327407+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -315,6 +315,22 @@
             "status": "success",
             "file_path": "output/posts/2026-04-13-d89402b82cf4.md",
             "slug": "2026-04-13-d89402b82cf4",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-14T11:03:26.327206+00:00",
+      "items_count": 8,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-04-14-7ef080e4259e.md",
+            "slug": "2026-04-14-7ef080e4259e",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -1510,6 +1526,62 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-04-13T11:17:50.131278+00:00",
+        "error": null
+      }
+    },
+    "https://github.github.com/gh-stack": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-14T11:03:26.327357+00:00",
+        "error": null
+      }
+    },
+    "https://anchor.host/someone-bought-30-wordpress-plugins-and-planted-a-backdoor-in-all-of-them": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-14T11:03:26.327363+00:00",
+        "error": null
+      }
+    },
+    "https://developers.google.com/search/blog/2026/04/back-button-hijacking": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-14T11:03:26.327372+00:00",
+        "error": null
+      }
+    },
+    "https://www.blackmagicdesign.com/products/davinciresolve/photo": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-14T11:03:26.327376+00:00",
+        "error": null
+      }
+    },
+    "https://kirancodes.me/posts/log-who-watches-the-watchers.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-14T11:03:26.327380+00:00",
+        "error": null
+      }
+    },
+    "https://rareese.com/posts/backblaze": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-14T11:03:26.327386+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/citguru/openduck": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-14T11:03:26.327394+00:00",
+        "error": null
+      }
+    },
+    "https://introspective-diffusion.github.io/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-14T11:03:26.327398+00:00",
         "error": null
       }
     }
