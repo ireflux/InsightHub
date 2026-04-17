@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-16T11:03:36.511980+00:00",
+  "updated_at": "2026-04-17T10:56:20.426867+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -363,6 +363,22 @@
             "status": "success",
             "file_path": "output/posts/2026-04-16-022fe4a56244.md",
             "slug": "2026-04-16-022fe4a56244",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-17T10:56:20.426636+00:00",
+      "items_count": 10,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-04-17-99d6defd88b7.md",
+            "slug": "2026-04-17-99d6defd88b7",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -1733,6 +1749,76 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-04-16T11:03:36.511971+00:00",
+        "error": null
+      }
+    },
+    "https://www.anthropic.com/news/claude-opus-4-7": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-17T10:56:20.426819+00:00",
+        "error": null
+      }
+    },
+    "https://openai.com/index/codex-for-almost-everything": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-17T10:56:20.426824+00:00",
+        "error": null
+      }
+    },
+    "https://android-developers.googleblog.com/2026/04/build-android-apps-3x-faster-using-any-agent.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-17T10:56:20.426827+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/gainsec/autoprober": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-17T10:56:20.426830+00:00",
+        "error": null
+      }
+    },
+    "https://cadquery.github.io/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-17T10:56:20.426834+00:00",
+        "error": null
+      }
+    },
+    "https://www.nongnu.org/fbi-improved": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-17T10:56:20.426838+00:00",
+        "error": null
+      }
+    },
+    "https://chapel-lang.org/blog/posts/30years": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-17T10:56:20.426848+00:00",
+        "error": null
+      }
+    },
+    "https://www.iqiipi.com/the-quiet-colossus.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-17T10:56:20.426852+00:00",
+        "error": null
+      }
+    },
+    "https://aosabook.org/en/500L/a-python-interpreter-written-in-python.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-17T10:56:20.426856+00:00",
+        "error": null
+      }
+    },
+    "https://lucasgerads.com/blog/lecroy-mcp-spice-demo": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-17T10:56:20.426860+00:00",
         "error": null
       }
     }

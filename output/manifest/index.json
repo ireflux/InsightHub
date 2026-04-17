@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-04-16T19:03:36.508507+08:00",
+  "generated_at": "2026-04-17T18:56:20.421873+08:00",
   "posts": [
+    {
+      "id": "2026-04-17-99d6defd88b7",
+      "run_id": "99d6defd88b7",
+      "date": "2026-04-17",
+      "title": "每日趋势观察 2026-04-17",
+      "slug": "2026-04-17-99d6defd88b7",
+      "markdown_path": "posts/2026-04-17-99d6defd88b7.md",
+      "summary": "Anthropic与OpenAI近期分别发布了针对编程与知识工作的新一代AI模型与工具，试图将大模型从单纯的对话交互推向具备具体执行能力的“代理”形态。与此同时，Google与开源社区也在加速构建垂直领域的开发辅助环境，以应对日益增长的AI编程需求。在更宏大的技术图景中，高性能计算与底层语言设计的回顾文章揭示了硬件性能指数级跃升与软件演进滞后之间的张力，而硬件黑客正尝试用AI代码控制物理设备，探索",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 10,
+      "is_empty_update": false,
+      "created_at": "2026-04-17T18:56:20.421873+08:00"
+    },
     {
       "id": "2026-04-16-022fe4a56244",
       "run_id": "022fe4a56244",
