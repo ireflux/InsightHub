@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-04-17T18:56:20.421873+08:00",
+  "generated_at": "2026-04-18T18:40:38.339556+08:00",
   "posts": [
+    {
+      "id": "2026-04-18-1f19a1a3e1a5",
+      "run_id": "1f19a1a3e1a5",
+      "date": "2026-04-18",
+      "title": "每日趋势观察 2026-04-18",
+      "slug": "2026-04-18-1f19a1a3e1a5",
+      "markdown_path": "posts/2026-04-18-1f19a1a3e1a5.md",
+      "summary": "Anthropic 正在加速其 AI 生态的垂直整合，推出了名为 Claude Design 的新工具，试图弥合文本生成与视觉设计之间的鸿沟，同时也引发了关于其新模型代币使用效率的讨论。与此同时，人类的太空探索仍在与月球表面的物理特性做斗争——ESA 的研究证实了困扰所有登月者的“月球枯草热”源于有毒的静电尘埃。在技术底层，开发者们正在探索处理不确定性的新数学模型，而科技界也迎来了密码学先驱迈克尔",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 10,
+      "is_empty_update": false,
+      "created_at": "2026-04-18T18:40:38.339556+08:00"
+    },
     {
       "id": "2026-04-17-99d6defd88b7",
       "run_id": "99d6defd88b7",

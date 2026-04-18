@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-17T10:56:20.426867+00:00",
+  "updated_at": "2026-04-18T10:40:38.342489+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -379,6 +379,22 @@
             "status": "success",
             "file_path": "output/posts/2026-04-17-99d6defd88b7.md",
             "slug": "2026-04-17-99d6defd88b7",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-18T10:40:38.342272+00:00",
+      "items_count": 10,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-04-18-1f19a1a3e1a5.md",
+            "slug": "2026-04-18-1f19a1a3e1a5",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -1819,6 +1835,76 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-04-17T10:56:20.426860+00:00",
+        "error": null
+      }
+    },
+    "https://www.anthropic.com/news/claude-design-anthropic-labs": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-18T10:40:38.342444+00:00",
+        "error": null
+      }
+    },
+    "https://www.claudecodecamp.com/p/i-measured-claude-4-7-s-new-tokenizer-here-s-what-it-costs-you": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-18T10:40:38.342450+00:00",
+        "error": null
+      }
+    },
+    "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/The_toxic_side_of_the_Moon": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-18T10:40:38.342454+00:00",
+        "error": null
+      }
+    },
+    "https://victorpoughon.github.io/interval-calculator": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-18T10:40:38.342457+00:00",
+        "error": null
+      }
+    },
+    "https://geohot.github.io//blog/jekyll/update/2026/04/18/america-mandate-of-heaven.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-18T10:40:38.342460+00:00",
+        "error": null
+      }
+    },
+    "https://abuseofnotation.github.io/category-theory-illustrated/04_order": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-18T10:40:38.342463+00:00",
+        "error": null
+      }
+    },
+    "https://eshelyaron.com/posts/2026-04-15-towards-trust-in-emacs.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-18T10:40:38.342471+00:00",
+        "error": null
+      }
+    },
+    "https://amiga.lychesis.net/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-18T10:40:38.342474+00:00",
+        "error": null
+      }
+    },
+    "https://sandboxspirit.com/blog/simple-geometry-of-roads": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-18T10:40:38.342477+00:00",
+        "error": null
+      }
+    },
+    "https://en.wikipedia.org/wiki/Michael_O._Rabin": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-18T10:40:38.342480+00:00",
         "error": null
       }
     }
