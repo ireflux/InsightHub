@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-18T10:40:38.342489+00:00",
+  "updated_at": "2026-04-19T10:39:22.335496+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -395,6 +395,22 @@
             "status": "success",
             "file_path": "output/posts/2026-04-18-1f19a1a3e1a5.md",
             "slug": "2026-04-18-1f19a1a3e1a5",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-19T10:39:22.335282+00:00",
+      "items_count": 9,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-04-19-4ac35ce0f83f.md",
+            "slug": "2026-04-19-4ac35ce0f83f",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -1905,6 +1921,69 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-04-18T10:40:38.342480+00:00",
+        "error": null
+      }
+    },
+    "https://tokens.billchambers.me/leaderboard": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-19T10:39:22.335430+00:00",
+        "error": null
+      }
+    },
+    "https://sentinelcolorado.com/uncategorized/a-college-instructor-turns-to-typewriters-to-curb-ai-written-work-and-teach-life-lessons": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-19T10:39:22.335434+00:00",
+        "error": null
+      }
+    },
+    "https://www.nist.gov/news-events/news/2026/04/any-color-you-nist-scientists-create-any-wavelength-lasers-tiny-circuits": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-19T10:39:22.335436+00:00",
+        "error": null
+      }
+    },
+    "https://www.righto.com/2026/04/B-52-star-tracker-angle-computer.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-19T10:39:22.335438+00:00",
+        "error": null
+      }
+    },
+    "https://kotaku.com/video-game-devs-explain-how-pausing-works-and-sometimes-it-gets-weird-2000686339": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-19T10:39:22.335442+00:00",
+        "error": null
+      }
+    },
+    "https://jackpritz.com/blog/updating-gun-rocket-through-10-years-of-unity-engine": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-19T10:39:22.335448+00:00",
+        "error": null
+      }
+    },
+    "https://antithesis.com/blog/2026/skiptrees": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-19T10:39:22.335479+00:00",
+        "error": null
+      }
+    },
+    "https://www.usenix.org/system/files/conference/woot17/woot17-paper-guri.pdf": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-19T10:39:22.335483+00:00",
+        "error": null
+      }
+    },
+    "https://apenwarr.ca/log/20170810": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-19T10:39:22.335487+00:00",
         "error": null
       }
     }
