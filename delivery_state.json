@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-19T10:39:22.335496+00:00",
+  "updated_at": "2026-04-20T11:19:06.439833+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -411,6 +411,22 @@
             "status": "success",
             "file_path": "output/posts/2026-04-19-4ac35ce0f83f.md",
             "slug": "2026-04-19-4ac35ce0f83f",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-20T11:19:06.439605+00:00",
+      "items_count": 9,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-04-20-e35b4cfde5f5.md",
+            "slug": "2026-04-20-e35b4cfde5f5",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -1984,6 +2000,69 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-04-19T10:39:22.335487+00:00",
+        "error": null
+      }
+    },
+    "https://www.bleepingcomputer.com/news/security/vercel-confirms-breach-as-hackers-claim-to-be-selling-stolen-data": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-20T11:19:06.439784+00:00",
+        "error": null
+      }
+    },
+    "https://ashley.rolfmore.com/stop-trying-to-engineer-your-way-out-of-listening-to-people": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-20T11:19:06.439792+00:00",
+        "error": null
+      }
+    },
+    "https://www.flyingpenguin.com/build-an-openclaw-free-secure-always-on-local-ai-agent": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-20T11:19:06.439797+00:00",
+        "error": null
+      }
+    },
+    "https://awesomeagents.ai/news/github-fake-stars-investigation": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-20T11:19:06.439801+00:00",
+        "error": null
+      }
+    },
+    "https://simonwillison.net/2026/Apr/20/claude-token-counts": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-20T11:19:06.439805+00:00",
+        "error": null
+      }
+    },
+    "https://sdf.org/?ssh=": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-20T11:19:06.439809+00:00",
+        "error": null
+      }
+    },
+    "https://www.reuters.com/business/us-security-agency-is-using-anthropics-mythos-despite-blacklist-axios-reports-2026-04-19": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-20T11:19:06.439816+00:00",
+        "error": null
+      }
+    },
+    "https://www.discovermagazine.com/up-to-8-million-bees-are-living-in-an-underground-network-beneath-this-cemetery-48977": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-20T11:19:06.439820+00:00",
+        "error": null
+      }
+    },
+    "https://newatlas.com/electronics/meta-nfc-focused-microwaves-circuits": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-20T11:19:06.439823+00:00",
         "error": null
       }
     }

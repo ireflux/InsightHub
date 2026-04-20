@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-04-19T18:39:22.332948+08:00",
+  "generated_at": "2026-04-20T19:19:06.436604+08:00",
   "posts": [
+    {
+      "id": "2026-04-20-e35b4cfde5f5",
+      "run_id": "e35b4cfde5f5",
+      "date": "2026-04-20",
+      "title": "每日趋势观察 2026-04-20",
+      "slug": "2026-04-20-e35b4cfde5f5",
+      "markdown_path": "posts/2026-04-20-e35b4cfde5f5.md",
+      "summary": "云开发平台 Vercel 披露一起因第三方 AI 工具漏洞导致的数据泄露事件，引发对单点依赖与 OAuth 权限管理的担忧。与此同时，开源生态的“假星”现象与 AI 模型的成本波动揭示了当前科技行业的信任与经济困境。在底层技术层面，3D 打印技术的突破与本地 AI 代理安全架构的讨论，则展示了前沿工程领域的探索与风险。",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 9,
+      "is_empty_update": false,
+      "created_at": "2026-04-20T19:19:06.436604+08:00"
+    },
     {
       "id": "2026-04-19-4ac35ce0f83f",
       "run_id": "4ac35ce0f83f",
