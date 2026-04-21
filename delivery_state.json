@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-20T11:19:06.439833+00:00",
+  "updated_at": "2026-04-21T11:07:16.831151+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -427,6 +427,22 @@
             "status": "success",
             "file_path": "output/posts/2026-04-20-e35b4cfde5f5.md",
             "slug": "2026-04-20-e35b4cfde5f5",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-21T11:07:16.830912+00:00",
+      "items_count": 9,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-04-21-c78b6c2e2b59.md",
+            "slug": "2026-04-21-c78b6c2e2b59",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -2063,6 +2079,69 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-04-20T11:19:06.439823+00:00",
+        "error": null
+      }
+    },
+    "https://www.apple.com/newsroom/2026/04/tim-cook-to-become-apple-executive-chairman-john-ternus-to-become-apple-ceo": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-21T11:07:16.831095+00:00",
+        "error": null
+      }
+    },
+    "https://qwen.ai/blog?id=qwen3.6-max-preview": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-21T11:07:16.831103+00:00",
+        "error": null
+      }
+    },
+    "https://docs.openclaw.ai/providers/anthropic": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-21T11:07:16.831107+00:00",
+        "error": null
+      }
+    },
+    "https://webmatrices.com/post/how-a-roblox-cheat-and-one-ai-tool-brought-down-vercel-s-entire-platform": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-21T11:07:16.831112+00:00",
+        "error": null
+      }
+    },
+    "https://zef-lang.dev/implementation": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-21T11:07:16.831116+00:00",
+        "error": null
+      }
+    },
+    "https://icv2.com/articles/news/view/62176/r-i-p-louis-zocchi-the-godfather-dice": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-21T11:07:16.831122+00:00",
+        "error": null
+      }
+    },
+    "https://longwoodgardens.org/blog/2023-05-17/beauty-bonsai-styles": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-21T11:07:16.831130+00:00",
+        "error": null
+      }
+    },
+    "https://www.science.org/content/article/cocaine-pollution-gives-salmon-wanderlust": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-21T11:07:16.831134+00:00",
+        "error": null
+      }
+    },
+    "http://mnt.stanleylieber.com/reform": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-21T11:07:16.831142+00:00",
         "error": null
       }
     }
