@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-21T11:07:16.831151+00:00",
+  "updated_at": "2026-04-22T11:05:28.389138+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -443,6 +443,22 @@
             "status": "success",
             "file_path": "output/posts/2026-04-21-c78b6c2e2b59.md",
             "slug": "2026-04-21-c78b6c2e2b59",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-22T11:05:28.388909+00:00",
+      "items_count": 9,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-04-22-77e426a61eb1.md",
+            "slug": "2026-04-22-77e426a61eb1",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -2142,6 +2158,69 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-04-21T11:07:16.831142+00:00",
+        "error": null
+      }
+    },
+    "https://openai.com/index/introducing-chatgpt-images-2-0": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-22T11:05:28.389099+00:00",
+        "error": null
+      }
+    },
+    "https://lawsofsoftwareengineering.com": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-22T11:05:28.389108+00:00",
+        "error": null
+      }
+    },
+    "https://www.youtube.com/watch?v=h6GWikWlAQA": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-22T11:05:28.389113+00:00",
+        "error": null
+      }
+    },
+    "https://www.trendmicro.com/en_us/research/26/d/vercel-breach-oauth-supply-chain.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-22T11:05:28.389116+00:00",
+        "error": null
+      }
+    },
+    "https://social.hails.org/@hailey/116446826733136456": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-22T11:05:28.389118+00:00",
+        "error": null
+      }
+    },
+    "https://zknill.io/posts/all-your-agents-are-going-async": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-22T11:05:28.389121+00:00",
+        "error": null
+      }
+    },
+    "https://fitzgen.com/2024/02/06/safe-gc.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-22T11:05:28.389127+00:00",
+        "error": null
+      }
+    },
+    "https://perthirtysix.com/how-the-heck-does-gps-work": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-22T11:05:28.389129+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/google-deepmind/mujoco": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-22T11:05:28.389131+00:00",
         "error": null
       }
     }
