@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-22T11:05:28.389138+00:00",
+  "updated_at": "2026-04-23T11:10:49.542506+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -459,6 +459,22 @@
             "status": "success",
             "file_path": "output/posts/2026-04-22-77e426a61eb1.md",
             "slug": "2026-04-22-77e426a61eb1",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-23T11:10:49.542255+00:00",
+      "items_count": 9,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-04-23-e63cc99b5368.md",
+            "slug": "2026-04-23-e63cc99b5368",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -2221,6 +2237,69 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-04-22T11:05:28.389131+00:00",
+        "error": null
+      }
+    },
+    "https://wheelfront.com/this-alberta-startup-sells-no-tech-tractors-for-half-price": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-23T11:10:49.542463+00:00",
+        "error": null
+      }
+    },
+    "https://fingerprint.com/blog/firefox-tor-indexeddb-privacy-vulnerability": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-23T11:10:49.542471+00:00",
+        "error": null
+      }
+    },
+    "https://crawshaw.io/blog/building-a-cloud": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-23T11:10:49.542476+00:00",
+        "error": null
+      }
+    },
+    "https://techcrunch.com/2026/04/22/apple-fixes-bug-that-cops-used-to-extract-deleted-chat-messages-from-iphones": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-23T11:10:49.542481+00:00",
+        "error": null
+      }
+    },
+    "https://maurycyz.com/projects/mcufont": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-23T11:10:49.542485+00:00",
+        "error": null
+      }
+    },
+    "https://arstechnica.com/staff/2026/04/our-newsroom-ai-policy": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-23T11:10:49.542488+00:00",
+        "error": null
+      }
+    },
+    "https://simonomi.dev/blog/color-code-your-bytes": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-23T11:10:49.542494+00:00",
+        "error": null
+      }
+    },
+    "https://www.quantamagazine.org/what-physical-life-force-turns-biologys-wheels-20260420": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-23T11:10:49.542497+00:00",
+        "error": null
+      }
+    },
+    "https://david.alvarezrosa.com/posts/fundamental-theorem-of-calculus": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-23T11:10:49.542499+00:00",
         "error": null
       }
     }
