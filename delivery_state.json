@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-23T11:10:49.542506+00:00",
+  "updated_at": "2026-04-24T11:07:45.393412+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -475,6 +475,22 @@
             "status": "success",
             "file_path": "output/posts/2026-04-23-e63cc99b5368.md",
             "slug": "2026-04-23-e63cc99b5368",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-24T11:07:45.393191+00:00",
+      "items_count": 10,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-04-24-ec59f165fbef.md",
+            "slug": "2026-04-24-ec59f165fbef",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -2300,6 +2316,76 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-04-23T11:10:49.542499+00:00",
+        "error": null
+      }
+    },
+    "https://openai.com/index/introducing-gpt-5-5": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-24T11:07:45.393371+00:00",
+        "error": null
+      }
+    },
+    "https://api-docs.deepseek.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-24T11:07:45.393379+00:00",
+        "error": null
+      }
+    },
+    "https://www.anthropic.com/engineering/april-23-postmortem": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-24T11:07:45.393384+00:00",
+        "error": null
+      }
+    },
+    "https://socket.dev/blog/bitwarden-cli-compromised": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-24T11:07:45.393388+00:00",
+        "error": null
+      }
+    },
+    "https://www.cnn.com/2026/04/23/politics/us-special-forces-soldier-arrested-maduro-raid-trade": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-24T11:07:45.393390+00:00",
+        "error": null
+      }
+    },
+    "https://www.orwellfoundation.com/the-orwell-foundation/orwell/essays-and-other-works/why-i-write": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-24T11:07:45.393393+00:00",
+        "error": null
+      }
+    },
+    "https://www.bbc.com/news/articles/c4gx1n0dl9no": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-24T11:07:45.393399+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/matz/spinel": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-24T11:07:45.393401+00:00",
+        "error": null
+      }
+    },
+    "https://ynarwal.github.io/how-llms-work": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-24T11:07:45.393403+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/NV404/gova": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-24T11:07:45.393405+00:00",
         "error": null
       }
     }
