@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-04-24T19:07:45.390256+08:00",
+  "generated_at": "2026-04-25T18:42:56.890703+08:00",
   "posts": [
+    {
+      "id": "2026-04-25-f28a13707710",
+      "run_id": "f28a13707710",
+      "date": "2026-04-25",
+      "title": "每日趋势观察 2026-04-25",
+      "slug": "2026-04-25-f28a13707710",
+      "markdown_path": "posts/2026-04-25-f28a13707710.md",
+      "summary": "- [Google plans to invest up to $40B in Anthropic](https://www.bloomberg.com/news/articles/2026-04-24/google-plans-to-invest-up-to-40-billion-in-anthropic): Hacker News Story: Google plans to invest u",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 9,
+      "is_empty_update": false,
+      "created_at": "2026-04-25T18:42:56.890703+08:00"
+    },
     {
       "id": "2026-04-24-ec59f165fbef",
       "run_id": "ec59f165fbef",
