@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-25T10:42:56.895241+00:00",
+  "updated_at": "2026-04-26T10:43:42.124023+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -507,6 +507,22 @@
             "status": "success",
             "file_path": "output/posts/2026-04-25-f28a13707710.md",
             "slug": "2026-04-25-f28a13707710",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-26T10:43:42.123811+00:00",
+      "items_count": 9,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-04-26-66e3674ee8f8.md",
+            "slug": "2026-04-26-66e3674ee8f8",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -2465,6 +2481,69 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-04-25T10:42:56.895234+00:00",
+        "error": null
+      }
+    },
+    "https://www.scientificamerican.com/article/amateur-armed-with-chatgpt-vibe-maths-a-60-year-old-problem": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-26T10:43:42.123973+00:00",
+        "error": null
+      }
+    },
+    "https://techtrenches.dev/p/the-west-forgot-how-to-make-things": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-26T10:43:42.123979+00:00",
+        "error": null
+      }
+    },
+    "https://freakonomics.com/podcast/why-has-there-been-so-little-progress-on-alzheimers-disease": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-26T10:43:42.123984+00:00",
+        "error": null
+      }
+    },
+    "https://news.ycombinator.com/item?id=47906253": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-26T10:43:42.123988+00:00",
+        "error": null
+      }
+    },
+    "https://fabiensanglard.net/usbcheat/index.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-26T10:43:42.123992+00:00",
+        "error": null
+      }
+    },
+    "https://lists.gnupg.org/pipermail/gnupg-announce/2026q2/000504.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-26T10:43:42.123997+00:00",
+        "error": null
+      }
+    },
+    "https://www.npmjs.com/package/ooko": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-26T10:43:42.124006+00:00",
+        "error": null
+      }
+    },
+    "https://mastodon.catgirl.cloud/@sophie/116467789133733136": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-26T10:43:42.124010+00:00",
+        "error": null
+      }
+    },
+    "https://www.edenai.co": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-26T10:43:42.124014+00:00",
         "error": null
       }
     }
