@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-26T10:43:42.124023+00:00",
+  "updated_at": "2026-04-27T11:44:50.605257+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -523,6 +523,22 @@
             "status": "success",
             "file_path": "output/posts/2026-04-26-66e3674ee8f8.md",
             "slug": "2026-04-26-66e3674ee8f8",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-27T11:44:50.605051+00:00",
+      "items_count": 9,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-04-27-54c5fed1711a.md",
+            "slug": "2026-04-27-54c5fed1711a",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -2544,6 +2560,69 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-04-26T10:43:42.124014+00:00",
+        "error": null
+      }
+    },
+    "https://ca98am79.medium.com/i-bought-friendster-for-30k-heres-what-i-m-doing-with-it-d5e8ddb3991d": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-27T11:44:50.605212+00:00",
+        "error": null
+      }
+    },
+    "https://www.koshyjohn.com/blog/ai-should-elevate-your-thinking-not-replace-it": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-27T11:44:50.605218+00:00",
+        "error": null
+      }
+    },
+    "https://developer.chrome.com/docs/ai/prompt-api": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-27T11:44:50.605221+00:00",
+        "error": null
+      }
+    },
+    "https://flipdisc.io": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-27T11:44:50.605225+00:00",
+        "error": null
+      }
+    },
+    "https://interblah.net/self-updating-screenshots": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-27T11:44:50.605229+00:00",
+        "error": null
+      }
+    },
+    "https://arkaung.github.io/interactive-turboquant": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-27T11:44:50.605233+00:00",
+        "error": null
+      }
+    },
+    "https://robbowen.digital/wrote-about/abandoned-side-projects": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-27T11:44:50.605241+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/pgbackrest/pgbackrest": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-27T11:44:50.605245+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/WeebLabs/DSPi": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-27T11:44:50.605248+00:00",
         "error": null
       }
     }
