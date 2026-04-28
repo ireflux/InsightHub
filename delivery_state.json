@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-27T11:44:50.605257+00:00",
+  "updated_at": "2026-04-28T11:44:45.063301+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -539,6 +539,22 @@
             "status": "success",
             "file_path": "output/posts/2026-04-27-54c5fed1711a.md",
             "slug": "2026-04-27-54c5fed1711a",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-28T11:44:45.063023+00:00",
+      "items_count": 10,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-04-28-b5d102442625.md",
+            "slug": "2026-04-28-b5d102442625",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -2623,6 +2639,76 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-04-27T11:44:50.605248+00:00",
+        "error": null
+      }
+    },
+    "https://www.bloomberg.com/news/articles/2026-04-27/microsoft-to-stop-sharing-revenue-with-main-ai-partner-openai": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-28T11:44:45.063247+00:00",
+        "error": null
+      }
+    },
+    "https://ismy.blue/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-28T11:44:45.063253+00:00",
+        "error": null
+      }
+    },
+    "https://talkie-lm.com/introducing-talkie": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-28T11:44:45.063257+00:00",
+        "error": null
+      }
+    },
+    "https://gtfobins.org/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-28T11:44:45.063261+00:00",
+        "error": null
+      }
+    },
+    "https://fabiensanglard.net/curse": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-28T11:44:45.063264+00:00",
+        "error": null
+      }
+    },
+    "https://worksinprogress.co/issue/the-worlds-most-complex-machine": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-28T11:44:45.063268+00:00",
+        "error": null
+      }
+    },
+    "https://apod.nasa.gov/apod/ap260427.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-28T11:44:45.063276+00:00",
+        "error": null
+      }
+    },
+    "https://purplesyringa.moe/blog/wasm-is-not-quite-a-stack-machine": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-28T11:44:45.063285+00:00",
+        "error": null
+      }
+    },
+    "https://www.theideasletter.org/essay/the-social-edge-of-intelligence": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-28T11:44:45.063288+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/pgcentralfoundation/pgrx": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-28T11:44:45.063291+00:00",
         "error": null
       }
     }
