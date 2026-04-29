@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-28T11:44:45.063301+00:00",
+  "updated_at": "2026-04-29T11:28:40.538368+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -555,6 +555,22 @@
             "status": "success",
             "file_path": "output/posts/2026-04-28-b5d102442625.md",
             "slug": "2026-04-28-b5d102442625",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-29T11:28:40.538142+00:00",
+      "items_count": 10,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-04-29-21aaaaa51615.md",
+            "slug": "2026-04-29-21aaaaa51615",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -2709,6 +2725,76 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-04-28T11:44:45.063291+00:00",
+        "error": null
+      }
+    },
+    "https://mitchellh.com/writing/ghostty-leaving-github": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-29T11:28:40.538316+00:00",
+        "error": null
+      }
+    },
+    "https://www.buchodi.com/how-chatgpt-serves-ads-heres-the-full-attribution-loop": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-29T11:28:40.538323+00:00",
+        "error": null
+      }
+    },
+    "https://lucumr.pocoo.org/2026/4/28/before-github": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-29T11:28:40.538328+00:00",
+        "error": null
+      }
+    },
+    "https://corrode.dev/blog/bugs-rust-wont-catch": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-29T11:28:40.538332+00:00",
+        "error": null
+      }
+    },
+    "https://www.nldigitalgovernment.nl/news/soft-launch-for-government-open-source-code-platform": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-29T11:28:40.538336+00:00",
+        "error": null
+      }
+    },
+    "https://rip.so": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-29T11:28:40.538340+00:00",
+        "error": null
+      }
+    },
+    "https://news.ycombinator.com/item?id=47945522": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-29T11:28:40.538349+00:00",
+        "error": null
+      }
+    },
+    "https://hardenedbsd.org/article/shawn-webb/2026-04-26/hardenedbsd-officially-radicle": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-29T11:28:40.538352+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/rocky-data/rocky": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-29T11:28:40.538356+00:00",
+        "error": null
+      }
+    },
+    "https://lawvm.org/why-law-is-law-shaped": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-29T11:28:40.538359+00:00",
         "error": null
       }
     }
