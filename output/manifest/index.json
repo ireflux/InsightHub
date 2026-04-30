@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-04-29T19:28:40.535059+08:00",
+  "generated_at": "2026-04-30T19:28:12.085493+08:00",
   "posts": [
+    {
+      "id": "2026-04-30-8509beb07694",
+      "run_id": "8509beb07694",
+      "date": "2026-04-30",
+      "title": "每日趋势观察 2026-04-30",
+      "slug": "2026-04-30-8509beb07694",
+      "markdown_path": "posts/2026-04-30-8509beb07694.md",
+      "summary": "科技界本周在软件工程架构与网络安全领域同时敲响了警钟。前 Atom 团队打造的 Rust 编辑器 Zed 正式发布 1.0 版本，标志着从 Web 技术栈向原生高性能框架的回归。与此同时，一个仅 732 字节的 Python 脚本暴露了 Linux 内核长达九年的逻辑漏洞，使得几乎所有主流发行版面临本地提权风险。在人工智能领域，围绕“人机协作”的社区文化正在发生剧烈碰撞：Zig 项目坚持禁止 AI",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 9,
+      "is_empty_update": false,
+      "created_at": "2026-04-30T19:28:12.085493+08:00"
+    },
     {
       "id": "2026-04-29-21aaaaa51615",
       "run_id": "21aaaaa51615",

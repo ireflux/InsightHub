@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-29T11:28:40.538368+00:00",
+  "updated_at": "2026-04-30T11:28:12.089757+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -571,6 +571,22 @@
             "status": "success",
             "file_path": "output/posts/2026-04-29-21aaaaa51615.md",
             "slug": "2026-04-29-21aaaaa51615",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-30T11:28:12.089549+00:00",
+      "items_count": 9,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-04-30-8509beb07694.md",
+            "slug": "2026-04-30-8509beb07694",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -2795,6 +2811,69 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-04-29T11:28:40.538359+00:00",
+        "error": null
+      }
+    },
+    "https://zed.dev/blog/zed-1-0": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-30T11:28:12.089709+00:00",
+        "error": null
+      }
+    },
+    "https://openai.com/index/where-the-goblins-came-from": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-30T11:28:12.089717+00:00",
+        "error": null
+      }
+    },
+    "https://copy.fail/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-30T11:28:12.089721+00:00",
+        "error": null
+      }
+    },
+    "https://simonwillison.net/2026/Apr/30/zig-anti-ai": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-30T11:28:12.089724+00:00",
+        "error": null
+      }
+    },
+    "https://www.noctua.at/en/3d-cad-models": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-30T11:28:12.089728+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/mozilla/standards-positions/issues/1213": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-30T11:28:12.089732+00:00",
+        "error": null
+      }
+    },
+    "https://www.jcvi.org/media-center/j-craig-venter-genomics-pioneer-and-founder-jcvi-and-diploid-genomics-inc-dies-79": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-30T11:28:12.089740+00:00",
+        "error": null
+      }
+    },
+    "https://firethering.com/granite-4-1-ibm-open-source-model-family": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-30T11:28:12.089745+00:00",
+        "error": null
+      }
+    },
+    "https://derekrodriguez.dev/parse-dont-validate-through-the-years-with-c-": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-04-30T11:28:12.089748+00:00",
         "error": null
       }
     }
