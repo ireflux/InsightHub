@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-01T11:06:13.055955+00:00",
+  "updated_at": "2026-05-02T10:52:39.040805+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -603,6 +603,22 @@
             "status": "success",
             "file_path": "output/posts/2026-05-01-8011995a1267.md",
             "slug": "2026-05-01-8011995a1267",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-02T10:52:39.040583+00:00",
+      "items_count": 6,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-05-02-c26e714c6c11.md",
+            "slug": "2026-05-02-c26e714c6c11",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -2946,6 +2962,48 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-05-01T11:06:13.055948+00:00",
+        "error": null
+      }
+    },
+    "https://education.ti.com/en/products/calculators/graphing-calculators/ti-84-evo": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-02T10:52:39.040761+00:00",
+        "error": null
+      }
+    },
+    "https://www.noctua.at/en/expertise/blog/how-can-it-take-so-long-to-release-black-fan-versions": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-02T10:52:39.040770+00:00",
+        "error": null
+      }
+    },
+    "https://randsinrepose.com/archives/the-usb-situation": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-02T10:52:39.040776+00:00",
+        "error": null
+      }
+    },
+    "https://devblogs.microsoft.com/oldnewthing/20150417-00?p=44213": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-02T10:52:39.040780+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/Teaonly/SKILL.make": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-02T10:52:39.040785+00:00",
+        "error": null
+      }
+    },
+    "https://copilot.simplepdf.com/?share=a7d00ad073c75a75d493228e6ff7b11eb3f2d945b6175913e87898ec96ca8076&form=w9&lang=en": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-02T10:52:39.040791+00:00",
         "error": null
       }
     }
