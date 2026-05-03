@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-02T10:52:39.040805+00:00",
+  "updated_at": "2026-05-03T10:54:26.084674+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -619,6 +619,22 @@
             "status": "success",
             "file_path": "output/posts/2026-05-02-c26e714c6c11.md",
             "slug": "2026-05-02-c26e714c6c11",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-03T10:54:26.084461+00:00",
+      "items_count": 8,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-05-03-c0a5910be8f9.md",
+            "slug": "2026-05-03-c0a5910be8f9",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -3004,6 +3020,62 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-05-02T10:52:39.040791+00:00",
+        "error": null
+      }
+    },
+    "https://code.videolan.org/videolan/dav2d": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-03T10:54:26.084630+00:00",
+        "error": null
+      }
+    },
+    "https://donottrack.sh/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-03T10:54:26.084643+00:00",
+        "error": null
+      }
+    },
+    "https://acai.sh/blog/specsmaxxing": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-03T10:54:26.084648+00:00",
+        "error": null
+      }
+    },
+    "https://blog.haskell.org/a-couple-million-lines-of-haskell": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-03T10:54:26.084652+00:00",
+        "error": null
+      }
+    },
+    "https://www.universiteitleiden.nl/en/news/2025/07/neanderthals-ran-fat-factories-125000-years-ago": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-03T10:54:26.084655+00:00",
+        "error": null
+      }
+    },
+    "https://ladybird.org/newsletter/2026-04-30": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-03T10:54:26.084658+00:00",
+        "error": null
+      }
+    },
+    "https://www.david-smith.org/blog/2026/04/29/maps-on-watchos": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-03T10:54:26.084664+00:00",
+        "error": null
+      }
+    },
+    "https://blogs.windows.com/windows-insider/2026/05/01/windows-quality-update-progress-weve-made-since-march": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-03T10:54:26.084666+00:00",
         "error": null
       }
     }

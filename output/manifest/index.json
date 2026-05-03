@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-05-02T18:52:39.036968+08:00",
+  "generated_at": "2026-05-03T18:54:26.080083+08:00",
   "posts": [
+    {
+      "id": "2026-05-03-c0a5910be8f9",
+      "run_id": "c0a5910be8f9",
+      "date": "2026-05-03",
+      "title": "每日趋势观察 2026-05-03",
+      "slug": "2026-05-03-c0a5910be8f9",
+      "markdown_path": "posts/2026-05-03-c0a5910be8f9.md",
+      "summary": "- [Dav2d](https://code.videolan.org/videolan/dav2d): Making sure you're not a bot!",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 8,
+      "is_empty_update": false,
+      "created_at": "2026-05-03T18:54:26.080083+08:00"
+    },
     {
       "id": "2026-05-02-c26e714c6c11",
       "run_id": "c26e714c6c11",
