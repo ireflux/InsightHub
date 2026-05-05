@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-04T11:49:41.856900+00:00",
+  "updated_at": "2026-05-05T11:15:47.902924+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -651,6 +651,22 @@
             "status": "success",
             "file_path": "output/posts/2026-05-04-9f601d49acd9.md",
             "slug": "2026-05-04-9f601d49acd9",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-05T11:15:47.902706+00:00",
+      "items_count": 9,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-05-05-7a7e367be7be.md",
+            "slug": "2026-05-05-7a7e367be7be",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -3155,6 +3171,69 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-05-04T11:49:41.856890+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/oven-sh/bun/commit/46d3bc29f270fa881dd5730ef1549e88407701a5": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-05T11:15:47.902876+00:00",
+        "error": null
+      }
+    },
+    "https://www.thatprivacyguy.com/blog/chrome-silent-nano-install": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-05T11:15:47.902884+00:00",
+        "error": null
+      }
+    },
+    "https://openai.com/index/delivering-low-latency-voice-ai-at-scale": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-05T11:15:47.902889+00:00",
+        "error": null
+      }
+    },
+    "https://walzr.com/empty-screenings": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-05T11:15:47.902893+00:00",
+        "error": null
+      }
+    },
+    "https://tweedegolf.nl/en/blog/237/async-rust-never-left-the-mvp-state": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-05T11:15:47.902897+00:00",
+        "error": null
+      }
+    },
+    "https://www.dbreunig.com/2026/05/04/10-lessons-for-agentic-coding.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-05T11:15:47.902901+00:00",
+        "error": null
+      }
+    },
+    "https://www.dragonsreach.it/2026/05/04/cve-2026-31431-copy-fail-rootless-containers": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-05T11:15:47.902908+00:00",
+        "error": null
+      }
+    },
+    "https://distr.sh/blog/running-docker-in-production": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-05T11:15:47.902912+00:00",
+        "error": null
+      }
+    },
+    "https://sethmlarson.dev/hand-drawn-qr-codes": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-05T11:15:47.902916+00:00",
         "error": null
       }
     }
