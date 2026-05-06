@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-05T11:15:47.902924+00:00",
+  "updated_at": "2026-05-06T11:48:28.872631+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -667,6 +667,22 @@
             "status": "success",
             "file_path": "output/posts/2026-05-05-7a7e367be7be.md",
             "slug": "2026-05-05-7a7e367be7be",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T11:48:28.872418+00:00",
+      "items_count": 10,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-05-06-f2d38ccc5d55.md",
+            "slug": "2026-05-06-f2d38ccc5d55",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -3234,6 +3250,76 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-05-05T11:15:47.902916+00:00",
+        "error": null
+      }
+    },
+    "https://status.denic.de/pages/incident/592577eab611ce1e0d00046f/69fa60ef9d12f5057a974f38": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-06T11:48:28.872587+00:00",
+        "error": null
+      }
+    },
+    "https://blog.google/innovation-and-ai/technology/developers-tools/multi-token-prediction-gemma-4": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-06T11:48:28.872592+00:00",
+        "error": null
+      }
+    },
+    "https://blog.cloudflare.com/agents-stripe-projects": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-06T11:48:28.872596+00:00",
+        "error": null
+      }
+    },
+    "https://us.starlabs.systems/pages/starfighter": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-06T11:48:28.872599+00:00",
+        "error": null
+      }
+    },
+    "https://katedaviesdesigns.com/2026/04/29/knitting-bullshit": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-06T11:48:28.872602+00:00",
+        "error": null
+      }
+    },
+    "https://red-squares.cian.lol/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-06T11:48:28.872607+00:00",
+        "error": null
+      }
+    },
+    "https://www.aaedmusa.com/projects/cara2": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-06T11:48:28.872615+00:00",
+        "error": null
+      }
+    },
+    "https://coe.gatech.edu/news/2026/04/batteries-not-included-or-required-these-smart-home-sensors": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-06T11:48:28.872619+00:00",
+        "error": null
+      }
+    },
+    "https://draxinar.github.io/articles/2026-05-01-uodemo-reverse-engineering.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-06T11:48:28.872622+00:00",
+        "error": null
+      }
+    },
+    "https://www.beehive.govt.nz/release/government-disestablish-bsa": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-06T11:48:28.872624+00:00",
         "error": null
       }
     }
