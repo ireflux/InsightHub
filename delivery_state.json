@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-06T11:48:28.872631+00:00",
+  "updated_at": "2026-05-07T11:48:16.602074+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -683,6 +683,22 @@
             "status": "success",
             "file_path": "output/posts/2026-05-06-f2d38ccc5d55.md",
             "slug": "2026-05-06-f2d38ccc5d55",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-07T11:48:16.601868+00:00",
+      "items_count": 9,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-05-07-55bb7e3b5e62.md",
+            "slug": "2026-05-07-55bb7e3b5e62",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -3320,6 +3336,69 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-05-06T11:48:28.872624+00:00",
+        "error": null
+      }
+    },
+    "https://simonwillison.net/2026/May/6/vibe-coding-and-agentic-engineering": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-07T11:48:16.602015+00:00",
+        "error": null
+      }
+    },
+    "https://nooneshappy.com/article/appearing-productive-in-the-workplace": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-07T11:48:16.602026+00:00",
+        "error": null
+      }
+    },
+    "https://www.digitalfoundry.net/news/2026/05/valve-releases-steam-controller-cad-files-under-creative-commons-license": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-07T11:48:16.602031+00:00",
+        "error": null
+      }
+    },
+    "https://sqlite.org/locrsf.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-07T11:48:16.602035+00:00",
+        "error": null
+      }
+    },
+    "https://permacomputing.net/principles": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-07T11:48:16.602039+00:00",
+        "error": null
+      }
+    },
+    "https://aniket.foo/posts/20260505-netboot": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-07T11:48:16.602044+00:00",
+        "error": null
+      }
+    },
+    "https://unsung.aresluna.org/photoshops-challenges-with-focus-pt-2": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-07T11:48:16.602052+00:00",
+        "error": null
+      }
+    },
+    "https://firethering.com/zaya1-8b-open-source-math-coding-model": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-07T11:48:16.602056+00:00",
+        "error": null
+      }
+    },
+    "https://www.ticalc.org/programming/columns/83plus-bas/cherny": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-07T11:48:16.602060+00:00",
         "error": null
       }
     }
