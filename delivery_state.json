@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-07T11:48:16.602074+00:00",
+  "updated_at": "2026-05-08T11:15:10.663903+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -699,6 +699,22 @@
             "status": "success",
             "file_path": "output/posts/2026-05-07-55bb7e3b5e62.md",
             "slug": "2026-05-07-55bb7e3b5e62",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-08T11:15:10.663739+00:00",
+      "items_count": 10,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-05-08-0f430a3d3cf3.md",
+            "slug": "2026-05-08-0f430a3d3cf3",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -3399,6 +3415,76 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-05-07T11:48:16.602060+00:00",
+        "error": null
+      }
+    },
+    "https://www.reuters.com/business/world-at-work/cloudflare-cut-over-1100-jobs-2026-05-07": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-08T11:15:10.663864+00:00",
+        "error": null
+      }
+    },
+    "https://www.theverge.com/tech/926458/canvas-shinyhunters-breach": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-08T11:15:10.663870+00:00",
+        "error": null
+      }
+    },
+    "https://www.not-ship.com/burning-man-moop": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-08T11:15:10.663873+00:00",
+        "error": null
+      }
+    },
+    "https://xeiaso.net/blog/2026/abstain-from-install": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-08T11:15:10.663876+00:00",
+        "error": null
+      }
+    },
+    "https://www.openwall.com/lists/oss-security/2026/05/07/8": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-08T11:15:10.663879+00:00",
+        "error": null
+      }
+    },
+    "https://storica.club/blog/pinocchio-in-italian": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-08T11:15:10.663882+00:00",
+        "error": null
+      }
+    },
+    "https://www.nintendo.co.jp/corporate/release/en/2026/260508.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-08T11:15:10.663888+00:00",
+        "error": null
+      }
+    },
+    "https://clojurescript.org/news/2026-05-07-release": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-08T11:15:10.663891+00:00",
+        "error": null
+      }
+    },
+    "https://sdocs.dev/blogs/journey-to-pdf-generation": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-08T11:15:10.663893+00:00",
+        "error": null
+      }
+    },
+    "https://ikesau.co/blog/dithering-with-css": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-08T11:15:10.663895+00:00",
         "error": null
       }
     }

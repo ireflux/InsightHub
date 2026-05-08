@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-05-07T19:48:16.598422+08:00",
+  "generated_at": "2026-05-08T19:15:10.660813+08:00",
   "posts": [
+    {
+      "id": "2026-05-08-0f430a3d3cf3",
+      "run_id": "0f430a3d3cf3",
+      "date": "2026-05-08",
+      "title": "每日趋势观察 2026-05-08",
+      "slug": "2026-05-08-0f430a3d3cf3",
+      "markdown_path": "posts/2026-05-08-0f430a3d3cf3.md",
+      "summary": "本周科技行业在调整与安全挑战中前行。Cloudflare 宣布裁员约 20%，理由是 AI 技术带来的效率提升。与此同时，学习管理系统 Canvas 遭遇大规模数据泄露，导致服务短暂中断。安全领域方面，Linux 出现新的通用权限提升漏洞 \"Dirty Frag\"。消费电子方面，任天堂 Switch 2 在全球范围上调价格。此外，Burning Man 发布了详尽的清洁度地图，而 Pinocchi",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 10,
+      "is_empty_update": false,
+      "created_at": "2026-05-08T19:15:10.660813+08:00"
+    },
     {
       "id": "2026-05-07-55bb7e3b5e62",
       "run_id": "55bb7e3b5e62",
