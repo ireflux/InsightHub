@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-05-08T19:15:10.660813+08:00",
+  "generated_at": "2026-05-09T18:57:36.686526+08:00",
   "posts": [
+    {
+      "id": "2026-05-09-be2b31e06cd2",
+      "run_id": "be2b31e06cd2",
+      "date": "2026-05-09",
+      "title": "每日趋势观察 2026-05-09",
+      "slug": "2026-05-09-be2b31e06cd2",
+      "markdown_path": "posts/2026-05-09-be2b31e06cd2.md",
+      "summary": "今日科技圈呈现出技术与文化并行的双轨叙事。一方面，人工智能正以前所未有的速度重塑专业领域，从数学研究的门槛提升到网络安全披露机制的瓦解，再到软件工程经典理论的现代重构，AI 工具正逐渐成为人类专家的延伸；另一方面，科技巨头在基础设施与隐私控制上面临新的博弈，Google 通过强制 Play Services 绑定验证来收紧 Android 生态，而 OpenAI 则因语音 AI 的技术选型引发争议",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 9,
+      "is_empty_update": false,
+      "created_at": "2026-05-09T18:57:36.686526+08:00"
+    },
     {
       "id": "2026-05-08-0f430a3d3cf3",
       "run_id": "0f430a3d3cf3",

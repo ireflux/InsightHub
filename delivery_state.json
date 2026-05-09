@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-08T11:15:10.663903+00:00",
+  "updated_at": "2026-05-09T10:57:36.690541+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -715,6 +715,22 @@
             "status": "success",
             "file_path": "output/posts/2026-05-08-0f430a3d3cf3.md",
             "slug": "2026-05-08-0f430a3d3cf3",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-09T10:57:36.690331+00:00",
+      "items_count": 9,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-05-09-be2b31e06cd2.md",
+            "slug": "2026-05-09-be2b31e06cd2",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -3485,6 +3501,69 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-05-08T11:15:10.663895+00:00",
+        "error": null
+      }
+    },
+    "https://reclaimthenet.org/google-broke-recaptcha-for-de-googled-android-users": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-09T10:57:36.690492+00:00",
+        "error": null
+      }
+    },
+    "https://gowers.wordpress.com/2026/05/08/a-recent-experience-with-chatgpt-5-5-pro": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-09T10:57:36.690500+00:00",
+        "error": null
+      }
+    },
+    "https://www.bbc.com/news/articles/cp3pww9g0p5o": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-09T10:57:36.690503+00:00",
+        "error": null
+      }
+    },
+    "https://www.jefftk.com/p/ai-is-breaking-two-vulnerability-cultures": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-09T10:57:36.690508+00:00",
+        "error": null
+      }
+    },
+    "https://martinfowler.com/bliki/MythicalManMonth.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-09T10:57:36.690511+00:00",
+        "error": null
+      }
+    },
+    "https://moq.dev/blog/webrtc-is-the-problem": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-09T10:57:36.690515+00:00",
+        "error": null
+      }
+    },
+    "https://twitter.com/trq212/status/2052809885763747935": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-09T10:57:36.690523+00:00",
+        "error": null
+      }
+    },
+    "https://www.wiisfi.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-09T10:57:36.690527+00:00",
+        "error": null
+      }
+    },
+    "https://www.quantamagazine.org/what-causes-lightning-the-answer-keeps-getting-more-interesting-20260506": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-09T10:57:36.690530+00:00",
         "error": null
       }
     }
