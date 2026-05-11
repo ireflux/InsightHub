@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-10T11:00:42.946022+00:00",
+  "updated_at": "2026-05-11T12:39:19.786192+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -747,6 +747,22 @@
             "status": "success",
             "file_path": "output/posts/2026-05-10-a091d3397fbd.md",
             "slug": "2026-05-10-a091d3397fbd",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-11T12:39:19.785985+00:00",
+      "items_count": 9,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-05-11-8051edcc3bd7.md",
+            "slug": "2026-05-11-8051edcc3bd7",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -3650,6 +3666,69 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-05-10T11:00:42.946013+00:00",
+        "error": null
+      }
+    },
+    "https://grapheneos.social/@GrapheneOS/116550899908879585": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-11T12:39:19.786148+00:00",
+        "error": null
+      }
+    },
+    "https://unix.foo/posts/local-ai-needs-to-be-norm": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-11T12:39:19.786153+00:00",
+        "error": null
+      }
+    },
+    "https://blog.k10s.dev/im-going-back-to-writing-code-by-hand": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-11T12:39:19.786157+00:00",
+        "error": null
+      }
+    },
+    "https://cyber.netsecops.io/articles/obsidian-plugin-abused-in-campaign-to-deploy-phantom-pulse-rat": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-11T12:39:19.786161+00:00",
+        "error": null
+      }
+    },
+    "https://jola.dev/posts/running-local-models-on-m4": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-11T12:39:19.786164+00:00",
+        "error": null
+      }
+    },
+    "https://www.openculture.com/2024/10/the-greatest-shot-in-television.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-11T12:39:19.786168+00:00",
+        "error": null
+      }
+    },
+    "https://www.jamesshore.com/v2/blog/2026/you-need-ai-that-reduces-your-maintenance-costs": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-11T12:39:19.786176+00:00",
+        "error": null
+      }
+    },
+    "https://ratty-term.org/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-11T12:39:19.786179+00:00",
+        "error": null
+      }
+    },
+    "https://tautme.github.io/phone-sensors/accel-tuner.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-11T12:39:19.786183+00:00",
         "error": null
       }
     }
