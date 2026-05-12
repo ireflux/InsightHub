@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-11T12:39:19.786192+00:00",
+  "updated_at": "2026-05-12T11:55:00.686857+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -763,6 +763,22 @@
             "status": "success",
             "file_path": "output/posts/2026-05-11-8051edcc3bd7.md",
             "slug": "2026-05-11-8051edcc3bd7",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-12T11:55:00.686636+00:00",
+      "items_count": 8,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-05-12-a147cbec69ba.md",
+            "slug": "2026-05-12-a147cbec69ba",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -3729,6 +3745,62 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-05-11T12:39:19.786183+00:00",
+        "error": null
+      }
+    },
+    "https://medium.com/@NMitchem/if-ai-writes-your-code-why-use-python-bf8c4ba1a055": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-12T11:55:00.686812+00:00",
+        "error": null
+      }
+    },
+    "https://tanstack.com/blog/npm-supply-chain-compromise-postmortem": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-12T11:55:00.686818+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/davmlaw/they_live_adblocker": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-12T11:55:00.686821+00:00",
+        "error": null
+      }
+    },
+    "http://www.typewritten.org/Media": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-12T11:55:00.686825+00:00",
+        "error": null
+      }
+    },
+    "https://stemcell.ucla.edu/news/ucla-discovers-first-stroke-rehabilitation-drug-repair-brain-damage": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-12T11:55:00.686828+00:00",
+        "error": null
+      }
+    },
+    "https://thenoisyroom.com": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-12T11:55:00.686832+00:00",
+        "error": null
+      }
+    },
+    "https://matklad.github.io/2026/05/12/software-architecture.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-12T11:55:00.686841+00:00",
+        "error": null
+      }
+    },
+    "https://blog.coursera.org/coursera-and-udemy-are-now-one-company-creating-the-worlds-most-comprehensive-skills-platform": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-12T11:55:00.686849+00:00",
         "error": null
       }
     }
