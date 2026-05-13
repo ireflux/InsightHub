@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-12T11:55:00.686857+00:00",
+  "updated_at": "2026-05-13T12:02:58.216859+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -779,6 +779,22 @@
             "status": "success",
             "file_path": "output/posts/2026-05-12-a147cbec69ba.md",
             "slug": "2026-05-12-a147cbec69ba",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-13T12:02:58.216649+00:00",
+      "items_count": 8,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-05-13-81d84e920a50.md",
+            "slug": "2026-05-13-81d84e920a50",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -3801,6 +3817,62 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-05-12T11:55:00.686849+00:00",
+        "error": null
+      }
+    },
+    "https://googlebook.google/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-13T12:02:58.216814+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/FULU-Foundation/OrcaSlicer-bambulab": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-13T12:02:58.216819+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/cactus-compute/needle": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-13T12:02:58.216822+00:00",
+        "error": null
+      }
+    },
+    "https://typesetinthefuture.com/2016/02/18/futuristic": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-13T12:02:58.216826+00:00",
+        "error": null
+      }
+    },
+    "https://arxiv.org/abs/2605.08419": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-13T12:02:58.216830+00:00",
+        "error": null
+      }
+    },
+    "https://www.sciencedaily.com/releases/2026/05/260510030950.htm": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-13T12:02:58.216834+00:00",
+        "error": null
+      }
+    },
+    "https://monokai.com/articles/how-i-moved-my-digital-stack-to-europe": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-13T12:02:58.216844+00:00",
+        "error": null
+      }
+    },
+    "https://acesounderglass.com/2025/11/15/the-boring-part-of-bell-labs": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-13T12:02:58.216849+00:00",
         "error": null
       }
     }
