@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-13T12:02:58.216859+00:00",
+  "updated_at": "2026-05-14T11:52:58.133084+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -795,6 +795,22 @@
             "status": "success",
             "file_path": "output/posts/2026-05-13-81d84e920a50.md",
             "slug": "2026-05-13-81d84e920a50",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-14T11:52:58.132786+00:00",
+      "items_count": 7,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-05-14-b81e03409319.md",
+            "slug": "2026-05-14-b81e03409319",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -3873,6 +3889,55 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-05-13T12:02:58.216849+00:00",
+        "error": null
+      }
+    },
+    "https://www.xda-developers.com/linux-gaming-is-getting-faster-because-windows-apis-are-becoming-linux-kernel-features": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-14T11:52:58.133044+00:00",
+        "error": null
+      }
+    },
+    "https://www.jdhodges.com/blog/macbook-neo-benchmarks-analysis": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-14T11:52:58.133051+00:00",
+        "error": null
+      }
+    },
+    "https://www.anthropic.com/news/claude-for-small-business": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-14T11:52:58.133055+00:00",
+        "error": null
+      }
+    },
+    "https://fredchan.org/blog/locality-domains-guide": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-14T11:52:58.133058+00:00",
+        "error": null
+      }
+    },
+    "http://www.scorch2000.com/web": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-14T11:52:58.133062+00:00",
+        "error": null
+      }
+    },
+    "https://classic7.lol/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-14T11:52:58.133066+00:00",
+        "error": null
+      }
+    },
+    "https://www.eff.org/pages/leaving-physical-world": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-14T11:52:58.133073+00:00",
         "error": null
       }
     }
