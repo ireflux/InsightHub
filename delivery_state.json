@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-14T11:52:58.133084+00:00",
+  "updated_at": "2026-05-15T11:57:09.193584+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -811,6 +811,22 @@
             "status": "success",
             "file_path": "output/posts/2026-05-14-b81e03409319.md",
             "slug": "2026-05-14-b81e03409319",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-15T11:57:09.193376+00:00",
+      "items_count": 9,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-05-15-be397d90a777.md",
+            "slug": "2026-05-15-be397d90a777",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -3938,6 +3954,69 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-05-14T11:52:58.133073+00:00",
+        "error": null
+      }
+    },
+    "https://arkadiyt.com/2026/05/13/removing-the-modem-and-gps-from-my-rav4": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-15T11:57:09.193541+00:00",
+        "error": null
+      }
+    },
+    "https://antirez.com/news/165": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-15T11:57:09.193546+00:00",
+        "error": null
+      }
+    },
+    "https://www.bbc.com/news/articles/c2l2j1lxdk5o": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-15T11:57:09.193549+00:00",
+        "error": null
+      }
+    },
+    "https://relax.ai/docs": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-15T11:57:09.193553+00:00",
+        "error": null
+      }
+    },
+    "https://explorer.samismith.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-15T11:57:09.193556+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/GlycemicGPT/GlycemicGPT": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-15T11:57:09.193560+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/Andyyyy64/whichllm": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-15T11:57:09.193568+00:00",
+        "error": null
+      }
+    },
+    "https://hghalebi.github.io/category_theory_transformer_rs": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-15T11:57:09.193572+00:00",
+        "error": null
+      }
+    },
+    "https://spectrum.ieee.org/steve-jobs-next-computer": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-15T11:57:09.193575+00:00",
         "error": null
       }
     }
