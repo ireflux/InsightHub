@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-05-16T19:02:25.416402+08:00",
+  "generated_at": "2026-05-17T19:06:02.898510+08:00",
   "posts": [
+    {
+      "id": "2026-05-17-4e5fe1fd2d3c",
+      "run_id": "4e5fe1fd2d3c",
+      "date": "2026-05-17",
+      "title": "每日趋势观察 2026-05-17",
+      "slug": "2026-05-17-4e5fe1fd2d3c",
+      "markdown_path": "posts/2026-05-17-4e5fe1fd2d3c.md",
+      "summary": "本周科技资讯呈现出从工具链底层重构向AI模型前沿探索并行的态势。前端开发领域出现了回归原生结构的趋势，开发者开始重新审视原子化CSS框架的边界；与此同时，AI应用正朝着更高效（低内存占用）与更普及（政府级普及）两个方向发展。硬件层面，嵌入式网络技术取得突破，而隐私与监管的博弈则在AI普及的背景下愈发激烈。",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 9,
+      "is_empty_update": false,
+      "created_at": "2026-05-17T19:06:02.898510+08:00"
+    },
     {
       "id": "2026-05-16-d087b55537d4",
       "run_id": "d087b55537d4",

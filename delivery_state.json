@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-16T11:02:25.421092+00:00",
+  "updated_at": "2026-05-17T11:06:02.902008+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -843,6 +843,22 @@
             "status": "success",
             "file_path": "output/posts/2026-05-16-d087b55537d4.md",
             "slug": "2026-05-16-d087b55537d4",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-17T11:06:02.901798+00:00",
+      "items_count": 9,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-05-17-4e5fe1fd2d3c.md",
+            "slug": "2026-05-17-4e5fe1fd2d3c",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -4089,6 +4105,69 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-05-16T11:02:25.421077+00:00",
+        "error": null
+      }
+    },
+    "https://jvns.ca/blog/2026/05/15/moving-away-from-tailwind--and-learning-to-structure-my-css-": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-17T11:06:02.901964+00:00",
+        "error": null
+      }
+    },
+    "https://openai.com/index/malta-chatgpt-plus-partnership": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-17T11:06:02.901968+00:00",
+        "error": null
+      }
+    },
+    "https://crates.io/crates/zerostack/1.0.0": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-17T11:06:02.901972+00:00",
+        "error": null
+      }
+    },
+    "https://nvlabs.github.io/Sana/WM": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-17T11:06:02.901976+00:00",
+        "error": null
+      }
+    },
+    "https://blog.mozilla.org/netpolicy/2026/05/15/mozilla-to-uk-regulators-vpns-are-essential-privacy-and-security-tools-and-should-not-be-undermined": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-17T11:06:02.901980+00:00",
+        "error": null
+      }
+    },
+    "https://lcamtuf.substack.com/p/a-nicer-voltmeter-clock": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-17T11:06:02.901983+00:00",
+        "error": null
+      }
+    },
+    "https://en.wikipedia.org/wiki/Colossus:_The_Forbin_Project": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-17T11:06:02.901992+00:00",
+        "error": null
+      }
+    },
+    "https://maurycyz.com/projects/mcusite": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-17T11:06:02.901995+00:00",
+        "error": null
+      }
+    },
+    "https://arnaud-carre.github.io/2026-05-15-ym-fast-emu": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-17T11:06:02.901999+00:00",
         "error": null
       }
     }
