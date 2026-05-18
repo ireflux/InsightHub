@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-17T11:06:02.902008+00:00",
+  "updated_at": "2026-05-18T13:45:13.476892+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -859,6 +859,22 @@
             "status": "success",
             "file_path": "output/posts/2026-05-17-4e5fe1fd2d3c.md",
             "slug": "2026-05-17-4e5fe1fd2d3c",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-18T13:45:13.476685+00:00",
+      "items_count": 9,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-05-18-e1966d762e19.md",
+            "slug": "2026-05-18-e1966d762e19",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -4168,6 +4184,69 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-05-17T11:06:02.901999+00:00",
+        "error": null
+      }
+    },
+    "https://www.noemamag.com/there-is-no-hard-problem-of-consciousness": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-18T13:45:13.476853+00:00",
+        "error": null
+      }
+    },
+    "https://gencad.github.io/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-18T13:45:13.476858+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/stephenlthorn/auto-identity-remove": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-18T13:45:13.476862+00:00",
+        "error": null
+      }
+    },
+    "https://www.scientificamerican.com/article/strange-crystals-found-inside-wreckage-from-the-first-nuclear-bomb-test": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-18T13:45:13.476866+00:00",
+        "error": null
+      }
+    },
+    "http://www.csl.sri.com/users/neumann/psos.pdf": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-18T13:45:13.476870+00:00",
+        "error": null
+      }
+    },
+    "https://www.theregister.com/security/2026/05/18/linus-torvalds-says-ai-powered-bug-hunters-have-made-linux-security-mailing-list-almost-entirely-unmanageable/5241633": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-18T13:45:13.476874+00:00",
+        "error": null
+      }
+    },
+    "https://storica.club/blog/alice-is-math-jokes": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-18T13:45:13.476881+00:00",
+        "error": null
+      }
+    },
+    "https://static1.squarespace.com/static/50363cf324ac8e905e7df861/t/6a0af5d0484fbf5fe9a7743e/1779103184855/2026-Spring-AI.pdf": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-18T13:45:13.476884+00:00",
+        "error": null
+      }
+    },
+    "https://www.bbc.co.uk/news/articles/cvg0yy3gp71o": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-18T13:45:13.476886+00:00",
         "error": null
       }
     }
