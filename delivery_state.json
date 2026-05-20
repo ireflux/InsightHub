@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-19T12:39:17.694246+00:00",
+  "updated_at": "2026-05-20T12:23:43.287458+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -891,6 +891,22 @@
             "status": "success",
             "file_path": "output/posts/2026-05-19-fa28aef13faa.md",
             "slug": "2026-05-19-fa28aef13faa",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-20T12:23:43.287184+00:00",
+      "items_count": 9,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-05-20-3cdca24ee8d3.md",
+            "slug": "2026-05-20-3cdca24ee8d3",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -4333,6 +4349,69 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-05-19T12:39:17.694238+00:00",
+        "error": null
+      }
+    },
+    "https://blog.google/products-and-platforms/products/search/search-io-2026": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-20T12:23:43.287414+00:00",
+        "error": null
+      }
+    },
+    "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-20T12:23:43.287419+00:00",
+        "error": null
+      }
+    },
+    "https://blog.habets.se/2026/05/Everything-in-C-is-undefined-behavior.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-20T12:23:43.287421+00:00",
+        "error": null
+      }
+    },
+    "https://virtualosmuseum.org/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-20T12:23:43.287423+00:00",
+        "error": null
+      }
+    },
+    "https://www.bbc.com/future/article/20260515-the-1950s-blunder-which-causes-mass-hay-fever-in-japan": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-20T12:23:43.287425+00:00",
+        "error": null
+      }
+    },
+    "https://fivethirtyeightindex.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-20T12:23:43.287427+00:00",
+        "error": null
+      }
+    },
+    "https://zfhuang99.github.io/rust/claude%20code/codex/contracts/spec-driven%20development/2025/12/01/rust-with-ai.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-20T12:23:43.287433+00:00",
+        "error": null
+      }
+    },
+    "https://news.infomaniak.com/en/infomaniak-foundation-sovereign-cloud": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-20T12:23:43.287437+00:00",
+        "error": null
+      }
+    },
+    "https://mapofmetal.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-20T12:23:43.287447+00:00",
         "error": null
       }
     }
