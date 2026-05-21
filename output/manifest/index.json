@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-05-20T20:23:43.252651+08:00",
+  "generated_at": "2026-05-21T20:44:43.278260+08:00",
   "posts": [
+    {
+      "id": "2026-05-21-7ac41b942139",
+      "run_id": "7ac41b942139",
+      "date": "2026-05-21",
+      "title": "每日趋势观察 2026-05-21",
+      "slug": "2026-05-21-7ac41b942139",
+      "markdown_path": "posts/2026-05-21-7ac41b942139.md",
+      "summary": "今日科技焦点集中在人工智能在纯数学领域的突破、开源社区涌现的新硬件与软件工具，以及围绕技术商业化与知识产权的持续博弈。从 OpenAI 模型颠覆经典几何猜想，到 Google 将广告植入 AI 搜索，再到 Fender 对吉他外观发起的版权围剿，一系列事件既展示了前沿技术的惊人潜力，也暴露了技术生态中深层的信任危机与利益冲突。",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 9,
+      "is_empty_update": false,
+      "created_at": "2026-05-21T20:44:43.278260+08:00"
+    },
     {
       "id": "2026-05-20-3cdca24ee8d3",
       "run_id": "3cdca24ee8d3",

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-20T12:23:43.287458+00:00",
+  "updated_at": "2026-05-21T12:44:43.282235+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -907,6 +907,22 @@
             "status": "success",
             "file_path": "output/posts/2026-05-20-3cdca24ee8d3.md",
             "slug": "2026-05-20-3cdca24ee8d3",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-21T12:44:43.281995+00:00",
+      "items_count": 9,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-05-21-7ac41b942139.md",
+            "slug": "2026-05-21-7ac41b942139",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -4412,6 +4428,69 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-05-20T12:23:43.287447+00:00",
+        "error": null
+      }
+    },
+    "https://openai.com/index/model-disproves-discrete-geometry-conjecture": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-21T12:44:43.282193+00:00",
+        "error": null
+      }
+    },
+    "https://www.bleepingcomputer.com/news/security/github-confirms-breach-of-3-800-repos-via-malicious-vscode-extension": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-21T12:44:43.282201+00:00",
+        "error": null
+      }
+    },
+    "https://blog.google/products/ads-commerce/google-marketing-live-search-ads": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-21T12:44:43.282206+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/kageroumado/phosphene": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-21T12:44:43.282210+00:00",
+        "error": null
+      }
+    },
+    "https://blog.flipper.net/flipper-one-we-need-your-help": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-21T12:44:43.282214+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/helvesec/rmux": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-21T12:44:43.282218+00:00",
+        "error": null
+      }
+    },
+    "https://blog.changs.co.uk/python-315-features-that-didnt-make-the-headlines.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-21T12:44:43.282223+00:00",
+        "error": null
+      }
+    },
+    "https://www.guitarworld.com/gear/electric-guitars/fender-cease-and-desist-lsl-instruments": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-21T12:44:43.282226+00:00",
+        "error": null
+      }
+    },
+    "https://spectrum.ieee.org/trinity-nuclear-test": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-21T12:44:43.282228+00:00",
         "error": null
       }
     }
