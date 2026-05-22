@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-21T12:44:43.282235+00:00",
+  "updated_at": "2026-05-22T12:17:57.430815+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -923,6 +923,22 @@
             "status": "success",
             "file_path": "output/posts/2026-05-21-7ac41b942139.md",
             "slug": "2026-05-21-7ac41b942139",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-22T12:17:57.430599+00:00",
+      "items_count": 6,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-05-22-67a90909b15d.md",
+            "slug": "2026-05-22-67a90909b15d",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -4491,6 +4507,48 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-05-21T12:44:43.282228+00:00",
+        "error": null
+      }
+    },
+    "https://davidoks.blog/p/ai-is-killing-the-cheap-smartphone": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-22T12:17:57.430779+00:00",
+        "error": null
+      }
+    },
+    "https://valhovey.github.io/gaia-mary": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-22T12:17:57.430787+00:00",
+        "error": null
+      }
+    },
+    "https://www.businessinsider.com/steve-wozniak-apple-ai-graduation-speech-2026-5": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-22T12:17:57.430792+00:00",
+        "error": null
+      }
+    },
+    "https://modelrift.com/blog/openscad-llm-benchmark": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-22T12:17:57.430797+00:00",
+        "error": null
+      }
+    },
+    "https://slumber.lucaspickering.me": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-22T12:17:57.430800+00:00",
+        "error": null
+      }
+    },
+    "https://abuseofnotation.github.io/boolean-thinking": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-22T12:17:57.430803+00:00",
         "error": null
       }
     }
