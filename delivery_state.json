@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-22T12:17:57.430815+00:00",
+  "updated_at": "2026-05-23T11:12:14.181718+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -939,6 +939,22 @@
             "status": "success",
             "file_path": "output/posts/2026-05-22-67a90909b15d.md",
             "slug": "2026-05-22-67a90909b15d",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-23T11:12:14.181512+00:00",
+      "items_count": 9,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-05-23-07ab9f664f6d.md",
+            "slug": "2026-05-23-07ab9f664f6d",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -4549,6 +4565,69 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-05-22T12:17:57.430803+00:00",
+        "error": null
+      }
+    },
+    "https://davidoks.blog/p/why-japanese-companies-do-so-many": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-23T11:12:14.181669+00:00",
+        "error": null
+      }
+    },
+    "https://www.anthropic.com/research/glasswing-initial-update": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-23T11:12:14.181673+00:00",
+        "error": null
+      }
+    },
+    "https://www.theverge.com/tech/930447/microsoft-claude-code-discontinued-notepad": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-23T11:12:14.181675+00:00",
+        "error": null
+      }
+    },
+    "https://notesbylex.com/shipping-a-laptop-to-a-refugee-camp-in-uganda": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-23T11:12:14.181677+00:00",
+        "error": null
+      }
+    },
+    "https://temertymedicine.utoronto.ca/news/how-decades-sleep-research-led-new-sleep-apnea-drug": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-23T11:12:14.181681+00:00",
+        "error": null
+      }
+    },
+    "https://horses.extension.org/blood-pumping-mechanism-of-the-hoof": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-23T11:12:14.181690+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/amatsuda/rubish": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-23T11:12:14.181699+00:00",
+        "error": null
+      }
+    },
+    "https://xcancel.com/josefprusa/status/2054602354851254330": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-23T11:12:14.181703+00:00",
+        "error": null
+      }
+    },
+    "https://fedemagnani.github.io/math/2026/04/08/the-quadratic-sandwich.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-23T11:12:14.181708+00:00",
         "error": null
       }
     }
