@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-24T11:17:13.210721+00:00",
+  "updated_at": "2026-05-25T13:29:16.907898+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -971,6 +971,22 @@
             "status": "success",
             "file_path": "output/posts/2026-05-24-4b1973a33f8c.md",
             "slug": "2026-05-24-4b1973a33f8c",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-25T13:29:16.907628+00:00",
+      "items_count": 10,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-05-25-a0cda6e91788.md",
+            "slug": "2026-05-25-a0cda6e91788",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -4714,6 +4730,76 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-05-24T11:17:13.210714+00:00",
+        "error": null
+      }
+    },
+    "https://esengine.github.io/DeepSeek-Reasonix": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-25T13:29:16.907850+00:00",
+        "error": null
+      }
+    },
+    "https://audiomass.co/?multitrack=1": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-25T13:29:16.907857+00:00",
+        "error": null
+      }
+    },
+    "https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-25T13:29:16.907861+00:00",
+        "error": null
+      }
+    },
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC1360393": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-25T13:29:16.907865+00:00",
+        "error": null
+      }
+    },
+    "https://techcrunch.com/2026/05/21/six-search-engines-worth-trying-now-that-google-isnt-really-google-anymore": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-25T13:29:16.907869+00:00",
+        "error": null
+      }
+    },
+    "http://androidessence.com/leave-me-behind": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-25T13:29:16.907878+00:00",
+        "error": null
+      }
+    },
+    "https://www.tinyvolt.com/geomatic": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-25T13:29:16.907885+00:00",
+        "error": null
+      }
+    },
+    "https://futurumgroup.com/insights/2-billion-chips-act-investment-in-quantum-bets-on-ibms-300mm-superconducting-silicon": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-25T13:29:16.907887+00:00",
+        "error": null
+      }
+    },
+    "https://docs.rs/you-can/latest/you_can/attr.turn_off_the_borrow_checker.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-25T13:29:16.907889+00:00",
+        "error": null
+      }
+    },
+    "https://www.netmeister.org/blog/ai-errno.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-25T13:29:16.907891+00:00",
         "error": null
       }
     }
