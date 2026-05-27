@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-25T13:29:16.907898+00:00",
+  "updated_at": "2026-05-27T12:52:52.117279+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -987,6 +987,22 @@
             "status": "success",
             "file_path": "output/posts/2026-05-25-a0cda6e91788.md",
             "slug": "2026-05-25-a0cda6e91788",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-27T12:52:52.117005+00:00",
+      "items_count": 8,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-05-27-ff6607025c20.md",
+            "slug": "2026-05-27-ff6607025c20",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -4800,6 +4816,62 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-05-25T13:29:16.907891+00:00",
+        "error": null
+      }
+    },
+    "https://orchidfiles.com/im-tired-of-ai-generated-answers": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-27T12:52:52.117236+00:00",
+        "error": null
+      }
+    },
+    "https://developers.cloudflare.com/flagship": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-27T12:52:52.117243+00:00",
+        "error": null
+      }
+    },
+    "https://thereader.mitpress.mit.edu/the-strange-melancholy-of-slaying-monsters": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-27T12:52:52.117247+00:00",
+        "error": null
+      }
+    },
+    "https://badhost.org/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-27T12:52:52.117251+00:00",
+        "error": null
+      }
+    },
+    "https://www.githubstatus.com/incidents/xy1tt3hs572m": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-27T12:52:52.117254+00:00",
+        "error": null
+      }
+    },
+    "https://miniscript.org/MiniMicro/index.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-27T12:52:52.117258+00:00",
+        "error": null
+      }
+    },
+    "https://arxiv.org/abs/2605.22391": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-27T12:52:52.117267+00:00",
+        "error": null
+      }
+    },
+    "https://padhye.org/raft-minority": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-27T12:52:52.117270+00:00",
         "error": null
       }
     }
