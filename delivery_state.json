@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-27T12:52:52.117279+00:00",
+  "updated_at": "2026-05-28T13:53:42.295155+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -1003,6 +1003,22 @@
             "status": "success",
             "file_path": "output/posts/2026-05-27-ff6607025c20.md",
             "slug": "2026-05-27-ff6607025c20",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-28T13:53:42.294917+00:00",
+      "items_count": 10,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-05-28-3c9645143cf7.md",
+            "slug": "2026-05-28-3c9645143cf7",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -4872,6 +4888,76 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-05-27T12:52:52.117270+00:00",
+        "error": null
+      }
+    },
+    "https://simonwillison.net/2026/May/27/product-market-fit": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-28T13:53:42.295109+00:00",
+        "error": null
+      }
+    },
+    "https://blog.youtube/news-and-events/improving-ai-labels-viewers-creators": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-28T13:53:42.295117+00:00",
+        "error": null
+      }
+    },
+    "https://www.thran.uk/writ/hdid/2025/12/simcity-3k-in-4k.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-28T13:53:42.295121+00:00",
+        "error": null
+      }
+    },
+    "https://hallucinate.site": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-28T13:53:42.295126+00:00",
+        "error": null
+      }
+    },
+    "https://lenz.io/research/llm-disagreement": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-28T13:53:42.295131+00:00",
+        "error": null
+      }
+    },
+    "https://drobinin.com/posts/am-i-a-bad-friend": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-28T13:53:42.295135+00:00",
+        "error": null
+      }
+    },
+    "https://itsfoss.com/news/amd-vivado-bait-and-switch-on-linux-users": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-28T13:53:42.295141+00:00",
+        "error": null
+      }
+    },
+    "https://iisc.ac.in/a-eureka-machine-that-thinks-like-nature-and-explores-what-ai-cannot": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-28T13:53:42.295144+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/begoon/rapira": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-28T13:53:42.295146+00:00",
+        "error": null
+      }
+    },
+    "https://tanin.nanakorn.com/ruby-java-typescrip-claude-docx-plugin": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-05-28T13:53:42.295148+00:00",
         "error": null
       }
     }

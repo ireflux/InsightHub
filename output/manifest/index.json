@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-05-27T20:52:52.085775+08:00",
+  "generated_at": "2026-05-28T21:53:42.291066+08:00",
   "posts": [
+    {
+      "id": "2026-05-28-3c9645143cf7",
+      "run_id": "3c9645143cf7",
+      "date": "2026-05-28",
+      "title": "每日趋势观察 2026-05-28",
+      "slug": "2026-05-28-3c9645143cf7",
+      "markdown_path": "posts/2026-05-28-3c9645143cf7.md",
+      "summary": "- [I think Anthropic and OpenAI have found product-market fit](https://simonwillison.net/2026/May/27/product-market-fit/): I think Anthropic and OpenAI have found product-market fit",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 10,
+      "is_empty_update": false,
+      "created_at": "2026-05-28T21:53:42.291066+08:00"
+    },
     {
       "id": "2026-05-27-ff6607025c20",
       "run_id": "ff6607025c20",
