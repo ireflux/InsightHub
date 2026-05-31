@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-05-30T19:20:12.099974+08:00",
+  "generated_at": "2026-05-31T19:41:31.913350+08:00",
   "posts": [
+    {
+      "id": "2026-05-31-3a4d6c5f77ab",
+      "run_id": "3a4d6c5f77ab",
+      "date": "2026-05-31",
+      "title": "每日趋势观察 2026-05-31",
+      "slug": "2026-05-31-3a4d6c5f77ab",
+      "markdown_path": "posts/2026-05-31-3a4d6c5f77ab.md",
+      "summary": "随着 Agentic AI 的普及，软件开发的底层逻辑正在发生转变，从构建代码转向验证正确性，这凸显了领域专家与工程师结合的重要性。与此同时，Web 生态正试图通过新的规范来统一标准，以适应人类用户与 AI 代理的需求。个人工具领域则呈现出对无障碍设计和生理健康（如迷走神经张力训练）的日益关注，显示出技术正更深入地融入生活方式与身心健康。",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 8,
+      "is_empty_update": false,
+      "created_at": "2026-05-31T19:41:31.913350+08:00"
+    },
     {
       "id": "2026-05-30-60546baaf2e5",
       "run_id": "60546baaf2e5",
