@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-05-31T19:41:31.913350+08:00",
+  "generated_at": "2026-06-01T23:56:23.952216+08:00",
   "posts": [
+    {
+      "id": "2026-06-01-3463842047ab",
+      "run_id": "3463842047ab",
+      "date": "2026-06-01",
+      "title": "每日趋势观察 2026-06-01",
+      "slug": "2026-06-01-3463842047ab",
+      "markdown_path": "posts/2026-06-01-3463842047ab.md",
+      "summary": "今日科技焦点聚焦于供应链安全与边缘算力的极限挑战。红帽（Red Hat）的npm包供应链遭遇入侵，波及数十个组件，引发业界对依赖管理的反思。与此同时，在缺乏GPU的旧硬件上通过优化内存带宽成功运行Gemma 4模型，展示了算力优化的新路径。除硬核技术外，The Pirate Bay 20周年回顾揭示了网络生态的韧性，而复古游戏兼容性方案与“Sysadmining Like It's 2009”活动",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 8,
+      "is_empty_update": false,
+      "created_at": "2026-06-01T23:56:23.952216+08:00"
+    },
     {
       "id": "2026-05-31-3a4d6c5f77ab",
       "run_id": "3a4d6c5f77ab",

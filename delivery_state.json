@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-31T11:41:31.917608+00:00",
+  "updated_at": "2026-06-01T15:56:23.980397+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -1067,6 +1067,22 @@
             "status": "success",
             "file_path": "output/posts/2026-05-31-3a4d6c5f77ab.md",
             "slug": "2026-05-31-3a4d6c5f77ab",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-01T15:56:23.980241+00:00",
+      "items_count": 8,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-06-01-3463842047ab.md",
+            "slug": "2026-06-01-3463842047ab",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -5160,6 +5176,62 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-05-31T11:41:31.917598+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/RedHatInsights/javascript-clients/issues/492": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-01T15:56:23.980365+00:00",
+        "error": null
+      }
+    },
+    "https://point.free/blog/gemma-4-on-a-2016-xeon": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-01T15:56:23.980369+00:00",
+        "error": null
+      }
+    },
+    "https://torrentfreak.com/the-pirate-bay-remains-resilient-20-years-after-the-raid": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-01T15:56:23.980373+00:00",
+        "error": null
+      }
+    },
+    "https://f055.net/technology/windows-gog-dos-games-on-m-series-macs": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-01T15:56:23.980375+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/ahegazy0/linux-basics-for-hackers-notes": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-01T15:56:23.980378+00:00",
+        "error": null
+      }
+    },
+    "https://cs336.stanford.edu/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-01T15:56:23.980381+00:00",
+        "error": null
+      }
+    },
+    "https://lambdacreate.com/posts/sysadmining-like-its-2009": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-01T15:56:23.980387+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/NishantJoshi00/flipper-template": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-01T15:56:23.980390+00:00",
         "error": null
       }
     }
