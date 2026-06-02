@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-01T15:56:23.980397+00:00",
+  "updated_at": "2026-06-02T14:01:55.651021+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -1083,6 +1083,22 @@
             "status": "success",
             "file_path": "output/posts/2026-06-01-3463842047ab.md",
             "slug": "2026-06-01-3463842047ab",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-02T14:01:55.650815+00:00",
+      "items_count": 9,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-06-02-47b1d0a74b39.md",
+            "slug": "2026-06-02-47b1d0a74b39",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -5232,6 +5248,69 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-06-01T15:56:23.980390+00:00",
+        "error": null
+      }
+    },
+    "https://www.economist.com/finance-and-economics/2026/06/01/can-the-stockmarket-swallow-anthropic-spacex-and-openai": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-02T14:01:55.650977+00:00",
+        "error": null
+      }
+    },
+    "https://www.0xsid.com/blog/meta-account-takeover-fiasco": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-02T14:01:55.650981+00:00",
+        "error": null
+      }
+    },
+    "https://ianthehenry.com/posts/why-janet": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-02T14:01:55.650984+00:00",
+        "error": null
+      }
+    },
+    "https://blog.adafruit.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-02T14:01:55.650988+00:00",
+        "error": null
+      }
+    },
+    "https://www.mitmllc.com/blog/apple-rejected-my-dictation-app": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-02T14:01:55.651000+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/krauseler/muxcard": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-02T14:01:55.651004+00:00",
+        "error": null
+      }
+    },
+    "https://blog.tjll.net/you-dont-love-systemd-timers-enough": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-02T14:01:55.651010+00:00",
+        "error": null
+      }
+    },
+    "https://dan-webnotes.com/posts/2026-06-02-css-native-parallax-effect": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-02T14:01:55.651013+00:00",
+        "error": null
+      }
+    },
+    "https://www.anthropic.com/news/expanding-project-glasswing": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-02T14:01:55.651015+00:00",
         "error": null
       }
     }
