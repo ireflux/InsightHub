@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-06-02T22:01:55.646725+08:00",
+  "generated_at": "2026-06-03T22:27:51.042728+08:00",
   "posts": [
+    {
+      "id": "2026-06-03-fd6077dc4fdb",
+      "run_id": "fd6077dc4fdb",
+      "date": "2026-06-03",
+      "title": "每日趋势观察 2026-06-03",
+      "slug": "2026-06-03-fd6077dc4fdb",
+      "markdown_path": "posts/2026-06-03-fd6077dc4fdb.md",
+      "summary": "今天的科技动态呈现出硬件与软件边界不断被试探的态势。在企业级应用中，大公司对内部数据的渴求与员工隐私之间的张力正在催生新的管理妥协；而在开发者社区，对底层硬件潜能的压榨和对老旧系统的逆向工程，依然保持着旺盛的生命力。",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 9,
+      "is_empty_update": false,
+      "created_at": "2026-06-03T22:27:51.042728+08:00"
+    },
     {
       "id": "2026-06-02-47b1d0a74b39",
       "run_id": "47b1d0a74b39",

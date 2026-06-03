@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-02T14:01:55.651021+00:00",
+  "updated_at": "2026-06-03T14:27:51.045788+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -1099,6 +1099,22 @@
             "status": "success",
             "file_path": "output/posts/2026-06-02-47b1d0a74b39.md",
             "slug": "2026-06-02-47b1d0a74b39",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-03T14:27:51.045665+00:00",
+      "items_count": 9,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-06-03-fd6077dc4fdb.md",
+            "slug": "2026-06-03-fd6077dc4fdb",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -5311,6 +5327,69 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-06-02T14:01:55.651015+00:00",
+        "error": null
+      }
+    },
+    "https://www.bbc.com/news/articles/c93x0k194yno": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-03T14:27:51.045760+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/c0dejedi/nbd-vram": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-03T14:27:51.045763+00:00",
+        "error": null
+      }
+    },
+    "https://blog.ammaraskar.com/github-token-stealing": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-03T14:27:51.045767+00:00",
+        "error": null
+      }
+    },
+    "https://blog.nns.ee/2026/06/03/katana-badusb": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-03T14:27:51.045768+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/s-macke/Test-Drive-3-Maps": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-03T14:27:51.045770+00:00",
+        "error": null
+      }
+    },
+    "https://fzakaria.com/2026/06/01/every-byte-matters": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-03T14:27:51.045773+00:00",
+        "error": null
+      }
+    },
+    "https://handwritten.danieljanus.pl/2026-06-01-edsger.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-03T14:27:51.045778+00:00",
+        "error": null
+      }
+    },
+    "https://www.copetti.org/writings/consoles/playstation": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-03T14:27:51.045780+00:00",
+        "error": null
+      }
+    },
+    "https://dl.acm.org/doi/pdf/10.1145/1995966.1996008": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-03T14:27:51.045782+00:00",
         "error": null
       }
     }
