@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-06-03T22:27:51.042728+08:00",
+  "generated_at": "2026-06-04T20:44:16.463068+08:00",
   "posts": [
+    {
+      "id": "2026-06-04-a11a93bb1bf8",
+      "run_id": "a11a93bb1bf8",
+      "date": "2026-06-04",
+      "title": "每日趋势观察 2026-06-04",
+      "slug": "2026-06-04-a11a93bb1bf8",
+      "markdown_path": "posts/2026-06-04-a11a93bb1bf8.md",
+      "summary": "本日科技新闻聚焦于人工智能对高等教育体系的颠覆性影响，UC伯克利计算机科学课程不及格率飙升，归咎于学生过度依赖大型语言模型以及数学基础薄弱。与此同时，技术前沿仍在快速推进，Google推出了轻量级多模态模型Gemma 4 12B，Elixir引入了渐进式类型系统以增强代码安全性，而SIGGRAPH 2026则展示了高斯点喷溅等渲染技术的突破。此外，关于人工智能本质的哲学讨论以及隐私搜索工具的兴起也",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 8,
+      "is_empty_update": false,
+      "created_at": "2026-06-04T20:44:16.463068+08:00"
+    },
     {
       "id": "2026-06-03-fd6077dc4fdb",
       "run_id": "fd6077dc4fdb",

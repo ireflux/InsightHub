@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-03T14:27:51.045788+00:00",
+  "updated_at": "2026-06-04T12:44:16.467912+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -1115,6 +1115,22 @@
             "status": "success",
             "file_path": "output/posts/2026-06-03-fd6077dc4fdb.md",
             "slug": "2026-06-03-fd6077dc4fdb",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-04T12:44:16.467689+00:00",
+      "items_count": 8,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-06-04-a11a93bb1bf8.md",
+            "slug": "2026-06-04-a11a93bb1bf8",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -5390,6 +5406,62 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-06-03T14:27:51.045782+00:00",
+        "error": null
+      }
+    },
+    "https://www.dailycal.org/news/campus/academics/failing-grades-soar-as-professors-see-greater-ai-usage-dwindling-math-skills-in-uc-berkeley/article_16fad0bf-02cb-4b8c-8d88-888ffd9f8608.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-04T12:44:16.467870+00:00",
+        "error": null
+      }
+    },
+    "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemma-4-12b": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-04T12:44:16.467875+00:00",
+        "error": null
+      }
+    },
+    "https://maxleiter.com/blog/weights": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-04T12:44:16.467879+00:00",
+        "error": null
+      }
+    },
+    "https://elixir-lang.org/blog/2026/06/03/elixir-v1-20-0-released": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-04T12:44:16.467883+00:00",
+        "error": null
+      }
+    },
+    "https://aoav.org.uk/2026/military-experts-or-arms-industry-insiders-uk-media-fails-to-disclose-defence-sector-links-in-nearly-60-of-cases": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-04T12:44:16.467886+00:00",
+        "error": null
+      }
+    },
+    "https://uruky.com/?il=en": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-04T12:44:16.467890+00:00",
+        "error": null
+      }
+    },
+    "https://momentsingraphics.de/Siggraph2026.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-04T12:44:16.467898+00:00",
+        "error": null
+      }
+    },
+    "https://en.wikipedia.org/wiki/U.S._Army_Corps_of_Engineers_Bay_Model": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-04T12:44:16.467902+00:00",
         "error": null
       }
     }
