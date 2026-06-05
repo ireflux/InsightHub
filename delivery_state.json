@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-04T12:44:16.467912+00:00",
+  "updated_at": "2026-06-05T12:37:31.315324+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -1131,6 +1131,22 @@
             "status": "success",
             "file_path": "output/posts/2026-06-04-a11a93bb1bf8.md",
             "slug": "2026-06-04-a11a93bb1bf8",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-05T12:37:31.315042+00:00",
+      "items_count": 9,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-06-05-45d5840163e1.md",
+            "slug": "2026-06-05-45d5840163e1",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -5462,6 +5478,69 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-06-04T12:44:16.467902+00:00",
+        "error": null
+      }
+    },
+    "https://ladybird.org/posts/changing-how-we-develop-ladybird": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-05T12:37:31.315293+00:00",
+        "error": null
+      }
+    },
+    "https://fb.watch/HxPu0fSyeH": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-05T12:37:31.315297+00:00",
+        "error": null
+      }
+    },
+    "https://arxiv.org/abs/2606.03673": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-05T12:37:31.315299+00:00",
+        "error": null
+      }
+    },
+    "https://passo.uno/fine-tuning-docs-llm": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-05T12:37:31.315301+00:00",
+        "error": null
+      }
+    },
+    "https://www.quantamagazine.org/entanglement-builds-space-time-now-magic-gives-it-gravity-20260603": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-05T12:37:31.315303+00:00",
+        "error": null
+      }
+    },
+    "https://ajph.aphapublications.org/doi/10.2105/AJPH.2026.308501": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-05T12:37:31.315306+00:00",
+        "error": null
+      }
+    },
+    "https://columnar.tech/blog/introducing-databow": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-05T12:37:31.315312+00:00",
+        "error": null
+      }
+    },
+    "https://redis.io/blog/announcing-redis-8-8": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-05T12:37:31.315315+00:00",
+        "error": null
+      }
+    },
+    "https://arxiv.org/abs/2606.04819": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-05T12:37:31.315317+00:00",
         "error": null
       }
     }
