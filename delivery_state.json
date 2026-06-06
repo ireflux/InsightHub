@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-05T12:37:31.315324+00:00",
+  "updated_at": "2026-06-06T11:27:18.234910+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -1147,6 +1147,22 @@
             "status": "success",
             "file_path": "output/posts/2026-06-05-45d5840163e1.md",
             "slug": "2026-06-05-45d5840163e1",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-06T11:27:18.234678+00:00",
+      "items_count": 10,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-06-06-42b7b0c22cfe.md",
+            "slug": "2026-06-06-42b7b0c22cfe",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -5541,6 +5557,76 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-06-05T12:37:31.315317+00:00",
+        "error": null
+      }
+    },
+    "https://news.ycombinator.com/item?id=48406174": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-06T11:27:18.234857+00:00",
+        "error": null
+      }
+    },
+    "https://www.bbc.com/news/live/c4g44ew3g1kt": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-06T11:27:18.234865+00:00",
+        "error": null
+      }
+    },
+    "https://arstechnica.com/tech-policy/2026/06/sp-500-blocks-fast-spacex-entry-wont-waive-rule-for-unprofitable-ai-firms": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-06T11:27:18.234870+00:00",
+        "error": null
+      }
+    },
+    "https://discuss.grapheneos.org/d/36134-grapheneos-user-reported-to-authorities-for-using-grapheneos": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-06T11:27:18.234874+00:00",
+        "error": null
+      }
+    },
+    "https://www.rochester.edu/newscenter/what-is-desalination-definition-ocean-water-704732": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-06T11:27:18.234878+00:00",
+        "error": null
+      }
+    },
+    "https://www.0xkato.xyz/how-llms-actually-work": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-06T11:27:18.234882+00:00",
+        "error": null
+      }
+    },
+    "https://salvagedcircuitry.com/sigma-45mm.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-06T11:27:18.234890+00:00",
+        "error": null
+      }
+    },
+    "https://acoup.blog/2026/06/05/collections-pre-modern-armies-for-worldbuilders-part-i-why-they-fight": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-06T11:27:18.234895+00:00",
+        "error": null
+      }
+    },
+    "https://codeberg.org/ziglang/zig/commit/621844bde551ee1a9b8142d7d146d1fa804247a2": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-06T11:27:18.234898+00:00",
+        "error": null
+      }
+    },
+    "https://www.autodidacts.io/social-cache-busting": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-06T11:27:18.234901+00:00",
         "error": null
       }
     }
