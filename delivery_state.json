@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-08T14:06:49.007635+00:00",
+  "updated_at": "2026-06-09T12:37:15.714117+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -1195,6 +1195,22 @@
             "status": "success",
             "file_path": "output/posts/2026-06-08-ccb306bc942f.md",
             "slug": "2026-06-08-ccb306bc942f",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-09T12:37:15.713899+00:00",
+      "items_count": 7,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-06-09-ce387d31e01e.md",
+            "slug": "2026-06-09-ce387d31e01e",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -5799,6 +5815,55 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-06-08T14:06:49.007626+00:00",
+        "error": null
+      }
+    },
+    "https://www.macrumors.com/2026/06/08/apple-reveals-new-ai-architecture": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-09T12:37:15.714065+00:00",
+        "error": null
+      }
+    },
+    "https://techcrunch.com/2026/06/08/microsofts-open-source-tools-were-hacked-to-steal-passwords-of-ai-developers": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-09T12:37:15.714070+00:00",
+        "error": null
+      }
+    },
+    "https://opencv.org/opencv-5": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-09T12:37:15.714074+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/luke8086/gentleos32": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-09T12:37:15.714091+00:00",
+        "error": null
+      }
+    },
+    "https://omnia.sas.upenn.edu/story/biologist-scott-poethig-plants-never-age": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-09T12:37:15.714094+00:00",
+        "error": null
+      }
+    },
+    "https://thi.ng": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-09T12:37:15.714098+00:00",
+        "error": null
+      }
+    },
+    "https://staniks.github.io/articles/catlantean-3d-blog-1": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-09T12:37:15.714106+00:00",
         "error": null
       }
     }

@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-06-08T22:06:49.002602+08:00",
+  "generated_at": "2026-06-09T20:37:15.707535+08:00",
   "posts": [
+    {
+      "id": "2026-06-09-ce387d31e01e",
+      "run_id": "ce387d31e01e",
+      "date": "2026-06-09",
+      "title": "每日趋势观察 2026-06-09",
+      "slug": "2026-06-09-ce387d31e01e",
+      "markdown_path": "posts/2026-06-09-ce387d31e01e.md",
+      "summary": "今日科技新闻的焦点集中在 AI 基础设施的重组与安全挑战上。苹果与谷歌宣布合作，通过“私有云计算”架构将 Gemini 模型能力整合进 Apple Intelligence，试图在隐私保护与尖端性能间寻找平衡。与此同时，开源生态面临严峻考验，微软的多个人工智能开发工具遭黑客入侵，暴露了供应链安全在 AI 编码领域的脆弱性。此外，计算机视觉领域的基石库 OpenCV 迎来五年来的首次大版本更新，旨在",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 7,
+      "is_empty_update": false,
+      "created_at": "2026-06-09T20:37:15.707535+08:00"
+    },
     {
       "id": "2026-06-08-ccb306bc942f",
       "run_id": "ccb306bc942f",
