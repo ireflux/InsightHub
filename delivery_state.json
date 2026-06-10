@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-09T12:37:15.714117+00:00",
+  "updated_at": "2026-06-10T12:57:46.469254+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -1211,6 +1211,22 @@
             "status": "success",
             "file_path": "output/posts/2026-06-09-ce387d31e01e.md",
             "slug": "2026-06-09-ce387d31e01e",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-10T12:57:46.469029+00:00",
+      "items_count": 9,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-06-10-8892329cfd0c.md",
+            "slug": "2026-06-10-8892329cfd0c",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -5864,6 +5880,69 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-06-09T12:37:15.714106+00:00",
+        "error": null
+      }
+    },
+    "https://www.anthropic.com/news/claude-fable-5-mythos-5": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-10T12:57:46.469211+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/apple/container/blob/main/docs/container-machine.md": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-10T12:57:46.469216+00:00",
+        "error": null
+      }
+    },
+    "https://github.blog/changelog/2026-06-09-upcoming-breaking-changes-for-npm-v12": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-10T12:57:46.469220+00:00",
+        "error": null
+      }
+    },
+    "https://media.mercedes-benz.com/en/article/bebac2af-acdc-465a-9538-adb0bf3d8ccf": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-10T12:57:46.469223+00:00",
+        "error": null
+      }
+    },
+    "https://news.ycombinator.com/item?id=48473166": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-10T12:57:46.469227+00:00",
+        "error": null
+      }
+    },
+    "https://twitter.com/RichardSSutton/status/2061216087744946656": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-10T12:57:46.469231+00:00",
+        "error": null
+      }
+    },
+    "https://paperswithcode.co/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-10T12:57:46.469239+00:00",
+        "error": null
+      }
+    },
+    "https://sbbresale.ch/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-10T12:57:46.469242+00:00",
+        "error": null
+      }
+    },
+    "https://steveblank.com/2026/06/08/g-for-defense-stanford-2026-lessons-learned-presentations": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-10T12:57:46.469245+00:00",
         "error": null
       }
     }

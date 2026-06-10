@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-06-09T20:37:15.707535+08:00",
+  "generated_at": "2026-06-10T20:57:46.464095+08:00",
   "posts": [
+    {
+      "id": "2026-06-10-8892329cfd0c",
+      "run_id": "8892329cfd0c",
+      "date": "2026-06-10",
+      "title": "每日趋势观察 2026-06-10",
+      "slug": "2026-06-10-8892329cfd0c",
+      "markdown_path": "posts/2026-06-10-8892329cfd0c.md",
+      "summary": "AI 领域在能力突破与安全边界之间持续拉锯，Anthropic 发布了代号 Fable 5 的新一代模型，其性能大幅跃升但安全限制更为严格。开发者工具端，Apple 推出 macOS Container Machines 试图简化跨平台开发，而 npm v12 则通过默认关闭脚本执行来应对供应链安全风险。同时，Mercedes-Benz 启动了电动轴向磁通电机的规模化生产，而斯坦福大学的“Hack",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 9,
+      "is_empty_update": false,
+      "created_at": "2026-06-10T20:57:46.464095+08:00"
+    },
     {
       "id": "2026-06-09-ce387d31e01e",
       "run_id": "ce387d31e01e",
