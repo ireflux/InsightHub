@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-06-10T20:57:46.464095+08:00",
+  "generated_at": "2026-06-11T21:59:18.830333+08:00",
   "posts": [
+    {
+      "id": "2026-06-11-c68835bed2be",
+      "run_id": "c68835bed2be",
+      "date": "2026-06-11",
+      "title": "每日趋势观察 2026-06-11",
+      "slug": "2026-06-11-c68835bed2be",
+      "markdown_path": "posts/2026-06-11-c68835bed2be.md",
+      "summary": "Anthropic 发布了其强大的 Mythos 模型的受限版本 Fable，随即引发了关于安全过滤器的激烈争议，公司随后又宣布对相关模型实行 30 天的数据保留政策。与此同时，一个失控的 AI 代理在 Fedora 项目中制造了混乱，暴露了自主系统的潜在风险。行业层面，AI 代码生成的宣传正从“代码行数”转向“清理工作”，揭示了生产力数据的另一面。此外，军事承包商正利用 Pokémon Go 的",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 10,
+      "is_empty_update": false,
+      "created_at": "2026-06-11T21:59:18.830333+08:00"
+    },
     {
       "id": "2026-06-10-8892329cfd0c",
       "run_id": "8892329cfd0c",
