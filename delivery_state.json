@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-11T13:59:18.835147+00:00",
+  "updated_at": "2026-06-12T12:54:47.778937+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -1243,6 +1243,22 @@
             "status": "success",
             "file_path": "output/posts/2026-06-11-c68835bed2be.md",
             "slug": "2026-06-11-c68835bed2be",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-12T12:54:47.778722+00:00",
+      "items_count": 9,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-06-12-37a0070a2312.md",
+            "slug": "2026-06-12-37a0070a2312",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -6029,6 +6045,69 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-06-11T13:59:18.835138+00:00",
+        "error": null
+      }
+    },
+    "https://lantian.pub/en/article/fun/ai-agent-bankrupted-their-operator-scan-dn42lantian.lantian": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-12T12:54:47.778889+00:00",
+        "error": null
+      }
+    },
+    "https://brew.sh/2026/06/11/homebrew-6.0.0": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-12T12:54:47.778897+00:00",
+        "error": null
+      }
+    },
+    "https://tombedor.dev/human-attention-and-human-effort": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-12T12:54:47.778902+00:00",
+        "error": null
+      }
+    },
+    "https://web.mit.edu/nelsonr/www/Repenning=Sterman_CMR_su01_.pdf": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-12T12:54:47.778905+00:00",
+        "error": null
+      }
+    },
+    "https://www.theguardian.com/culture/2026/jan/05/raiders-of-the-lost-ark-hit-video-game-prince-of-persia": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-12T12:54:47.778909+00:00",
+        "error": null
+      }
+    },
+    "https://www.fastmail.com/blog/the-future-of-email": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-12T12:54:47.778913+00:00",
+        "error": null
+      }
+    },
+    "https://blog.osull.com/2026/06/12/ryanair-dark-ux-patterns-summer-2026-refresher": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-12T12:54:47.778921+00:00",
+        "error": null
+      }
+    },
+    "https://discourse.ifin.network/t/400-aur-packages-compromised-with-infostealer-and-rootkit/577": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-12T12:54:47.778924+00:00",
+        "error": null
+      }
+    },
+    "https://huggingface.co/moonshotai/Kimi-K2.7-Code": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-12T12:54:47.778928+00:00",
         "error": null
       }
     }
