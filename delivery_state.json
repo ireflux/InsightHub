@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-12T12:54:47.778937+00:00",
+  "updated_at": "2026-06-13T11:56:49.059449+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -1259,6 +1259,22 @@
             "status": "success",
             "file_path": "output/posts/2026-06-12-37a0070a2312.md",
             "slug": "2026-06-12-37a0070a2312",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-13T11:56:49.059235+00:00",
+      "items_count": 9,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-06-13-f86b0e58099a.md",
+            "slug": "2026-06-13-f86b0e58099a",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -6108,6 +6124,69 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-06-12T12:54:47.778928+00:00",
+        "error": null
+      }
+    },
+    "https://www.anthropic.com/news/fable-mythos-access": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-13T11:56:49.059403+00:00",
+        "error": null
+      }
+    },
+    "https://opensourceaimustwin.com/?share=v2": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-13T11:56:49.059411+00:00",
+        "error": null
+      }
+    },
+    "https://12gramsofcarbon.com/p/tech-things-there-is-a-massive-shadow": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-13T11:56:49.059415+00:00",
+        "error": null
+      }
+    },
+    "https://innovativegenomics.org/news/crispr-technique-selectively-shreds-cancer-cells": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-13T11:56:49.059418+00:00",
+        "error": null
+      }
+    },
+    "https://www.renaultgroup.com/en/magazine/energy-and-powertrains/all-about-electric-motors-with-no-rare-earths": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-13T11:56:49.059422+00:00",
+        "error": null
+      }
+    },
+    "https://blog.unitedheroes.net/5751": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-13T11:56:49.059426+00:00",
+        "error": null
+      }
+    },
+    "https://koenvangilst.nl/lab/claude-fable-shepherds-dog": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-13T11:56:49.059434+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/Paca-AI/paca": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-13T11:56:49.059438+00:00",
+        "error": null
+      }
+    },
+    "https://research.google/blog/a-low-carbon-computing-platform-from-your-retired-phones": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-13T11:56:49.059441+00:00",
         "error": null
       }
     }

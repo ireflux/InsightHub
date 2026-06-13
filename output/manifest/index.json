@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-06-12T20:54:47.774085+08:00",
+  "generated_at": "2026-06-13T19:56:49.052867+08:00",
   "posts": [
+    {
+      "id": "2026-06-13-f86b0e58099a",
+      "run_id": "f86b0e58099a",
+      "date": "2026-06-13",
+      "title": "每日趋势观察 2026-06-13",
+      "slug": "2026-06-13-f86b0e58099a",
+      "markdown_path": "posts/2026-06-13-f86b0e58099a.md",
+      "summary": "Anthropic 因美国政府的安全担忧暂停了其最强大的模型 Fable 5 和 Mythos 5 的访问权限，这一决定引发了关于监管与安全边界的激烈辩论，同时也强化了开源 AI 主张认知民主化的论调。在其他领域，Renault 展示了无稀土电机技术，Google 提出了利用废弃手机构建计算集群的方案，而研究人员则利用 CRISPR 技术在细胞层面靶向顽固的癌症。",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 9,
+      "is_empty_update": false,
+      "created_at": "2026-06-13T19:56:49.052867+08:00"
+    },
     {
       "id": "2026-06-12-37a0070a2312",
       "run_id": "37a0070a2312",
