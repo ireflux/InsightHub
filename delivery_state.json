@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-13T11:56:49.059449+00:00",
+  "updated_at": "2026-06-14T11:58:26.256465+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -1275,6 +1275,22 @@
             "status": "success",
             "file_path": "output/posts/2026-06-13-f86b0e58099a.md",
             "slug": "2026-06-13-f86b0e58099a",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-14T11:58:26.256240+00:00",
+      "items_count": 9,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-06-14-213546d5b1e5.md",
+            "slug": "2026-06-14-213546d5b1e5",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -6187,6 +6203,69 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-06-13T11:56:49.059441+00:00",
+        "error": null
+      }
+    },
+    "https://desfontain.es/blog/banning-noise.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-14T11:58:26.256415+00:00",
+        "error": null
+      }
+    },
+    "https://twitter.com/jietang/status/2065784751345287314": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-14T11:58:26.256422+00:00",
+        "error": null
+      }
+    },
+    "https://tonsky.me/blog/every-frame-perfect": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-14T11:58:26.256425+00:00",
+        "error": null
+      }
+    },
+    "https://economist.com/science-and-technology/2026/06/12/treating-pancreatic-tumours-may-have-revealed-cancers-master-switch": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-14T11:58:26.256427+00:00",
+        "error": null
+      }
+    },
+    "https://garrit.xyz/posts/2026-05-06-dont-trust-large-context-windows": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-14T11:58:26.256429+00:00",
+        "error": null
+      }
+    },
+    "https://juniperspring.org/posts/honda-evil-valet": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-14T11:58:26.256432+00:00",
+        "error": null
+      }
+    },
+    "https://sqltoerdiagram.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-14T11:58:26.256447+00:00",
+        "error": null
+      }
+    },
+    "https://phys.org/news/2026-05-historic-monasteries-digital-countries.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-14T11:58:26.256452+00:00",
+        "error": null
+      }
+    },
+    "http://tribblix.org/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-14T11:58:26.256456+00:00",
         "error": null
       }
     }
