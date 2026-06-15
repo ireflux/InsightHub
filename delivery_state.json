@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-14T11:58:26.256465+00:00",
+  "updated_at": "2026-06-15T15:46:25.589247+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -1291,6 +1291,22 @@
             "status": "success",
             "file_path": "output/posts/2026-06-14-213546d5b1e5.md",
             "slug": "2026-06-14-213546d5b1e5",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-15T15:46:25.589029+00:00",
+      "items_count": 9,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-06-15-f19f71c2e8c9.md",
+            "slug": "2026-06-15-f19f71c2e8c9",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -6266,6 +6282,69 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-06-14T11:58:26.256456+00:00",
+        "error": null
+      }
+    },
+    "https://andreklein.net/your-epub-is-fine-kobo-disagrees-blame-adobe": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-15T15:46:25.589204+00:00",
+        "error": null
+      }
+    },
+    "https://platform.claude.com/docs/en/cli-sdks-libraries/libraries/apple-foundation-models": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-15T15:46:25.589209+00:00",
+        "error": null
+      }
+    },
+    "https://www.salesforce.com/news/press-releases/2026/06/15/salesforce-signs-definitive-agreement-to-acquire-fin?bc=HL": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-15T15:46:25.589213+00:00",
+        "error": null
+      }
+    },
+    "https://crankgpt.com": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-15T15:46:25.589216+00:00",
+        "error": null
+      }
+    },
+    "https://news.ycombinator.com/item?id=48542064": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-15T15:46:25.589219+00:00",
+        "error": null
+      }
+    },
+    "https://openrouter.ai/openrouter/fusion": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-15T15:46:25.589222+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/themartiano/luz": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-15T15:46:25.589230+00:00",
+        "error": null
+      }
+    },
+    "https://www.iroh.computer/blog/v1": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-15T15:46:25.589234+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/sammysltd/euromesh": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-15T15:46:25.589237+00:00",
         "error": null
       }
     }

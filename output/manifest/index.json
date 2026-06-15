@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-06-14T19:58:26.251741+08:00",
+  "generated_at": "2026-06-15T23:46:25.584391+08:00",
   "posts": [
+    {
+      "id": "2026-06-15-f19f71c2e8c9",
+      "run_id": "f19f71c2e8c9",
+      "date": "2026-06-15",
+      "title": "每日趋势观察 2026-06-15",
+      "slug": "2026-06-15-f19f71c2e8c9",
+      "markdown_path": "posts/2026-06-15-f19f71c2e8c9.md",
+      "summary": "今日科技版图呈现出基础设施成本攀升与AI服务深度融合的双重变奏。随着Hetzner将服务器价格上调三倍，算力通胀压力成为云服务领域的显性信号；与此同时，Apple通过Swift框架引入Claude，Anthropic与OpenRouter则分别展示了本地化与多模型协同的方案。企业端在并购与开源协议创新中寻求突破：Salesforce收购Fin以强化服务代理能力，Iroh 1.0试图用密钥替代IP重",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 9,
+      "is_empty_update": false,
+      "created_at": "2026-06-15T23:46:25.584391+08:00"
+    },
     {
       "id": "2026-06-14-213546d5b1e5",
       "run_id": "213546d5b1e5",
