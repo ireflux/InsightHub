@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-15T15:46:25.589247+00:00",
+  "updated_at": "2026-06-16T15:11:07.426987+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -1307,6 +1307,22 @@
             "status": "success",
             "file_path": "output/posts/2026-06-15-f19f71c2e8c9.md",
             "slug": "2026-06-15-f19f71c2e8c9",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-16T15:11:07.426773+00:00",
+      "items_count": 8,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-06-16-a9f7e536e4c2.md",
+            "slug": "2026-06-16-a9f7e536e4c2",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -6345,6 +6361,62 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-06-15T15:46:25.589237+00:00",
+        "error": null
+      }
+    },
+    "https://twitter.com/ID_AA_Carmack/status/2064095424420487226": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-16T15:11:07.426941+00:00",
+        "error": null
+      }
+    },
+    "https://roman.pt/posts/linkedin-backdoor": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-16T15:11:07.426949+00:00",
+        "error": null
+      }
+    },
+    "https://devblogs.microsoft.com/oldnewthing/20260615-00?p=112419": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-16T15:11:07.426953+00:00",
+        "error": null
+      }
+    },
+    "https://ciechanow.ski/mechanical-watch": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-16T15:11:07.426957+00:00",
+        "error": null
+      }
+    },
+    "https://tck.mn/blog/correlated-randomness-sts2": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-16T15:11:07.426961+00:00",
+        "error": null
+      }
+    },
+    "https://www.theartofdoingstuff.com/i-fired-google": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-16T15:11:07.426965+00:00",
+        "error": null
+      }
+    },
+    "https://shadycharacters.co.uk/2026/06/ollie-wagner": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-16T15:11:07.426973+00:00",
+        "error": null
+      }
+    },
+    "https://professorsigmund.com/praxis/hackers_for_granny_manifesto.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-16T15:11:07.426977+00:00",
         "error": null
       }
     }
