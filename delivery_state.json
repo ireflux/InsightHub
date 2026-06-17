@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-16T15:11:07.426987+00:00",
+  "updated_at": "2026-06-17T13:41:55.768411+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -1323,6 +1323,22 @@
             "status": "success",
             "file_path": "output/posts/2026-06-16-a9f7e536e4c2.md",
             "slug": "2026-06-16-a9f7e536e4c2",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-17T13:41:55.768143+00:00",
+      "items_count": 10,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-06-17-2b19a06342f4.md",
+            "slug": "2026-06-17-2b19a06342f4",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -6417,6 +6433,76 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-06-16T15:11:07.426977+00:00",
+        "error": null
+      }
+    },
+    "https://vickiboykis.com/2026/06/15/running-local-models-is-good-now": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-17T13:41:55.768379+00:00",
+        "error": null
+      }
+    },
+    "https://discuss.grapheneos.org/d/36469-grapheneos-has-been-ported-to-android-17-and-official-releases-are-coming-soon": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-17T13:41:55.768383+00:00",
+        "error": null
+      }
+    },
+    "https://artificialanalysis.ai/articles/glm-5-2-is-the-new-leading-open-weights-model-on-the-artificial-analysis-intelligence-index": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-17T13:41:55.768385+00:00",
+        "error": null
+      }
+    },
+    "https://wpvip.com/future-of-the-web-2026": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-17T13:41:55.768387+00:00",
+        "error": null
+      }
+    },
+    "https://bubbles.town/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-17T13:41:55.768390+00:00",
+        "error": null
+      }
+    },
+    "https://www.rfc-editor.org/info/rfc10008": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-17T13:41:55.768392+00:00",
+        "error": null
+      }
+    },
+    "https://www.lutr.dev/want-your-images-back-sure-that-ll-be-5-dollars": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-17T13:41:55.768398+00:00",
+        "error": null
+      }
+    },
+    "https://cells2pixels.github.io/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-17T13:41:55.768400+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/rxi/microui": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-17T13:41:55.768402+00:00",
+        "error": null
+      }
+    },
+    "https://airfields-freeman.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-17T13:41:55.768404+00:00",
         "error": null
       }
     }
