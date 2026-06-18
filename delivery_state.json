@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-17T13:41:55.768411+00:00",
+  "updated_at": "2026-06-18T12:51:14.155119+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -1339,6 +1339,22 @@
             "status": "success",
             "file_path": "output/posts/2026-06-17-2b19a06342f4.md",
             "slug": "2026-06-17-2b19a06342f4",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-18T12:51:14.154896+00:00",
+      "items_count": 7,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-06-18-7bac69a8125c.md",
+            "slug": "2026-06-18-7bac69a8125c",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -6503,6 +6519,55 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-06-17T13:41:55.768404+00:00",
+        "error": null
+      }
+    },
+    "https://www.midjourney.com/medical/blogpost": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-18T12:51:14.155075+00:00",
+        "error": null
+      }
+    },
+    "https://lore.org/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-18T12:51:14.155084+00:00",
+        "error": null
+      }
+    },
+    "https://blog.alexellis.io/local-ai-is-not-opus": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-18T12:51:14.155089+00:00",
+        "error": null
+      }
+    },
+    "https://www.tomshardware.com/pc-components/cpus/amd-silently-removes-memory-encryption-from-consumer-ryzen-cpus-leaving-users-unaware-that-they-may-be-vulnerable-security-feature-vanishes-after-newer-agesa-firmware-amd-engineers-go-radio-silent-when-pressed-about-the-change": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-18T12:51:14.155093+00:00",
+        "error": null
+      }
+    },
+    "https://chat.deepseek.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-18T12:51:14.155097+00:00",
+        "error": null
+      }
+    },
+    "https://xeiaso.net/notes/2026/anubis-wasm-vendor-binary": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-18T12:51:14.155102+00:00",
+        "error": null
+      }
+    },
+    "https://www.kcl.ac.uk/news/hospitals-and-universities-repurposing-drugs-at-90-lower-cost": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-18T12:51:14.155109+00:00",
         "error": null
       }
     }
