@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-18T12:51:14.155119+00:00",
+  "updated_at": "2026-06-19T13:35:20.958985+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -1355,6 +1355,22 @@
             "status": "success",
             "file_path": "output/posts/2026-06-18-7bac69a8125c.md",
             "slug": "2026-06-18-7bac69a8125c",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-19T13:35:20.958771+00:00",
+      "items_count": 9,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-06-19-7775f680e198.md",
+            "slug": "2026-06-19-7775f680e198",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -6568,6 +6584,69 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-06-18T12:51:14.155109+00:00",
+        "error": null
+      }
+    },
+    "https://orchidfiles.com/github-repositories-distributing-malware": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-19T13:35:20.958941+00:00",
+        "error": null
+      }
+    },
+    "https://www.jvm-weekly.com/p/project-valhalla-explained-how-a": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-19T13:35:20.958947+00:00",
+        "error": null
+      }
+    },
+    "https://www.greybeam.ai/blog/duckdb-internals-part-1": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-19T13:35:20.958951+00:00",
+        "error": null
+      }
+    },
+    "https://mnot.net/blog/2026/well_known_uris": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-19T13:35:20.958955+00:00",
+        "error": null
+      }
+    },
+    "https://mickael.canouil.fr/posts/2026-06-15-gribouille-0-3": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-19T13:35:20.958958+00:00",
+        "error": null
+      }
+    },
+    "https://news.mit.edu/2026/to-study-how-chips-really-work-mit-researchers-built-their-own-operating-system-0610": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-19T13:35:20.958962+00:00",
+        "error": null
+      }
+    },
+    "https://wilsoniumite.com/2026/06/19/the-room-the-economy-cant-see": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-19T13:35:20.958970+00:00",
+        "error": null
+      }
+    },
+    "https://blog.jxmo.io/p/zen-and-the-art-of-machine-learning": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-19T13:35:20.958973+00:00",
+        "error": null
+      }
+    },
+    "https://clickhouse.com/blog/open-source-10": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-19T13:35:20.958976+00:00",
         "error": null
       }
     }
