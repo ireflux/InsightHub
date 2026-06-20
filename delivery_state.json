@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-19T13:35:20.958985+00:00",
+  "updated_at": "2026-06-20T11:56:46.697725+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -1371,6 +1371,22 @@
             "status": "success",
             "file_path": "output/posts/2026-06-19-7775f680e198.md",
             "slug": "2026-06-19-7775f680e198",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-20T11:56:46.697520+00:00",
+      "items_count": 8,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-06-20-0e8e7842c817.md",
+            "slug": "2026-06-20-0e8e7842c817",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -6647,6 +6663,62 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-06-19T13:35:20.958976+00:00",
+        "error": null
+      }
+    },
+    "https://overreacted.io/there-are-no-instances-in-atproto": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-20T11:56:46.697670+00:00",
+        "error": null
+      }
+    },
+    "https://arrowtsx.dev/bigger-models": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-20T11:56:46.697681+00:00",
+        "error": null
+      }
+    },
+    "https://www.not-ship.com/can-you-see-three-trees": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-20T11:56:46.697685+00:00",
+        "error": null
+      }
+    },
+    "https://www.timwehrle.de/blog/i-stored-a-website-in-a-favicon": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-20T11:56:46.697689+00:00",
+        "error": null
+      }
+    },
+    "https://moultano.wordpress.com/2026/06/19/where-to-find-the-colors-your-screen-cant-show-you": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-20T11:56:46.697694+00:00",
+        "error": null
+      }
+    },
+    "https://brooker.co.za/blog/2020/08/06/erlang.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-20T11:56:46.697699+00:00",
+        "error": null
+      }
+    },
+    "https://mattmahoney.net/dc/dce.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-20T11:56:46.697707+00:00",
+        "error": null
+      }
+    },
+    "https://www.ibm.com/think/news/discovery-changed-how-scientists-think-about-memory-kavli-prize": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-20T11:56:46.697716+00:00",
         "error": null
       }
     }
