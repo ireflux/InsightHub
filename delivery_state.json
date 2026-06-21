@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-20T11:56:46.697725+00:00",
+  "updated_at": "2026-06-21T12:10:46.733859+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -1387,6 +1387,22 @@
             "status": "success",
             "file_path": "output/posts/2026-06-20-0e8e7842c817.md",
             "slug": "2026-06-20-0e8e7842c817",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-21T12:10:46.733653+00:00",
+      "items_count": 8,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-06-21-85be0718049c.md",
+            "slug": "2026-06-21-85be0718049c",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -6719,6 +6735,62 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-06-20T11:56:46.697716+00:00",
+        "error": null
+      }
+    },
+    "https://blog.apnic.net/2026/04/28/google-hits-50-ipv6": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-21T12:10:46.733814+00:00",
+        "error": null
+      }
+    },
+    "https://fosterelli.co/developers-dont-understand-cors": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-21T12:10:46.733822+00:00",
+        "error": null
+      }
+    },
+    "https://www.bbc.com/future/article/20260618-the-weird-and-wonderful-libraries-of-finland": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-21T12:10:46.733826+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/mysk-research/loupe": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-21T12:10:46.733830+00:00",
+        "error": null
+      }
+    },
+    "https://movq.de/blog/postings/2026-06-20/0/POSTING-en.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-21T12:10:46.733834+00:00",
+        "error": null
+      }
+    },
+    "https://zeux.io/2026/06/17/zigzag-decoding-avx512": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-21T12:10:46.733839+00:00",
+        "error": null
+      }
+    },
+    "https://taoofmac.com/space/blog/2026/06/18/1845": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-21T12:10:46.733847+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/namgyaaal/avoxelgame": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-21T12:10:46.733850+00:00",
         "error": null
       }
     }
