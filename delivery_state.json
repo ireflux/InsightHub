@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-21T12:10:46.733859+00:00",
+  "updated_at": "2026-06-22T15:24:20.345144+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -1403,6 +1403,22 @@
             "status": "success",
             "file_path": "output/posts/2026-06-21-85be0718049c.md",
             "slug": "2026-06-21-85be0718049c",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-22T15:24:20.344839+00:00",
+      "items_count": 8,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-06-22-3ad0a1c06b2e.md",
+            "slug": "2026-06-22-3ad0a1c06b2e",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -6791,6 +6807,62 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-06-21T12:10:46.733850+00:00",
+        "error": null
+      }
+    },
+    "https://docs.deno.com/runtime/desktop": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-22T15:24:20.345100+00:00",
+        "error": null
+      }
+    },
+    "https://techstackups.com/comparisons/glm-5.2-vs-opus": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-22T15:24:20.345108+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/openai/codex/issues/28224": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-22T15:24:20.345111+00:00",
+        "error": null
+      }
+    },
+    "https://nevergivethemyourface.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-22T15:24:20.345115+00:00",
+        "error": null
+      }
+    },
+    "https://mitchellh.com/writing/zig-donation-2026": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-22T15:24:20.345118+00:00",
+        "error": null
+      }
+    },
+    "https://puzzlelair.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-22T15:24:20.345123+00:00",
+        "error": null
+      }
+    },
+    "https://patrickmccanna.net/the-text-in-claude-codes-extended-thinking-output-is-not-authentic": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-22T15:24:20.345131+00:00",
+        "error": null
+      }
+    },
+    "https://hustvl.github.io/Moebius": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-22T15:24:20.345135+00:00",
         "error": null
       }
     }

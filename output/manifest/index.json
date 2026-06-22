@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-06-21T20:10:46.703227+08:00",
+  "generated_at": "2026-06-22T23:24:20.310655+08:00",
   "posts": [
+    {
+      "id": "2026-06-22-3ad0a1c06b2e",
+      "run_id": "3ad0a1c06b2e",
+      "date": "2026-06-22",
+      "title": "每日趋势观察 2026-06-22",
+      "slug": "2026-06-22-3ad0a1c06b2e",
+      "markdown_path": "posts/2026-06-22-3ad0a1c06b2e.md",
+      "summary": "Deno 发布了将 Web 项目转为原生桌面应用的方案，试图在体积与生态间寻找平衡；开源大模型 GLM-5.2 与闭源 Claude Opus 的性能与成本对比引发热议；OpenAI Codex 因过度的日志写入导致 SSD 寿命迅速耗尽。与此同时，AI 模型在效率上取得突破（Moebius），但在透明度上遭遇质疑（Claude Code 思考过程仅为摘要），而全球范围内强制面部识别以进行年龄验证",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 8,
+      "is_empty_update": false,
+      "created_at": "2026-06-22T23:24:20.310655+08:00"
+    },
     {
       "id": "2026-06-21-85be0718049c",
       "run_id": "85be0718049c",
