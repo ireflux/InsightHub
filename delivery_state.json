@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-22T15:24:20.345144+00:00",
+  "updated_at": "2026-06-23T12:32:31.137927+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -1419,6 +1419,22 @@
             "status": "success",
             "file_path": "output/posts/2026-06-22-3ad0a1c06b2e.md",
             "slug": "2026-06-22-3ad0a1c06b2e",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-23T12:32:31.137697+00:00",
+      "items_count": 9,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-06-23-3e609b81fb97.md",
+            "slug": "2026-06-23-3e609b81fb97",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -6863,6 +6879,69 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-06-22T15:24:20.345135+00:00",
+        "error": null
+      }
+    },
+    "https://store.steampowered.com/news/group/45479024/view/685257114654870245": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-23T12:32:31.137879+00:00",
+        "error": null
+      }
+    },
+    "https://www.wsj.com/business/media/polymarket-social-media-bets-prediction-market-441cdeb5?st=HhTZY2": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-23T12:32:31.137886+00:00",
+        "error": null
+      }
+    },
+    "https://unsloth.ai/docs/models/glm-5.2": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-23T12:32:31.137890+00:00",
+        "error": null
+      }
+    },
+    "https://swelljoe.com/post/will-it-mythos": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-23T12:32:31.137894+00:00",
+        "error": null
+      }
+    },
+    "https://www.stephendiehl.com/posts/bad_place_2026": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-23T12:32:31.137898+00:00",
+        "error": null
+      }
+    },
+    "https://plotnine.org/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-23T12:32:31.137903+00:00",
+        "error": null
+      }
+    },
+    "https://www.bbc.com/news/articles/c4gy0x0j5deo": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-23T12:32:31.137911+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/baidu/Unlimited-OCR": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-23T12:32:31.137916+00:00",
+        "error": null
+      }
+    },
+    "https://ex-vi.sourceforge.net/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-23T12:32:31.137919+00:00",
         "error": null
       }
     }
