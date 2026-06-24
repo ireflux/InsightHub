@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-23T12:32:31.137927+00:00",
+  "updated_at": "2026-06-24T12:18:56.359503+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -1435,6 +1435,22 @@
             "status": "success",
             "file_path": "output/posts/2026-06-23-3e609b81fb97.md",
             "slug": "2026-06-23-3e609b81fb97",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-24T12:18:56.359290+00:00",
+      "items_count": 8,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-06-24-16ea989de0e5.md",
+            "slug": "2026-06-24-16ea989de0e5",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -6942,6 +6958,62 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-06-23T12:32:31.137919+00:00",
+        "error": null
+      }
+    },
+    "https://swipe.futo.tech/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-24T12:18:56.359461+00:00",
+        "error": null
+      }
+    },
+    "https://words.filippo.io/vuln-reports": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-24T12:18:56.359466+00:00",
+        "error": null
+      }
+    },
+    "https://bunny.net/blog/were-making-bunny-dns-free": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-24T12:18:56.359470+00:00",
+        "error": null
+      }
+    },
+    "https://devblogs.microsoft.com/oldnewthing/20260622-00?p=112451": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-24T12:18:56.359473+00:00",
+        "error": null
+      }
+    },
+    "http://www.jerrysmap.com/the-map": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-24T12:18:56.359477+00:00",
+        "error": null
+      }
+    },
+    "https://gitlab.com/baiyibai/pico-usb-wifi": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-24T12:18:56.359481+00:00",
+        "error": null
+      }
+    },
+    "https://www.sciencenews.org/article/deadly-fungus-cats-people-spreading": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-24T12:18:56.359490+00:00",
+        "error": null
+      }
+    },
+    "https://kolistat.com/blog/the-stats-duck-v0-6-0": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-24T12:18:56.359493+00:00",
         "error": null
       }
     }

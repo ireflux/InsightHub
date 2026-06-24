@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-06-23T20:32:31.132695+08:00",
+  "generated_at": "2026-06-24T20:18:56.354572+08:00",
   "posts": [
+    {
+      "id": "2026-06-24-16ea989de0e5",
+      "run_id": "16ea989de0e5",
+      "date": "2026-06-24",
+      "title": "每日趋势观察 2026-06-24",
+      "slug": "2026-06-24-16ea989de0e5",
+      "markdown_path": "posts/2026-06-24-16ea989de0e5.md",
+      "summary": "今日科技圈呈现出从输入法优化、安全研究范式变革到基础设施免费化的多重动态。FUTO 发布了百万级滑动数据集，试图通过数据反哺键盘体验；安全领域则因 LLM 的介入，讨论漏洞报告的特殊性是否正在消退；Bunny DNS 宣布完全免费，试图降低互联网接入门槛；同时，怀念 Word 拼写检查之父、关注极客艺术项目与生物威胁等话题也在引发关注。",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 8,
+      "is_empty_update": false,
+      "created_at": "2026-06-24T20:18:56.354572+08:00"
+    },
     {
       "id": "2026-06-23-3e609b81fb97",
       "run_id": "3e609b81fb97",
