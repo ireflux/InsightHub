@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-06-24T20:18:56.354572+08:00",
+  "generated_at": "2026-06-25T20:21:29.543244+08:00",
   "posts": [
+    {
+      "id": "2026-06-25-39a4af33ea49",
+      "run_id": "39a4af33ea49",
+      "date": "2026-06-25",
+      "title": "每日趋势观察 2026-06-25",
+      "slug": "2026-06-25-39a4af33ea49",
+      "markdown_path": "posts/2026-06-25-39a4af33ea49.md",
+      "summary": "科技行业正围绕AI基础设施与数据伦理展开激烈博弈。一方面，OpenAI与Anthropic分别通过自研芯片切入硬件上游，以及通过法律诉讼介入模型能力归属，试图控制AI生态的关键节点；另一方面，网络安全领域的供应链安全（如LastPass）与基础设施标准化（如Cloudflare）成为关注焦点。与此同时，Web技术正在突破传统边界，使得经典游戏得以在浏览器中重获新生，而开源社区也在持续推动底层语言的",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 10,
+      "is_empty_update": false,
+      "created_at": "2026-06-25T20:21:29.543244+08:00"
+    },
     {
       "id": "2026-06-24-16ea989de0e5",
       "run_id": "16ea989de0e5",

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-24T12:18:56.359503+00:00",
+  "updated_at": "2026-06-25T12:21:29.549120+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -1451,6 +1451,22 @@
             "status": "success",
             "file_path": "output/posts/2026-06-24-16ea989de0e5.md",
             "slug": "2026-06-24-16ea989de0e5",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-25T12:21:29.548907+00:00",
+      "items_count": 10,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-06-25-39a4af33ea49.md",
+            "slug": "2026-06-25-39a4af33ea49",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -7014,6 +7030,76 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-06-24T12:18:56.359493+00:00",
+        "error": null
+      }
+    },
+    "https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-25T12:21:29.549074+00:00",
+        "error": null
+      }
+    },
+    "https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-25T12:21:29.549077+00:00",
+        "error": null
+      }
+    },
+    "https://hl2.slqnt.dev/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-25T12:21:29.549083+00:00",
+        "error": null
+      }
+    },
+    "https://blog.jim-nielsen.com/2026/blogging-stating-the-obvious": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-25T12:21:29.549086+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/LuaJIT/LuaJIT/issues/1475": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-25T12:21:29.549090+00:00",
+        "error": null
+      }
+    },
+    "https://blog.cloudflare.com/oauth-for-all": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-25T12:21:29.549093+00:00",
+        "error": null
+      }
+    },
+    "https://markdy.com": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-25T12:21:29.549100+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/BohemiaInteractive/CWR": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-25T12:21:29.549104+00:00",
+        "error": null
+      }
+    },
+    "https://9to5mac.com/2026/06/23/lastpass-notifies-users-of-yet-another-data-breach": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-25T12:21:29.549107+00:00",
+        "error": null
+      }
+    },
+    "https://dolphin-emu.org/blog/2026/06/25/dolphin-progress-report-release-2606": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-25T12:21:29.549110+00:00",
         "error": null
       }
     }
