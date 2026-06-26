@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-25T12:21:29.549120+00:00",
+  "updated_at": "2026-06-26T12:11:16.669338+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -1467,6 +1467,22 @@
             "status": "success",
             "file_path": "output/posts/2026-06-25-39a4af33ea49.md",
             "slug": "2026-06-25-39a4af33ea49",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-26T12:11:16.669130+00:00",
+      "items_count": 9,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-06-26-efd4d75b9ca5.md",
+            "slug": "2026-06-26-efd4d75b9ca5",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -7100,6 +7116,69 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-06-25T12:21:29.549110+00:00",
+        "error": null
+      }
+    },
+    "https://expression.fire.org/p/the-papers-please-era-of-the-internet": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-26T12:11:16.669287+00:00",
+        "error": null
+      }
+    },
+    "https://scrollprize.org/firstscroll": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-26T12:11:16.669294+00:00",
+        "error": null
+      }
+    },
+    "https://om.co/2026/06/24/1966-2026": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-26T12:11:16.669299+00:00",
+        "error": null
+      }
+    },
+    "https://akrites.org/letter": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-26T12:11:16.669303+00:00",
+        "error": null
+      }
+    },
+    "https://www.jeffgeerling.com/blog/2026/framework-10g-ethernet-module-usb-c-complexity": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-26T12:11:16.669308+00:00",
+        "error": null
+      }
+    },
+    "https://www.fernandoi.cl/posts/hackmyclaw": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-26T12:11:16.669312+00:00",
+        "error": null
+      }
+    },
+    "https://graphicore.github.io/librebarcode": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-26T12:11:16.669320+00:00",
+        "error": null
+      }
+    },
+    "https://gchandbook.org/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-26T12:11:16.669324+00:00",
+        "error": null
+      }
+    },
+    "https://www.classicfm.com/composers/mozart/handwritten-notebook-discovered-major-paris": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-26T12:11:16.669327+00:00",
         "error": null
       }
     }
