@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-06-26T20:11:16.664528+08:00",
+  "generated_at": "2026-06-27T19:27:16.892845+08:00",
   "posts": [
+    {
+      "id": "2026-06-27-1f0e56a0a941",
+      "run_id": "1f0e56a0a941",
+      "date": "2026-06-27",
+      "title": "每日趋势观察 2026-06-27",
+      "slug": "2026-06-27-1f0e56a0a941",
+      "markdown_path": "posts/2026-06-27-1f0e56a0a941.md",
+      "summary": "AI 领域在模型部署速度与开源优化上迎来新进展：OpenAI 公布了 GPT-5.6 Sol 的测试细节，强调在 Cerebras 平台上的生成速度达到每秒 750 个令牌；DeepSeek 则开源了推理优化论文与预构建模型，声称可将生成速度提升 60% 至 85%。与此同时，技术文化的怀旧情绪在硬件、软件与无线电领域持续发酵，从 Linux 对旧硬件的支持到作家对 WordStar 的坚持，再到",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 8,
+      "is_empty_update": false,
+      "created_at": "2026-06-27T19:27:16.892845+08:00"
+    },
     {
       "id": "2026-06-26-efd4d75b9ca5",
       "run_id": "efd4d75b9ca5",
