@@ -15,6 +15,7 @@ from insighthub.sources.base import BaseSource
 def _ensure_registry_loaded():
     """Import all plugin modules to trigger registration."""
     # LLM Providers
+    import insighthub.llm_providers.agnes
     import insighthub.llm_providers.openrouter
     import insighthub.llm_providers.nvidia
     import insighthub.llm_providers.zhipu

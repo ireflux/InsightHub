@@ -9,6 +9,7 @@ from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 from zoneinfo import ZoneInfo
 
 from insighthub.core.retry import with_retry
+from insighthub.core.editorial import EditorialPipeline
 from insighthub.errors import LLMProcessingError, PromptRenderingError, SinkDeliveryError, SourceFetchError
 from insighthub.llm_providers.base import BaseLLMProvider
 from insighthub.models import NewsItem
@@ -16,7 +17,7 @@ from insighthub.observability import get_run_id
 from insighthub.prompting import PromptRenderer
 from insighthub.publishing import TitlePolicy
 from insighthub.scoring import ContentScorer
-from insighthub.settings import RetryPolicyConfig, RuntimeDedupConfig, ScoringConfig
+from insighthub.settings import RetryPolicyConfig, RuntimeDedupConfig, ScoringConfig, SummarizationConfig
 from insighthub.sinks.base import BaseSink
 from insighthub.sources.base import BaseSource
 
@@ -43,6 +44,7 @@ class InsightEngine:
         max_delivery_item_records: int = 2000,
         max_delivery_runs: int = 100,
         scoring_config: Optional[ScoringConfig] = None,
+        summarization_config: Optional[SummarizationConfig] = None,
         source_retry_policy: Optional[RetryPolicyConfig] = None,
         llm_retry_policy: Optional[RetryPolicyConfig] = None,
         sink_retry_policy: Optional[RetryPolicyConfig] = None,
@@ -61,6 +63,7 @@ class InsightEngine:
         self.max_delivery_item_records = max_delivery_item_records
         self.max_delivery_runs = max_delivery_runs
         self.scoring_config = scoring_config or ScoringConfig()
+        self.summarization_config = summarization_config or SummarizationConfig()
         self.source_retry_policy = source_retry_policy or RetryPolicyConfig(max_attempts=3, base_delay_seconds=1.0)
         self.llm_retry_policy = llm_retry_policy or RetryPolicyConfig(max_attempts=3, base_delay_seconds=2.0)
         self.sink_retry_policy = sink_retry_policy or RetryPolicyConfig(max_attempts=2, base_delay_seconds=1.0)
@@ -82,6 +85,7 @@ class InsightEngine:
             variables=prompt_variables or {},
         )
         self.summarize_prompt_template = self._load_summarize_prompt_template()
+        self.last_summarized_items: List[NewsItem] = []
 
     def _load_history_entries(self) -> List[str]:
         if not os.path.exists(self.history_file):
@@ -181,7 +185,8 @@ class InsightEngine:
             items_for_summary = await self.score_items(new_items)
         self._save_stage_items(run_id, "scored", items_for_summary)
 
-        curated_markdown = await self.summarize(items_for_summary)
+        curated_markdown = await self.summarize(items_for_summary, run_id=run_id)
+        summarized_items = self.last_summarized_items or items_for_summary
         self._save_stage_markdown(run_id, "summary", curated_markdown)
         self._save_run_meta(
             run_id,
@@ -189,11 +194,11 @@ class InsightEngine:
                 "stages": {
                     "raw": len(new_items),
                     "scored": len(items_for_summary) if self.scoring_config.enabled else None,
-                    "summary": len(items_for_summary),
+                    "summary": len(summarized_items),
                 }
             },
         )
-        await self.distribute(curated_markdown, items_for_summary)
+        await self.distribute(curated_markdown, summarized_items)
 
     async def _fetch_from_source(self, source: BaseSource) -> List[NewsItem]:
         source_name = getattr(source, "name", source.__class__.__name__)
@@ -266,10 +271,23 @@ class InsightEngine:
         )
         return new_items
 
-    async def summarize(self, items: List[NewsItem]) -> str:
+    async def summarize(self, items: List[NewsItem], run_id: Optional[str] = None) -> str:
         if not items:
+            self.last_summarized_items = []
             return ""
 
+        if self.summarization_config.mode == "editorial":
+            try:
+                return await self._summarize_editorial(items, run_id=run_id)
+            except Exception as e:
+                logger.error(
+                    "Editorial summarization failed; falling back to one-shot.",
+                    extra={"event": "engine.summarize.editorial_fallback", "error": str(e)},
+                )
+        return await self._summarize_one_shot(items)
+
+    async def _summarize_one_shot(self, items: List[NewsItem]) -> str:
+        self.last_summarized_items = items
         combined_input = self.build_summarize_input(items)
         logger.info(
             "LLM request configuration before summarization.",
@@ -310,6 +328,51 @@ class InsightEngine:
             for item in items:
                 curated_markdown += f"- [{item.title}]({item.url}): {self._fallback_summary(item.content or '')}\n"
             return curated_markdown
+
+    async def _summarize_editorial(self, items: List[NewsItem], run_id: Optional[str] = None) -> str:
+        logger.info(
+            "Starting editorial summarization pipeline.",
+            extra={
+                "event": "engine.summarize.editorial_start",
+                "items_count": len(items),
+                "mode": self.summarization_config.mode,
+            },
+        )
+        # Retry is applied per LLM step inside the pipeline (brief / cluster /
+        # draft / review / revise) rather than wrapping the whole run, so a
+        # transient failure on a late step does not restart the whole pipeline.
+        pipeline = EditorialPipeline(
+            self.llm_provider,
+            self.summarize_prompt_template,
+            brief_concurrency=self.summarization_config.brief_concurrency,
+            max_briefs=self.summarization_config.max_briefs,
+            min_final_items=self.summarization_config.min_final_items,
+            max_final_items=self.summarization_config.max_final_items,
+            review_enabled=self.summarization_config.review_enabled,
+            revise_enabled=self.summarization_config.revise_enabled,
+            retry_policy=self.llm_retry_policy,
+        )
+
+        try:
+            result = await pipeline.run(items)
+        except LLMProcessingError:
+            raise
+        except Exception as e:
+            raise LLMProcessingError(f"Editorial summarization failed: {e}") from e
+
+        selected_items = result["selected_items"]
+        self.last_summarized_items = selected_items
+        self._save_editorial_artifacts(run_id or self._resolve_run_id(), result)
+        logger.info(
+            "Editorial summarization succeeded.",
+            extra={
+                "event": "engine.summarize.editorial_succeeded",
+                "selected_items_count": len(selected_items),
+                "clusters_count": len(result["clusters"]),
+                "review_passed": result["review"].passed,
+            },
+        )
+        return str(result["final_article"])
 
     async def score_items(self, items: List[NewsItem]) -> List[NewsItem]:
         if not items:
@@ -510,12 +573,19 @@ class InsightEngine:
                 },
             )
             return template
-        except PromptRenderingError as e:
-            logger.warning(
-                "Failed to load composed summarize prompt.",
-                extra={"error": str(e)},
+        except PromptRenderingError:
+            # Fail fast: a broken prompt template is a configuration error, not a
+            # transient failure. Returning a placeholder would silently produce
+            # low-quality output and mask the real problem from the operator.
+            logger.error(
+                "Failed to load composed summarize prompt; aborting summarization.",
+                extra={
+                    "event": "engine.prompt.load_failed",
+                    "prompt_structure": self.prompt_renderer.structure_name,
+                    "prompt_style": self.prompt_renderer.style_name,
+                },
             )
-            return None
+            raise
 
     def _item_primary_key(self, item: NewsItem) -> str:
         normalized_id = self._normalize_possible_url(item.id)
@@ -618,6 +688,23 @@ class InsightEngine:
         existing["updated_at"] = self._utc_now_iso()
         with open(path, "w", encoding="utf-8") as f:
             json.dump(existing, f, ensure_ascii=False, indent=2)
+
+    def _save_editorial_artifacts(self, run_id: str, result: Dict[str, Any]) -> None:
+        run_dir = self._run_dir(run_id)
+        run_dir.mkdir(parents=True, exist_ok=True)
+        artifacts = {
+            "briefs.json": [brief.to_dict() for brief in result["briefs"]],
+            "clusters.json": [cluster.to_dict() for cluster in result["clusters"]],
+            "selected_items.json": [item.model_dump() for item in result["selected_items"]],
+            "review.json": result["review"].to_dict(),
+        }
+        for filename, payload in artifacts.items():
+            with open(run_dir / filename, "w", encoding="utf-8") as f:
+                json.dump(payload, f, ensure_ascii=False, indent=2, default=str)
+        with open(run_dir / "editorial_input.txt", "w", encoding="utf-8") as f:
+            f.write(str(result["article_input"]))
+        with open(run_dir / "draft.md", "w", encoding="utf-8") as f:
+            f.write(str(result["draft"]))
 
     def _build_no_update_markdown(self) -> str:
         now = datetime.now(ZoneInfo(self.timezone_name))

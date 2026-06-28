@@ -4,7 +4,7 @@ import logging
 from datetime import datetime
 from typing import Any, Dict, List, Optional
 from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
-from pydantic import BaseModel, Field, model_validator
+from pydantic import BaseModel, ConfigDict, Field, model_validator
 
 from insighthub.errors import ConfigValidationError
 from insighthub.core.registry import registry
@@ -39,7 +39,9 @@ class LLMEndpointConfig(BaseModel):
 
 
 class LLMConfig(BaseModel):
-    primary: LLMEndpointConfig = Field(default_factory=lambda: LLMEndpointConfig(provider="zhipuai"))
+    primary: LLMEndpointConfig = Field(
+        default_factory=lambda: LLMEndpointConfig(provider="agnes", model="agnes-2.0-flash")
+    )
     fallbacks: List[LLMEndpointConfig] = Field(default_factory=list)
 
 
@@ -125,6 +127,16 @@ class ScoringConfig(BaseModel):
         return raw
 
 
+class SummarizationConfig(BaseModel):
+    mode: str = "editorial"
+    brief_concurrency: int = 4
+    max_briefs: int = 12
+    min_final_items: int = 3
+    max_final_items: int = 8
+    review_enabled: bool = True
+    revise_enabled: bool = True
+
+
 class RetryPolicyConfig(BaseModel):
     max_attempts: int = 3
     base_delay_seconds: float = 1.0
@@ -183,17 +195,17 @@ class RuntimeConfig(BaseModel):
 
 
 class AppSettings(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
     llm: LLMConfig = Field(default_factory=LLMConfig)
     sources: SourcesConfig = Field(default_factory=SourcesConfig)
     sinks: SinksConfig = Field(default_factory=SinksConfig)
     prompt: PromptConfig = Field(default_factory=PromptConfig)
     state: StateConfig = Field(default_factory=StateConfig)
     scoring: ScoringConfig = Field(default_factory=ScoringConfig)
+    summarization: SummarizationConfig = Field(default_factory=SummarizationConfig)
     publishing: PublishingConfig = Field(default_factory=PublishingConfig)
     runtime: RuntimeConfig = Field(default_factory=RuntimeConfig)
-
-    class Config:
-        extra = "forbid"
 
     def validate_schema_rules(self) -> None:
         from insighthub.workflow_factory import _ensure_registry_loaded
@@ -287,6 +299,16 @@ class AppSettings(BaseModel):
 
         if self.scoring.scoring_threshold is not None and self.scoring.scoring_threshold < 0:
             raise ConfigValidationError("scoring.scoring_threshold must be >= 0 when provided.")
+        if self.summarization.mode not in {"one_shot", "editorial"}:
+            raise ConfigValidationError("summarization.mode must be one of one_shot, editorial.")
+        if self.summarization.brief_concurrency <= 0:
+            raise ConfigValidationError("summarization.brief_concurrency must be > 0.")
+        if self.summarization.max_briefs <= 0:
+            raise ConfigValidationError("summarization.max_briefs must be > 0.")
+        if self.summarization.min_final_items <= 0:
+            raise ConfigValidationError("summarization.min_final_items must be > 0.")
+        if self.summarization.max_final_items < self.summarization.min_final_items:
+            raise ConfigValidationError("summarization.max_final_items must be >= summarization.min_final_items.")
 
         self._validate_retry_policy("runtime.retry.source_fetch", self.runtime.retry.source_fetch)
         self._validate_retry_policy("runtime.retry.llm_summarize", self.runtime.retry.llm_summarize)
@@ -339,6 +361,8 @@ class AppSettings(BaseModel):
         for location, endpoint in endpoints:
             if not endpoint.model or not str(endpoint.model).strip():
                 raise ConfigValidationError(f"{location}.model is required in config.")
+            if endpoint.provider.lower() == "agnes" and not endpoint.api_key:
+                raise ConfigValidationError(f"Missing AGNES_API_KEY for {location} provider 'agnes'.")
             if endpoint.provider.lower() == "openrouter" and not endpoint.api_key:
                 raise ConfigValidationError(f"Missing OPENROUTER_API_KEY for {location} provider 'openrouter'.")
             if endpoint.provider.lower() == "zhipuai" and not endpoint.api_key:
@@ -378,7 +402,7 @@ class AppSettings(BaseModel):
         
         # 2. Process environment variable fallbacks
         if "llm" not in config_data:
-            config_data["llm"] = {"primary": {"provider": "zhipuai"}, "fallbacks": []}
+            config_data["llm"] = {"primary": {"provider": "agnes", "model": "agnes-2.0-flash"}, "fallbacks": []}
 
         llm_config = config_data["llm"]
         primary_cfg = llm_config.get("primary") or {}
@@ -451,6 +475,8 @@ class AppSettings(BaseModel):
         provider = provider_name.lower()
         if provider == "openrouter":
             return os.getenv("OPENROUTER_API_KEY")
+        if provider == "agnes":
+            return os.getenv("AGNES_API_KEY")
         if provider == "zhipuai":
             return os.getenv("ZHIPUAI_API_KEY")
         if provider == "nvidia":
@@ -477,6 +503,8 @@ class AppSettings(BaseModel):
         provider = endpoint.provider.lower()
         params = endpoint.params or {}
         allowed_params = {"temperature", "top_p", "max_tokens", "stop", "stream"}
+        if provider == "agnes":
+            allowed_params = {*allowed_params, "enable_thinking"}
         unknown = sorted(set(params.keys()) - allowed_params)
         if unknown:
             raise ConfigValidationError(
@@ -496,6 +524,8 @@ class AppSettings(BaseModel):
             raise ConfigValidationError("llm endpoint params.stop must be string or list of strings.")
         if params.get("stream") is True:
             raise ConfigValidationError("llm endpoint params.stream=true is not supported currently.")
+        if "enable_thinking" in params and not isinstance(params["enable_thinking"], bool):
+            raise ConfigValidationError("llm endpoint params.enable_thinking must be boolean.")
 
         if provider in {"custom_openai", "custom_anthropic"}:
             if not endpoint.base_url or not str(endpoint.base_url).strip():

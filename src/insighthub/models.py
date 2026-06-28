@@ -1,11 +1,13 @@
 from typing import Optional, Dict, Any, List
 from datetime import datetime
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 
 class NewsItem(BaseModel):
     """
     Standard data model for a news item/article across the InsightHub system.
     """
+    model_config = ConfigDict(from_attributes=True)
+
     id: str = Field(..., description="Unique identifier for the item (usually the URL)")
     title: str = Field(..., description="Title of the article or topic")
     url: str = Field(..., description="Source URL")
@@ -41,6 +43,3 @@ class NewsItem(BaseModel):
     related_item_ids: List[str] = Field(
         default_factory=list, description="List of related item IDs in the same cluster"
     )
-
-    class Config:
-        from_attributes = True

@@ -165,6 +165,7 @@ async def run_cli():
             max_delivery_item_records=settings.state.max_delivery_item_records,
             max_delivery_runs=settings.state.max_delivery_runs,
             scoring_config=settings.scoring,
+            summarization_config=settings.summarization,
             source_retry_policy=settings.runtime.retry.source_fetch,
             llm_retry_policy=settings.runtime.retry.llm_summarize,
             sink_retry_policy=settings.runtime.retry.sink_render,
@@ -199,13 +200,14 @@ async def run_cli():
                 if settings.scoring.enabled:
                     items = await engine.score_items(items)
                 content = await engine.summarize(items)
+                summarized_items = engine.last_summarized_items or items
                 output_path = args.output
                 os.makedirs(os.path.dirname(os.path.abspath(output_path)), exist_ok=True)
                 engine.save_content(content, output_path)
                 logger.info(f"Summary saved to {output_path}")
                 items_output_path = args.items_output or f"{os.path.splitext(output_path)[0]}.items.json"
                 os.makedirs(os.path.dirname(os.path.abspath(items_output_path)), exist_ok=True)
-                engine.save_items(items, items_output_path)
+                engine.save_items(summarized_items, items_output_path)
                 logger.info(f"Summarized items saved to {items_output_path}")
             else:
                 logger.warning("No items loaded to summarize.")

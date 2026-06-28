@@ -2,14 +2,21 @@
 
 # LLM configuration
 # API keys must be provided via environment variables:
+# - AGNES_API_KEY
 # - ZHIPUAI_API_KEY
 # - OPENROUTER_API_KEY
 llm:
   primary:
-    provider: "zhipuai"
-    model: "glm-4.7-flash"
+    provider: "agnes"
+    model: "agnes-2.0-flash"
+    params:
+      temperature: 0.7
+      max_tokens: 8192
+      enable_thinking: false
   fallbacks: []
   # fallbacks:
+  #   - provider: "zhipuai"
+  #     model: "glm-4.7-flash"
   #   - provider: "openrouter"
   #     model: "openai/gpt-5.4-pro"
 
@@ -22,7 +29,7 @@ sources:
   items:
     - id: "github_main"
       type: "github_trending"
-      enabled: true
+      enabled: false
       max_items: 5
       params: {}
     - id: "hn_main"
@@ -103,6 +110,15 @@ runtime:
 scoring:
   enabled: true
   scoring_threshold: 6.0
+
+summarization:
+  mode: "editorial" # editorial or one_shot
+  brief_concurrency: 4
+  max_briefs: 12
+  min_final_items: 3
+  max_final_items: 8
+  review_enabled: true
+  revise_enabled: true
 
 # Sinks configuration
 sinks:

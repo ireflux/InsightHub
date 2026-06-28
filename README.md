@@ -7,7 +7,7 @@ A production-ready, asynchronous Python workflow engine for aggregating technica
 ## Key Features
 
 - **Multi-source Aggregation**: GitHub Trending, Hacker News, V2EX, and Slashdot.
-- **AI Scoring & Summarization**: Prioritize and summarize content using LLMs (ZhipuAI, OpenRouter, NVIDIA, Custom OpenAI/Anthropic).
+- **AI Scoring & Summarization**: Prioritize and summarize content using LLMs (Agnes, ZhipuAI, OpenRouter, NVIDIA, Custom OpenAI/Anthropic).
 - **Flexible Distribution**: Output to Markdown files, Feishu documents, and static site manifests.
 - **Robust State Management**: Built-in deduplication, history tracking, and automatic retry logic.
 - **Asynchronous Design**: High-performance concurrent fetching and processing.
@@ -40,6 +40,7 @@ Set your API keys as environment variables:
 ```bash
 export ZHIPUAI_API_KEY="your_key"
 export OPENROUTER_API_KEY="your_key"
+export AGNES_API_KEY="your_key"
 ```
 
 ### 3. Run the Workflow
@@ -58,10 +59,23 @@ insighthub run
 - **Slashdot** (`slashdot`)
 
 ### Supported LLM Providers
+- **Agnes** (`agnes`) - default provider, model `agnes-2.0-flash`
 - **ZhipuAI** (`zhipuai`)
 - **OpenRouter** (`openrouter`)
 - **NVIDIA NIM** (`nvidia`)
 - **Custom OpenAI/Anthropic** (`custom_openai`, `custom_anthropic`)
+
+### Summarization Pipeline
+
+InsightHub defaults to an editorial summarization pipeline:
+
+- Builds a structured brief for each candidate item.
+- Lets the LLM make editorial selections instead of forcing every fetched item into the article.
+- Merges related items into story themes.
+- Generates the final article with the configured structure/style prompts.
+- Runs an optional review and one revision pass.
+
+Set `summarization.mode: "one_shot"` to use the legacy single-call summarizer.
 
 ### Supported Sinks
 - **Markdown File** (`markdown_file`)

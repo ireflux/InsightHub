@@ -64,6 +64,9 @@ class OpenRouterProvider(BaseLLMProvider):
             "model": self.model,
             "messages": messages,
             **self.params,
+            # Explicitly non-streaming: streaming is unsupported in the current
+            # design and the engine expects a single complete response.
+            "stream": False,
         }
 
         resp = await self.client.post(url, json=payload)

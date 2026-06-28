@@ -84,6 +84,27 @@ def test_build_llm_provider_openrouter():
     assert provider.__class__.__name__ == "OpenRouterProvider"
 
 
+def test_build_llm_provider_agnes():
+    logger = logging.getLogger("test.workflow_factory")
+    settings = AppSettings(
+        llm={
+            "primary": {
+                "provider": "agnes",
+                "api_key": "test-agnes-key",
+                "model": "agnes-2.0-flash",
+                "params": {"enable_thinking": False},
+            }
+        },
+        sources={"defaults": {"max_items": 5}, "items": []},
+        sinks={"defaults": {"enabled": True}, "items": []},
+    )
+
+    provider = build_llm_provider(settings, logger=logger)
+    assert provider is not None
+    assert provider.__class__.__name__ == "AgnesProvider"
+    assert provider.model == "agnes-2.0-flash"
+
+
 def test_build_llm_provider_with_fallbacks():
     logger = logging.getLogger("test.workflow_factory")
     settings = AppSettings(

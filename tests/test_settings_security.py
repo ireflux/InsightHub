@@ -204,6 +204,75 @@ llm:
                 os.environ[key] = value
 
 
+def test_agnes_env_key_is_loaded_and_thinking_param_is_allowed():
+    config_content = """
+llm:
+  primary:
+    provider: agnes
+    model: agnes-2.0-flash
+    params:
+      enable_thinking: true
+"""
+    with tempfile.NamedTemporaryFile("w", suffix=".yaml", delete=False, encoding="utf-8") as tmp:
+        tmp.write(config_content)
+        tmp_path = tmp.name
+
+    old_env = {"AGNES_API_KEY": os.getenv("AGNES_API_KEY")}
+    os.environ["AGNES_API_KEY"] = "env_agnes_key"
+    try:
+        settings = AppSettings.load(tmp_path)
+        assert settings.llm.primary.api_key == "env_agnes_key"
+        assert settings.llm.primary.params["enable_thinking"] is True
+        settings.validate_runtime_requirements()
+    finally:
+        os.remove(tmp_path)
+        for key, value in old_env.items():
+            if value is None:
+                os.environ.pop(key, None)
+            else:
+                os.environ[key] = value
+
+
+def test_agnes_thinking_param_must_be_boolean():
+    config_content = """
+llm:
+  primary:
+    provider: agnes
+    model: agnes-2.0-flash
+    params:
+      enable_thinking: "yes"
+"""
+    with tempfile.NamedTemporaryFile("w", suffix=".yaml", delete=False, encoding="utf-8") as tmp:
+        tmp.write(config_content)
+        tmp_path = tmp.name
+
+    try:
+        with pytest.raises(Exception):
+            AppSettings.load(tmp_path)
+    finally:
+        os.remove(tmp_path)
+
+
+def test_invalid_summarization_mode_raises():
+    config_content = """
+llm:
+  primary:
+    provider: agnes
+    model: agnes-2.0-flash
+summarization:
+  mode: bad
+"""
+    with tempfile.NamedTemporaryFile("w", suffix=".yaml", delete=False, encoding="utf-8") as tmp:
+        tmp.write(config_content)
+        tmp_path = tmp.name
+
+    try:
+        with pytest.raises(Exception):
+            AppSettings.load(tmp_path)
+    finally:
+        os.remove(tmp_path)
+
+
 def test_llm_model_must_exist_in_config_when_no_env_fallback_is_used():
     config_content = """
 llm:
