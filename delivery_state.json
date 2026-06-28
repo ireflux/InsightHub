@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-27T11:27:16.932041+00:00",
+  "updated_at": "2026-06-28T11:47:10.348119+00:00",
   "runs": [
     {
       "timestamp": "2026-03-25T10:49:35.931655+00:00",
@@ -1499,6 +1499,22 @@
             "status": "success",
             "file_path": "output/posts/2026-06-27-1f0e56a0a941.md",
             "slug": "2026-06-27-1f0e56a0a941",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-28T11:47:10.347893+00:00",
+      "items_count": 9,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-06-28-69b7e6c36425.md",
+            "slug": "2026-06-28-69b7e6c36425",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -7251,6 +7267,69 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-06-27T11:27:16.932030+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/bikini/exploitarium": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-28T11:47:10.348069+00:00",
+        "error": null
+      }
+    },
+    "https://www.openra.net/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-28T11:47:10.348078+00:00",
+        "error": null
+      }
+    },
+    "https://www.marfapublicradio.org/podcast/marfa-public-radio-puts-you-to-sleep": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-28T11:47:10.348083+00:00",
+        "error": null
+      }
+    },
+    "https://evilbit.de/dns-resolver-guide.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-28T11:47:10.348086+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/kyuz0/amd-strix-halo-vllm-toolboxes/blob/main/rdma_cluster/setup_guide.md": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-28T11:47:10.348090+00:00",
+        "error": null
+      }
+    },
+    "https://decomp-academy.dev": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-28T11:47:10.348094+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/cfenollosa/bashblog": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-28T11:47:10.348102+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/itsthelore/wayfinder-router": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-28T11:47:10.348106+00:00",
+        "error": null
+      }
+    },
+    "https://shapeofthesystem.com/posts/2026/02/03/bounded-cognition": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-28T11:47:10.348109+00:00",
         "error": null
       }
     }
