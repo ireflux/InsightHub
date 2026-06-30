@@ -1,5 +1,6 @@
 import os
 import sys
+from typing import List, Optional
 
 import pytest
 
@@ -95,7 +96,7 @@ async def test_ranking_reason_is_assigned():
 class MockScoreProvider:
     """Mock LLM provider that returns controlled scoring results."""
 
-    def __init__(self, responses: List[str] | None = None):
+    def __init__(self, responses: Optional[List[str]] = None):
         self.responses = responses or ['{"quality_score": 7, "include": true, "reason": "good"}']
         self.call_count = 0
 
