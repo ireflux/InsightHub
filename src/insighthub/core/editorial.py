@@ -109,7 +109,7 @@ class EditorialPipeline:
         clusters = await self.plan_clusters(briefs)
         selected_items = self.selected_items(items, clusters)
         article_input = self.build_article_input(briefs, clusters, selected_items)
-        draft = await self._summarize(article_input, self.final_prompt_template)
+        draft = await self._summarize(article_input, self.final_prompt_template, operation_name="summarize")
         review = ReviewResult(passed=True)
         final_article = draft
         if self.review_enabled:

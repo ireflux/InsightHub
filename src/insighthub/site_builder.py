@@ -95,8 +95,13 @@ def build_site(
 
 
 def _load_manifest(path: str) -> Dict[str, Any]:
-    with open(path, "r", encoding="utf-8") as f:
-        data = json.load(f)
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+    except FileNotFoundError:
+        raise SystemExit(f"Manifest file not found: {path}")
+    except json.JSONDecodeError as e:
+        raise SystemExit(f"Invalid JSON in manifest file {path}: {e}")
     if not isinstance(data, dict):
         return {"posts": []}
     data.setdefault("posts", [])
@@ -379,7 +384,8 @@ def _write_rss(out: Path, posts: List[Dict[str, Any]], *, site_title: str, site_
         ET.SubElement(item, "guid").text = p.get("id", link)
         ET.SubElement(item, "description").text = p.get("summary", "")
         created = _parse_iso(p.get("created_at"))
-        ET.SubElement(item, "pubDate").text = _rfc2822(created)
+        if created is not None:
+            ET.SubElement(item, "pubDate").text = _rfc2822(created)
 
     ET.ElementTree(rss).write(out / "rss.xml", encoding="utf-8", xml_declaration=True)
 

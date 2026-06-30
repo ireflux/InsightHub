@@ -23,7 +23,7 @@ class TitlePolicy:
 
     def normalize_markdown(self, content: str) -> str:
         if not content:
-            return content
+            return ""
         lines = content.splitlines()
         if self.strip_leading_h1:
             idx = 0
