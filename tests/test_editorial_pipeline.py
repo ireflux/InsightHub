@@ -1,3 +1,4 @@
+import json
 import os
 import sys
 import tempfile
@@ -12,6 +13,7 @@ SRC_DIR = os.path.join(ROOT_DIR, "src")
 if SRC_DIR not in sys.path:
     sys.path.insert(0, SRC_DIR)
 
+from insighthub.core.editorial import EditorialPipeline, _parse_json_object
 from insighthub.core.engine import InsightEngine
 from insighthub.llm_providers.base import BaseLLMProvider
 from insighthub.models import NewsItem
@@ -34,7 +36,9 @@ class EditorialProvider(BaseLLMProvider):
                 '"uncertainties":["素材未提供更多细节"],'
                 f'"editorial_score":{8 if include else 2},'
                 f'"include":{str(include).lower()},'
-                '"reason":"编辑取舍理由"'
+                '"reason":"编辑取舍理由",'
+                '"content_snippet":"核心内容片段",'
+                '"top_comments":["评论1","评论2"]'
                 "}"
             )
         if "值班主编" in content:
@@ -58,6 +62,9 @@ class EditorialProvider(BaseLLMProvider):
 
     async def classify(self, content: str, categories: List[str], prompt_template: str) -> str:
         return categories[0]
+
+    async def score(self, content: str, prompt_template: str) -> str:
+        return '{"quality_score": 7, "include": true, "reason": "test"}'
 
 
 @pytest.mark.asyncio
@@ -92,3 +99,129 @@ async def test_editorial_pipeline_selects_items_and_revises_draft():
         assert (Path(tmp_dir) / "run1" / "briefs.json").exists()
         assert (Path(tmp_dir) / "run1" / "clusters.json").exists()
         assert (Path(tmp_dir) / "run1" / "draft.md").exists()
+
+
+@pytest.mark.asyncio
+async def test_brief_includes_content_snippet():
+    """Brief LLM response should populate content_snippet on ItemBrief."""
+    provider = EditorialProvider()
+    pipeline = EditorialPipeline(
+        llm_provider=provider,
+        final_prompt_template="template",
+        brief_concurrency=1,
+        max_briefs=5,
+        min_final_items=1,
+        max_final_items=3,
+        review_enabled=False,
+        revise_enabled=False,
+    )
+
+    item = NewsItem(
+        id="test", title="Test", url="https://example.com/test",
+        source="HN", content="Some content",
+        original_data={"hn_score": 100, "hn_comments": 50},
+    )
+    result = await pipeline.run([item])
+
+    briefs = result["briefs"]
+    assert len(briefs) == 1
+    assert briefs[0].content_snippet == "核心内容片段"
+
+
+@pytest.mark.asyncio
+async def test_brief_includes_top_comments():
+    """Brief LLM response should populate top_comments on ItemBrief."""
+    provider = EditorialProvider()
+    pipeline = EditorialPipeline(
+        llm_provider=provider,
+        final_prompt_template="template",
+        brief_concurrency=1,
+        max_briefs=5,
+        min_final_items=1,
+        max_final_items=3,
+        review_enabled=False,
+        revise_enabled=False,
+    )
+
+    item = NewsItem(
+        id="test", title="Test", url="https://example.com/test",
+        source="HN", content="Some content",
+        original_data={"hn_score": 100, "hn_comments": 50},
+    )
+    result = await pipeline.run([item])
+
+    briefs = result["briefs"]
+    assert len(briefs) == 1
+    assert briefs[0].top_comments == ["评论1", "评论2"]
+
+
+@pytest.mark.asyncio
+async def test_review_defaults_failed_when_issues_no_passed_field():
+    """When review returns issues but no explicit passed field, should default to False."""
+    provider = EditorialProvider()
+
+    # Override the review response to have issues but no passed field
+    original_summarize = provider.summarize
+    async def patched_summarize(content, prompt_template):
+        if "严苛的中文科技媒体审校" in content:
+            return '{"issues":["缺少编辑手记"],"revision_instructions":"加上手记"}'
+        return await original_summarize(content, prompt_template)
+
+    provider.summarize = patched_summarize
+
+    pipeline = EditorialPipeline(
+        llm_provider=provider,
+        final_prompt_template="template",
+        brief_concurrency=1,
+        max_briefs=5,
+        min_final_items=1,
+        max_final_items=3,
+        review_enabled=True,
+        revise_enabled=True,
+    )
+
+    item = NewsItem(
+        id="test", title="Test", url="https://example.com/test",
+        source="HN", content="Some content",
+        original_data={"hn_score": 100, "hn_comments": 50},
+    )
+    result = await pipeline.run([item])
+
+    assert not result["review"].passed
+    assert result["final_article"] == "## 今日概览\n\n修订稿\n\n## 新闻速递\n\n### [重要主题](https://example.com/high)\n\n正文\n\n## 编辑手记\n\n判断"
+
+
+@pytest.mark.asyncio
+async def test_article_input_has_enriched_briefs():
+    """build_article_input should include content_snippet and top_comments in JSON."""
+    provider = EditorialProvider()
+    pipeline = EditorialPipeline(
+        llm_provider=provider,
+        final_prompt_template="template",
+        brief_concurrency=1,
+        max_briefs=5,
+        min_final_items=1,
+        max_final_items=3,
+        review_enabled=False,
+        revise_enabled=False,
+    )
+
+    item = NewsItem(
+        id="test", title="Test", url="https://example.com/test",
+        source="HN", content="Some content",
+        original_data={"hn_score": 100, "hn_comments": 50},
+    )
+    result = await pipeline.run([item])
+
+    article_input = result["article_input"]
+    # The article input should contain the brief JSON with enriched fields
+    for brief_json_line in article_input.split("\n"):
+        if "{" in brief_json_line and "content_snippet" in brief_json_line:
+            brief_data = json.loads(brief_json_line)
+            assert "content_snippet" in brief_data
+            assert "top_comments" in brief_data
+            break
+    else:
+        # If no single line has both, check the full input
+        assert "content_snippet" in article_input
+        assert "top_comments" in article_input

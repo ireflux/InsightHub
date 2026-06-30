@@ -109,5 +109,13 @@ class NvidiaProvider(BaseLLMProvider):
         except Exception as e:
             raise LLMProcessingError(f"NVIDIA classification failed: {e}") from e
 
+    async def score(self, content: str, prompt_template: str) -> str:
+        prompt = self.render_prompt(prompt_template, content=content)
+        try:
+            raw = await self._call_chat([{"role": "user", "content": prompt}])
+            return self._extract_text_from_response(raw)
+        except Exception as e:
+            raise LLMProcessingError(f"NVIDIA scoring failed: {e}") from e
+
     async def aclose(self) -> None:
         await self.client.aclose()

@@ -1,11 +1,65 @@
+import json
 import logging
 import re
-from typing import Dict, List, Tuple
+import asyncio
+from typing import Any, Dict, List, Optional, Tuple
 
 from insighthub.models import NewsItem
 from insighthub.settings import ScoringConfig
+from insighthub.core.retry import with_retry
+from insighthub.errors import LLMProcessingError
 
 logger = logging.getLogger(__name__)
+
+
+def _extract_first_json_object(text: str) -> Optional[str]:
+    """Return the first balanced top-level ``{...}`` object found in *text*."""
+    start = text.find("{")
+    if start == -1:
+        return None
+    depth = 0
+    in_string = False
+    escape = False
+    for index in range(start, len(text)):
+        char = text[index]
+        if in_string:
+            if escape:
+                escape = False
+            elif char == "\\":
+                escape = True
+            elif char == '"':
+                in_string = False
+            continue
+        if char == '"':
+            in_string = True
+            continue
+        if char == "{":
+            depth += 1
+        elif char == "}":
+            depth -= 1
+            if depth == 0:
+                return text[start : index + 1]
+    return None
+
+
+def _parse_json_object(text: str) -> Dict[str, Any]:
+    """Parse a JSON object from text, extracting it if necessary."""
+    try:
+        data = json.loads(text)
+        if isinstance(data, dict):
+            return data
+    except json.JSONDecodeError:
+        pass
+    extracted = _extract_first_json_object(text)
+    if extracted is None:
+        raise LLMProcessingError(f"Expected JSON object from scoring, got: {text[:500]}")
+    try:
+        data = json.loads(extracted)
+    except json.JSONDecodeError as e:
+        raise LLMProcessingError(f"Invalid JSON from scoring: {text[:500]}") from e
+    if not isinstance(data, dict):
+        raise LLMProcessingError("Expected JSON object from scoring.")
+    return data
 
 COMMENT_TIERS: List[Tuple[int, str]] = [
     (200, "Explosive"),
@@ -25,10 +79,21 @@ def tier_from_score(score: float) -> str:
 
 
 class ContentScorer:
-    def __init__(self, config: ScoringConfig):
+    def __init__(self, config: ScoringConfig, llm_provider=None):
         self.config = config
+        self.llm_provider = llm_provider
 
     async def score_items(self, items: List[NewsItem]) -> List[NewsItem]:
+        if not items:
+            return items
+
+        if self.config.use_llm_scoring and self.llm_provider is not None:
+            return await self._llm_score_items(items)
+        return await self._heuristic_score_items(items)
+
+    # ---- Heuristic scoring (legacy path, unchanged) ----
+
+    async def _heuristic_score_items(self, items: List[NewsItem]) -> List[NewsItem]:
         if not items:
             return items
 
@@ -81,6 +146,119 @@ class ContentScorer:
             ranked_items.append(item)
 
         return ranked_items
+
+    # ---- LLM scoring ----
+
+    async def _llm_score_items(self, items: List[NewsItem]) -> List[NewsItem]:
+        """Score items using LLM evaluation with concurrent processing."""
+        logger.info(
+            "Starting LLM-based scoring.",
+            extra={"event": "engine.score.llm_start", "items_count": len(items)},
+        )
+        concurrency = self.config.llm_scoring_concurrency
+        semaphore = asyncio.Semaphore(concurrency)
+
+        async def score_one(item: NewsItem) -> NewsItem:
+            async with semaphore:
+                try:
+                    return await self._llm_score_single(item)
+                except Exception as e:
+                    logger.warning(
+                        "LLM scoring failed for item, assigning score 0.",
+                        extra={"event": "engine.score.llm_failed", "item_id": item.id, "error": str(e)},
+                    )
+                    item.llm_quality_score = 0.0
+                    item.ranking_reason = "LLM scoring failed"
+                    return item
+
+        scored_items = await asyncio.gather(*(score_one(item) for item in items))
+
+        # Sort by LLM quality score descending
+        scored_items.sort(key=lambda x: (x.llm_quality_score or 0), reverse=True)
+
+        # Apply threshold filter
+        threshold = self.config.llm_scoring_threshold
+        filtered = [item for item in scored_items if (item.llm_quality_score or 0) >= threshold]
+
+        logger.info(
+            "LLM scoring completed.",
+            extra={
+                "event": "engine.score.llm_completed",
+                "before_count": len(scored_items),
+                "after_count": len(filtered),
+                "threshold": threshold,
+                "avg_score": round(
+                    sum(item.llm_quality_score or 0 for item in scored_items) / max(len(scored_items), 1),
+                    2,
+                ),
+            },
+        )
+        return filtered
+
+    async def _llm_score_single(self, item: NewsItem) -> NewsItem:
+        """Run a single LLM scoring call with retry."""
+        prompt = self._llm_score_prompt(item)
+
+        async def op() -> str:
+            try:
+                return await self.llm_provider.score(prompt, "{content}")
+            except LLMProcessingError:
+                raise
+            except Exception as e:
+                raise LLMProcessingError(f"LLM scoring failed: {e}") from e
+
+        raw = await with_retry(
+            op,
+            logger=logger,
+            operation_name=f"scoring.llm:{item.id}",
+            max_attempts=3,
+            base_delay_seconds=2.0,
+            backoff_multiplier=2.0,
+            max_delay_seconds=30.0,
+        )
+
+        try:
+            data = _parse_json_object(raw)
+            quality_score = float(data.get("quality_score", 0))
+            include = bool(data.get("include", False))
+            reason = str(data.get("reason", "")).strip()
+        except (LLMProcessingError, ValueError, TypeError):
+            quality_score = 0.0
+            include = False
+            reason = "Failed to parse LLM scoring response"
+
+        item.llm_quality_score = quality_score
+        item.ranking_reason = reason
+        return item
+
+    @staticmethod
+    def _llm_score_prompt(item: NewsItem) -> str:
+        """Build the scoring prompt for a single news item."""
+        payload = {
+            "id": item.id,
+            "title": item.title,
+            "url": item.url,
+            "source": item.source,
+            "content": item.content or "",
+            "original_data": item.original_data or {},
+            "heuristic_signal": item.discussion_signal,
+            "heuristic_tier": item.discussion_tier,
+        }
+        return (
+            "你是资深科技媒体编辑。请评估以下新闻素材的质量，决定是否值得纳入今日科技日报。\n"
+            "评估维度：\n"
+            "1. 内容丰富度：是否有实质性信息、数据、背景？\n"
+            "2. 新闻价值：是否是重要事件、发布、突破？\n"
+            "3. 独特性：是否提供了其他素材中没有的信息角度？\n"
+            "4. 编辑故事潜力：是否能成为一篇好报道的核心素材？\n"
+            "只输出 JSON，不要 Markdown，不要解释。\n"
+            "JSON schema: {\n"
+            '  "quality_score": 0-10 整数,\n'
+            '  "include": true/false,\n'
+            '  "reason": "一句话说明评分理由"\n'
+            "}\n\n"
+            f"素材：\n{json.dumps(payload, ensure_ascii=False)}"
+        )
 
     def select_items_for_summary(self, items: List[NewsItem]) -> List[NewsItem]:
         ranked = sorted(

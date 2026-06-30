@@ -132,7 +132,7 @@ class OpenRouterProvider(BaseLLMProvider):
     async def classify(self, content: str, categories: List[str], prompt_template: str) -> str:
         """
         Classifies content using the OpenRouter API.
-        
+
         Note: Retry logic is handled by the engine layer (with_retry).
         Do not add retry decorators here to avoid nested retry loops.
         """
@@ -147,6 +147,20 @@ class OpenRouterProvider(BaseLLMProvider):
         except Exception as e:
             # Wrap in LLMProcessingError which is marked as retryable
             raise LLMProcessingError(f"OpenRouter classification failed: {e}") from e
+
+    async def score(self, content: str, prompt_template: str) -> str:
+        """
+        Scores content using the OpenRouter API.
+
+        Note: Retry logic is handled by the engine layer (with_retry).
+        Do not add retry decorators here to avoid nested retry loops.
+        """
+        prompt = self.render_prompt(prompt_template, content=content)
+        try:
+            raw = await self._call_chat([{"role": "user", "content": prompt}])
+            return self._extract_text_from_response(raw)
+        except Exception as e:
+            raise LLMProcessingError(f"OpenRouter scoring failed: {e}") from e
 
     async def aclose(self) -> None:
         await self.client.aclose()

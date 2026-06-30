@@ -108,6 +108,9 @@ class StateConfig(BaseModel):
 class ScoringConfig(BaseModel):
     enabled: bool = False
     scoring_threshold: Optional[float] = None
+    use_llm_scoring: bool = True
+    llm_scoring_threshold: float = 4.0
+    llm_scoring_concurrency: int = 4
 
     @model_validator(mode="before")
     @classmethod
@@ -299,6 +302,11 @@ class AppSettings(BaseModel):
 
         if self.scoring.scoring_threshold is not None and self.scoring.scoring_threshold < 0:
             raise ConfigValidationError("scoring.scoring_threshold must be >= 0 when provided.")
+        if self.scoring.use_llm_scoring:
+            if not (0 <= self.scoring.llm_scoring_threshold <= 10):
+                raise ConfigValidationError("scoring.llm_scoring_threshold must be between 0 and 10.")
+            if self.scoring.llm_scoring_concurrency < 1:
+                raise ConfigValidationError("scoring.llm_scoring_concurrency must be >= 1.")
         if self.summarization.mode not in {"one_shot", "editorial"}:
             raise ConfigValidationError("summarization.mode must be one of one_shot, editorial.")
         if self.summarization.brief_concurrency <= 0:

@@ -21,6 +21,9 @@ class NewsItem(BaseModel):
         description="Per-dimension discussion breakdown",
     )
     ranking_reason: Optional[str] = Field(None, description="Short reason for the ranking")
+    llm_quality_score: Optional[float] = Field(
+        None, description="LLM-evaluated quality score 0-10"
+    )
     publish_date: Optional[datetime] = Field(None, description="Publication date if available")
     original_data: Optional[Dict[str, Any]] = Field(default_factory=dict, description="Raw data from the source")
     

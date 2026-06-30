@@ -45,6 +45,19 @@ class FailoverLLMProvider(BaseLLMProvider):
                 )
         raise RuntimeError(f"All LLM classify providers failed. Last error: {last_error}")
 
+    async def score(self, content: str, prompt_template: str) -> str:
+        last_error: Exception | None = None
+        for provider, label in zip(self.providers, self.provider_labels):
+            try:
+                return await provider.score(content, prompt_template)
+            except Exception as e:
+                last_error = e
+                logger.warning(
+                    "LLM score failed on provider, trying next if available.",
+                    extra={"event": "llm.failover.score_failed", "provider": label, "error": str(e)},
+                )
+        raise RuntimeError(f"All LLM score providers failed. Last error: {last_error}")
+
     async def aclose(self) -> None:
         for provider in self.providers:
             close_fn = getattr(provider, "aclose", None)

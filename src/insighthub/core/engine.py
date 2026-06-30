@@ -77,7 +77,7 @@ class InsightEngine:
             strip_leading_h1=True,
         )
         self._strip_query_params = set(self.dedup_config.strip_query_params)
-        self.scorer = ContentScorer(config=self.scoring_config)
+        self.scorer = ContentScorer(config=self.scoring_config, llm_provider=self.llm_provider)
         self.prompt_renderer = PromptRenderer(
             prompts_dir=prompts_dir,
             structure_name=prompt_structure,

@@ -117,7 +117,7 @@ class ZhipuAIProvider(BaseLLMProvider):
     async def classify(self, content: str, categories: List[str], prompt_template: str) -> str:
         """
         Classifies content into categories using the specified ZhipuAI model.
-        
+
         Note: Retry logic is handled by the engine layer (with_retry).
         Do not add retry decorators here to avoid nested retry loops.
         """
@@ -132,6 +132,20 @@ class ZhipuAIProvider(BaseLLMProvider):
             logger.error(f"Error calling ZhipuAI API: {e}", exc_info=True)
             # Wrap in LLMProcessingError which is marked as retryable
             raise LLMProcessingError(f"ZhipuAI classification failed: {e}") from e
+
+    async def score(self, content: str, prompt_template: str) -> str:
+        """
+        Scores content using the specified ZhipuAI model.
+
+        Note: Retry logic is handled by the engine layer (with_retry).
+        Do not add retry decorators here to avoid nested retry loops.
+        """
+        prompt = self.render_prompt(prompt_template, content=content)
+        try:
+            return await self._chat(prompt)
+        except Exception as e:
+            logger.error(f"Error calling ZhipuAI API for scoring: {e}", exc_info=True)
+            raise LLMProcessingError(f"ZhipuAI scoring failed: {e}") from e
 
     async def aclose(self) -> None:
         await self.client.aclose()

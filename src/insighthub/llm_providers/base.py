@@ -39,6 +39,20 @@ class BaseLLMProvider(ABC):
         """
         pass
 
+    @abstractmethod
+    async def score(self, content: str, prompt_template: str) -> str:
+        """
+        Scores the content and returns a JSON string with quality assessment.
+
+        Args:
+            content: The text content to be scored.
+            prompt_template: The template for the prompt with placeholders.
+
+        Returns:
+            A JSON string containing quality_score (0-10), include (bool), and reason (str).
+        """
+        pass
+
     async def aclose(self) -> None:
         """Optional cleanup hook for providers with network clients."""
         return None

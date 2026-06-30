@@ -35,7 +35,7 @@ sources:
     - id: "hn_main"
       type: "hacker_news"
       enabled: true
-      max_items: 10
+      max_items: 12
       params: {}
     - id: "v2ex_main"
       type: "v2ex_hot"
@@ -44,7 +44,7 @@ sources:
       params: {}
     - id: "slashdot_main"
       type: "slashdot"
-      enabled: true
+      enabled: false
       max_items: 8
       params: {}
 
@@ -109,7 +109,9 @@ runtime:
 
 scoring:
   enabled: true
-  scoring_threshold: 6.0
+  use_llm_scoring: true
+  llm_scoring_threshold: 4.0
+  llm_scoring_concurrency: 4
 
 summarization:
   mode: "editorial" # editorial or one_shot

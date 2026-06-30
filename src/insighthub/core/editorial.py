@@ -26,6 +26,8 @@ class ItemBrief:
     editorial_score: float = 0.0
     include: bool = True
     reason: str = ""
+    content_snippet: str = ""
+    top_comments: List[str] = field(default_factory=list)
 
     def to_dict(self) -> Dict[str, Any]:
         return {
@@ -40,6 +42,8 @@ class ItemBrief:
             "editorial_score": self.editorial_score,
             "include": self.include,
             "reason": self.reason,
+            "content_snippet": self.content_snippet,
+            "top_comments": self.top_comments,
         }
 
 
@@ -177,6 +181,8 @@ class EditorialPipeline:
             editorial_score=_float_in_range(data.get("editorial_score"), 0.0, 10.0),
             include=bool(data.get("include", True)),
             reason=str(data.get("reason", "")).strip(),
+            content_snippet=str(data.get("content_snippet", "")).strip(),
+            top_comments=_string_list(data.get("top_comments")),
         )
 
     async def plan_clusters(self, briefs: List[ItemBrief]) -> List[StoryCluster]:
@@ -234,6 +240,7 @@ class EditorialPipeline:
             "以下是经过单条理解、编辑取舍和主题合并后的素材。请严格基于这些素材写作。",
             "允许最终文章根据材料质量动态决定条目数量；不要硬凑。",
             "每条新闻标题必须链接到对应 primary URL。",
+            "每条素材包含核心内容片段(content_snippet)和精选社区评论(top_comments)，可作为写作参考。",
             "",
         ]
         for index, cluster in enumerate([c for c in clusters if c.include], start=1):
@@ -259,8 +266,14 @@ class EditorialPipeline:
         )
         data = _parse_json_object(raw)
         issues = _string_list(data.get("issues"))
+        if "passed" in data:
+            passed = bool(data["passed"])
+        elif issues:
+            passed = False
+        else:
+            passed = True
         return ReviewResult(
-            passed=bool(data.get("passed", not issues)),
+            passed=passed,
             issues=issues,
             revision_instructions=str(data.get("revision_instructions") or "").strip(),
         )
@@ -289,12 +302,25 @@ class EditorialPipeline:
 
     @staticmethod
     def _brief_prompt(item: NewsItem) -> str:
+        content = item.content or ""
+        content_snippet = content[:1000] if len(content) > 1000 else content
+        top_comments = []
+        comments_data = (item.original_data or {}).get("top_comments") or []
+        for c in comments_data:
+            if isinstance(c, dict):
+                text = c.get("text", "")
+            else:
+                text = str(c)
+            if text:
+                top_comments.append(text[:500])
         payload = {
             "id": item.id,
             "title": item.title,
             "url": item.url,
             "source": item.source,
-            "content": item.content or "",
+            "content": content,
+            "content_snippet": content_snippet,
+            "top_comments": top_comments,
             "discussion_signal": item.discussion_signal,
             "discussion_tier": item.discussion_tier,
             "ranking_reason": item.ranking_reason,
@@ -312,7 +338,9 @@ class EditorialPipeline:
             '  "uncertainties": ["..."],\n'
             '  "editorial_score": 0-10,\n'
             '  "include": true/false,\n'
-            '  "reason": "一句话说明取舍理由"\n'
+            '  "reason": "一句话说明取舍理由",\n'
+            '  "content_snippet": "核心内容片段（1-2段，不超过1000字符）",\n'
+            '  "top_comments": ["最有价值的2-3条社区评论"]\n'
             "}\n\n"
             f"素材：\n{json.dumps(payload, ensure_ascii=False)}"
         )
