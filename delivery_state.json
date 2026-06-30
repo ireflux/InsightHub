@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-30T07:12:35.391322+00:00",
+  "updated_at": "2026-06-30T12:11:17.666768+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -11,6 +11,22 @@
             "status": "success",
             "file_path": "output/posts/2026-06-30-2dcfe041170c.md",
             "slug": "2026-06-30-2dcfe041170c",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-30T12:11:17.666574+00:00",
+      "items_count": 6,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-06-30-d65114573647.md",
+            "slug": "2026-06-30-d65114573647",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -93,6 +109,48 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-06-30T07:12:35.391315+00:00",
+        "error": null
+      }
+    },
+    "https://antaresindustries.com/updates/antares-achieves-criticality": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-30T12:11:17.666735+00:00",
+        "error": null
+      }
+    },
+    "https://waag.org/en/article/european-digital-id-wallets-are-gift-google-and-apple": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-30T12:11:17.666740+00:00",
+        "error": null
+      }
+    },
+    "https://arstechnica.com/gadgets/2026/06/sony-erases-digital-content-from-libraries-were-reminded-we-dont-own-what-we-buy": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-30T12:11:17.666744+00:00",
+        "error": null
+      }
+    },
+    "https://www.economist.com/science-and-technology/2026/06/29/should-every-babys-dna-be-sequenced": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-30T12:11:17.666747+00:00",
+        "error": null
+      }
+    },
+    "https://cekrem.github.io/posts/parse-dont-validate-typescript": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-30T12:11:17.666751+00:00",
+        "error": null
+      }
+    },
+    "https://europeancorrespondent.com/en/r/the-us-ambassador-had-belgian-police-stop-our-reporting": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-30T12:11:17.666755+00:00",
         "error": null
       }
     }
