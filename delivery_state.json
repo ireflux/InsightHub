@@ -1,0 +1,100 @@
+{
+  "updated_at": "2026-06-30T07:12:35.391322+00:00",
+  "runs": [
+    {
+      "timestamp": "2026-06-30T07:12:35.391089+00:00",
+      "items_count": 11,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-06-30-2dcfe041170c.md",
+            "slug": "2026-06-30-2dcfe041170c",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    }
+  ],
+  "items": {
+    "https://quesma.com/blog/qwen-36-is-awesome": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-30T07:12:35.391265+00:00",
+        "error": null
+      }
+    },
+    "https://hccf.onmy.cloud/2026/06/21/reclaiming-our-digital-selves-hccfs-vision-for-a-human-centered-top-level-domain": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-30T07:12:35.391271+00:00",
+        "error": null
+      }
+    },
+    "https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-acquire-iridium-historic-deal-creating-fully": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-30T07:12:35.391276+00:00",
+        "error": null
+      }
+    },
+    "https://weblog.rogueamoeba.com/2026/06/26/free-the-icons": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-30T07:12:35.391280+00:00",
+        "error": null
+      }
+    },
+    "https://longcat.chat/blog/longcat-2.0": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-30T07:12:35.391285+00:00",
+        "error": null
+      }
+    },
+    "https://fil-c.org/context_switches": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-30T07:12:35.391289+00:00",
+        "error": null
+      }
+    },
+    "https://moondream.ai/blog/popping-the-gpu-bubble": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-30T07:12:35.391298+00:00",
+        "error": null
+      }
+    },
+    "https://obsolescence.dev/pdp1-lisp-introduction.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-30T07:12:35.391303+00:00",
+        "error": null
+      }
+    },
+    "http://occ.sdf.org/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-30T07:12:35.391308+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/LinuxMD/linuxmd": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-30T07:12:35.391312+00:00",
+        "error": null
+      }
+    },
+    "https://opensourcelowtech.org/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-06-30T07:12:35.391315+00:00",
+        "error": null
+      }
+    }
+  }
+}

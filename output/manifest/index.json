@@ -1,0 +1,24 @@
+{
+  "site_timezone": "Asia/Shanghai",
+  "generated_at": "2026-06-30T15:12:35.389891+08:00",
+  "posts": [
+    {
+      "id": "2026-06-30-2dcfe041170c",
+      "run_id": "2dcfe041170c",
+      "date": "2026-06-30",
+      "title": "每日趋势观察 2026-06-30",
+      "slug": "2026-06-30-2dcfe041170c",
+      "markdown_path": "posts/2026-06-30-2dcfe041170c.md",
+      "summary": "本地大模型推理性能逼近商用级，硬件适配与软件优化成为关键变量；复古计算文化在对抗算法洪流中寻求新的表达形式。与此同时，底层系统安全机制取得突破，传统基础设施探索开源替代方案，而太空产业则通过并购重塑竞争格局。",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 11,
+      "is_empty_update": false,
+      "created_at": "2026-06-30T15:12:35.389891+08:00"
+    }
+  ]
+}
