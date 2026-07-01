@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-30T12:11:17.666768+00:00",
+  "updated_at": "2026-07-01T12:35:32.625474+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -27,6 +27,22 @@
             "status": "success",
             "file_path": "output/posts/2026-06-30-d65114573647.md",
             "slug": "2026-06-30-d65114573647",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-01T12:35:32.625247+00:00",
+      "items_count": 10,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-07-01-5a3e3818f82b.md",
+            "slug": "2026-07-01-5a3e3818f82b",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -151,6 +167,76 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-06-30T12:11:17.666755+00:00",
+        "error": null
+      }
+    },
+    "https://www.anthropic.com/news/claude-sonnet-5": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-01T12:35:32.625430+00:00",
+        "error": null
+      }
+    },
+    "https://thereallo.dev/blog/claude-code-prompt-steganography": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-01T12:35:32.625434+00:00",
+        "error": null
+      }
+    },
+    "https://www.pcgamer.com/gaming-industry/open-source-game-engine-godot-will-no-longer-accept-ai-authored-code-contributions-we-cant-trust-heavy-users-of-ai-to-understand-their-code-enough-to-fix-it": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-01T12:35:32.625437+00:00",
+        "error": null
+      }
+    },
+    "https://blog.arxiv.org/2026/06/30/arxivs-next-chapter": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-01T12:35:32.625440+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/google/copybara": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-01T12:35:32.625444+00:00",
+        "error": null
+      }
+    },
+    "https://asahilinux.org/2026/06/progress-report-7-1": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-01T12:35:32.625447+00:00",
+        "error": null
+      }
+    },
+    "https://cleberg.net/blog/internet.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-01T12:35:32.625455+00:00",
+        "error": null
+      }
+    },
+    "https://www.thefocalpoints.com/p/new-study-frog-derived-gut-bacterium": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-01T12:35:32.625459+00:00",
+        "error": null
+      }
+    },
+    "https://phys.org/news/2026-06-newly-australian-ballista-spider-snare.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-01T12:35:32.625462+00:00",
+        "error": null
+      }
+    },
+    "https://vitalik.eth.limo/general/2026/06/29/obfuscation1.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-01T12:35:32.625465+00:00",
         "error": null
       }
     }
