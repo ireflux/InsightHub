@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-01T12:35:32.625474+00:00",
+  "updated_at": "2026-07-02T12:12:46.423241+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -43,6 +43,22 @@
             "status": "success",
             "file_path": "output/posts/2026-07-01-5a3e3818f82b.md",
             "slug": "2026-07-01-5a3e3818f82b",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-02T12:12:46.423101+00:00",
+      "items_count": 1,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-07-02-6b55e8775032.md",
+            "slug": "2026-07-02-6b55e8775032",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -237,6 +253,13 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-07-01T12:35:32.625465+00:00",
+        "error": null
+      }
+    },
+    "https://tedium.co/2026/07/01/online-web-forums-retrospective": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-02T12:12:46.423229+00:00",
         "error": null
       }
     }
