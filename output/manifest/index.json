@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-07-02T20:12:46.421554+08:00",
+  "generated_at": "2026-07-03T20:13:00.223051+08:00",
   "posts": [
+    {
+      "id": "2026-07-03-1a063276c04d",
+      "run_id": "1a063276c04d",
+      "date": "2026-07-03",
+      "title": "每日趋势观察 2026-07-03",
+      "slug": "2026-07-03-1a063276c04d",
+      "markdown_path": "posts/2026-07-03-1a063276c04d.md",
+      "summary": "阿里巴巴据报禁止在工作场所使用 Anthropic 的 Claude Code，引发关于远程 AI 工具数据安全的讨论。与此同时，Rivian 拒绝在 R2 车型中提供 CarPlay，凸显了车企全栈自研策略与用户跨设备一致性需求之间的冲突。",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 6,
+      "is_empty_update": false,
+      "created_at": "2026-07-03T20:13:00.223051+08:00"
+    },
     {
       "id": "2026-07-02-6b55e8775032",
       "run_id": "6b55e8775032",
