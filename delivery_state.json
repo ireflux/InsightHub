@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-03T12:13:00.224845+00:00",
+  "updated_at": "2026-07-04T11:28:27.078464+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -75,6 +75,22 @@
             "status": "success",
             "file_path": "output/posts/2026-07-03-1a063276c04d.md",
             "slug": "2026-07-03-1a063276c04d",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-04T11:28:27.078287+00:00",
+      "items_count": 7,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-07-04-470af2a471f6.md",
+            "slug": "2026-07-04-470af2a471f6",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -318,6 +334,55 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-07-03T12:13:00.224833+00:00",
+        "error": null
+      }
+    },
+    "https://www.quantamagazine.org/astrophysicists-puzzle-over-webbs-new-universe-20260702": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-04T11:28:27.078425+00:00",
+        "error": null
+      }
+    },
+    "https://www.wafer.ai/blog/glm52-amd": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-04T11:28:27.078432+00:00",
+        "error": null
+      }
+    },
+    "https://mrbruh.com/msicenter": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-04T11:28:27.078436+00:00",
+        "error": null
+      }
+    },
+    "https://blog.mikebowler.ca/2026/07/03/co2-and-decision-making": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-04T11:28:27.078440+00:00",
+        "error": null
+      }
+    },
+    "https://danluu.com/ai-coding": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-04T11:28:27.078443+00:00",
+        "error": null
+      }
+    },
+    "https://mistral.ai/news/leanstral-1-5": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-04T11:28:27.078447+00:00",
+        "error": null
+      }
+    },
+    "https://news.exeter.ac.uk/faculty-of-environment-science-and-economy/giant-trees-have-no-trouble-pumping-water-to-top-branches": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-04T11:28:27.078455+00:00",
         "error": null
       }
     }
