@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-04T11:28:27.078464+00:00",
+  "updated_at": "2026-07-05T11:34:40.544309+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -91,6 +91,22 @@
             "status": "success",
             "file_path": "output/posts/2026-07-04-470af2a471f6.md",
             "slug": "2026-07-04-470af2a471f6",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-05T11:34:40.544170+00:00",
+      "items_count": 4,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-07-05-0d14f5986c57.md",
+            "slug": "2026-07-05-0d14f5986c57",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -383,6 +399,34 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-07-04T11:28:27.078455+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/openai/codex/issues/30364": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-05T11:34:40.544289+00:00",
+        "error": null
+      }
+    },
+    "https://ui.shadcn.com/docs/changelog": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-05T11:34:40.544296+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/ammaarreshi/Generals-Mac-iOS-iPad/tree/main": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-05T11:34:40.544299+00:00",
+        "error": null
+      }
+    },
+    "https://unsung.aresluna.org/if-youre-a-button-you-have-one-job": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-05T11:34:40.544302+00:00",
         "error": null
       }
     }

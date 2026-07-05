@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-07-04T19:28:27.076715+08:00",
+  "generated_at": "2026-07-05T19:34:40.542615+08:00",
   "posts": [
+    {
+      "id": "2026-07-05-0d14f5986c57",
+      "run_id": "0d14f5986c57",
+      "date": "2026-07-05",
+      "title": "每日趋势观察 2026-07-05",
+      "slug": "2026-07-05-0d14f5986c57",
+      "markdown_path": "posts/2026-07-05-0d14f5986c57.md",
+      "summary": "OpenAI 旗下 GPT-5.5 在 Codex 环境中引发推理 Token 异常聚类的争议，社区量化数据疑似指向底层缓冲截断 Bug，可能导致复杂任务准确率下降。与此同时，前端生态核心工具 shadcn/ui 正式弃用 Radix UI 转而拥抱 Base UI，并引入基于 LLM Agent 的代码迁移方案，引发社区对 AI 辅助工程可靠性及公告文风的质疑。",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 4,
+      "is_empty_update": false,
+      "created_at": "2026-07-05T19:34:40.542615+08:00"
+    },
     {
       "id": "2026-07-04-470af2a471f6",
       "run_id": "470af2a471f6",
