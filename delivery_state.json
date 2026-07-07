@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-06T13:48:48.278269+00:00",
+  "updated_at": "2026-07-07T12:31:19.954242+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -123,6 +123,22 @@
             "status": "success",
             "file_path": "output/posts/2026-07-06-e47c97d97f0a.md",
             "slug": "2026-07-06-e47c97d97f0a",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-07T12:31:19.953985+00:00",
+      "items_count": 6,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-07-07-16de91a05d89.md",
+            "slug": "2026-07-07-16de91a05d89",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -485,6 +501,48 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-07-06T13:48:48.278252+00:00",
+        "error": null
+      }
+    },
+    "https://www.pcmag.com/news/a-hackers-arrest-reveals-microsoft-can-track-users-via-a-windows-device": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-07T12:31:19.954187+00:00",
+        "error": null
+      }
+    },
+    "https://spectrum.ieee.org/small-language-models-ai-pharmaceuticals": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-07T12:31:19.954193+00:00",
+        "error": null
+      }
+    },
+    "https://martinalderson.com/posts/the-upcoming-ai-margin-collapse-part-1-glm-5-2": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-07T12:31:19.954196+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/MaximeRivest/Riddle": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-07T12:31:19.954200+00:00",
+        "error": null
+      }
+    },
+    "https://www.nwo.nl/nieuws/eerste-internationale-wetenschappers-via-het-tulp-fonds-naar-nederland": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-07T12:31:19.954203+00:00",
+        "error": null
+      }
+    },
+    "https://bradleywoolf.com/links-1/sequencing-my-own-dna-at-home": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-07T12:31:19.954207+00:00",
         "error": null
       }
     }
