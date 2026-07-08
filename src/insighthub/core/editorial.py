@@ -88,6 +88,10 @@ class EditorialPipeline:
         llm_provider: BaseLLMProvider,
         final_prompt_template: str,
         *,
+        brief_prompt_template: str = "{content}",
+        cluster_prompt_template: str = "{content}",
+        review_prompt_template: str = "{content}",
+        revision_prompt_template: str = "{content}",
         brief_concurrency: int = 4,
         max_briefs: int = 12,
         min_final_items: int = 3,
@@ -98,6 +102,10 @@ class EditorialPipeline:
     ):
         self.llm_provider = llm_provider
         self.final_prompt_template = final_prompt_template
+        self.brief_prompt_template = brief_prompt_template
+        self.cluster_prompt_template = cluster_prompt_template
+        self.review_prompt_template = review_prompt_template
+        self.revision_prompt_template = revision_prompt_template
         self.brief_concurrency = max(1, brief_concurrency)
         self.max_briefs = max(1, max_briefs)
         self.min_final_items = max(1, min_final_items)
@@ -167,8 +175,8 @@ class EditorialPipeline:
         return await asyncio.gather(*(one(item) for item in items))
 
     async def _build_brief(self, item: NewsItem) -> ItemBrief:
-        prompt = self._brief_prompt(item)
-        raw = await self._summarize(prompt, "{content}", operation_name=f"brief:{item.id}")
+        payload = self._brief_payload(item)
+        raw = await self._summarize(payload, self.brief_prompt_template, operation_name=f"brief:{item.id}")
         data = parse_json_object(raw, source_label="editorial brief")
         return ItemBrief(
             item_id=item.id,
@@ -189,7 +197,7 @@ class EditorialPipeline:
     async def plan_clusters(self, briefs: List[ItemBrief]) -> List[StoryCluster]:
         if not briefs:
             return []
-        raw = await self._summarize(self._cluster_prompt(briefs), "{content}", operation_name="plan_clusters")
+        raw = await self._summarize(self._cluster_payload(briefs), self.cluster_prompt_template, operation_name="plan_clusters")
         data = parse_json_object(raw, source_label="editorial cluster")
         clusters_data = data.get("clusters")
         clusters: List[StoryCluster] = []
@@ -263,7 +271,7 @@ class EditorialPipeline:
 
     async def review_article(self, article: str, article_input: str) -> ReviewResult:
         raw = await self._summarize(
-            self._review_prompt(article, article_input), "{content}", operation_name="review"
+            self._review_payload(article, article_input), self.review_prompt_template, operation_name="review"
         )
         data = parse_json_object(raw, source_label="editorial review")
         issues = _string_list(data.get("issues"))
@@ -280,8 +288,8 @@ class EditorialPipeline:
         )
 
     async def revise_article(self, article: str, article_input: str, review: ReviewResult) -> str:
-        prompt = self._revision_prompt(article, article_input, review)
-        return await self._summarize(prompt, "{content}", operation_name="revise")
+        payload = self._revision_payload(article, article_input, review)
+        return await self._summarize(payload, self.revision_prompt_template, operation_name="revise")
 
     def _fallback_clusters(self, briefs: List[ItemBrief]) -> List[StoryCluster]:
         included = [brief for brief in briefs if brief.include]
@@ -302,7 +310,8 @@ class EditorialPipeline:
         return clusters
 
     @staticmethod
-    def _brief_prompt(item: NewsItem) -> str:
+    def _brief_payload(item: NewsItem) -> str:
+        """Build the dynamic JSON payload for the brief prompt."""
         content = item.content or ""
         content_snippet = content[:1000] if len(content) > 1000 else content
         top_comments = []
@@ -327,65 +336,31 @@ class EditorialPipeline:
             "ranking_reason": item.ranking_reason,
             "original_data": item.original_data or {},
         }
-        return (
-            "你是科技媒体编辑，请把单条素材整理成结构化 brief。\n"
-            "只使用输入中的事实；社区评论只能作为讨论信号，不得当作事实。\n"
-            "判断这条素材是否值得进入今日文章。\n"
-            "只输出 JSON，不要 Markdown，不要解释。\n"
-            "JSON schema: {\n"
-            '  "core_facts": ["..."],\n'
-            '  "context": ["..."],\n'
-            '  "discussion_signals": ["..."],\n'
-            '  "uncertainties": ["..."],\n'
-            '  "editorial_score": 0-10,\n'
-            '  "include": true/false,\n'
-            '  "reason": "一句话说明取舍理由",\n'
-            '  "content_snippet": "核心内容片段（1-2段，不超过1000字符）",\n'
-            '  "top_comments": ["最有价值的2-3条社区评论"]\n'
-            "}\n\n"
-            f"素材：\n{json.dumps(payload, ensure_ascii=False)}"
-        )
+        return json.dumps(payload, ensure_ascii=False)
 
-    def _cluster_prompt(self, briefs: List[ItemBrief]) -> str:
-        payload = [brief.to_dict() for brief in briefs]
-        return (
-            "你是值班主编。请基于 brief 做编辑取舍、去重和主题合并。\n"
-            "目标是产出媒体文章，不是覆盖所有条目；可以丢弃低价值素材。\n"
-            f"最终建议 {self.min_final_items}-{self.max_final_items} 个新闻主题；如果高质量素材不足，可以少于下限。\n"
-            "同一事件或同一主题必须合并。每个主题选择一个 primary_item_id 作为标题链接来源。\n"
-            "只输出 JSON，不要 Markdown，不要解释。\n"
-            "JSON schema: {\n"
-            '  "clusters": [\n'
-            '    {"title": "...", "primary_item_id": "...", "item_ids": ["..."], "angle": "...", "include": true, "reason": "..."}\n'
-            "  ]\n"
-            "}\n\n"
-            f"Briefs:\n{json.dumps(payload, ensure_ascii=False)}"
-        )
+    def _cluster_payload(self, briefs: List[ItemBrief]) -> str:
+        """Build the dynamic JSON payload for the cluster prompt."""
+        payload = {
+            "target_range": f"{self.min_final_items}-{self.max_final_items}",
+            "briefs": [brief.to_dict() for brief in briefs],
+        }
+        return json.dumps(payload, ensure_ascii=False)
 
     @staticmethod
-    def _review_prompt(article: str, article_input: str) -> str:
+    def _review_payload(article: str, article_input: str) -> str:
+        """Build the dynamic JSON payload for the review prompt."""
         payload = {"article_input": article_input, "draft_article": article}
-        return (
-            "你是严苛的中文科技媒体审校。检查初稿是否符合要求：\n"
-            "1. 是否只使用素材中的事实；2. 新闻速递是否混入观点；3. 标题是否有主来源链接；"
-            "4. 今日概览和编辑手记是否有主线；5. 是否遗漏明显更重要素材；6. Markdown 结构是否合规。\n"
-            "只输出 JSON，不要 Markdown，不要解释。\n"
-            'JSON schema: {"passed": true/false, "issues": ["..."], "revision_instructions": "..."}\n\n'
-            f"{json.dumps(payload, ensure_ascii=False)}"
-        )
+        return json.dumps(payload, ensure_ascii=False)
 
     @staticmethod
-    def _revision_prompt(article: str, article_input: str, review: ReviewResult) -> str:
+    def _revision_payload(article: str, article_input: str, review: ReviewResult) -> str:
+        """Build the dynamic JSON payload for the revision prompt."""
         payload = {
             "article_input": article_input,
             "draft_article": article,
             "review": review.to_dict(),
         }
-        return (
-            "你是中文科技媒体编辑。请根据审校意见改稿。\n"
-            "严格基于素材，不新增事实；保持 Markdown 文章结构；只输出修订后的最终文章。\n\n"
-            f"{json.dumps(payload, ensure_ascii=False)}"
-        )
+        return json.dumps(payload, ensure_ascii=False)
 
 def _string_list(value: Any) -> List[str]:
     if not isinstance(value, list):

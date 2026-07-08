@@ -82,10 +82,23 @@ class SinksConfig(BaseModel):
     items: List[SinkConfig] = Field(default_factory=list)
 
 
+class EditorialPromptConfig(BaseModel):
+    brief: str = "brief_prompt_v1"
+    cluster: str = "cluster_prompt_v1"
+    review: str = "review_prompt_v1"
+    revision: str = "revision_prompt_v1"
+
+
+class ScoringPromptConfig(BaseModel):
+    llm_score: str = "llm_score_prompt_v1"
+
+
 class PromptConfig(BaseModel):
-    structure: str = "enriched_briefing_v1"
-    style: str = "signal_editor_cn_v1"
+    structure: str = "structure_prompt_v1"
+    style: str = "style_prompt_v1"
     variables: Dict[str, Any] = Field(default_factory=dict)
+    editorial: EditorialPromptConfig = Field(default_factory=EditorialPromptConfig)
+    scoring: ScoringPromptConfig = Field(default_factory=ScoringPromptConfig)
 
 
 class PublishingTitleConfig(BaseModel):

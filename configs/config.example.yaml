@@ -63,6 +63,15 @@ prompt:
   structure: "structure_prompt_v1"
   style: "style_prompt_v1"
   variables: {}
+  # Editorial pipeline prompts (each maps to prompts/editorial/{name}.md)
+  editorial:
+    brief: "brief_prompt_v1"
+    cluster: "cluster_prompt_v1"
+    review: "review_prompt_v1"
+    revision: "revision_prompt_v1"
+  # Scoring prompt (maps to prompts/scoring/{name}.md)
+  scoring:
+    llm_score: "llm_score_prompt_v1"
 
 publishing:
   title:

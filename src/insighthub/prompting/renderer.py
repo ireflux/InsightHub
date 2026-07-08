@@ -4,6 +4,21 @@ from typing import Any, Dict, Optional
 from insighthub.errors import PromptRenderingError
 
 
+def load_prompt(prompts_dir: str, category: str, name: str) -> str:
+    """Load a prompt template from ``prompts/{category}/{name}.md``.
+
+    The returned string is raw template text — it may contain a
+    ``{content}`` placeholder that is resolved later by the LLM provider's
+    ``render_prompt`` call.
+    """
+    path = os.path.join(prompts_dir, category, f"{name}.md")
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            return f.read()
+    except FileNotFoundError as e:
+        raise PromptRenderingError(f"Prompt file not found: {path}") from e
+
+
 class PromptRenderer:
     """
     Compose final summarize prompt from:

@@ -1,3 +1,3 @@
-from .renderer import PromptRenderer
+from .renderer import PromptRenderer, load_prompt
 
-__all__ = ["PromptRenderer"]
+__all__ = ["PromptRenderer", "load_prompt"]

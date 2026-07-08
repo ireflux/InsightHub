@@ -14,7 +14,7 @@ from insighthub.errors import LLMProcessingError, PromptRenderingError, SinkDeli
 from insighthub.llm_providers.base import BaseLLMProvider
 from insighthub.models import NewsItem
 from insighthub.observability import get_run_id
-from insighthub.prompting import PromptRenderer
+from insighthub.prompting import PromptRenderer, load_prompt
 from insighthub.publishing import TitlePolicy
 from insighthub.scoring import ContentScorer
 from insighthub.settings import RetryPolicyConfig, RuntimeDedupConfig, ScoringConfig, SummarizationConfig
@@ -40,6 +40,11 @@ class InsightEngine:
         prompt_structure: str = "structure_prompt_v1",
         prompt_style: str = "style_prompt_v1",
         prompt_variables: Optional[Dict[str, Any]] = None,
+        editorial_brief_prompt: str = "brief_prompt_v1",
+        editorial_cluster_prompt: str = "cluster_prompt_v1",
+        editorial_review_prompt: str = "review_prompt_v1",
+        editorial_revision_prompt: str = "revision_prompt_v1",
+        scoring_prompt: str = "llm_score_prompt_v1",
         max_history_records: int = 3000,
         max_delivery_item_records: int = 2000,
         max_delivery_runs: int = 100,
@@ -81,6 +86,7 @@ class InsightEngine:
             config=self.scoring_config,
             llm_provider=self.llm_provider,
             retry_policy=self.llm_retry_policy,
+            score_prompt_template=self._load_score_prompt(scoring_prompt),
         )
         self.prompt_renderer = PromptRenderer(
             prompts_dir=prompts_dir,
@@ -89,6 +95,12 @@ class InsightEngine:
             variables=prompt_variables or {},
         )
         self.summarize_prompt_template = self._load_summarize_prompt_template()
+        self._editorial_prompts: Dict[str, str] = {
+            "brief_prompt_template": self._load_editorial_prompt(editorial_brief_prompt),
+            "cluster_prompt_template": self._load_editorial_prompt(editorial_cluster_prompt),
+            "review_prompt_template": self._load_editorial_prompt(editorial_review_prompt),
+            "revision_prompt_template": self._load_editorial_prompt(editorial_revision_prompt),
+        }
         self.last_summarized_items: List[NewsItem] = []
 
     def _load_history_entries(self) -> List[str]:
@@ -355,6 +367,7 @@ class InsightEngine:
             review_enabled=self.summarization_config.review_enabled,
             revise_enabled=self.summarization_config.revise_enabled,
             retry_policy=self.llm_retry_policy,
+            **self._editorial_prompts,
         )
 
         try:
@@ -564,6 +577,38 @@ class InsightEngine:
         except FileNotFoundError:
             logger.error("Prompt template not found.", extra={"event": "engine.prompt.not_found", "path": path})
             return "Summarize these items into a report:\n{content}"
+
+    def _load_editorial_prompt(self, name: str) -> str:
+        """Load an editorial pipeline prompt template from the prompts directory."""
+        try:
+            template = load_prompt(self.prompts_dir, "editorial", name)
+            logger.info(
+                "Loaded editorial prompt.",
+                extra={"event": "engine.prompt.editorial_loaded", "prompt_name": name},
+            )
+            return template
+        except PromptRenderingError:
+            logger.error(
+                "Failed to load editorial prompt; aborting.",
+                extra={"event": "engine.prompt.editorial_load_failed", "prompt_name": name},
+            )
+            raise
+
+    def _load_score_prompt(self, name: str) -> str:
+        """Load the LLM scoring prompt template from the prompts directory."""
+        try:
+            template = load_prompt(self.prompts_dir, "scoring", name)
+            logger.info(
+                "Loaded scoring prompt.",
+                extra={"event": "engine.prompt.scoring_loaded", "prompt_name": name},
+            )
+            return template
+        except PromptRenderingError:
+            logger.error(
+                "Failed to load scoring prompt; aborting.",
+                extra={"event": "engine.prompt.scoring_load_failed", "prompt_name": name},
+            )
+            raise
 
     def _load_summarize_prompt_template(self) -> str:
         try:

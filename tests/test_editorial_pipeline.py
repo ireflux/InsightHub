@@ -17,7 +17,20 @@ from insighthub.core.editorial import EditorialPipeline
 from insighthub.core.engine import InsightEngine
 from insighthub.llm_providers.base import BaseLLMProvider
 from insighthub.models import NewsItem
+from insighthub.prompting import load_prompt
 from insighthub.settings import SummarizationConfig
+
+
+_PROMPTS_DIR = os.path.join(ROOT_DIR, "prompts")
+
+
+def _load_editorial_prompts():
+    return {
+        "brief_prompt_template": load_prompt(_PROMPTS_DIR, "editorial", "brief_prompt_v1"),
+        "cluster_prompt_template": load_prompt(_PROMPTS_DIR, "editorial", "cluster_prompt_v1"),
+        "review_prompt_template": load_prompt(_PROMPTS_DIR, "editorial", "review_prompt_v1"),
+        "revision_prompt_template": load_prompt(_PROMPTS_DIR, "editorial", "revision_prompt_v1"),
+    }
 
 
 class EditorialProvider(BaseLLMProvider):
@@ -26,7 +39,7 @@ class EditorialProvider(BaseLLMProvider):
 
     async def summarize(self, content: str, prompt_template: str) -> str:
         self.calls.append(content)
-        if "结构化 brief" in content:
+        if "结构化 brief" in prompt_template:
             include = "low" not in content
             return (
                 "{"
@@ -41,7 +54,7 @@ class EditorialProvider(BaseLLMProvider):
                 '"top_comments":["评论1","评论2"]'
                 "}"
             )
-        if "值班主编" in content:
+        if "值班主编" in prompt_template:
             return (
                 "{"
                 '"clusters":[{'
@@ -54,9 +67,9 @@ class EditorialProvider(BaseLLMProvider):
                 "}]"
                 "}"
             )
-        if "严苛的中文科技媒体审校" in content:
+        if "严苛的中文科技媒体审校" in prompt_template:
             return '{"passed":false,"issues":["标题需要链接"],"revision_instructions":"补上标题链接"}'
-        if "请根据审校意见改稿" in content:
+        if "请根据审校意见改稿" in prompt_template:
             return "## 今日概览\n\n修订稿\n\n## 新闻速递\n\n### [重要主题](https://example.com/high)\n\n正文\n\n## 编辑手记\n\n判断"
         return "## 今日概览\n\n初稿"
 
@@ -105,6 +118,7 @@ async def test_brief_includes_content_snippet():
     pipeline = EditorialPipeline(
         llm_provider=provider,
         final_prompt_template="template",
+        **_load_editorial_prompts(),
         brief_concurrency=1,
         max_briefs=5,
         min_final_items=1,
@@ -132,6 +146,7 @@ async def test_brief_includes_top_comments():
     pipeline = EditorialPipeline(
         llm_provider=provider,
         final_prompt_template="template",
+        **_load_editorial_prompts(),
         brief_concurrency=1,
         max_briefs=5,
         min_final_items=1,
@@ -160,7 +175,7 @@ async def test_review_defaults_failed_when_issues_no_passed_field():
     # Override the review response to have issues but no passed field
     original_summarize = provider.summarize
     async def patched_summarize(content, prompt_template):
-        if "严苛的中文科技媒体审校" in content:
+        if "严苛的中文科技媒体审校" in prompt_template:
             return '{"issues":["缺少编辑手记"],"revision_instructions":"加上手记"}'
         return await original_summarize(content, prompt_template)
 
@@ -169,6 +184,7 @@ async def test_review_defaults_failed_when_issues_no_passed_field():
     pipeline = EditorialPipeline(
         llm_provider=provider,
         final_prompt_template="template",
+        **_load_editorial_prompts(),
         brief_concurrency=1,
         max_briefs=5,
         min_final_items=1,
@@ -195,6 +211,7 @@ async def test_article_input_has_enriched_briefs():
     pipeline = EditorialPipeline(
         llm_provider=provider,
         final_prompt_template="template",
+        **_load_editorial_prompts(),
         brief_concurrency=1,
         max_briefs=5,
         min_final_items=1,

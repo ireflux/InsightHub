@@ -2,7 +2,7 @@ import json
 import logging
 import re
 import asyncio
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Dict, List, Optional, Tuple
 
 from insighthub.models import NewsItem
 from insighthub.settings import ScoringConfig, RetryPolicyConfig
@@ -35,12 +35,14 @@ class ContentScorer:
         config: ScoringConfig,
         llm_provider=None,
         retry_policy: Optional[RetryPolicyConfig] = None,
+        score_prompt_template: str = "{content}",
     ):
         self.config = config
         self.llm_provider = llm_provider
         self.retry_policy = retry_policy or RetryPolicyConfig(
             max_attempts=3, base_delay_seconds=2.0
         )
+        self.score_prompt_template = score_prompt_template
 
     async def score_items(self, items: List[NewsItem]) -> List[NewsItem]:
         if not items:
@@ -156,11 +158,11 @@ class ContentScorer:
 
     async def _llm_score_single(self, item: NewsItem) -> NewsItem:
         """Run a single LLM scoring call with retry."""
-        prompt = self._llm_score_prompt(item)
+        payload = self._llm_score_payload(item)
 
         async def op() -> str:
             try:
-                return await self.llm_provider.score(prompt, "{content}")
+                return await self.llm_provider.score(payload, self.score_prompt_template)
             except LLMProcessingError:
                 raise
             except Exception as e:
@@ -191,8 +193,8 @@ class ContentScorer:
         return item
 
     @staticmethod
-    def _llm_score_prompt(item: NewsItem) -> str:
-        """Build the scoring prompt for a single news item."""
+    def _llm_score_payload(item: NewsItem) -> str:
+        """Build the dynamic JSON payload for the scoring prompt."""
         payload = {
             "id": item.id,
             "title": item.title,
@@ -203,21 +205,7 @@ class ContentScorer:
             "heuristic_signal": item.discussion_signal,
             "heuristic_tier": item.discussion_tier,
         }
-        return (
-            "你是资深科技媒体编辑。请评估以下新闻素材的质量，决定是否值得纳入今日科技日报。\n"
-            "评估维度：\n"
-            "1. 内容丰富度：是否有实质性信息、数据、背景？\n"
-            "2. 新闻价值：是否是重要事件、发布、突破？\n"
-            "3. 独特性：是否提供了其他素材中没有的信息角度？\n"
-            "4. 编辑故事潜力：是否能成为一篇好报道的核心素材？\n"
-            "只输出 JSON，不要 Markdown，不要解释。\n"
-            "JSON schema: {\n"
-            '  "quality_score": 0-10 整数,\n'
-            '  "include": true/false,\n'
-            '  "reason": "一句话说明评分理由"\n'
-            "}\n\n"
-            f"素材：\n{json.dumps(payload, ensure_ascii=False)}"
-        )
+        return json.dumps(payload, ensure_ascii=False)
 
     def select_items_for_summary(self, items: List[NewsItem]) -> List[NewsItem]:
         ranked = sorted(
