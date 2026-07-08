@@ -35,12 +35,6 @@ class NvidiaProvider(BaseLLMProvider):
 
         self.base_url = base_url or os.getenv("NVIDIA_API_URL") or self.DEFAULT_BASE_URL
         self.params = self._sanitize_params(params)
-        if "temperature" not in self.params:
-            self.params["temperature"] = float(os.getenv("NVIDIA_TEMPERATURE", "0.7"))
-        if "top_p" not in self.params:
-            self.params["top_p"] = float(os.getenv("NVIDIA_TOP_P", "0.95"))
-        if "max_tokens" not in self.params:
-            self.params["max_tokens"] = int(os.getenv("NVIDIA_MAX_TOKENS", "8192"))
 
         headers = {
             "Authorization": f"Bearer {api_key}",
@@ -96,18 +90,6 @@ class NvidiaProvider(BaseLLMProvider):
             return self._extract_text_from_response(raw)
         except Exception as e:
             raise LLMProcessingError(f"NVIDIA summarization failed: {e}") from e
-
-    async def classify(self, content: str, categories: List[str], prompt_template: str) -> str:
-        prompt = self.render_prompt(prompt_template, content=content, categories=", ".join(categories))
-        try:
-            raw = await self._call_chat([{"role": "user", "content": prompt}])
-            result = self._extract_text_from_response(raw)
-            for category in categories:
-                if category.lower() in result.lower():
-                    return category
-            return "Uncategorized"
-        except Exception as e:
-            raise LLMProcessingError(f"NVIDIA classification failed: {e}") from e
 
     async def score(self, content: str, prompt_template: str) -> str:
         prompt = self.render_prompt(prompt_template, content=content)

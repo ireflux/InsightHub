@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from typing import List
+
 
 class BaseLLMProvider(ABC):
     """
@@ -21,21 +21,6 @@ class BaseLLMProvider(ABC):
 
         Returns:
             The summarized text.
-        """
-        pass
-
-    @abstractmethod
-    async def classify(self, content: str, categories: List[str], prompt_template: str) -> str:
-        """
-        Classifies the content into one of the given categories.
-
-        Args:
-            content: The text content to be classified.
-            categories: A list of possible categories.
-            prompt_template: The template for the prompt with placeholders.
-
-        Returns:
-            The most likely category from the list.
         """
         pass
 

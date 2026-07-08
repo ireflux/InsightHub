@@ -60,8 +60,8 @@ sources:
       params: {}
 
 prompt:
-  structure: "enriched_briefing_v1"
-  style: "signal_editor_cn_v1"
+  structure: "structure_prompt_v1"
+  style: "style_prompt_v1"
   variables: {}
 
 publishing:
@@ -120,9 +120,11 @@ runtime:
 
 scoring:
   enabled: false
-  # Items with AI score below this value will not enter summary.
-  # Set to null to disable filtering.
-  scoring_threshold: null
+  # When enabled, items are scored before summarization.
+  # use_llm_scoring: true          # Use LLM for quality scoring (requires API calls per item).
+  # llm_scoring_threshold: 4.0     # Items with score below this are filtered out (0-10 scale).
+  # llm_scoring_concurrency: 4     # Parallel LLM scoring calls.
+  # scoring_threshold: null        # Legacy heuristic threshold; null to disable.
 
 summarization:
   mode: "editorial"                       # editorial or one_shot

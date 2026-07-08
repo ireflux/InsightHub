@@ -165,13 +165,6 @@ class MarkdownFileSink(BaseSink):
             logger.warning("MarkdownFileSink: Failed to load manifest, rebuilding from scratch.")
         return {"site_timezone": self.timezone_name, "generated_at": None, "posts": []}
 
-    def _extract_title(self, content: str, now: datetime.datetime) -> str:
-        for line in content.splitlines():
-            stripped = line.strip()
-            if stripped.startswith("#"):
-                return stripped.lstrip("#").strip()
-        return self.title_policy.render(now)
-
     def _extract_summary(self, content: str) -> str:
         for line in content.splitlines():
             stripped = line.strip()

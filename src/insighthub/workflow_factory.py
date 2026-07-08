@@ -194,6 +194,7 @@ def _build_single_sink(
                 "title_policy": title_policy,
                 "space_id": sink_params.get("space_id"),
                 "doc_id": sink_params.get("doc_id"),
+                "timezone_name": timezone_name,
             }
         else:
             kwargs = sink_params

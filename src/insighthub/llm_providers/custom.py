@@ -87,17 +87,6 @@ class CustomOpenAIProvider(BaseLLMProvider):
         except Exception as e:
             raise LLMProcessingError(f"custom_openai summarization failed: {e}") from e
 
-    async def classify(self, content: str, categories: List[str], prompt_template: str) -> str:
-        prompt = self.render_prompt(prompt_template, content=content, categories=", ".join(categories))
-        try:
-            result = await self._chat(prompt)
-            for category in categories:
-                if category.lower() in result.lower():
-                    return category
-            return "Uncategorized"
-        except Exception as e:
-            raise LLMProcessingError(f"custom_openai classification failed: {e}") from e
-
     async def score(self, content: str, prompt_template: str) -> str:
         prompt = self.render_prompt(prompt_template, content=content)
         try:
@@ -190,17 +179,6 @@ class CustomAnthropicProvider(BaseLLMProvider):
             return await self._chat(prompt)
         except Exception as e:
             raise LLMProcessingError(f"custom_anthropic summarization failed: {e}") from e
-
-    async def classify(self, content: str, categories: List[str], prompt_template: str) -> str:
-        prompt = self.render_prompt(prompt_template, content=content, categories=", ".join(categories))
-        try:
-            result = await self._chat(prompt)
-            for category in categories:
-                if category.lower() in result.lower():
-                    return category
-            return "Uncategorized"
-        except Exception as e:
-            raise LLMProcessingError(f"custom_anthropic classification failed: {e}") from e
 
     async def score(self, content: str, prompt_template: str) -> str:
         prompt = self.render_prompt(prompt_template, content=content)

@@ -5,61 +5,12 @@ import asyncio
 from typing import Any, Dict, List, Optional, Tuple
 
 from insighthub.models import NewsItem
-from insighthub.settings import ScoringConfig
+from insighthub.settings import ScoringConfig, RetryPolicyConfig
 from insighthub.core.retry import with_retry
+from insighthub.core.json_utils import parse_json_object
 from insighthub.errors import LLMProcessingError
 
 logger = logging.getLogger(__name__)
-
-
-def _extract_first_json_object(text: str) -> Optional[str]:
-    """Return the first balanced top-level ``{...}`` object found in *text*."""
-    start = text.find("{")
-    if start == -1:
-        return None
-    depth = 0
-    in_string = False
-    escape = False
-    for index in range(start, len(text)):
-        char = text[index]
-        if in_string:
-            if escape:
-                escape = False
-            elif char == "\\":
-                escape = True
-            elif char == '"':
-                in_string = False
-            continue
-        if char == '"':
-            in_string = True
-            continue
-        if char == "{":
-            depth += 1
-        elif char == "}":
-            depth -= 1
-            if depth == 0:
-                return text[start : index + 1]
-    return None
-
-
-def _parse_json_object(text: str) -> Dict[str, Any]:
-    """Parse a JSON object from text, extracting it if necessary."""
-    try:
-        data = json.loads(text)
-        if isinstance(data, dict):
-            return data
-    except json.JSONDecodeError:
-        pass
-    extracted = _extract_first_json_object(text)
-    if extracted is None:
-        raise LLMProcessingError(f"Expected JSON object from scoring, got: {text[:500]}")
-    try:
-        data = json.loads(extracted)
-    except json.JSONDecodeError as e:
-        raise LLMProcessingError(f"Invalid JSON from scoring: {text[:500]}") from e
-    if not isinstance(data, dict):
-        raise LLMProcessingError("Expected JSON object from scoring.")
-    return data
 
 COMMENT_TIERS: List[Tuple[int, str]] = [
     (200, "Explosive"),
@@ -79,9 +30,17 @@ def tier_from_score(score: float) -> str:
 
 
 class ContentScorer:
-    def __init__(self, config: ScoringConfig, llm_provider=None):
+    def __init__(
+        self,
+        config: ScoringConfig,
+        llm_provider=None,
+        retry_policy: Optional[RetryPolicyConfig] = None,
+    ):
         self.config = config
         self.llm_provider = llm_provider
+        self.retry_policy = retry_policy or RetryPolicyConfig(
+            max_attempts=3, base_delay_seconds=2.0
+        )
 
     async def score_items(self, items: List[NewsItem]) -> List[NewsItem]:
         if not items:
@@ -211,14 +170,14 @@ class ContentScorer:
             op,
             logger=logger,
             operation_name=f"scoring.llm:{item.id}",
-            max_attempts=3,
-            base_delay_seconds=2.0,
-            backoff_multiplier=2.0,
-            max_delay_seconds=30.0,
+            max_attempts=self.retry_policy.max_attempts,
+            base_delay_seconds=self.retry_policy.base_delay_seconds,
+            backoff_multiplier=self.retry_policy.backoff_multiplier,
+            max_delay_seconds=self.retry_policy.max_delay_seconds,
         )
 
         try:
-            data = _parse_json_object(raw)
+            data = parse_json_object(raw, source_label="scoring")
             quality_score = float(data.get("quality_score", 0))
             include = bool(data.get("include", False))
             reason = str(data.get("reason", "")).strip()

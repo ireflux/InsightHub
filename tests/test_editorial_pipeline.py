@@ -13,7 +13,7 @@ SRC_DIR = os.path.join(ROOT_DIR, "src")
 if SRC_DIR not in sys.path:
     sys.path.insert(0, SRC_DIR)
 
-from insighthub.core.editorial import EditorialPipeline, _parse_json_object
+from insighthub.core.editorial import EditorialPipeline
 from insighthub.core.engine import InsightEngine
 from insighthub.llm_providers.base import BaseLLMProvider
 from insighthub.models import NewsItem
@@ -59,9 +59,6 @@ class EditorialProvider(BaseLLMProvider):
         if "请根据审校意见改稿" in content:
             return "## 今日概览\n\n修订稿\n\n## 新闻速递\n\n### [重要主题](https://example.com/high)\n\n正文\n\n## 编辑手记\n\n判断"
         return "## 今日概览\n\n初稿"
-
-    async def classify(self, content: str, categories: List[str], prompt_template: str) -> str:
-        return categories[0]
 
     async def score(self, content: str, prompt_template: str) -> str:
         return '{"quality_score": 7, "include": true, "reason": "test"}'

@@ -64,9 +64,23 @@ class GitHubTrendingSource(BaseSource):
             
             description_tag = article.select_one("p.col-9")
             description = description_tag.get_text(strip=True) if description_tag else "No description provided."
-            
+
+            # Extract stars and language for scoring signals
+            stars = 0
+            star_tag = article.select_one("a[href$='/stargazers']")
+            if star_tag:
+                star_text = star_tag.get_text(strip=True).replace(",", "")
+                digits = "".join(ch for ch in star_text if ch.isdigit())
+                if digits:
+                    stars = int(digits)
+
+            language = ""
+            lang_tag = article.select_one("span[itemprop='programmingLanguage']")
+            if lang_tag:
+                language = lang_tag.get_text(strip=True)
+
             # For simplicity, we use the description as the main 'content'
-            # to be summarized by the LLM.
+            # to be summarized by the LLM. Full README is fetched in enrich_items.
             content = f"Repository: {repo_name}\n\nDescription: {description}"
 
             items.append(NewsItem(
@@ -75,6 +89,23 @@ class GitHubTrendingSource(BaseSource):
                 url=repo_url,
                 source=self.name,
                 content=content,
-                original_data={}
+                original_data={
+                    "stars": stars,
+                    "language": language,
+                    "description": description,
+                }
             ))
+        return items
+
+    async def enrich_items(self, items: List[NewsItem]) -> List[NewsItem]:
+        """Fetch README content from each repository page for richer LLM context."""
+        logger.info(
+            "Fetching full content for GitHub items.",
+            extra={"event": "source.enrich.start", "source": self.name, "items_count": len(items)},
+        )
+        contents = await self._fetch_page_contents([item.url for item in items])
+        for item, full_content in zip(items, contents):
+            if full_content:
+                base = item.content or ""
+                item.content = f"{base}\n\n--- README ---\n{full_content}".strip()
         return items

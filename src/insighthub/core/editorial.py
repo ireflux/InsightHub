@@ -5,6 +5,7 @@ from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional
 
 from insighthub.core.retry import with_retry
+from insighthub.core.json_utils import parse_json_object
 from insighthub.errors import LLMProcessingError
 from insighthub.llm_providers.base import BaseLLMProvider
 from insighthub.models import NewsItem
@@ -168,7 +169,7 @@ class EditorialPipeline:
     async def _build_brief(self, item: NewsItem) -> ItemBrief:
         prompt = self._brief_prompt(item)
         raw = await self._summarize(prompt, "{content}", operation_name=f"brief:{item.id}")
-        data = _parse_json_object(raw)
+        data = parse_json_object(raw, source_label="editorial brief")
         return ItemBrief(
             item_id=item.id,
             title=item.title,
@@ -189,7 +190,7 @@ class EditorialPipeline:
         if not briefs:
             return []
         raw = await self._summarize(self._cluster_prompt(briefs), "{content}", operation_name="plan_clusters")
-        data = _parse_json_object(raw)
+        data = parse_json_object(raw, source_label="editorial cluster")
         clusters_data = data.get("clusters")
         clusters: List[StoryCluster] = []
         if isinstance(clusters_data, list):
@@ -264,7 +265,7 @@ class EditorialPipeline:
         raw = await self._summarize(
             self._review_prompt(article, article_input), "{content}", operation_name="review"
         )
-        data = _parse_json_object(raw)
+        data = parse_json_object(raw, source_label="editorial review")
         issues = _string_list(data.get("issues"))
         if "passed" in data:
             passed = bool(data["passed"])
@@ -385,62 +386,6 @@ class EditorialPipeline:
             "严格基于素材，不新增事实；保持 Markdown 文章结构；只输出修订后的最终文章。\n\n"
             f"{json.dumps(payload, ensure_ascii=False)}"
         )
-
-
-def _parse_json_object(text: str) -> Dict[str, Any]:
-    try:
-        data = json.loads(text)
-        if isinstance(data, dict):
-            return data
-    except json.JSONDecodeError:
-        pass
-    extracted = _extract_first_json_object(text)
-    if extracted is None:
-        raise LLMProcessingError(f"Expected JSON object from editorial step, got: {text[:500]}")
-    try:
-        data = json.loads(extracted)
-    except json.JSONDecodeError as e:
-        raise LLMProcessingError(f"Invalid JSON from editorial step: {text[:500]}") from e
-    if not isinstance(data, dict):
-        raise LLMProcessingError("Expected JSON object from editorial step.")
-    return data
-
-
-def _extract_first_json_object(text: str) -> Optional[str]:
-    """Return the first balanced top-level ``{...}`` object found in *text*.
-
-    A depth counter scans for ``{`` / ``}`` while respecting string literals
-    (including escaped quotes). This is more robust than a greedy regex when the
-    LLM wraps the JSON in prose, includes multiple objects, or emits comments.
-    Returns ``None`` if no balanced object is found.
-    """
-    start = text.find("{")
-    if start == -1:
-        return None
-    depth = 0
-    in_string = False
-    escape = False
-    for index in range(start, len(text)):
-        char = text[index]
-        if in_string:
-            if escape:
-                escape = False
-            elif char == "\\":
-                escape = True
-            elif char == '"':
-                in_string = False
-            continue
-        if char == '"':
-            in_string = True
-            continue
-        if char == "{":
-            depth += 1
-        elif char == "}":
-            depth -= 1
-            if depth == 0:
-                return text[start : index + 1]
-    return None
-
 
 def _string_list(value: Any) -> List[str]:
     if not isinstance(value, list):

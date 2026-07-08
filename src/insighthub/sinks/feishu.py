@@ -2,6 +2,7 @@ import httpx
 import logging
 from datetime import datetime
 from typing import List, Optional
+from zoneinfo import ZoneInfo
 from insighthub.core.registry import registry
 from insighthub.errors import SinkDeliveryError
 from insighthub.publishing import TitlePolicy
@@ -31,6 +32,7 @@ class FeishuDocSink(BaseSink):
         title_policy: Optional[TitlePolicy] = None,
         space_id: Optional[str] = None,
         doc_id: Optional[str] = None,
+        timezone_name: str = "Asia/Shanghai",
     ):
         if not app_id or not app_secret:
             raise ValueError("Feishu app_id and app_secret are required for FeishuDocSink")
@@ -39,6 +41,7 @@ class FeishuDocSink(BaseSink):
         self.title_policy = title_policy
         self.space_id = space_id
         self.doc_id = doc_id
+        self.timezone_name = timezone_name
         self.name = "feishu_doc"
 
     async def _get_tenant_access_token(self) -> str:
@@ -59,7 +62,7 @@ class FeishuDocSink(BaseSink):
         token = await self._get_tenant_access_token()
         headers = {"Authorization": f"Bearer {token}", "Content-Type": "application/json; charset=utf-8"}
 
-        now = datetime.now()
+        now = datetime.now(ZoneInfo(self.timezone_name))
         doc_title = self.title_policy.render(now)
 
         async with httpx.AsyncClient() as client:
@@ -107,7 +110,7 @@ class FeishuDocSink(BaseSink):
 
                 if not blocks or not first_level_block_ids:
                     logger.warning("No blocks converted from Markdown.")
-                    return
+                    return {"status": "skipped", "reason": "no_blocks_converted", "document_id": document_id}
 
                 # 2. Clean blocks (remove merge_info from tables as it's read-only)
                 for block in blocks:

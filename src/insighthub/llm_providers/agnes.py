@@ -105,18 +105,6 @@ class AgnesProvider(BaseLLMProvider):
         except Exception as e:
             raise LLMProcessingError(f"Agnes summarization failed: {e}") from e
 
-    async def classify(self, content: str, categories: List[str], prompt_template: str) -> str:
-        prompt = self.render_prompt(prompt_template, content=content, categories=", ".join(categories))
-        try:
-            raw = await self._call_chat([{"role": "user", "content": prompt}])
-            result = self._extract_text_from_response(raw)
-            for category in categories:
-                if category.lower() in result.lower():
-                    return category
-            return "Uncategorized"
-        except Exception as e:
-            raise LLMProcessingError(f"Agnes classification failed: {e}") from e
-
     async def score(self, content: str, prompt_template: str) -> str:
         prompt = self.render_prompt(prompt_template, content=content)
         try:

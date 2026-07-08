@@ -35,9 +35,6 @@ class DummyProvider(BaseLLMProvider):
         self.last_content = content
         return "ok"
 
-    async def classify(self, content: str, categories: List[str], prompt_template: str) -> str:
-        return categories[0] if categories else "Uncategorized"
-
     async def score(self, content: str, prompt_template: str) -> str:
         return '{"quality_score": 7, "include": true, "reason": "test"}'
 
