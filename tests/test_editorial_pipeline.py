@@ -69,7 +69,7 @@ class EditorialProvider(BaseLLMProvider):
             )
         if "严苛的中文科技媒体审校" in prompt_template:
             return '{"passed":false,"issues":["标题需要链接"],"revision_instructions":"补上标题链接"}'
-        if "请根据审校意见改稿" in prompt_template:
+        if "请根据审校意见修改初稿" in prompt_template:
             return "## 今日概览\n\n修订稿\n\n## 新闻速递\n\n### [重要主题](https://example.com/high)\n\n正文\n\n## 编辑手记\n\n判断"
         return "## 今日概览\n\n初稿"
 

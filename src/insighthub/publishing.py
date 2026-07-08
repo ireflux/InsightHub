@@ -1,8 +1,11 @@
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass
 from datetime import datetime
 from zoneinfo import ZoneInfo
+
+_BARE_URL_RE = re.compile(r"^https?://\S+$")
 
 
 @dataclass(frozen=True)
@@ -25,6 +28,13 @@ class TitlePolicy:
         if not content:
             return ""
         lines = content.splitlines()
+        # Strip leading bare URLs (e.g. primary source URL leaked by the LLM)
+        while lines:
+            stripped = lines[0].strip()
+            if stripped and _BARE_URL_RE.match(stripped):
+                lines.pop(0)
+            else:
+                break
         if self.strip_leading_h1:
             idx = 0
             while idx < len(lines) and not lines[idx].strip():

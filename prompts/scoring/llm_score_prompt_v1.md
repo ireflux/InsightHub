@@ -5,11 +5,11 @@
 3. 独特性：是否提供了其他素材中没有的信息角度？
 4. 编辑故事潜力：是否能成为一篇好报道的核心素材？
 只输出 JSON，不要 Markdown，不要解释。
-JSON schema: {
+JSON schema: {{
   "quality_score": 0-10 整数,
   "include": true/false,
   "reason": "一句话说明评分理由"
-}
+}}
 
 素材：
 {content}

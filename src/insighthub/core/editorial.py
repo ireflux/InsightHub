@@ -311,9 +311,12 @@ class EditorialPipeline:
 
     @staticmethod
     def _brief_payload(item: NewsItem) -> str:
-        """Build the dynamic JSON payload for the brief prompt."""
+        """Build the dynamic JSON payload for the brief prompt.
+
+        The full content is sent so the LLM can independently decide which
+        parts are most important to extract into ``content_snippet``.
+        """
         content = item.content or ""
-        content_snippet = content[:1000] if len(content) > 1000 else content
         top_comments = []
         comments_data = (item.original_data or {}).get("top_comments") or []
         for c in comments_data:
@@ -329,7 +332,6 @@ class EditorialPipeline:
             "url": item.url,
             "source": item.source,
             "content": content,
-            "content_snippet": content_snippet,
             "top_comments": top_comments,
             "discussion_signal": item.discussion_signal,
             "discussion_tier": item.discussion_tier,

@@ -11,7 +11,7 @@ llm:
     model: "agnes-2.0-flash"
     params:
       temperature: 0.7
-      max_tokens: 8192
+      max_tokens: 16384
       enable_thinking: false
   fallbacks: []
   # fallbacks:
@@ -35,7 +35,7 @@ sources:
     - id: "hn_main"
       type: "hacker_news"
       enabled: true
-      max_items: 12
+      max_items: 20
       params: {}
     - id: "v2ex_main"
       type: "v2ex_hot"
@@ -123,9 +123,9 @@ scoring:
 summarization:
   mode: "editorial" # editorial or one_shot
   brief_concurrency: 4
-  max_briefs: 12
-  min_final_items: 3
-  max_final_items: 8
+  max_briefs: 20
+  min_final_items: 5
+  max_final_items: 10
   review_enabled: true
   revise_enabled: true
 
