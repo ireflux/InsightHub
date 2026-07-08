@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-07T12:31:19.954242+00:00",
+  "updated_at": "2026-07-08T11:46:50.276578+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -139,6 +139,22 @@
             "status": "success",
             "file_path": "output/posts/2026-07-07-16de91a05d89.md",
             "slug": "2026-07-07-16de91a05d89",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-08T11:46:50.276372+00:00",
+      "items_count": 11,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-07-08-7ee1d5bf6ab9.md",
+            "slug": "2026-07-08-7ee1d5bf6ab9",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -543,6 +559,83 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-07-07T12:31:19.954207+00:00",
+        "error": null
+      }
+    },
+    "https://fightchatcontrol.eu/chat-control-overview": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-08T11:46:50.276525+00:00",
+        "error": null
+      }
+    },
+    "https://neil.computer/notes/how-to-setup-minimal-zfs-nas-without-truenas": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-08T11:46:50.276528+00:00",
+        "error": null
+      }
+    },
+    "https://noma.security/blog/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-08T11:46:50.276531+00:00",
+        "error": null
+      }
+    },
+    "https://www.gao.gov/products/gao-26-108193": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-08T11:46:50.276535+00:00",
+        "error": null
+      }
+    },
+    "https://tris.sherliker.net/blog/obfuscated-self-evaluating-bash-script-by-cdn-akamai-being-supplied-to-consumers-via-retail-stores": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-08T11:46:50.276539+00:00",
+        "error": null
+      }
+    },
+    "https://www.cbc.ca/news/canada/montreal/canada-s-only-watchmaking-school-9.7254211": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-08T11:46:50.276544+00:00",
+        "error": null
+      }
+    },
+    "https://kb.cert.org/vuls/id/213560": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-08T11:46:50.276553+00:00",
+        "error": null
+      }
+    },
+    "https://www.digipres.org/the-floppy-guide": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-08T11:46:50.276558+00:00",
+        "error": null
+      }
+    },
+    "https://www.gamesindustry.biz/eve-onlines-carbon-engine-is-now-open-source-fenris-creations-explains-why": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-08T11:46:50.276562+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/dekart-xyz/geosql": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-08T11:46:50.276566+00:00",
+        "error": null
+      }
+    },
+    "https://www.birdy.chat/blog/the-growing-list-of-european-organisations-that-ban-personal-messaging-apps-at-work": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-08T11:46:50.276569+00:00",
         "error": null
       }
     }
