@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-08T11:46:50.276578+00:00",
+  "updated_at": "2026-07-09T12:38:49.619883+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -155,6 +155,22 @@
             "status": "success",
             "file_path": "output/posts/2026-07-08-7ee1d5bf6ab9.md",
             "slug": "2026-07-08-7ee1d5bf6ab9",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-09T12:38:49.619540+00:00",
+      "items_count": 16,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-07-09-b4e968346b56.md",
+            "slug": "2026-07-09-b4e968346b56",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -636,6 +652,118 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-07-08T11:46:50.276569+00:00",
+        "error": null
+      }
+    },
+    "https://x.ai/news/grok-4-5": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-09T12:38:49.619815+00:00",
+        "error": null
+      }
+    },
+    "https://www.cloudflare.com/drop": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-09T12:38:49.619823+00:00",
+        "error": null
+      }
+    },
+    "https://apnews.com/article/john-deere-right-to-repair-agriculture-equipment-cb7514ffedb95c130a976af661f2bc02": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-09T12:38:49.619827+00:00",
+        "error": null
+      }
+    },
+    "https://www.howtogeek.com/why-developers-are-ditching-github-for-codeberg-and-self-hosting-alternatives": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-09T12:38:49.619830+00:00",
+        "error": null
+      }
+    },
+    "https://microsoft.github.io/flint-chart": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-09T12:38:49.619833+00:00",
+        "error": null
+      }
+    },
+    "https://openai.com/index/separating-signal-from-noise-coding-evaluations": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-09T12:38:49.619837+00:00",
+        "error": null
+      }
+    },
+    "https://connectsci.au/news/news-parent/9703/Spider-venom-kills-varroa-mites-without-harming": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-09T12:38:49.619845+00:00",
+        "error": null
+      }
+    },
+    "https://www.patrick-breyer.de/en/eu-parliament-greenlights-chat-control-1-0-breyer-our-children-lose-out": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-09T12:38:49.619849+00:00",
+        "error": null
+      }
+    },
+    "https://www.yamanote.fun/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-09T12:38:49.619852+00:00",
+        "error": null
+      }
+    },
+    "https://www.databricks.com/blog/benchmarking-coding-agents-databricks-multi-million-line-codebase": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-09T12:38:49.619855+00:00",
+        "error": null
+      }
+    },
+    "https://www.networkworld.com/article/4192827/meta-reuses-old-ram-in-new-servers-with-custom-bridge-chip.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-09T12:38:49.619859+00:00",
+        "error": null
+      }
+    },
+    "https://nexte.st/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-09T12:38:49.619862+00:00",
+        "error": null
+      }
+    },
+    "https://www.bbc.com/news/articles/cg5pd9z2487o": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-09T12:38:49.619865+00:00",
+        "error": null
+      }
+    },
+    "https://www.theautopian.com/i-bet-my-company-on-an-impossible-jeep-build-then-a-miracle-happened": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-09T12:38:49.619869+00:00",
+        "error": null
+      }
+    },
+    "https://dfarq.homeip.net/how-donkey-kong-toppled-atari": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-09T12:38:49.619872+00:00",
+        "error": null
+      }
+    },
+    "https://vooijs.eu/posts/why-is-there-smoke-from-the-boiler-room": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-09T12:38:49.619875+00:00",
         "error": null
       }
     }

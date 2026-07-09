@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-07-08T19:46:50.274684+08:00",
+  "generated_at": "2026-07-09T20:38:49.617714+08:00",
   "posts": [
+    {
+      "id": "2026-07-09-b4e968346b56",
+      "run_id": "b4e968346b56",
+      "date": "2026-07-09",
+      "title": "每日趋势观察 2026-07-09",
+      "slug": "2026-07-09-b4e968346b56",
+      "markdown_path": "posts/2026-07-09-b4e968346b56.md",
+      "summary": "今日科技圈呈现出从底层基础设施到上层应用的全方位重构迹象。在 AI 领域，算力效率与成本控制成为核心议题，无论是 xAI 凭借 Cursor 数据优化的 Grok 4.5，还是 Databricks 揭示的 Coding Agent 真实效能差距，都在推动行业从单纯追求参数规模转向务实的工程落地。与此同时，Meta 通过自研 CXL 芯片 Vistara 盘活旧内存，试图缓解硬件短缺带来的通胀压力",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 16,
+      "is_empty_update": false,
+      "created_at": "2026-07-09T20:38:49.617714+08:00"
+    },
     {
       "id": "2026-07-08-7ee1d5bf6ab9",
       "run_id": "7ee1d5bf6ab9",
