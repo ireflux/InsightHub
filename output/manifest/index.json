@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-07-09T20:38:49.617714+08:00",
+  "generated_at": "2026-07-10T20:28:08.314171+08:00",
   "posts": [
+    {
+      "id": "2026-07-10-2fb92fd30dd2",
+      "run_id": "2fb92fd30dd2",
+      "date": "2026-07-10",
+      "title": "每日趋势观察 2026-07-10",
+      "slug": "2026-07-10-2fb92fd30dd2",
+      "markdown_path": "posts/2026-07-10-2fb92fd30dd2.md",
+      "summary": "今日科技圈聚焦于模型突破与基础设施重构，同时监管与伦理议题升温。GPT-5.6 实现 ARC-AGI 突破；Rust 重写 Postgres 引发热议；Ghostty 终端模拟器发布；Colibri 引擎实现大模型本地运行；Meta 遭欧盟 DSA 裁定；EPFL 神经视频合成引伦理担忧。",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 6,
+      "is_empty_update": false,
+      "created_at": "2026-07-10T20:28:08.314171+08:00"
+    },
     {
       "id": "2026-07-09-b4e968346b56",
       "run_id": "b4e968346b56",

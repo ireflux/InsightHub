@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-09T12:38:49.619883+00:00",
+  "updated_at": "2026-07-10T12:28:08.316337+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -171,6 +171,22 @@
             "status": "success",
             "file_path": "output/posts/2026-07-09-b4e968346b56.md",
             "slug": "2026-07-09-b4e968346b56",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-10T12:28:08.316132+00:00",
+      "items_count": 6,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-07-10-2fb92fd30dd2.md",
+            "slug": "2026-07-10-2fb92fd30dd2",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -764,6 +780,48 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-07-09T12:38:49.619875+00:00",
+        "error": null
+      }
+    },
+    "https://openai.com/index/gpt-5-6": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-10T12:28:08.316302+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/malisper/pgrust": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-10T12:28:08.316310+00:00",
+        "error": null
+      }
+    },
+    "https://alexalejandre.com/programming/interview-with-mitchell-hashimoto": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-10T12:28:08.316313+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/JustVugg/colibri": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-10T12:28:08.316317+00:00",
+        "error": null
+      }
+    },
+    "https://ec.europa.eu/commission/presscorner/home/en": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-10T12:28:08.316320+00:00",
+        "error": null
+      }
+    },
+    "https://nevo-project.epfl.ch/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-10T12:28:08.316324+00:00",
         "error": null
       }
     }
