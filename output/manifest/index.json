@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-07-10T20:28:08.314171+08:00",
+  "generated_at": "2026-07-11T19:07:19.741605+08:00",
   "posts": [
+    {
+      "id": "2026-07-11-c01df1217107",
+      "run_id": "c01df1217107",
+      "date": "2026-07-11",
+      "title": "每日趋势观察 2026-07-11",
+      "slug": "2026-07-11-c01df1217107",
+      "markdown_path": "posts/2026-07-11-c01df1217107.md",
+      "summary": "Apple 起诉 OpenAI 窃取商业机密；SpaceX 申请发射十万颗卫星建全球网；超声技术实现无声语音交互；Scarf 迁移 Haskell 至 Python；相对论效应改写重元素化学键；纽约市立法禁止欺骗性订阅。",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 6,
+      "is_empty_update": false,
+      "created_at": "2026-07-11T19:07:19.741605+08:00"
+    },
     {
       "id": "2026-07-10-2fb92fd30dd2",
       "run_id": "2fb92fd30dd2",
