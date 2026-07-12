@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-11T11:07:19.743673+00:00",
+  "updated_at": "2026-07-12T11:37:46.714120+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -203,6 +203,22 @@
             "status": "success",
             "file_path": "output/posts/2026-07-11-c01df1217107.md",
             "slug": "2026-07-11-c01df1217107",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-12T11:37:46.713869+00:00",
+      "items_count": 18,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-07-12-f585d6037283.md",
+            "slug": "2026-07-12-f585d6037283",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -880,6 +896,132 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-07-11T11:07:19.743660+00:00",
+        "error": null
+      }
+    },
+    "https://studyfinds.com/modern-decor-may-be-straining-peoples-brains": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-12T11:37:46.714068+00:00",
+        "error": null
+      }
+    },
+    "https://www.npr.org/2026/06/30/nx-s1-5835631/turner-camhi-do-no-harm-college-loans": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-12T11:37:46.714074+00:00",
+        "error": null
+      }
+    },
+    "https://antjs.org": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-12T11:37:46.714076+00:00",
+        "error": null
+      }
+    },
+    "https://io-fund.com/ai-stocks/nvidia-coreweave-nebius-circular-financing-gpu-boom": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-12T11:37:46.714078+00:00",
+        "error": null
+      }
+    },
+    "https://timeseriesofindia.com/economy/reads/upi-architecture": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-12T11:37:46.714080+00:00",
+        "error": null
+      }
+    },
+    "https://www.iroh.computer/blog/mesh-llm": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-12T11:37:46.714083+00:00",
+        "error": null
+      }
+    },
+    "https://www.math.ucdavis.edu/~saito/courses/229A/stewart-svd.pdf": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-12T11:37:46.714089+00:00",
+        "error": null
+      }
+    },
+    "https://clickhouse.com/blog/pgbouncer-clickhouse-managed-postgres": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-12T11:37:46.714092+00:00",
+        "error": null
+      }
+    },
+    "https://techcrunch.com/2026/06/30/the-father-of-the-internet-is-finally-retiring": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-12T11:37:46.714094+00:00",
+        "error": null
+      }
+    },
+    "https://thebeach.dev/posts/lisp-agent": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-12T11:37:46.714096+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/cosmtrek/mindwalk": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-12T11:37:46.714098+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/Wren6991/RISCBoy": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-12T11:37:46.714100+00:00",
+        "error": null
+      }
+    },
+    "https://triapul.cz/automa/i_did_not_kill_stanley_lieber": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-12T11:37:46.714102+00:00",
+        "error": null
+      }
+    },
+    "https://arxiv.org/abs/2607.07267": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-12T11:37:46.714104+00:00",
+        "error": null
+      }
+    },
+    "https://steven-giesel.com/blogPost/d4401fd0-805a-4703-9d9e-5fe3b57c25ea": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-12T11:37:46.714107+00:00",
+        "error": null
+      }
+    },
+    "https://buf.build/blog/protobuf-py": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-12T11:37:46.714109+00:00",
+        "error": null
+      }
+    },
+    "https://blogs.nature.com/aviewfromthebridge/2017/04/20/fibonaccis-mathematical-legacy": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-12T11:37:46.714111+00:00",
+        "error": null
+      }
+    },
+    "https://nigeltao.github.io/blog/2026/handsum.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-12T11:37:46.714113+00:00",
         "error": null
       }
     }
