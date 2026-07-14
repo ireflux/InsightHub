@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-13T12:37:49.793124+00:00",
+  "updated_at": "2026-07-14T11:34:12.726531+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -235,6 +235,22 @@
             "status": "success",
             "file_path": "output/posts/2026-07-13-355557866962.md",
             "slug": "2026-07-13-355557866962",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-14T11:34:12.726385+00:00",
+      "items_count": 8,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-07-14-d91f052d0319.md",
+            "slug": "2026-07-14-d91f052d0319",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -1115,6 +1131,62 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-07-13T12:37:49.793114+00:00",
+        "error": null
+      }
+    },
+    "https://scottwillsey.com/building-and-shipping-mac-and-ios-apps-without-ever-opening-xcode": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-14T11:34:12.726497+00:00",
+        "error": null
+      }
+    },
+    "https://lalitm.com/post/git-history": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-14T11:34:12.726503+00:00",
+        "error": null
+      }
+    },
+    "https://elasticity.institute/rsi-paper.pdf": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-14T11:34:12.726506+00:00",
+        "error": null
+      }
+    },
+    "https://www.hpcwire.com/2026/07/09/spectral-compute-aims-to-set-cuda-free-will-it-succeed": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-14T11:34:12.726508+00:00",
+        "error": null
+      }
+    },
+    "https://www.bbc.com/news/articles/cg53l737v1qo": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-14T11:34:12.726511+00:00",
+        "error": null
+      }
+    },
+    "https://blog.incogni.com/digital-fatigue-and-burnout": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-14T11:34:12.726515+00:00",
+        "error": null
+      }
+    },
+    "https://danq.me/2026/07/09/your-app-could-have-been-a-webpage": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-14T11:34:12.726520+00:00",
+        "error": null
+      }
+    },
+    "https://lenergy.com.au/free-daytime-electricity-is-coming-heres-how-it-actually-works": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-14T11:34:12.726523+00:00",
         "error": null
       }
     }
