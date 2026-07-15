@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-14T11:34:12.726531+00:00",
+  "updated_at": "2026-07-15T11:44:29.743464+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -251,6 +251,22 @@
             "status": "success",
             "file_path": "output/posts/2026-07-14-d91f052d0319.md",
             "slug": "2026-07-14-d91f052d0319",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-15T11:44:29.743230+00:00",
+      "items_count": 11,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-07-15-c2098c9d813c.md",
+            "slug": "2026-07-15-c2098c9d813c",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -1187,6 +1203,83 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-07-14T11:34:12.726523+00:00",
+        "error": null
+      }
+    },
+    "https://mindgard.ai/blog/cursor-0day-when-full-disclosure-becomes-the-only-protection-left": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-15T11:44:29.743408+00:00",
+        "error": null
+      }
+    },
+    "https://www.ayush.digital/blog/the-memory-heist": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-15T11:44:29.743414+00:00",
+        "error": null
+      }
+    },
+    "https://lucumr.pocoo.org/2026/7/13/the-tower-keeps-rising": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-15T11:44:29.743418+00:00",
+        "error": null
+      }
+    },
+    "https://krebsonsecurity.com/2026/07/microsoft-patches-a-record-570-security-flaws": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-15T11:44:29.743422+00:00",
+        "error": null
+      }
+    },
+    "https://github.blog/changelog/2026-07-14-dependabot-version-updates-introduce-default-package-cooldown": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-15T11:44:29.743425+00:00",
+        "error": null
+      }
+    },
+    "https://prismml.com/news/bonsai-27b": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-15T11:44:29.743429+00:00",
+        "error": null
+      }
+    },
+    "https://www.eetimes.com/risc-v-is-inevitable-state-of-the-union-keynote-argues": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-15T11:44:29.743437+00:00",
+        "error": null
+      }
+    },
+    "https://heatherburns.tech/2026/07/08/the-kids-with-phones-are-alright": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-15T11:44:29.743441+00:00",
+        "error": null
+      }
+    },
+    "https://vpd.ca/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-15T11:44:29.743444+00:00",
+        "error": null
+      }
+    },
+    "https://tailscale.com/security-bulletins": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-15T11:44:29.743452+00:00",
+        "error": null
+      }
+    },
+    "https://blog.apnic.net/2026/07/15/whos-running-all-those-tiny-rpki-servers": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-15T11:44:29.743455+00:00",
         "error": null
       }
     }
