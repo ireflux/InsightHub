@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-15T11:44:29.743464+00:00",
+  "updated_at": "2026-07-16T11:50:29.321233+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -267,6 +267,22 @@
             "status": "success",
             "file_path": "output/posts/2026-07-15-c2098c9d813c.md",
             "slug": "2026-07-15-c2098c9d813c",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-16T11:50:29.321003+00:00",
+      "items_count": 14,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-07-16-c4af5e3b6b92.md",
+            "slug": "2026-07-16-c4af5e3b6b92",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -1280,6 +1296,104 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-07-15T11:44:29.743455+00:00",
+        "error": null
+      }
+    },
+    "https://thinkingmachines.ai/news/introducing-inkling": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-16T11:50:29.321170+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/xai-org/grok-build": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-16T11:50:29.321178+00:00",
+        "error": null
+      }
+    },
+    "https://www.siegelendowment.org/wp-content/uploads/2026/07/fortune-david-siegel-open-source-ai.pdf": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-16T11:50:29.321182+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/minh-ton/reynard-browser": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-16T11:50:29.321185+00:00",
+        "error": null
+      }
+    },
+    "https://atproto.com/blog/at-protocol-trademark": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-16T11:50:29.321189+00:00",
+        "error": null
+      }
+    },
+    "https://www.reuters.com/business/finance/stripe-advent-offer-buy-paypal-more-than-53-billion-sources-say-2026-07-15": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-16T11:50:29.321193+00:00",
+        "error": null
+      }
+    },
+    "https://spectrum.ieee.org/high-bandwidth-flash": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-16T11:50:29.321204+00:00",
+        "error": null
+      }
+    },
+    "https://www.neomindlabs.com/2026/06/08/running-gemma-4-26b-at-5-tokens-sec-on-a-13-year-old-xeon-with-no-gpu": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-16T11:50:29.321207+00:00",
+        "error": null
+      }
+    },
+    "https://www.petekeen.net/homelab-resolved": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-16T11:50:29.321210+00:00",
+        "error": null
+      }
+    },
+    "https://mort.coffee/home/sqlite-editions": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-16T11:50:29.321213+00:00",
+        "error": null
+      }
+    },
+    "https://madcampos.dev/blog/2026/07/accessibility-from-scratch": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-16T11:50:29.321216+00:00",
+        "error": null
+      }
+    },
+    "https://planetscale.com/blog/making-768-servers-look-like-1": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-16T11:50:29.321219+00:00",
+        "error": null
+      }
+    },
+    "https://community.oneplus.com/thread/2170715118587871237": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-16T11:50:29.321222+00:00",
+        "error": null
+      }
+    },
+    "https://goughlui.com/2026/07/09/teardown-a-generic-7-port-usb-3-0-hub-that-wasnt": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-16T11:50:29.321225+00:00",
         "error": null
       }
     }
