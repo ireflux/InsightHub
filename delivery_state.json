@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-16T11:50:29.321233+00:00",
+  "updated_at": "2026-07-17T11:30:06.284737+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -283,6 +283,22 @@
             "status": "success",
             "file_path": "output/posts/2026-07-16-c4af5e3b6b92.md",
             "slug": "2026-07-16-c4af5e3b6b92",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-17T11:30:06.284526+00:00",
+      "items_count": 10,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-07-17-5337d34c3fa8.md",
+            "slug": "2026-07-17-5337d34c3fa8",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -1394,6 +1410,76 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-07-16T11:50:29.321225+00:00",
+        "error": null
+      }
+    },
+    "https://www.kimi.com/blog/kimi-k3": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-17T11:30:06.284689+00:00",
+        "error": null
+      }
+    },
+    "https://www.tryai.dev/blog/ai-music-video-arena-claude-vs-gpt-5.6": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-17T11:30:06.284696+00:00",
+        "error": null
+      }
+    },
+    "https://opensource.microsoft.com/blog/2026/07/16/microsoft-comic-chat-is-now-open-source": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-17T11:30:06.284700+00:00",
+        "error": null
+      }
+    },
+    "https://blog.google/innovation-and-ai/products/gemini-notebook/notebooklm-gemini-notebook": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-17T11:30:06.284704+00:00",
+        "error": null
+      }
+    },
+    "https://www.mixfont.com/experiments/decoy-font": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-17T11:30:06.284708+00:00",
+        "error": null
+      }
+    },
+    "https://blog.lyc8503.net/en/post/llm-classifier": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-17T11:30:06.284711+00:00",
+        "error": null
+      }
+    },
+    "https://lmstudio.ai/blog/introducing-lm-studio-bionic": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-17T11:30:06.284719+00:00",
+        "error": null
+      }
+    },
+    "https://www.smithsonianmag.com/smart-news/how-has-roman-concrete-lasted-for-millennia-a-1900-year-old-latrine-offers-new-clues-about-the-materials-impressive-durability-180989115": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-17T11:30:06.284723+00:00",
+        "error": null
+      }
+    },
+    "https://www.dbpro.app/blog/sqlite-is-all-you-need": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-17T11:30:06.284726+00:00",
+        "error": null
+      }
+    },
+    "https://journals.plos.org/plosbiology/article?id=10.1371%2Fjournal.pbio.3003876": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-17T11:30:06.284729+00:00",
         "error": null
       }
     }
