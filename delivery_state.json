@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-17T11:30:06.284737+00:00",
+  "updated_at": "2026-07-18T11:19:18.906334+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -299,6 +299,22 @@
             "status": "success",
             "file_path": "output/posts/2026-07-17-5337d34c3fa8.md",
             "slug": "2026-07-17-5337d34c3fa8",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-18T11:19:18.906044+00:00",
+      "items_count": 17,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-07-18-2aca681eb951.md",
+            "slug": "2026-07-18-2aca681eb951",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -1480,6 +1496,125 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-07-17T11:30:06.284729+00:00",
+        "error": null
+      }
+    },
+    "https://news.ycombinator.com/item?id=48945241": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-18T11:19:18.906252+00:00",
+        "error": null
+      }
+    },
+    "https://www.bbc.com/news/articles/cy4kdd1e0ejo": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-18T11:19:18.906255+00:00",
+        "error": null
+      }
+    },
+    "https://simonwillison.net/2026/Jul/16/kimi-k3": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-18T11:19:18.906266+00:00",
+        "error": null
+      }
+    },
+    "https://news.ycombinator.com/item?id=48949551": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-18T11:19:18.906270+00:00",
+        "error": null
+      }
+    },
+    "https://goliath32.com/blog/z80.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-18T11:19:18.906275+00:00",
+        "error": null
+      }
+    },
+    "https://jvns.ca/blog/2026/07/17/learning-about-running-sqlite": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-18T11:19:18.906280+00:00",
+        "error": null
+      }
+    },
+    "https://parksb.github.io/en/article/41.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-18T11:19:18.906289+00:00",
+        "error": null
+      }
+    },
+    "https://maurycyz.com/projects/bad_jpeg": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-18T11:19:18.906293+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/BadChemical/IoT-Vulnerability-Research-Public/blob/main/TP-Link_Kasa_EC71/Kasa_EC71.md": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-18T11:19:18.906297+00:00",
+        "error": null
+      }
+    },
+    "https://www.stenchill.com/en": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-18T11:19:18.906300+00:00",
+        "error": null
+      }
+    },
+    "https://curiouscoding.nl/posts/static-search-tree": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-18T11:19:18.906304+00:00",
+        "error": null
+      }
+    },
+    "https://rogerdickey.com/funny-item-co-occurrences-in-3-million-instacart-orders": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-18T11:19:18.906307+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/tucan9389/nanochat-jax/discussions/1": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-18T11:19:18.906311+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/waaldev/waldi": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-18T11:19:18.906314+00:00",
+        "error": null
+      }
+    },
+    "https://in-toto.io/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-18T11:19:18.906317+00:00",
+        "error": null
+      }
+    },
+    "https://negroniventurestudios.com/2026/07/18/the-computer-at-the-bottom-of-a-canal": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-18T11:19:18.906321+00:00",
+        "error": null
+      }
+    },
+    "https://arxiv.org/abs/2607.14587": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-18T11:19:18.906325+00:00",
         "error": null
       }
     }
