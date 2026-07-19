@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-18T11:19:18.906334+00:00",
+  "updated_at": "2026-07-19T11:18:20.411314+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -315,6 +315,22 @@
             "status": "success",
             "file_path": "output/posts/2026-07-18-2aca681eb951.md",
             "slug": "2026-07-18-2aca681eb951",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-19T11:18:20.411110+00:00",
+      "items_count": 9,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-07-19-4324e284be31.md",
+            "slug": "2026-07-19-4324e284be31",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -1615,6 +1631,69 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-07-18T11:19:18.906325+00:00",
+        "error": null
+      }
+    },
+    "https://stephen.bochinski.dev/blog/2026/07/18/the-kimi-k3-moment": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-19T11:18:20.411280+00:00",
+        "error": null
+      }
+    },
+    "https://twitter.com/Alibaba_Qwen/status/2078759124914098291": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-19T11:18:20.411289+00:00",
+        "error": null
+      }
+    },
+    "https://www.qwencloud.com/pricing/token-plan": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-19T11:18:20.411291+00:00",
+        "error": null
+      }
+    },
+    "https://codex-resets.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-19T11:18:20.411293+00:00",
+        "error": null
+      }
+    },
+    "https://workshop.cjpais.com/projects/transcribe-cpp": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-19T11:18:20.411295+00:00",
+        "error": null
+      }
+    },
+    "https://simonwillison.net/2026/Jul/19/claude-code-in-bun-in-rust": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-19T11:18:20.411298+00:00",
+        "error": null
+      }
+    },
+    "https://supabase.com/blog/searchable-field-level-encryption-with-cipherstash": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-19T11:18:20.411304+00:00",
+        "error": null
+      }
+    },
+    "https://chipsandcheese.com/p/scrying-the-amd-gfx1250-llvm-tea": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-19T11:18:20.411306+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/stupside/castor": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-19T11:18:20.411308+00:00",
         "error": null
       }
     }
