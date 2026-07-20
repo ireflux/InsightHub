@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-19T11:18:20.411314+00:00",
+  "updated_at": "2026-07-20T12:22:29.797401+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -331,6 +331,22 @@
             "status": "success",
             "file_path": "output/posts/2026-07-19-4324e284be31.md",
             "slug": "2026-07-19-4324e284be31",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-20T12:22:29.797221+00:00",
+      "items_count": 9,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-07-20-0c47d1be2e67.md",
+            "slug": "2026-07-20-0c47d1be2e67",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -1694,6 +1710,69 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-07-19T11:18:20.411308+00:00",
+        "error": null
+      }
+    },
+    "https://robotics.xiaomi.com/xiaomi-robotics-1.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-20T12:22:29.797378+00:00",
+        "error": null
+      }
+    },
+    "https://news.ycombinator.com/item?id=48968606": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-20T12:22:29.797380+00:00",
+        "error": null
+      }
+    },
+    "https://chipweinberger.com/articles/20260719-hardware-is-not-so-hard": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-20T12:22:29.797382+00:00",
+        "error": null
+      }
+    },
+    "https://theconversation.com/when-can-a-power-company-take-your-land-for-data-center-infrastructure-284061": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-20T12:22:29.797383+00:00",
+        "error": null
+      }
+    },
+    "https://spectrum.ieee.org/self-powered-trailers-freight-decarbonization": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-20T12:22:29.797384+00:00",
+        "error": null
+      }
+    },
+    "https://marginalrevolution.com/marginalrevolution/2026/07/the-trump-administrations-threat-to-scientific-research.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-20T12:22:29.797387+00:00",
+        "error": null
+      }
+    },
+    "https://www.minecraft.net/en-us/article/minecraft-26-3-snapshot-4": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-20T12:22:29.797392+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/hgaiser/moonshine": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-20T12:22:29.797394+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/Saivineeth147/lora-speedrun": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-20T12:22:29.797396+00:00",
         "error": null
       }
     }
