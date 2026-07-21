@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-20T12:22:29.797401+00:00",
+  "updated_at": "2026-07-21T11:52:41.261815+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -347,6 +347,22 @@
             "status": "success",
             "file_path": "output/posts/2026-07-20-0c47d1be2e67.md",
             "slug": "2026-07-20-0c47d1be2e67",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-21T11:52:41.261560+00:00",
+      "items_count": 13,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-07-21-4d0c6ee759f3.md",
+            "slug": "2026-07-21-4d0c6ee759f3",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -1773,6 +1789,97 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-07-20T12:22:29.797396+00:00",
+        "error": null
+      }
+    },
+    "https://werd.io/american-ai-is-locked-down-and-proprietary-its-losing": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-21T11:52:41.261745+00:00",
+        "error": null
+      }
+    },
+    "https://stratechery.com/2026/whos-afraid-of-chinese-models": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-21T11:52:41.261750+00:00",
+        "error": null
+      }
+    },
+    "https://www.kimi.com/products/kimi-work": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-21T11:52:41.261754+00:00",
+        "error": null
+      }
+    },
+    "https://blaizzy.github.io/nativ": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-21T11:52:41.261772+00:00",
+        "error": null
+      }
+    },
+    "https://xenaproject.wordpress.com/2026/07/20/human-mathematicians-are-being-outcounterexampled": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-21T11:52:41.261776+00:00",
+        "error": null
+      }
+    },
+    "https://cursor.com/blog/agent-swarm-model-economics": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-21T11:52:41.261780+00:00",
+        "error": null
+      }
+    },
+    "https://compilade.net/blog/ternary-packing": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-21T11:52:41.261788+00:00",
+        "error": null
+      }
+    },
+    "https://www.apollo.com/wealth/insights-news/insights/2026/06/growing-compute-shortage": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-21T11:52:41.261791+00:00",
+        "error": null
+      }
+    },
+    "https://qwen.ai/blog?id=qwen-image-3.0": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-21T11:52:41.261794+00:00",
+        "error": null
+      }
+    },
+    "https://news.ycombinator.com/item?id=48981136": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-21T11:52:41.261797+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/janestreet/incremental": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-21T11:52:41.261800+00:00",
+        "error": null
+      }
+    },
+    "https://buildwithtract.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-21T11:52:41.261803+00:00",
+        "error": null
+      }
+    },
+    "https://www.armaangomes.com/blogs/doom": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-21T11:52:41.261806+00:00",
         "error": null
       }
     }
