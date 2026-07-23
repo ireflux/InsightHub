@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-07-22T19:52:02.839888+08:00",
+  "generated_at": "2026-07-23T19:49:43.787634+08:00",
   "posts": [
+    {
+      "id": "2026-07-23-936663654635",
+      "run_id": "936663654635",
+      "date": "2026-07-23",
+      "title": "每日趋势观察 2026-07-23",
+      "slug": "2026-07-23-936663654635",
+      "markdown_path": "posts/2026-07-23-936663654635.md",
+      "summary": "- [So Reddit has decided that plain HTML is unsafe](https://www.cole-k.com/2026/07/21/reddit/): Reddit-The-Company",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 18,
+      "is_empty_update": false,
+      "created_at": "2026-07-23T19:49:43.787634+08:00"
+    },
     {
       "id": "2026-07-22-9d93a3a16ba9",
       "run_id": "9d93a3a16ba9",

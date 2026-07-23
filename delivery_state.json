@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-22T11:52:02.842171+00:00",
+  "updated_at": "2026-07-23T11:49:43.790610+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -379,6 +379,22 @@
             "status": "success",
             "file_path": "output/posts/2026-07-22-9d93a3a16ba9.md",
             "slug": "2026-07-22-9d93a3a16ba9",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-23T11:49:43.790300+00:00",
+      "items_count": 18,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-07-23-936663654635.md",
+            "slug": "2026-07-23-936663654635",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -1966,6 +1982,132 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-07-22T11:52:02.842162+00:00",
+        "error": null
+      }
+    },
+    "https://www.cole-k.com/2026/07/21/reddit": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-23T11:49:43.790520+00:00",
+        "error": null
+      }
+    },
+    "https://dylancastillo.co/posts/pelicanmaxxing.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-23T11:49:43.790527+00:00",
+        "error": null
+      }
+    },
+    "https://bento.page/slides": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-23T11:49:43.790529+00:00",
+        "error": null
+      }
+    },
+    "https://hatchet.run/blog/postgres-survival-guide": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-23T11:49:43.790531+00:00",
+        "error": null
+      }
+    },
+    "https://mitchellh.com/writing/everyone-should-know-simd": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-23T11:49:43.790533+00:00",
+        "error": null
+      }
+    },
+    "https://resobscura.substack.com/p/quality-non-fiction-books-are-the": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-23T11:49:43.790536+00:00",
+        "error": null
+      }
+    },
+    "https://beej.us/blog/data/ai-making": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-23T11:49:43.790542+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/marcelroed/gigatoken": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-23T11:49:43.790544+00:00",
+        "error": null
+      }
+    },
+    "https://nesbitt.io/2026/07/21/end-of-options.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-23T11:49:43.790546+00:00",
+        "error": null
+      }
+    },
+    "https://dfarq.homeip.net/amiga-1000-ten-years-ahead-of-its-time": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-23T11:49:43.790552+00:00",
+        "error": null
+      }
+    },
+    "https://jointhefreeworld.org/blog/articles/emacs/emacs-eglot-scala-kotlin/index.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-23T11:49:43.790556+00:00",
+        "error": null
+      }
+    },
+    "https://www.theguardian.com/technology/2026/jul/23/eu-fines-google-for-competition-breaches-over-search-and-apps": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-23T11:49:43.790558+00:00",
+        "error": null
+      }
+    },
+    "https://ziggit.dev/t/cruller-buns-zig-runtime-continued-on-zig-0-16/16734": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-23T11:49:43.790560+00:00",
+        "error": null
+      }
+    },
+    "https://blog.codeberg.org/protecting-our-floss-commons-from-llms.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-23T11:49:43.790562+00:00",
+        "error": null
+      }
+    },
+    "https://www.agent-swarm.dev/blog/code-mode-token-savings": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-23T11:49:43.790588+00:00",
+        "error": null
+      }
+    },
+    "https://brightsec.com/research/detecting-ansi-escape-sequence-injection-in-mcp-servers-with-dast": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-23T11:49:43.790592+00:00",
+        "error": null
+      }
+    },
+    "https://frame.work/desktop?tab=192gb-coming-soon": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-23T11:49:43.790596+00:00",
+        "error": null
+      }
+    },
+    "https://unity.com/blog/meet-the-unity-cli": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-23T11:49:43.790601+00:00",
         "error": null
       }
     }
