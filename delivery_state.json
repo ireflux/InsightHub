@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-23T11:49:43.790610+00:00",
+  "updated_at": "2026-07-24T11:41:03.080025+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -395,6 +395,22 @@
             "status": "success",
             "file_path": "output/posts/2026-07-23-936663654635.md",
             "slug": "2026-07-23-936663654635",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-24T11:41:03.079806+00:00",
+      "items_count": 16,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-07-24-83588edc5416.md",
+            "slug": "2026-07-24-83588edc5416",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -2108,6 +2124,118 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-07-23T11:49:43.790601+00:00",
+        "error": null
+      }
+    },
+    "https://www.politico.com/news/2026/07/22/startup-founders-urge-trump-not-to-shut-off-chinese-open-weight-ai-01008992": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-24T11:41:03.079969+00:00",
+        "error": null
+      }
+    },
+    "https://nealstephenson.substack.com/p/writing-by-hand-is-good-for-your": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-24T11:41:03.079973+00:00",
+        "error": null
+      }
+    },
+    "https://xn--gckvb8fzb.com/i-regret-migrating-to-codeberg": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-24T11:41:03.079976+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/wsff.md": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-24T11:41:03.079979+00:00",
+        "error": null
+      }
+    },
+    "https://news.ycombinator.com/item?id=49026810": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-24T11:41:03.079981+00:00",
+        "error": null
+      }
+    },
+    "https://stephenfollows.com/p/what-just-happened-to-thenumberscom-should-worry-us-all": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-24T11:41:03.079985+00:00",
+        "error": null
+      }
+    },
+    "https://bfl.ai/blog/flux-3": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-24T11:41:03.079992+00:00",
+        "error": null
+      }
+    },
+    "https://glinscott.github.io/beam-engine": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-24T11:41:03.079995+00:00",
+        "error": null
+      }
+    },
+    "https://mariusbancila.ro/blog/2026/07/23/the-pimpl-idiom-and-the-cpp26-stdindirect-type": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-24T11:41:03.079997+00:00",
+        "error": null
+      }
+    },
+    "https://platform.claude.com/cookbook": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-24T11:41:03.079999+00:00",
+        "error": null
+      }
+    },
+    "https://rybakov.com/blog/what_else_do_people_draw_on_gradient-copy.horse": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-24T11:41:03.080001+00:00",
+        "error": null
+      }
+    },
+    "https://sive.rs/itunes": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-24T11:41:03.080004+00:00",
+        "error": null
+      }
+    },
+    "https://bfl.ai/blog/flux-3-mimic": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-24T11:41:03.080007+00:00",
+        "error": null
+      }
+    },
+    "https://ziggit.dev/t/buz-a-drop-in-replacement-for-bun-using-modern-zig-with-sub-1s-incremental-builds/16891": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-24T11:41:03.080013+00:00",
+        "error": null
+      }
+    },
+    "https://chipsandcheese.com/p/amds-instinct-mi455x-aiming-for-the": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-24T11:41:03.080015+00:00",
+        "error": null
+      }
+    },
+    "https://book-prize-index.vercel.app": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-24T11:41:03.080017+00:00",
         "error": null
       }
     }
