@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-24T11:41:03.080025+00:00",
+  "updated_at": "2026-07-25T11:08:58.318761+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -411,6 +411,22 @@
             "status": "success",
             "file_path": "output/posts/2026-07-24-83588edc5416.md",
             "slug": "2026-07-24-83588edc5416",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-25T11:08:58.318588+00:00",
+      "items_count": 16,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-07-25-2df6fae1cc65.md",
+            "slug": "2026-07-25-2df6fae1cc65",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -2236,6 +2252,118 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-07-24T11:41:03.080017+00:00",
+        "error": null
+      }
+    },
+    "https://www.anthropic.com/news/claude-opus-5": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-25T11:08:58.318732+00:00",
+        "error": null
+      }
+    },
+    "https://hhh.hn/hanwha-github-token": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-25T11:08:58.318735+00:00",
+        "error": null
+      }
+    },
+    "https://arstechnica.com/space/2026/07/indias-first-privately-developed-rocket-reaches-orbit-on-dramatic-debut-launch": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-25T11:08:58.318736+00:00",
+        "error": null
+      }
+    },
+    "https://kitsumed.github.io/blog/posts/android-may-soon-restrict-on-device-adb": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-25T11:08:58.318737+00:00",
+        "error": null
+      }
+    },
+    "https://blog.mozilla.org/en/firefox/firefox-containers-preview": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-25T11:08:58.318738+00:00",
+        "error": null
+      }
+    },
+    "https://www.dbos.dev/blog/postgres-listen-notify-scalability": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-25T11:08:58.318740+00:00",
+        "error": null
+      }
+    },
+    "https://arcprize.org/leaderboard": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-25T11:08:58.318745+00:00",
+        "error": null
+      }
+    },
+    "https://www.maths.cam.ac.uk/features/professor-hannah-fry-wins-leelavati-prize": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-25T11:08:58.318747+00:00",
+        "error": null
+      }
+    },
+    "https://news.mit.edu/2026/three-sided-y-zipper-design-0504": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-25T11:08:58.318748+00:00",
+        "error": null
+      }
+    },
+    "https://news.st-andrews.ac.uk/archive/sperm-whales-blow-bubbles-to-achieve-restful-vertical-sleep": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-25T11:08:58.318749+00:00",
+        "error": null
+      }
+    },
+    "https://www.nist.gov/news-events/news/2026/07/uk-aisi-caisi-preliminary-assessment-kimi-k3s-cyber-capabilities": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-25T11:08:58.318750+00:00",
+        "error": null
+      }
+    },
+    "https://bytecodealliance.org/articles/wasmtime-gc": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-25T11:08:58.318751+00:00",
+        "error": null
+      }
+    },
+    "https://extinct-media-museum.blog.jp/otemachi": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-25T11:08:58.318753+00:00",
+        "error": null
+      }
+    },
+    "https://saffroncr.itch.io/katavatis/devlog/1534514/building-a-tiny-3d-renderer-for-a-tiny-handheld": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-25T11:08:58.318754+00:00",
+        "error": null
+      }
+    },
+    "https://cameronmpalmer.medium.com/should-you-even-use-an-llm-b4f3b7914f4d": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-25T11:08:58.318755+00:00",
+        "error": null
+      }
+    },
+    "https://www.augmental.tech/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-25T11:08:58.318756+00:00",
         "error": null
       }
     }
