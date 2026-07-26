@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-25T11:08:58.318761+00:00",
+  "updated_at": "2026-07-26T11:18:15.774207+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -427,6 +427,22 @@
             "status": "success",
             "file_path": "output/posts/2026-07-25-2df6fae1cc65.md",
             "slug": "2026-07-25-2df6fae1cc65",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-26T11:18:15.773965+00:00",
+      "items_count": 15,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-07-26-08ef0b73c6c2.md",
+            "slug": "2026-07-26-08ef0b73c6c2",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -2364,6 +2380,111 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-07-25T11:08:58.318756+00:00",
+        "error": null
+      }
+    },
+    "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-26T11:18:15.774146+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/demo-zexuan/liang-wenfeng-investor-meeting-2026-7-22/blob/master/%E6%A2%81%E6%96%87%E9%94%8B%E6%8A%95%E8%B5%84%E8%80%85%E4%BA%A4%E6%B5%81%E4%BC%9A-%E6%96%87%E5%AD%97%E7%A8%BF_1_18_translate_20260723201651.pdf": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-26T11:18:15.774151+00:00",
+        "error": null
+      }
+    },
+    "https://blog.cloudflare.com/content-independence-day-ai-options": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-26T11:18:15.774155+00:00",
+        "error": null
+      }
+    },
+    "https://refp.se/articles/your-shell-and-the-magic-colon": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-26T11:18:15.774158+00:00",
+        "error": null
+      }
+    },
+    "https://cachebag.sh/journal/interactive-rebasing": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-26T11:18:15.774162+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/slvDev/esp32-ai": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-26T11:18:15.774166+00:00",
+        "error": null
+      }
+    },
+    "https://discuss.grapheneos.org/d/40700-grapheneos-protections-against-data-extraction-from-locked-devices": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-26T11:18:15.774174+00:00",
+        "error": null
+      }
+    },
+    "https://www.law.uchicago.edu/news/ai-strategy-statement": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-26T11:18:15.774177+00:00",
+        "error": null
+      }
+    },
+    "https://astral.sh/blog/ruff-v0.16.0": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-26T11:18:15.774180+00:00",
+        "error": null
+      }
+    },
+    "https://www.seti.org/news/alien-world-chemistry-found-inside-meteorite": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-26T11:18:15.774183+00:00",
+        "error": null
+      }
+    },
+    "https://status.claude.com/incidents/zftg3gqkmv18": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-26T11:18:15.774186+00:00",
+        "error": null
+      }
+    },
+    "https://tangled.org/oppi.li/stinkpot": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-26T11:18:15.774189+00:00",
+        "error": null
+      }
+    },
+    "https://huggingface.co/owensong/Inflect-Micro-v2": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-26T11:18:15.774192+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/jdefrancesco/dskDitto": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-26T11:18:15.774195+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/leontrolski/postgresql-testing": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-26T11:18:15.774198+00:00",
         "error": null
       }
     }
