@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-26T11:18:15.774207+00:00",
+  "updated_at": "2026-07-27T12:54:41.583693+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -443,6 +443,22 @@
             "status": "success",
             "file_path": "output/posts/2026-07-26-08ef0b73c6c2.md",
             "slug": "2026-07-26-08ef0b73c6c2",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-27T12:54:41.583485+00:00",
+      "items_count": 16,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-07-27-656bf9ed0555.md",
+            "slug": "2026-07-27-656bf9ed0555",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -2485,6 +2501,118 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-07-26T11:18:15.774198+00:00",
+        "error": null
+      }
+    },
+    "https://www.techspot.com/news/113236-us-prosecutors-charge-atlanta-man-after-grapheneos-phone.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-27T12:54:41.583638+00:00",
+        "error": null
+      }
+    },
+    "https://huggingface.co/moonshotai/Kimi-K3": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-27T12:54:41.583643+00:00",
+        "error": null
+      }
+    },
+    "https://blackhole.plav.in": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-27T12:54:41.583646+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/vercel-labs/scriptc": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-27T12:54:41.583648+00:00",
+        "error": null
+      }
+    },
+    "https://nikolays.github.io/PGSimCity": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-27T12:54:41.583651+00:00",
+        "error": null
+      }
+    },
+    "https://beyondloom.com/decker": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-27T12:54:41.583654+00:00",
+        "error": null
+      }
+    },
+    "https://lockwood.dev/ai/2026/07/27/how-is-the-bun-rewrite-in-rust-going.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-27T12:54:41.583660+00:00",
+        "error": null
+      }
+    },
+    "https://mymodernmet.com/magnolia-ancient-flowers-beetles": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-27T12:54:41.583663+00:00",
+        "error": null
+      }
+    },
+    "https://code.videolan.org/videolan/vlc-unity": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-27T12:54:41.583665+00:00",
+        "error": null
+      }
+    },
+    "https://status.claude.com/incidents/lhqp09kxq7pb": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-27T12:54:41.583668+00:00",
+        "error": null
+      }
+    },
+    "https://misago-project.org/t/removing-reactjs-from-the-codebase-and-adapting-htmx-for-ui-interactivity/1267": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-27T12:54:41.583670+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/libsm64/libsm64": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-27T12:54:41.583672+00:00",
+        "error": null
+      }
+    },
+    "https://en.andros.dev/blog/d7ed8b07/modern-email-can-be-built-from-borrowed-parts": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-27T12:54:41.583675+00:00",
+        "error": null
+      }
+    },
+    "https://xcancel.com/HedgieMarkets/status/2081534588485296565": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-27T12:54:41.583681+00:00",
+        "error": null
+      }
+    },
+    "https://blog.jaysmito.dev/blog/04-fast-lockfree-queues": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-27T12:54:41.583683+00:00",
+        "error": null
+      }
+    },
+    "https://writings.stephenwolfram.com/2026/07/towards-a-theory-of-bugs-the-ruliology-of-the-unexpected": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-27T12:54:41.583685+00:00",
         "error": null
       }
     }
