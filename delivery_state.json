@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-27T12:54:41.583693+00:00",
+  "updated_at": "2026-07-28T11:57:27.545870+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -459,6 +459,22 @@
             "status": "success",
             "file_path": "output/posts/2026-07-27-656bf9ed0555.md",
             "slug": "2026-07-27-656bf9ed0555",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-28T11:57:27.545582+00:00",
+      "items_count": 17,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-07-28-8e38a7330e69.md",
+            "slug": "2026-07-28-8e38a7330e69",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -2613,6 +2629,125 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-07-27T12:54:41.583685+00:00",
+        "error": null
+      }
+    },
+    "https://www.anthropic.com/news/position-open-weights-models": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-28T11:57:27.545791+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/benchmarking-opus-5-on-slop-code-bench.md": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-28T11:57:27.545802+00:00",
+        "error": null
+      }
+    },
+    "https://www.data.jma.go.jp/multi/quake/quake_detail.html?eventID=20260728163528&lang=en": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-28T11:57:27.545806+00:00",
+        "error": null
+      }
+    },
+    "https://fermisense.com/when-machines-take-the-wheel": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-28T11:57:27.545810+00:00",
+        "error": null
+      }
+    },
+    "https://telnyx.com/release-notes/kimi-k3-telnyx-inference": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-28T11:57:27.545815+00:00",
+        "error": null
+      }
+    },
+    "https://dconf.org/2026/index.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-28T11:57:27.545819+00:00",
+        "error": null
+      }
+    },
+    "https://theconsensus.dev/p/2026/07/19/observing-gos-garbage-collector-old-and-new.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-28T11:57:27.545827+00:00",
+        "error": null
+      }
+    },
+    "https://www.fermionresearch.com/models/neutrino-8b": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-28T11:57:27.545831+00:00",
+        "error": null
+      }
+    },
+    "https://www.rise-reforming.com": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-28T11:57:27.545835+00:00",
+        "error": null
+      }
+    },
+    "https://support.apple.com/en-us/128067": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-28T11:57:27.545838+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/FrigadeHQ/yap": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-28T11:57:27.545841+00:00",
+        "error": null
+      }
+    },
+    "https://arsastronomica.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-28T11:57:27.545845+00:00",
+        "error": null
+      }
+    },
+    "https://spawn-queue.acm.org/doi/10.1145/3819083": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-28T11:57:27.545848+00:00",
+        "error": null
+      }
+    },
+    "https://www.makonea.com/en-US/blog/programming-languages-are-authoring-tools-for-platforms": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-28T11:57:27.545851+00:00",
+        "error": null
+      }
+    },
+    "https://docs.pytorch.org/devlogs/compiler/2026-07-25-pytorch-a-reference-language": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-28T11:57:27.545854+00:00",
+        "error": null
+      }
+    },
+    "https://homer.scrivium.com/report": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-28T11:57:27.545857+00:00",
+        "error": null
+      }
+    },
+    "https://blog.gaborkoos.com/posts/2026-07-24-Golang-Maps-How-Swiss-Tables-Replaced-the-Old-Bucket-Design": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-28T11:57:27.545861+00:00",
         "error": null
       }
     }
