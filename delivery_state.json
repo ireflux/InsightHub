@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-28T11:57:27.545870+00:00",
+  "updated_at": "2026-07-29T12:06:28.615522+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -475,6 +475,22 @@
             "status": "success",
             "file_path": "output/posts/2026-07-28-8e38a7330e69.md",
             "slug": "2026-07-28-8e38a7330e69",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-29T12:06:28.615280+00:00",
+      "items_count": 10,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-07-29-884a72a18b7f.md",
+            "slug": "2026-07-29-884a72a18b7f",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -2748,6 +2764,76 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-07-28T11:57:27.545861+00:00",
+        "error": null
+      }
+    },
+    "https://enklypesalt.com/posts/context-collapse-part3-ai-worming-through-word": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-29T12:06:28.615471+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/openai/codex-security": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-29T12:06:28.615477+00:00",
+        "error": null
+      }
+    },
+    "https://elizabethtai.com/2026/06/10/substack-writers-you-need-a-website": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-29T12:06:28.615481+00:00",
+        "error": null
+      }
+    },
+    "https://starling.build/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-29T12:06:28.615485+00:00",
+        "error": null
+      }
+    },
+    "https://mac-classic.com/news/half-life-ported-to-mac-os-9": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-29T12:06:28.615490+00:00",
+        "error": null
+      }
+    },
+    "https://www.collabora.com/news-and-blog/news-and-events/cracking-windows-open-porting-radv-to-win32.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-29T12:06:28.615494+00:00",
+        "error": null
+      }
+    },
+    "https://moai.studio/blog/posts/they-stole-your-attention.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-29T12:06:28.615501+00:00",
+        "error": null
+      }
+    },
+    "https://www.datagubbe.se/scenegui": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-29T12:06:28.615506+00:00",
+        "error": null
+      }
+    },
+    "https://micrologics.org/blog/sqlite-in-production-optimizing-wal-mode-concurrency-and-vfs-layers-for-low-latency-app-servers": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-29T12:06:28.615509+00:00",
+        "error": null
+      }
+    },
+    "https://www.fcc.gov/sites/default/files/robots-nsd.pdf": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-29T12:06:28.615512+00:00",
         "error": null
       }
     }

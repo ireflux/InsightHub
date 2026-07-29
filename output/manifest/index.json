@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-07-28T19:57:27.542965+08:00",
+  "generated_at": "2026-07-29T20:06:28.612421+08:00",
   "posts": [
+    {
+      "id": "2026-07-29-884a72a18b7f",
+      "run_id": "884a72a18b7f",
+      "date": "2026-07-29",
+      "title": "每日趋势观察 2026-07-29",
+      "slug": "2026-07-29-884a72a18b7f",
+      "markdown_path": "posts/2026-07-29-884a72a18b7f.md",
+      "summary": "本期聚焦技术演进的多重面向：AI安全漏洞与应对工具并存，创作者经济向数字主权迁移，底层开发被AI重塑，复古文化在AI辅助下复苏，注意力经济揭示商业代价，SQLite生产级应用面临信任挑战，地缘政治博弈延伸至机器人监管领域。",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 10,
+      "is_empty_update": false,
+      "created_at": "2026-07-29T20:06:28.612421+08:00"
+    },
     {
       "id": "2026-07-28-8e38a7330e69",
       "run_id": "8e38a7330e69",
