@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-07-29T20:06:28.612421+08:00",
+  "generated_at": "2026-07-30T19:55:59.159129+08:00",
   "posts": [
+    {
+      "id": "2026-07-30-786afeec8348",
+      "run_id": "786afeec8348",
+      "date": "2026-07-30",
+      "title": "每日趋势观察 2026-07-30",
+      "slug": "2026-07-30-786afeec8348",
+      "markdown_path": "posts/2026-07-30-786afeec8348.md",
+      "summary": "今日科技资讯聚焦AI安全、开发工具整合与行业透明度等核心议题。Hugging Face披露了自主AI代理攻击事件，引发对AI基础设施安全的广泛关注；Superlogical与Agent-Manager等项目展示了开发者工具整合的趋势；Science.org的调查揭示了AI初创公司研究发表的滞后现象；《生产力迷思》一文反思了技术社区对工具的过度追求；Keychron宣布开源鼠标固件计划；Google",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 7,
+      "is_empty_update": false,
+      "created_at": "2026-07-30T19:55:59.159129+08:00"
+    },
     {
       "id": "2026-07-29-884a72a18b7f",
       "run_id": "884a72a18b7f",

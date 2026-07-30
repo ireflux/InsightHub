@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-29T12:06:28.615522+00:00",
+  "updated_at": "2026-07-30T11:55:59.162047+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -491,6 +491,22 @@
             "status": "success",
             "file_path": "output/posts/2026-07-29-884a72a18b7f.md",
             "slug": "2026-07-29-884a72a18b7f",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-30T11:55:59.161867+00:00",
+      "items_count": 7,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-07-30-786afeec8348.md",
+            "slug": "2026-07-30-786afeec8348",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -2834,6 +2850,55 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-07-29T12:06:28.615512+00:00",
+        "error": null
+      }
+    },
+    "https://huggingface.co/blog/agent-intrusion-technical-timeline": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-30T11:55:59.162007+00:00",
+        "error": null
+      }
+    },
+    "https://www.superlogical.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-30T11:55:59.162010+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/YoanWai/agent-manager": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-30T11:55:59.162014+00:00",
+        "error": null
+      }
+    },
+    "https://www.science.org/content/article/ai-s-top-startups-are-barely-publishing-their-research": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-30T11:55:59.162022+00:00",
+        "error": null
+      }
+    },
+    "https://frantic.im/mirage": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-30T11:55:59.162026+00:00",
+        "error": null
+      }
+    },
+    "https://www.digitalfoundry.net/news/2026/07/keychron-announces-first-open-source-firmware-for-gaming-mice": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-30T11:55:59.162031+00:00",
+        "error": null
+      }
+    },
+    "https://android-developers.googleblog.com/2026/07/google-play-age-signals-api-safer-experiences.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-30T11:55:59.162038+00:00",
         "error": null
       }
     }
