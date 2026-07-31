@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-07-30T19:55:59.159129+08:00",
+  "generated_at": "2026-07-31T20:02:42.201181+08:00",
   "posts": [
+    {
+      "id": "2026-07-31-5232ab4584d1",
+      "run_id": "5232ab4584d1",
+      "date": "2026-07-31",
+      "title": "每日趋势观察 2026-07-31",
+      "slug": "2026-07-31-5232ab4584d1",
+      "markdown_path": "posts/2026-07-31-5232ab4584d1.md",
+      "summary": "今日科技圈呈现出几条清晰的脉络：AI能力竞赛进入新阶段，Google在机器人领域推出全身体智能层，DeepSeek持续迭代其低价模型矩阵；与此同时，开源基础设施在信任与效率之间寻找平衡——GCC明确拒绝AI生成代码贡献，GitHub推出堆叠PR功能改善大型代码库协作。",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 18,
+      "is_empty_update": false,
+      "created_at": "2026-07-31T20:02:42.201181+08:00"
+    },
     {
       "id": "2026-07-30-786afeec8348",
       "run_id": "786afeec8348",

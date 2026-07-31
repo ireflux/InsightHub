@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-30T11:55:59.162047+00:00",
+  "updated_at": "2026-07-31T12:02:42.205084+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -507,6 +507,22 @@
             "status": "success",
             "file_path": "output/posts/2026-07-30-786afeec8348.md",
             "slug": "2026-07-30-786afeec8348",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-31T12:02:42.204818+00:00",
+      "items_count": 18,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-07-31-5232ab4584d1.md",
+            "slug": "2026-07-31-5232ab4584d1",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -2899,6 +2915,132 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-07-30T11:55:59.162038+00:00",
+        "error": null
+      }
+    },
+    "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-31T12:02:42.205003+00:00",
+        "error": null
+      }
+    },
+    "https://krebsonsecurity.com/2026/07/read-this-before-you-buy-that-tv-streaming-stick": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-31T12:02:42.205007+00:00",
+        "error": null
+      }
+    },
+    "https://lwn.net/Articles/1086041": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-31T12:02:42.205016+00:00",
+        "error": null
+      }
+    },
+    "https://github.blog/changelog/2026-07-30-stacked-pull-requests-are-now-in-public-preview": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-31T12:02:42.205020+00:00",
+        "error": null
+      }
+    },
+    "https://api-docs.deepseek.com/updates": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-31T12:02:42.205025+00:00",
+        "error": null
+      }
+    },
+    "https://blog.google/security/chrome-stronger-with-every-update": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-31T12:02:42.205030+00:00",
+        "error": null
+      }
+    },
+    "https://martinfowler.com/articles/exploring-gen-ai/refactoring-economic-benefit.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-31T12:02:42.205038+00:00",
+        "error": null
+      }
+    },
+    "https://geospatialml.com/posts/reviewing-ai-slop": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-31T12:02:42.205042+00:00",
+        "error": null
+      }
+    },
+    "https://graybeard.ing/the-religion-of-speed": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-31T12:02:42.205046+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/openjdk/jdk/pull/31120": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-31T12:02:42.205049+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/mokshablr/gander": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-31T12:02:42.205052+00:00",
+        "error": null
+      }
+    },
+    "https://jssfr.de/2026-07-27-bad-apple-but-traceroute.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-31T12:02:42.205056+00:00",
+        "error": null
+      }
+    },
+    "https://artificialanalysis.ai/models/deepseek-v4-flash-ga": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-31T12:02:42.205059+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/MemoireMorte/Memo-1": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-31T12:02:42.205062+00:00",
+        "error": null
+      }
+    },
+    "https://fzakaria.com/2026/07/27/the-mean-means-nothing": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-31T12:02:42.205065+00:00",
+        "error": null
+      }
+    },
+    "https://www.engadget.com/2220571/differences-between-imax-70mm": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-31T12:02:42.205069+00:00",
+        "error": null
+      }
+    },
+    "https://www.bunniestudios.com/blog/2013/where-usb-memory-sticks-are-born": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-31T12:02:42.205072+00:00",
+        "error": null
+      }
+    },
+    "https://ccsim.fly.dev": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-07-31T12:02:42.205075+00:00",
         "error": null
       }
     }
