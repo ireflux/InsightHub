@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-31T12:02:42.205084+00:00",
+  "updated_at": "2026-08-01T11:16:30.578957+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -523,6 +523,22 @@
             "status": "success",
             "file_path": "output/posts/2026-07-31-5232ab4584d1.md",
             "slug": "2026-07-31-5232ab4584d1",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-01T11:16:30.578686+00:00",
+      "items_count": 16,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-08-01-eaab85cbabae.md",
+            "slug": "2026-08-01-eaab85cbabae",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -3041,6 +3057,118 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-07-31T12:02:42.205075+00:00",
+        "error": null
+      }
+    },
+    "https://john.fun/elevators": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-01T11:16:30.578878+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/yc-software/qm": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-01T11:16:30.578886+00:00",
+        "error": null
+      }
+    },
+    "https://www.raptitude.com/2026/07/how-to-exist": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-01T11:16:30.578890+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/sqliteai/waste": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-01T11:16:30.578894+00:00",
+        "error": null
+      }
+    },
+    "https://www.ajwaxman.com/writing/software-for-one": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-01T11:16:30.578898+00:00",
+        "error": null
+      }
+    },
+    "https://www.jeffgeerling.com/blog/2026/getting-25g-ethernet-mac-thunderbolt": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-01T11:16:30.578903+00:00",
+        "error": null
+      }
+    },
+    "https://openai.com/index/ten-advances-in-mathematics": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-01T11:16:30.578917+00:00",
+        "error": null
+      }
+    },
+    "https://weeraman.com/the-prototype-isnt-the-product": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-01T11:16:30.578921+00:00",
+        "error": null
+      }
+    },
+    "https://nascompares.com/2026/07/31/the-10-ways-nas-is-getting-enshitified": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-01T11:16:30.578924+00:00",
+        "error": null
+      }
+    },
+    "https://servo.org/blog/2026/07/31/june-in-servo": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-01T11:16:30.578927+00:00",
+        "error": null
+      }
+    },
+    "https://sundry.jerryorr.com/2026/07/31/development-pipeline-is-a-production-system": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-01T11:16:30.578931+00:00",
+        "error": null
+      }
+    },
+    "https://paulgraham.com/greatwork.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-01T11:16:30.578934+00:00",
+        "error": null
+      }
+    },
+    "https://ephemeralnewyork.wordpress.com/2026/07/27/hidden-by-billboards-for-over-100-years-the-tiny-holdout-building-in-the-middle-of-macys-is-back-in-view": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-01T11:16:30.578938+00:00",
+        "error": null
+      }
+    },
+    "https://gmic.eu/gmic40": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-01T11:16:30.578941+00:00",
+        "error": null
+      }
+    },
+    "https://rocm.blogs.amd.com/software-tools-optimization/gluon-attention-decode-mi450/README.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-01T11:16:30.578944+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/rails/solid_queue/releases/tag/v1.6.0": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-01T11:16:30.578947+00:00",
         "error": null
       }
     }
