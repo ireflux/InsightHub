@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-01T11:16:30.578957+00:00",
+  "updated_at": "2026-08-02T05:19:29.718030+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -539,6 +539,22 @@
             "status": "success",
             "file_path": "output/posts/2026-08-01-eaab85cbabae.md",
             "slug": "2026-08-01-eaab85cbabae",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-02T05:19:29.717771+00:00",
+      "items_count": 18,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-08-02-9b385e980044.md",
+            "slug": "2026-08-02-9b385e980044",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -3169,6 +3185,132 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-08-01T11:16:30.578947+00:00",
+        "error": null
+      }
+    },
+    "https://mitsloan.mit.edu/ideas-made-to-matter/ai-financial-advice-surprisingly-good-especially-if-you-ask-right-questions": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-02T05:19:29.717980+00:00",
+        "error": null
+      }
+    },
+    "https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-02T05:19:29.717987+00:00",
+        "error": null
+      }
+    },
+    "https://www.regen.co.uk/insights/plug-in-solar-is-coming-plug-in-batteries-should-follow": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-02T05:19:29.717990+00:00",
+        "error": null
+      }
+    },
+    "https://leodemoura.github.io/blog/2026-8-1-postmortem-for-kernel-soundness-bug-14576": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-02T05:19:29.717992+00:00",
+        "error": null
+      }
+    },
+    "https://diataxis.fr/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-02T05:19:29.717994+00:00",
+        "error": null
+      }
+    },
+    "https://victoriametrics.com/blog/go-1-27/index.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-02T05:19:29.717996+00:00",
+        "error": null
+      }
+    },
+    "https://www.kyoto-u.ac.jp/en/research-news/2026-07-28": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-02T05:19:29.718002+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/tom-ilan/cycloidal_gearbox": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-02T05:19:29.718005+00:00",
+        "error": null
+      }
+    },
+    "https://old.reddit.com/r/linux/comments/1vcpk8i/linux_desktop_market_share_has_hit_over_10_in": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-02T05:19:29.718007+00:00",
+        "error": null
+      }
+    },
+    "https://plug-world.com/posts/2026/asrock-bc250-the-budget-steam-machine": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-02T05:19:29.718009+00:00",
+        "error": null
+      }
+    },
+    "https://raymii.org/s/articles/But_can_your_calculator_run_Linux.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-02T05:19:29.718011+00:00",
+        "error": null
+      }
+    },
+    "https://www.science.org/content/article/deep-sea-vehicles-spot-alien-sharks-deep-beneath-waves-pacific": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-02T05:19:29.718013+00:00",
+        "error": null
+      }
+    },
+    "https://www.rfc-editor.org/rfc/rfc10015.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-02T05:19:29.718015+00:00",
+        "error": null
+      }
+    },
+    "https://costperprompt.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-02T05:19:29.718016+00:00",
+        "error": null
+      }
+    },
+    "https://insider.btcpp.dev/p/when-randombytes-runs-but-doesnt": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-02T05:19:29.718018+00:00",
+        "error": null
+      }
+    },
+    "http://oldvcr.blogspot.com/2026/08/mklinux-and-pimped-out-apple-workgroup.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-02T05:19:29.718020+00:00",
+        "error": null
+      }
+    },
+    "https://www.wafer.ai/blog/kimi-k3-mi355x": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-02T05:19:29.718021+00:00",
+        "error": null
+      }
+    },
+    "https://blog.silentsignal.eu/2026/07/28/the-cipher-behind-qsyrupwd-reconstructing-ibm-i-password-hashes": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-02T05:19:29.718023+00:00",
         "error": null
       }
     }
