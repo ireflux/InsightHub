@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-02T05:19:29.718030+00:00",
+  "updated_at": "2026-08-03T05:34:13.437357+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -555,6 +555,22 @@
             "status": "success",
             "file_path": "output/posts/2026-08-02-9b385e980044.md",
             "slug": "2026-08-02-9b385e980044",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-03T05:34:13.437062+00:00",
+      "items_count": 19,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-08-03-780d1f3da368.md",
+            "slug": "2026-08-03-780d1f3da368",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -3311,6 +3327,139 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-08-02T05:19:29.718023+00:00",
+        "error": null
+      }
+    },
+    "https://twitter.com/karpathy/status/2083749667410727319": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-03T05:34:13.437266+00:00",
+        "error": null
+      }
+    },
+    "https://pudding.cool/2026/07/essential-words": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-03T05:34:13.437271+00:00",
+        "error": null
+      }
+    },
+    "https://ykvm.com/2026/07/swiftui-a-story-of-mediocrity": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-03T05:34:13.437275+00:00",
+        "error": null
+      }
+    },
+    "https://qwen.ai/blog?id=qwen3.8": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-03T05:34:13.437280+00:00",
+        "error": null
+      }
+    },
+    "https://stackoverflow.blog/2026/07/29/developers-are-attached-to-tools-because-tools-encode-trust": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-03T05:34:13.437284+00:00",
+        "error": null
+      }
+    },
+    "https://frogs.vaguespac.es/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-03T05:34:13.437289+00:00",
+        "error": null
+      }
+    },
+    "https://www.rubenerd.au/the-myth-of-snow-leopard": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-03T05:34:13.437297+00:00",
+        "error": null
+      }
+    },
+    "https://unattributed.cc/note-taking-and-personal-knowledge-management": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-03T05:34:13.437311+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/wie-project/kakehashi": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-03T05:34:13.437314+00:00",
+        "error": null
+      }
+    },
+    "https://sf.isopolis.city/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-03T05:34:13.437318+00:00",
+        "error": null
+      }
+    },
+    "https://ssh.place": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-03T05:34:13.437321+00:00",
+        "error": null
+      }
+    },
+    "https://handwritten.blog/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-03T05:34:13.437325+00:00",
+        "error": null
+      }
+    },
+    "https://www.modelrepublic.org/articles/the-reporters-at-this-news-site-are-ai-bots.-openai%E2%80%99s-super-pac-appears-to-be-using-it-to-advance-its-political-agenda": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-03T05:34:13.437328+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/johnsonjh/cpm386": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-03T05:34:13.437331+00:00",
+        "error": null
+      }
+    },
+    "https://mattbeton.com/blog/bitnet-6502.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-03T05:34:13.437334+00:00",
+        "error": null
+      }
+    },
+    "https://www.rfc-editor.org/rfc/rfc9851.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-03T05:34:13.437338+00:00",
+        "error": null
+      }
+    },
+    "https://localai.io/blog/why-we-write-our-own-engines": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-03T05:34:13.437341+00:00",
+        "error": null
+      }
+    },
+    "https://arxiv.org/abs/2607.28271": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-03T05:34:13.437344+00:00",
+        "error": null
+      }
+    },
+    "https://cro.raku.org/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-03T05:34:13.437347+00:00",
         "error": null
       }
     }
