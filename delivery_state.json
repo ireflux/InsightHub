@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-03T05:34:13.437357+00:00",
+  "updated_at": "2026-08-04T04:57:40.557902+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -571,6 +571,22 @@
             "status": "success",
             "file_path": "output/posts/2026-08-03-780d1f3da368.md",
             "slug": "2026-08-03-780d1f3da368",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-04T04:57:40.537737+00:00",
+      "items_count": 16,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-08-04-510e8d39eedc.md",
+            "slug": "2026-08-04-510e8d39eedc",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -3460,6 +3476,118 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-08-03T05:34:13.437347+00:00",
+        "error": null
+      }
+    },
+    "https://ankursethi.com/blog/prevent-cognitive-debt-by-manually-retyping-llm-generated-code": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-04T04:57:40.557820+00:00",
+        "error": null
+      }
+    },
+    "https://www.seangoedecke.com/llms-reward-expertise": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-04T04:57:40.557831+00:00",
+        "error": null
+      }
+    },
+    "https://www.statsignificant.com/p/how-hollywood-stopped-making-movies": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-04T04:57:40.557836+00:00",
+        "error": null
+      }
+    },
+    "https://blog.exe.dev/devtools-must-be-open-source": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-04T04:57:40.557841+00:00",
+        "error": null
+      }
+    },
+    "https://blog.comfy.org/p/minimax-h3-day-0-support-in-comfyui": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-04T04:57:40.557845+00:00",
+        "error": null
+      }
+    },
+    "https://clickhouse.com/blog/andy-pavlo-joins-clickhouse": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-04T04:57:40.557850+00:00",
+        "error": null
+      }
+    },
+    "https://200ms.thenodebook.com": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-04T04:57:40.557858+00:00",
+        "error": null
+      }
+    },
+    "https://blog.cloudflare.com/smaller-faster-safer-models": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-04T04:57:40.557862+00:00",
+        "error": null
+      }
+    },
+    "https://www.science.org/content/article/odd-shapes-hidden-dense-amazon-rainforest-reveal-sprawling-ancient-civilization": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-04T04:57:40.557867+00:00",
+        "error": null
+      }
+    },
+    "https://changelog.complete.org/archives/44456-celebrating-45-years-of-kermit-with-the-first-new-c-kermit-release-in-15-years-and-working-with-a-decades-old-c-codebase": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-04T04:57:40.557871+00:00",
+        "error": null
+      }
+    },
+    "https://virtuallyfun.com/2026/08/03/windows-xp-2002-for-the-itanium-unbridled-rage": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-04T04:57:40.557875+00:00",
+        "error": null
+      }
+    },
+    "https://ochagavia.nl/blog/that-time-when-i-failed-the-microsoft-interview": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-04T04:57:40.557878+00:00",
+        "error": null
+      }
+    },
+    "https://pandoc.org/twenty-years-of-pandoc.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-04T04:57:40.557883+00:00",
+        "error": null
+      }
+    },
+    "https://ei3lh.eu/2025/11/20/replacing-the-kobo-libra-h2o-battery": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-04T04:57:40.557886+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/leonickson1/Swiftlet": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-04T04:57:40.557889+00:00",
+        "error": null
+      }
+    },
+    "https://media.ccc.de/v/emf2026-93-1-they-forgot-what-happened-last-time": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-04T04:57:40.557892+00:00",
         "error": null
       }
     }
