@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-04T04:57:40.557902+00:00",
+  "updated_at": "2026-08-05T05:01:07.816850+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -587,6 +587,22 @@
             "status": "success",
             "file_path": "output/posts/2026-08-04-510e8d39eedc.md",
             "slug": "2026-08-04-510e8d39eedc",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-05T05:01:07.816544+00:00",
+      "items_count": 19,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-08-05-994d88e3271f.md",
+            "slug": "2026-08-05-994d88e3271f",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -3588,6 +3604,139 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-08-04T04:57:40.557892+00:00",
+        "error": null
+      }
+    },
+    "https://waymo.com/blog/shorts/dallas-open-to-all": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-05T05:01:07.816761+00:00",
+        "error": null
+      }
+    },
+    "https://www.africanews.com/2026/08/04/ai-fuels-more-than-half-of-cybercrime-in-africa-as-digital-scams-surge-interpol": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-05T05:01:07.816768+00:00",
+        "error": null
+      }
+    },
+    "https://toneyalexander.github.io/inclusive-color-space": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-05T05:01:07.816773+00:00",
+        "error": null
+      }
+    },
+    "https://mistral.ai/news/shieldstral": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-05T05:01:07.816777+00:00",
+        "error": null
+      }
+    },
+    "https://queue.acm.org/detail.cfm?id=3807963": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-05T05:01:07.816782+00:00",
+        "error": null
+      }
+    },
+    "https://earendil.com/posts/pi-autoresearch-and-databricks": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-05T05:01:07.816786+00:00",
+        "error": null
+      }
+    },
+    "https://seg6.space/posts/center-div": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-05T05:01:07.816795+00:00",
+        "error": null
+      }
+    },
+    "https://blog.hartwork.org/posts/libexpat-city-of-munich-open-source-sabbatical": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-05T05:01:07.816799+00:00",
+        "error": null
+      }
+    },
+    "https://www.asiae.co.kr/en/article/2026080416131786841": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-05T05:01:07.816802+00:00",
+        "error": null
+      }
+    },
+    "https://arxiv.org/abs/2603.04221": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-05T05:01:07.816809+00:00",
+        "error": null
+      }
+    },
+    "https://deepgrove.ai/maple-preview": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-05T05:01:07.816813+00:00",
+        "error": null
+      }
+    },
+    "https://flowiseai.com/sunset": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-05T05:01:07.816816+00:00",
+        "error": null
+      }
+    },
+    "https://techascent.com/blog/just-ducking-around.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-05T05:01:07.816819+00:00",
+        "error": null
+      }
+    },
+    "https://mysk.blog/2026/08/04/webkit-proxy-icloud-private-relay-ip-leak": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-05T05:01:07.816822+00:00",
+        "error": null
+      }
+    },
+    "https://sharedobject.blog/posts/vp8-combinatorial-logic": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-05T05:01:07.816825+00:00",
+        "error": null
+      }
+    },
+    "https://simonwillison.net/2026/Jul/31/stateless-mcp": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-05T05:01:07.816831+00:00",
+        "error": null
+      }
+    },
+    "https://lists.securityfocus.com/hyperkitty/list/bugtraq@securityfocus.com/thread/CHKLXLA7SJEWLDFHWXB3QU57ADOXGL2E": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-05T05:01:07.816834+00:00",
+        "error": null
+      }
+    },
+    "https://www.wardsauto.com/news/the-auto-industry-is-building-for-a-past-thats-never-coming-back/825594": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-05T05:01:07.816837+00:00",
+        "error": null
+      }
+    },
+    "https://rioterm.com/blog/2026/07/27/rio-vt-and-librio": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-05T05:01:07.816841+00:00",
         "error": null
       }
     }
