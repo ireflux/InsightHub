@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-05T05:01:07.816850+00:00",
+  "updated_at": "2026-08-06T04:57:52.102113+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -603,6 +603,22 @@
             "status": "success",
             "file_path": "output/posts/2026-08-05-994d88e3271f.md",
             "slug": "2026-08-05-994d88e3271f",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-06T04:57:52.101809+00:00",
+      "items_count": 18,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-08-06-bfaba7333f48.md",
+            "slug": "2026-08-06-bfaba7333f48",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -3737,6 +3753,132 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-08-05T05:01:07.816841+00:00",
+        "error": null
+      }
+    },
+    "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-06T04:57:52.102037+00:00",
+        "error": null
+      }
+    },
+    "https://www.discoveryloop.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-06T04:57:52.102042+00:00",
+        "error": null
+      }
+    },
+    "https://blog.cloudflare.com/cloudflare-os": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-06T04:57:52.102046+00:00",
+        "error": null
+      }
+    },
+    "https://runarcn.no/android-to-linux": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-06T04:57:52.102049+00:00",
+        "error": null
+      }
+    },
+    "https://zed.dev/deltadb": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-06T04:57:52.102053+00:00",
+        "error": null
+      }
+    },
+    "https://openreview.net/challenge?redirect=%2Fforum%3Fid%3DklU4737opt": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-06T04:57:52.102057+00:00",
+        "error": null
+      }
+    },
+    "https://blog.fogus.me/llm/born-against.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-06T04:57:52.102064+00:00",
+        "error": null
+      }
+    },
+    "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-06T04:57:52.102068+00:00",
+        "error": null
+      }
+    },
+    "https://www.costar.com/article/970809918/nashville-council-approves-eminent-domain-action-to-halt-data-center-project": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-06T04:57:52.102071+00:00",
+        "error": null
+      }
+    },
+    "https://randsinrepose.com/archives/blade-runner-title-cards": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-06T04:57:52.102074+00:00",
+        "error": null
+      }
+    },
+    "https://www.promptarmor.com/resources/atlassian-rovo-exfiltrates-data": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-06T04:57:52.102081+00:00",
+        "error": null
+      }
+    },
+    "https://neon.com/blog/how-castform-neon-beats-frontier-models-on-price-and-efficiency": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-06T04:57:52.102084+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/denoland/celld": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-06T04:57:52.102087+00:00",
+        "error": null
+      }
+    },
+    "https://www.primeintellect.ai/blog/prime-agent": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-06T04:57:52.102090+00:00",
+        "error": null
+      }
+    },
+    "https://chipsandcheese.com/p/nvidias-vera-whitepaper-has-a-thread": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-06T04:57:52.102095+00:00",
+        "error": null
+      }
+    },
+    "https://www.greyblake.com/blog/branchless-rust": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-06T04:57:52.102098+00:00",
+        "error": null
+      }
+    },
+    "https://brill.com/view/journals/beh/aop/article-10.1163-1568539X-bja10370/article-10.1163-1568539X-bja10370.xml": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-06T04:57:52.102101+00:00",
+        "error": null
+      }
+    },
+    "https://quantego.org/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-06T04:57:52.102104+00:00",
         "error": null
       }
     }

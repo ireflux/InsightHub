@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-08-05T13:01:07.813275+08:00",
+  "generated_at": "2026-08-06T12:57:52.098523+08:00",
   "posts": [
+    {
+      "id": "2026-08-06-bfaba7333f48",
+      "run_id": "bfaba7333f48",
+      "date": "2026-08-06",
+      "title": "每日趋势观察 2026-08-06",
+      "slug": "2026-08-06-bfaba7333f48",
+      "markdown_path": "posts/2026-08-06-bfaba7333f48.md",
+      "summary": "- [Changes at Google DeepMind: Demis Hassabis from CEO to Chair, Jeff Dean departs](https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/): The next chapter of our AI mo",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 18,
+      "is_empty_update": false,
+      "created_at": "2026-08-06T12:57:52.098523+08:00"
+    },
     {
       "id": "2026-08-05-994d88e3271f",
       "run_id": "994d88e3271f",
