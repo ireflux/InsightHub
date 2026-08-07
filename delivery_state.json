@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-06T04:57:52.102113+00:00",
+  "updated_at": "2026-08-07T04:20:11.263159+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -619,6 +619,22 @@
             "status": "success",
             "file_path": "output/posts/2026-08-06-bfaba7333f48.md",
             "slug": "2026-08-06-bfaba7333f48",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-07T04:20:11.262879+00:00",
+      "items_count": 19,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-08-07-25a011e3edd7.md",
+            "slug": "2026-08-07-25a011e3edd7",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -3879,6 +3895,139 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-08-06T04:57:52.102104+00:00",
+        "error": null
+      }
+    },
+    "https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-07T04:20:11.263095+00:00",
+        "error": null
+      }
+    },
+    "https://blog.sydorets.com/en/posts/almost-no-skill-required-to-cook-a-steak": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-07T04:20:11.263102+00:00",
+        "error": null
+      }
+    },
+    "https://www.githubstatus.com/incidents/qcvjkzcs7j74": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-07T04:20:11.263106+00:00",
+        "error": null
+      }
+    },
+    "https://notashelf.dev/posts/taste-is-all-thats-left": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-07T04:20:11.263110+00:00",
+        "error": null
+      }
+    },
+    "https://scalex.dev/blog/ai-agent-permissions-stats": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-07T04:20:11.263119+00:00",
+        "error": null
+      }
+    },
+    "https://mastodon.gamedev.place/@rygorous/117047697255584965": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-07T04:20:11.263123+00:00",
+        "error": null
+      }
+    },
+    "https://www.mayerowitz.io/blog/mario-meets-pareto": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-07T04:20:11.263129+00:00",
+        "error": null
+      }
+    },
+    "https://provenmetal.com": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-07T04:20:11.263131+00:00",
+        "error": null
+      }
+    },
+    "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-07T04:20:11.263134+00:00",
+        "error": null
+      }
+    },
+    "https://herdr.dev/blog/herdr-is-joining-y-combinator": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-07T04:20:11.263136+00:00",
+        "error": null
+      }
+    },
+    "https://www.makeuseof.com/i-stopped-trusting-usb-c-cable-labels-started-testing-with-meter-instead": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-07T04:20:11.263138+00:00",
+        "error": null
+      }
+    },
+    "https://www.wsj.com/tech/meta-ordered-to-pay-942-million-to-address-harm-to-kids-from-social-media-8ba5aab7": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-07T04:20:11.263139+00:00",
+        "error": null
+      }
+    },
+    "https://nso.edu/press-release/nsf-inouye-solar-telescope-enables-major-discovery-of-a-hidden-solar-process": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-07T04:20:11.263141+00:00",
+        "error": null
+      }
+    },
+    "https://www.troyhunt.com/welcoming-the-nepalese-government-to-have-i-been-pwned": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-07T04:20:11.263143+00:00",
+        "error": null
+      }
+    },
+    "https://www.sciencedaily.com/releases/2026/08/260803080917.htm": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-07T04:20:11.263145+00:00",
+        "error": null
+      }
+    },
+    "https://www.wired.com/story/hackers-stalked-me-by-hijacking-a-smartwatch-for-kids": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-07T04:20:11.263147+00:00",
+        "error": null
+      }
+    },
+    "https://www.aleksagordic.com/blog/vllm": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-07T04:20:11.263148+00:00",
+        "error": null
+      }
+    },
+    "https://www.bbc.com/travel/article/20260731-why-estonians-invite-strangers-into-their-backyards-each-summer": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-07T04:20:11.263150+00:00",
+        "error": null
+      }
+    },
+    "https://onekey.so/anzen/coldcard-entropy-failure": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-07T04:20:11.263152+00:00",
         "error": null
       }
     }
