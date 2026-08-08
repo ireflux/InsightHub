@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07T04:20:11.263159+00:00",
+  "updated_at": "2026-08-08T03:17:35.799580+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -635,6 +635,22 @@
             "status": "success",
             "file_path": "output/posts/2026-08-07-25a011e3edd7.md",
             "slug": "2026-08-07-25a011e3edd7",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-08T03:17:35.799307+00:00",
+      "items_count": 17,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-08-08-138bcc4c7e8f.md",
+            "slug": "2026-08-08-138bcc4c7e8f",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -4028,6 +4044,125 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-08-07T04:20:11.263152+00:00",
+        "error": null
+      }
+    },
+    "https://www.noemamag.com/why-is-everyone-in-tech-so-sad": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-08T03:17:35.799521+00:00",
+        "error": null
+      }
+    },
+    "https://arcprize.org/results/deepseek-v4-flash-0731": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-08T03:17:35.799529+00:00",
+        "error": null
+      }
+    },
+    "https://app.dealroom.co/news/feed/oracle-bans-ai-generated-code-from-openjdk-despite-ellison-s-claim-oracle-isn-t-writing-its-own-code": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-08T03:17:35.799534+00:00",
+        "error": null
+      }
+    },
+    "https://www.ign.com/articles/ramageddon-continues-another-year-as-2027-memory-capacity-is-reportedly-sold-out": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-08T03:17:35.799538+00:00",
+        "error": null
+      }
+    },
+    "https://www.databricks.com/blog/managing-ai-coding-costs-scale": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-08T03:17:35.799542+00:00",
+        "error": null
+      }
+    },
+    "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-08T03:17:35.799547+00:00",
+        "error": null
+      }
+    },
+    "https://malisper.me/how-we-made-postgres-hundreds-of-times-faster-the-query-engine": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-08T03:17:35.799554+00:00",
+        "error": null
+      }
+    },
+    "https://www.theregister.com/security/2026/08/07/water-system-controllers-dont-belong-on-the-internet-says-ex-nsa-chief-after-suspected-iran-attacks/5285070": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-08T03:17:35.799556+00:00",
+        "error": null
+      }
+    },
+    "https://www.sciencealert.com/radical-study-suggests-life-on-earth-arose-from-non-living-matter-twice": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-08T03:17:35.799559+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/xoreaxeaxeax/asm-hall-of-shame": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-08T03:17:35.799561+00:00",
+        "error": null
+      }
+    },
+    "https://ancientlibrary.net/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-08T03:17:35.799563+00:00",
+        "error": null
+      }
+    },
+    "https://discourse.nixos.org/t/the-nixpkgs-core-team-has-disbanded/79413": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-08T03:17:35.799565+00:00",
+        "error": null
+      }
+    },
+    "https://blog.cloudflare.com/kitesurf": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-08T03:17:35.799567+00:00",
+        "error": null
+      }
+    },
+    "https://genesisopenmodels.anl.gov/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-08T03:17:35.799568+00:00",
+        "error": null
+      }
+    },
+    "https://www.sdss.org/black-hole-mapper-release-20": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-08T03:17:35.799570+00:00",
+        "error": null
+      }
+    },
+    "https://www.space.com/space-exploration/voyager/nasa-figured-out-how-to-keep-its-48-year-old-voyager-2-probe-running-for-yet-another-year": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-08T03:17:35.799572+00:00",
+        "error": null
+      }
+    },
+    "https://xvw.lol/en/articles/oop-refl.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-08T03:17:35.799574+00:00",
         "error": null
       }
     }
