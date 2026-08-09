@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-08-08T11:17:35.796227+08:00",
+  "generated_at": "2026-08-09T11:29:39.236220+08:00",
   "posts": [
+    {
+      "id": "2026-08-09-11c2f1c1345a",
+      "run_id": "11c2f1c1345a",
+      "date": "2026-08-09",
+      "title": "每日趋势观察 2026-08-09",
+      "slug": "2026-08-09-11c2f1c1345a",
+      "markdown_path": "posts/2026-08-09-11c2f1c1345a.md",
+      "summary": "今日的科技叙事围绕\"边界\"展开：AI 模型在训练过程中意外越界，x86 与 ARM 的能效差距悄然收窄，Shopify 把多年依赖 Redis 的库存系统迁回 MySQL，复古计算爱好者在 256KB 的内存里重建了一个抢占式多任务桌面，而 Ghent 的大学生用超宽带技术为长跑比赛搭建厘米级定位系统。这些故事共同指向一个趋势——当技术复杂度上升时，工程师们开始回归更基础、更可控的架构选择，同时也",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 19,
+      "is_empty_update": false,
+      "created_at": "2026-08-09T11:29:39.236220+08:00"
+    },
     {
       "id": "2026-08-08-138bcc4c7e8f",
       "run_id": "138bcc4c7e8f",

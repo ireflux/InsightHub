@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08T03:17:35.799580+00:00",
+  "updated_at": "2026-08-09T03:29:39.240522+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -651,6 +651,22 @@
             "status": "success",
             "file_path": "output/posts/2026-08-08-138bcc4c7e8f.md",
             "slug": "2026-08-08-138bcc4c7e8f",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-09T03:29:39.240174+00:00",
+      "items_count": 19,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-08-09-11c2f1c1345a.md",
+            "slug": "2026-08-09-11c2f1c1345a",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -4163,6 +4179,139 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-08-08T03:17:35.799574+00:00",
+        "error": null
+      }
+    },
+    "https://www.bloomberg.com/news/articles/2026-08-06/us-military-s-cyber-command-unit-grapples-with-cluster-of-deaths-by-suicide": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-09T03:29:39.240452+00:00",
+        "error": null
+      }
+    },
+    "https://simonwillison.net/2026/Aug/7/openai-timeline": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-09T03:29:39.240457+00:00",
+        "error": null
+      }
+    },
+    "https://www.fastmail.com/blog/fastmail-offers-eu-data-region": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-09T03:29:39.240459+00:00",
+        "error": null
+      }
+    },
+    "https://specification.website/spec/foundations/for-sale-dns": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-09T03:29:39.240461+00:00",
+        "error": null
+      }
+    },
+    "https://hackaday.com/2026/08/08/want-energy-efficiency-dude-youre-getting-a-dell": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-09T03:29:39.240464+00:00",
+        "error": null
+      }
+    },
+    "https://seg6.space/posts/phone-server": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-09T03:29:39.240468+00:00",
+        "error": null
+      }
+    },
+    "https://shopify.engineering/scaling-inventory-reservations": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-09T03:29:39.240476+00:00",
+        "error": null
+      }
+    },
+    "https://blog.getutm.app/2026/introducing-triton-directx-11-driver-for-qemu": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-09T03:29:39.240480+00:00",
+        "error": null
+      }
+    },
+    "https://os8088.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-09T03:29:39.240483+00:00",
+        "error": null
+      }
+    },
+    "http://www.davetech.co.uk/difficultycurves": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-09T03:29:39.240486+00:00",
+        "error": null
+      }
+    },
+    "https://eclipsefan.org/?v=2&t=max&layers=eclipse%2Cbesselian%2Cumbra-live%2Cshadow-3d%2Ccloud-projection%2Cosm&lat=43.4623&lon=-3.8099&opacity=besselian%3A0.2%2Cumbra-live%3A0.2&zoom=6&palier=minute": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-09T03:29:39.240488+00:00",
+        "error": null
+      }
+    },
+    "https://www.bbc.com/future/article/20260807-should-i-stop-cracking-my-knuckles": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-09T03:29:39.240491+00:00",
+        "error": null
+      }
+    },
+    "https://www.redblobgames.com/pathfinding/heuristics/differential.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-09T03:29:39.240494+00:00",
+        "error": null
+      }
+    },
+    "https://www.andrewt.net/dithered-qr-codes/wtf": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-09T03:29:39.240498+00:00",
+        "error": null
+      }
+    },
+    "https://zeus.ugent.be/blog/25-26/12urenloop-uwb": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-09T03:29:39.240501+00:00",
+        "error": null
+      }
+    },
+    "https://www.science.org/content/blog-post/preventing-misfolding-preventing-folding": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-09T03:29:39.240504+00:00",
+        "error": null
+      }
+    },
+    "https://www.bbc.com/news/articles/c4gyrzn8p94o": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-09T03:29:39.240507+00:00",
+        "error": null
+      }
+    },
+    "https://www.nature.com/articles/s44184-025-00171-5": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-09T03:29:39.240509+00:00",
+        "error": null
+      }
+    },
+    "https://theoremdb.org/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-09T03:29:39.240512+00:00",
         "error": null
       }
     }
