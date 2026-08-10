@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-08-09T11:29:39.236220+08:00",
+  "generated_at": "2026-08-10T11:46:03.317790+08:00",
   "posts": [
+    {
+      "id": "2026-08-10-40eda1abcba8",
+      "run_id": "40eda1abcba8",
+      "date": "2026-08-10",
+      "title": "每日趋势观察 2026-08-10",
+      "slug": "2026-08-10-40eda1abcba8",
+      "markdown_path": "posts/2026-08-10-40eda1abcba8.md",
+      "summary": "今日科技界呈现多条并行线索：AI可穿戴设备推动监控与反监控的技术博弈，专利法庭重塑相机行业格局，数据基础设施在架构层面持续演进，而传统行业的衰落与个人开发者工具的创新也在同步发生。",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 12,
+      "is_empty_update": false,
+      "created_at": "2026-08-10T11:46:03.317790+08:00"
+    },
     {
       "id": "2026-08-09-11c2f1c1345a",
       "run_id": "11c2f1c1345a",

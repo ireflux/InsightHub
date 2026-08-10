@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-09T03:29:39.240522+00:00",
+  "updated_at": "2026-08-10T03:46:03.321614+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -667,6 +667,22 @@
             "status": "success",
             "file_path": "output/posts/2026-08-09-11c2f1c1345a.md",
             "slug": "2026-08-09-11c2f1c1345a",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-10T03:46:03.321368+00:00",
+      "items_count": 12,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-08-10-40eda1abcba8.md",
+            "slug": "2026-08-10-40eda1abcba8",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -4312,6 +4328,90 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-08-09T03:29:39.240512+00:00",
+        "error": null
+      }
+    },
+    "https://news.ycombinator.com/item?id=49233423": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-10T03:46:03.321561+00:00",
+        "error": null
+      }
+    },
+    "https://laurentiugabriel.github.io/blog/articles/how-i-use-llms-to-learn": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-10T03:46:03.321567+00:00",
+        "error": null
+      }
+    },
+    "https://www.theatlantic.com/technology/2026/05/ai-wearable-surveillance-countermeasures/687203": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-10T03:46:03.321572+00:00",
+        "error": null
+      }
+    },
+    "https://theconversation.com/taxi-drivers-rarely-die-of-alzheimers-how-complex-mental-maps-and-spatial-reasoning-protect-your-brain-286650": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-10T03:46:03.321575+00:00",
+        "error": null
+      }
+    },
+    "https://openchamber.dev/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-10T03:46:03.321578+00:00",
+        "error": null
+      }
+    },
+    "https://www.w3.org/Provider/Style/URI": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-10T03:46:03.321582+00:00",
+        "error": null
+      }
+    },
+    "https://www.economist.com/britain/2026/08/06/the-tragedy-of-the-commons-ai-edition": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-10T03:46:03.321591+00:00",
+        "error": null
+      }
+    },
+    "https://propelmusic.co.nz/articles/the-sound-went-quiet-nz-music-media": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-10T03:46:03.321594+00:00",
+        "error": null
+      }
+    },
+    "https://blog.teknogeek.io/posts/what-happened-to-hackerone": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-10T03:46:03.321597+00:00",
+        "error": null
+      }
+    },
+    "https://www.dpreview.com/news/panasonic-did-what-apple-sony-and-nikon-couldnt-overturn-a-red-raw-video-patent": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-10T03:46:03.321600+00:00",
+        "error": null
+      }
+    },
+    "https://www.snowflake.com/en/blog/engineering/postgres-to-snowflake-replication-mirroring": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-10T03:46:03.321603+00:00",
+        "error": null
+      }
+    },
+    "https://atproto.com/articles/atproto-for-distsys-engineers": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-10T03:46:03.321606+00:00",
         "error": null
       }
     }
