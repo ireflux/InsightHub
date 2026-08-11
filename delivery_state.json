@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-10T03:46:03.321614+00:00",
+  "updated_at": "2026-08-11T03:27:20.502555+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -683,6 +683,22 @@
             "status": "success",
             "file_path": "output/posts/2026-08-10-40eda1abcba8.md",
             "slug": "2026-08-10-40eda1abcba8",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-11T03:27:20.502263+00:00",
+      "items_count": 17,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-08-11-904ce14799e6.md",
+            "slug": "2026-08-11-904ce14799e6",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -4412,6 +4428,125 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-08-10T03:46:03.321606+00:00",
+        "error": null
+      }
+    },
+    "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-11T03:27:20.502478+00:00",
+        "error": null
+      }
+    },
+    "https://www.ft.com/content/4e3957f8-ea7c-4c46-a3de-cdce8e526878": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-11T03:27:20.502482+00:00",
+        "error": null
+      }
+    },
+    "https://www.effort.news/uk-lobby": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-11T03:27:20.502485+00:00",
+        "error": null
+      }
+    },
+    "https://squeak.org/release_notes/6.1": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-11T03:27:20.502487+00:00",
+        "error": null
+      }
+    },
+    "https://kuber.studio/blog/Reflections/Humanising-LLM-Outputs-is-Actually-Dumb": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-11T03:27:20.502490+00:00",
+        "error": null
+      }
+    },
+    "https://cactuscompute.com/needle": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-11T03:27:20.502506+00:00",
+        "error": null
+      }
+    },
+    "https://www.patreon.com/samaaron/posts/sonic-pi-v5-166001392": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-11T03:27:20.502514+00:00",
+        "error": null
+      }
+    },
+    "https://www.massaschadeconsument.nl/collectieve-acties/playstation": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-11T03:27:20.502520+00:00",
+        "error": null
+      }
+    },
+    "https://www.vectorware.com/blog/simd-on-gpu": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-11T03:27:20.502523+00:00",
+        "error": null
+      }
+    },
+    "https://everycube.alen.is/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-11T03:27:20.502526+00:00",
+        "error": null
+      }
+    },
+    "https://stowaway.live/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-11T03:27:20.502529+00:00",
+        "error": null
+      }
+    },
+    "https://worldtrainmap.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-11T03:27:20.502531+00:00",
+        "error": null
+      }
+    },
+    "https://resobscura.substack.com/p/the-mechanical-miracle-that-ruined": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-11T03:27:20.502534+00:00",
+        "error": null
+      }
+    },
+    "https://fabscene.medium.com/publishing-schematics-before-open-source-was-a-word-55-years-of-akizuki-denshi-japans-be7ca9629704": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-11T03:27:20.502536+00:00",
+        "error": null
+      }
+    },
+    "https://code.call-cc.org/releases/6.0.0/NEWS": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-11T03:27:20.502539+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/antirez/h3.c": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-11T03:27:20.502541+00:00",
+        "error": null
+      }
+    },
+    "https://www.theguardian.com/us-news/2026/aug/10/trump-secret-flight-nato-return": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-11T03:27:20.502546+00:00",
         "error": null
       }
     }
