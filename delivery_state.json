@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-11T03:27:20.502555+00:00",
+  "updated_at": "2026-08-12T03:56:21.984643+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -699,6 +699,22 @@
             "status": "success",
             "file_path": "output/posts/2026-08-11-904ce14799e6.md",
             "slug": "2026-08-11-904ce14799e6",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-12T03:56:21.984360+00:00",
+      "items_count": 18,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-08-12-714f6d2d8da9.md",
+            "slug": "2026-08-12-714f6d2d8da9",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -4547,6 +4563,132 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-08-11T03:27:20.502546+00:00",
+        "error": null
+      }
+    },
+    "https://www.ft.com/content/e49dfb75-f841-4466-a577-f7aaff8779a0": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-12T03:56:21.984551+00:00",
+        "error": null
+      }
+    },
+    "https://developers.googleblog.com/why-go-is-an-ideal-language-for-ai-assisted-software-engineering": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-12T03:56:21.984556+00:00",
+        "error": null
+      }
+    },
+    "https://stolen-thoughts.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-12T03:56:21.984565+00:00",
+        "error": null
+      }
+    },
+    "https://photosynthesis.camera": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-12T03:56:21.984570+00:00",
+        "error": null
+      }
+    },
+    "https://x.ai/bot": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-12T03:56:21.984574+00:00",
+        "error": null
+      }
+    },
+    "https://www.modular.com/blog/modular-26-5-mojo-1-0-is-here": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-12T03:56:21.984580+00:00",
+        "error": null
+      }
+    },
+    "https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-12T03:56:21.984593+00:00",
+        "error": null
+      }
+    },
+    "https://tencent-hunyuan.github.io/Hunyuan3D-WorldClaw": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-12T03:56:21.984598+00:00",
+        "error": null
+      }
+    },
+    "https://newbedfordlight.org/new-bedford-police-officer-accused-of-using-flock-cameras-to-track-and-follow-ex-romantic-partner": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-12T03:56:21.984601+00:00",
+        "error": null
+      }
+    },
+    "https://hazyresearch.stanford.edu/blog/2026-08-05-retire-the-abstractions": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-12T03:56:21.984604+00:00",
+        "error": null
+      }
+    },
+    "https://blog.jordan.matelsky.com/Penplotter-holography": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-12T03:56:21.984607+00:00",
+        "error": null
+      }
+    },
+    "https://www.404media.co/company-offering-100-human-written-never-ai-peer-review-is-entirely-ai": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-12T03:56:21.984611+00:00",
+        "error": null
+      }
+    },
+    "https://line9.ai/diagram": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-12T03:56:21.984614+00:00",
+        "error": null
+      }
+    },
+    "https://aresluna.org/the-hardest-working-font-in-manhattan": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-12T03:56:21.984617+00:00",
+        "error": null
+      }
+    },
+    "https://whdh.com/news/the-lifesaving-secret-hidden-inside-a-horseshoe-crabs-blue-blood-and-the-race-to-protect-the-species": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-12T03:56:21.984623+00:00",
+        "error": null
+      }
+    },
+    "https://www.smh.com.au/national/nsw/every-millimetre-counts-inside-the-beast-tunnelling-under-sydney-harbour-20260804-p60la1.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-12T03:56:21.984627+00:00",
+        "error": null
+      }
+    },
+    "https://www.quantamagazine.org/neutrinos-from-deep-inside-earth-provide-a-new-picture-of-the-mantle-20260807": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-12T03:56:21.984630+00:00",
+        "error": null
+      }
+    },
+    "https://brentfitzgerald.com/posts/the-human-is-the-loop": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-12T03:56:21.984633+00:00",
         "error": null
       }
     }
