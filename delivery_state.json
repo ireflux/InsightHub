@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-12T03:56:21.984643+00:00",
+  "updated_at": "2026-08-13T04:01:47.615192+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -715,6 +715,22 @@
             "status": "success",
             "file_path": "output/posts/2026-08-12-714f6d2d8da9.md",
             "slug": "2026-08-12-714f6d2d8da9",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-13T04:01:47.614895+00:00",
+      "items_count": 17,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-08-13-a0a2b42148c4.md",
+            "slug": "2026-08-13-a0a2b42148c4",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -4689,6 +4705,125 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-08-12T03:56:21.984633+00:00",
+        "error": null
+      }
+    },
+    "https://digitalescapetools.com/2026/08/ublock-origin-stops-chasing-facebook-ads.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-13T04:01:47.615110+00:00",
+        "error": null
+      }
+    },
+    "https://x.ai/news/grok-4-6": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-13T04:01:47.615117+00:00",
+        "error": null
+      }
+    },
+    "https://openrouter.ai/deepseek/deepseek-v4-pro-0813": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-13T04:01:47.615122+00:00",
+        "error": null
+      }
+    },
+    "https://tailscale.com/blog/sqlite-wal-reset-bug": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-13T04:01:47.615126+00:00",
+        "error": null
+      }
+    },
+    "https://knownagents.com/insights": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-13T04:01:47.615129+00:00",
+        "error": null
+      }
+    },
+    "https://zed.dev/blog/introducing-delta": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-13T04:01:47.615133+00:00",
+        "error": null
+      }
+    },
+    "https://jonty.github.io/2026_eclipse_webcams": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-13T04:01:47.615141+00:00",
+        "error": null
+      }
+    },
+    "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-13T04:01:47.615145+00:00",
+        "error": null
+      }
+    },
+    "https://en.andros.dev/blog/ef4968f5/html-over-websockets-real-time-spas-with-barely-any-javascript": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-13T04:01:47.615149+00:00",
+        "error": null
+      }
+    },
+    "https://corneroffifth.studio/why-cant-you-find-canned-sardines-right-now": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-13T04:01:47.615152+00:00",
+        "error": null
+      }
+    },
+    "https://guillaumetech.github.io/posts/jpg-scaling-chrome": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-13T04:01:47.615160+00:00",
+        "error": null
+      }
+    },
+    "https://amiga-news.de/en/news/AN-2026-08-00070-EN.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-13T04:01:47.615164+00:00",
+        "error": null
+      }
+    },
+    "http://funcall.blogspot.com/2026/08/why-vibe-code-in-lisp.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-13T04:01:47.615167+00:00",
+        "error": null
+      }
+    },
+    "https://okmij.org/ftp/Computation/Impressions/PrincipiaMathematica.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-13T04:01:47.615170+00:00",
+        "error": null
+      }
+    },
+    "https://discoveredmaterials.com/research": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-13T04:01:47.615174+00:00",
+        "error": null
+      }
+    },
+    "https://repository.lib.ncsu.edu/items/451b001d-e63a-4968-866d-3fb3a599b1e7": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-13T04:01:47.615179+00:00",
+        "error": null
+      }
+    },
+    "https://adapt.com/blog/build-wide-ship-narrow": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-13T04:01:47.615183+00:00",
         "error": null
       }
     }
