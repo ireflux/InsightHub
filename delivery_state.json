@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-13T04:01:47.615192+00:00",
+  "updated_at": "2026-08-14T03:57:32.103482+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -731,6 +731,22 @@
             "status": "success",
             "file_path": "output/posts/2026-08-13-a0a2b42148c4.md",
             "slug": "2026-08-13-a0a2b42148c4",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-14T03:57:32.103276+00:00",
+      "items_count": 17,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-08-14-c74734f7c128.md",
+            "slug": "2026-08-14-c74734f7c128",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -4824,6 +4840,125 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-08-13T04:01:47.615183+00:00",
+        "error": null
+      }
+    },
+    "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-14T03:57:32.103425+00:00",
+        "error": null
+      }
+    },
+    "https://deepseek.com/harness/en": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-14T03:57:32.103429+00:00",
+        "error": null
+      }
+    },
+    "https://www.cerebras.ai/blog/accelerating-gpt-5-6-sol-ultrafast-with-openai": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-14T03:57:32.103431+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/xoreaxeaxeax/skitter-creek-bath-salts": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-14T03:57:32.103434+00:00",
+        "error": null
+      }
+    },
+    "https://current.org/2026/08/nine-pbs-sues-iron-mountain-over-blocked-access-to-archival-data": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-14T03:57:32.103436+00:00",
+        "error": null
+      }
+    },
+    "https://mcfunley.com/choose-boring-technology": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-14T03:57:32.103444+00:00",
+        "error": null
+      }
+    },
+    "https://www.geoffreylitt.com/2026/07/02/understanding-is-the-new-bottleneck": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-14T03:57:32.103450+00:00",
+        "error": null
+      }
+    },
+    "https://docs.mistral.ai/models/ocr-4-1": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-14T03:57:32.103452+00:00",
+        "error": null
+      }
+    },
+    "https://gruhn.me/blog/2026-08-13": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-14T03:57:32.103453+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/systemd/systemd/issues/40262": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-14T03:57:32.103455+00:00",
+        "error": null
+      }
+    },
+    "https://donkeybas.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-14T03:57:32.103456+00:00",
+        "error": null
+      }
+    },
+    "https://earendil.com/posts/compaction-in-pi": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-14T03:57:32.103458+00:00",
+        "error": null
+      }
+    },
+    "https://cdn.openai.com/pdf/how-organizations-use-chatgpt.pdf": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-14T03:57:32.103468+00:00",
+        "error": null
+      }
+    },
+    "https://themech.net/2026/08/hello-me-its-been-a-while": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-14T03:57:32.103470+00:00",
+        "error": null
+      }
+    },
+    "https://sparrowmap.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-14T03:57:32.103471+00:00",
+        "error": null
+      }
+    },
+    "https://atproto.com/blog/introducing-bluesky-protocol-services": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-14T03:57:32.103475+00:00",
+        "error": null
+      }
+    },
+    "https://www.theguardian.com/us-news/2026/aug/13/us-government-spied-anti-ice-protesters": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-14T03:57:32.103476+00:00",
         "error": null
       }
     }
