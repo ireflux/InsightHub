@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-14T03:57:32.103482+00:00",
+  "updated_at": "2026-08-15T02:45:53.660945+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -747,6 +747,22 @@
             "status": "success",
             "file_path": "output/posts/2026-08-14-c74734f7c128.md",
             "slug": "2026-08-14-c74734f7c128",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-15T02:45:53.660668+00:00",
+      "items_count": 17,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-08-15-b35508178491.md",
+            "slug": "2026-08-15-b35508178491",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -4959,6 +4975,125 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-08-14T03:57:32.103476+00:00",
+        "error": null
+      }
+    },
+    "https://huggingface.co/Qwen/Qwen3.8-27B-FP8": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-15T02:45:53.660864+00:00",
+        "error": null
+      }
+    },
+    "https://www.pcworld.com/article/3212428/firefox-is-now-the-last-major-browser-that-still-supports-ublock-origin.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-15T02:45:53.660871+00:00",
+        "error": null
+      }
+    },
+    "https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-15T02:45:53.660876+00:00",
+        "error": null
+      }
+    },
+    "https://blog.cryptographyengineering.com/2026/08/14/everything-is-about-to-go-dark": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-15T02:45:53.660880+00:00",
+        "error": null
+      }
+    },
+    "https://rustdesk.com/blog/unattended-remote-access-wayland": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-15T02:45:53.660884+00:00",
+        "error": null
+      }
+    },
+    "https://www.mixedbread.com/blog/toast-1": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-15T02:45:53.660889+00:00",
+        "error": null
+      }
+    },
+    "https://heyjonny.dev/posts/rss-to-eink-newspaper": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-15T02:45:53.660898+00:00",
+        "error": null
+      }
+    },
+    "https://getsmall.xyz/post/cmstjfl9l000if70ljmpzr4va": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-15T02:45:53.660907+00:00",
+        "error": null
+      }
+    },
+    "https://www.byhand.ai/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-15T02:45:53.660911+00:00",
+        "error": null
+      }
+    },
+    "https://uvbirds.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-15T02:45:53.660914+00:00",
+        "error": null
+      }
+    },
+    "http://pascal.hansotten.com/delphi/turbo-pascal-on-cpm-msx-dos-and-ms-dos": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-15T02:45:53.660917+00:00",
+        "error": null
+      }
+    },
+    "https://sf.gazetteer.co/corgi-kills-short-lived-website-that-ranked-its-female-employees": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-15T02:45:53.660921+00:00",
+        "error": null
+      }
+    },
+    "https://blog.ploopy.co/the-aplus-is-finally-here-499": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-15T02:45:53.660924+00:00",
+        "error": null
+      }
+    },
+    "https://fzakaria.com/2026/08/05/super-mario-derivations": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-15T02:45:53.660927+00:00",
+        "error": null
+      }
+    },
+    "https://eigendrum.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-15T02:45:53.660930+00:00",
+        "error": null
+      }
+    },
+    "https://blog.cr.yp.to/20260814-update.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-15T02:45:53.660933+00:00",
+        "error": null
+      }
+    },
+    "https://spectrum.ieee.org/magnetophon-laugh-track": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-15T02:45:53.660936+00:00",
         "error": null
       }
     }
