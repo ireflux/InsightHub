@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-08-15T10:45:53.656273+08:00",
+  "generated_at": "2026-08-16T10:53:20.217353+08:00",
   "posts": [
+    {
+      "id": "2026-08-16-aa84d8d9088e",
+      "run_id": "aa84d8d9088e",
+      "date": "2026-08-16",
+      "title": "每日趋势观察 2026-08-16",
+      "slug": "2026-08-16-aa84d8d9088e",
+      "markdown_path": "posts/2026-08-16-aa84d8d9088e.md",
+      "summary": "- [AI has access to a vastly larger working memory than the human brain](https://davidepiffer.com/p/ai-isnt-outthinking-mathematicians): AI Isn’t Outthinking Mathematicians.",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 17,
+      "is_empty_update": false,
+      "created_at": "2026-08-16T10:53:20.217353+08:00"
+    },
     {
       "id": "2026-08-15-b35508178491",
       "run_id": "b35508178491",

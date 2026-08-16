@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-15T02:45:53.660945+00:00",
+  "updated_at": "2026-08-16T02:53:20.220913+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -763,6 +763,22 @@
             "status": "success",
             "file_path": "output/posts/2026-08-15-b35508178491.md",
             "slug": "2026-08-15-b35508178491",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-16T02:53:20.220598+00:00",
+      "items_count": 17,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-08-16-aa84d8d9088e.md",
+            "slug": "2026-08-16-aa84d8d9088e",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -5094,6 +5110,125 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-08-15T02:45:53.660936+00:00",
+        "error": null
+      }
+    },
+    "https://davidepiffer.com/p/ai-isnt-outthinking-mathematicians": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-16T02:53:20.220860+00:00",
+        "error": null
+      }
+    },
+    "https://dmitry.gr/?r=06.+Thoughts&proj=12.+RV": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-16T02:53:20.220866+00:00",
+        "error": null
+      }
+    },
+    "https://alz-journals.onlinelibrary.wiley.com/doi/10.1002/dad2.70432": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-16T02:53:20.220869+00:00",
+        "error": null
+      }
+    },
+    "https://www.acc.org/about-acc/press-releases/2026/08/11/14/59/abdominal-fat-predicts-heart-disease-risk-better-than-bmi": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-16T02:53:20.220871+00:00",
+        "error": null
+      }
+    },
+    "https://www.smithsonianmag.com/innovation/the-first-at-home-test-for-infected-ticks-could-improve-lyme-disease-diagnosis-180989235": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-16T02:53:20.220872+00:00",
+        "error": null
+      }
+    },
+    "https://www.dampfkraft.com/ghost-characters.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-16T02:53:20.220875+00:00",
+        "error": null
+      }
+    },
+    "https://www.asus.com/accessories/bike-booster/asus-oxiis/oxiis-intelligent-bike-booster": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-16T02:53:20.220881+00:00",
+        "error": null
+      }
+    },
+    "https://www.severe-weather.eu/long-range-2/super-el-nino-growth-accelerating-to-record-strength-fall-winter-2026-2027-forecast-impact-united-states-canada-europe-fa": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-16T02:53:20.220883+00:00",
+        "error": null
+      }
+    },
+    "https://www.science.org/content/blog-post/so-how-ai-drug-discovery-doing-really": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-16T02:53:20.220889+00:00",
+        "error": null
+      }
+    },
+    "https://www.henrikkarlsson.xyz/p/good-ideas": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-16T02:53:20.220891+00:00",
+        "error": null
+      }
+    },
+    "https://michael.stapelberg.ch/posts/2026-08-09-zsh-history-truncation-bug": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-16T02:53:20.220892+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/wmww/tawc": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-16T02:53:20.220894+00:00",
+        "error": null
+      }
+    },
+    "https://sugartrack-beta.vercel.app/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-16T02:53:20.220896+00:00",
+        "error": null
+      }
+    },
+    "https://lapcatsoftware.com/articles/2026/8/3.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-16T02:53:20.220898+00:00",
+        "error": null
+      }
+    },
+    "https://duckdb.org/2026/07/31/asynchronous-io": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-16T02:53:20.220899+00:00",
+        "error": null
+      }
+    },
+    "https://waku.sh": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-16T02:53:20.220903+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/turtushig22-blip/tea5767-radio-tuner": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-16T02:53:20.220906+00:00",
         "error": null
       }
     }
