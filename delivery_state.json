@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-16T02:53:20.220913+00:00",
+  "updated_at": "2026-08-17T02:55:32.719420+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -779,6 +779,22 @@
             "status": "success",
             "file_path": "output/posts/2026-08-16-aa84d8d9088e.md",
             "slug": "2026-08-16-aa84d8d9088e",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-17T02:55:32.719143+00:00",
+      "items_count": 17,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-08-17-3e235e830ca5.md",
+            "slug": "2026-08-17-3e235e830ca5",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -5229,6 +5245,125 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-08-16T02:53:20.220906+00:00",
+        "error": null
+      }
+    },
+    "https://platform.claude.com/docs/en/release-notes/system-prompts": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-17T02:55:32.719361+00:00",
+        "error": null
+      }
+    },
+    "https://rvembedded.com/blog_post/12": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-17T02:55:32.719365+00:00",
+        "error": null
+      }
+    },
+    "https://w4g1.dev/blog/models-are-getting-dumber-on-purpose": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-17T02:55:32.719367+00:00",
+        "error": null
+      }
+    },
+    "https://vectoral.com/blog/who-are-the-token-brokers": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-17T02:55:32.719370+00:00",
+        "error": null
+      }
+    },
+    "https://buf.build/blog/protobuf-lsp": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-17T02:55:32.719372+00:00",
+        "error": null
+      }
+    },
+    "https://www.reuters.com/business/nvidia-scales-back-250-billion-openai-data-center-guarantee-wsj-reports-2026-08-14": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-17T02:55:32.719376+00:00",
+        "error": null
+      }
+    },
+    "https://simonwillison.net/2026/Aug/16/qwen-38-27b": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-17T02:55:32.719390+00:00",
+        "error": null
+      }
+    },
+    "https://pikuma.com/blog/programming-intel-pentium-mmx-simd": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-17T02:55:32.719394+00:00",
+        "error": null
+      }
+    },
+    "https://wiki.lowtechlab.org/wiki/Filtre_%C3%A0_eau_c%C3%A9ramique/en": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-17T02:55:32.719396+00:00",
+        "error": null
+      }
+    },
+    "https://www.ischool.berkeley.edu/sites/default/files/vinton_report_5.pdf": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-17T02:55:32.719398+00:00",
+        "error": null
+      }
+    },
+    "https://math-ai-org.github.io/mathcode": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-17T02:55:32.719402+00:00",
+        "error": null
+      }
+    },
+    "https://www.youtube.com/watch?v=-y8bGBE71yw": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-17T02:55:32.719403+00:00",
+        "error": null
+      }
+    },
+    "https://nnamgreb.de/blog/Clamiga+-+Common+Lisp+for+the+Amiga": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-17T02:55:32.719406+00:00",
+        "error": null
+      }
+    },
+    "https://www.highereddive.com/news/inside-the-federal-keyword-lists-that-canceled-billions-in-research-funding/826203": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-17T02:55:32.719408+00:00",
+        "error": null
+      }
+    },
+    "https://blog.racket-lang.org/2026/08/rhombus-v1.1.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-17T02:55:32.719409+00:00",
+        "error": null
+      }
+    },
+    "https://reticulum.network/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-17T02:55:32.719411+00:00",
+        "error": null
+      }
+    },
+    "https://meanhamster.com/news/agi-64-brings-sierra-adventures-to-the-commodore-64": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-17T02:55:32.719413+00:00",
         "error": null
       }
     }
