@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-17T02:55:32.719420+00:00",
+  "updated_at": "2026-08-18T02:48:41.083513+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -795,6 +795,22 @@
             "status": "success",
             "file_path": "output/posts/2026-08-17-3e235e830ca5.md",
             "slug": "2026-08-17-3e235e830ca5",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-18T02:48:41.083196+00:00",
+      "items_count": 18,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-08-18-71022309f111.md",
+            "slug": "2026-08-18-71022309f111",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -5364,6 +5380,132 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-08-17T02:55:32.719413+00:00",
+        "error": null
+      }
+    },
+    "https://www.rickmanelius.com/p/aidr-ai-didnt-read": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-18T02:48:41.083431+00:00",
+        "error": null
+      }
+    },
+    "https://timmarinin.net/2026/bluesky-screenshots": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-18T02:48:41.083440+00:00",
+        "error": null
+      }
+    },
+    "https://www.librarian.net/notoai": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-18T02:48:41.083444+00:00",
+        "error": null
+      }
+    },
+    "https://blog.roboflow.com/openai-gpt-5-6": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-18T02:48:41.083448+00:00",
+        "error": null
+      }
+    },
+    "https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-18T02:48:41.083452+00:00",
+        "error": null
+      }
+    },
+    "https://duckdb.org/2026/08/17/duckdb-20-highlights": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-18T02:48:41.083456+00:00",
+        "error": null
+      }
+    },
+    "https://openrouter.ai/openai/gpt-5.6-sol": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-18T02:48:41.083463+00:00",
+        "error": null
+      }
+    },
+    "https://moddedbear.com/an-update-on-leaving-gmail-for-fastmail": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-18T02:48:41.083467+00:00",
+        "error": null
+      }
+    },
+    "https://www.bbc.com/news/articles/c8xnwqe00v1o": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-18T02:48:41.083471+00:00",
+        "error": null
+      }
+    },
+    "https://en.wikipedia.org/wiki/Olo_(color)": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-18T02:48:41.083478+00:00",
+        "error": null
+      }
+    },
+    "https://fabiensanglard.net/quake_shareware_cd/index.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-18T02:48:41.083481+00:00",
+        "error": null
+      }
+    },
+    "https://current.org/2026/08/judge-sets-framework-for-nine-pbs-to-retrieve-archival-data": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-18T02:48:41.083484+00:00",
+        "error": null
+      }
+    },
+    "https://responsiblestatecraft.org/israel-influence-chatgpt": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-18T02:48:41.083487+00:00",
+        "error": null
+      }
+    },
+    "https://www.newyorker.com/culture/photo-booth/the-lonely-men-at-the-end-of-the-world": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-18T02:48:41.083491+00:00",
+        "error": null
+      }
+    },
+    "https://arxiv.org/abs/2608.13759": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-18T02:48:41.083494+00:00",
+        "error": null
+      }
+    },
+    "https://catcrafts.net/posts/fairphone-6-postmarketos-working-main-camera": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-18T02:48:41.083497+00:00",
+        "error": null
+      }
+    },
+    "https://devblogs.microsoft.com/oldnewthing/20260817-40?p=112617": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-18T02:48:41.083500+00:00",
+        "error": null
+      }
+    },
+    "https://www.science.org/content/article/shattered-skeleton-scottish-castle-first-confirmed-death-trebuchet": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-18T02:48:41.083503+00:00",
         "error": null
       }
     }

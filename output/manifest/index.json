@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-08-17T10:55:32.715693+08:00",
+  "generated_at": "2026-08-18T10:48:41.079440+08:00",
   "posts": [
+    {
+      "id": "2026-08-18-71022309f111",
+      "run_id": "71022309f111",
+      "date": "2026-08-18",
+      "title": "每日趋势观察 2026-08-18",
+      "slug": "2026-08-18-71022309f111",
+      "markdown_path": "posts/2026-08-18-71022309f111.md",
+      "summary": "- [AI;DR (AI; Didn't Read)](https://www.rickmanelius.com/p/aidr-ai-didnt-read): AI;DR (AI; Didn’t Read)",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 18,
+      "is_empty_update": false,
+      "created_at": "2026-08-18T10:48:41.079440+08:00"
+    },
     {
       "id": "2026-08-17-3e235e830ca5",
       "run_id": "3e235e830ca5",
