@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-18T02:48:41.083513+00:00",
+  "updated_at": "2026-08-19T02:50:39.639220+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -811,6 +811,22 @@
             "status": "success",
             "file_path": "output/posts/2026-08-18-71022309f111.md",
             "slug": "2026-08-18-71022309f111",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-19T02:50:39.638978+00:00",
+      "items_count": 18,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-08-19-0797493a0ad2.md",
+            "slug": "2026-08-19-0797493a0ad2",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -5506,6 +5522,132 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-08-18T02:48:41.083503+00:00",
+        "error": null
+      }
+    },
+    "https://seths.blog/2026/08/the-amazon-tax": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-19T02:50:39.639163+00:00",
+        "error": null
+      }
+    },
+    "https://www.tomshardware.com/pc-components/ram/memory-prices-climb-500-percent-in-12-months-up-to-10x-the-lowest-ever-tracked-prices-128gb-of-ddr5-now-usd3-399": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-19T02:50:39.639166+00:00",
+        "error": null
+      }
+    },
+    "https://cursor.com/changelog/origin-code-hosting": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-19T02:50:39.639169+00:00",
+        "error": null
+      }
+    },
+    "https://quantum5.ca/2026/08/16/fixing-bricked-amd-7040-series-framework-13-laptop-with-20-tools": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-19T02:50:39.639172+00:00",
+        "error": null
+      }
+    },
+    "https://nicholascharriere.com/blog/being-ambitious-and-being-a-dad": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-19T02:50:39.639174+00:00",
+        "error": null
+      }
+    },
+    "https://www.ikea.com/se/en/customer-service/knowledge/articles/6f564c4d-2ccc-46de-b643-545a3948dc79.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-19T02:50:39.639182+00:00",
+        "error": null
+      }
+    },
+    "https://shkspr.mobi/blog/2026/08/and-then-the-men-with-guns-tell-you-to-do-it-anyway": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-19T02:50:39.639189+00:00",
+        "error": null
+      }
+    },
+    "https://philo.gay/linecam": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-19T02:50:39.639191+00:00",
+        "error": null
+      }
+    },
+    "https://bfi.uchicago.edu/wp-content/uploads/2026/08/BFI_WP_2026-108-1.pdf": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-19T02:50:39.639193+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/pg83/solo": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-19T02:50:39.639195+00:00",
+        "error": null
+      }
+    },
+    "https://www.cerebras.ai/cs4": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-19T02:50:39.639197+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/RyanCodrai/turbovec": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-19T02:50:39.639199+00:00",
+        "error": null
+      }
+    },
+    "https://www.xda-developers.com/25-year-old-brazilian-video-patent-expired-legal-headache-linux": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-19T02:50:39.639206+00:00",
+        "error": null
+      }
+    },
+    "https://linear.app/data": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-19T02:50:39.639208+00:00",
+        "error": null
+      }
+    },
+    "https://www.bbc.com/news/articles/c1l1r1zne1ro": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-19T02:50:39.639209+00:00",
+        "error": null
+      }
+    },
+    "https://modelmap.cc": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-19T02:50:39.639210+00:00",
+        "error": null
+      }
+    },
+    "https://www.dpreview.com/news/the-90-year-history-of-the-binoculars-bolted-to-scenic-overlooks": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-19T02:50:39.639212+00:00",
+        "error": null
+      }
+    },
+    "https://www.cam.ac.uk/research/news/tiny-satellite-will-use-the-dark-side-of-the-moon-to-eavesdrop-on-whispers-from-the-early-universe": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-19T02:50:39.639213+00:00",
         "error": null
       }
     }
