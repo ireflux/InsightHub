@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-19T02:50:39.639220+00:00",
+  "updated_at": "2026-08-20T02:49:40.217282+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -827,6 +827,22 @@
             "status": "success",
             "file_path": "output/posts/2026-08-19-0797493a0ad2.md",
             "slug": "2026-08-19-0797493a0ad2",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-20T02:49:40.216984+00:00",
+      "items_count": 17,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-08-20-74ec0750bc07.md",
+            "slug": "2026-08-20-74ec0750bc07",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -5648,6 +5664,125 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-08-19T02:50:39.639213+00:00",
+        "error": null
+      }
+    },
+    "https://openrouter.ai/blog/announcements/openrouter-is-joining-stripe": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-20T02:49:40.217201+00:00",
+        "error": null
+      }
+    },
+    "https://www.casio.com/uk/watches/casio/product.F-B100W-1A": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-20T02:49:40.217207+00:00",
+        "error": null
+      }
+    },
+    "https://www.raphaelbauer.com:443/posts/postgresql-everything": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-20T02:49:40.217212+00:00",
+        "error": null
+      }
+    },
+    "https://go.dev/blog/go1.27": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-20T02:49:40.217215+00:00",
+        "error": null
+      }
+    },
+    "https://sprocketfox.io/xssfox/2026/08/19/sondehub-and-war": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-20T02:49:40.217219+00:00",
+        "error": null
+      }
+    },
+    "https://grapheneos.social/@GrapheneOS/117057099753905023": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-20T02:49:40.217225+00:00",
+        "error": null
+      }
+    },
+    "https://arxiv.org/abs/2608.16753": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-20T02:49:40.217233+00:00",
+        "error": null
+      }
+    },
+    "https://yassa9.github.io/osint/gralhix-004": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-20T02:49:40.217237+00:00",
+        "error": null
+      }
+    },
+    "https://fx.sh": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-20T02:49:40.217241+00:00",
+        "error": null
+      }
+    },
+    "https://unsloth.ai/docs/basics/dynamic-3.0-ggufs": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-20T02:49:40.217248+00:00",
+        "error": null
+      }
+    },
+    "https://sprocketfox.io/xssfox/2026/07/01/cricut-unlock": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-20T02:49:40.217252+00:00",
+        "error": null
+      }
+    },
+    "https://os8088.com/spotlight": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-20T02:49:40.217255+00:00",
+        "error": null
+      }
+    },
+    "https://devblogs.microsoft.com/oldnewthing/20260811-00?p=112605": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-20T02:49:40.217258+00:00",
+        "error": null
+      }
+    },
+    "https://www.bbc.com/travel/article/20260811-the-supermarket-is-becoming-a-tourist-attraction": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-20T02:49:40.217261+00:00",
+        "error": null
+      }
+    },
+    "https://inco.ai/blog/dflash2": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-20T02:49:40.217264+00:00",
+        "error": null
+      }
+    },
+    "https://www.computerenhance.com/p/turns-are-better-than-radians": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-20T02:49:40.217270+00:00",
+        "error": null
+      }
+    },
+    "https://www.benjoffe.com/fast-day-of-week": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-20T02:49:40.217273+00:00",
         "error": null
       }
     }
