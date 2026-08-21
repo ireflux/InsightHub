@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-20T02:49:40.217282+00:00",
+  "updated_at": "2026-08-21T02:55:38.412262+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -843,6 +843,22 @@
             "status": "success",
             "file_path": "output/posts/2026-08-20-74ec0750bc07.md",
             "slug": "2026-08-20-74ec0750bc07",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-21T02:55:38.411979+00:00",
+      "items_count": 17,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-08-21-8c4eff292ef0.md",
+            "slug": "2026-08-21-8c4eff292ef0",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -5783,6 +5799,125 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-08-20T02:49:40.217273+00:00",
+        "error": null
+      }
+    },
+    "https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-21T02:55:38.412175+00:00",
+        "error": null
+      }
+    },
+    "https://safedep.io/arrayref-proc-macro1-rust-build-time-malware": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-21T02:55:38.412179+00:00",
+        "error": null
+      }
+    },
+    "https://blog.curiousquail.com/im-upset-again-about-a-co-creator-of-rss-being-prosecuted-for-something-meta-is-doing-with-little-consequence": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-21T02:55:38.412188+00:00",
+        "error": null
+      }
+    },
+    "https://www.wsj.com/tech/steve-jobs-apple-next-cia-161b65f9?st=NWWds1&reflink=desktopwebshare_permalink": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-21T02:55:38.412192+00:00",
+        "error": null
+      }
+    },
+    "https://chrisburnell.com/html-can-do-that": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-21T02:55:38.412196+00:00",
+        "error": null
+      }
+    },
+    "https://www.experimental-history.com/p/why-arent-smart-people-happier": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-21T02:55:38.412202+00:00",
+        "error": null
+      }
+    },
+    "https://www.danielvaughn.dev/posts/huzzah": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-21T02:55:38.412210+00:00",
+        "error": null
+      }
+    },
+    "https://simedw.com/2026/08/20/midi-autocomplete": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-21T02:55:38.412215+00:00",
+        "error": null
+      }
+    },
+    "https://mathstodon.xyz/@maxpool/117128107757895678": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-21T02:55:38.412227+00:00",
+        "error": null
+      }
+    },
+    "https://jsomers.net/i-should-have-loved-biology": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-21T02:55:38.412230+00:00",
+        "error": null
+      }
+    },
+    "https://www.igalia.com/2026/08/19/Linux-72-Released.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-21T02:55:38.412234+00:00",
+        "error": null
+      }
+    },
+    "http://observationalepidemiology.blogspot.com/2026/08/it-is-sign-of-times-that-amazon-gets-to.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-21T02:55:38.412237+00:00",
+        "error": null
+      }
+    },
+    "https://consumerrights.wiki/w/Main_Page": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-21T02:55:38.412240+00:00",
+        "error": null
+      }
+    },
+    "https://jacob.gold/posts/theres-no-such-thing-as-a-small-software-team": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-21T02:55:38.412244+00:00",
+        "error": null
+      }
+    },
+    "https://openrouter.ai/stealth/ox-alpha": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-21T02:55:38.412247+00:00",
+        "error": null
+      }
+    },
+    "https://niki.cat/detecting-scraper-bots-through-scroll-behaviour": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-21T02:55:38.412250+00:00",
+        "error": null
+      }
+    },
+    "https://www.law.berkeley.edu/academics/registrar/academic-rules/artificial-intelligence-policy": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-21T02:55:38.412253+00:00",
         "error": null
       }
     }
