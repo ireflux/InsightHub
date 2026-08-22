@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-21T02:55:38.412262+00:00",
+  "updated_at": "2026-08-22T02:46:39.580992+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -859,6 +859,22 @@
             "status": "success",
             "file_path": "output/posts/2026-08-21-8c4eff292ef0.md",
             "slug": "2026-08-21-8c4eff292ef0",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-22T02:46:39.580735+00:00",
+      "items_count": 18,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-08-22-2db22e8192ea.md",
+            "slug": "2026-08-22-2db22e8192ea",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -5918,6 +5934,132 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-08-21T02:55:38.412253+00:00",
+        "error": null
+      }
+    },
+    "https://www.nytimes.com/2026/08/21/us/politics/samuel-tunick-deleted-phone-felony.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-22T02:46:39.580921+00:00",
+        "error": null
+      }
+    },
+    "https://kagi.com/changelog": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-22T02:46:39.580929+00:00",
+        "error": null
+      }
+    },
+    "https://www.economist.com/graphic-detail/2026/08/18/does-ai-stop-children-from-learning": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-22T02:46:39.580932+00:00",
+        "error": null
+      }
+    },
+    "https://www.felonybench.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-22T02:46:39.580936+00:00",
+        "error": null
+      }
+    },
+    "https://bandarlabs.github.io/Cobalt": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-22T02:46:39.580939+00:00",
+        "error": null
+      }
+    },
+    "https://lina.sh/blog/hijacking-e164-arpa": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-22T02:46:39.580943+00:00",
+        "error": null
+      }
+    },
+    "https://danluu.com/perf-opt": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-22T02:46:39.580951+00:00",
+        "error": null
+      }
+    },
+    "https://newscenter.lbl.gov/2026/08/10/scientists-release-biggest-2d-map-of-the-universe": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-22T02:46:39.580955+00:00",
+        "error": null
+      }
+    },
+    "https://nari-labs.com/blog/qwen3-tts-speed-cost-frontier": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-22T02:46:39.580958+00:00",
+        "error": null
+      }
+    },
+    "https://ozbrain.com": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-22T02:46:39.580961+00:00",
+        "error": null
+      }
+    },
+    "https://rust-glancer.github.io/blog/hello-world": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-22T02:46:39.580964+00:00",
+        "error": null
+      }
+    },
+    "https://thomasdullien.github.io/posts/2026-08-21-three-important-steps-in-my-maturation-process": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-22T02:46:39.580967+00:00",
+        "error": null
+      }
+    },
+    "https://www.gingerbill.org/article/2026/08/20/designing-odins-inline-asm": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-22T02:46:39.580970+00:00",
+        "error": null
+      }
+    },
+    "https://www.acm.org/articles/people-of-acm/2026/russ-cox": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-22T02:46:39.580972+00:00",
+        "error": null
+      }
+    },
+    "https://matduggan.com/otel-isnt-going-well-and-i-made-a-spreadsheet-about-it": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-22T02:46:39.580975+00:00",
+        "error": null
+      }
+    },
+    "https://www.lambda-symbolics.com/autolith": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-22T02:46:39.580978+00:00",
+        "error": null
+      }
+    },
+    "https://grapheneos.social/@GrapheneOS/117136278553665985": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-22T02:46:39.580980+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/peterkelly/rex": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-22T02:46:39.580983+00:00",
         "error": null
       }
     }
