@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-22T02:46:39.580992+00:00",
+  "updated_at": "2026-08-23T02:56:47.525993+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -875,6 +875,22 @@
             "status": "success",
             "file_path": "output/posts/2026-08-22-2db22e8192ea.md",
             "slug": "2026-08-22-2db22e8192ea",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-23T02:56:47.525597+00:00",
+      "items_count": 17,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-08-23-e5db9865875c.md",
+            "slug": "2026-08-23-e5db9865875c",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -6060,6 +6076,125 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-08-22T02:46:39.580983+00:00",
+        "error": null
+      }
+    },
+    "https://www.bbc.com/news/articles/cvgvyy4x2mvo": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-23T02:56:47.525904+00:00",
+        "error": null
+      }
+    },
+    "https://allaboutcoding.ghinda.com/a-week-of-using-codex-more-than-claude": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-23T02:56:47.525912+00:00",
+        "error": null
+      }
+    },
+    "https://munderdiffl.in/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-23T02:56:47.525916+00:00",
+        "error": null
+      }
+    },
+    "https://quantumi.sh/public/labs.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-23T02:56:47.525920+00:00",
+        "error": null
+      }
+    },
+    "https://geometridae.bearblog.dev/a-friendly-introduction-to-racket": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-23T02:56:47.525924+00:00",
+        "error": null
+      }
+    },
+    "https://hister.org/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-23T02:56:47.525928+00:00",
+        "error": null
+      }
+    },
+    "https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-23T02:56:47.525937+00:00",
+        "error": null
+      }
+    },
+    "https://lapcatsoftware.com/articles/2026/8/7.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-23T02:56:47.525941+00:00",
+        "error": null
+      }
+    },
+    "https://typ.ing/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-23T02:56:47.525945+00:00",
+        "error": null
+      }
+    },
+    "https://www.reuters.com/world/how-texas-student-blew-whistle-rogue-ai-hacking-attempt-2026-08-20": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-23T02:56:47.525953+00:00",
+        "error": null
+      }
+    },
+    "https://atproto.com/blog/atproto-spaces-alpha": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-23T02:56:47.525957+00:00",
+        "error": null
+      }
+    },
+    "https://www.primeintellect.ai/research/nanogpt-speedrun": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-23T02:56:47.525960+00:00",
+        "error": null
+      }
+    },
+    "https://statmodeling.stat.columbia.edu/2026/08/20/we-couldnt-reproduce-their-findings-and-realized-that-it-was-all-driven-by-weird-data-from-uzbekistan": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-23T02:56:47.525964+00:00",
+        "error": null
+      }
+    },
+    "https://thinkinginpython.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-23T02:56:47.525968+00:00",
+        "error": null
+      }
+    },
+    "https://marcua.net/minitools/figmimic": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-23T02:56:47.525971+00:00",
+        "error": null
+      }
+    },
+    "https://rwwgreene.substack.com/p/i-set-a-trap-for-a-book-marketing": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-23T02:56:47.525975+00:00",
+        "error": null
+      }
+    },
+    "https://readingmaps.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-23T02:56:47.525981+00:00",
         "error": null
       }
     }
