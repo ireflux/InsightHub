@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-24T02:56:48.080400+00:00",
+  "updated_at": "2026-08-25T02:52:01.398899+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -907,6 +907,22 @@
             "status": "success",
             "file_path": "output/posts/2026-08-24-0f4ccdb12cdd.md",
             "slug": "2026-08-24-0f4ccdb12cdd",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-25T02:52:01.398610+00:00",
+      "items_count": 18,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-08-25-33ccb5c04b22.md",
+            "slug": "2026-08-25-33ccb5c04b22",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -6330,6 +6346,132 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-08-24T02:56:48.080392+00:00",
+        "error": null
+      }
+    },
+    "https://lectronz.com/u/lectronz/articles/how-europe-is-killing-makers-and-micro-entrepreneurs": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-25T02:52:01.398815+00:00",
+        "error": null
+      }
+    },
+    "https://twitter.com/lemire/status/2091894299289874926": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-25T02:52:01.398826+00:00",
+        "error": null
+      }
+    },
+    "https://www.bbc.com/news/articles/c62m4gpnp78o": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-25T02:52:01.398830+00:00",
+        "error": null
+      }
+    },
+    "https://daily.jstor.org/where-did-all-the-public-bathrooms-go": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-25T02:52:01.398834+00:00",
+        "error": null
+      }
+    },
+    "https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-25T02:52:01.398839+00:00",
+        "error": null
+      }
+    },
+    "https://ipshipyard.com/blog/2026-the-end-of-ipfs-at-shipyard": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-25T02:52:01.398844+00:00",
+        "error": null
+      }
+    },
+    "https://sf.thijs.gg/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-25T02:52:01.398851+00:00",
+        "error": null
+      }
+    },
+    "https://www.cnn.com/2026/08/19/style/china-tang-dynasty-never-existed-hoax-intl-hnk": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-25T02:52:01.398856+00:00",
+        "error": null
+      }
+    },
+    "https://gultsch.de/posts/25-years-of-digital-independence": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-25T02:52:01.398859+00:00",
+        "error": null
+      }
+    },
+    "https://developer.apple.com/news?id=1ptvdtcm": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-25T02:52:01.398862+00:00",
+        "error": null
+      }
+    },
+    "https://www.smithsonianmag.com/smart-news/why-are-some-octopuses-so-smart-the-answer-might-lie-in-a-never-before-seen-mutation-that-helps-them-accurately-build-proteins-180989319": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-25T02:52:01.398866+00:00",
+        "error": null
+      }
+    },
+    "https://boydkane.com/essays/llms-could-control-their-host-machines-by-exploiting-inference-engines": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-25T02:52:01.398869+00:00",
+        "error": null
+      }
+    },
+    "https://proofcraft.systems/news-2026": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-25T02:52:01.398873+00:00",
+        "error": null
+      }
+    },
+    "https://ciechanow.ski/moon": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-25T02:52:01.398876+00:00",
+        "error": null
+      }
+    },
+    "https://paulgraham.com/prepare.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-25T02:52:01.398879+00:00",
+        "error": null
+      }
+    },
+    "https://blog.archive.org/2026/08/16/vintage-artificial-intelligence-before-it-got-awkward": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-25T02:52:01.398882+00:00",
+        "error": null
+      }
+    },
+    "https://chipsandcheese.com/p/hot-chips-2026-cuda-targets-risc": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-25T02:52:01.398886+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/murerkinn/bookshelf": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-25T02:52:01.398889+00:00",
         "error": null
       }
     }
