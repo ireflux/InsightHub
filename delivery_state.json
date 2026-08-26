@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-25T02:52:01.398899+00:00",
+  "updated_at": "2026-08-26T03:04:06.092484+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -923,6 +923,22 @@
             "status": "success",
             "file_path": "output/posts/2026-08-25-33ccb5c04b22.md",
             "slug": "2026-08-25-33ccb5c04b22",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-26T03:04:06.092209+00:00",
+      "items_count": 18,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-08-26-0e6d6bcc9e7d.md",
+            "slug": "2026-08-26-0e6d6bcc9e7d",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -6472,6 +6488,132 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-08-25T02:52:01.398889+00:00",
+        "error": null
+      }
+    },
+    "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-26T03:04:06.092401+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/zedeus/nitter/issues/1442": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-26T03:04:06.092406+00:00",
+        "error": null
+      }
+    },
+    "https://www.apple.com/newsroom/2026/08/apple-introduces-new-mac-studio-with-m5-max-and-m5-ultra": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-26T03:04:06.092410+00:00",
+        "error": null
+      }
+    },
+    "https://www.apple.com/newsroom/2026/08/apple-unveils-a-more-powerful-mac-mini-featuring-the-all-new-m6-and-m5-pro": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-26T03:04:06.092415+00:00",
+        "error": null
+      }
+    },
+    "https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-26T03:04:06.092419+00:00",
+        "error": null
+      }
+    },
+    "https://www.theguardian.com/music/2026/aug/25/dolly-parton-country-singer-dead": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-26T03:04:06.092424+00:00",
+        "error": null
+      }
+    },
+    "https://www.fda.gov/news-events/press-announcements/fda-authorizes-first-wearable-device-continuously-monitors-both-ketone-levels-and-blood-sugar": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-26T03:04:06.092432+00:00",
+        "error": null
+      }
+    },
+    "https://e360.yale.edu/digest/bomb-fishing-coral-reefs": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-26T03:04:06.092437+00:00",
+        "error": null
+      }
+    },
+    "https://dontwordle.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-26T03:04:06.092440+00:00",
+        "error": null
+      }
+    },
+    "https://nil.wallyjones.com/run-openbsd-on-digitalocean-for-4month": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-26T03:04:06.092443+00:00",
+        "error": null
+      }
+    },
+    "https://www.da.vidbuchanan.co.uk/blog/android-c2pa.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-26T03:04:06.092446+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/jeffhajewski/latticedb": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-26T03:04:06.092450+00:00",
+        "error": null
+      }
+    },
+    "https://blog.master.dev/tooltips-need-a-delay-and-then-they-need-to-skip-it": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-26T03:04:06.092453+00:00",
+        "error": null
+      }
+    },
+    "https://sethmlarson.dev/when-str-lower-is-a-security-vulnerability": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-26T03:04:06.092456+00:00",
+        "error": null
+      }
+    },
+    "https://www.economist.com/science-and-technology/2026/08/11/the-brain-may-be-about-to-have-its-ozempic-moment": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-26T03:04:06.092459+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/runetes/maiao": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-26T03:04:06.092466+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/swimmingbrain/texbrain": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-26T03:04:06.092469+00:00",
+        "error": null
+      }
+    },
+    "https://fzakaria.com/2026/08/24/actually-queryable-executables": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-26T03:04:06.092475+00:00",
         "error": null
       }
     }
