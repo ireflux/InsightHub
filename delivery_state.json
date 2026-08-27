@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-26T03:04:06.092484+00:00",
+  "updated_at": "2026-08-27T12:10:33.383069+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -939,6 +939,22 @@
             "status": "success",
             "file_path": "output/posts/2026-08-26-0e6d6bcc9e7d.md",
             "slug": "2026-08-26-0e6d6bcc9e7d",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-27T12:10:33.382768+00:00",
+      "items_count": 20,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-08-27-35ad51d4e075.md",
+            "slug": "2026-08-27-35ad51d4e075",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -6614,6 +6630,146 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-08-26T03:04:06.092475+00:00",
+        "error": null
+      }
+    },
+    "https://www.wsj.com/politics/policy/u-s-state-department-pauses-immigrant-visa-applications-25b31b23": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-27T12:10:33.382978+00:00",
+        "error": null
+      }
+    },
+    "https://www.businessinsider.com/nvidia-in-talks-to-buy-hugging-face-13-billion-dollars-2026-8": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-27T12:10:33.382982+00:00",
+        "error": null
+      }
+    },
+    "https://z.ai/blog/glm-5.3-flash": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-27T12:10:33.382991+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/SenteLabsAI/OpenExecutive": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-27T12:10:33.382995+00:00",
+        "error": null
+      }
+    },
+    "https://openai.com/index/hugging-face-incident-and-the-road-ahead": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-27T12:10:33.383000+00:00",
+        "error": null
+      }
+    },
+    "https://twitterwebviewer.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-27T12:10:33.383005+00:00",
+        "error": null
+      }
+    },
+    "https://lwn.net/SubscriberLink/1089390/46116614cc74b814": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-27T12:10:33.383014+00:00",
+        "error": null
+      }
+    },
+    "https://www.nebulasans.com": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-27T12:10:33.383018+00:00",
+        "error": null
+      }
+    },
+    "https://asahilinux.org/2026/08/progress-report-7-2": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-27T12:10:33.383022+00:00",
+        "error": null
+      }
+    },
+    "https://nhess.copernicus.org/articles/22/3765/2022/nhess-22-3765-2022.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-27T12:10:33.383025+00:00",
+        "error": null
+      }
+    },
+    "https://www.mturk.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-27T12:10:33.383029+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/tailscale/tailcat": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-27T12:10:33.383032+00:00",
+        "error": null
+      }
+    },
+    "https://iamwillwang.com/notes/zohran-and-the-short-link": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-27T12:10:33.383036+00:00",
+        "error": null
+      }
+    },
+    "https://www.fda.gov/news-events/press-announcements/fda-approves-first-class-targeted-therapy-metastatic-pancreatic-cancer": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-27T12:10:33.383039+00:00",
+        "error": null
+      }
+    },
+    "https://www.clerky.com/blog/clerky-is-joining-stripe": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-27T12:10:33.383042+00:00",
+        "error": null
+      }
+    },
+    "https://news.ycombinator.com/item?id=49462253": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-27T12:10:33.383046+00:00",
+        "error": null
+      }
+    },
+    "https://projects.laion.ai/bvd": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-27T12:10:33.383049+00:00",
+        "error": null
+      }
+    },
+    "https://pollen-robotics.com/microduck": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-27T12:10:33.383053+00:00",
+        "error": null
+      }
+    },
+    "https://humanprogress.org/ac-is-not-a-luxury-it-is-a-necessity": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-27T12:10:33.383056+00:00",
+        "error": null
+      }
+    },
+    "https://www.ycombinator.com/companies/adentris/jobs/ZpMXZ0C-founding-engineer-ai-rcm-healthcare-platform-typescript-python": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-27T12:10:33.383059+00:00",
         "error": null
       }
     }
