@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-27T12:10:33.383069+00:00",
+  "updated_at": "2026-08-28T13:39:42.607982+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -955,6 +955,22 @@
             "status": "success",
             "file_path": "output/posts/2026-08-27-35ad51d4e075.md",
             "slug": "2026-08-27-35ad51d4e075",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-28T13:39:42.607810+00:00",
+      "items_count": 5,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-08-28-519763a33c2f.md",
+            "slug": "2026-08-28-519763a33c2f",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -6770,6 +6786,41 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-08-27T12:10:33.383059+00:00",
+        "error": null
+      }
+    },
+    "https://calv.info/small-models-have-arrived": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-28T13:39:42.607961+00:00",
+        "error": null
+      }
+    },
+    "https://blog.cloudflare.com/dns-cache-memory-optimization-1111": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-28T13:39:42.607964+00:00",
+        "error": null
+      }
+    },
+    "https://www.nature.com/articles/d41586-026-02506-4": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-28T13:39:42.607967+00:00",
+        "error": null
+      }
+    },
+    "https://www.reuters.com/legal/government/us-judge-blocks-pentagons-anthropic-blacklisting-2026-08-28": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-28T13:39:42.607969+00:00",
+        "error": null
+      }
+    },
+    "https://blog.luanti.org/2026/08/27/luanti-dmca-tracer-ai": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-28T13:39:42.607971+00:00",
         "error": null
       }
     }
