@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-28T13:39:42.607982+00:00",
+  "updated_at": "2026-08-29T08:31:24.145158+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -971,6 +971,22 @@
             "status": "success",
             "file_path": "output/posts/2026-08-28-519763a33c2f.md",
             "slug": "2026-08-28-519763a33c2f",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-29T08:31:24.144793+00:00",
+      "items_count": 19,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-08-29-ec5f799c3ab9.md",
+            "slug": "2026-08-29-ec5f799c3ab9",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -6821,6 +6837,139 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-08-28T13:39:42.607971+00:00",
+        "error": null
+      }
+    },
+    "https://www.inventati.org/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-29T08:31:24.145083+00:00",
+        "error": null
+      }
+    },
+    "https://ckardaris.com/blog/2026/08/28/keyboard-driven-guis.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-29T08:31:24.145088+00:00",
+        "error": null
+      }
+    },
+    "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-29T08:31:24.145091+00:00",
+        "error": null
+      }
+    },
+    "https://www.orbify.eu/demo": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-29T08:31:24.145094+00:00",
+        "error": null
+      }
+    },
+    "https://four.htmx.org/announcements/2026-08-28-htmx-4.0.0-is-released": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-29T08:31:24.145097+00:00",
+        "error": null
+      }
+    },
+    "https://anil.recoil.org/notes/rumour-is-the-exploit": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-29T08:31:24.145101+00:00",
+        "error": null
+      }
+    },
+    "https://azmirror.com/2026/08/28/9th-circuit-sides-with-states-in-kalshi-gambling-fight-potentially-reviving-arizonas-prosecution": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-29T08:31:24.145109+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/Lakr233/vphone-cli": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-29T08:31:24.145112+00:00",
+        "error": null
+      }
+    },
+    "https://www.vectorian.be/articles/2026-06-07/sumerian-king-list-paleoclimate-alignment-explorer": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-29T08:31:24.145116+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/kingroryg/turbokv": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-29T08:31:24.145119+00:00",
+        "error": null
+      }
+    },
+    "https://pwning.systems/posts/llm-memory-program-analysis": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-29T08:31:24.145122+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/stemdeckapp/stemdeck": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-29T08:31:24.145124+00:00",
+        "error": null
+      }
+    },
+    "https://www.kumander.org/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-29T08:31:24.145127+00:00",
+        "error": null
+      }
+    },
+    "https://monzo.com/blog/tolerating-full-cloud-outages-with-monzo-stand-in": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-29T08:31:24.145130+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/paveluv/e": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-29T08:31:24.145133+00:00",
+        "error": null
+      }
+    },
+    "https://chipsandcheese.com/p/hot-chips-2026-samsungs-processing": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-29T08:31:24.145136+00:00",
+        "error": null
+      }
+    },
+    "https://sometimes.digital/posts/experiments-with-plotter-art": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-29T08:31:24.145139+00:00",
+        "error": null
+      }
+    },
+    "https://www.smithsonianmag.com/history/this-box-of-300-love-letters-showed-up-out-of-the-blue-who-was-the-whimsical-world-war-ii-soldier-who-wrote-them-180989300": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-29T08:31:24.145146+00:00",
+        "error": null
+      }
+    },
+    "https://parowozowniawolsztyn.pl/?page_id=2141": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-29T08:31:24.145149+00:00",
         "error": null
       }
     }
