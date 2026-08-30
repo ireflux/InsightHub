@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-08-29T16:31:24.140704+08:00",
+  "generated_at": "2026-08-30T15:50:54.633671+08:00",
   "posts": [
+    {
+      "id": "2026-08-30-18e871a350c1",
+      "run_id": "18e871a350c1",
+      "date": "2026-08-30",
+      "title": "每日趋势观察 2026-08-30",
+      "slug": "2026-08-30-18e871a350c1",
+      "markdown_path": "posts/2026-08-30-18e871a350c1.md",
+      "summary": "今天的科技叙事围绕\"代码迁徙\"与\"系统盲区\"两条线索展开。EVE Online 用十六年证明了 Python 2 的稳定性，也积累了 240 万行迁移成本；Tencent Hy4 展示了 AI 开始参与自身训练优化的早期递归循环；而 OpenAI 内部三份 AI 文明的兴衰报告则揭示了另一个维度的\"盲区\"——当系统复杂度超越人类监控能力时，后果可能远超预期。与此同时，Nancy Grace Rom",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 18,
+      "is_empty_update": false,
+      "created_at": "2026-08-30T15:50:54.633671+08:00"
+    },
     {
       "id": "2026-08-29-ec5f799c3ab9",
       "run_id": "ec5f799c3ab9",

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-29T08:31:24.145158+00:00",
+  "updated_at": "2026-08-30T07:50:54.638165+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -987,6 +987,22 @@
             "status": "success",
             "file_path": "output/posts/2026-08-29-ec5f799c3ab9.md",
             "slug": "2026-08-29-ec5f799c3ab9",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-30T07:50:54.637884+00:00",
+      "items_count": 18,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-08-30-18e871a350c1.md",
+            "slug": "2026-08-30-18e871a350c1",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -6970,6 +6986,132 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-08-29T08:31:24.145149+00:00",
+        "error": null
+      }
+    },
+    "https://www.eveonline.com/news/view/the-move-to-python-3-begins": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-30T07:50:54.638089+00:00",
+        "error": null
+      }
+    },
+    "https://zackbartel.com/blog/2026/08/tether": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-30T07:50:54.638093+00:00",
+        "error": null
+      }
+    },
+    "https://www.tencent.com/tencent-releases-and-open-sources-tencent-hy4-preview": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-30T07:50:54.638095+00:00",
+        "error": null
+      }
+    },
+    "https://www.texastribune.org/2026/08/28/texas-flock-cameras-auto-insurance-fee-mvcpa-grants": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-30T07:50:54.638097+00:00",
+        "error": null
+      }
+    },
+    "https://danluu.com/bug-blind": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-30T07:50:54.638099+00:00",
+        "error": null
+      }
+    },
+    "https://science.nasa.gov/mission/roman-space-telescope": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-30T07:50:54.638107+00:00",
+        "error": null
+      }
+    },
+    "https://www.tomshardware.com/software/linux/california-lawmakers-unanimously-pass-linux-exemption-from-age-verification-law-software-distributed-under-the-gpl-mit-bsd-and-apache-licenses-are-exempt": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-30T07:50:54.638117+00:00",
+        "error": null
+      }
+    },
+    "https://freecore.org/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-30T07:50:54.638122+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/gbin/defragger": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-30T07:50:54.638126+00:00",
+        "error": null
+      }
+    },
+    "https://dl.acm.org/doi/10.1145/3830438.3830958": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-30T07:50:54.638129+00:00",
+        "error": null
+      }
+    },
+    "https://www.dwarkesh.com/p/openai-huggingface": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-30T07:50:54.638133+00:00",
+        "error": null
+      }
+    },
+    "https://blog.python.org/2026/08/riscv-now-officially-supported": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-30T07:50:54.638137+00:00",
+        "error": null
+      }
+    },
+    "https://iafisher.com/2026/08/sigprint": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-30T07:50:54.638140+00:00",
+        "error": null
+      }
+    },
+    "https://www.smithsonianmag.com/history/among-all-great-things-benjamin-franklin-invented-discovered-alter-egos-gave-him-most-freedom-180988824": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-30T07:50:54.638143+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/mk6i/open-oscar-server": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-30T07:50:54.638146+00:00",
+        "error": null
+      }
+    },
+    "https://www.muppetlabs.com/~breadbox/software/tiny/teensy.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-30T07:50:54.638149+00:00",
+        "error": null
+      }
+    },
+    "https://artificialanalysis.ai/hardware-inference-stack/mobile-phones": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-30T07:50:54.638152+00:00",
+        "error": null
+      }
+    },
+    "https://wiki.xxiivv.com/site/pop2.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-30T07:50:54.638155+00:00",
         "error": null
       }
     }
