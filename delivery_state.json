@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-30T07:50:54.638165+00:00",
+  "updated_at": "2026-08-31T07:55:31.490279+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -1003,6 +1003,22 @@
             "status": "success",
             "file_path": "output/posts/2026-08-30-18e871a350c1.md",
             "slug": "2026-08-30-18e871a350c1",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-31T07:55:31.490004+00:00",
+      "items_count": 18,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-08-31-dec230af6782.md",
+            "slug": "2026-08-31-dec230af6782",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -7112,6 +7128,132 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-08-30T07:50:54.638155+00:00",
+        "error": null
+      }
+    },
+    "https://people.kernel.org/monsieuricon/creepy-crawlies": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-31T07:55:31.490199+00:00",
+        "error": null
+      }
+    },
+    "https://greenlightning.eu/diy/hacking-ikea-furniture": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-31T07:55:31.490206+00:00",
+        "error": null
+      }
+    },
+    "https://unsung.aresluna.org/i-just-chose-words-carefully": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-31T07:55:31.490211+00:00",
+        "error": null
+      }
+    },
+    "https://blog.vghaisas.com/rube-goldberg-doorbell": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-31T07:55:31.490216+00:00",
+        "error": null
+      }
+    },
+    "https://www.haiku-os.org/news/2026-08-26_haiku_r1_beta6": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-31T07:55:31.490220+00:00",
+        "error": null
+      }
+    },
+    "https://openclaw.ai/blog/openclaw-2-accidentally": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-31T07:55:31.490224+00:00",
+        "error": null
+      }
+    },
+    "https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-31T07:55:31.490232+00:00",
+        "error": null
+      }
+    },
+    "https://maurycyz.com/misc/etherfiles": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-31T07:55:31.490236+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/KodeMunkie/sm750hdmifb": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-31T07:55:31.490240+00:00",
+        "error": null
+      }
+    },
+    "https://sander.ai/2026/08/24/continuous-dlms.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-31T07:55:31.490243+00:00",
+        "error": null
+      }
+    },
+    "https://ruurtjan.com/articles/p99-0ms-autocomplete-for-240-million-domain-names": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-31T07:55:31.490247+00:00",
+        "error": null
+      }
+    },
+    "https://www.abortretry.fail/p/matrox": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-31T07:55:31.490250+00:00",
+        "error": null
+      }
+    },
+    "https://wilsonharper.net/projects/businesscard": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-31T07:55:31.490253+00:00",
+        "error": null
+      }
+    },
+    "https://www.righto.com/2026/08/spacelab-core-memory.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-31T07:55:31.490256+00:00",
+        "error": null
+      }
+    },
+    "https://kuleshov-group.github.io/blog/blog/2026/how-to-build-a-diffusion-language-model": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-31T07:55:31.490260+00:00",
+        "error": null
+      }
+    },
+    "https://arstechnica.com/gaming/2026/08/a-12tb-steam-teraleak-spills-more-than-a-decade-of-lost-pc-gaming-history": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-31T07:55:31.490263+00:00",
+        "error": null
+      }
+    },
+    "https://hank.bond/posts/highlighting-my-code-based-on-how-much-i-care": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-31T07:55:31.490266+00:00",
+        "error": null
+      }
+    },
+    "https://studyfinds.com/what-2000-buried-underpants-revealed-about-where-soil-is-most-alive": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-08-31T07:55:31.490269+00:00",
         "error": null
       }
     }
