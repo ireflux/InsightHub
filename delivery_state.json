@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-31T07:55:31.490279+00:00",
+  "updated_at": "2026-09-01T07:00:11.294075+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -1019,6 +1019,22 @@
             "status": "success",
             "file_path": "output/posts/2026-08-31-dec230af6782.md",
             "slug": "2026-08-31-dec230af6782",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-01T07:00:11.293785+00:00",
+      "items_count": 18,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-09-01-4211437f54a4.md",
+            "slug": "2026-09-01-4211437f54a4",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -7254,6 +7270,132 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-08-31T07:55:31.490269+00:00",
+        "error": null
+      }
+    },
+    "https://www.macrumors.com/2026/08/30/apple-unexpected-mac-mini-and-studio-demand": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-01T07:00:11.294012+00:00",
+        "error": null
+      }
+    },
+    "https://playaphone.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-01T07:00:11.294017+00:00",
+        "error": null
+      }
+    },
+    "https://signalandsilence.substack.com/p/i-think-someone-hacked-the-commissary": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-01T07:00:11.294020+00:00",
+        "error": null
+      }
+    },
+    "https://www.rockpapershotgun.com/dwarf-fortress-is-getting-the-mother-of-all-magic-updates-extending-to-the-fundamental-cosmological-makeup-of-the-universe": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-01T07:00:11.294023+00:00",
+        "error": null
+      }
+    },
+    "https://jasontucker.blog/how-i-turned-my-security-cameras-into-an-automatic-bird-identification-system-with-birdnet-go": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-01T07:00:11.294027+00:00",
+        "error": null
+      }
+    },
+    "https://datacolada.org/138": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-01T07:00:11.294039+00:00",
+        "error": null
+      }
+    },
+    "https://www.wsj.com/tech/gps-jammers-dead-zones-e76f3261": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-01T07:00:11.294047+00:00",
+        "error": null
+      }
+    },
+    "https://www.youtube.com/watch?v=OOMx2BHHWtE": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-01T07:00:11.294049+00:00",
+        "error": null
+      }
+    },
+    "https://www.youtube.com/watch?v=3YtygAx_C6A": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-01T07:00:11.294051+00:00",
+        "error": null
+      }
+    },
+    "https://jkm.dev/posts/how-2004-runescape-fit-a-multiplayer-rpg-into-56k-dialup": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-01T07:00:11.294053+00:00",
+        "error": null
+      }
+    },
+    "https://www.gpuworld.org/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-01T07:00:11.294055+00:00",
+        "error": null
+      }
+    },
+    "https://laser.consti.de": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-01T07:00:11.294057+00:00",
+        "error": null
+      }
+    },
+    "https://www.hermit-tech.com/blog/ai-can-make-you-suck-faster-too": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-01T07:00:11.294059+00:00",
+        "error": null
+      }
+    },
+    "https://www.wallpaper.com/design-interiors/labirinto-borges-venice-reopening": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-01T07:00:11.294060+00:00",
+        "error": null
+      }
+    },
+    "https://tmpout.sh/5": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-01T07:00:11.294062+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/fregacmols/RotaryCell": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-01T07:00:11.294064+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/vermellcc/vermell": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-01T07:00:11.294066+00:00",
+        "error": null
+      }
+    },
+    "https://www.humprog.org/~stephen/blog/2026/08/25": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-01T07:00:11.294068+00:00",
         "error": null
       }
     }
