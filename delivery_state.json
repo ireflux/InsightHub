@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-01T07:00:11.294075+00:00",
+  "updated_at": "2026-09-02T06:38:59.997124+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -1035,6 +1035,22 @@
             "status": "success",
             "file_path": "output/posts/2026-09-01-4211437f54a4.md",
             "slug": "2026-09-01-4211437f54a4",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-02T06:38:59.996907+00:00",
+      "items_count": 17,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-09-02-667ae320e4d7.md",
+            "slug": "2026-09-02-667ae320e4d7",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -7396,6 +7412,125 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-09-01T07:00:11.294068+00:00",
+        "error": null
+      }
+    },
+    "https://www.anthropic.com/claude-fable-and-mythos-5-1": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-02T06:38:59.997070+00:00",
+        "error": null
+      }
+    },
+    "https://simonwillison.net/2026/Sep/1/codex-libreoffice": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-02T06:38:59.997074+00:00",
+        "error": null
+      }
+    },
+    "https://blog.mozilla.org/en/firefox/ad-blocker-on-ios": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-02T06:38:59.997077+00:00",
+        "error": null
+      }
+    },
+    "https://www.lisep.org/tru": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-02T06:38:59.997080+00:00",
+        "error": null
+      }
+    },
+    "https://ambientcss.vercel.app/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-02T06:38:59.997082+00:00",
+        "error": null
+      }
+    },
+    "https://lws.io/blog/my-local-model-setup": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-02T06:38:59.997085+00:00",
+        "error": null
+      }
+    },
+    "https://openai.com/index/path-to-astra": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-02T06:38:59.997091+00:00",
+        "error": null
+      }
+    },
+    "https://krebsonsecurity.com/2026/09/fbi-probes-service-selling-153m-drivers-licenses": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-02T06:38:59.997094+00:00",
+        "error": null
+      }
+    },
+    "https://www.norirobotics.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-02T06:38:59.997100+00:00",
+        "error": null
+      }
+    },
+    "https://dbushell.com/2026/09/01/text-editor": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-02T06:38:59.997102+00:00",
+        "error": null
+      }
+    },
+    "https://masteranza.github.io/weedout": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-02T06:38:59.997105+00:00",
+        "error": null
+      }
+    },
+    "https://moviescenemap.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-02T06:38:59.997107+00:00",
+        "error": null
+      }
+    },
+    "https://hnmatchmaker.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-02T06:38:59.997109+00:00",
+        "error": null
+      }
+    },
+    "https://www.baseten.co/blog/the-efficient-frontier-of-llm-inference": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-02T06:38:59.997111+00:00",
+        "error": null
+      }
+    },
+    "https://sonic-pi.net/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-02T06:38:59.997113+00:00",
+        "error": null
+      }
+    },
+    "https://arxiv.org/abs/2608.29530": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-02T06:38:59.997115+00:00",
+        "error": null
+      }
+    },
+    "https://spectrum.ieee.org/the-forgotten-history-of-small-nuclear-reactors": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-02T06:38:59.997117+00:00",
         "error": null
       }
     }
