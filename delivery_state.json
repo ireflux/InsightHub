@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-02T06:38:59.997124+00:00",
+  "updated_at": "2026-09-03T06:41:19.164662+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -1051,6 +1051,22 @@
             "status": "success",
             "file_path": "output/posts/2026-09-02-667ae320e4d7.md",
             "slug": "2026-09-02-667ae320e4d7",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-03T06:41:19.164402+00:00",
+      "items_count": 18,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-09-03-d4a5a3a36f1e.md",
+            "slug": "2026-09-03-d4a5a3a36f1e",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -7531,6 +7547,132 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-09-02T06:38:59.997117+00:00",
+        "error": null
+      }
+    },
+    "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-03T06:41:19.164605+00:00",
+        "error": null
+      }
+    },
+    "https://developer.meta.com/ai/models/muse-spark": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-03T06:41:19.164610+00:00",
+        "error": null
+      }
+    },
+    "https://www.nytimes.com/2026/09/02/technology/google-ad-tech-remedies.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-03T06:41:19.164612+00:00",
+        "error": null
+      }
+    },
+    "https://help.mistral.ai/en/articles/455207-can-i-opt-out-of-my-input-or-output-data-being-used-for-training": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-03T06:41:19.164614+00:00",
+        "error": null
+      }
+    },
+    "https://trellner.com/reports/manufactured-sources-behind-ai-recommendations": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-03T06:41:19.164616+00:00",
+        "error": null
+      }
+    },
+    "https://studyfinds.com/aging-brains-blend-memories-together-instead-of-forgetting-them-study-finds": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-03T06:41:19.164619+00:00",
+        "error": null
+      }
+    },
+    "https://www.nytimes.com/2026/08/31/us/wendell-berry-dead.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-03T06:41:19.164627+00:00",
+        "error": null
+      }
+    },
+    "https://www.nature.com/articles/s41562-026-02550-0": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-03T06:41:19.164632+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/PhiloLabs/fable51-worlds": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-03T06:41:19.164634+00:00",
+        "error": null
+      }
+    },
+    "https://news.ycombinator.com/item?id=49543530": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-03T06:41:19.164637+00:00",
+        "error": null
+      }
+    },
+    "https://werwolv.net/posts/file_format_reverse_engineering": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-03T06:41:19.164639+00:00",
+        "error": null
+      }
+    },
+    "https://secondthoughts.ai/p/14-reasons-robotics-is-hard": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-03T06:41:19.164641+00:00",
+        "error": null
+      }
+    },
+    "https://en.wikipedia.org/wiki/Holden%27s_Lightning_flight": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-03T06:41:19.164643+00:00",
+        "error": null
+      }
+    },
+    "https://owntime.app/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-03T06:41:19.164645+00:00",
+        "error": null
+      }
+    },
+    "https://smarmelling.com/posts/creating-backup-storage-sucks.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-03T06:41:19.164648+00:00",
+        "error": null
+      }
+    },
+    "https://arxiv.org/abs/2504.00506": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-03T06:41:19.164650+00:00",
+        "error": null
+      }
+    },
+    "https://wasmi-labs.github.io/blog/posts/wasmi-v2.0": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-03T06:41:19.164652+00:00",
+        "error": null
+      }
+    },
+    "https://computer-museum.org/wp": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-03T06:41:19.164654+00:00",
         "error": null
       }
     }
