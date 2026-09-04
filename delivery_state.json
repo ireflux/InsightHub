@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-03T06:41:19.164662+00:00",
+  "updated_at": "2026-09-04T06:47:07.321395+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -1067,6 +1067,22 @@
             "status": "success",
             "file_path": "output/posts/2026-09-03-d4a5a3a36f1e.md",
             "slug": "2026-09-03-d4a5a3a36f1e",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-04T06:47:07.321097+00:00",
+      "items_count": 18,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-09-04-cb233710a571.md",
+            "slug": "2026-09-04-cb233710a571",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -7673,6 +7689,132 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-09-03T06:41:19.164654+00:00",
+        "error": null
+      }
+    },
+    "https://openai.com/index/gpt-6-astra": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-04T06:47:07.321321+00:00",
+        "error": null
+      }
+    },
+    "https://neil.fraser.name/news/2026/09/03": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-04T06:47:07.321327+00:00",
+        "error": null
+      }
+    },
+    "https://anyhumanever.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-04T06:47:07.321330+00:00",
+        "error": null
+      }
+    },
+    "https://www.youtube.com/watch?v=nM86DBOqgPM": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-04T06:47:07.321334+00:00",
+        "error": null
+      }
+    },
+    "https://inference-docs.cerebras.ai/models/overview": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-04T06:47:07.321337+00:00",
+        "error": null
+      }
+    },
+    "https://ifm.ai/blog/k2": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-04T06:47:07.321341+00:00",
+        "error": null
+      }
+    },
+    "https://www.sciencealert.com/gps-glitched-across-the-us-by-as-much-as-33-feet-scientists-have-never-seen-this-before": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-04T06:47:07.321349+00:00",
+        "error": null
+      }
+    },
+    "https://www.kedglobal.com/artificial-intelligence/newsView/ked202607210007": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-04T06:47:07.321353+00:00",
+        "error": null
+      }
+    },
+    "https://babyloniantwins.com/blog/porting-a-1993-amiga-game-to-godot": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-04T06:47:07.321361+00:00",
+        "error": null
+      }
+    },
+    "https://www.discoverwildlife.com/animal-facts/artificial-beaver-dams-california": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-04T06:47:07.321364+00:00",
+        "error": null
+      }
+    },
+    "https://armature.tech/blog/which-tools-coding-agents-install": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-04T06:47:07.321367+00:00",
+        "error": null
+      }
+    },
+    "https://www.cbc.ca/lite/story/9.7328614": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-04T06:47:07.321370+00:00",
+        "error": null
+      }
+    },
+    "https://news.ycombinator.com/item?id=49548600": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-04T06:47:07.321373+00:00",
+        "error": null
+      }
+    },
+    "https://www.texasmonthly.com/news-politics/ckdu-kidney-disease-immigration": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-04T06:47:07.321375+00:00",
+        "error": null
+      }
+    },
+    "https://www.agentconnect.md/blog/grep-beat-lsp-harness": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-04T06:47:07.321378+00:00",
+        "error": null
+      }
+    },
+    "https://news.mit.edu/2026/how-mit-research-project-became-global-programming-language-0831": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-04T06:47:07.321381+00:00",
+        "error": null
+      }
+    },
+    "https://gwern.net/xanadu": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-04T06:47:07.321383+00:00",
+        "error": null
+      }
+    },
+    "https://computer.rip/2026-06-14-hookswitch-to-grave.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-04T06:47:07.321386+00:00",
         "error": null
       }
     }

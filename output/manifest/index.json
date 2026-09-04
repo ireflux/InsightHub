@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-09-03T14:41:19.160872+08:00",
+  "generated_at": "2026-09-04T14:47:07.315766+08:00",
   "posts": [
+    {
+      "id": "2026-09-04-cb233710a571",
+      "run_id": "cb233710a571",
+      "date": "2026-09-04",
+      "title": "每日趋势观察 2026-09-04",
+      "slug": "2026-09-04-cb233710a571",
+      "markdown_path": "posts/2026-09-04-cb233710a571.md",
+      "summary": "今日的科技叙事围绕三个核心张力展开：AI模型能力的边界与评估方式的争议、开源生态对闭源格局的持续侵蚀，以及技术落地时工具选择背后的工程现实。OpenAI发布GPT-6 Astra并宣称接近AGI水平，但社区对评估方法的选择性使用提出质疑；IFM推出K2 Horizon全套开源模型，试图在推理、编码和智能体任务上建立新的性能基准；与此同时，一项针对编码Agent的实证研究揭示，开发者精心构建的语义导",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 18,
+      "is_empty_update": false,
+      "created_at": "2026-09-04T14:47:07.315766+08:00"
+    },
     {
       "id": "2026-09-03-d4a5a3a36f1e",
       "run_id": "d4a5a3a36f1e",
