@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-04T06:47:07.321395+00:00",
+  "updated_at": "2026-09-05T06:31:25.204731+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -1083,6 +1083,22 @@
             "status": "success",
             "file_path": "output/posts/2026-09-04-cb233710a571.md",
             "slug": "2026-09-04-cb233710a571",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-05T06:31:25.204440+00:00",
+      "items_count": 17,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-09-05-2e170f6d0046.md",
+            "slug": "2026-09-05-2e170f6d0046",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -7815,6 +7831,125 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-09-04T06:47:07.321386+00:00",
+        "error": null
+      }
+    },
+    "https://www.anthropic.com/research/formalizing-fermats-last-theorem": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-05T06:31:25.204651+00:00",
+        "error": null
+      }
+    },
+    "https://nvd.nist.gov/vuln/detail/cve-2026-85046": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-05T06:31:25.204658+00:00",
+        "error": null
+      }
+    },
+    "https://mullvad.net/en/blog/shutting-down-our-public-encrypted-dns-servers-and-sponsoring-quad9-instead": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-05T06:31:25.204663+00:00",
+        "error": null
+      }
+    },
+    "https://eebench.org/blog/can-ai-design-circuit-boards-yet": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-05T06:31:25.204667+00:00",
+        "error": null
+      }
+    },
+    "https://opentrailpaper.com": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-05T06:31:25.204671+00:00",
+        "error": null
+      }
+    },
+    "https://openrouter.ai/openai/gpt-6-astra": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-05T06:31:25.204676+00:00",
+        "error": null
+      }
+    },
+    "https://www.statichost.eu/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-05T06:31:25.204684+00:00",
+        "error": null
+      }
+    },
+    "https://twitter.com/penlume/status/2095372672356212876": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-05T06:31:25.204688+00:00",
+        "error": null
+      }
+    },
+    "https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-05T06:31:25.204691+00:00",
+        "error": null
+      }
+    },
+    "https://artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v4-2": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-05T06:31:25.204694+00:00",
+        "error": null
+      }
+    },
+    "https://codeberg.org/mv12star/shitter/wiki/Instances": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-05T06:31:25.204698+00:00",
+        "error": null
+      }
+    },
+    "https://www.bbc.com/news/articles/cvgyn8q8gqxo": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-05T06:31:25.204701+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/anthropics/fermats-last-theorem": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-05T06:31:25.204704+00:00",
+        "error": null
+      }
+    },
+    "https://www.charlespetzold.com/blog/2026/09/Can-Guitar-Frets-Perform-Multiplication.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-05T06:31:25.204707+00:00",
+        "error": null
+      }
+    },
+    "https://ipv6.hanazo.no/posts/anniversary-personal": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-05T06:31:25.204715+00:00",
+        "error": null
+      }
+    },
+    "https://nesbitt.io/2026/09/01/git-submodules-as-a-package-manager.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-05T06:31:25.204718+00:00",
+        "error": null
+      }
+    },
+    "https://www.coderabbit.ai/blog/gpt-6-astra-code-review-evaluation": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-05T06:31:25.204721+00:00",
         "error": null
       }
     }
