@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-05T06:31:25.204731+00:00",
+  "updated_at": "2026-09-06T06:40:58.856093+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -1099,6 +1099,22 @@
             "status": "success",
             "file_path": "output/posts/2026-09-05-2e170f6d0046.md",
             "slug": "2026-09-05-2e170f6d0046",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-06T06:40:58.855930+00:00",
+      "items_count": 16,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-09-06-6ce7e4944e60.md",
+            "slug": "2026-09-06-6ce7e4944e60",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -7950,6 +7966,118 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-09-05T06:31:25.204721+00:00",
+        "error": null
+      }
+    },
+    "https://collusion.wiki/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-06T06:40:58.856052+00:00",
+        "error": null
+      }
+    },
+    "https://www.space.com/space-exploration/launches-spacecraft/isar-aerospace-second-launch-norway-andoya-spaceport-spectrum-rocket": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-06T06:40:58.856056+00:00",
+        "error": null
+      }
+    },
+    "https://arxiv.org/abs/2609.03344": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-06T06:40:58.856058+00:00",
+        "error": null
+      }
+    },
+    "https://cloudinabottle.org/blog/launch-post": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-06T06:40:58.856059+00:00",
+        "error": null
+      }
+    },
+    "https://devquasar.com/hardware/the-60-gaming-pc-amd-bc-250": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-06T06:40:58.856061+00:00",
+        "error": null
+      }
+    },
+    "https://bcantrill.dtrace.org/2026/09/05/the-revolt-of-the-reader": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-06T06:40:58.856064+00:00",
+        "error": null
+      }
+    },
+    "https://openai.robocurve.org/gpt-6-astra": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-06T06:40:58.856069+00:00",
+        "error": null
+      }
+    },
+    "https://usr.lmf.cnrs.fr/lpo": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-06T06:40:58.856071+00:00",
+        "error": null
+      }
+    },
+    "https://lapcatsoftware.com/articles/2026/9/1.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-06T06:40:58.856073+00:00",
+        "error": null
+      }
+    },
+    "https://sofiabelen.github.io/projects/visualizing-rusts-vtables-how-dyn-trait-works-in-memory": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-06T06:40:58.856076+00:00",
+        "error": null
+      }
+    },
+    "https://www.futilitycloset.com/2026/09/01/small-world-20": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-06T06:40:58.856078+00:00",
+        "error": null
+      }
+    },
+    "https://runjs.app/blog/music-theory-for-programmers": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-06T06:40:58.856080+00:00",
+        "error": null
+      }
+    },
+    "http://miod.online.fr/software/openbsd/stories/smd.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-06T06:40:58.856081+00:00",
+        "error": null
+      }
+    },
+    "https://www.ben-evans.com/benedictevans/2026/9/3/ai-tools-and-transformation": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-06T06:40:58.856083+00:00",
+        "error": null
+      }
+    },
+    "https://www.dpreview.com/news/the-colorchecker-photographys-most-important-24-squares-turns-50": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-06T06:40:58.856084+00:00",
+        "error": null
+      }
+    },
+    "https://mm-dev.rocks/series/recursecenter.return": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-06T06:40:58.856086+00:00",
         "error": null
       }
     }
