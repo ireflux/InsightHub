@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-06T06:40:58.856093+00:00",
+  "updated_at": "2026-09-07T06:49:16.559322+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -1115,6 +1115,22 @@
             "status": "success",
             "file_path": "output/posts/2026-09-06-6ce7e4944e60.md",
             "slug": "2026-09-06-6ce7e4944e60",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-07T06:49:16.559102+00:00",
+      "items_count": 16,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-09-07-5fef6663cb06.md",
+            "slug": "2026-09-07-5fef6663cb06",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -8078,6 +8094,118 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-09-06T06:40:58.856086+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/zedeus/nitter/commit/1428b4c2b4246f92a7e5b2673438e5fb39fcc4a3": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-07T06:49:16.559269+00:00",
+        "error": null
+      }
+    },
+    "https://grapheneos.social/@GrapheneOS/117225539756835649": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-07T06:49:16.559273+00:00",
+        "error": null
+      }
+    },
+    "https://anubis.techaro.lol/blog/2026/anubis-wasm": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-07T06:49:16.559276+00:00",
+        "error": null
+      }
+    },
+    "https://openai.com/index/research-acceleration-view-inside-openai": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-07T06:49:16.559279+00:00",
+        "error": null
+      }
+    },
+    "https://austinhenley.com/blog/python1024.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-07T06:49:16.559281+00:00",
+        "error": null
+      }
+    },
+    "https://blog.archive.org/2026/09/01/keep-our-servers-running-your-recurring-donation-goes-3x-this-september": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-07T06:49:16.559284+00:00",
+        "error": null
+      }
+    },
+    "https://news.ycombinator.com/item?id=49589914": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-07T06:49:16.559290+00:00",
+        "error": null
+      }
+    },
+    "https://news.ycombinator.com/item?id=49577129": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-07T06:49:16.559293+00:00",
+        "error": null
+      }
+    },
+    "https://purplesyringa.moe/blog/guest/the-nx-bit-is-not-just-about-security": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-07T06:49:16.559299+00:00",
+        "error": null
+      }
+    },
+    "https://arxiv.org/abs/2505.12540": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-07T06:49:16.559301+00:00",
+        "error": null
+      }
+    },
+    "https://claytonwramsey.com/blog/seeing-eye": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-07T06:49:16.559303+00:00",
+        "error": null
+      }
+    },
+    "https://restofworld.org/2026/ai-training-jobs-expert-replacement": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-07T06:49:16.559305+00:00",
+        "error": null
+      }
+    },
+    "https://gettogether.dev": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-07T06:49:16.559308+00:00",
+        "error": null
+      }
+    },
+    "https://bschaatsbergen.com/posts/go-tpm-tls": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-07T06:49:16.559310+00:00",
+        "error": null
+      }
+    },
+    "https://cordcuttersnews.com/tivo-plans-to-end-free-automatic-commercial-skipping-in-november-tests-paid-premium-replacement-service": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-07T06:49:16.559312+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/timgordontg/engrim": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-07T06:49:16.559315+00:00",
         "error": null
       }
     }

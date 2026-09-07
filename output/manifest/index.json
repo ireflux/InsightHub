@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-09-06T14:40:58.852996+08:00",
+  "generated_at": "2026-09-07T14:49:16.555573+08:00",
   "posts": [
+    {
+      "id": "2026-09-07-5fef6663cb06",
+      "run_id": "5fef6663cb06",
+      "date": "2026-09-07",
+      "title": "每日趋势观察 2026-09-07",
+      "slug": "2026-09-07-5fef6663cb06",
+      "markdown_path": "posts/2026-09-07-5fef6663cb06.md",
+      "summary": "- [Nitter and XCancel resume service after legal advice](https://github.com/zedeus/nitter/commit/1428b4c2b4246f92a7e5b2673438e5fb39fcc4a3): |",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 16,
+      "is_empty_update": false,
+      "created_at": "2026-09-07T14:49:16.555573+08:00"
+    },
     {
       "id": "2026-09-06-6ce7e4944e60",
       "run_id": "6ce7e4944e60",
