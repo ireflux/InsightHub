@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-09-07T14:49:16.555573+08:00",
+  "generated_at": "2026-09-08T14:48:00.621980+08:00",
   "posts": [
+    {
+      "id": "2026-09-08-58f9f09e9663",
+      "run_id": "58f9f09e9663",
+      "date": "2026-09-08",
+      "title": "每日趋势观察 2026-09-08",
+      "slug": "2026-09-08-58f9f09e9663",
+      "markdown_path": "posts/2026-09-08-58f9f09e9663.md",
+      "summary": "今日科技动态呈现多条并行线索：开源基础设施与AI工程实践持续演进，Jellyfin完成重大版本跃迁，D2布局算法开源；AI模型能力边界不断拓展，Mistral以30亿欧元融资推进欧洲主权AI，WeatherNext 3实现逐小时全球气象预测；与此同时，安全与信任议题依然突出，Broadcom移除VMware迁移工具、90年代RSA密钥被成功分解、GLM 5.3-flash的本地部署引发安全讨论。",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 19,
+      "is_empty_update": false,
+      "created_at": "2026-09-08T14:48:00.621980+08:00"
+    },
     {
       "id": "2026-09-07-5fef6663cb06",
       "run_id": "5fef6663cb06",
