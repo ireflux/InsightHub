@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-09-08T14:48:00.621980+08:00",
+  "generated_at": "2026-09-09T14:54:31.091158+08:00",
   "posts": [
+    {
+      "id": "2026-09-09-1b0ce57525d4",
+      "run_id": "1b0ce57525d4",
+      "date": "2026-09-09",
+      "title": "每日趋势观察 2026-09-09",
+      "slug": "2026-09-09-1b0ce57525d4",
+      "markdown_path": "posts/2026-09-09-1b0ce57525d4.md",
+      "summary": "- [Tension wood: A 'muscle' that can both bend and straighten plants](https://phys.org/news/2026-09-trees-muscle-posture-newly-role.html): Hacker News Story: Tension wood: A 'muscle' that can both ben",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 1,
+      "is_empty_update": false,
+      "created_at": "2026-09-09T14:54:31.091158+08:00"
+    },
     {
       "id": "2026-09-08-58f9f09e9663",
       "run_id": "58f9f09e9663",
