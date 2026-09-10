@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-09T06:54:31.096277+00:00",
+  "updated_at": "2026-09-10T06:50:51.424547+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -1163,6 +1163,22 @@
             "status": "success",
             "file_path": "output/posts/2026-09-09-1b0ce57525d4.md",
             "slug": "2026-09-09-1b0ce57525d4",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-10T06:50:51.424400+00:00",
+      "items_count": 1,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-09-10-97ad68430164.md",
+            "slug": "2026-09-10-97ad68430164",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -8378,6 +8394,13 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-09-09T06:54:31.096265+00:00",
+        "error": null
+      }
+    },
+    "https://www.apple.com/iphone-duo": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-10T06:50:51.424530+00:00",
         "error": null
       }
     }
