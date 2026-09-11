@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-10T06:50:51.424547+00:00",
+  "updated_at": "2026-09-11T06:50:50.595456+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -1179,6 +1179,22 @@
             "status": "success",
             "file_path": "output/posts/2026-09-10-97ad68430164.md",
             "slug": "2026-09-10-97ad68430164",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-11T06:50:50.595310+00:00",
+      "items_count": 1,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-09-11-d67102d1f024.md",
+            "slug": "2026-09-11-d67102d1f024",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -8401,6 +8417,13 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-09-10T06:50:51.424530+00:00",
+        "error": null
+      }
+    },
+    "https://edconway.substack.com/p/the-little-holes-in-your-bread-are": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-11T06:50:50.595442+00:00",
         "error": null
       }
     }
