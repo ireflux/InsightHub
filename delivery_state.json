@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-11T06:50:50.595456+00:00",
+  "updated_at": "2026-09-12T06:42:44.127199+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -1195,6 +1195,22 @@
             "status": "success",
             "file_path": "output/posts/2026-09-11-d67102d1f024.md",
             "slug": "2026-09-11-d67102d1f024",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-12T06:42:44.127035+00:00",
+      "items_count": 1,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-09-12-455896e2e118.md",
+            "slug": "2026-09-12-455896e2e118",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -8424,6 +8440,13 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-09-11T06:50:50.595442+00:00",
+        "error": null
+      }
+    },
+    "https://www.autom.dev/blog/google-search-goto-links": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-12T06:42:44.127184+00:00",
         "error": null
       }
     }
