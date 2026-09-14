@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-13T07:00:17.856683+00:00",
+  "updated_at": "2026-09-14T07:22:37.471631+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -1227,6 +1227,22 @@
             "status": "success",
             "file_path": "output/posts/2026-09-13-9a6dad3ecb68.md",
             "slug": "2026-09-13-9a6dad3ecb68",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-14T07:22:37.471477+00:00",
+      "items_count": 1,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-09-14-f4b77a79259a.md",
+            "slug": "2026-09-14-f4b77a79259a",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -8470,6 +8486,13 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-09-13T07:00:17.856671+00:00",
+        "error": null
+      }
+    },
+    "https://spaceships.treybastian.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-14T07:22:37.471619+00:00",
         "error": null
       }
     }
