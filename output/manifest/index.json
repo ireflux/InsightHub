@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-09-15T14:58:57.530008+08:00",
+  "generated_at": "2026-09-16T15:00:42.392249+08:00",
   "posts": [
+    {
+      "id": "2026-09-16-f86b6b807fe6",
+      "run_id": "f86b6b807fe6",
+      "date": "2026-09-16",
+      "title": "每日趋势观察 2026-09-16",
+      "slug": "2026-09-16-f86b6b807fe6",
+      "markdown_path": "posts/2026-09-16-f86b6b807fe6.md",
+      "summary": "- [Apple Reference Image: A New Approach for Verified Photography](https://security.apple.com/blog/apple-reference-image/): Today, powerful, widely available AI tools allow users to easily generate or",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 1,
+      "is_empty_update": false,
+      "created_at": "2026-09-16T15:00:42.392249+08:00"
+    },
     {
       "id": "2026-09-15-f98e56605bfc",
       "run_id": "f98e56605bfc",

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-15T06:58:57.535591+00:00",
+  "updated_at": "2026-09-16T07:00:42.397591+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -1259,6 +1259,22 @@
             "status": "success",
             "file_path": "output/posts/2026-09-15-f98e56605bfc.md",
             "slug": "2026-09-15-f98e56605bfc",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-16T07:00:42.397458+00:00",
+      "items_count": 1,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-09-16-f86b6b807fe6.md",
+            "slug": "2026-09-16-f86b6b807fe6",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -8516,6 +8532,13 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-09-15T06:58:57.535578+00:00",
+        "error": null
+      }
+    },
+    "https://security.apple.com/blog/apple-reference-image": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-16T07:00:42.397581+00:00",
         "error": null
       }
     }
