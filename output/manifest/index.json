@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-09-16T15:00:42.392249+08:00",
+  "generated_at": "2026-09-17T14:56:17.701753+08:00",
   "posts": [
+    {
+      "id": "2026-09-17-bb30e609ddff",
+      "run_id": "bb30e609ddff",
+      "date": "2026-09-17",
+      "title": "每日趋势观察 2026-09-17",
+      "slug": "2026-09-17-bb30e609ddff",
+      "markdown_path": "posts/2026-09-17-bb30e609ddff.md",
+      "summary": "- [Keys Not Included: recovering the signing keys for US driver's license barcodes](https://ryan.science/blog/keys-not-included): Ryan Fahey",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 1,
+      "is_empty_update": false,
+      "created_at": "2026-09-17T14:56:17.701753+08:00"
+    },
     {
       "id": "2026-09-16-f86b6b807fe6",
       "run_id": "f86b6b807fe6",
