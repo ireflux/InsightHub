@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-17T06:56:17.706221+00:00",
+  "updated_at": "2026-09-18T06:53:04.112039+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -1291,6 +1291,22 @@
             "status": "success",
             "file_path": "output/posts/2026-09-17-bb30e609ddff.md",
             "slug": "2026-09-17-bb30e609ddff",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-18T06:53:04.111881+00:00",
+      "items_count": 1,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-09-18-c8d73db92097.md",
+            "slug": "2026-09-18-c8d73db92097",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -8562,6 +8578,13 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-09-17T06:56:17.706197+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/jemalloc/jemalloc/releases/tag/5.4.0": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-18T06:53:04.112024+00:00",
         "error": null
       }
     }
