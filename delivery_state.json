@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-21T07:26:26.822379+00:00",
+  "updated_at": "2026-09-22T07:04:07.024648+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -1339,6 +1339,22 @@
             "status": "success",
             "file_path": "output/posts/2026-09-21-1465b3f382b7.md",
             "slug": "2026-09-21-1465b3f382b7",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-22T07:04:07.024496+00:00",
+      "items_count": 1,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-09-22-2a261104ad54.md",
+            "slug": "2026-09-22-2a261104ad54",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -8631,6 +8647,13 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-09-21T07:26:26.822373+00:00",
+        "error": null
+      }
+    },
+    "https://mimo.xiaomi.com/mimo-v2-6": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-22T07:04:07.024636+00:00",
         "error": null
       }
     }
