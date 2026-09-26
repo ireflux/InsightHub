@@ -1,0 +1,162 @@
+:root{
+  --bg:#F8FAFC;
+  --fg:#020617;
+  --muted:#334155;
+  --card:#ffffffee;
+  --line:#d4deeb;
+  --accent:#0369A1;
+  --accent-2:#18a07b;
+  --radius:18px;
+  --shadow:0 12px 40px rgba(16,36,68,.09);
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  color:var(--fg);
+  background:
+    radial-gradient(1200px 500px at 10% -15%, #d7e7ff 0%, transparent 60%),
+    radial-gradient(900px 450px at 95% 0%, #d3f3e8 0%, transparent 55%),
+    var(--bg);
+  font-family:"Open Sans","Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+  line-height:1.65;
+}
+h1,h2,h3{font-family:"Poppins","Noto Sans SC",sans-serif;line-height:1.2;margin:0 0 .6rem}
+a{color:var(--accent);text-decoration:none;cursor:pointer}
+a:hover{text-decoration:underline}
+.container{max-width:1120px;margin:0 auto;padding:26px 18px 44px}
+.shell{display:grid;gap:18px}
+.panel{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  backdrop-filter:blur(7px);
+}
+.site-header{padding:24px}
+.kicker{
+  margin:0 0 8px;
+  color:var(--accent-2);
+  font-size:.84rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  font-weight:700;
+}
+.meta{margin:0;color:var(--muted);font-size:.94rem}
+.stats{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}
+.stat{
+  display:inline-flex;
+  gap:6px;
+  align-items:center;
+  padding:6px 10px;
+  border-radius:999px;
+  font-size:.82rem;
+  color:#1d3c63;
+  background:#eaf2ff;
+}
+.tool-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.tool-row input,.tool-row select{
+  border:1px solid #c6d4e6;
+  border-radius:12px;
+  padding:12px 13px;
+  background:#ffffff;
+  color:var(--fg);
+  font-size:.95rem;
+}
+.tool-row input{flex:1;min-width:220px}
+.tool-row select{min-width:160px}
+.grid{display:grid;grid-template-columns:1fr;gap:12px}
+.card{
+  padding:18px;
+  transform:translateY(0);
+  transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+.card:hover{
+  transform:translateY(-2px);
+  box-shadow:0 18px 40px rgba(14,35,61,.12);
+  border-color:#b7cbe3;
+}
+.card h2{font-size:1.2rem;margin:0 0 .55rem}
+.excerpt{margin:0 0 .75rem;color:#26354c}
+.tags{display:flex;gap:7px;flex-wrap:wrap}
+.tag{
+  display:inline-flex;
+  align-items:center;
+  padding:3px 10px;
+  border-radius:999px;
+  font-size:.78rem;
+  color:#1f4c86;
+  background:#e7f0fe;
+}
+.pagination{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  justify-content:center;
+  margin-top:6px;
+}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:9px 14px;
+  border-radius:10px;
+  background:#0f59b4;
+  color:#fff;
+  font-weight:600;
+  cursor:pointer;
+}
+.btn:hover{text-decoration:none;background:#0a4a97}
+.page-indicator{color:var(--muted);font-size:.92rem}
+.post-header{padding:24px}
+.back-link{display:inline-flex;margin-bottom:8px;color:#32547e;font-weight:600}
+.content{padding:22px 24px}
+.prose p,.prose ul,.prose ol,.prose blockquote{margin:0 0 1rem}
+.prose blockquote{
+  margin:1rem 0;
+  border-left:4px solid #c4d9f5;
+  background:#f4f8ff;
+  padding:10px 12px;
+  color:#274567;
+}
+.prose pre{
+  background:#0e1b2f;
+  color:#d8e8ff;
+  border-radius:12px;
+  overflow:auto;
+  padding:14px;
+}
+.prose code{
+  font-family:"JetBrains Mono","Consolas",monospace;
+  font-size:.92em;
+}
+.empty{
+  margin:0;
+  padding:18px;
+  border-radius:14px;
+  background:#fff;
+  border:1px dashed #bfd0e6;
+  color:#506078;
+}
+a:focus-visible,.btn:focus-visible,input:focus-visible,select:focus-visible{
+  outline:none;
+  box-shadow:0 0 0 3px rgba(3,105,161,.24);
+  border-color:var(--accent);
+}
+@media (prefers-reduced-motion: reduce){
+  *{
+    animation:none !important;
+    transition:none !important;
+    scroll-behavior:auto !important;
+  }
+}
+@media (min-width:860px){
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:640px){
+  .container{padding:18px 12px 28px}
+  .site-header,.post-header,.content{padding:16px}
+  .tool-row{flex-direction:column}
+  .tool-row input,.tool-row select{width:100%;min-width:0}
+  .card h2{font-size:1.08rem}
+  .pagination{justify-content:space-between}
+}
