@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-27T07:21:42.788515+00:00",
+  "updated_at": "2026-09-28T07:59:34.774534+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -1419,6 +1419,22 @@
             "status": "success",
             "file_path": "output/posts/2026-09-27-bdb1553fde59.md",
             "slug": "2026-09-27-bdb1553fde59",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-28T07:59:34.774444+00:00",
+      "items_count": 1,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-09-28-08d0a55084ba.md",
+            "slug": "2026-09-28-08d0a55084ba",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -8746,6 +8762,13 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-09-27T07:21:42.788506+00:00",
+        "error": null
+      }
+    },
+    "https://arxiv.org/abs/2110.01834": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-28T07:59:34.774527+00:00",
         "error": null
       }
     }
