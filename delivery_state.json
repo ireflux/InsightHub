@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-28T07:59:34.774534+00:00",
+  "updated_at": "2026-09-29T07:41:38.913930+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -1435,6 +1435,22 @@
             "status": "success",
             "file_path": "output/posts/2026-09-28-08d0a55084ba.md",
             "slug": "2026-09-28-08d0a55084ba",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-29T07:41:38.913819+00:00",
+      "items_count": 1,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-09-29-e2c792daa805.md",
+            "slug": "2026-09-29-e2c792daa805",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -8769,6 +8785,13 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-09-28T07:59:34.774527+00:00",
+        "error": null
+      }
+    },
+    "https://mubi.com/en/notebook/posts/pirating-the-pirates": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-09-29T07:41:38.913922+00:00",
         "error": null
       }
     }
