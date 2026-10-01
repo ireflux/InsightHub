@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-09-29T15:41:38.909549+08:00",
+  "generated_at": "2026-10-01T16:04:05.064874+08:00",
   "posts": [
+    {
+      "id": "2026-10-01-b29ada80531f",
+      "run_id": "b29ada80531f",
+      "date": "2026-10-01",
+      "title": "每日趋势观察 2026-10-01",
+      "slug": "2026-10-01-b29ada80531f",
+      "markdown_path": "posts/2026-10-01-b29ada80531f.md",
+      "summary": "- [Gemini 4 Argon](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/): Gemini 4 Argon: our next era of frontier intelligence",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 1,
+      "is_empty_update": false,
+      "created_at": "2026-10-01T16:04:05.064874+08:00"
+    },
     {
       "id": "2026-09-29-e2c792daa805",
       "run_id": "e2c792daa805",

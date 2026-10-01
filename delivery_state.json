@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-29T07:41:38.913930+00:00",
+  "updated_at": "2026-10-01T08:04:05.070390+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -1451,6 +1451,22 @@
             "status": "success",
             "file_path": "output/posts/2026-09-29-e2c792daa805.md",
             "slug": "2026-09-29-e2c792daa805",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-10-01T08:04:05.070215+00:00",
+      "items_count": 1,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-10-01-b29ada80531f.md",
+            "slug": "2026-10-01-b29ada80531f",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -8792,6 +8808,13 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-09-29T07:41:38.913922+00:00",
+        "error": null
+      }
+    },
+    "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-10-01T08:04:05.070377+00:00",
         "error": null
       }
     }
