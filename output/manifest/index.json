@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-10-04T15:35:53.555822+08:00",
+  "generated_at": "2026-10-05T15:57:41.678297+08:00",
   "posts": [
+    {
+      "id": "2026-10-05-678fed1f5768",
+      "run_id": "678fed1f5768",
+      "date": "2026-10-05",
+      "title": "每日趋势观察 2026-10-05",
+      "slug": "2026-10-05-678fed1f5768",
+      "markdown_path": "posts/2026-10-05-678fed1f5768.md",
+      "summary": "- [A 40ms Go garbage collector pause caused by swap](https://frn.sh/go-gc/): A 40ms Go GC pause caused by swap",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 1,
+      "is_empty_update": false,
+      "created_at": "2026-10-05T15:57:41.678297+08:00"
+    },
     {
       "id": "2026-10-04-fa8812397e8a",
       "run_id": "fa8812397e8a",

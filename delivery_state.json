@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-04T07:35:53.561366+00:00",
+  "updated_at": "2026-10-05T07:57:41.683691+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -1499,6 +1499,22 @@
             "status": "success",
             "file_path": "output/posts/2026-10-04-fa8812397e8a.md",
             "slug": "2026-10-04-fa8812397e8a",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-10-05T07:57:41.683568+00:00",
+      "items_count": 1,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-10-05-678fed1f5768.md",
+            "slug": "2026-10-05-678fed1f5768",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -8861,6 +8877,13 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-10-04T07:35:53.561351+00:00",
+        "error": null
+      }
+    },
+    "https://frn.sh/go-gc": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-10-05T07:57:41.683683+00:00",
         "error": null
       }
     }
