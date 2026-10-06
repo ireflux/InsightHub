@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-05T07:57:41.683691+00:00",
+  "updated_at": "2026-10-06T08:20:03.600463+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -1515,6 +1515,22 @@
             "status": "success",
             "file_path": "output/posts/2026-10-05-678fed1f5768.md",
             "slug": "2026-10-05-678fed1f5768",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-10-06T08:20:03.600281+00:00",
+      "items_count": 1,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-10-06-3a9fe36940f6.md",
+            "slug": "2026-10-06-3a9fe36940f6",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -8884,6 +8900,13 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-10-05T07:57:41.683683+00:00",
+        "error": null
+      }
+    },
+    "https://news.osna.fm/german-military-intelligence-uses-ai-to-screen-bundeswehr-applicants-for-right-wing-extremism": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-10-06T08:20:03.600449+00:00",
         "error": null
       }
     }
