@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-06T08:20:03.600463+00:00",
+  "updated_at": "2026-10-08T08:11:42.640513+00:00",
   "runs": [
     {
       "timestamp": "2026-06-30T07:12:35.391089+00:00",
@@ -1531,6 +1531,22 @@
             "status": "success",
             "file_path": "output/posts/2026-10-06-3a9fe36940f6.md",
             "slug": "2026-10-06-3a9fe36940f6",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-10-08T08:11:42.640345+00:00",
+      "items_count": 1,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-10-08-9089ec6f69d7.md",
+            "slug": "2026-10-08-9089ec6f69d7",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -8907,6 +8923,13 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-10-06T08:20:03.600449+00:00",
+        "error": null
+      }
+    },
+    "https://100r.ca/site/home.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-10-08T08:11:42.640503+00:00",
         "error": null
       }
     }
