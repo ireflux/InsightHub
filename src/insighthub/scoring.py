@@ -118,12 +118,15 @@ class ContentScorer:
         )
         concurrency = self.config.llm_scoring_concurrency
         semaphore = asyncio.Semaphore(concurrency)
+        failure_count = 0
 
         async def score_one(item: NewsItem) -> NewsItem:
+            nonlocal failure_count
             async with semaphore:
                 try:
                     return await self._llm_score_single(item)
                 except Exception as e:
+                    failure_count += 1
                     logger.warning(
                         "LLM scoring failed for item, assigning score 0.",
                         extra={"event": "engine.score.llm_failed", "item_id": item.id, "error": str(e)},
@@ -134,12 +137,30 @@ class ContentScorer:
 
         scored_items = await asyncio.gather(*(score_one(item) for item in items))
 
+        if failure_count == len(items):
+            logger.warning(
+                "All LLM scoring calls failed; falling back to heuristic scoring.",
+                extra={"event": "engine.score.llm_fallback", "items_count": len(items)},
+            )
+            return await self._heuristic_score_items(items)
+
         # Sort by LLM quality score descending
         scored_items.sort(key=lambda x: (x.llm_quality_score or 0), reverse=True)
 
         # Apply threshold filter
         threshold = self.config.llm_scoring_threshold
         filtered = [item for item in scored_items if (item.llm_quality_score or 0) >= threshold]
+
+        if not filtered and failure_count:
+            logger.warning(
+                "LLM scoring produced no items after failures; falling back to heuristic scoring.",
+                extra={
+                    "event": "engine.score.llm_fallback",
+                    "items_count": len(items),
+                    "failure_count": failure_count,
+                },
+            )
+            return await self._heuristic_score_items(items)
 
         logger.info(
             "LLM scoring completed.",
@@ -148,6 +169,7 @@ class ContentScorer:
                 "before_count": len(scored_items),
                 "after_count": len(filtered),
                 "threshold": threshold,
+                "failure_count": failure_count,
                 "avg_score": round(
                     sum(item.llm_quality_score or 0 for item in scored_items) / max(len(scored_items), 1),
                     2,

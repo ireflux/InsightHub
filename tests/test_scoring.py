@@ -11,7 +11,7 @@ if SRC_DIR not in sys.path:
 
 from insighthub.models import NewsItem
 from insighthub.scoring import ContentScorer, tier_from_score
-from insighthub.settings import ScoringConfig
+from insighthub.settings import RetryPolicyConfig, ScoringConfig
 
 
 @pytest.mark.asyncio
@@ -191,3 +191,41 @@ async def test_llm_scoring_disabled_uses_heuristic():
     assert scored[0].discussion_signal is not None
     # Provider should not have been called
     assert provider.call_count == 0
+
+
+@pytest.mark.asyncio
+async def test_llm_scoring_falls_back_to_heuristic_when_all_calls_fail():
+    class AlwaysFailProvider:
+        async def score(self, content: str, prompt_template: str) -> str:
+            raise RuntimeError("429 rate limited")
+
+    config = ScoringConfig(use_llm_scoring=True, llm_scoring_threshold=4.0)
+    scorer = ContentScorer(
+        config=config,
+        llm_provider=AlwaysFailProvider(),
+        retry_policy=RetryPolicyConfig(max_attempts=1, base_delay_seconds=0.01),
+    )
+    items = [
+        NewsItem(
+            id="a",
+            title="A",
+            url="https://example.com/a",
+            source="HN",
+            content="A",
+            original_data={"hn_score": 100, "hn_comments": 50},
+        ),
+        NewsItem(
+            id="b",
+            title="B",
+            url="https://example.com/b",
+            source="HN",
+            content="B",
+            original_data={"hn_score": 10, "hn_comments": 2},
+        ),
+    ]
+
+    scored = await scorer.score_items(items)
+
+    assert len(scored) == 2
+    assert all(item.discussion_signal is not None for item in scored)
+    assert scored[0].id == "a"

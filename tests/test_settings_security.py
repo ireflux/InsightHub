@@ -273,6 +273,13 @@ summarization:
         os.remove(tmp_path)
 
 
+def test_llm_rpm_must_be_positive():
+    with pytest.raises(Exception):
+        AppSettings(
+            llm={"primary": {"provider": "agnes", "model": "agnes-2.0-flash", "rpm": 0}}
+        ).validate_schema_rules()
+
+
 def test_llm_model_must_exist_in_config_when_no_env_fallback_is_used():
     config_content = """
 llm:

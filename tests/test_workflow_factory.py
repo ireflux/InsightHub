@@ -105,6 +105,30 @@ def test_build_llm_provider_agnes():
     assert provider.model == "agnes-2.0-flash"
 
 
+def test_build_llm_provider_wraps_with_rate_limiter_when_rpm_is_set():
+    logger = logging.getLogger("test.workflow_factory")
+    settings = AppSettings(
+        llm={
+            "primary": {
+                "provider": "agnes",
+                "api_key": "test-agnes-key",
+                "model": "agnes-2.0-flash",
+                "rpm": 10,
+            }
+        },
+        sources={"defaults": {"max_items": 5}, "items": []},
+        sinks={"defaults": {"enabled": True}, "items": []},
+    )
+
+    provider = build_llm_provider(settings, logger=logger)
+
+    assert provider is not None
+    assert provider.__class__.__name__ == "ThrottledLLMProvider"
+    assert provider.provider.__class__.__name__ == "AgnesProvider"
+    assert provider.rate_limiter.requests_per_minute == 10
+    assert provider.model == "agnes-2.0-flash"
+
+
 def test_build_llm_provider_with_fallbacks():
     logger = logging.getLogger("test.workflow_factory")
     settings = AppSettings(

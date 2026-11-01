@@ -7,6 +7,10 @@ llm:
   primary:
     provider: "agnes"
     model: "agnes-2.0-flash"
+    # Optional per-endpoint request pacing. Agnes free tier allows 10 RPM.
+    # All scoring, brief and summarization calls share this budget. Set to
+    # null/remove it to disable pacing (e.g. after upgrading to a paid plan).
+    rpm: 10
     # base_url: "https://api.openai.com/v1"  # required for custom_openai/custom_anthropic
     # params:                                # optional, whitelist only
     #   temperature: 0.7

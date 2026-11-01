@@ -3,8 +3,9 @@ from typing import Any, Dict, List, Optional
 
 import httpx
 
+from insighthub.core.rate_limit import parse_retry_after
 from insighthub.core.registry import registry
-from insighthub.errors import LLMProcessingError
+from insighthub.errors import LLMProcessingError, RateLimitError
 from insighthub.llm_providers.base import BaseLLMProvider
 
 
@@ -75,6 +76,11 @@ class AgnesProvider(BaseLLMProvider):
         try:
             resp.raise_for_status()
         except httpx.HTTPStatusError as e:
+            if e.response.status_code == 429:
+                raise RateLimitError(
+                    f"Agnes API rate limit exceeded: {e.response.status_code} {e.response.text}",
+                    retry_after_seconds=parse_retry_after(e.response.headers.get("Retry-After")),
+                ) from e
             raise RuntimeError(f"Agnes API error: {e.response.status_code} {e.response.text}") from e
         return resp.json()
 
@@ -102,6 +108,8 @@ class AgnesProvider(BaseLLMProvider):
         try:
             raw = await self._call_chat([{"role": "user", "content": prompt}])
             return self._extract_text_from_response(raw)
+        except RateLimitError:
+            raise
         except Exception as e:
             raise LLMProcessingError(f"Agnes summarization failed: {e}") from e
 
@@ -110,6 +118,8 @@ class AgnesProvider(BaseLLMProvider):
         try:
             raw = await self._call_chat([{"role": "user", "content": prompt}])
             return self._extract_text_from_response(raw)
+        except RateLimitError:
+            raise
         except Exception as e:
             raise LLMProcessingError(f"Agnes scoring failed: {e}") from e
 

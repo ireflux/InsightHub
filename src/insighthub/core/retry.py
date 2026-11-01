@@ -27,6 +27,11 @@ async def with_retry(
             if not retryable or attempt >= max_attempts:
                 raise
             delay = min(base_delay_seconds * (backoff_multiplier ** (attempt - 1)), max_delay_seconds)
+            retry_after = getattr(exc, "retry_after_seconds", None)
+            if retry_after is not None:
+                # A provider-supplied Retry-After is more authoritative than
+                # our own backoff and should not be capped by max_delay_seconds.
+                delay = max(delay, float(retry_after))
             logger.warning(
                 "Retrying operation after failure.",
                 extra={
@@ -34,6 +39,7 @@ async def with_retry(
                     "attempt": attempt,
                     "next_delay_seconds": delay,
                     "backoff_multiplier": backoff_multiplier,
+                    "retry_after_seconds": retry_after,
                     "error": str(exc),
                 },
             )

@@ -4,6 +4,7 @@ from .custom import CustomAnthropicProvider, CustomOpenAIProvider
 from .failover import FailoverLLMProvider
 from .nvidia import NvidiaProvider
 from .openrouter import OpenRouterProvider
+from .throttled import ThrottledLLMProvider
 from .zhipu import ZhipuAIProvider
 
 __all__ = [
@@ -14,5 +15,6 @@ __all__ = [
     "FailoverLLMProvider",
     "NvidiaProvider",
     "OpenRouterProvider",
+    "ThrottledLLMProvider",
     "ZhipuAIProvider",
 ]

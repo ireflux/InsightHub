@@ -35,6 +35,8 @@ class LLMEndpointConfig(BaseModel):
     api_key: Optional[str] = None
     model: Optional[str] = None
     base_url: Optional[str] = None
+    # Requests per minute allowed for this endpoint. None disables pacing.
+    rpm: Optional[int] = None
     params: Dict[str, Any] = Field(default_factory=dict)
 
 
@@ -523,6 +525,10 @@ class AppSettings(BaseModel):
     def _validate_llm_endpoint(endpoint: LLMEndpointConfig) -> None:
         provider = endpoint.provider.lower()
         params = endpoint.params or {}
+        if endpoint.rpm is not None and endpoint.rpm <= 0:
+            raise ConfigValidationError(
+                f"llm endpoint '{provider}' rpm must be > 0 when provided."
+            )
         allowed_params = {"temperature", "top_p", "max_tokens", "stop", "stream"}
         if provider == "agnes":
             allowed_params = {*allowed_params, "enable_thinking"}

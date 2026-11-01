@@ -694,12 +694,13 @@ class InsightEngine:
             provider_obj = providers[0]
             provider_label = labels[0] if labels else None
 
-        effective_base_url = getattr(provider_obj, "base_url", None)
-        effective_model = getattr(provider_obj, "model", None)
+        underlying = getattr(provider_obj, "provider", provider_obj)
+        effective_base_url = getattr(underlying, "base_url", None)
+        effective_model = getattr(underlying, "model", None)
 
         return {
             "request_base_url": effective_base_url,
-            "effective_provider_class": provider_obj.__class__.__name__ if provider_obj else None,
+            "effective_provider_class": underlying.__class__.__name__ if underlying else None,
             "effective_provider_label": provider_label,
             "effective_model": effective_model,
         }

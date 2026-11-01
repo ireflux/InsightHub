@@ -9,6 +9,9 @@ llm:
   primary:
     provider: "agnes"
     model: "agnes-2.0-flash"
+    # Agnes free tier allows 10 requests/minute. All scoring, brief and
+    # summarization calls share this budget; raise it if your plan allows.
+    rpm: 10
     params:
       temperature: 0.7
       max_tokens: 16384

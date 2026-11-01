@@ -11,6 +11,7 @@ SRC_DIR = os.path.join(ROOT_DIR, "src")
 if SRC_DIR not in sys.path:
     sys.path.insert(0, SRC_DIR)
 
+from insighthub.errors import RateLimitError
 from insighthub.llm_providers.agnes import AgnesProvider
 
 
@@ -72,3 +73,24 @@ async def test_agnes_sanitizes_unsupported_params_and_disables_streaming():
         assert provider.params == {"temperature": 0.7}
     finally:
         await provider.aclose()
+
+
+@pytest.mark.asyncio
+async def test_agnes_rate_limit_response_preserves_retry_after():
+    async def handler(request: httpx.Request) -> httpx.Response:
+        return httpx.Response(429, headers={"Retry-After": "7"}, text="rate limited")
+
+    provider = AgnesProvider(api_key="test-key", model="agnes-2.0-flash")
+    await provider.client.aclose()
+    provider.client = httpx.AsyncClient(
+        headers={"Authorization": "Bearer test-key"},
+        transport=httpx.MockTransport(handler),
+    )
+
+    try:
+        with pytest.raises(RateLimitError) as exc_info:
+            await provider.score("input", "Score: {content}")
+    finally:
+        await provider.aclose()
+
+    assert exc_info.value.retry_after_seconds == 7.0

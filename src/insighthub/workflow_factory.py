@@ -6,6 +6,7 @@ from zoneinfo import ZoneInfo
 from insighthub.core.registry import registry
 from insighthub.llm_providers.base import BaseLLMProvider
 from insighthub.llm_providers.failover import FailoverLLMProvider
+from insighthub.llm_providers.throttled import ThrottledLLMProvider
 from insighthub.publishing import TitlePolicy
 from insighthub.settings import AppSettings, LLMEndpointConfig, SinkConfig, SourceConfig
 from insighthub.sinks import BaseSink
@@ -65,15 +66,19 @@ def _create_provider(
             base_url=endpoint_config.base_url,
             params=endpoint_config.params,
         )
+        underlying_provider = provider
+        if endpoint_config.rpm:
+            provider = ThrottledLLMProvider(provider, endpoint_config.rpm)
         logger.info(
             "LLM provider initialized.",
             extra={
                 "event": "workflow.llm_init_succeeded",
                 "provider": provider_name,
                 "role": role,
-                "effective_provider_class": provider.__class__.__name__,
-                "effective_base_url": getattr(provider, "base_url", None),
-                "effective_model": getattr(provider, "model", None),
+                "effective_provider_class": underlying_provider.__class__.__name__,
+                "effective_base_url": getattr(underlying_provider, "base_url", None),
+                "effective_model": getattr(underlying_provider, "model", None),
+                "rpm": endpoint_config.rpm,
             },
         )
         return provider

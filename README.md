@@ -65,6 +65,23 @@ insighthub run
 - **NVIDIA NIM** (`nvidia`)
 - **Custom OpenAI/Anthropic** (`custom_openai`, `custom_anthropic`)
 
+### Rate Limits
+
+Set `rpm` on an LLM endpoint to pace every request made through that provider.
+Scoring, editorial briefs, and summarization share the same budget.
+
+```yaml
+llm:
+  primary:
+    provider: "agnes"
+    model: "agnes-2.0-flash"
+    rpm: 10          # Agnes free tier allows 10 requests/minute
+```
+
+If a provider returns `429 Too Many Requests` anyway, InsightHub honors its
+`Retry-After` header. When all scoring calls fail, scoring falls back to the
+heuristic ranker instead of dropping the entire batch.
+
 ### Summarization Pipeline
 
 InsightHub defaults to an editorial summarization pipeline:
