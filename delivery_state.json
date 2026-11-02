@@ -1,0 +1,163 @@
+{
+  "updated_at": "2026-11-02T08:46:23.135846+00:00",
+  "runs": [
+    {
+      "timestamp": "2026-11-02T08:46:23.135508+00:00",
+      "items_count": 20,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-11-02-0f092bd47db8.md",
+            "slug": "2026-11-02-0f092bd47db8",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    }
+  ],
+  "items": {
+    "https://karpathy.bearblog.dev/hacker-tube": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-02T08:46:23.135763+00:00",
+        "error": null
+      }
+    },
+    "https://news.ycombinator.com/item?id=50328896": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-02T08:46:23.135768+00:00",
+        "error": null
+      }
+    },
+    "https://terrytao.wordpress.com/2026/11/01/mathematics-has-changed-lets-act-like-it": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-02T08:46:23.135772+00:00",
+        "error": null
+      }
+    },
+    "https://nolanlawson.com/2026/10/28/the-ai-cost-of-javascript-frameworks": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-02T08:46:23.135779+00:00",
+        "error": null
+      }
+    },
+    "http://rhaas.blogspot.com/2026/10/postgres-19-is-late-and-its-ais-fault.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-02T08:46:23.135784+00:00",
+        "error": null
+      }
+    },
+    "https://hackerbooks.org": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-02T08:46:23.135789+00:00",
+        "error": null
+      }
+    },
+    "https://occupysaas.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-02T08:46:23.135799+00:00",
+        "error": null
+      }
+    },
+    "https://tibleiz.net/copper": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-02T08:46:23.135803+00:00",
+        "error": null
+      }
+    },
+    "https://arxiv.org/abs/2610.39302": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-02T08:46:23.135808+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/ivankovic/omnidiff": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-02T08:46:23.135813+00:00",
+        "error": null
+      }
+    },
+    "https://www.fz-juelich.de/en/news/archive/press-release/2026/mystery-of-60-second-fluctuations-in-power-grids-solved": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-02T08:46:23.135816+00:00",
+        "error": null
+      }
+    },
+    "https://www.sciencedaily.com/releases/2026/10/261025073051.htm": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-02T08:46:23.135818+00:00",
+        "error": null
+      }
+    },
+    "https://trigger.dev/blog/security-incident-nov-2026": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-02T08:46:23.135820+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/raphlinus/nibnib": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-02T08:46:23.135823+00:00",
+        "error": null
+      }
+    },
+    "https://wikihack.netlify.app": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-02T08:46:23.135825+00:00",
+        "error": null
+      }
+    },
+    "https://nullprogram.com/blog/2025/02/05": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-02T08:46:23.135828+00:00",
+        "error": null
+      }
+    },
+    "https://fosscomics.com/posts/13.%20BSD%20Unix%20Part%203%20-%20The%20Beginning%20of%20BSD%20Unix": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-02T08:46:23.135830+00:00",
+        "error": null
+      }
+    },
+    "https://www.science.org/content/article/bones-may-release-proteins-slow-aging-and-extend-life-span": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-02T08:46:23.135833+00:00",
+        "error": null
+      }
+    },
+    "https://labs.cloudsecurityalliance.org/research/csa-research-note-china-ai-export-controls-announcement-48-2": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-02T08:46:23.135835+00:00",
+        "error": null
+      }
+    },
+    "https://alsterrunde.com/from-charlemagne-to-the-kitchen-boy-reading-the-hamburg-rathaus": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-02T08:46:23.135837+00:00",
+        "error": null
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "site_timezone": "Asia/Shanghai",
+  "generated_at": "2026-11-02T16:46:23.134089+08:00",
+  "posts": [
+    {
+      "id": "2026-11-02-0f092bd47db8",
+      "run_id": "0f092bd47db8",
+      "date": "2026-11-02",
+      "title": "每日趋势观察 2026-11-02",
+      "slug": "2026-11-02-0f092bd47db8",
+      "markdown_path": "posts/2026-11-02-0f092bd47db8.md",
+      "summary": "- [HackerTube: YouTube built from videos recommended by HN](https://karpathy.bearblog.dev/hacker-tube/): HackerTube",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 20,
+      "is_empty_update": false,
+      "created_at": "2026-11-02T16:46:23.134089+08:00"
+    }
+  ]
+}
