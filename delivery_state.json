@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-02T08:46:23.135846+00:00",
+  "updated_at": "2026-11-03T08:58:19.045022+00:00",
   "runs": [
     {
       "timestamp": "2026-11-02T08:46:23.135508+00:00",
@@ -11,6 +11,22 @@
             "status": "success",
             "file_path": "output/posts/2026-11-02-0f092bd47db8.md",
             "slug": "2026-11-02-0f092bd47db8",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-11-03T08:58:19.044727+00:00",
+      "items_count": 20,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-11-03-cfee91508407.md",
+            "slug": "2026-11-03-cfee91508407",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -156,6 +172,146 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-11-02T08:46:23.135837+00:00",
+        "error": null
+      }
+    },
+    "https://rikiyat.github.io/blog/weight-space-programming": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-03T08:58:19.044939+00:00",
+        "error": null
+      }
+    },
+    "https://namedaisy.com/blog/boy-names-that-became-girl-names": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-03T08:58:19.044943+00:00",
+        "error": null
+      }
+    },
+    "https://news.ycombinator.com/item?id=50340088": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-03T08:58:19.044946+00:00",
+        "error": null
+      }
+    },
+    "https://news.ycombinator.com/item?id=50338728": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-03T08:58:19.044948+00:00",
+        "error": null
+      }
+    },
+    "https://blog.mistys-internet.website/post/2026/10/29/if-you-love-a-website-back-it-up": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-03T08:58:19.044951+00:00",
+        "error": null
+      }
+    },
+    "https://openai.com/index/scaling-git-at-openai": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-03T08:58:19.044955+00:00",
+        "error": null
+      }
+    },
+    "https://momentic.ai/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-03T08:58:19.044963+00:00",
+        "error": null
+      }
+    },
+    "https://hackertimes.ca/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-03T08:58:19.044966+00:00",
+        "error": null
+      }
+    },
+    "https://www.nist.gov/news-events/news/2026/11/self-employed-solopreneur-nist-has-cybersecurity-guide-just-you": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-03T08:58:19.044969+00:00",
+        "error": null
+      }
+    },
+    "https://knlb.dev/essays/surrender": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-03T08:58:19.044972+00:00",
+        "error": null
+      }
+    },
+    "https://p.migdal.pl/warsaw-vibe-voxel": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-03T08:58:19.044976+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/JiaFeiMiao-K-Cat/DiscImageStudio": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-03T08:58:19.044979+00:00",
+        "error": null
+      }
+    },
+    "https://erici.eu": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-03T08:58:19.044982+00:00",
+        "error": null
+      }
+    },
+    "https://toit.io/blog/toit-v2-0-0": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-03T08:58:19.044985+00:00",
+        "error": null
+      }
+    },
+    "https://cornfieldlabs.github.io/posts/ublock-stop-techcrunch-autoplay-video/post.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-03T08:58:19.044987+00:00",
+        "error": null
+      }
+    },
+    "https://www.argmin.net/p/galactus-the-devourer": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-03T08:58:19.044990+00:00",
+        "error": null
+      }
+    },
+    "https://lowendspirit.com/discussion/11543/shrinking-nixos-ram-footprint-and-resource-requirements-to-the-bare-minimum": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-03T08:58:19.044993+00:00",
+        "error": null
+      }
+    },
+    "https://margeux.com/rb338.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-03T08:58:19.044996+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/NVIDIA/auto-ontology": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-03T08:58:19.045012+00:00",
+        "error": null
+      }
+    },
+    "https://arxiv.org/abs/2608.25820": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-03T08:58:19.045015+00:00",
         "error": null
       }
     }
