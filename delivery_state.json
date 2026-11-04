@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-03T08:58:19.045022+00:00",
+  "updated_at": "2026-11-04T08:27:01.494143+00:00",
   "runs": [
     {
       "timestamp": "2026-11-02T08:46:23.135508+00:00",
@@ -27,6 +27,22 @@
             "status": "success",
             "file_path": "output/posts/2026-11-03-cfee91508407.md",
             "slug": "2026-11-03-cfee91508407",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-11-04T08:27:01.493846+00:00",
+      "items_count": 20,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-11-04-f0f3ea8ffe85.md",
+            "slug": "2026-11-04-f0f3ea8ffe85",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -312,6 +328,146 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-11-03T08:58:19.045015+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/postmanlabs/postman-app-support/issues/14370": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-04T08:27:01.494054+00:00",
+        "error": null
+      }
+    },
+    "https://blog.nns.ee/2026/11/02/renault-hack": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-04T08:27:01.494061+00:00",
+        "error": null
+      }
+    },
+    "https://webkit.org/blog/18541/introducing-adaptive-dark-mode": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-04T08:27:01.494067+00:00",
+        "error": null
+      }
+    },
+    "https://neufangled.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-04T08:27:01.494071+00:00",
+        "error": null
+      }
+    },
+    "https://arstechnica.com/gadgets/2026/10/fujifilm-to-boost-tape-production-5x-as-ai-fuels-archiving-demand": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-04T08:27:01.494074+00:00",
+        "error": null
+      }
+    },
+    "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-04T08:27:01.494079+00:00",
+        "error": null
+      }
+    },
+    "https://andreasfertig.com/blog/2026/11/cpp26-dis-failed-how-does-cpp-survive": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-04T08:27:01.494087+00:00",
+        "error": null
+      }
+    },
+    "https://ben.stolovitz.com/posts/how-use-ai-oct-2026": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-04T08:27:01.494091+00:00",
+        "error": null
+      }
+    },
+    "https://hackertv.org": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-04T08:27:01.494095+00:00",
+        "error": null
+      }
+    },
+    "https://www.figma.com/blog/training-a-figma-fluent-editing-model": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-04T08:27:01.494099+00:00",
+        "error": null
+      }
+    },
+    "https://mrdoob.github.io/codevember-2026/01": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-04T08:27:01.494102+00:00",
+        "error": null
+      }
+    },
+    "https://spoon-tamago.com/japan-jimi-mundane-halloween-costumes-2026": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-04T08:27:01.494106+00:00",
+        "error": null
+      }
+    },
+    "https://www.interdb.jp/pg/index.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-04T08:27:01.494110+00:00",
+        "error": null
+      }
+    },
+    "https://openathena.ai/blog/there-is-no-posttraining-data-commons": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-04T08:27:01.494113+00:00",
+        "error": null
+      }
+    },
+    "https://uncracked.city": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-04T08:27:01.494117+00:00",
+        "error": null
+      }
+    },
+    "https://lamont.columbia.edu/news/giant-canyon-mars-still-tectonically-active-today": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-04T08:27:01.494121+00:00",
+        "error": null
+      }
+    },
+    "https://www.youtube.com/watch?v=XfLlpxE6AYM": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-04T08:27:01.494124+00:00",
+        "error": null
+      }
+    },
+    "https://www.dana-farber.org/newsroom/news-releases/2026/study-reveals-distinct-cellular-and-genetic-differences-in-colorectal-cancer-in-younger-patients": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-04T08:27:01.494128+00:00",
+        "error": null
+      }
+    },
+    "https://reasonablypolymorphic.com/blog/arrows-to-arrows": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-04T08:27:01.494131+00:00",
+        "error": null
+      }
+    },
+    "https://napcakes.nekoweb.org/posts/malloc": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-04T08:27:01.494135+00:00",
         "error": null
       }
     }
