@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-04T08:27:01.494143+00:00",
+  "updated_at": "2026-11-05T08:52:47.343653+00:00",
   "runs": [
     {
       "timestamp": "2026-11-02T08:46:23.135508+00:00",
@@ -43,6 +43,22 @@
             "status": "success",
             "file_path": "output/posts/2026-11-04-f0f3ea8ffe85.md",
             "slug": "2026-11-04-f0f3ea8ffe85",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-11-05T08:52:47.343414+00:00",
+      "items_count": 20,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-11-05-1a9439e14824.md",
+            "slug": "2026-11-05-1a9439e14824",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -468,6 +484,146 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-11-04T08:27:01.494135+00:00",
+        "error": null
+      }
+    },
+    "https://spectrum.ieee.org/ai-in-cybersecurity-php2shell-vulnerability": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-05T08:52:47.343590+00:00",
+        "error": null
+      }
+    },
+    "https://layer3intel.com/blog/residential-proxies-white-house-network": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-05T08:52:47.343594+00:00",
+        "error": null
+      }
+    },
+    "https://openai.com/index/a-thousand-fewer-paths-to-root": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-05T08:52:47.343596+00:00",
+        "error": null
+      }
+    },
+    "https://www.conductor.build/announcement": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-05T08:52:47.343599+00:00",
+        "error": null
+      }
+    },
+    "https://openai.com/index/introducing-images-2-6": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-05T08:52:47.343602+00:00",
+        "error": null
+      }
+    },
+    "https://huggingface.co/moonshotai/Kimi-K3.1-Pro": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-05T08:52:47.343605+00:00",
+        "error": null
+      }
+    },
+    "https://go.dev/blog/jsonv2": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-05T08:52:47.343610+00:00",
+        "error": null
+      }
+    },
+    "https://www.spacex.com/starfall": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-05T08:52:47.343613+00:00",
+        "error": null
+      }
+    },
+    "https://www.birdsoutsidemywindow.org/2026/11/03/insects-dont-swarm-at-led-lights": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-05T08:52:47.343615+00:00",
+        "error": null
+      }
+    },
+    "https://www.ricursive.com/ripple": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-05T08:52:47.343618+00:00",
+        "error": null
+      }
+    },
+    "https://www.karthihegde.dev/posts/dns_tampering": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-05T08:52:47.343620+00:00",
+        "error": null
+      }
+    },
+    "https://markblah.github.io/lemmings": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-05T08:52:47.343622+00:00",
+        "error": null
+      }
+    },
+    "https://fireflyk64.github.io/wcmulti": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-05T08:52:47.343624+00:00",
+        "error": null
+      }
+    },
+    "https://mofu-dev.com/en/blog/fluid-foundation": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-05T08:52:47.343627+00:00",
+        "error": null
+      }
+    },
+    "https://icode4.coffee/?p=1746": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-05T08:52:47.343629+00:00",
+        "error": null
+      }
+    },
+    "https://www.altera.com/newsroom/agilex-2x": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-05T08:52:47.343631+00:00",
+        "error": null
+      }
+    },
+    "https://lists.trustedfirmware.org/archives/list/mbed-tls@lists.trustedfirmware.org/thread/YPIGCB7WN6GCHOGEGKOJXUYAP7OK527W": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-05T08:52:47.343634+00:00",
+        "error": null
+      }
+    },
+    "https://ziglang.org/devlog/2026": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-05T08:52:47.343636+00:00",
+        "error": null
+      }
+    },
+    "https://krebsonsecurity.com/2026/11/want-to-rent-an-internet-address-at-the-white-house": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-05T08:52:47.343638+00:00",
+        "error": null
+      }
+    },
+    "https://en.wikipedia.org/wiki/Chip_art": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-05T08:52:47.343646+00:00",
         "error": null
       }
     }
