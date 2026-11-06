@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-05T08:52:47.343653+00:00",
+  "updated_at": "2026-11-06T08:54:22.977018+00:00",
   "runs": [
     {
       "timestamp": "2026-11-02T08:46:23.135508+00:00",
@@ -59,6 +59,22 @@
             "status": "success",
             "file_path": "output/posts/2026-11-05-1a9439e14824.md",
             "slug": "2026-11-05-1a9439e14824",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-11-06T08:54:22.976699+00:00",
+      "items_count": 20,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-11-06-b856d716d7d5.md",
+            "slug": "2026-11-06-b856d716d7d5",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -624,6 +640,146 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-11-05T08:52:47.343646+00:00",
+        "error": null
+      }
+    },
+    "https://sshhole.com": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-06T08:54:22.976921+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/anthropics/claude-code/issues/107757": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-06T08:54:22.976932+00:00",
+        "error": null
+      }
+    },
+    "https://www.cve.org/CVERecord?id=CVE-2026-83844": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-06T08:54:22.976937+00:00",
+        "error": null
+      }
+    },
+    "https://www.naut.ca/blog/2026/11/05/the-hackintosh-reborn-with-ai": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-06T08:54:22.976941+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/saragordic/window-sweaters": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-06T08:54:22.976945+00:00",
+        "error": null
+      }
+    },
+    "https://thinkingmachines.ai/news/inkling-2-small": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-06T08:54:22.976952+00:00",
+        "error": null
+      }
+    },
+    "https://www.reuters.com/business/world-at-work/britain-make-salary-disclosure-job-ads-mandatory-2026-11-05": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-06T08:54:22.976960+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/rivet-dev/rivet": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-06T08:54:22.976964+00:00",
+        "error": null
+      }
+    },
+    "https://www.lesswrong.com/posts/DALNiKBjMGMF8grme/arjun-panickssery-s-shortform?commentId=fJtaHHHfx45tD7BSL": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-06T08:54:22.976968+00:00",
+        "error": null
+      }
+    },
+    "https://thereader.mitpress.mit.edu/from-linux-to-wikipedia-how-volunteers-build-the-internet": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-06T08:54:22.976972+00:00",
+        "error": null
+      }
+    },
+    "https://pwn.college/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-06T08:54:22.976975+00:00",
+        "error": null
+      }
+    },
+    "https://firenook.dev/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-06T08:54:22.976979+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/dsx-ai-factory/nvke": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-06T08:54:22.976983+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/matthewmrichter/mooftcp": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-06T08:54:22.976986+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/ppmpreetham/BUI": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-06T08:54:22.976990+00:00",
+        "error": null
+      }
+    },
+    "https://obelisk.club/research/app-store-2026": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-06T08:54:22.976994+00:00",
+        "error": null
+      }
+    },
+    "https://tomorrowasusual.com/living-maps/bay-area-tech": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-06T08:54:22.976997+00:00",
+        "error": null
+      }
+    },
+    "https://apps.metaebene.me/en/kugelblitz": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-06T08:54:22.977001+00:00",
+        "error": null
+      }
+    },
+    "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0537": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-06T08:54:22.977005+00:00",
+        "error": null
+      }
+    },
+    "https://worldstrike.fun/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-06T08:54:22.977009+00:00",
         "error": null
       }
     }
