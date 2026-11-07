@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-06T08:54:22.977018+00:00",
+  "updated_at": "2026-11-07T08:08:50.308184+00:00",
   "runs": [
     {
       "timestamp": "2026-11-02T08:46:23.135508+00:00",
@@ -75,6 +75,22 @@
             "status": "success",
             "file_path": "output/posts/2026-11-06-b856d716d7d5.md",
             "slug": "2026-11-06-b856d716d7d5",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-11-07T08:08:50.307929+00:00",
+      "items_count": 20,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-11-07-3cb66dc49974.md",
+            "slug": "2026-11-07-3cb66dc49974",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -780,6 +796,146 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-11-06T08:54:22.977009+00:00",
+        "error": null
+      }
+    },
+    "https://www.nbcnews.com/tech/tech-news/tesla-wind-cybertruck-production-years-poor-sales-markets-rcna607817": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-07T08:08:50.308120+00:00",
+        "error": null
+      }
+    },
+    "https://www.reuters.com/world/us/us-faa-says-it-will-phase-out-floppy-disks-air-traffic-control-by-2028-2026-11-05": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-07T08:08:50.308124+00:00",
+        "error": null
+      }
+    },
+    "https://www.planned-obsolescence.org/p/ai-is-dramatically-accelerating-ai": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-07T08:08:50.308126+00:00",
+        "error": null
+      }
+    },
+    "https://hightouch.com/blog/llm-judges-identity-resolution": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-07T08:08:50.308128+00:00",
+        "error": null
+      }
+    },
+    "https://mitchellh.com/writing/libghostty-1-0": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-07T08:08:50.308130+00:00",
+        "error": null
+      }
+    },
+    "https://pwn.ai/blog/firecracker-escape": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-07T08:08:50.308133+00:00",
+        "error": null
+      }
+    },
+    "https://josef.cn/blog/unitree": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-07T08:08:50.308140+00:00",
+        "error": null
+      }
+    },
+    "https://devvm.dev/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-07T08:08:50.308143+00:00",
+        "error": null
+      }
+    },
+    "https://asahilinux.org/2026/11/progress-report-7-3": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-07T08:08:50.308146+00:00",
+        "error": null
+      }
+    },
+    "https://www.multifamilydive.com/news/realpage-rent-pricing-case-360m-renters/873553": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-07T08:08:50.308148+00:00",
+        "error": null
+      }
+    },
+    "https://kevinboone.me/efitest_index.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-07T08:08:50.308150+00:00",
+        "error": null
+      }
+    },
+    "https://github.blog/engineering/architecture-optimization/inside-githubs-new-git-storage-architecture": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-07T08:08:50.308155+00:00",
+        "error": null
+      }
+    },
+    "https://www.science.org/content/article/barbarian-tribe-s-mythic-origin-story-true-ancient-dna-reveals": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-07T08:08:50.308158+00:00",
+        "error": null
+      }
+    },
+    "https://mattlakeman.org/2026/11/05/notes-on-san-marino": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-07T08:08:50.308160+00:00",
+        "error": null
+      }
+    },
+    "https://pivotlake.io/blog/know-your-limit-faster-top-k-aggregation": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-07T08:08:50.308162+00:00",
+        "error": null
+      }
+    },
+    "https://www.smithsonianmag.com/history/greece-has-its-own-pompeii-and-the-ruins-tell-a-captivating-story-of-a-sophisticated-seafaring-bronze-age-society-180989747": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-07T08:08:50.308165+00:00",
+        "error": null
+      }
+    },
+    "https://blog.adafruit.com/2026/10/31/flash-c-compiler": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-07T08:08:50.308167+00:00",
+        "error": null
+      }
+    },
+    "https://www.wisfarmer.com/story/opinion/columnists/2022/05/11/over-20-m-lbs-commodities-lost-great-butter-fire-1991/9650051002": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-07T08:08:50.308171+00:00",
+        "error": null
+      }
+    },
+    "https://www.anthropic.com/research/components-of-agent-memory": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-07T08:08:50.308173+00:00",
+        "error": null
+      }
+    },
+    "https://trixter.oldskool.org/2014/06/19/8088-domination-post-mortem-part-1": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-07T08:08:50.308176+00:00",
         "error": null
       }
     }
