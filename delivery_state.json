@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-07T08:08:50.308184+00:00",
+  "updated_at": "2026-11-08T08:27:48.628547+00:00",
   "runs": [
     {
       "timestamp": "2026-11-02T08:46:23.135508+00:00",
@@ -91,6 +91,22 @@
             "status": "success",
             "file_path": "output/posts/2026-11-07-3cb66dc49974.md",
             "slug": "2026-11-07-3cb66dc49974",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-11-08T08:27:48.628209+00:00",
+      "items_count": 20,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-11-08-4ef0f022a028.md",
+            "slug": "2026-11-08-4ef0f022a028",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -936,6 +952,146 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-11-07T08:08:50.308176+00:00",
+        "error": null
+      }
+    },
+    "https://8rank.ai/game/apple-intelligence-personal-knowledge-graph": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-08T08:27:48.628459+00:00",
+        "error": null
+      }
+    },
+    "https://www.theguardian.com/technology/2026/nov/06/struggling-to-spell-male-chauvinist-pig-apple-grey-list-means-your-iphone-wont-help-you": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-08T08:27:48.628467+00:00",
+        "error": null
+      }
+    },
+    "https://hunch.net/?p=13764006": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-08T08:27:48.628472+00:00",
+        "error": null
+      }
+    },
+    "https://www.windowslatest.com/2026/11/06/every-windows-11-app-should-kill-electron-and-discord-just-showed-why-no-starting-screen-and-70-less-ram-even-with-two-accounts-signed-in": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-08T08:27:48.628476+00:00",
+        "error": null
+      }
+    },
+    "https://nfsu2.xyz/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-08T08:27:48.628480+00:00",
+        "error": null
+      }
+    },
+    "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-08T08:27:48.628485+00:00",
+        "error": null
+      }
+    },
+    "https://blog.bosscher.ch/posts/openstick": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-08T08:27:48.628493+00:00",
+        "error": null
+      }
+    },
+    "https://caleb.software/posts/claude-to-pi.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-08T08:27:48.628497+00:00",
+        "error": null
+      }
+    },
+    "http://thelittleengineerthatcould.blogspot.com/2022/12/the-8-linux-computer.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-08T08:27:48.628501+00:00",
+        "error": null
+      }
+    },
+    "https://maxxbench.unlap.ai/research/why-maxxbench": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-08T08:27:48.628505+00:00",
+        "error": null
+      }
+    },
+    "https://github.blog/changelog/2026-11-05-new-pull-request-overview-page-in-public-preview": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-08T08:27:48.628508+00:00",
+        "error": null
+      }
+    },
+    "https://arstechnica.com/science/2026/11/uranium-cubes-reveal-why-the-german-nuclear-project-failed": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-08T08:27:48.628512+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/hedgerow-dev/coldframe": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-08T08:27:48.628515+00:00",
+        "error": null
+      }
+    },
+    "https://eli.thegreenplace.net/2025/making-any-integer-with-four-2s": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-08T08:27:48.628518+00:00",
+        "error": null
+      }
+    },
+    "https://www.commodore.ca/commodore-products/commodore-pet-the-worlds-first-personal-computer": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-08T08:27:48.628522+00:00",
+        "error": null
+      }
+    },
+    "https://www.science.org/content/article/wearable-device-makers-are-harvesting-brain-data-train-ai-without-telling-users?referrer=https%3A%2F%2Fwww.google.com%2F": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-08T08:27:48.628525+00:00",
+        "error": null
+      }
+    },
+    "https://architecture-history.org/schools/AMSTERDAM%20SCHOOL.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-08T08:27:48.628528+00:00",
+        "error": null
+      }
+    },
+    "https://imagesco.com/articles/kirlian/kirlian-photography.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-08T08:27:48.628532+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/dmunozv04/isponsorblocktv": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-08T08:27:48.628535+00:00",
+        "error": null
+      }
+    },
+    "https://clj.rs/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-08T08:27:48.628538+00:00",
         "error": null
       }
     }
