@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-08T08:27:48.628547+00:00",
+  "updated_at": "2026-11-09T09:00:31.487922+00:00",
   "runs": [
     {
       "timestamp": "2026-11-02T08:46:23.135508+00:00",
@@ -107,6 +107,22 @@
             "status": "success",
             "file_path": "output/posts/2026-11-08-4ef0f022a028.md",
             "slug": "2026-11-08-4ef0f022a028",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-11-09T09:00:31.487611+00:00",
+      "items_count": 20,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-11-09-0e8713d802fd.md",
+            "slug": "2026-11-09-0e8713d802fd",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -1092,6 +1108,146 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-11-08T08:27:48.628538+00:00",
+        "error": null
+      }
+    },
+    "https://news.ycombinator.com/item?id=50417407": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-09T09:00:31.487833+00:00",
+        "error": null
+      }
+    },
+    "https://nvidianews.nvidia.com/news/a-message-to-our-company": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-09T09:00:31.487841+00:00",
+        "error": null
+      }
+    },
+    "https://www.thestateofai.com/news/goldman-sachs-claude-code-traders-bankers": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-09T09:00:31.487847+00:00",
+        "error": null
+      }
+    },
+    "https://matteoraso.github.io/im-not-convinced-the-ai-bubble-exists.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-09T09:00:31.487851+00:00",
+        "error": null
+      }
+    },
+    "https://mailroute.net/blog/outlook-rejecting-email-without-dmarc": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-09T09:00:31.487855+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/synchopate/llama-modchip": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-09T09:00:31.487859+00:00",
+        "error": null
+      }
+    },
+    "https://ketchup3d.github.io/app": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-09T09:00:31.487867+00:00",
+        "error": null
+      }
+    },
+    "https://shubs.io/unlocking-any-car-from-x-brand-in-most-of-the-world": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-09T09:00:31.487871+00:00",
+        "error": null
+      }
+    },
+    "https://aphyr.com/posts/427-rip-harvest": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-09T09:00:31.487875+00:00",
+        "error": null
+      }
+    },
+    "https://duxlabs.dev/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-09T09:00:31.487878+00:00",
+        "error": null
+      }
+    },
+    "https://declarative-dragging.github.io/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-09T09:00:31.487882+00:00",
+        "error": null
+      }
+    },
+    "https://blog.zortax.de/posts/a-critique-of-gpui": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-09T09:00:31.487885+00:00",
+        "error": null
+      }
+    },
+    "https://chimera-vocal-synth.vercel.app/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-09T09:00:31.487888+00:00",
+        "error": null
+      }
+    },
+    "https://twitter.com/shanemelaugh/status/2119192075505893695": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-09T09:00:31.487892+00:00",
+        "error": null
+      }
+    },
+    "https://arxiv.org/abs/2610.14162": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-09T09:00:31.487895+00:00",
+        "error": null
+      }
+    },
+    "https://blog.coredump.cx/p/quasi-logarithmic-kitchen-timer": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-09T09:00:31.487898+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/OmniJev/Flide": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-09T09:00:31.487902+00:00",
+        "error": null
+      }
+    },
+    "http://mamememo.blogspot.com/2010/09/qlobe.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-09T09:00:31.487906+00:00",
+        "error": null
+      }
+    },
+    "https://www.worldhistory.org/Ur-Nammu": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-09T09:00:31.487909+00:00",
+        "error": null
+      }
+    },
+    "https://blue-continuum.com/branching-beyond-leonardo": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-09T09:00:31.487912+00:00",
         "error": null
       }
     }
