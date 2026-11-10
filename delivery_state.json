@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-09T09:00:31.487922+00:00",
+  "updated_at": "2026-11-10T09:06:29.290557+00:00",
   "runs": [
     {
       "timestamp": "2026-11-02T08:46:23.135508+00:00",
@@ -123,6 +123,22 @@
             "status": "success",
             "file_path": "output/posts/2026-11-09-0e8713d802fd.md",
             "slug": "2026-11-09-0e8713d802fd",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-11-10T09:06:29.290368+00:00",
+      "items_count": 20,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-11-10-f7ff2dfe01d5.md",
+            "slug": "2026-11-10-f7ff2dfe01d5",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -1248,6 +1264,146 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-11-09T09:00:31.487912+00:00",
+        "error": null
+      }
+    },
+    "https://www.anthropic.com/claude-fable-and-mythos-5-2": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-10T09:06:29.290512+00:00",
+        "error": null
+      }
+    },
+    "https://postalpro.usps.com/zcb": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-10T09:06:29.290514+00:00",
+        "error": null
+      }
+    },
+    "https://www.payments.ca/canada-launches-real-time-rail-bringing-247-payment-infrastructure-national-economy": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-10T09:06:29.290516+00:00",
+        "error": null
+      }
+    },
+    "https://www.anthropocenemagazine.org/2026/10/magenta-solar-panels-may-be-agrivoltaics-cleverest-trick-yet": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-10T09:06:29.290518+00:00",
+        "error": null
+      }
+    },
+    "https://www.foldableflight.com": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-10T09:06:29.290520+00:00",
+        "error": null
+      }
+    },
+    "https://research.meta.ai/blog/muse-ember": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-10T09:06:29.290523+00:00",
+        "error": null
+      }
+    },
+    "https://www.cnbc.com/2026/11/06/coreweave-bond-yield-tops-16percent-as-ai-credit-stress-rises.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-10T09:06:29.290529+00:00",
+        "error": null
+      }
+    },
+    "https://simonwillison.net/2026/Nov/9/mysterious-beeps": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-10T09:06:29.290532+00:00",
+        "error": null
+      }
+    },
+    "https://strandsagents.com/blog/amazon-saves-millions-replacing-sonnet-with-strands-decider": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-10T09:06:29.290533+00:00",
+        "error": null
+      }
+    },
+    "https://www.watched.earth": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-10T09:06:29.290535+00:00",
+        "error": null
+      }
+    },
+    "https://www.infineon.com/press-release/2026/infpr202611-028": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-10T09:06:29.290540+00:00",
+        "error": null
+      }
+    },
+    "https://e-means.github.io/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-10T09:06:29.290541+00:00",
+        "error": null
+      }
+    },
+    "https://maurycyz.com/projects/badcert": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-10T09:06:29.290543+00:00",
+        "error": null
+      }
+    },
+    "https://kevinboone.me/failed_cooling.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-10T09:06:29.290544+00:00",
+        "error": null
+      }
+    },
+    "https://maurycyz.com/projects/fading": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-10T09:06:29.290545+00:00",
+        "error": null
+      }
+    },
+    "https://broyojo.com/python-formalization": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-10T09:06:29.290546+00:00",
+        "error": null
+      }
+    },
+    "https://www.nabo.dev/blogs/kernel-primer": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-10T09:06:29.290548+00:00",
+        "error": null
+      }
+    },
+    "https://www.ultorg.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-10T09:06:29.290549+00:00",
+        "error": null
+      }
+    },
+    "https://www.theguardian.com/books/2026/nov/09/m-john-harrison-the-end-of-everything-wins-2026-booker-prize": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-10T09:06:29.290550+00:00",
+        "error": null
+      }
+    },
+    "https://www.notion.com/help/security-incident-involving-a-third-party-ai-vendor": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-10T09:06:29.290552+00:00",
         "error": null
       }
     }
