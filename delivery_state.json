@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-11T08:47:18.618194+00:00",
+  "updated_at": "2026-11-12T09:06:24.246432+00:00",
   "runs": [
     {
       "timestamp": "2026-11-02T08:46:23.135508+00:00",
@@ -155,6 +155,22 @@
             "status": "success",
             "file_path": "output/posts/2026-11-11-2cb8b7812c5a.md",
             "slug": "2026-11-11-2cb8b7812c5a",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-11-12T09:06:24.246143+00:00",
+      "items_count": 20,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-11-12-88020255458b.md",
+            "slug": "2026-11-12-88020255458b",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -1560,6 +1576,146 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-11-11T08:47:18.618189+00:00",
+        "error": null
+      }
+    },
+    "https://www.wsj.com/business/nvidia-is-preparing-to-oust-nvidia-ceo-jensen-huang-30f421ad": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-12T09:06:24.246339+00:00",
+        "error": null
+      }
+    },
+    "https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-12T09:06:24.246344+00:00",
+        "error": null
+      }
+    },
+    "https://michael.bacarella.com/2026/11/10/false-smoke-alarm-jane-street-datacenter": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-12T09:06:24.246347+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/aws/aws-emulator": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-12T09:06:24.246351+00:00",
+        "error": null
+      }
+    },
+    "https://discuss.python.org/t/in-memoriam-tim-peters-1952-2026/110028": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-12T09:06:24.246353+00:00",
+        "error": null
+      }
+    },
+    "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-12T09:06:24.246357+00:00",
+        "error": null
+      }
+    },
+    "https://commandlinesystems.com/magic.txt": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-12T09:06:24.246381+00:00",
+        "error": null
+      }
+    },
+    "https://forums.spacebattles.com/threads/humble-bundle-just-completely-killed-most-of-their-security-through-vibecoding.1346295": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-12T09:06:24.246385+00:00",
+        "error": null
+      }
+    },
+    "https://www.wiz.io/blog/cve-2026-119618-rce-apache-http-server-vulnerability": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-12T09:06:24.246389+00:00",
+        "error": null
+      }
+    },
+    "https://www.mcmillen.dev/sigbovik": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-12T09:06:24.246392+00:00",
+        "error": null
+      }
+    },
+    "https://hugovk.dev/blog/2026/lock-github-actions": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-12T09:06:24.246395+00:00",
+        "error": null
+      }
+    },
+    "https://graphics.cs.utah.edu/teapot": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-12T09:06:24.246398+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/janestreet/agent_skills/blob/master/socratic-tutor/SKILL.md": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-12T09:06:24.246401+00:00",
+        "error": null
+      }
+    },
+    "https://devonestes.com/bad-ideas-that-arent-bad-anymore": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-12T09:06:24.246405+00:00",
+        "error": null
+      }
+    },
+    "https://jatorre.github.io/garden": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-12T09:06:24.246407+00:00",
+        "error": null
+      }
+    },
+    "https://publicdomainreview.org/collection/marian-wawrzeniecki": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-12T09:06:24.246411+00:00",
+        "error": null
+      }
+    },
+    "https://www.getlazarus.org/forums/topic/17": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-12T09:06:24.246414+00:00",
+        "error": null
+      }
+    },
+    "https://blog.darlinghq.org/2026/11/08/development-update-q4-2026": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-12T09:06:24.246417+00:00",
+        "error": null
+      }
+    },
+    "https://codeberg.org/wvhulle/bootvine": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-12T09:06:24.246420+00:00",
+        "error": null
+      }
+    },
+    "https://www.theatlantic.com/magazine/2026/12/aquaterra-ancient-human-migration/689029": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-12T09:06:24.246423+00:00",
         "error": null
       }
     }
