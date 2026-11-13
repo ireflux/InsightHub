@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-12T09:06:24.246432+00:00",
+  "updated_at": "2026-11-13T09:02:43.624188+00:00",
   "runs": [
     {
       "timestamp": "2026-11-02T08:46:23.135508+00:00",
@@ -171,6 +171,22 @@
             "status": "success",
             "file_path": "output/posts/2026-11-12-88020255458b.md",
             "slug": "2026-11-12-88020255458b",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-11-13T09:02:43.623909+00:00",
+      "items_count": 20,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-11-13-f9978dd8799e.md",
+            "slug": "2026-11-13-f9978dd8799e",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -1716,6 +1732,146 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-11-12T09:06:24.246423+00:00",
+        "error": null
+      }
+    },
+    "https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-13T09:02:43.624109+00:00",
+        "error": null
+      }
+    },
+    "https://ipo.anthropic.com/us": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-13T09:02:43.624114+00:00",
+        "error": null
+      }
+    },
+    "https://status.cloud.microsoft/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-13T09:02:43.624118+00:00",
+        "error": null
+      }
+    },
+    "https://www.wired.com/story/nvidia-employees-petition-for-jensen-huangs-return": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-13T09:02:43.624121+00:00",
+        "error": null
+      }
+    },
+    "https://blog.rust-lang.org/2026/11/12/Rust-1.100.0": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-13T09:02:43.624125+00:00",
+        "error": null
+      }
+    },
+    "https://www.reuters.com/technology/former-nvidia-ceo-huang-had-relationship-with-second-employee-sources-say-2026-11-12": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-13T09:02:43.624134+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/simpsoka/zigzag": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-13T09:02:43.624142+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/hyperionaidev/smolmaxxing": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-13T09:02:43.624145+00:00",
+        "error": null
+      }
+    },
+    "https://www.smithsonianmag.com/smart-news/astronomers-found-a-mysterious-object-orbiting-far-beyond-pluto-it-could-be-a-new-dwarf-planet-hidden-in-our-solar-system-180989857": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-13T09:02:43.624149+00:00",
+        "error": null
+      }
+    },
+    "https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-13T09:02:43.624152+00:00",
+        "error": null
+      }
+    },
+    "https://www.moddb.com/mods/openq4/downloads/openq4-0141-windows-x64": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-13T09:02:43.624155+00:00",
+        "error": null
+      }
+    },
+    "https://ice-wm.org/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-13T09:02:43.624157+00:00",
+        "error": null
+      }
+    },
+    "https://edge0.ai/blog/introducing-edge0-145b-frontier-ai-capabilities-on-your-own-computer": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-13T09:02:43.624160+00:00",
+        "error": null
+      }
+    },
+    "https://makepad.github.io/relax": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-13T09:02:43.624163+00:00",
+        "error": null
+      }
+    },
+    "https://twitter.com/MSFT365Status/status/2121079061774491735": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-13T09:02:43.624165+00:00",
+        "error": null
+      }
+    },
+    "https://brave.com/blog/search-api-agentic-payments": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-13T09:02:43.624168+00:00",
+        "error": null
+      }
+    },
+    "https://mehmetince.net/part-3-6-how-i-ended-up-turning-a-22-year-old-postgresql-type-confusion-primitive-into-rce-cve-2026-6460": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-13T09:02:43.624171+00:00",
+        "error": null
+      }
+    },
+    "https://developer.apple.com/foundation-models-framework": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-13T09:02:43.624174+00:00",
+        "error": null
+      }
+    },
+    "https://folklore.org/Switcher.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-13T09:02:43.624176+00:00",
+        "error": null
+      }
+    },
+    "https://www.cnn.com/2026/11/12/business/live-news/microsoft-global-outage-intl-hnk": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-13T09:02:43.624179+00:00",
         "error": null
       }
     }

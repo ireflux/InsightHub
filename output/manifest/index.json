@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-11-12T17:06:24.243768+08:00",
+  "generated_at": "2026-11-13T17:02:43.621739+08:00",
   "posts": [
+    {
+      "id": "2026-11-13-f9978dd8799e",
+      "run_id": "f9978dd8799e",
+      "date": "2026-11-13",
+      "title": "每日趋势观察 2026-11-13",
+      "slug": "2026-11-13-f9978dd8799e",
+      "markdown_path": "posts/2026-11-13-f9978dd8799e.md",
+      "summary": "- [Jensen Huang resigns](https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f): Hacker News Story: Jensen Huang resigns",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 20,
+      "is_empty_update": false,
+      "created_at": "2026-11-13T17:02:43.621739+08:00"
+    },
     {
       "id": "2026-11-12-88020255458b",
       "run_id": "88020255458b",
