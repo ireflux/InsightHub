@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13T09:02:43.624188+00:00",
+  "updated_at": "2026-11-14T08:27:26.977084+00:00",
   "runs": [
     {
       "timestamp": "2026-11-02T08:46:23.135508+00:00",
@@ -187,6 +187,22 @@
             "status": "success",
             "file_path": "output/posts/2026-11-13-f9978dd8799e.md",
             "slug": "2026-11-13-f9978dd8799e",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-11-14T08:27:26.976831+00:00",
+      "items_count": 20,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-11-14-50c8104b4c6c.md",
+            "slug": "2026-11-14-50c8104b4c6c",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -1872,6 +1888,146 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-11-13T09:02:43.624179+00:00",
+        "error": null
+      }
+    },
+    "https://www.nbcnews.com/news/us-news/faa-orders-nationwide-ground-stop-departing-flights-reasons-safety-rcna609247": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-14T08:27:26.977037+00:00",
+        "error": null
+      }
+    },
+    "https://www.youtube.com/watch?v=IRK8h67ol7Q": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-14T08:27:26.977040+00:00",
+        "error": null
+      }
+    },
+    "https://www.techpowerup.com/354814/nvidia-allegedly-engineered-scarcity-by-funding-ai-startups-to-buy-its-gpus": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-14T08:27:26.977043+00:00",
+        "error": null
+      }
+    },
+    "https://open.m-vave.com/fm1-workbench": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-14T08:27:26.977045+00:00",
+        "error": null
+      }
+    },
+    "https://www.joshka.net/cell-borders": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-14T08:27:26.977047+00:00",
+        "error": null
+      }
+    },
+    "https://isometricsf.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-14T08:27:26.977051+00:00",
+        "error": null
+      }
+    },
+    "https://orcasairband.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-14T08:27:26.977058+00:00",
+        "error": null
+      }
+    },
+    "https://dfarq.homeip.net/what-happened-to-3com": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-14T08:27:26.977060+00:00",
+        "error": null
+      }
+    },
+    "https://www.fox5dc.com/news/amtrak-outage-ticket-booking-faa-ground-stop-november-13-2026": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-14T08:27:26.977062+00:00",
+        "error": null
+      }
+    },
+    "https://haddyalchaer.com/jepa": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-14T08:27:26.977064+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/ggml-org/ggml/releases/tag/v1.0.0": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-14T08:27:26.977065+00:00",
+        "error": null
+      }
+    },
+    "https://alichraghi.github.io/blog/how-not-to-build-a-music-player": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-14T08:27:26.977066+00:00",
+        "error": null
+      }
+    },
+    "https://www.nature.com/articles/d41586-026-03638-3": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-14T08:27:26.977068+00:00",
+        "error": null
+      }
+    },
+    "https://unsloth.ai/docs/models/qwen3.8": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-14T08:27:26.977069+00:00",
+        "error": null
+      }
+    },
+    "https://www.perplexity.ai/hub/blog/perplexity-decider": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-14T08:27:26.977071+00:00",
+        "error": null
+      }
+    },
+    "https://today.ucsd.edu/story/elephants-found-to-be-increasingly-isolated-leading-to-fractured-social-networks": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-14T08:27:26.977072+00:00",
+        "error": null
+      }
+    },
+    "https://gyptazy.com/blog/freebsd-bhyve-live-migration-support-rfc": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-14T08:27:26.977074+00:00",
+        "error": null
+      }
+    },
+    "https://grounds.top/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-14T08:27:26.977075+00:00",
+        "error": null
+      }
+    },
+    "https://monkeyisland.pages.dev/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-14T08:27:26.977077+00:00",
+        "error": null
+      }
+    },
+    "https://engineering.fb.com/2026/11/09/developer-tools/extending-lldb-to-debug-applications-that-span-cpus-and-gpus": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-14T08:27:26.977078+00:00",
         "error": null
       }
     }
