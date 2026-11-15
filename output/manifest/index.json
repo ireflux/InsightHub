@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-11-14T16:27:26.974221+08:00",
+  "generated_at": "2026-11-15T16:46:48.692187+08:00",
   "posts": [
+    {
+      "id": "2026-11-15-0bc98f0cb265",
+      "run_id": "0bc98f0cb265",
+      "date": "2026-11-15",
+      "title": "每日趋势观察 2026-11-15",
+      "slug": "2026-11-15-0bc98f0cb265",
+      "markdown_path": "posts/2026-11-15-0bc98f0cb265.md",
+      "summary": "- [SpaceX catches the Starship to end Flight 15](https://www.spacex.com/launches/starship-flight-15): SpaceX",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 20,
+      "is_empty_update": false,
+      "created_at": "2026-11-15T16:46:48.692187+08:00"
+    },
     {
       "id": "2026-11-14-50c8104b4c6c",
       "run_id": "50c8104b4c6c",

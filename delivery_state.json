@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-14T08:27:26.977084+00:00",
+  "updated_at": "2026-11-15T08:46:48.694645+00:00",
   "runs": [
     {
       "timestamp": "2026-11-02T08:46:23.135508+00:00",
@@ -203,6 +203,22 @@
             "status": "success",
             "file_path": "output/posts/2026-11-14-50c8104b4c6c.md",
             "slug": "2026-11-14-50c8104b4c6c",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-11-15T08:46:48.694439+00:00",
+      "items_count": 20,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-11-15-0bc98f0cb265.md",
+            "slug": "2026-11-15-0bc98f0cb265",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -2028,6 +2044,146 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-11-14T08:27:26.977078+00:00",
+        "error": null
+      }
+    },
+    "https://www.spacex.com/launches/starship-flight-15": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-15T08:46:48.694600+00:00",
+        "error": null
+      }
+    },
+    "https://www.crissyfield.de/research/lovable-en": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-15T08:46:48.694603+00:00",
+        "error": null
+      }
+    },
+    "https://so.long.thanks.fish/why-pi-when-i-have-an-old-phone": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-15T08:46:48.694605+00:00",
+        "error": null
+      }
+    },
+    "https://zwischenzugs.com/2026/11/03/a-family-tree-of-software-job-titles": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-15T08:46:48.694606+00:00",
+        "error": null
+      }
+    },
+    "https://tube.kockatoo.org/w/fFinNHfanLT7aBEb2B8y4c": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-15T08:46:48.694608+00:00",
+        "error": null
+      }
+    },
+    "https://blog.pypi.org/posts/2026-11-06-ui-updates-complete": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-15T08:46:48.694610+00:00",
+        "error": null
+      }
+    },
+    "https://retrocomputing.stackexchange.com/questions/17957": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-15T08:46:48.694616+00:00",
+        "error": null
+      }
+    },
+    "https://www.eff.org/deeplinks/2026/11/were-asking-appeals-court-require-warrant-alpr-searches": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-15T08:46:48.694618+00:00",
+        "error": null
+      }
+    },
+    "https://forge-blog.github.io/posts/rust-std-memory-safety": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-15T08:46:48.694620+00:00",
+        "error": null
+      }
+    },
+    "https://litnews.ai/articles/garciaguirre-samsung-sk-hynix-micron-dram-conspiracy-suit-survives-dismissal": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-15T08:46:48.694622+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/matheuzgomes/gawain": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-15T08:46:48.694624+00:00",
+        "error": null
+      }
+    },
+    "https://runkiri.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-15T08:46:48.694625+00:00",
+        "error": null
+      }
+    },
+    "https://www.nytimes.com/2026/11/13/dining/drinks/kurt-josef-zalto-whiskey-glass.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-15T08:46:48.694627+00:00",
+        "error": null
+      }
+    },
+    "https://aosabook.org/en/500L/a-3d-modeller.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-15T08:46:48.694629+00:00",
+        "error": null
+      }
+    },
+    "https://www.quantamagazine.org/the-evolving-story-of-how-chemistry-became-biology-20261112": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-15T08:46:48.694631+00:00",
+        "error": null
+      }
+    },
+    "https://jordi.inversethought.com/blog/25-of-my-favourite-modern-nes-games": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-15T08:46:48.694632+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/Tthanh2k6/turbo-browser-mcp": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-15T08:46:48.694634+00:00",
+        "error": null
+      }
+    },
+    "https://www.lloydslist.com/LL1158922/A-rare-glimpse-inside-the-highrisk-highreward-Hormuz-trade": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-15T08:46:48.694636+00:00",
+        "error": null
+      }
+    },
+    "https://www.ardc.net/rhizomaticas-hermes-and-mercury-expand-open-source-hf-communications-for-remote-communities-while-appealing-to-experimenters": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-15T08:46:48.694637+00:00",
+        "error": null
+      }
+    },
+    "https://netbsd.org/~nia/disk-encrypt": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-15T08:46:48.694639+00:00",
         "error": null
       }
     }
