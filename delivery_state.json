@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-15T08:46:48.694645+00:00",
+  "updated_at": "2026-11-16T08:55:26.249994+00:00",
   "runs": [
     {
       "timestamp": "2026-11-02T08:46:23.135508+00:00",
@@ -219,6 +219,22 @@
             "status": "success",
             "file_path": "output/posts/2026-11-15-0bc98f0cb265.md",
             "slug": "2026-11-15-0bc98f0cb265",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-11-16T08:55:26.249687+00:00",
+      "items_count": 20,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-11-16-0f9594687df7.md",
+            "slug": "2026-11-16-0f9594687df7",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -2184,6 +2200,146 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-11-15T08:46:48.694639+00:00",
+        "error": null
+      }
+    },
+    "https://steveblank.com/2026/11/15/whats-next-for-nvidia": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-16T08:55:26.249931+00:00",
+        "error": null
+      }
+    },
+    "https://qwen.ai/blog?id=qwen4-max": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-16T08:55:26.249938+00:00",
+        "error": null
+      }
+    },
+    "https://www.nytimes.com/2026/11/15/science/birdbrain-crows-birds-research-decision.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-16T08:55:26.249943+00:00",
+        "error": null
+      }
+    },
+    "https://ransomnews.com/burger-king-tweet-bitly-link-hijack-2026": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-16T08:55:26.249948+00:00",
+        "error": null
+      }
+    },
+    "https://www.youtube.com/watch?v=7_JF3etiAv8": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-16T08:55:26.249951+00:00",
+        "error": null
+      }
+    },
+    "https://iter.ca/post/ubo-uxss": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-16T08:55:26.249954+00:00",
+        "error": null
+      }
+    },
+    "https://bruceroettgers.eu/blog/protomaps": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-16T08:55:26.249960+00:00",
+        "error": null
+      }
+    },
+    "https://ductus.sorenblank.com": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-16T08:55:26.249963+00:00",
+        "error": null
+      }
+    },
+    "https://forum.torproject.org/t/security-release-0-4-9-17/22454": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-16T08:55:26.249966+00:00",
+        "error": null
+      }
+    },
+    "https://pub.cba.mit.edu/863.26/site": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-16T08:55:26.249968+00:00",
+        "error": null
+      }
+    },
+    "https://blog.archive.org/2026/11/12/preserving-30-years-of-salon-journalism": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-16T08:55:26.249969+00:00",
+        "error": null
+      }
+    },
+    "https://baron.by.dai.studio/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-16T08:55:26.249971+00:00",
+        "error": null
+      }
+    },
+    "https://digitalfilms.wordpress.com/2026/11/15/stop-filming-in-log": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-16T08:55:26.249973+00:00",
+        "error": null
+      }
+    },
+    "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1154101": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-16T08:55:26.249975+00:00",
+        "error": null
+      }
+    },
+    "https://www.paradedb.com/blog/joins": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-16T08:55:26.249977+00:00",
+        "error": null
+      }
+    },
+    "https://www.dfsantos.com/en/libro-ia-z80": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-16T08:55:26.249979+00:00",
+        "error": null
+      }
+    },
+    "https://www.hackster.io/mit41301/simple-8085-computer-9fe156": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-16T08:55:26.249981+00:00",
+        "error": null
+      }
+    },
+    "https://retrocomputing.stackexchange.com/questions/12158/did-the-apollo-guidance-computer-really-use-60-of-the-worlds-ics-in-1963": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-16T08:55:26.249983+00:00",
+        "error": null
+      }
+    },
+    "https://www.newyorker.com/magazine/2026/11/16/john-berger-a-life-tom-overton-book-review": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-16T08:55:26.249985+00:00",
+        "error": null
+      }
+    },
+    "https://news.cornell.edu/stories/2026/11/researchers-track-whole-body-movement-just-smartwatch": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-16T08:55:26.249987+00:00",
         "error": null
       }
     }
