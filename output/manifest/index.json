@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-11-16T16:55:26.247065+08:00",
+  "generated_at": "2026-11-17T18:02:41.049234+08:00",
   "posts": [
+    {
+      "id": "2026-11-17-d5b7d5530e3e",
+      "run_id": "d5b7d5530e3e",
+      "date": "2026-11-17",
+      "title": "每日趋势观察 2026-11-17",
+      "slug": "2026-11-17-d5b7d5530e3e",
+      "markdown_path": "posts/2026-11-17-d5b7d5530e3e.md",
+      "summary": "- [Windows 11 is collecting data on which coding agents and developer tools you use](https://xusheng.dev/posts/windows-coding-agent-telemetry/): 7 minutes",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 20,
+      "is_empty_update": false,
+      "created_at": "2026-11-17T18:02:41.049234+08:00"
+    },
     {
       "id": "2026-11-16-0f9594687df7",
       "run_id": "0f9594687df7",

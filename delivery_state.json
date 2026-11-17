@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-16T08:55:26.249994+00:00",
+  "updated_at": "2026-11-17T10:02:41.051762+00:00",
   "runs": [
     {
       "timestamp": "2026-11-02T08:46:23.135508+00:00",
@@ -235,6 +235,22 @@
             "status": "success",
             "file_path": "output/posts/2026-11-16-0f9594687df7.md",
             "slug": "2026-11-16-0f9594687df7",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-11-17T10:02:41.051473+00:00",
+      "items_count": 20,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-11-17-d5b7d5530e3e.md",
+            "slug": "2026-11-17-d5b7d5530e3e",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -2340,6 +2356,146 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-11-16T08:55:26.249987+00:00",
+        "error": null
+      }
+    },
+    "https://xusheng.dev/posts/windows-coding-agent-telemetry": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-17T10:02:41.051679+00:00",
+        "error": null
+      }
+    },
+    "https://trmnl.com/blog/introducing-frame": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-17T10:02:41.051686+00:00",
+        "error": null
+      }
+    },
+    "https://news.cornell.edu/stories/2026/10/sheep-grazing-solar-fields-offers-farmers-economic-ecological-gains": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-17T10:02:41.051690+00:00",
+        "error": null
+      }
+    },
+    "https://www.bugmenot.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-17T10:02:41.051693+00:00",
+        "error": null
+      }
+    },
+    "https://www.cs.cmu.edu/learn": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-17T10:02:41.051697+00:00",
+        "error": null
+      }
+    },
+    "https://jack.cab/blog/siterate": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-17T10:02:41.051701+00:00",
+        "error": null
+      }
+    },
+    "https://blog.report-uri.com/worlds-largest-brands-infected-with-malware-via-optimizely": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-17T10:02:41.051709+00:00",
+        "error": null
+      }
+    },
+    "https://opencode.ai/product/browse": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-17T10:02:41.051712+00:00",
+        "error": null
+      }
+    },
+    "https://chillphysicsenjoyer.substack.com/p/chemistry-is-actually-geometry": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-17T10:02:41.051716+00:00",
+        "error": null
+      }
+    },
+    "https://arstechnica.com/tech-policy/2026/11/comcast-falsely-advertises-cable-internet-as-fiber-powered-att-lawsuit-says": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-17T10:02:41.051720+00:00",
+        "error": null
+      }
+    },
+    "https://burntsushi.net/jiff": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-17T10:02:41.051723+00:00",
+        "error": null
+      }
+    },
+    "https://support.apple.com/en-us/149699": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-17T10:02:41.051726+00:00",
+        "error": null
+      }
+    },
+    "https://alperenkeles.com/posts/formal-verification-is-not-verifiable": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-17T10:02:41.051730+00:00",
+        "error": null
+      }
+    },
+    "https://twitter.com/id_aa_carmack/status/2122478083319992513": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-17T10:02:41.051733+00:00",
+        "error": null
+      }
+    },
+    "https://retrocomputing.stackexchange.com/questions/11765": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-17T10:02:41.051736+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/ZigaoWang/zigzag": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-17T10:02:41.051740+00:00",
+        "error": null
+      }
+    },
+    "https://nimony.org/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-17T10:02:41.051743+00:00",
+        "error": null
+      }
+    },
+    "https://danluu.com/astra-testing": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-17T10:02:41.051746+00:00",
+        "error": null
+      }
+    },
+    "https://paleonerdish.wordpress.com/2026/10/30/halloween-special-xiv-the-fossils-that-haunted-lovecraft": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-17T10:02:41.051750+00:00",
+        "error": null
+      }
+    },
+    "https://www.kalzumeus.com/2018/10/19/japanese-hometown-tax": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-17T10:02:41.051753+00:00",
         "error": null
       }
     }
