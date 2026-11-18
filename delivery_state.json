@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-17T10:02:41.051762+00:00",
+  "updated_at": "2026-11-18T09:37:23.442976+00:00",
   "runs": [
     {
       "timestamp": "2026-11-02T08:46:23.135508+00:00",
@@ -251,6 +251,22 @@
             "status": "success",
             "file_path": "output/posts/2026-11-17-d5b7d5530e3e.md",
             "slug": "2026-11-17-d5b7d5530e3e",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-11-18T09:37:23.442696+00:00",
+      "items_count": 20,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-11-18-aa7f345516ee.md",
+            "slug": "2026-11-18-aa7f345516ee",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -2496,6 +2512,146 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-11-17T10:02:41.051753+00:00",
+        "error": null
+      }
+    },
+    "https://openai.com/index/introducing-gpt-6-2-astra-sol": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-18T09:37:23.442925+00:00",
+        "error": null
+      }
+    },
+    "https://www.cnn.com/2026/11/17/politics/highly-classified-national-security-communications-network-goes-down": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-18T09:37:23.442932+00:00",
+        "error": null
+      }
+    },
+    "https://revscope.co/blog/search-seo-geo-2026": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-18T09:37:23.442934+00:00",
+        "error": null
+      }
+    },
+    "https://www.ft.com/content/dbde7a30-548c-4f9d-a4be-7898a0c24dcf": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-18T09:37:23.442936+00:00",
+        "error": null
+      }
+    },
+    "https://calif.io/java4shell": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-18T09:37:23.442938+00:00",
+        "error": null
+      }
+    },
+    "https://complexdiscovery.com/harvard-researchers-find-ai-coding-agents-shifted-the-bottleneck-to-code-review": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-18T09:37:23.442941+00:00",
+        "error": null
+      }
+    },
+    "https://blog.cloudflare.com/quad9-withdrawal-from-france": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-18T09:37:23.442946+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/jquery/jquery/releases/tag/4.1.0": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-18T09:37:23.442949+00:00",
+        "error": null
+      }
+    },
+    "https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-18T09:37:23.442951+00:00",
+        "error": null
+      }
+    },
+    "https://consumerrights.wiki/w/ID.me_terms_required_for_IRS_sign-in": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-18T09:37:23.442952+00:00",
+        "error": null
+      }
+    },
+    "https://www.sciencenorway.no/culture-history-history-of-science/350-years-ago-this-man-discovered-that-light-has-a-finite-speed/2737969": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-18T09:37:23.442954+00:00",
+        "error": null
+      }
+    },
+    "https://reddit.com/r/recruitinghell/comments/1xyr6ml/interviewed_at_a_yc_startup_spent_30_hours": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-18T09:37:23.442956+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/microsoft/onnxruntime": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-18T09:37:23.442957+00:00",
+        "error": null
+      }
+    },
+    "https://phrack.org/issues/73/introduction_md": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-18T09:37:23.442959+00:00",
+        "error": null
+      }
+    },
+    "https://wiki.archiveteam.org/index.php/Apple_Discussions": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-18T09:37:23.442961+00:00",
+        "error": null
+      }
+    },
+    "https://kernel.dev/blog/why-is-gemini-4-carbon-taking-so-long": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-18T09:37:23.442963+00:00",
+        "error": null
+      }
+    },
+    "https://www.siderolabs.com/talos-linux": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-18T09:37:23.442964+00:00",
+        "error": null
+      }
+    },
+    "https://www.youtube.com/watch?v=I1rlK3BKmyA": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-18T09:37:23.442966+00:00",
+        "error": null
+      }
+    },
+    "https://www.evilgeniuslabs.org/why-fibonacci": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-18T09:37:23.442968+00:00",
+        "error": null
+      }
+    },
+    "https://www.ycombinator.com/companies/gogograndparent/jobs/05woouL-front-end-javascript-typescript-engineer": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-18T09:37:23.442969+00:00",
         "error": null
       }
     }
