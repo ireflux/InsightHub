@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-18T09:37:23.442976+00:00",
+  "updated_at": "2026-11-19T09:48:13.144831+00:00",
   "runs": [
     {
       "timestamp": "2026-11-02T08:46:23.135508+00:00",
@@ -267,6 +267,22 @@
             "status": "success",
             "file_path": "output/posts/2026-11-18-aa7f345516ee.md",
             "slug": "2026-11-18-aa7f345516ee",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-11-19T09:48:13.144565+00:00",
+      "items_count": 20,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-11-19-4f705db3b59a.md",
+            "slug": "2026-11-19-4f705db3b59a",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -2652,6 +2668,146 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-11-18T09:37:23.442969+00:00",
+        "error": null
+      }
+    },
+    "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-19T09:48:13.144768+00:00",
+        "error": null
+      }
+    },
+    "https://www.wiz.io/blog/nginx-http2-rce-vulnerabilities": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-19T09:48:13.144775+00:00",
+        "error": null
+      }
+    },
+    "https://microsoft.ai/news/microsoft-ignite-2026": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-19T09:48:13.144777+00:00",
+        "error": null
+      }
+    },
+    "https://www.anthropic.com/news/anthropic-prices-initial-public-offering": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-19T09:48:13.144780+00:00",
+        "error": null
+      }
+    },
+    "https://www.inside-db.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-19T09:48:13.144782+00:00",
+        "error": null
+      }
+    },
+    "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/genie-4-now-available-project-genie": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-19T09:48:13.144785+00:00",
+        "error": null
+      }
+    },
+    "https://www.ruby-lang.org/en/news/2026/11/18/multiple-vulnerabilities-in-regexp-and-string": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-19T09:48:13.144795+00:00",
+        "error": null
+      }
+    },
+    "https://www.radixark.com/blog/daisyrose-27b": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-19T09:48:13.144797+00:00",
+        "error": null
+      }
+    },
+    "https://www.slowchronicle.com/posts/llm-assisted-reverse-engineering": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-19T09:48:13.144800+00:00",
+        "error": null
+      }
+    },
+    "https://kusha.me/blog/stop_myq_homebridge_819lmb_rebooting": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-19T09:48:13.144802+00:00",
+        "error": null
+      }
+    },
+    "https://news.ycombinator.com/item?id=50548660": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-19T09:48:13.144804+00:00",
+        "error": null
+      }
+    },
+    "https://verialabs.com/ruby2shell": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-19T09:48:13.144806+00:00",
+        "error": null
+      }
+    },
+    "https://kapteko.com/15-million-webservers": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-19T09:48:13.144809+00:00",
+        "error": null
+      }
+    },
+    "https://ruralindiaonline.org/article/mosquitoes-are-ladakh-s-latest-tourists": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-19T09:48:13.144811+00:00",
+        "error": null
+      }
+    },
+    "https://www.drivevault.io/blog/when-will-hard-drive-prices-come-down.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-19T09:48:13.144813+00:00",
+        "error": null
+      }
+    },
+    "https://quebec.yarn.so": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-19T09:48:13.144815+00:00",
+        "error": null
+      }
+    },
+    "https://futurumgroup.com/insights/axelera-titania-brings-native-fp8-and-fp4-to-in-memory-compute": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-19T09:48:13.144817+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/pickysysadmin/logitech-harmony-ir-archive": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-19T09:48:13.144819+00:00",
+        "error": null
+      }
+    },
+    "https://colo.to/firstping.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-19T09:48:13.144822+00:00",
+        "error": null
+      }
+    },
+    "https://zerodha.tech/blog/high-performance-distributed-blob-storage": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-19T09:48:13.144824+00:00",
         "error": null
       }
     }
