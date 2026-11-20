@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19T09:48:13.144831+00:00",
+  "updated_at": "2026-11-20T09:34:10.886874+00:00",
   "runs": [
     {
       "timestamp": "2026-11-02T08:46:23.135508+00:00",
@@ -283,6 +283,22 @@
             "status": "success",
             "file_path": "output/posts/2026-11-19-4f705db3b59a.md",
             "slug": "2026-11-19-4f705db3b59a",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-11-20T09:34:10.886652+00:00",
+      "items_count": 20,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-11-20-047f9d7ff3fe.md",
+            "slug": "2026-11-20-047f9d7ff3fe",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -2808,6 +2824,146 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-11-19T09:48:13.144824+00:00",
+        "error": null
+      }
+    },
+    "https://www.reuters.com/business/finance/anthropics-historic-debut-put-ais-promise-peril-wall-st-test-2026-11-19": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-20T09:34:10.886811+00:00",
+        "error": null
+      }
+    },
+    "https://blog.harrison.page/garage-door-spam": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-20T09:34:10.886817+00:00",
+        "error": null
+      }
+    },
+    "https://www.anthropic.com/research/claude-black-hole-physics": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-20T09:34:10.886820+00:00",
+        "error": null
+      }
+    },
+    "https://thedataexchange.media/pete-warden-moonshine": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-20T09:34:10.886823+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/openssl/openssl/pull/33652": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-20T09:34:10.886825+00:00",
+        "error": null
+      }
+    },
+    "https://globalcommercegraph.com/writing/the-ninety-eight-percent-slot-machine": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-20T09:34:10.886829+00:00",
+        "error": null
+      }
+    },
+    "https://www.synology.com/en-uk/security/advisory/Synology_SA_26_21": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-20T09:34:10.886835+00:00",
+        "error": null
+      }
+    },
+    "https://em-online.bearblog.dev/i-can-tell-you-wrote-this-yourself": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-20T09:34:10.886837+00:00",
+        "error": null
+      }
+    },
+    "https://ocw.mit.edu/courses/res-16-002-how-to-cad-almost-anything-january-iap-2024": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-20T09:34:10.886840+00:00",
+        "error": null
+      }
+    },
+    "https://institute.deepmind.com/essays/what-comes-after-agi": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-20T09:34:10.886843+00:00",
+        "error": null
+      }
+    },
+    "https://ethanlowman.com/posts/jj-primer": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-20T09:34:10.886845+00:00",
+        "error": null
+      }
+    },
+    "https://seremot.com/p/vint-cerf-on-why-tcpip-was-never": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-20T09:34:10.886848+00:00",
+        "error": null
+      }
+    },
+    "https://ffmpeg.org/download.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-20T09:34:10.886850+00:00",
+        "error": null
+      }
+    },
+    "https://www.postgresql.org/docs/release/19.0": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-20T09:34:10.886852+00:00",
+        "error": null
+      }
+    },
+    "https://www.snowflake.com/en/blog/engineering/postgres-19-repack-table-bloat": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-20T09:34:10.886855+00:00",
+        "error": null
+      }
+    },
+    "https://notesbylex.com/weight-space-programming-1990s": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-20T09:34:10.886857+00:00",
+        "error": null
+      }
+    },
+    "https://healeycodes.com/introducing-the-worlds-strongest-sokoban-solver": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-20T09:34:10.886860+00:00",
+        "error": null
+      }
+    },
+    "https://www.frankensteinpbc.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-20T09:34:10.886862+00:00",
+        "error": null
+      }
+    },
+    "https://subethasoftware.com/2020/06/11/bit-shifting-in-basic": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-20T09:34:10.886864+00:00",
+        "error": null
+      }
+    },
+    "https://cpldcpu.com/2014/03/19/%c2%b5-wire-usb-on-an-attiny-10": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-20T09:34:10.886867+00:00",
         "error": null
       }
     }
