@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-20T09:34:10.886874+00:00",
+  "updated_at": "2026-11-21T09:06:55.780176+00:00",
   "runs": [
     {
       "timestamp": "2026-11-02T08:46:23.135508+00:00",
@@ -299,6 +299,22 @@
             "status": "success",
             "file_path": "output/posts/2026-11-20-047f9d7ff3fe.md",
             "slug": "2026-11-20-047f9d7ff3fe",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-11-21T09:06:55.779970+00:00",
+      "items_count": 20,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-11-21-9a67bf0a6d6a.md",
+            "slug": "2026-11-21-9a67bf0a6d6a",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -2964,6 +2980,146 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-11-20T09:34:10.886867+00:00",
+        "error": null
+      }
+    },
+    "https://alpo.ge/remark.pdf": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-21T09:06:55.780126+00:00",
+        "error": null
+      }
+    },
+    "https://math216.wordpress.com/2026/11/20/hurried-announcement-alessandro-masullo-grh": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-21T09:06:55.780129+00:00",
+        "error": null
+      }
+    },
+    "https://www.theguardian.com/business/2026/nov/20/global-stock-markets-slump-anthropic-ipo-ai-sell-off": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-21T09:06:55.780131+00:00",
+        "error": null
+      }
+    },
+    "https://manidoraisamy.com/developer-to-architect.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-21T09:06:55.780132+00:00",
+        "error": null
+      }
+    },
+    "https://thinkingmachines.ai/news/inkling-2-mini": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-21T09:06:55.780134+00:00",
+        "error": null
+      }
+    },
+    "https://terrytao.wordpress.com/2026/11/20/unforced-euler-singularity-unforced-navier-stokes-singularity-and-the-generalized-riemann-hypothesis": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-21T09:06:55.780137+00:00",
+        "error": null
+      }
+    },
+    "https://arxiv.org/abs/2611.21885": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-21T09:06:55.780144+00:00",
+        "error": null
+      }
+    },
+    "https://news.ycombinator.com/item?id=50583761": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-21T09:06:55.780146+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/tristanbuckmaster/navier-stokes": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-21T09:06:55.780148+00:00",
+        "error": null
+      }
+    },
+    "https://ninlive.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-21T09:06:55.780150+00:00",
+        "error": null
+      }
+    },
+    "https://www.masteringemacs.org/article/announcing-dreamcoder": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-21T09:06:55.780152+00:00",
+        "error": null
+      }
+    },
+    "https://www.backblaze.com/company/policy/privacy": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-21T09:06:55.780154+00:00",
+        "error": null
+      }
+    },
+    "https://valkey.io/blog/from-skiplist-to-b+tree": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-21T09:06:55.780156+00:00",
+        "error": null
+      }
+    },
+    "https://eli.thegreenplace.net/2017/clojure-the-perfect-language-to-expand-your-brain": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-21T09:06:55.780158+00:00",
+        "error": null
+      }
+    },
+    "https://www.esa.int/articles/about-us/directorates/operations/space-safety/hera/sir-brian-may-adds-new-dimension-to-hera-asteroid": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-21T09:06:55.780160+00:00",
+        "error": null
+      }
+    },
+    "http://ricapar.net/ClawDOS": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-21T09:06:55.780162+00:00",
+        "error": null
+      }
+    },
+    "https://amateurphotographer.com/latest/these-astonishing-insect-portraits-reveal-a-hidden-world-you-never-knew-existed": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-21T09:06:55.780164+00:00",
+        "error": null
+      }
+    },
+    "https://www.breakingchange.blog/p/fewer-slides-more-dragons": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-21T09:06:55.780166+00:00",
+        "error": null
+      }
+    },
+    "https://substack.com/@canadianreturnee/note/c-319574497": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-21T09:06:55.780167+00:00",
+        "error": null
+      }
+    },
+    "https://gwern.net/doc/fiction/science-fiction/2000-chiang.pdf": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-21T09:06:55.780169+00:00",
         "error": null
       }
     }

@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-11-20T17:34:10.884346+08:00",
+  "generated_at": "2026-11-21T17:06:55.777482+08:00",
   "posts": [
+    {
+      "id": "2026-11-21-9a67bf0a6d6a",
+      "run_id": "9a67bf0a6d6a",
+      "date": "2026-11-21",
+      "title": "每日趋势观察 2026-11-21",
+      "slug": "2026-11-21-9a67bf0a6d6a",
+      "markdown_path": "posts/2026-11-21-9a67bf0a6d6a.md",
+      "summary": "- [Levent Alpöge claims proof of the Generalized Riemann Hypothesis [pdf]](https://alpo.ge/remark.pdf): %PDF-1.5",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 20,
+      "is_empty_update": false,
+      "created_at": "2026-11-21T17:06:55.777482+08:00"
+    },
     {
       "id": "2026-11-20-047f9d7ff3fe",
       "run_id": "047f9d7ff3fe",
