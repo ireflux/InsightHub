@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-11-21T17:06:55.777482+08:00",
+  "generated_at": "2026-11-22T17:12:16.948475+08:00",
   "posts": [
+    {
+      "id": "2026-11-22-fbbb17a2a30c",
+      "run_id": "fbbb17a2a30c",
+      "date": "2026-11-22",
+      "title": "每日趋势观察 2026-11-22",
+      "slug": "2026-11-22-fbbb17a2a30c",
+      "markdown_path": "posts/2026-11-22-fbbb17a2a30c.md",
+      "summary": "- [Lean verification of the Riemann Hypothesis](https://leanprover-community.github.io/blog/posts/riemann-hypothesis/): Lean verification of the Riemann Hypothesis",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 20,
+      "is_empty_update": false,
+      "created_at": "2026-11-22T17:12:16.948475+08:00"
+    },
     {
       "id": "2026-11-21-9a67bf0a6d6a",
       "run_id": "9a67bf0a6d6a",
