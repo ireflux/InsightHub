@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-22T09:12:16.951347+00:00",
+  "updated_at": "2026-11-23T10:07:58.644995+00:00",
   "runs": [
     {
       "timestamp": "2026-11-02T08:46:23.135508+00:00",
@@ -331,6 +331,22 @@
             "status": "success",
             "file_path": "output/posts/2026-11-22-fbbb17a2a30c.md",
             "slug": "2026-11-22-fbbb17a2a30c",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-11-23T10:07:58.644764+00:00",
+      "items_count": 20,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-11-23-9f4b62425655.md",
+            "slug": "2026-11-23-9f4b62425655",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -3276,6 +3292,146 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-11-22T09:12:16.951339+00:00",
+        "error": null
+      }
+    },
+    "https://openai.com/index/perplexity-and-intelligence": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-23T10:07:58.644934+00:00",
+        "error": null
+      }
+    },
+    "https://www.audubon.org/magazine/birds-of-gta-6-field-guide-vice-city-wildlife": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-23T10:07:58.644938+00:00",
+        "error": null
+      }
+    },
+    "https://www.gpupartner.com/blog/beginners-guide-local-ai-inkling-qwen-unsloth": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-23T10:07:58.644940+00:00",
+        "error": null
+      }
+    },
+    "https://johncarlosbaez.wordpress.com/2026/11/22/masullo-on-the-riemann-hypothesis": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-23T10:07:58.644942+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/AFK-surf/xnulinux": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-23T10:07:58.644945+00:00",
+        "error": null
+      }
+    },
+    "https://spelunkr.tv": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-23T10:07:58.644948+00:00",
+        "error": null
+      }
+    },
+    "https://danielsada.tech/blog/assume-people-are-not-interested-in-your-blog-post": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-23T10:07:58.644954+00:00",
+        "error": null
+      }
+    },
+    "https://smallsf.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-23T10:07:58.644957+00:00",
+        "error": null
+      }
+    },
+    "https://www.gl-inet.com/en-us/blogs/blog/glinet-security-notice-2026-11-20": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-23T10:07:58.644963+00:00",
+        "error": null
+      }
+    },
+    "https://www.docker.com/blog/meet-the-new-docker-built-to-run-on-trust": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-23T10:07:58.644965+00:00",
+        "error": null
+      }
+    },
+    "https://micjm.com/blog/yes-17m-lines-of-lean-is-a-lot": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-23T10:07:58.644967+00:00",
+        "error": null
+      }
+    },
+    "https://apnews.com/article/sudan-antiquities-nubia-cathedral-1b16f67da881ee5592de4481ee55c527": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-23T10:07:58.644970+00:00",
+        "error": null
+      }
+    },
+    "https://fosscomics.com/posts/16.%20BSD%20Unix%20Part%206%20-%20The%20Struggle%20for%20Freedom": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-23T10:07:58.644972+00:00",
+        "error": null
+      }
+    },
+    "https://huijzer.xyz/posts/174/gta-6-building-personal-behavioral-profile-for-eve": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-23T10:07:58.644974+00:00",
+        "error": null
+      }
+    },
+    "https://pengowray.github.io/riemann-zeta-proof-visualizer": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-23T10:07:58.644976+00:00",
+        "error": null
+      }
+    },
+    "https://www.ias.edu/sites/default/files/library/UsefulnessHarpers.pdf": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-23T10:07:58.644979+00:00",
+        "error": null
+      }
+    },
+    "https://cherwellvalleymotorclub.app": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-23T10:07:58.644981+00:00",
+        "error": null
+      }
+    },
+    "https://phoenix.labri.fr/software/tempo": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-23T10:07:58.644983+00:00",
+        "error": null
+      }
+    },
+    "https://elementdigital.com.au/blog/brake-check-trailer-brakes-over-bluetooth": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-23T10:07:58.644986+00:00",
+        "error": null
+      }
+    },
+    "https://www.ycombinator.com/companies/collectwise/jobs/lgobCse-founding-customer-success-manager": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-23T10:07:58.644988+00:00",
         "error": null
       }
     }
