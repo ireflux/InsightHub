@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-23T10:07:58.644995+00:00",
+  "updated_at": "2026-11-24T11:57:34.489550+00:00",
   "runs": [
     {
       "timestamp": "2026-11-02T08:46:23.135508+00:00",
@@ -347,6 +347,22 @@
             "status": "success",
             "file_path": "output/posts/2026-11-23-9f4b62425655.md",
             "slug": "2026-11-23-9f4b62425655",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-11-24T11:57:34.489262+00:00",
+      "items_count": 20,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-11-24-f799f032b393.md",
+            "slug": "2026-11-24-f799f032b393",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -3432,6 +3448,146 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-11-23T10:07:58.644988+00:00",
+        "error": null
+      }
+    },
+    "https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-ceo.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-24T11:57:34.489482+00:00",
+        "error": null
+      }
+    },
+    "https://twitter.com/ylecun/status/2124550037912920090": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-24T11:57:34.489486+00:00",
+        "error": null
+      }
+    },
+    "https://ladybird.org/posts/alpha": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-24T11:57:34.489488+00:00",
+        "error": null
+      }
+    },
+    "https://stalw.art/blog/microsoft-exchange-replacement": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-24T11:57:34.489491+00:00",
+        "error": null
+      }
+    },
+    "https://arm.jonpalmisc.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-24T11:57:34.489493+00:00",
+        "error": null
+      }
+    },
+    "https://www.governor.ny.gov/news/money-your-pockets-governor-hochul-signs-bill-restricting-exploitative-vehicle-subscription": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-24T11:57:34.489497+00:00",
+        "error": null
+      }
+    },
+    "https://fzakaria.com/2026/11/23/2035-came-early": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-24T11:57:34.489505+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/zed-industries/gpui": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-24T11:57:34.489509+00:00",
+        "error": null
+      }
+    },
+    "https://www.bored.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-24T11:57:34.489512+00:00",
+        "error": null
+      }
+    },
+    "https://www.phoronix.com/review/amd-epyc-9006-7601": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-24T11:57:34.489515+00:00",
+        "error": null
+      }
+    },
+    "https://salvageyarddrone.wordpress.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-24T11:57:34.489517+00:00",
+        "error": null
+      }
+    },
+    "https://qsantos.fr/2026/11/19/making-a-dumb-tv-just-smart-enough": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-24T11:57:34.489520+00:00",
+        "error": null
+      }
+    },
+    "https://deucalionn.vercel.app/polymarket-delit-initie-jensen-huang-nvidia": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-24T11:57:34.489523+00:00",
+        "error": null
+      }
+    },
+    "https://micjm.com/blog/lowering-perplexity-without-scaling": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-24T11:57:34.489526+00:00",
+        "error": null
+      }
+    },
+    "https://blog.daniel-baumann.ch/posts/20261122-1.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-24T11:57:34.489528+00:00",
+        "error": null
+      }
+    },
+    "https://www.usenix.org/conference/osdi26/presentation/ni": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-24T11:57:34.489530+00:00",
+        "error": null
+      }
+    },
+    "https://autotranslucence.wordpress.com/2018/03/30/becoming-a-magician": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-24T11:57:34.489533+00:00",
+        "error": null
+      }
+    },
+    "https://www.nytimes.com/2026/11/17/obituaries/del-casher-dead.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-24T11:57:34.489536+00:00",
+        "error": null
+      }
+    },
+    "https://fzakaria.com/2026/11/12/worshipping-at-the-altar-of-brendan-gregg": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-24T11:57:34.489538+00:00",
+        "error": null
+      }
+    },
+    "https://www.justafewbugs.xyz/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-24T11:57:34.489541+00:00",
         "error": null
       }
     }

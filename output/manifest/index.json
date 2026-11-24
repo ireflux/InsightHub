@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-11-23T18:07:58.642060+08:00",
+  "generated_at": "2026-11-24T19:57:34.485906+08:00",
   "posts": [
+    {
+      "id": "2026-11-24-f799f032b393",
+      "run_id": "f799f032b393",
+      "date": "2026-11-24",
+      "title": "每日趋势观察 2026-11-24",
+      "slug": "2026-11-24-f799f032b393",
+      "markdown_path": "posts/2026-11-24-f799f032b393.md",
+      "summary": "- [Nvidia Reinstates Jensen Huang as CEO](https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-ceo.html): Nvidia on Monday announced Jensen Huang has been reinstated as CEO, effective immediately, a dr",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 20,
+      "is_empty_update": false,
+      "created_at": "2026-11-24T19:57:34.485906+08:00"
+    },
     {
       "id": "2026-11-23-9f4b62425655",
       "run_id": "9f4b62425655",
