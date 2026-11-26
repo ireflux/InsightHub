@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-25T10:50:11.840435+00:00",
+  "updated_at": "2026-11-26T10:21:06.498386+00:00",
   "runs": [
     {
       "timestamp": "2026-11-02T08:46:23.135508+00:00",
@@ -379,6 +379,22 @@
             "status": "success",
             "file_path": "output/posts/2026-11-25-3980a3d37e09.md",
             "slug": "2026-11-25-3980a3d37e09",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-11-26T10:21:06.498157+00:00",
+      "items_count": 20,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-11-26-a5de71eeb309.md",
+            "slug": "2026-11-26-a5de71eeb309",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -3744,6 +3760,146 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-11-25T10:50:11.840428+00:00",
+        "error": null
+      }
+    },
+    "https://scottaaronson.blog/?p=10379": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-26T10:21:06.498328+00:00",
+        "error": null
+      }
+    },
+    "https://1password.com/blog/update-on-nov-2026-security-incident": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-26T10:21:06.498331+00:00",
+        "error": null
+      }
+    },
+    "https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-26T10:21:06.498333+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/lsernau/grh-lean": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-26T10:21:06.498335+00:00",
+        "error": null
+      }
+    },
+    "https://www.openwall.com/lists/oss-security/2026/11/25/9": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-26T10:21:06.498340+00:00",
+        "error": null
+      }
+    },
+    "https://twitter.com/thsottiaux/status/2125784147889393806": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-26T10:21:06.498343+00:00",
+        "error": null
+      }
+    },
+    "https://bjin.github.io/go-codegolf-benchmark": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-26T10:21:06.498349+00:00",
+        "error": null
+      }
+    },
+    "https://news.ycombinator.com/item?id=50649864": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-26T10:21:06.498351+00:00",
+        "error": null
+      }
+    },
+    "https://opensec.in/blog/nfs2root-cve-2026-99362": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-26T10:21:06.498353+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/alesha-pro/llm.asm/tree/main/02-baremetal-os": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-26T10:21:06.498355+00:00",
+        "error": null
+      }
+    },
+    "https://www.friedgil.com/vpvnp": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-26T10:21:06.498357+00:00",
+        "error": null
+      }
+    },
+    "https://commandcode.ai/moat": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-26T10:21:06.498359+00:00",
+        "error": null
+      }
+    },
+    "https://aresluna.org/ui-style-guides": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-26T10:21:06.498361+00:00",
+        "error": null
+      }
+    },
+    "https://gwern.net/doc/fiction/science-fiction/1953-dahl-thegreatautomaticgrammatizator.pdf": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-26T10:21:06.498363+00:00",
+        "error": null
+      }
+    },
+    "https://progrium.github.io/minipg": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-26T10:21:06.498365+00:00",
+        "error": null
+      }
+    },
+    "https://chipsandcheese.com/p/qualcomms-oryon-3-reaches-the-top": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-26T10:21:06.498367+00:00",
+        "error": null
+      }
+    },
+    "https://fosscomics.com/posts/17.%20Lions%27%20Commentary%20on%20Unix": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-26T10:21:06.498371+00:00",
+        "error": null
+      }
+    },
+    "https://asteriskmag.com/issues/16/marginal-grains": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-26T10:21:06.498373+00:00",
+        "error": null
+      }
+    },
+    "https://swarkentin.github.io/synth-patch-hero": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-26T10:21:06.498375+00:00",
+        "error": null
+      }
+    },
+    "https://blog.coredump.cx/p/how-did-pinwheel-calculators-work": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-26T10:21:06.498377+00:00",
         "error": null
       }
     }
