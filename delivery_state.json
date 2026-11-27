@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26T10:21:06.498386+00:00",
+  "updated_at": "2026-11-27T10:26:55.552557+00:00",
   "runs": [
     {
       "timestamp": "2026-11-02T08:46:23.135508+00:00",
@@ -395,6 +395,22 @@
             "status": "success",
             "file_path": "output/posts/2026-11-26-a5de71eeb309.md",
             "slug": "2026-11-26-a5de71eeb309",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-11-27T10:26:55.552359+00:00",
+      "items_count": 20,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-11-27-ca0d4cf2afab.md",
+            "slug": "2026-11-27-ca0d4cf2afab",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -3900,6 +3916,146 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-11-26T10:21:06.498377+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/antonpictures/youtube-punisher": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-27T10:26:55.552509+00:00",
+        "error": null
+      }
+    },
+    "https://janlukas.blog/posts/ai-self-hosting": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-27T10:26:55.552513+00:00",
+        "error": null
+      }
+    },
+    "https://techstackups.com/articles/google-workspace-ai-agents-mcp": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-27T10:26:55.552515+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/intel/intel-one-mono": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-27T10:26:55.552516+00:00",
+        "error": null
+      }
+    },
+    "https://blog.ktz.me/black-friday-hard-drive-prices-are-messed-up": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-27T10:26:55.552518+00:00",
+        "error": null
+      }
+    },
+    "https://lia.mg/posts/measuring-company-culture-with-slack-emoji": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-27T10:26:55.552521+00:00",
+        "error": null
+      }
+    },
+    "https://krebsonsecurity.com/2026/11/cto-of-ransomwarehelp-indicted-for-wire-fraud": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-27T10:26:55.552526+00:00",
+        "error": null
+      }
+    },
+    "https://blainehansen.me/post/mainstream-verifiable-language": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-27T10:26:55.552528+00:00",
+        "error": null
+      }
+    },
+    "https://construct22.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-27T10:26:55.552530+00:00",
+        "error": null
+      }
+    },
+    "https://worksinprogress.co/issue/the-greatest-architect-youve-never-heard-of-is-in-pakistan": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-27T10:26:55.552532+00:00",
+        "error": null
+      }
+    },
+    "https://devnull.land/amd-specific-llama-cpp": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-27T10:26:55.552534+00:00",
+        "error": null
+      }
+    },
+    "https://arxiv.org/abs/2611.34924": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-27T10:26:55.552535+00:00",
+        "error": null
+      }
+    },
+    "http://themouseless.dev/vim": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-27T10:26:55.552537+00:00",
+        "error": null
+      }
+    },
+    "https://twitter.com/RealAstropulse/status/2126119408997466389": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-27T10:26:55.552539+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/eisenzopf/rvoip": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-27T10:26:55.552540+00:00",
+        "error": null
+      }
+    },
+    "https://kendell.dev/blog/arkwrapper": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-27T10:26:55.552542+00:00",
+        "error": null
+      }
+    },
+    "https://www.buynothingday.co.uk/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-27T10:26:55.552546+00:00",
+        "error": null
+      }
+    },
+    "https://open-web-advocacy.org/es/blog/commission-responds-declares-browser-competition-a-dma-priority": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-27T10:26:55.552548+00:00",
+        "error": null
+      }
+    },
+    "https://chrhenning.com/blog/2026/introduction-to-uncertainty": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-27T10:26:55.552549+00:00",
+        "error": null
+      }
+    },
+    "https://daily.jstor.org/the-cutthroat-business-of-shipwrecks": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-27T10:26:55.552551+00:00",
         "error": null
       }
     }
