@@ -1,7 +1,25 @@
 {
   "site_timezone": "Asia/Shanghai",
-  "generated_at": "2026-11-27T18:26:55.550231+08:00",
+  "generated_at": "2026-11-28T17:45:33.711202+08:00",
   "posts": [
+    {
+      "id": "2026-11-28-05c18b5c15a7",
+      "run_id": "05c18b5c15a7",
+      "date": "2026-11-28",
+      "title": "每日趋势观察 2026-11-28",
+      "slug": "2026-11-28-05c18b5c15a7",
+      "markdown_path": "posts/2026-11-28-05c18b5c15a7.md",
+      "summary": "- [Michael Nielsen took down his book on neural nets](https://neuralnetworksanddeeplearning.com/): I wrote this book between 2011 and 2015.",
+      "tags": [
+        "hacker_news"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "item_count": 20,
+      "is_empty_update": false,
+      "created_at": "2026-11-28T17:45:33.711202+08:00"
+    },
     {
       "id": "2026-11-27-ca0d4cf2afab",
       "run_id": "ca0d4cf2afab",

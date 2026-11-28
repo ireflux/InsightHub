@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-27T10:26:55.552557+00:00",
+  "updated_at": "2026-11-28T09:45:33.714054+00:00",
   "runs": [
     {
       "timestamp": "2026-11-02T08:46:23.135508+00:00",
@@ -411,6 +411,22 @@
             "status": "success",
             "file_path": "output/posts/2026-11-27-ca0d4cf2afab.md",
             "slug": "2026-11-27-ca0d4cf2afab",
+            "manifest_path": "output/manifest/index.json",
+            "is_empty_update": false
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-11-28T09:45:33.713827+00:00",
+      "items_count": 20,
+      "sinks": {
+        "MarkdownFileSink": {
+          "status": "success",
+          "meta": {
+            "status": "success",
+            "file_path": "output/posts/2026-11-28-05c18b5c15a7.md",
+            "slug": "2026-11-28-05c18b5c15a7",
             "manifest_path": "output/manifest/index.json",
             "is_empty_update": false
           }
@@ -4056,6 +4072,146 @@
       "MarkdownFileSink": {
         "status": "success",
         "updated_at": "2026-11-27T10:26:55.552551+00:00",
+        "error": null
+      }
+    },
+    "https://neuralnetworksanddeeplearning.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-28T09:45:33.713987+00:00",
+        "error": null
+      }
+    },
+    "https://generativehistory.substack.com/p/gpt-62-astra-solves-a-historical": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-28T09:45:33.713991+00:00",
+        "error": null
+      }
+    },
+    "https://www.infohawk.com/news/2026-11-27-black-friday-webrtc-skimmer": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-28T09:45:33.713994+00:00",
+        "error": null
+      }
+    },
+    "https://research.google/blog/supercharging-transformer-residual-connections": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-28T09:45:33.713997+00:00",
+        "error": null
+      }
+    },
+    "https://bouncemarket.minhanhday.com/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-28T09:45:33.713999+00:00",
+        "error": null
+      }
+    },
+    "https://github.com/convex/convex-backend-skill/issues/64": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-28T09:45:33.714002+00:00",
+        "error": null
+      }
+    },
+    "https://localthunk.com/blog/balatro-timeline-3aarh": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-28T09:45:33.714012+00:00",
+        "error": null
+      }
+    },
+    "https://unkernel.dev": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-28T09:45:33.714015+00:00",
+        "error": null
+      }
+    },
+    "https://arstechnica.com/space/2026/11/europes-hera-mission-returns-to-the-chaotic-scene-of-a-cosmic-smashup": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-28T09:45:33.714018+00:00",
+        "error": null
+      }
+    },
+    "https://www.citroenet.org.uk/miscellaneous/hydraulics/hydraulics-1.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-28T09:45:33.714020+00:00",
+        "error": null
+      }
+    },
+    "https://tabernet.es/": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-28T09:45:33.714023+00:00",
+        "error": null
+      }
+    },
+    "https://progrium.github.io/9ux": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-28T09:45:33.714027+00:00",
+        "error": null
+      }
+    },
+    "https://www-cs-faculty.stanford.edu/~knuth/moratorium.html": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-28T09:45:33.714030+00:00",
+        "error": null
+      }
+    },
+    "https://www.abc.net.au/news/2026-11-25/nsw-government-ramps-up-efforts-to-respond-to-fire-ants-/107424812": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-28T09:45:33.714032+00:00",
+        "error": null
+      }
+    },
+    "https://www.guitarworld.com/gear/guitar-pedals/tone3000-daisy-audio-diy-pedal-kit": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-28T09:45:33.714034+00:00",
+        "error": null
+      }
+    },
+    "https://news.cornell.edu/stories/2026/11/loom-seamlessly-combines-weaving-knitting-and-braiding": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-28T09:45:33.714037+00:00",
+        "error": null
+      }
+    },
+    "https://www.worldofinteriors.com/story/paolo-soleri-arconsati-arizona": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-28T09:45:33.714039+00:00",
+        "error": null
+      }
+    },
+    "https://www.quantamagazine.org/what-is-the-metabolism-first-theory-for-the-origin-of-life-20261111": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-28T09:45:33.714041+00:00",
+        "error": null
+      }
+    },
+    "https://research.vu.nl/files/447013431/afroozehphdthesis%20-%2069280d90f0bfd.pdf": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-28T09:45:33.714044+00:00",
+        "error": null
+      }
+    },
+    "https://quantumfrontiers.com/2026/10/11/the-quantum-omelette-problem-how-much-energy-belongs-to-the-yolk": {
+      "MarkdownFileSink": {
+        "status": "success",
+        "updated_at": "2026-11-28T09:45:33.714046+00:00",
         "error": null
       }
     }
